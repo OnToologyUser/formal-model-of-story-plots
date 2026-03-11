@@ -11,7 +11,7 @@
 
 #
 # Place and Location Ontology
-# Defines types of places and spatial relationships for story plot modelling
+# Defines types of places and spatial relationships
 #
 loc: a owl:Ontology ;
      rdfs:label "Place and Location Ontology"@en ;
@@ -218,18 +218,19 @@ loc:isTheCapitalOf a owl:ObjectProperty, owl:FunctionalProperty ;
     skos:altLabel "capital of"@en ;
     rdfs:domain loc:Settlement ;
     rdfs:range loc:Realm ;
-    rdfs:comment "A settlement is the capital of a realm. Functional."@en .
+    rdfs:comment "A settlement is the capital of a realm."@en .
 
 #
 # Axioms
 #
-# loc:isTheCapitalOf rdfs:subPropertyOf loc:isAPartOf .
-
 loc:City owl:disjointWith loc:NaturalArea .
 loc:Forest owl:disjointWith loc:Desert .
 loc:Mountain owl:disjointWith loc:Sea .
 loc:River owl:disjointWith loc:Mountain .
 loc:Settlement owl:disjointWith loc:WildArea .
+loc:Building owl:disjointWith loc:NaturalArea .
+loc:City owl:disjointWith loc:Village .
+loc:Town owl:disjointWith loc:Village .
 
 loc:UndergroundCity owl:equivalentClass [
     a owl:Class ;
