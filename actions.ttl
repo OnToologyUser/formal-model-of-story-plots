@@ -14,6 +14,7 @@
 #
 # Actions Ontology
 # Defines character actions with agent, patient, instrument, intention, and result
+#
 act: a owl:Ontology ;
      owl:imports evnt:, loc: ;
      rdfs:label "Actions Ontology"@en ;
@@ -263,12 +264,11 @@ act:Deceive owl:equivalentClass [
 
 
 
-# A Command has exactly 1 performer 
+# A Command has at least one performer
 act:Command rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty act:performedBy ;
-    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:onClass owl:Thing
+    owl:someValuesFrom owl:Thing
 ] .
 
 # A Give action transfers exactly 1 item 
@@ -303,18 +303,22 @@ act:Defend rdfs:subClassOf [
     owl:someValuesFrom owl:Thing
 ] .
 
-# A CreationAction always produces something (physical product, not event result)
+# A CreationAction always produces something 
 act:CreationAction rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty evnt:hasProduct ;
     owl:someValuesFrom owl:Thing
 ] .
 
-# Build produces a structure (Place)
-act:Build rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty evnt:hasProduct ;
-    owl:someValuesFrom loc:Place
+# Build ≡ CreationAction ⊓ ∃hasProduct.Place
+act:Build owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        act:CreationAction
+        [ a owl:Restriction ;
+          owl:onProperty evnt:hasProduct ;
+          owl:someValuesFrom loc:Place ]
+    )
 ] .
 
 # Forge produces a physical object
@@ -331,11 +335,15 @@ act:Take rdfs:subClassOf [
     owl:someValuesFrom owl:Thing
 ] .
 
-# A Reveal discloses something 
-act:Reveal rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty act:hasResult ;
-    owl:someValuesFrom evnt:Discovery
+# Reveal ≡ CommunicativeAction ⊓ ∃hasResult.Discovery
+act:Reveal owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        act:CommunicativeAction
+        [ a owl:Restriction ;
+          owl:onProperty act:hasResult ;
+          owl:someValuesFrom evnt:Discovery ]
+    )
 ] .
 
 
