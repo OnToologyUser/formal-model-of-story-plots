@@ -1,0 +1,111 @@
+#
+# Prefixes
+#
+@prefix rcc: <https://purl.org/rcc/> .
+@prefix loc: <https://purl.org/location/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <https://purl.org/dc/terms/> .
+@prefix vann: <https://purl.org/vocab/vann/> .
+@prefix erdemonal: <https://w3id.org/people/erdemonal/> .
+
+
+#
+# Region Connection Calculus Ontology
+#
+rcc: a owl:Ontology ;
+     owl:imports loc: ;
+     rdfs:label "RCC Ontology"@en ;
+     rdfs:comment """An OWL encoding of the Region Connection Calculus."""@en ;
+     dct:created "2026-03-13"^^xsd:date ;
+     dct:creator erdemonal:me ;
+     vann:preferredNamespaceUri "https://purl.org/rcc/" ;
+     vann:preferredNamespacePrefix "rcc" .
+
+#
+# Properties
+#
+rcc:spatiallyRelatedTo a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "spatially related to"@en ;
+    skos:altLabel "spatial relation"@en ;
+    rdfs:domain loc:Place ;
+    rdfs:range loc:Place ;
+    rdfs:comment "The most general spatial relation between two regions."@en .
+
+rcc:DC a owl:ObjectProperty, owl:SymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "disconnected"@en ;
+    skos:altLabel "disjoint regions"@en ;
+    rdfs:comment "Two regions share no points at all."@en .
+
+rcc:EC a owl:ObjectProperty, owl:SymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "externally connected"@en ;
+    skos:altLabel "touching regions"@en ;
+    rdfs:comment "Boundaries touch but interiors are disjoint."@en .
+
+rcc:PO a owl:ObjectProperty, owl:SymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "partially overlapping"@en ;
+    skos:altLabel "overlapping regions"@en ;
+    rdfs:comment "Part of each region is inside the other but neither is contained."@en .
+
+rcc:EQ a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "equal"@en ;
+    skos:altLabel "coextensive regions"@en ;
+    rdfs:comment "Same spatial extent. Equivalence relation."@en .
+
+rcc:TPP a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "tangential proper part"@en ;
+    skos:altLabel "tangential part"@en ;
+    rdfs:comment "First region entirely inside second, boundaries touch."@en .
+
+rcc:TPPi a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    owl:inverseOf rcc:TPP ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "tangential proper part inverse"@en ;
+    skos:altLabel "tangential whole"@en ;
+    rdfs:comment "First region entirely contains second, boundaries touch."@en .
+
+rcc:NTPP a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "non-tangential proper part"@en ;
+    skos:altLabel "interior part"@en ;
+    rdfs:comment "First region entirely inside second, boundaries do NOT touch."@en .
+
+rcc:NTPPi a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    owl:inverseOf rcc:NTPP ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "non-tangential proper part inverse"@en ;
+    skos:altLabel "interior whole"@en ;
+    rdfs:comment "First region entirely contains second, boundaries do not touch."@en .
+
+#
+# Axioms
+#
+rcc:NTPP rdfs:subPropertyOf loc:isAPartOf .
+rcc:TPP rdfs:subPropertyOf loc:isAPartOf .
+rcc:NTPPi rdfs:subPropertyOf loc:contains .
+rcc:TPPi rdfs:subPropertyOf loc:contains .
+rcc:EC rdfs:subPropertyOf loc:borders .
+
+rcc:EQ rdfs:subPropertyOf loc:isAPartOf .
+rcc:EQ rdfs:subPropertyOf loc:contains .
+
+
+rcc:DC owl:propertyDisjointWith loc:isAPartOf .  
+rcc:EC owl:propertyDisjointWith loc:isAPartOf . 
+rcc:PO owl:propertyDisjointWith loc:isAPartOf .  
+rcc:DC owl:propertyDisjointWith loc:borders .
+rcc:DC owl:propertyDisjointWith loc:isNear .
+rcc:DC owl:propertyDisjointWith loc:contains .  
+rcc:EC owl:propertyDisjointWith loc:contains .  
+rcc:EC owl:propertyDisjointWith rcc:NTPP .  
+rcc:PO owl:propertyDisjointWith loc:contains .  
+
+[] a owl:AllDisjointProperties ;
+    owl:members ( rcc:DC rcc:EC rcc:PO rcc:EQ rcc:TPP rcc:TPPi rcc:NTPP rcc:NTPPi ) .

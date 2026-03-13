@@ -4,7 +4,7 @@ A modular OWL ontology for representing story plots. The ontology models charact
 
 ## Structure
 
-The ontology consists of seven modules (`place.ttl`, `rcc.ttl`, `time.ttl`, `social.ttl`, `event.ttl`, `plot.ttl`, `actions.ttl`) and one instance file (`narn-instances.ttl`) that extends the `narn.ttl`. The modules `meo.ttl` and `fo.ttl` are external dependencies.
+The ontology consists of seven modules (`place.ttl`, `rcc.ttl`, `time.ttl`, `social.ttl`, `event.ttl`, `plot.ttl`, `actions.ttl`) and one instance file `narn-instances.ttl` that extends the `narn.ttl`. The modules `meo.ttl` and `fo.ttl` are external dependencies.
 
 ## Tools
 
@@ -13,4 +13,3 @@ The ontology consists of seven modules (`place.ttl`, `rcc.ttl`, `time.ttl`, `soc
 [RDFox](https://www.oxfordsemantic.tech/rdfox) was used as a triple store to load all modules together and run SPARQL queries against the combined knowledge base, for validating that competency questions are answerable.
 [WIDOCO](https://github.com/dgarijo/Widoco) was used to generate HTML documentation from the ontology annotations.
 
-Some axioms are documented as commented triples in the ontology files, because they would violate OWL 2 DL global restrictions on non-simple properties and are therefore omitted.

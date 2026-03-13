@@ -209,8 +209,6 @@ act:TransferAction owl:disjointWith act:CommunicativeAction .
 act:Attack owl:disjointWith act:Defend .
 # Give ⊓ Take = ⊥
 act:Give owl:disjointWith act:Take .
-# Speak ⊓ Deceive = ⊥ 
-act:Speak owl:disjointWith act:Deceive .
 # Forge ⊓ Build = ⊥ 
 act:Forge owl:disjointWith act:Build .
 
@@ -264,13 +262,6 @@ act:Deceive owl:equivalentClass [
 ] .
 
 
-
-# A Command has at least one performer
-act:Command rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty act:performedBy ;
-    owl:someValuesFrom owl:Thing
-] .
 
 # A Give action transfers exactly 1 item 
 act:Give rdfs:subClassOf [
@@ -349,8 +340,8 @@ act:Reveal owl:equivalentClass [
 
 
 
-# MovementAction targets only places 
-act:MovementAction rdfs:subClassOf [
+# GoTo action targets only places 
+act:GoTo rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty act:hasTarget ;
     owl:allValuesFrom loc:Place

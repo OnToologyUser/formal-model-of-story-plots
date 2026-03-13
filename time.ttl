@@ -18,7 +18,7 @@
 to: a owl:Ontology ;
     rdfs:label "Temporal Ontology"@en ;
     rdfs:comment """An ontology for temporal entities and Allen's temporal algebra."""@en ;
-    dct:created "2026-02-25"^^xsd:date ;
+    dct:created "2026-03-13"^^xsd:date ;
     dct:creator erdemonal:me ;
     vann:preferredNamespaceUri "https://purl.org/to/" ;
     vann:preferredNamespacePrefix "to" .
@@ -85,23 +85,7 @@ to:EternalInterval a owl:Class ;
     skos:altLabel "everlasting interval"@en ;
     rdfs:comment "An interval extending infinitely in both directions."@en .
 
-to:FiniteInterval rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty to:startsAt ;
-    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:onClass to:Instant
-] .
-
-to:FiniteInterval rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty to:endsAt ;
-    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:onClass to:Instant
-] .
-
-#
 # Properties
-#
 to:occursBefore a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain to:Instant ;
     rdfs:range to:Instant ;
@@ -189,9 +173,8 @@ to:after a owl:ObjectProperty, owl:TransitiveProperty ;
     skos:altLabel "follows"@en ;
     rdfs:comment "Inverse of before. X starts after Y ends."@en .
 
-to:meets a owl:ObjectProperty ;
+to:meets a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
     rdfs:subPropertyOf to:intervalRelation ;
-    owl:propertyDisjointWith to:before ;
     rdfs:label "meets"@en ;
     skos:altLabel "immediately before"@en ;
     rdfs:comment "X ends exactly when Y starts."@en .
@@ -217,13 +200,13 @@ to:overlappedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricPro
     skos:altLabel "partially after"@en ;
     rdfs:comment "Inverse of overlaps. Y starts before X, ends after X starts but before X ends."@en .
 
-to:starts a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+to:starts a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
     rdfs:subPropertyOf to:intervalRelation ;
     rdfs:label "starts"@en ;
     skos:altLabel "begins with"@en ;
     rdfs:comment "X starts at same time as Y but ends before Y ends."@en .
 
-to:startedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+to:startedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
     owl:inverseOf to:starts ;
     rdfs:subPropertyOf to:intervalRelation ;
     rdfs:label "started by"@en ;
@@ -243,13 +226,13 @@ to:containsInterval a owl:ObjectProperty, owl:TransitiveProperty ;
     skos:altLabel "temporally contains"@en ;
     rdfs:comment "Inverse of during. X entirely contains Y."@en .
 
-to:finishes a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+to:finishes a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
     rdfs:subPropertyOf to:intervalRelation ;
     rdfs:label "finishes"@en ;
     skos:altLabel "ends with"@en ;
     rdfs:comment "X ends at same time as Y but starts after Y starts."@en .
 
-to:finishedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+to:finishedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
     owl:inverseOf to:finishes ;
     rdfs:subPropertyOf to:intervalRelation ;
     rdfs:label "finished by"@en ;
@@ -306,7 +289,6 @@ to:EternalInterval owl:equivalentClass [
     )
 ] .
 
-# StartingInterval ≡ Interval ⊓ ∃startsAt.Instant
 # A starting interval is any interval that has a beginning
 to:StartingInterval owl:equivalentClass [
     a owl:Class ;
@@ -349,43 +331,16 @@ to:FiniteInterval rdfs:subClassOf [
     owl:onClass to:Instant
 ] .
 
-
-
-# StartingInterval and EndingInterval are not disjoint
-# Making them disjoint would make FiniteInterval unsatisfiable
-
-# EternalInterval ⊓ FiniteInterval = ⊥
 to:EternalInterval owl:disjointWith to:FiniteInterval .
 
 
-# The start instant cannot be the end instant
 to:startsAt owl:propertyDisjointWith to:endsAt .
 
-# before is incompatible with during, starts, finishes, overlaps, equals
-# to:before owl:propertyDisjointWith to:during .
-# to:before owl:propertyDisjointWith to:starts .
-# to:before owl:propertyDisjointWith to:finishes .
-# to:before owl:propertyDisjointWith to:overlaps .
-# to:before owl:propertyDisjointWith to:equals .
-# during implies neither before nor after
-# to:during owl:propertyDisjointWith to:after .
-# to:during owl:propertyDisjointWith to:meets .
-# meets is disjoint with during and overlaps
-# to:meets owl:propertyDisjointWith to:during .
-# to:meets owl:propertyDisjointWith to:overlaps .
-# equals is disjoint with before/after
-# to:equals owl:propertyDisjointWith to:after .
-#
-# The aforementioned commented axioms are disabled to preserve OWL 2 DL compatibility.
-# OWL 2 DL restricts property disjointness and AllDisjointProperties to simple properties, whereas
-# several Allen relations here are non-simple.
-
-# all 13 Allen relations are pairwise disjoint
-# [] a owl:AllDisjointProperties ;
-#     owl:members ( to:before to:after to:meets to:metBy
-#                   to:overlaps to:overlappedBy to:starts to:startedBy
-#                   to:during to:containsInterval to:finishes to:finishedBy
-#                   to:equals ) .
+[] a owl:AllDisjointProperties ;
+    owl:members ( to:before to:after to:meets to:metBy
+                  to:overlaps to:overlappedBy to:starts to:startedBy
+                  to:during to:containsInterval to:finishes to:finishedBy
+                  to:equals ) .
 
 to:startsAt a owl:AsymmetricProperty, owl:IrreflexiveProperty .
 to:endsAt a owl:AsymmetricProperty, owl:IrreflexiveProperty .

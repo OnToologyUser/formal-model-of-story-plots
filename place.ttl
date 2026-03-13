@@ -164,7 +164,6 @@ loc:UndergroundPlace a owl:Class ;
     rdfs:comment "A place located beneath the surface of the earth."@en .
 
 loc:UndergroundCity a owl:Class ;
-    rdfs:subClassOf loc:City, loc:UndergroundPlace ;
     rdfs:label "underground city"@en ;
     skos:altLabel "subterranean city"@en ;
     rdfs:comment "A city built underground, within caves or excavated halls."@en .
@@ -196,7 +195,7 @@ loc:contains a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:range loc:Place ;
     rdfs:comment "Inverse of isAPartOf."@en .
 
-loc:isStrictlyInsideOf a owl:ObjectProperty ;
+loc:isStrictlyInsideOf a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf loc:isAPartOf ;
     rdfs:label "is strictly inside of"@en ;
     skos:altLabel "strictly within"@en ;
@@ -224,11 +223,9 @@ loc:isTheCapitalOf a owl:ObjectProperty, owl:FunctionalProperty ;
 #
 # Axioms
 #
-loc:City owl:disjointWith loc:NaturalArea .
 loc:Forest owl:disjointWith loc:Desert .
 loc:Mountain owl:disjointWith loc:Sea .
 loc:River owl:disjointWith loc:Mountain .
-loc:Settlement owl:disjointWith loc:WildArea .
 loc:Building owl:disjointWith loc:NaturalArea .
 loc:City owl:disjointWith loc:Village .
 loc:Town owl:disjointWith loc:Village .
@@ -242,7 +239,7 @@ loc:UndergroundCity owl:equivalentClass [
 loc:Realm owl:equivalentClass [
     a owl:Class ;
     owl:intersectionOf (
-        loc:Region
+        loc:LandArea
         [ a owl:Restriction ;
           owl:onProperty [ owl:inverseOf loc:isTheCapitalOf ] ;
           owl:someValuesFrom loc:Settlement ]
@@ -255,6 +252,15 @@ loc:Settlement rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty loc:isAPartOf ;
     owl:someValuesFrom loc:Place
+] .
+
+
+# A Continent cannot have a capital 
+loc:Continent rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf loc:isTheCapitalOf ] ;
+    owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+    owl:onClass loc:Settlement
 ] .
 
 
