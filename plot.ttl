@@ -1,0 +1,446 @@
+#
+# Prefixes
+#
+@prefix plot: <https://purl.org/plot/> .
+@prefix evnt: <https://purl.org/event/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <https://purl.org/dc/terms/> .
+@prefix vann: <https://purl.org/vocab/vann/> .
+@prefix erdemonal: <https://w3id.org/people/erdemonal/> .
+
+
+# Plot Structure Ontology
+# Defines narrative and literary structure elements for story analysis
+#
+plot: a owl:Ontology ;
+      owl:imports evnt: ;
+      rdfs:label "Plot Structure Ontology"@en ;
+      rdfs:comment """An ontology for narrative and literary structure of stories."""@en ;
+      dct:created "2026-03-16"^^xsd:date ;
+     dct:creator erdemonal:me ;
+     vann:preferredNamespaceUri "https://purl.org/plot/" ;
+     vann:preferredNamespacePrefix "plot" .
+
+#
+# Classes
+#
+plot:Story a owl:Class ;
+    rdfs:label "story"@en ;
+    skos:altLabel "narrative"@en ;
+    rdfs:comment "A complete narrative work."@en .
+
+plot:NarrativeUnit a owl:Class ;
+    rdfs:label "narrative unit"@en ;
+    skos:altLabel "story division"@en ;
+    rdfs:comment "A structural division of a story."@en .
+
+plot:Part a owl:Class ;
+    rdfs:subClassOf plot:NarrativeUnit ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty plot:containsUnit ; owl:someValuesFrom plot:Chapter ] ;
+    rdfs:label "part"@en ;
+    skos:altLabel "story part"@en ;
+    rdfs:comment "A major division of a story containing chapters."@en .
+
+plot:Chapter a owl:Class ;
+    rdfs:subClassOf plot:NarrativeUnit ;
+    rdfs:label "chapter"@en ;
+    skos:altLabel "story chapter"@en ;
+    rdfs:comment "A numbered or titled section of a narrative."@en .
+
+plot:Scene a owl:Class ;
+    rdfs:subClassOf plot:NarrativeUnit ;
+    rdfs:label "scene"@en ;
+    skos:altLabel "story scene"@en ;
+    rdfs:comment "The smallest narrative unit; a continuous action in one setting."@en .
+
+plot:Act a owl:Class ;
+    rdfs:subClassOf plot:NarrativeUnit ;
+    rdfs:label "act"@en ;
+    skos:altLabel "story act"@en ;
+    rdfs:comment "A major division in drama or narrative, often five in classical structure."@en .
+
+plot:NarrativeElement a owl:Class ;
+    rdfs:label "narrative element"@en ;
+    skos:altLabel "story element"@en ;
+    rdfs:comment "A stage in the narrative arc."@en .
+
+plot:Exposition a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "exposition"@en ;
+    skos:altLabel "setup"@en ;
+    rdfs:comment "Introduction of setting, characters, and background."@en .
+
+plot:IncitingIncident a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "inciting incident"@en ;
+    skos:altLabel "catalyst"@en ;
+    rdfs:comment "The event that sets the main conflict in motion."@en .
+
+plot:RisingAction a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "rising action"@en ;
+    skos:altLabel "complication"@en ;
+    rdfs:comment "Series of events building tension toward the climax."@en .
+
+plot:Climax a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "climax"@en ;
+    skos:altLabel "turning point"@en ;
+    rdfs:comment "The turning point; the moment of highest tension."@en .
+
+plot:FallingAction a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "falling action"@en ;
+    skos:altLabel "unwinding"@en ;
+    rdfs:comment "Events after the climax leading to the resolution."@en .
+
+plot:Resolution a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "resolution"@en ;
+    skos:altLabel "conclusion"@en ;
+    rdfs:comment "The outcome; how the conflict is resolved."@en .
+
+plot:Denouement a owl:Class ;
+    owl:equivalentClass plot:Resolution ;
+    rdfs:label "denouement"@en ;
+    skos:altLabel "final outcome"@en ;
+    rdfs:comment "Equivalent to resolution. The unravelling of the plot."@en .
+
+plot:PlotDevice a owl:Class ;
+    rdfs:label "plot device"@en ;
+    skos:altLabel "narrative device"@en ;
+    rdfs:comment "A technique used to advance or structure the plot."@en .
+
+plot:PlotTwist a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "plot twist"@en ;
+    skos:altLabel "unexpected turn"@en ;
+    rdfs:comment "An unexpected revelation that changes the story's direction."@en .
+
+plot:Foreshadowing a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "foreshadowing"@en ;
+    skos:altLabel "hint of future events"@en ;
+    rdfs:comment "Hints or clues about future events in the story."@en .
+
+plot:DramaticIrony a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "dramatic irony"@en ;
+    skos:altLabel "audience knowledge gap"@en ;
+    rdfs:comment "When the audience knows more than the characters."@en .
+
+plot:Flashback a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "flashback"@en ;
+    skos:altLabel "retrospection"@en ;
+    rdfs:comment "A scene set in a time earlier than the main story."@en .
+
+plot:MacGuffin a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "MacGuffin"@en ;
+    skos:altLabel "plot motivator"@en ;
+    rdfs:comment "An object or goal that motivates the plot but has no intrinsic importance."@en .
+
+plot:Anagnorisis a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "anagnorisis"@en ;
+    skos:altLabel "moment of recognition"@en ;
+    rdfs:comment "The point in a play, novel, etc., in which a principal character recognizes or discovers another character's true identity or the true nature of their own circumstances."@en .
+
+plot:Peripeteia a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "peripeteia"@en ;
+    skos:altLabel "reversal of fortune"@en ;
+    rdfs:comment "A sudden reversal of fortune or change in circumstances."@en .
+
+plot:Conflict a owl:Class ;
+    rdfs:label "conflict"@en ;
+    skos:altLabel "tension"@en ;
+    rdfs:comment "A struggle between opposing forces driving the plot."@en .
+
+plot:InternalConflict a owl:Class ;
+    rdfs:subClassOf plot:Conflict ;
+    owl:disjointWith plot:ExternalConflict ;
+    rdfs:label "internal conflict"@en ;
+    skos:altLabel "inner struggle"@en ;
+    rdfs:comment "Conflict within a character (e.g. moral dilemma, fear)."@en .
+
+plot:ExternalConflict a owl:Class ;
+    rdfs:subClassOf plot:Conflict ;
+    rdfs:label "external conflict"@en ;
+    skos:altLabel "outer struggle"@en ;
+    rdfs:comment "Conflict between a character and an external force (antagonist, nature, society)."@en .
+
+plot:CharacterRole a owl:Class ;
+    rdfs:label "character role"@en ;
+    skos:altLabel "story role"@en ;
+    rdfs:comment "The narrative function a character plays in the story."@en .
+
+plot:Protagonist a owl:Class ;
+    rdfs:subClassOf plot:CharacterRole ;
+    owl:disjointWith plot:Antagonist ;
+    rdfs:label "protagonist"@en ;
+    skos:altLabel "main character"@en ;
+    rdfs:comment "The main character; the one driving the action."@en .
+
+plot:Antagonist a owl:Class ;
+    rdfs:subClassOf plot:CharacterRole ;
+    rdfs:label "antagonist"@en ;
+    skos:altLabel "villain"@en ;
+    rdfs:comment "The character who opposes the protagonist."@en .
+
+plot:Mentor a owl:Class ;
+    rdfs:subClassOf plot:CharacterRole ;
+    rdfs:label "mentor"@en ;
+    skos:altLabel "guide figure"@en ;
+    rdfs:comment "A character who guides or teaches the protagonist."@en .
+
+plot:TragicHero a owl:Class ;
+    rdfs:subClassOf plot:CharacterRole ;
+    rdfs:label "tragic hero"@en ;
+    skos:altLabel "tragic protagonist"@en ;
+    rdfs:comment "A protagonist whose flaw leads to their downfall."@en .
+
+plot:Genre a owl:Class ;
+    rdfs:label "genre"@en ;
+    skos:altLabel "literary genre"@en ;
+    rdfs:comment "A category of narrative with shared conventions."@en .
+
+plot:Tragedy a owl:Class ;
+    rdfs:subClassOf plot:Genre ;
+    rdfs:label "tragedy"@en ;
+    skos:altLabel "tragic genre"@en ;
+    rdfs:comment "A story where the protagonist suffers a downfall."@en .
+
+plot:Epic a owl:Class ;
+    rdfs:subClassOf plot:Genre ;
+    rdfs:label "epic"@en ;
+    skos:altLabel "epic genre"@en ;
+    rdfs:comment "A long narrative involving heroic deeds and grand scale."@en .
+
+plot:Fantasy a owl:Class ;
+    rdfs:subClassOf plot:Genre ;
+    rdfs:label "fantasy"@en ;
+    skos:altLabel "fantasy genre"@en ;
+    rdfs:comment "A story with magical or supernatural elements."@en .
+
+#
+# Properties
+#
+plot:containsUnit a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain plot:NarrativeUnit ;
+    rdfs:range plot:NarrativeUnit ;
+    rdfs:label "contains unit"@en ;
+    skos:altLabel "includes unit"@en ;
+    rdfs:comment "Relates a narrative unit to its contained subunits."@en .
+
+plot:isUnitOf a owl:ObjectProperty ;
+    owl:inverseOf plot:containsUnit ;
+    rdfs:label "is unit of"@en ;
+    skos:altLabel "belongs to"@en ;
+    rdfs:comment "Inverse of containsUnit, relates a unit to its parent."@en .
+
+plot:hasNarrativeUnit a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:NarrativeUnit ;
+    rdfs:label "has narrative unit"@en ;
+    skos:altLabel "divided into"@en ;
+    rdfs:comment "Links a story to its structural units."@en .
+
+plot:unitIndex a owl:DatatypeProperty ;
+    rdfs:domain plot:NarrativeUnit ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:label "unit index"@en ;
+    skos:altLabel "sequence number"@en ;
+    rdfs:comment "The ordering position of a unit within its parent."@en .
+
+plot:hasNarrativeElement a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:NarrativeElement ;
+    rdfs:label "has narrative element"@en ;
+    skos:altLabel "has element"@en ;
+    rdfs:comment "Links a story to its plot stages."@en .
+
+plot:correspondsToEvent a owl:ObjectProperty ;
+    rdfs:domain plot:NarrativeElement ;
+    rdfs:range evnt:Event ;
+    rdfs:label "corresponds to event"@en ;
+    skos:altLabel "maps to event"@en ;
+    rdfs:comment "Maps a narrative element to the event it represents."@en .
+
+plot:occursInUnit a owl:ObjectProperty ;
+    rdfs:domain plot:NarrativeElement ;
+    rdfs:range plot:NarrativeUnit ;
+    rdfs:label "occurs in unit"@en ;
+    skos:altLabel "located in unit"@en ;
+    rdfs:comment "The narrative unit in which this element appears."@en .
+
+plot:usesDevice a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:PlotDevice ;
+    rdfs:label "uses device"@en ;
+    skos:altLabel "employs device"@en ;
+    rdfs:comment "Links a story to the plot devices it employs."@en .
+
+plot:deviceInvolvesCharacter a owl:ObjectProperty ;
+    rdfs:domain plot:PlotDevice ;
+    rdfs:label "device involves character"@en ;
+    skos:altLabel "device concerns"@en ;
+    rdfs:comment "A character involved in or affected by this plot device."@en .
+
+plot:foreshadowsEvent a owl:ObjectProperty ;
+    rdfs:domain plot:Foreshadowing ;
+    rdfs:range evnt:Event ;
+    rdfs:label "foreshadows event"@en ;
+    skos:altLabel "hints at"@en ;
+    rdfs:comment "The event that this foreshadowing hints at."@en .
+
+plot:hasRole a owl:ObjectProperty ;
+    rdfs:range plot:CharacterRole ;
+    rdfs:label "has role"@en ;
+    skos:altLabel "plays role"@en ;
+    rdfs:comment "The narrative role a character plays."@en .
+
+plot:hasConflict a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:Conflict ;
+    rdfs:label "has conflict"@en ;
+    skos:altLabel "has tension"@en ;
+    rdfs:comment "A conflict central to the story."@en .
+
+plot:conflictInvolves a owl:ObjectProperty ;
+    rdfs:domain plot:Conflict ;
+    rdfs:label "conflict involves"@en ;
+    skos:altLabel "tension involves"@en ;
+    rdfs:comment "A character or entity involved in the conflict."@en .
+
+plot:hasGenre a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:Genre ;
+    rdfs:label "has genre"@en ;
+    skos:altLabel "genre is"@en ;
+    rdfs:comment "The genre(s) of the story."@en .
+
+plot:hasAuthor a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:label "has author"@en ;
+    skos:altLabel "written by"@en ;
+    rdfs:comment "The author of the story."@en .
+
+plot:hasTheme a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:label "has theme"@en ;
+    skos:altLabel "explores theme"@en ;
+    rdfs:comment "A thematic element or motif in the story."@en .
+
+plot:publishedDate a owl:DatatypeProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range xsd:date ;
+    rdfs:label "published date"@en ;
+    skos:altLabel "date published"@en ;
+    rdfs:comment "The date the story was published."@en .
+
+#
+# Axioms
+#
+plot:Story rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:hasNarrativeUnit ;
+    owl:someValuesFrom plot:NarrativeUnit
+] .
+
+plot:Scene rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:containsUnit ;
+    owl:allValuesFrom owl:Nothing
+] .
+
+plot:TragicHero owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        plot:Protagonist
+        [ a owl:Restriction ;
+          owl:onProperty plot:involvedInDevice ;
+          owl:someValuesFrom plot:Peripeteia ]
+    )
+] .
+
+
+plot:Anagnorisis owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        plot:PlotDevice
+        [ a owl:Restriction ;
+          owl:onProperty plot:correspondsToEvent ;
+          owl:someValuesFrom evnt:Discovery ]
+    )
+] .
+
+plot:Exposition owl:disjointWith plot:Climax .
+plot:Exposition owl:disjointWith plot:Resolution .
+plot:Climax owl:disjointWith plot:Resolution .
+plot:RisingAction owl:disjointWith plot:FallingAction .
+plot:IncitingIncident owl:disjointWith plot:Resolution .
+
+
+plot:PlotDevice owl:disjointWith plot:NarrativeElement .
+plot:Genre owl:disjointWith plot:Conflict .
+
+plot:Story rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:hasNarrativeElement ;
+    owl:someValuesFrom plot:Resolution
+] .
+
+plot:Story rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:hasNarrativeElement ;
+    owl:someValuesFrom plot:Climax
+] .
+
+plot:ExternalConflict rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:conflictInvolves ;
+    owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+    owl:onClass owl:Thing
+] .
+
+plot:InternalConflict rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:conflictInvolves ;
+    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass owl:Thing
+] .
+
+plot:Foreshadowing rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:foreshadowsEvent ;
+    owl:allValuesFrom evnt:Event
+] .
+
+plot:NarrativeUnit rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:containsUnit ;
+    owl:allValuesFrom plot:NarrativeUnit
+] .
+
+plot:hasNarrativeUnit a owl:IrreflexiveProperty, owl:AsymmetricProperty .
+plot:follows a owl:ObjectProperty, owl:TransitiveProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    rdfs:domain plot:NarrativeUnit ;
+    rdfs:range plot:NarrativeUnit ;
+    rdfs:label "follows"@en ;
+    skos:altLabel "comes after"@en ;
+    rdfs:comment "One narrative unit sequentially comes after another. Transitive."@en .
+plot:hasGenre a owl:IrreflexiveProperty .
+plot:hasAuthor a owl:FunctionalProperty .
+plot:publishedDate a owl:FunctionalProperty .
+
+plot:hasAuthor owl:propertyDisjointWith plot:conflictInvolves .
+
+plot:involvedInDevice a owl:ObjectProperty ;    
+    rdfs:label "involved in device"@en ;
+    skos:altLabel "affected by narrative device"@en ;
+    rdfs:comment "Links a character role to a narrative device that affects them."@en .
