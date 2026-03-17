@@ -1,0 +1,846 @@
+{
+  "@context" : {
+    "hasTraveller" : {
+      "@id" : "https://w3id.org/narn/event/hasTraveller",
+      "@type" : "@id"
+    },
+    "Betrayal" : {
+      "@id" : "https://w3id.org/narn/event/Betrayal"
+    },
+    "mutuallyLoved" : {
+      "@id" : "https://w3id.org/narn/social/relations/mutuallyLoved",
+      "@type" : "@id"
+    },
+    "isBegottenIn" : {
+      "@id" : "https://w3id.org/narn/event/isBegottenIn",
+      "@type" : "@id"
+    },
+    "foreshadowsEvent" : {
+      "@id" : "https://w3id.org/narn/plot/foreshadowsEvent",
+      "@type" : "@id"
+    },
+    "meets" : {
+      "@id" : "https://w3id.org/narn/to/meets",
+      "@type" : "@id"
+    },
+    "Town" : {
+      "@id" : "https://w3id.org/narn/location/Town"
+    },
+    "hasVictim" : {
+      "@id" : "https://w3id.org/narn/event/hasVictim",
+      "@type" : "@id"
+    },
+    "isTheCapitalOf" : {
+      "@id" : "https://w3id.org/narn/location/isTheCapitalOf",
+      "@type" : "@id"
+    },
+    "Attack" : {
+      "@id" : "https://w3id.org/narn/action/Attack"
+    },
+    "created" : {
+      "@id" : "https://purl.org/dc/terms/created"
+    },
+    "hasIntention" : {
+      "@id" : "https://w3id.org/narn/action/hasIntention",
+      "@type" : "@id"
+    },
+    "Death" : {
+      "@id" : "https://w3id.org/narn/event/Death"
+    },
+    "committedSuicide" : {
+      "@id" : "https://w3id.org/narn/social/relations/committedSuicide",
+      "@type" : "@id"
+    },
+    "MacGuffin" : {
+      "@id" : "https://w3id.org/narn/plot/MacGuffin"
+    },
+    "FiniteInterval" : {
+      "@id" : "https://w3id.org/narn/to/FiniteInterval"
+    },
+    "Speak" : {
+      "@id" : "https://w3id.org/narn/action/Speak"
+    },
+    "publishedDate" : {
+      "@id" : "https://w3id.org/narn/plot/publishedDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "isUnitOf" : {
+      "@id" : "https://w3id.org/narn/plot/isUnitOf",
+      "@type" : "@id"
+    },
+    "Forest" : {
+      "@id" : "https://w3id.org/narn/location/Forest"
+    },
+    "occursAt" : {
+      "@id" : "https://w3id.org/narn/event/occursAt",
+      "@type" : "@id"
+    },
+    "LifeEvent" : {
+      "@id" : "https://w3id.org/narn/event/LifeEvent"
+    },
+    "SocialEvent" : {
+      "@id" : "https://w3id.org/narn/event/SocialEvent"
+    },
+    "hasRecipient" : {
+      "@id" : "https://w3id.org/narn/action/hasRecipient",
+      "@type" : "@id"
+    },
+    "Reveal" : {
+      "@id" : "https://w3id.org/narn/action/Reveal"
+    },
+    "finishedBy" : {
+      "@id" : "https://w3id.org/narn/to/finishedBy",
+      "@type" : "@id"
+    },
+    "King" : {
+      "@id" : "https://w3id.org/narn/social/relations/King"
+    },
+    "Fantasy" : {
+      "@id" : "https://w3id.org/narn/plot/Fantasy"
+    },
+    "War" : {
+      "@id" : "https://w3id.org/narn/event/War"
+    },
+    "TransferAction" : {
+      "@id" : "https://w3id.org/narn/action/TransferAction"
+    },
+    "Ally" : {
+      "@id" : "https://w3id.org/narn/social/relations/Ally"
+    },
+    "TPPi" : {
+      "@id" : "https://w3id.org/narn/rcc/TPPi",
+      "@type" : "@id"
+    },
+    "MisleadingIntention" : {
+      "@id" : "https://w3id.org/narn/action/MisleadingIntention"
+    },
+    "hypnotised" : {
+      "@id" : "https://w3id.org/narn/social/relations/hypnotised",
+      "@type" : "@id"
+    },
+    "PlotTwist" : {
+      "@id" : "https://w3id.org/narn/plot/PlotTwist"
+    },
+    "wasKilledBy" : {
+      "@id" : "https://w3id.org/narn/social/relations/wasKilledBy",
+      "@type" : "@id"
+    },
+    "Protagonist" : {
+      "@id" : "https://w3id.org/narn/plot/Protagonist"
+    },
+    "after" : {
+      "@id" : "https://w3id.org/narn/to/after",
+      "@type" : "@id"
+    },
+    "PositiveRelation" : {
+      "@id" : "https://w3id.org/narn/social/relations/PositiveRelation"
+    },
+    "hasValence" : {
+      "@id" : "https://w3id.org/narn/social/relations/hasValence",
+      "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "Exposition" : {
+      "@id" : "https://w3id.org/narn/plot/Exposition"
+    },
+    "hasEmotionalRelationWith" : {
+      "@id" : "https://w3id.org/narn/social/relations/hasEmotionalRelationWith",
+      "@type" : "@id"
+    },
+    "hasFriend" : {
+      "@id" : "https://w3id.org/narn/social/relations/hasFriend",
+      "@type" : "@id"
+    },
+    "Antagonist" : {
+      "@id" : "https://w3id.org/narn/plot/Antagonist"
+    },
+    "isCausedBy" : {
+      "@id" : "https://w3id.org/narn/event/isCausedBy",
+      "@type" : "@id"
+    },
+    "WoodedArea" : {
+      "@id" : "https://w3id.org/narn/location/WoodedArea"
+    },
+    "River" : {
+      "@id" : "https://w3id.org/narn/location/River"
+    },
+    "Nothing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Nothing"
+    },
+    "precedes" : {
+      "@id" : "https://w3id.org/narn/to/precedes",
+      "@type" : "@id"
+    },
+    "startedBy" : {
+      "@id" : "https://w3id.org/narn/to/startedBy",
+      "@type" : "@id"
+    },
+    "Travel" : {
+      "@id" : "https://w3id.org/narn/event/Travel"
+    },
+    "hasAgent" : {
+      "@id" : "https://w3id.org/narn/event/hasAgent",
+      "@type" : "@id"
+    },
+    "Instant" : {
+      "@id" : "https://w3id.org/narn/to/Instant"
+    },
+    "StartingInterval" : {
+      "@id" : "https://w3id.org/narn/to/StartingInterval"
+    },
+    "Trial" : {
+      "@id" : "https://w3id.org/narn/event/Trial"
+    },
+    "isStrictlyInsideOf" : {
+      "@id" : "https://w3id.org/narn/location/isStrictlyInsideOf",
+      "@type" : "@id"
+    },
+    "killed" : {
+      "@id" : "https://w3id.org/narn/social/relations/killed",
+      "@type" : "@id"
+    },
+    "hasRole" : {
+      "@id" : "https://w3id.org/narn/plot/hasRole",
+      "@type" : "@id"
+    },
+    "hasDestination" : {
+      "@id" : "https://w3id.org/narn/event/hasDestination",
+      "@type" : "@id"
+    },
+    "Leader" : {
+      "@id" : "https://w3id.org/narn/social/relations/Leader"
+    },
+    "occursAfter" : {
+      "@id" : "https://w3id.org/narn/to/occursAfter",
+      "@type" : "@id"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "contains" : {
+      "@id" : "https://w3id.org/narn/location/contains",
+      "@type" : "@id"
+    },
+    "Chieftain" : {
+      "@id" : "https://w3id.org/narn/social/relations/Chieftain"
+    },
+    "Mentor" : {
+      "@id" : "https://w3id.org/narn/plot/Mentor"
+    },
+    "InfiniteInterval" : {
+      "@id" : "https://w3id.org/narn/to/InfiniteInterval"
+    },
+    "containsInterval" : {
+      "@id" : "https://w3id.org/narn/to/containsInterval",
+      "@type" : "@id"
+    },
+    "Resolution" : {
+      "@id" : "https://w3id.org/narn/plot/Resolution"
+    },
+    "LandArea" : {
+      "@id" : "https://w3id.org/narn/location/LandArea"
+    },
+    "Conflict" : {
+      "@id" : "https://w3id.org/narn/plot/Conflict"
+    },
+    "isAKinsmanOf" : {
+      "@id" : "https://w3id.org/narn/social/relations/isAKinsmanOf",
+      "@type" : "@id"
+    },
+    "finishes" : {
+      "@id" : "https://w3id.org/narn/to/finishes",
+      "@type" : "@id"
+    },
+    "Siege" : {
+      "@id" : "https://w3id.org/narn/event/Siege"
+    },
+    "PlotDevice" : {
+      "@id" : "https://w3id.org/narn/plot/PlotDevice"
+    },
+    "Chapter" : {
+      "@id" : "https://w3id.org/narn/plot/Chapter"
+    },
+    "NTPPi" : {
+      "@id" : "https://w3id.org/narn/rcc/NTPPi",
+      "@type" : "@id"
+    },
+    "hasInstant" : {
+      "@id" : "https://w3id.org/narn/to/hasInstant",
+      "@type" : "@id"
+    },
+    "wasHeldCaptiveIn" : {
+      "@id" : "https://w3id.org/narn/social/relations/wasHeldCaptiveIn",
+      "@type" : "@id"
+    },
+    "hasConflict" : {
+      "@id" : "https://w3id.org/narn/plot/hasConflict",
+      "@type" : "@id"
+    },
+    "PoliticalRole" : {
+      "@id" : "https://w3id.org/narn/social/relations/PoliticalRole"
+    },
+    "spatiallyRelatedTo" : {
+      "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo",
+      "@type" : "@id"
+    },
+    "Event" : {
+      "@id" : "https://w3id.org/narn/event/Event"
+    },
+    "Exile" : {
+      "@id" : "https://w3id.org/narn/event/Exile"
+    },
+    "Flashback" : {
+      "@id" : "https://w3id.org/narn/plot/Flashback"
+    },
+    "ConflictEvent" : {
+      "@id" : "https://w3id.org/narn/event/ConflictEvent"
+    },
+    "follows" : {
+      "@id" : "https://w3id.org/narn/plot/follows",
+      "@type" : "@id"
+    },
+    "overlaps" : {
+      "@id" : "https://w3id.org/narn/to/overlaps",
+      "@type" : "@id"
+    },
+    "isAPartOf" : {
+      "@id" : "https://w3id.org/narn/location/isAPartOf",
+      "@type" : "@id"
+    },
+    "UndergroundPlace" : {
+      "@id" : "https://w3id.org/narn/location/UndergroundPlace"
+    },
+    "startsAt" : {
+      "@id" : "https://w3id.org/narn/to/startsAt",
+      "@type" : "@id"
+    },
+    "hasDuration" : {
+      "@id" : "https://w3id.org/narn/to/hasDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "NonLeader" : {
+      "@id" : "https://w3id.org/narn/social/relations/NonLeader"
+    },
+    "Interval" : {
+      "@id" : "https://w3id.org/narn/to/Interval"
+    },
+    "CommunicativeAction" : {
+      "@id" : "https://w3id.org/narn/action/CommunicativeAction"
+    },
+    "Epic" : {
+      "@id" : "https://w3id.org/narn/plot/Epic"
+    },
+    "UndergroundCity" : {
+      "@id" : "https://w3id.org/narn/location/UndergroundCity"
+    },
+    "hasWitness" : {
+      "@id" : "https://w3id.org/narn/event/hasWitness",
+      "@type" : "@id"
+    },
+    "hasCause" : {
+      "@id" : "https://w3id.org/narn/event/hasCause",
+      "@type" : "@id"
+    },
+    "ExternalConflict" : {
+      "@id" : "https://w3id.org/narn/plot/ExternalConflict"
+    },
+    "Deceive" : {
+      "@id" : "https://w3id.org/narn/action/Deceive"
+    },
+    "deviceInvolvesCharacter" : {
+      "@id" : "https://w3id.org/narn/plot/deviceInvolvesCharacter",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "https://purl.org/dc/terms/creator"
+    },
+    "Forge" : {
+      "@id" : "https://w3id.org/narn/action/Forge"
+    },
+    "Outlaw" : {
+      "@id" : "https://w3id.org/narn/social/relations/Outlaw"
+    },
+    "hasPatient" : {
+      "@id" : "https://w3id.org/narn/event/hasPatient",
+      "@type" : "@id"
+    },
+    "precededBy" : {
+      "@id" : "https://w3id.org/narn/to/precededBy",
+      "@type" : "@id"
+    },
+    "Building" : {
+      "@id" : "https://w3id.org/narn/location/Building"
+    },
+    "Anagnorisis" : {
+      "@id" : "https://w3id.org/narn/plot/Anagnorisis"
+    },
+    "ruled" : {
+      "@id" : "https://w3id.org/narn/social/relations/ruled",
+      "@type" : "@id"
+    },
+    "hasTarget" : {
+      "@id" : "https://w3id.org/narn/action/hasTarget",
+      "@type" : "@id"
+    },
+    "creates" : {
+      "@id" : "https://w3id.org/narn/event/creates",
+      "@type" : "@id"
+    },
+    "causes" : {
+      "@id" : "https://w3id.org/narn/event/causes",
+      "@type" : "@id"
+    },
+    "Murder" : {
+      "@id" : "https://w3id.org/narn/event/Murder"
+    },
+    "Escape" : {
+      "@id" : "https://w3id.org/narn/action/Escape"
+    },
+    "Discovery" : {
+      "@id" : "https://w3id.org/narn/event/Discovery"
+    },
+    "hasAuthor" : {
+      "@id" : "https://w3id.org/narn/plot/hasAuthor",
+      "@type" : "@id"
+    },
+    "usesDevice" : {
+      "@id" : "https://w3id.org/narn/plot/usesDevice",
+      "@type" : "@id"
+    },
+    "Suicide" : {
+      "@id" : "https://w3id.org/narn/event/Suicide"
+    },
+    "Battle" : {
+      "@id" : "https://w3id.org/narn/event/Battle"
+    },
+    "occursSimultaneouslyTo" : {
+      "@id" : "https://w3id.org/narn/to/occursSimultaneouslyTo",
+      "@type" : "@id"
+    },
+    "TemporalEntity" : {
+      "@id" : "https://w3id.org/narn/to/TemporalEntity"
+    },
+    "Flee" : {
+      "@id" : "https://w3id.org/narn/action/Flee"
+    },
+    "DC" : {
+      "@id" : "https://w3id.org/narn/rcc/DC",
+      "@type" : "@id"
+    },
+    "Birth" : {
+      "@id" : "https://w3id.org/narn/event/Birth"
+    },
+    "TPP" : {
+      "@id" : "https://w3id.org/narn/rcc/TPP",
+      "@type" : "@id"
+    },
+    "Desert" : {
+      "@id" : "https://w3id.org/narn/location/Desert"
+    },
+    "Enchantment" : {
+      "@id" : "https://w3id.org/narn/event/Enchantment"
+    },
+    "livedIn" : {
+      "@id" : "https://w3id.org/narn/social/relations/livedIn",
+      "@type" : "@id"
+    },
+    "correspondsToEvent" : {
+      "@id" : "https://w3id.org/narn/plot/correspondsToEvent",
+      "@type" : "@id"
+    },
+    "Act" : {
+      "@id" : "https://w3id.org/narn/plot/Act"
+    },
+    "involvedInDevice" : {
+      "@id" : "https://w3id.org/narn/plot/involvedInDevice",
+      "@type" : "@id"
+    },
+    "feared" : {
+      "@id" : "https://w3id.org/narn/social/relations/feared",
+      "@type" : "@id"
+    },
+    "Valley" : {
+      "@id" : "https://w3id.org/narn/location/Valley"
+    },
+    "RisingAction" : {
+      "@id" : "https://w3id.org/narn/plot/RisingAction"
+    },
+    "wasTheChieftainOf" : {
+      "@id" : "https://w3id.org/narn/social/relations/wasTheChieftainOf",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "https://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "MovementEvent" : {
+      "@id" : "https://w3id.org/narn/event/MovementEvent"
+    },
+    "DramaticIrony" : {
+      "@id" : "https://w3id.org/narn/plot/DramaticIrony"
+    },
+    "Place" : {
+      "@id" : "https://w3id.org/narn/location/Place"
+    },
+    "Build" : {
+      "@id" : "https://w3id.org/narn/action/Build"
+    },
+    "occursInUnit" : {
+      "@id" : "https://w3id.org/narn/plot/occursInUnit",
+      "@type" : "@id"
+    },
+    "Part" : {
+      "@id" : "https://w3id.org/narn/plot/Part"
+    },
+    "Realm" : {
+      "@id" : "https://w3id.org/narn/location/Realm"
+    },
+    "hasDateTime" : {
+      "@id" : "https://w3id.org/narn/to/hasDateTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Peripeteia" : {
+      "@id" : "https://w3id.org/narn/plot/Peripeteia"
+    },
+    "hasResult" : {
+      "@id" : "https://w3id.org/narn/action/hasResult",
+      "@type" : "@id"
+    },
+    "wasTheBestFriendOf" : {
+      "@id" : "https://w3id.org/narn/social/relations/wasTheBestFriendOf",
+      "@type" : "@id"
+    },
+    "Prophecy" : {
+      "@id" : "https://w3id.org/narn/event/Prophecy"
+    },
+    "cursed" : {
+      "@id" : "https://w3id.org/narn/social/relations/cursed",
+      "@type" : "@id"
+    },
+    "Command" : {
+      "@id" : "https://w3id.org/narn/action/Command"
+    },
+    "FallingAction" : {
+      "@id" : "https://w3id.org/narn/plot/FallingAction"
+    },
+    "ViolentAction" : {
+      "@id" : "https://w3id.org/narn/action/ViolentAction"
+    },
+    "EmotionalValence" : {
+      "@id" : "https://w3id.org/narn/social/relations/EmotionalValence"
+    },
+    "Coronation" : {
+      "@id" : "https://w3id.org/narn/event/Coronation"
+    },
+    "hasParticipant" : {
+      "@id" : "https://w3id.org/narn/event/hasParticipant",
+      "@type" : "@id"
+    },
+    "hasSpatialRelation" : {
+      "@id" : "https://w3id.org/narn/location/hasSpatialRelation",
+      "@type" : "@id"
+    },
+    "NarrativeElement" : {
+      "@id" : "https://w3id.org/narn/plot/NarrativeElement"
+    },
+    "hated" : {
+      "@id" : "https://w3id.org/narn/social/relations/hated",
+      "@type" : "@id"
+    },
+    "Sea" : {
+      "@id" : "https://w3id.org/narn/location/Sea"
+    },
+    "Meeting" : {
+      "@id" : "https://w3id.org/narn/event/Meeting"
+    },
+    "EC" : {
+      "@id" : "https://w3id.org/narn/rcc/EC",
+      "@type" : "@id"
+    },
+    "hasTheme" : {
+      "@id" : "https://w3id.org/narn/plot/hasTheme",
+      "@type" : "@id"
+    },
+    "hasGenre" : {
+      "@id" : "https://w3id.org/narn/plot/hasGenre",
+      "@type" : "@id"
+    },
+    "borders" : {
+      "@id" : "https://w3id.org/narn/location/borders",
+      "@type" : "@id"
+    },
+    "causesByAction" : {
+      "@id" : "https://w3id.org/narn/action/causesByAction",
+      "@type" : "@id"
+    },
+    "Kill" : {
+      "@id" : "https://w3id.org/narn/action/Kill"
+    },
+    "EternalInterval" : {
+      "@id" : "https://w3id.org/narn/to/EternalInterval"
+    },
+    "endsAt" : {
+      "@id" : "https://w3id.org/narn/to/endsAt",
+      "@type" : "@id"
+    },
+    "Village" : {
+      "@id" : "https://w3id.org/narn/location/Village"
+    },
+    "overlappedBy" : {
+      "@id" : "https://w3id.org/narn/to/overlappedBy",
+      "@type" : "@id"
+    },
+    "PO" : {
+      "@id" : "https://w3id.org/narn/rcc/PO",
+      "@type" : "@id"
+    },
+    "GoTo" : {
+      "@id" : "https://w3id.org/narn/action/GoTo"
+    },
+    "Continent" : {
+      "@id" : "https://w3id.org/narn/location/Continent"
+    },
+    "Mountain" : {
+      "@id" : "https://w3id.org/narn/location/Mountain"
+    },
+    "Flight" : {
+      "@id" : "https://w3id.org/narn/event/Flight"
+    },
+    "hasNarrativeUnit" : {
+      "@id" : "https://w3id.org/narn/plot/hasNarrativeUnit",
+      "@type" : "@id"
+    },
+    "Scene" : {
+      "@id" : "https://w3id.org/narn/plot/Scene"
+    },
+    "Tragedy" : {
+      "@id" : "https://w3id.org/narn/plot/Tragedy"
+    },
+    "containsUnit" : {
+      "@id" : "https://w3id.org/narn/plot/containsUnit",
+      "@type" : "@id"
+    },
+    "Fortress" : {
+      "@id" : "https://w3id.org/narn/location/Fortress"
+    },
+    "EQ" : {
+      "@id" : "https://w3id.org/narn/rcc/EQ",
+      "@type" : "@id"
+    },
+    "hasNarrativeElement" : {
+      "@id" : "https://w3id.org/narn/plot/hasNarrativeElement",
+      "@type" : "@id"
+    },
+    "wasServedBy" : {
+      "@id" : "https://w3id.org/narn/social/relations/wasServedBy",
+      "@type" : "@id"
+    },
+    "Story" : {
+      "@id" : "https://w3id.org/narn/plot/Story"
+    },
+    "City" : {
+      "@id" : "https://w3id.org/narn/location/City"
+    },
+    "SuicidalCharacter" : {
+      "@id" : "https://w3id.org/narn/social/relations/SuicidalCharacter"
+    },
+    "EndingInterval" : {
+      "@id" : "https://w3id.org/narn/to/EndingInterval"
+    },
+    "starts" : {
+      "@id" : "https://w3id.org/narn/to/starts",
+      "@type" : "@id"
+    },
+    "CharacterRole" : {
+      "@id" : "https://w3id.org/narn/plot/CharacterRole"
+    },
+    "Hill" : {
+      "@id" : "https://w3id.org/narn/location/Hill"
+    },
+    "Defend" : {
+      "@id" : "https://w3id.org/narn/action/Defend"
+    },
+    "Curse" : {
+      "@id" : "https://w3id.org/narn/event/Curse"
+    },
+    "metBy" : {
+      "@id" : "https://w3id.org/narn/to/metBy",
+      "@type" : "@id"
+    },
+    "Take" : {
+      "@id" : "https://w3id.org/narn/action/Take"
+    },
+    "MovementAction" : {
+      "@id" : "https://w3id.org/narn/action/MovementAction"
+    },
+    "isMarriedTo" : {
+      "@id" : "https://w3id.org/narn/social/relations/isMarriedTo",
+      "@type" : "@id"
+    },
+    "hasOrigin" : {
+      "@id" : "https://w3id.org/narn/event/hasOrigin",
+      "@type" : "@id"
+    },
+    "occursBefore" : {
+      "@id" : "https://w3id.org/narn/to/occursBefore",
+      "@type" : "@id"
+    },
+    "Council" : {
+      "@id" : "https://w3id.org/narn/event/Council"
+    },
+    "IncitingIncident" : {
+      "@id" : "https://w3id.org/narn/plot/IncitingIncident"
+    },
+    "Climax" : {
+      "@id" : "https://w3id.org/narn/plot/Climax"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "during" : {
+      "@id" : "https://w3id.org/narn/to/during",
+      "@type" : "@id"
+    },
+    "Feast" : {
+      "@id" : "https://w3id.org/narn/event/Feast"
+    },
+    "SocialRole" : {
+      "@id" : "https://w3id.org/narn/social/relations/SocialRole"
+    },
+    "Genre" : {
+      "@id" : "https://w3id.org/narn/plot/Genre"
+    },
+    "CreationAction" : {
+      "@id" : "https://w3id.org/narn/action/CreationAction"
+    },
+    "MilitaryRole" : {
+      "@id" : "https://w3id.org/narn/social/relations/MilitaryRole"
+    },
+    "loved" : {
+      "@id" : "https://w3id.org/narn/social/relations/loved",
+      "@type" : "@id"
+    },
+    "before" : {
+      "@id" : "https://w3id.org/narn/to/before",
+      "@type" : "@id"
+    },
+    "Lake" : {
+      "@id" : "https://w3id.org/narn/location/Lake"
+    },
+    "Settlement" : {
+      "@id" : "https://w3id.org/narn/location/Settlement"
+    },
+    "InternalConflict" : {
+      "@id" : "https://w3id.org/narn/plot/InternalConflict"
+    },
+    "hasSubEvent" : {
+      "@id" : "https://w3id.org/narn/event/hasSubEvent",
+      "@type" : "@id"
+    },
+    "Give" : {
+      "@id" : "https://w3id.org/narn/action/Give"
+    },
+    "Duel" : {
+      "@id" : "https://w3id.org/narn/event/Duel"
+    },
+    "conflictInvolves" : {
+      "@id" : "https://w3id.org/narn/plot/conflictInvolves",
+      "@type" : "@id"
+    },
+    "performedBy" : {
+      "@id" : "https://w3id.org/narn/action/performedBy",
+      "@type" : "@id"
+    },
+    "isSubEventOf" : {
+      "@id" : "https://w3id.org/narn/event/isSubEventOf",
+      "@type" : "@id"
+    },
+    "isAnEnemyOf" : {
+      "@id" : "https://w3id.org/narn/social/relations/isAnEnemyOf",
+      "@type" : "@id"
+    },
+    "hasInstrument" : {
+      "@id" : "https://w3id.org/narn/action/hasInstrument",
+      "@type" : "@id"
+    },
+    "NarrativeUnit" : {
+      "@id" : "https://w3id.org/narn/plot/NarrativeUnit"
+    },
+    "intervalRelation" : {
+      "@id" : "https://w3id.org/narn/to/intervalRelation",
+      "@type" : "@id"
+    },
+    "Action" : {
+      "@id" : "https://w3id.org/narn/action/Action"
+    },
+    "NTPP" : {
+      "@id" : "https://w3id.org/narn/rcc/NTPP",
+      "@type" : "@id"
+    },
+    "isNear" : {
+      "@id" : "https://w3id.org/narn/location/isNear",
+      "@type" : "@id"
+    },
+    "equals" : {
+      "@id" : "https://w3id.org/narn/to/equals",
+      "@type" : "@id"
+    },
+    "Region" : {
+      "@id" : "https://w3id.org/narn/location/Region"
+    },
+    "served" : {
+      "@id" : "https://w3id.org/narn/social/relations/served",
+      "@type" : "@id"
+    },
+    "NaturalArea" : {
+      "@id" : "https://w3id.org/narn/location/NaturalArea"
+    },
+    "TragicHero" : {
+      "@id" : "https://w3id.org/narn/plot/TragicHero"
+    },
+    "occursDuring" : {
+      "@id" : "https://w3id.org/narn/to/occursDuring",
+      "@type" : "@id"
+    },
+    "wasTheKingOf" : {
+      "@id" : "https://w3id.org/narn/social/relations/wasTheKingOf",
+      "@type" : "@id"
+    },
+    "RoyalServant" : {
+      "@id" : "https://w3id.org/narn/social/relations/RoyalServant"
+    },
+    "WildArea" : {
+      "@id" : "https://w3id.org/narn/location/WildArea"
+    },
+    "Captivity" : {
+      "@id" : "https://w3id.org/narn/event/Captivity"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "https://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "Servant" : {
+      "@id" : "https://w3id.org/narn/social/relations/Servant"
+    },
+    "Foreshadowing" : {
+      "@id" : "https://w3id.org/narn/plot/Foreshadowing"
+    },
+    "begets" : {
+      "@id" : "https://w3id.org/narn/event/begets",
+      "@type" : "@id"
+    },
+    "Denouement" : {
+      "@id" : "https://w3id.org/narn/plot/Denouement"
+    },
+    "Marriage" : {
+      "@id" : "https://w3id.org/narn/event/Marriage"
+    },
+    "unitIndex" : {
+      "@id" : "https://w3id.org/narn/plot/unitIndex",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    }
+  }
+}
