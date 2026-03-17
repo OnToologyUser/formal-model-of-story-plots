@@ -12,7 +12,7 @@
                                       <https://w3id.org/narn/location/> ,
                                       <https://w3id.org/narn/plot/> ,
                                       <https://w3id.org/narn/rcc/> ,
-                                      <https://w3id.org/narn/social/relations/> ,
+                                      <https://w3id.org/narn/social/> ,
                                       <https://w3id.org/narn/to/> ;
                           rdfs:comment "An OWL ontology for modeling story plots and narrative structures. It provides a formal vocabulary to represent characters, locations, events, actions, and temporal relations within a narrative."@en ;
                           rdfs:label "Formal Model of Story Plots"@en ;

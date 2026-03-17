@@ -38,7 +38,7 @@
   }, {
     "@id" : "https://w3id.org/narn/rcc/"
   }, {
-    "@id" : "https://w3id.org/narn/social/relations/"
+    "@id" : "https://w3id.org/narn/social/"
   }, {
     "@id" : "https://w3id.org/narn/to/"
   } ],

@@ -4,7 +4,7 @@
 <https://w3id.org/narn/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/location/> .
 <https://w3id.org/narn/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/plot/> .
 <https://w3id.org/narn/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/rcc/> .
-<https://w3id.org/narn/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/social/relations/> .
+<https://w3id.org/narn/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/social/> .
 <https://w3id.org/narn/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/to/> .
 <https://w3id.org/narn/> <http://www.w3.org/2000/01/rdf-schema#comment> "An OWL ontology for modeling story plots and narrative structures. It provides a formal vocabulary to represent characters, locations, events, actions, and temporal relations within a narrative."@en .
 <https://w3id.org/narn/> <http://www.w3.org/2000/01/rdf-schema#label> "Formal Model of Story Plots"@en .

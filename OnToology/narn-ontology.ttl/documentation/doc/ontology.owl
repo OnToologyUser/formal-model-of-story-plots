@@ -14,7 +14,7 @@
         <owl:imports rdf:resource="https://w3id.org/narn/location/"/>
         <owl:imports rdf:resource="https://w3id.org/narn/plot/"/>
         <owl:imports rdf:resource="https://w3id.org/narn/rcc/"/>
-        <owl:imports rdf:resource="https://w3id.org/narn/social/relations/"/>
+        <owl:imports rdf:resource="https://w3id.org/narn/social/"/>
         <owl:imports rdf:resource="https://w3id.org/narn/to/"/>
         <rdfs:comment xml:lang="en">An OWL ontology for modeling story plots and narrative structures. It provides a formal vocabulary to represent characters, locations, events, actions, and temporal relations within a narrative.</rdfs:comment>
         <rdfs:label xml:lang="en">Formal Model of Story Plots</rdfs:label>

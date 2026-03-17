@@ -8,7 +8,7 @@
       "@id" : "https://w3id.org/narn/event/Betrayal"
     },
     "mutuallyLoved" : {
-      "@id" : "https://w3id.org/narn/social/relations/mutuallyLoved",
+      "@id" : "https://w3id.org/narn/social/mutuallyLoved",
       "@type" : "@id"
     },
     "isBegottenIn" : {
@@ -48,7 +48,7 @@
       "@id" : "https://w3id.org/narn/event/Death"
     },
     "committedSuicide" : {
-      "@id" : "https://w3id.org/narn/social/relations/committedSuicide",
+      "@id" : "https://w3id.org/narn/social/committedSuicide",
       "@type" : "@id"
     },
     "MacGuffin" : {
@@ -93,7 +93,7 @@
       "@type" : "@id"
     },
     "King" : {
-      "@id" : "https://w3id.org/narn/social/relations/King"
+      "@id" : "https://w3id.org/narn/social/King"
     },
     "Fantasy" : {
       "@id" : "https://w3id.org/narn/plot/Fantasy"
@@ -105,7 +105,7 @@
       "@id" : "https://w3id.org/narn/action/TransferAction"
     },
     "Ally" : {
-      "@id" : "https://w3id.org/narn/social/relations/Ally"
+      "@id" : "https://w3id.org/narn/social/Ally"
     },
     "TPPi" : {
       "@id" : "https://w3id.org/narn/rcc/TPPi",
@@ -115,14 +115,14 @@
       "@id" : "https://w3id.org/narn/action/MisleadingIntention"
     },
     "hypnotised" : {
-      "@id" : "https://w3id.org/narn/social/relations/hypnotised",
+      "@id" : "https://w3id.org/narn/social/hypnotised",
       "@type" : "@id"
     },
     "PlotTwist" : {
       "@id" : "https://w3id.org/narn/plot/PlotTwist"
     },
     "wasKilledBy" : {
-      "@id" : "https://w3id.org/narn/social/relations/wasKilledBy",
+      "@id" : "https://w3id.org/narn/social/wasKilledBy",
       "@type" : "@id"
     },
     "Protagonist" : {
@@ -133,10 +133,10 @@
       "@type" : "@id"
     },
     "PositiveRelation" : {
-      "@id" : "https://w3id.org/narn/social/relations/PositiveRelation"
+      "@id" : "https://w3id.org/narn/social/PositiveRelation"
     },
     "hasValence" : {
-      "@id" : "https://w3id.org/narn/social/relations/hasValence",
+      "@id" : "https://w3id.org/narn/social/hasValence",
       "@type" : "@id"
     },
     "Thing" : {
@@ -146,11 +146,11 @@
       "@id" : "https://w3id.org/narn/plot/Exposition"
     },
     "hasEmotionalRelationWith" : {
-      "@id" : "https://w3id.org/narn/social/relations/hasEmotionalRelationWith",
+      "@id" : "https://w3id.org/narn/social/hasEmotionalRelationWith",
       "@type" : "@id"
     },
     "hasFriend" : {
-      "@id" : "https://w3id.org/narn/social/relations/hasFriend",
+      "@id" : "https://w3id.org/narn/social/hasFriend",
       "@type" : "@id"
     },
     "Antagonist" : {
@@ -198,7 +198,7 @@
       "@type" : "@id"
     },
     "killed" : {
-      "@id" : "https://w3id.org/narn/social/relations/killed",
+      "@id" : "https://w3id.org/narn/social/killed",
       "@type" : "@id"
     },
     "hasRole" : {
@@ -210,7 +210,7 @@
       "@type" : "@id"
     },
     "Leader" : {
-      "@id" : "https://w3id.org/narn/social/relations/Leader"
+      "@id" : "https://w3id.org/narn/social/Leader"
     },
     "occursAfter" : {
       "@id" : "https://w3id.org/narn/to/occursAfter",
@@ -227,7 +227,7 @@
       "@type" : "@id"
     },
     "Chieftain" : {
-      "@id" : "https://w3id.org/narn/social/relations/Chieftain"
+      "@id" : "https://w3id.org/narn/social/Chieftain"
     },
     "Mentor" : {
       "@id" : "https://w3id.org/narn/plot/Mentor"
@@ -249,7 +249,7 @@
       "@id" : "https://w3id.org/narn/plot/Conflict"
     },
     "isAKinsmanOf" : {
-      "@id" : "https://w3id.org/narn/social/relations/isAKinsmanOf",
+      "@id" : "https://w3id.org/narn/social/isAKinsmanOf",
       "@type" : "@id"
     },
     "finishes" : {
@@ -274,7 +274,7 @@
       "@type" : "@id"
     },
     "wasHeldCaptiveIn" : {
-      "@id" : "https://w3id.org/narn/social/relations/wasHeldCaptiveIn",
+      "@id" : "https://w3id.org/narn/social/wasHeldCaptiveIn",
       "@type" : "@id"
     },
     "hasConflict" : {
@@ -282,7 +282,7 @@
       "@type" : "@id"
     },
     "PoliticalRole" : {
-      "@id" : "https://w3id.org/narn/social/relations/PoliticalRole"
+      "@id" : "https://w3id.org/narn/social/PoliticalRole"
     },
     "spatiallyRelatedTo" : {
       "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo",
@@ -324,7 +324,7 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#duration"
     },
     "NonLeader" : {
-      "@id" : "https://w3id.org/narn/social/relations/NonLeader"
+      "@id" : "https://w3id.org/narn/social/NonLeader"
     },
     "Interval" : {
       "@id" : "https://w3id.org/narn/to/Interval"
@@ -363,7 +363,7 @@
       "@id" : "https://w3id.org/narn/action/Forge"
     },
     "Outlaw" : {
-      "@id" : "https://w3id.org/narn/social/relations/Outlaw"
+      "@id" : "https://w3id.org/narn/social/Outlaw"
     },
     "hasPatient" : {
       "@id" : "https://w3id.org/narn/event/hasPatient",
@@ -380,7 +380,7 @@
       "@id" : "https://w3id.org/narn/plot/Anagnorisis"
     },
     "ruled" : {
-      "@id" : "https://w3id.org/narn/social/relations/ruled",
+      "@id" : "https://w3id.org/narn/social/ruled",
       "@type" : "@id"
     },
     "hasTarget" : {
@@ -446,7 +446,7 @@
       "@id" : "https://w3id.org/narn/event/Enchantment"
     },
     "livedIn" : {
-      "@id" : "https://w3id.org/narn/social/relations/livedIn",
+      "@id" : "https://w3id.org/narn/social/livedIn",
       "@type" : "@id"
     },
     "correspondsToEvent" : {
@@ -461,7 +461,7 @@
       "@type" : "@id"
     },
     "feared" : {
-      "@id" : "https://w3id.org/narn/social/relations/feared",
+      "@id" : "https://w3id.org/narn/social/feared",
       "@type" : "@id"
     },
     "Valley" : {
@@ -471,7 +471,7 @@
       "@id" : "https://w3id.org/narn/plot/RisingAction"
     },
     "wasTheChieftainOf" : {
-      "@id" : "https://w3id.org/narn/social/relations/wasTheChieftainOf",
+      "@id" : "https://w3id.org/narn/social/wasTheChieftainOf",
       "@type" : "@id"
     },
     "preferredNamespacePrefix" : {
@@ -511,14 +511,14 @@
       "@type" : "@id"
     },
     "wasTheBestFriendOf" : {
-      "@id" : "https://w3id.org/narn/social/relations/wasTheBestFriendOf",
+      "@id" : "https://w3id.org/narn/social/wasTheBestFriendOf",
       "@type" : "@id"
     },
     "Prophecy" : {
       "@id" : "https://w3id.org/narn/event/Prophecy"
     },
     "cursed" : {
-      "@id" : "https://w3id.org/narn/social/relations/cursed",
+      "@id" : "https://w3id.org/narn/social/cursed",
       "@type" : "@id"
     },
     "Command" : {
@@ -531,7 +531,7 @@
       "@id" : "https://w3id.org/narn/action/ViolentAction"
     },
     "EmotionalValence" : {
-      "@id" : "https://w3id.org/narn/social/relations/EmotionalValence"
+      "@id" : "https://w3id.org/narn/social/EmotionalValence"
     },
     "Coronation" : {
       "@id" : "https://w3id.org/narn/event/Coronation"
@@ -548,7 +548,7 @@
       "@id" : "https://w3id.org/narn/plot/NarrativeElement"
     },
     "hated" : {
-      "@id" : "https://w3id.org/narn/social/relations/hated",
+      "@id" : "https://w3id.org/narn/social/hated",
       "@type" : "@id"
     },
     "Sea" : {
@@ -636,7 +636,7 @@
       "@type" : "@id"
     },
     "wasServedBy" : {
-      "@id" : "https://w3id.org/narn/social/relations/wasServedBy",
+      "@id" : "https://w3id.org/narn/social/wasServedBy",
       "@type" : "@id"
     },
     "Story" : {
@@ -646,7 +646,7 @@
       "@id" : "https://w3id.org/narn/location/City"
     },
     "SuicidalCharacter" : {
-      "@id" : "https://w3id.org/narn/social/relations/SuicidalCharacter"
+      "@id" : "https://w3id.org/narn/social/SuicidalCharacter"
     },
     "EndingInterval" : {
       "@id" : "https://w3id.org/narn/to/EndingInterval"
@@ -678,7 +678,7 @@
       "@id" : "https://w3id.org/narn/action/MovementAction"
     },
     "isMarriedTo" : {
-      "@id" : "https://w3id.org/narn/social/relations/isMarriedTo",
+      "@id" : "https://w3id.org/narn/social/isMarriedTo",
       "@type" : "@id"
     },
     "hasOrigin" : {
@@ -709,7 +709,7 @@
       "@id" : "https://w3id.org/narn/event/Feast"
     },
     "SocialRole" : {
-      "@id" : "https://w3id.org/narn/social/relations/SocialRole"
+      "@id" : "https://w3id.org/narn/social/SocialRole"
     },
     "Genre" : {
       "@id" : "https://w3id.org/narn/plot/Genre"
@@ -718,10 +718,10 @@
       "@id" : "https://w3id.org/narn/action/CreationAction"
     },
     "MilitaryRole" : {
-      "@id" : "https://w3id.org/narn/social/relations/MilitaryRole"
+      "@id" : "https://w3id.org/narn/social/MilitaryRole"
     },
     "loved" : {
-      "@id" : "https://w3id.org/narn/social/relations/loved",
+      "@id" : "https://w3id.org/narn/social/loved",
       "@type" : "@id"
     },
     "before" : {
@@ -760,7 +760,7 @@
       "@type" : "@id"
     },
     "isAnEnemyOf" : {
-      "@id" : "https://w3id.org/narn/social/relations/isAnEnemyOf",
+      "@id" : "https://w3id.org/narn/social/isAnEnemyOf",
       "@type" : "@id"
     },
     "hasInstrument" : {
@@ -793,7 +793,7 @@
       "@id" : "https://w3id.org/narn/location/Region"
     },
     "served" : {
-      "@id" : "https://w3id.org/narn/social/relations/served",
+      "@id" : "https://w3id.org/narn/social/served",
       "@type" : "@id"
     },
     "NaturalArea" : {
@@ -807,11 +807,11 @@
       "@type" : "@id"
     },
     "wasTheKingOf" : {
-      "@id" : "https://w3id.org/narn/social/relations/wasTheKingOf",
+      "@id" : "https://w3id.org/narn/social/wasTheKingOf",
       "@type" : "@id"
     },
     "RoyalServant" : {
-      "@id" : "https://w3id.org/narn/social/relations/RoyalServant"
+      "@id" : "https://w3id.org/narn/social/RoyalServant"
     },
     "WildArea" : {
       "@id" : "https://w3id.org/narn/location/WildArea"
@@ -823,7 +823,7 @@
       "@id" : "https://purl.org/vocab/vann/preferredNamespaceUri"
     },
     "Servant" : {
-      "@id" : "https://w3id.org/narn/social/relations/Servant"
+      "@id" : "https://w3id.org/narn/social/Servant"
     },
     "Foreshadowing" : {
       "@id" : "https://w3id.org/narn/plot/Foreshadowing"

@@ -3,16 +3,16 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/narn/social/relations/Chieftain"
+      "@id" : "https://w3id.org/narn/social/Chieftain"
     }, {
-      "@id" : "https://w3id.org/narn/social/relations/King"
+      "@id" : "https://w3id.org/narn/social/King"
     } ]
   } ]
 }, {
   "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#complementOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/Leader"
+    "@id" : "https://w3id.org/narn/social/Leader"
   } ]
 }, {
   "@id" : "_:genid14",
@@ -22,23 +22,23 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/isAnEnemyOf"
+    "@id" : "https://w3id.org/narn/social/isAnEnemyOf"
   } ]
 }, {
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/positive"
+    "@id" : "https://w3id.org/narn/social/positive"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/hasValence"
+    "@id" : "https://w3id.org/narn/social/hasValence"
   } ]
 }, {
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/narn/social/relations/Servant"
+      "@id" : "https://w3id.org/narn/social/Servant"
     }, {
       "@id" : "_:genid18"
     } ]
@@ -47,17 +47,17 @@
   "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/served"
+    "@id" : "https://w3id.org/narn/social/served"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/King"
+    "@id" : "https://w3id.org/narn/social/King"
   } ]
 }, {
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/narn/social/relations/SocialRole"
+      "@id" : "https://w3id.org/narn/social/SocialRole"
     }, {
       "@id" : "_:genid22"
     } ]
@@ -66,7 +66,7 @@
   "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/served"
+    "@id" : "https://w3id.org/narn/social/served"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -79,25 +79,25 @@
     "@value" : "true"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/committedSuicide"
+    "@id" : "https://w3id.org/narn/social/committedSuicide"
   } ]
 }, {
   "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointProperties" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/narn/social/relations/feared"
+      "@id" : "https://w3id.org/narn/social/feared"
     }, {
-      "@id" : "https://w3id.org/narn/social/relations/hated"
+      "@id" : "https://w3id.org/narn/social/hated"
     }, {
-      "@id" : "https://w3id.org/narn/social/relations/loved"
+      "@id" : "https://w3id.org/narn/social/loved"
     } ]
   } ]
 }, {
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/wasTheChieftainOf"
+    "@id" : "https://w3id.org/narn/social/wasTheChieftainOf"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/narn/location/Place"
@@ -107,18 +107,18 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/narn/social/relations/ambivalent"
+      "@id" : "https://w3id.org/narn/social/ambivalent"
     }, {
-      "@id" : "https://w3id.org/narn/social/relations/negative"
+      "@id" : "https://w3id.org/narn/social/negative"
     }, {
-      "@id" : "https://w3id.org/narn/social/relations/positive"
+      "@id" : "https://w3id.org/narn/social/positive"
     } ]
   } ]
 }, {
   "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/wasTheKingOf"
+    "@id" : "https://w3id.org/narn/social/wasTheKingOf"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/narn/location/Place"
@@ -127,10 +127,10 @@
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/Servant"
+    "@id" : "https://w3id.org/narn/social/Servant"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/wasServedBy"
+    "@id" : "https://w3id.org/narn/social/wasServedBy"
   } ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
@@ -157,7 +157,7 @@
   "@id" : "https://w3id.org/narn/location/Place",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/",
+  "@id" : "https://w3id.org/narn/social/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -185,10 +185,10 @@
     "@value" : "soc"
   } ],
   "https://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "https://w3id.org/narn/social/relations/"
+    "@value" : "https://w3id.org/narn/social/"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/Ally",
+  "@id" : "https://w3id.org/narn/social/Ally",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -199,17 +199,17 @@
     "@value" : "ally"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/SocialRole"
+    "@id" : "https://w3id.org/narn/social/SocialRole"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/Outlaw"
+    "@id" : "https://w3id.org/narn/social/Outlaw"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "companion"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/Chieftain",
+  "@id" : "https://w3id.org/narn/social/Chieftain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -220,7 +220,7 @@
     "@value" : "chieftain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/PoliticalRole"
+    "@id" : "https://w3id.org/narn/social/PoliticalRole"
   }, {
     "@id" : "_:genid3"
   } ],
@@ -229,7 +229,7 @@
     "@value" : "chief"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/EmotionalValence",
+  "@id" : "https://w3id.org/narn/social/EmotionalValence",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -247,7 +247,7 @@
     "@value" : "sentiment type"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/King",
+  "@id" : "https://w3id.org/narn/social/King",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -258,21 +258,21 @@
     "@value" : "king"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/PoliticalRole"
+    "@id" : "https://w3id.org/narn/social/PoliticalRole"
   }, {
     "@id" : "_:genid8"
   }, {
     "@id" : "_:genid9"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/Servant"
+    "@id" : "https://w3id.org/narn/social/Servant"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "monarch"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/Leader",
+  "@id" : "https://w3id.org/narn/social/Leader",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -290,7 +290,7 @@
     "@value" : "ruler"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/MilitaryRole",
+  "@id" : "https://w3id.org/narn/social/MilitaryRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -301,14 +301,14 @@
     "@value" : "military role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/SocialRole"
+    "@id" : "https://w3id.org/narn/social/SocialRole"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "military position"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/NonLeader",
+  "@id" : "https://w3id.org/narn/social/NonLeader",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -326,7 +326,7 @@
     "@value" : "non-ruler"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/Outlaw",
+  "@id" : "https://w3id.org/narn/social/Outlaw",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -337,7 +337,7 @@
     "@value" : "outlaw"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/SocialRole"
+    "@id" : "https://w3id.org/narn/social/SocialRole"
   }, {
     "@id" : "_:genid14"
   } ],
@@ -346,7 +346,7 @@
     "@value" : "fugitive"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/PoliticalRole",
+  "@id" : "https://w3id.org/narn/social/PoliticalRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -357,14 +357,14 @@
     "@value" : "political role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/SocialRole"
+    "@id" : "https://w3id.org/narn/social/SocialRole"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "political position"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/PositiveRelation",
+  "@id" : "https://w3id.org/narn/social/PositiveRelation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -382,7 +382,7 @@
     "@value" : "positive bond"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/RoyalServant",
+  "@id" : "https://w3id.org/narn/social/RoyalServant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -400,7 +400,7 @@
     "@value" : "royal attendant"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/Servant",
+  "@id" : "https://w3id.org/narn/social/Servant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -411,7 +411,7 @@
     "@value" : "servant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/SocialRole"
+    "@id" : "https://w3id.org/narn/social/SocialRole"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid20"
@@ -421,7 +421,7 @@
     "@value" : "attendant"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/SocialRole",
+  "@id" : "https://w3id.org/narn/social/SocialRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -436,7 +436,7 @@
     "@value" : "role"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/SuicidalCharacter",
+  "@id" : "https://w3id.org/narn/social/SuicidalCharacter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -454,7 +454,7 @@
     "@value" : "self slain character"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/ambivalent",
+  "@id" : "https://w3id.org/narn/social/ambivalent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -469,7 +469,7 @@
     "@value" : "mixed sentiment"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/committedSuicide",
+  "@id" : "https://w3id.org/narn/social/committedSuicide",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -484,7 +484,7 @@
     "@value" : "took own life"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/cursed",
+  "@id" : "https://w3id.org/narn/social/cursed",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -499,7 +499,7 @@
     "@value" : "placed a curse on"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/feared",
+  "@id" : "https://w3id.org/narn/social/feared",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -510,14 +510,14 @@
     "@value" : "feared"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/hasEmotionalRelationWith"
+    "@id" : "https://w3id.org/narn/social/hasEmotionalRelationWith"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "had fear of"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/hasEmotionalRelationWith",
+  "@id" : "https://w3id.org/narn/social/hasEmotionalRelationWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -538,7 +538,7 @@
     "@value" : "feels towards"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/hasFriend",
+  "@id" : "https://w3id.org/narn/social/hasFriend",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -549,17 +549,17 @@
     "@value" : "has friend"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/hasEmotionalRelationWith"
+    "@id" : "https://w3id.org/narn/social/hasEmotionalRelationWith"
   } ],
   "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/isAnEnemyOf"
+    "@id" : "https://w3id.org/narn/social/isAnEnemyOf"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "is a friend of"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/hasValence",
+  "@id" : "https://w3id.org/narn/social/hasValence",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -570,14 +570,14 @@
     "@value" : "has valence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/EmotionalValence"
+    "@id" : "https://w3id.org/narn/social/EmotionalValence"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "has sentiment"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/hated",
+  "@id" : "https://w3id.org/narn/social/hated",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -588,14 +588,14 @@
     "@value" : "hated"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/hasEmotionalRelationWith"
+    "@id" : "https://w3id.org/narn/social/hasEmotionalRelationWith"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "had hatred for"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/hypnotised",
+  "@id" : "https://w3id.org/narn/social/hypnotised",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -610,7 +610,7 @@
     "@value" : "cast a spell on"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/isAKinsmanOf",
+  "@id" : "https://w3id.org/narn/social/isAKinsmanOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -625,7 +625,7 @@
     "@value" : "kin of"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/isAnEnemyOf",
+  "@id" : "https://w3id.org/narn/social/isAnEnemyOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -636,14 +636,14 @@
     "@value" : "is an enemy of"
   } ],
   "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/wasServedBy"
+    "@id" : "https://w3id.org/narn/social/wasServedBy"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "foe of"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/isMarriedTo",
+  "@id" : "https://w3id.org/narn/social/isMarriedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -658,7 +658,7 @@
     "@value" : "wed to"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/killed",
+  "@id" : "https://w3id.org/narn/social/killed",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -669,14 +669,14 @@
     "@value" : "killed"
   } ],
   "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/served"
+    "@id" : "https://w3id.org/narn/social/served"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "slew"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/livedIn",
+  "@id" : "https://w3id.org/narn/social/livedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -691,9 +691,9 @@
   } ],
   "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/narn/social/relations/served"
+      "@id" : "https://w3id.org/narn/social/served"
     }, {
-      "@id" : "https://w3id.org/narn/social/relations/wasTheKingOf"
+      "@id" : "https://w3id.org/narn/social/wasTheKingOf"
     } ]
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
@@ -701,7 +701,7 @@
     "@value" : "dwelt in"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/loved",
+  "@id" : "https://w3id.org/narn/social/loved",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -712,14 +712,14 @@
     "@value" : "loved"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/hasEmotionalRelationWith"
+    "@id" : "https://w3id.org/narn/social/hasEmotionalRelationWith"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "had love for"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/mutuallyLoved",
+  "@id" : "https://w3id.org/narn/social/mutuallyLoved",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -730,14 +730,14 @@
     "@value" : "mutually loved"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/loved"
+    "@id" : "https://w3id.org/narn/social/loved"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "reciprocally loved"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/negative",
+  "@id" : "https://w3id.org/narn/social/negative",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -752,7 +752,7 @@
     "@value" : "negative sentiment"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/positive",
+  "@id" : "https://w3id.org/narn/social/positive",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -767,7 +767,7 @@
     "@value" : "positive sentiment"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/ruled",
+  "@id" : "https://w3id.org/narn/social/ruled",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -778,14 +778,14 @@
     "@value" : "ruled"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/wasTheKingOf"
+    "@id" : "https://w3id.org/narn/social/wasTheKingOf"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "governed"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/served",
+  "@id" : "https://w3id.org/narn/social/served",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -806,7 +806,7 @@
     "@value" : "was in service of"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/wasHeldCaptiveIn",
+  "@id" : "https://w3id.org/narn/social/wasHeldCaptiveIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -820,14 +820,14 @@
     "@id" : "https://w3id.org/narn/location/Place"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/livedIn"
+    "@id" : "https://w3id.org/narn/social/livedIn"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "imprisoned in"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/wasKilledBy",
+  "@id" : "https://w3id.org/narn/social/wasKilledBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -838,14 +838,14 @@
     "@value" : "was killed by"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/killed"
+    "@id" : "https://w3id.org/narn/social/killed"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "slain by"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/wasServedBy",
+  "@id" : "https://w3id.org/narn/social/wasServedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -856,14 +856,14 @@
     "@value" : "was served by"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/served"
+    "@id" : "https://w3id.org/narn/social/served"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "had as servant"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/wasTheBestFriendOf",
+  "@id" : "https://w3id.org/narn/social/wasTheBestFriendOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -874,14 +874,14 @@
     "@value" : "was the best friend of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/narn/social/relations/hasFriend"
+    "@id" : "https://w3id.org/narn/social/hasFriend"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "closest companion of"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/wasTheChieftainOf",
+  "@id" : "https://w3id.org/narn/social/wasTheChieftainOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -899,7 +899,7 @@
     "@value" : "led as chief"
   } ]
 }, {
-  "@id" : "https://w3id.org/narn/social/relations/wasTheKingOf",
+  "@id" : "https://w3id.org/narn/social/wasTheKingOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
