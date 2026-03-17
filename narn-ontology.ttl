@@ -1,0 +1,27 @@
+#
+# Prefixes
+#
+@prefix narn: <https://w3id.org/narn/> .
+@prefix loc: <https://w3id.org/narn/location/> .
+@prefix to: <https://w3id.org/narn/to/> .
+@prefix rcc: <https://w3id.org/narn/rcc/> .
+@prefix soc: <https://w3id.org/narn/social/relations/> .
+@prefix evnt: <https://w3id.org/narn/event/> .
+@prefix plot: <https://w3id.org/narn/plot/> .
+@prefix act: <https://w3id.org/narn/action/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <https://purl.org/dc/terms/> .
+@prefix vann: <https://purl.org/vocab/vann/> .
+@prefix erdemonal: <https://w3id.org/people/erdemonal/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+narn: a owl:Ontology ;
+    owl:imports loc:, to:, rcc:, soc:, evnt:, plot:, act: ;
+    rdfs:label "Formal Model of Story Plots"@en ;
+    rdfs:comment "An OWL ontology for modeling story plots and narrative structures. It provides a formal vocabulary to represent characters, locations, events, actions, and temporal relations within a narrative."@en ;
+    dct:created "2026-03-16"^^xsd:date ;
+    dct:modified "2026-03-17"^^xsd:date ;
+    dct:creator erdemonal:me ;
+    vann:preferredNamespaceUri "https://w3id.org/narn/" ;
+    vann:preferredNamespacePrefix "narn" .

@@ -1,8 +1,8 @@
 #
 # Prefixes
 #
-@prefix soc: <https://purl.org/social/relations/> .
-@prefix loc: <https://purl.org/location/> .
+@prefix soc: <https://w3id.org/narn/social/relations/> .
+@prefix loc: <https://w3id.org/narn/location/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -20,8 +20,9 @@ soc: a owl:Ontology ;
      rdfs:label "Social Relations Ontology"@en ;
      rdfs:comment """An ontology defining social relationships between characters."""@en ;
      dct:created "2026-03-14"^^xsd:date ;
+     dct:modified "2026-03-17"^^xsd:date ;
      dct:creator erdemonal:me ;
-     vann:preferredNamespaceUri "https://purl.org/social/relations/" ;
+     vann:preferredNamespaceUri "https://w3id.org/narn/social/relations/" ;
      vann:preferredNamespacePrefix "soc" .
 
 #

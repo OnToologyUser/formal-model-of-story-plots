@@ -1,7 +1,7 @@
 #
 # Prefixes
 #
-@prefix to: <https://purl.org/to/> .
+@prefix to: <https://w3id.org/narn/to/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -19,8 +19,9 @@ to: a owl:Ontology ;
     rdfs:label "Temporal Ontology"@en ;
     rdfs:comment """An ontology for temporal entities and Allen's temporal algebra."""@en ;
     dct:created "2026-03-13"^^xsd:date ;
+    dct:modified "2026-03-17"^^xsd:date ;
     dct:creator erdemonal:me ;
-    vann:preferredNamespaceUri "https://purl.org/to/" ;
+    vann:preferredNamespaceUri "https://w3id.org/narn/to/" ;
     vann:preferredNamespacePrefix "to" .
 
 #

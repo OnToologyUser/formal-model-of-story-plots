@@ -1,9 +1,9 @@
 #
 # Prefixes
 #
-@prefix act: <https://purl.org/action/> .
-@prefix evnt: <https://purl.org/event/> .
-@prefix loc: <https://purl.org/location/> .
+@prefix act: <https://w3id.org/narn/action/> .
+@prefix evnt: <https://w3id.org/narn/event/> .
+@prefix loc: <https://w3id.org/narn/location/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -21,9 +21,9 @@ act: a owl:Ontology ;
      rdfs:label "Actions Ontology"@en ;
      rdfs:comment """An ontology for describing actions in story plot"""@en ;
      dct:created "2026-03-11"^^xsd:date ;
-     dct:modified "2026-03-15"^^xsd:date ;
+     dct:modified "2026-03-17"^^xsd:date ;
      dct:creator erdemonal:me ;
-     vann:preferredNamespaceUri "https://purl.org/action/" ;
+     vann:preferredNamespaceUri "https://w3id.org/narn/action/" ;
      vann:preferredNamespacePrefix "act" .
 
 #

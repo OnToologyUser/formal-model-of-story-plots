@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://w3id.org/narn/event/" uri="modules/event.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/narn/action/" uri="modules/actions.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/narn/location/" uri="modules/place.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/narn/plot/" uri="modules/plot.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/narn/rcc/" uri="modules/rcc.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/narn/to/" uri="modules/time.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/narn/social/relations/" uri="modules/social.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/family/" uri="modules/fo.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/meo/" uri="modules/meo.ttl"/>
+</catalog>

@@ -1,7 +1,7 @@
 #
 # Prefixes
 #
-@prefix loc: <https://purl.org/location/> .
+@prefix loc: <https://w3id.org/narn/location/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -18,8 +18,9 @@ loc: a owl:Ontology ;
      rdfs:label "Place and Location Ontology"@en ;
      rdfs:comment """An ontology for defining types of places and spatial relationships."""@en ;
      dct:created "2026-03-11"^^xsd:date ;
+     dct:modified "2026-03-17"^^xsd:date ;
      dct:creator erdemonal:me ;
-     vann:preferredNamespaceUri "https://purl.org/location/" ;
+     vann:preferredNamespaceUri "https://w3id.org/narn/location/" ;
      vann:preferredNamespacePrefix "loc" .
 
 #
