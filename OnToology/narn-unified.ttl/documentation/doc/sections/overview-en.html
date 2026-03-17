@@ -1,0 +1,769 @@
+<h2 id="overv" class="list">Formal Model of Story Plots: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#plot/Act" title="https://w3id.org/narn/plot/Act">act</a>
+   </li>
+   <li>
+      <a href="#action/Action" title="https://w3id.org/narn/action/Action">action</a>
+   </li>
+   <li>
+      <a href="#social/relations/Ally" title="https://w3id.org/narn/social/relations/Ally">ally</a>
+   </li>
+   <li>
+      <a href="#plot/Anagnorisis" title="https://w3id.org/narn/plot/Anagnorisis">anagnorisis</a>
+   </li>
+   <li>
+      <a href="#plot/Antagonist" title="https://w3id.org/narn/plot/Antagonist">antagonist</a>
+   </li>
+   <li>
+      <a href="#action/Attack" title="https://w3id.org/narn/action/Attack">attack</a>
+   </li>
+   <li>
+      <a href="#event/Battle" title="https://w3id.org/narn/event/Battle">battle</a>
+   </li>
+   <li>
+      <a href="#event/Betrayal" title="https://w3id.org/narn/event/Betrayal">betrayal</a>
+   </li>
+   <li>
+      <a href="#event/Birth" title="https://w3id.org/narn/event/Birth">birth</a>
+   </li>
+   <li>
+      <a href="#action/Build" title="https://w3id.org/narn/action/Build">build</a>
+   </li>
+   <li>
+      <a href="#location/Building" title="https://w3id.org/narn/location/Building">building</a>
+   </li>
+   <li>
+      <a href="#event/Captivity" title="https://w3id.org/narn/event/Captivity">captivity</a>
+   </li>
+   <li>
+      <a href="#plot/Chapter" title="https://w3id.org/narn/plot/Chapter">chapter</a>
+   </li>
+   <li>
+      <a href="#plot/CharacterRole" title="https://w3id.org/narn/plot/CharacterRole">character role</a>
+   </li>
+   <li>
+      <a href="#social/relations/Chieftain"
+         title="https://w3id.org/narn/social/relations/Chieftain">chieftain</a>
+   </li>
+   <li>
+      <a href="#location/City" title="https://w3id.org/narn/location/City">city</a>
+   </li>
+   <li>
+      <a href="#plot/Climax" title="https://w3id.org/narn/plot/Climax">climax</a>
+   </li>
+   <li>
+      <a href="#action/Command" title="https://w3id.org/narn/action/Command">command</a>
+   </li>
+   <li>
+      <a href="#action/CommunicativeAction"
+         title="https://w3id.org/narn/action/CommunicativeAction">communicative action</a>
+   </li>
+   <li>
+      <a href="#plot/Conflict" title="https://w3id.org/narn/plot/Conflict">conflict</a>
+   </li>
+   <li>
+      <a href="#event/ConflictEvent" title="https://w3id.org/narn/event/ConflictEvent">conflict event</a>
+   </li>
+   <li>
+      <a href="#location/Continent" title="https://w3id.org/narn/location/Continent">continent</a>
+   </li>
+   <li>
+      <a href="#event/Coronation" title="https://w3id.org/narn/event/Coronation">coronation</a>
+   </li>
+   <li>
+      <a href="#event/Council" title="https://w3id.org/narn/event/Council">council</a>
+   </li>
+   <li>
+      <a href="#action/CreationAction" title="https://w3id.org/narn/action/CreationAction">creation action</a>
+   </li>
+   <li>
+      <a href="#event/Curse" title="https://w3id.org/narn/event/Curse">curse</a>
+   </li>
+   <li>
+      <a href="#event/Death" title="https://w3id.org/narn/event/Death">death</a>
+   </li>
+   <li>
+      <a href="#action/Deceive" title="https://w3id.org/narn/action/Deceive">deceive</a>
+   </li>
+   <li>
+      <a href="#action/Defend" title="https://w3id.org/narn/action/Defend">defend</a>
+   </li>
+   <li>
+      <a href="#plot/Denouement" title="https://w3id.org/narn/plot/Denouement">denouement</a>
+   </li>
+   <li>
+      <a href="#location/Desert" title="https://w3id.org/narn/location/Desert">desert</a>
+   </li>
+   <li>
+      <a href="#event/Discovery" title="https://w3id.org/narn/event/Discovery">discovery</a>
+   </li>
+   <li>
+      <a href="#plot/DramaticIrony" title="https://w3id.org/narn/plot/DramaticIrony">dramatic irony</a>
+   </li>
+   <li>
+      <a href="#event/Duel" title="https://w3id.org/narn/event/Duel">duel</a>
+   </li>
+   <li>
+      <a href="#social/relations/EmotionalValence"
+         title="https://w3id.org/narn/social/relations/EmotionalValence">emotional valence</a>
+   </li>
+   <li>
+      <a href="#event/Enchantment" title="https://w3id.org/narn/event/Enchantment">enchantment</a>
+   </li>
+   <li>
+      <a href="#to/EndingInterval" title="https://w3id.org/narn/to/EndingInterval">ending interval</a>
+   </li>
+   <li>
+      <a href="#plot/Epic" title="https://w3id.org/narn/plot/Epic">epic</a>
+   </li>
+   <li>
+      <a href="#action/Escape" title="https://w3id.org/narn/action/Escape">escape</a>
+   </li>
+   <li>
+      <a href="#to/EternalInterval" title="https://w3id.org/narn/to/EternalInterval">eternal interval</a>
+   </li>
+   <li>
+      <a href="#event/Event" title="https://w3id.org/narn/event/Event">event</a>
+   </li>
+   <li>
+      <a href="#event/Exile" title="https://w3id.org/narn/event/Exile">exile</a>
+   </li>
+   <li>
+      <a href="#plot/Exposition" title="https://w3id.org/narn/plot/Exposition">exposition</a>
+   </li>
+   <li>
+      <a href="#plot/ExternalConflict" title="https://w3id.org/narn/plot/ExternalConflict">external conflict</a>
+   </li>
+   <li>
+      <a href="#plot/FallingAction" title="https://w3id.org/narn/plot/FallingAction">falling action</a>
+   </li>
+   <li>
+      <a href="#plot/Fantasy" title="https://w3id.org/narn/plot/Fantasy">fantasy</a>
+   </li>
+   <li>
+      <a href="#event/Feast" title="https://w3id.org/narn/event/Feast">feast</a>
+   </li>
+   <li>
+      <a href="#to/FiniteInterval" title="https://w3id.org/narn/to/FiniteInterval">finite interval</a>
+   </li>
+   <li>
+      <a href="#plot/Flashback" title="https://w3id.org/narn/plot/Flashback">flashback</a>
+   </li>
+   <li>
+      <a href="#action/Flee" title="https://w3id.org/narn/action/Flee">flee</a>
+   </li>
+   <li>
+      <a href="#event/Flight" title="https://w3id.org/narn/event/Flight">flight</a>
+   </li>
+   <li>
+      <a href="#plot/Foreshadowing" title="https://w3id.org/narn/plot/Foreshadowing">foreshadowing</a>
+   </li>
+   <li>
+      <a href="#location/Forest" title="https://w3id.org/narn/location/Forest">forest</a>
+   </li>
+   <li>
+      <a href="#action/Forge" title="https://w3id.org/narn/action/Forge">forge</a>
+   </li>
+   <li>
+      <a href="#location/Fortress" title="https://w3id.org/narn/location/Fortress">fortress</a>
+   </li>
+   <li>
+      <a href="#plot/Genre" title="https://w3id.org/narn/plot/Genre">genre</a>
+   </li>
+   <li>
+      <a href="#action/Give" title="https://w3id.org/narn/action/Give">give</a>
+   </li>
+   <li>
+      <a href="#action/GoTo" title="https://w3id.org/narn/action/GoTo">go to</a>
+   </li>
+   <li>
+      <a href="#location/Hill" title="https://w3id.org/narn/location/Hill">hill</a>
+   </li>
+   <li>
+      <a href="#plot/IncitingIncident" title="https://w3id.org/narn/plot/IncitingIncident">inciting incident</a>
+   </li>
+   <li>
+      <a href="#to/InfiniteInterval" title="https://w3id.org/narn/to/InfiniteInterval">infinite interval</a>
+   </li>
+   <li>
+      <a href="#to/Instant" title="https://w3id.org/narn/to/Instant">instant</a>
+   </li>
+   <li>
+      <a href="#plot/InternalConflict" title="https://w3id.org/narn/plot/InternalConflict">internal conflict</a>
+   </li>
+   <li>
+      <a href="#to/Interval" title="https://w3id.org/narn/to/Interval">interval</a>
+   </li>
+   <li>
+      <a href="#action/Kill" title="https://w3id.org/narn/action/Kill">kill</a>
+   </li>
+   <li>
+      <a href="#social/relations/King" title="https://w3id.org/narn/social/relations/King">king</a>
+   </li>
+   <li>
+      <a href="#location/Lake" title="https://w3id.org/narn/location/Lake">lake</a>
+   </li>
+   <li>
+      <a href="#location/LandArea" title="https://w3id.org/narn/location/LandArea">land area</a>
+   </li>
+   <li>
+      <a href="#social/relations/Leader" title="https://w3id.org/narn/social/relations/Leader">leader</a>
+   </li>
+   <li>
+      <a href="#event/LifeEvent" title="https://w3id.org/narn/event/LifeEvent">life event</a>
+   </li>
+   <li>
+      <a href="#plot/MacGuffin" title="https://w3id.org/narn/plot/MacGuffin">MacGuffin</a>
+   </li>
+   <li>
+      <a href="#event/Marriage" title="https://w3id.org/narn/event/Marriage">marriage</a>
+   </li>
+   <li>
+      <a href="#event/Meeting" title="https://w3id.org/narn/event/Meeting">meeting</a>
+   </li>
+   <li>
+      <a href="#plot/Mentor" title="https://w3id.org/narn/plot/Mentor">mentor</a>
+   </li>
+   <li>
+      <a href="#social/relations/MilitaryRole"
+         title="https://w3id.org/narn/social/relations/MilitaryRole">military role</a>
+   </li>
+   <li>
+      <a href="#action/MisleadingIntention"
+         title="https://w3id.org/narn/action/MisleadingIntention">misleading intention</a>
+   </li>
+   <li>
+      <a href="#location/Mountain" title="https://w3id.org/narn/location/Mountain">mountain</a>
+   </li>
+   <li>
+      <a href="#action/MovementAction" title="https://w3id.org/narn/action/MovementAction">movement action</a>
+   </li>
+   <li>
+      <a href="#event/MovementEvent" title="https://w3id.org/narn/event/MovementEvent">movement event</a>
+   </li>
+   <li>
+      <a href="#event/Murder" title="https://w3id.org/narn/event/Murder">murder</a>
+   </li>
+   <li>
+      <a href="#plot/NarrativeElement" title="https://w3id.org/narn/plot/NarrativeElement">narrative element</a>
+   </li>
+   <li>
+      <a href="#plot/NarrativeUnit" title="https://w3id.org/narn/plot/NarrativeUnit">narrative unit</a>
+   </li>
+   <li>
+      <a href="#location/NaturalArea" title="https://w3id.org/narn/location/NaturalArea">natural area</a>
+   </li>
+   <li>
+      <a href="#social/relations/NonLeader"
+         title="https://w3id.org/narn/social/relations/NonLeader">non-leader</a>
+   </li>
+   <li>
+      <a href="#social/relations/Outlaw" title="https://w3id.org/narn/social/relations/Outlaw">outlaw</a>
+   </li>
+   <li>
+      <a href="#plot/Part" title="https://w3id.org/narn/plot/Part">part</a>
+   </li>
+   <li>
+      <a href="#plot/Peripeteia" title="https://w3id.org/narn/plot/Peripeteia">peripeteia</a>
+   </li>
+   <li>
+      <a href="#location/Place" title="https://w3id.org/narn/location/Place">place</a>
+   </li>
+   <li>
+      <a href="#plot/PlotDevice" title="https://w3id.org/narn/plot/PlotDevice">plot device</a>
+   </li>
+   <li>
+      <a href="#plot/PlotTwist" title="https://w3id.org/narn/plot/PlotTwist">plot twist</a>
+   </li>
+   <li>
+      <a href="#social/relations/PoliticalRole"
+         title="https://w3id.org/narn/social/relations/PoliticalRole">political role</a>
+   </li>
+   <li>
+      <a href="#social/relations/PositiveRelation"
+         title="https://w3id.org/narn/social/relations/PositiveRelation">positive relation</a>
+   </li>
+   <li>
+      <a href="#event/Prophecy" title="https://w3id.org/narn/event/Prophecy">prophecy</a>
+   </li>
+   <li>
+      <a href="#plot/Protagonist" title="https://w3id.org/narn/plot/Protagonist">protagonist</a>
+   </li>
+   <li>
+      <a href="#location/Realm" title="https://w3id.org/narn/location/Realm">realm</a>
+   </li>
+   <li>
+      <a href="#location/Region" title="https://w3id.org/narn/location/Region">region</a>
+   </li>
+   <li>
+      <a href="#plot/Resolution" title="https://w3id.org/narn/plot/Resolution">resolution</a>
+   </li>
+   <li>
+      <a href="#action/Reveal" title="https://w3id.org/narn/action/Reveal">reveal</a>
+   </li>
+   <li>
+      <a href="#plot/RisingAction" title="https://w3id.org/narn/plot/RisingAction">rising action</a>
+   </li>
+   <li>
+      <a href="#location/River" title="https://w3id.org/narn/location/River">river</a>
+   </li>
+   <li>
+      <a href="#social/relations/RoyalServant"
+         title="https://w3id.org/narn/social/relations/RoyalServant">royal servant</a>
+   </li>
+   <li>
+      <a href="#plot/Scene" title="https://w3id.org/narn/plot/Scene">scene</a>
+   </li>
+   <li>
+      <a href="#location/Sea" title="https://w3id.org/narn/location/Sea">sea</a>
+   </li>
+   <li>
+      <a href="#social/relations/Servant" title="https://w3id.org/narn/social/relations/Servant">servant</a>
+   </li>
+   <li>
+      <a href="#location/Settlement" title="https://w3id.org/narn/location/Settlement">settlement</a>
+   </li>
+   <li>
+      <a href="#event/Siege" title="https://w3id.org/narn/event/Siege">siege</a>
+   </li>
+   <li>
+      <a href="#event/SocialEvent" title="https://w3id.org/narn/event/SocialEvent">social event</a>
+   </li>
+   <li>
+      <a href="#social/relations/SocialRole"
+         title="https://w3id.org/narn/social/relations/SocialRole">social role</a>
+   </li>
+   <li>
+      <a href="#action/Speak" title="https://w3id.org/narn/action/Speak">speak</a>
+   </li>
+   <li>
+      <a href="#to/StartingInterval" title="https://w3id.org/narn/to/StartingInterval">starting interval</a>
+   </li>
+   <li>
+      <a href="#plot/Story" title="https://w3id.org/narn/plot/Story">story</a>
+   </li>
+   <li>
+      <a href="#social/relations/SuicidalCharacter"
+         title="https://w3id.org/narn/social/relations/SuicidalCharacter">suicidal character</a>
+   </li>
+   <li>
+      <a href="#event/Suicide" title="https://w3id.org/narn/event/Suicide">suicide</a>
+   </li>
+   <li>
+      <a href="#action/Take" title="https://w3id.org/narn/action/Take">take</a>
+   </li>
+   <li>
+      <a href="#to/TemporalEntity" title="https://w3id.org/narn/to/TemporalEntity">temporal entity</a>
+   </li>
+   <li>
+      <a href="#location/Town" title="https://w3id.org/narn/location/Town">town</a>
+   </li>
+   <li>
+      <a href="#plot/Tragedy" title="https://w3id.org/narn/plot/Tragedy">tragedy</a>
+   </li>
+   <li>
+      <a href="#plot/TragicHero" title="https://w3id.org/narn/plot/TragicHero">tragic hero</a>
+   </li>
+   <li>
+      <a href="#action/TransferAction" title="https://w3id.org/narn/action/TransferAction">transfer action</a>
+   </li>
+   <li>
+      <a href="#event/Travel" title="https://w3id.org/narn/event/Travel">travel</a>
+   </li>
+   <li>
+      <a href="#event/Trial" title="https://w3id.org/narn/event/Trial">trial</a>
+   </li>
+   <li>
+      <a href="#location/UndergroundCity" title="https://w3id.org/narn/location/UndergroundCity">underground city</a>
+   </li>
+   <li>
+      <a href="#location/UndergroundPlace" title="https://w3id.org/narn/location/UndergroundPlace">underground place</a>
+   </li>
+   <li>
+      <a href="#location/Valley" title="https://w3id.org/narn/location/Valley">valley</a>
+   </li>
+   <li>
+      <a href="#location/Village" title="https://w3id.org/narn/location/Village">village</a>
+   </li>
+   <li>
+      <a href="#action/ViolentAction" title="https://w3id.org/narn/action/ViolentAction">violent action</a>
+   </li>
+   <li>
+      <a href="#event/War" title="https://w3id.org/narn/event/War">war</a>
+   </li>
+   <li>
+      <a href="#location/WildArea" title="https://w3id.org/narn/location/WildArea">wild area</a>
+   </li>
+   <li>
+      <a href="#location/WoodedArea" title="https://w3id.org/narn/location/WoodedArea">wooded area</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#to/after" title="https://w3id.org/narn/to/after">after</a>
+   </li>
+   <li>
+      <a href="#to/before" title="https://w3id.org/narn/to/before">before</a>
+   </li>
+   <li>
+      <a href="#event/begets" title="https://w3id.org/narn/event/begets">begets</a>
+   </li>
+   <li>
+      <a href="#location/borders" title="https://w3id.org/narn/location/borders">borders</a>
+   </li>
+   <li>
+      <a href="#event/causes" title="https://w3id.org/narn/event/causes">causes</a>
+   </li>
+   <li>
+      <a href="#action/causesByAction" title="https://w3id.org/narn/action/causesByAction">causes by action</a>
+   </li>
+   <li>
+      <a href="#social/relations/committedSuicide"
+         title="https://w3id.org/narn/social/relations/committedSuicide">committed suicide</a>
+   </li>
+   <li>
+      <a href="#plot/conflictInvolves" title="https://w3id.org/narn/plot/conflictInvolves">conflict involves</a>
+   </li>
+   <li>
+      <a href="#location/contains" title="https://w3id.org/narn/location/contains">contains</a>
+   </li>
+   <li>
+      <a href="#to/containsInterval" title="https://w3id.org/narn/to/containsInterval">contains interval</a>
+   </li>
+   <li>
+      <a href="#plot/containsUnit" title="https://w3id.org/narn/plot/containsUnit">contains unit</a>
+   </li>
+   <li>
+      <a href="#plot/correspondsToEvent" title="https://w3id.org/narn/plot/correspondsToEvent">corresponds to event</a>
+   </li>
+   <li>
+      <a href="#event/creates" title="https://w3id.org/narn/event/creates">creates</a>
+   </li>
+   <li>
+      <a href="#social/relations/cursed" title="https://w3id.org/narn/social/relations/cursed">cursed</a>
+   </li>
+   <li>
+      <a href="#plot/deviceInvolvesCharacter"
+         title="https://w3id.org/narn/plot/deviceInvolvesCharacter">device involves character</a>
+   </li>
+   <li>
+      <a href="#rcc/DC" title="https://w3id.org/narn/rcc/DC">disconnected</a>
+   </li>
+   <li>
+      <a href="#to/during" title="https://w3id.org/narn/to/during">during</a>
+   </li>
+   <li>
+      <a href="#to/endsAt" title="https://w3id.org/narn/to/endsAt">ends at</a>
+   </li>
+   <li>
+      <a href="#rcc/EQ" title="https://w3id.org/narn/rcc/EQ">equal</a>
+   </li>
+   <li>
+      <a href="#to/equals" title="https://w3id.org/narn/to/equals">equals</a>
+   </li>
+   <li>
+      <a href="#rcc/EC" title="https://w3id.org/narn/rcc/EC">externally connected</a>
+   </li>
+   <li>
+      <a href="#social/relations/feared" title="https://w3id.org/narn/social/relations/feared">feared</a>
+   </li>
+   <li>
+      <a href="#to/finishedBy" title="https://w3id.org/narn/to/finishedBy">finished by</a>
+   </li>
+   <li>
+      <a href="#to/finishes" title="https://w3id.org/narn/to/finishes">finishes</a>
+   </li>
+   <li>
+      <a href="#plot/follows" title="https://w3id.org/narn/plot/follows">follows</a>
+   </li>
+   <li>
+      <a href="#plot/foreshadowsEvent" title="https://w3id.org/narn/plot/foreshadowsEvent">foreshadows event</a>
+   </li>
+   <li>
+      <a href="#event/hasAgent" title="https://w3id.org/narn/event/hasAgent">has agent</a>
+   </li>
+   <li>
+      <a href="#plot/hasAuthor" title="https://w3id.org/narn/plot/hasAuthor">has author</a>
+   </li>
+   <li>
+      <a href="#event/hasCause" title="https://w3id.org/narn/event/hasCause">has cause</a>
+   </li>
+   <li>
+      <a href="#plot/hasConflict" title="https://w3id.org/narn/plot/hasConflict">has conflict</a>
+   </li>
+   <li>
+      <a href="#event/hasDestination" title="https://w3id.org/narn/event/hasDestination">has destination</a>
+   </li>
+   <li>
+      <a href="#social/relations/hasEmotionalRelationWith"
+         title="https://w3id.org/narn/social/relations/hasEmotionalRelationWith">has emotional relation with</a>
+   </li>
+   <li>
+      <a href="#social/relations/hasFriend"
+         title="https://w3id.org/narn/social/relations/hasFriend">has friend</a>
+   </li>
+   <li>
+      <a href="#plot/hasGenre" title="https://w3id.org/narn/plot/hasGenre">has genre</a>
+   </li>
+   <li>
+      <a href="#to/hasInstant" title="https://w3id.org/narn/to/hasInstant">has instant</a>
+   </li>
+   <li>
+      <a href="#action/hasInstrument" title="https://w3id.org/narn/action/hasInstrument">has instrument</a>
+   </li>
+   <li>
+      <a href="#action/hasIntention" title="https://w3id.org/narn/action/hasIntention">has intention</a>
+   </li>
+   <li>
+      <a href="#plot/hasNarrativeElement" title="https://w3id.org/narn/plot/hasNarrativeElement">has narrative element</a>
+   </li>
+   <li>
+      <a href="#plot/hasNarrativeUnit" title="https://w3id.org/narn/plot/hasNarrativeUnit">has narrative unit</a>
+   </li>
+   <li>
+      <a href="#event/hasOrigin" title="https://w3id.org/narn/event/hasOrigin">has origin</a>
+   </li>
+   <li>
+      <a href="#event/hasParticipant" title="https://w3id.org/narn/event/hasParticipant">has participant</a>
+   </li>
+   <li>
+      <a href="#event/hasPatient" title="https://w3id.org/narn/event/hasPatient">has patient</a>
+   </li>
+   <li>
+      <a href="#action/hasRecipient" title="https://w3id.org/narn/action/hasRecipient">has recipient</a>
+   </li>
+   <li>
+      <a href="#action/hasResult" title="https://w3id.org/narn/action/hasResult">has result</a>
+   </li>
+   <li>
+      <a href="#plot/hasRole" title="https://w3id.org/narn/plot/hasRole">has role</a>
+   </li>
+   <li>
+      <a href="#location/hasSpatialRelation"
+         title="https://w3id.org/narn/location/hasSpatialRelation">has spatial relation</a>
+   </li>
+   <li>
+      <a href="#event/hasSubEvent" title="https://w3id.org/narn/event/hasSubEvent">has sub-event</a>
+   </li>
+   <li>
+      <a href="#action/hasTarget" title="https://w3id.org/narn/action/hasTarget">has target</a>
+   </li>
+   <li>
+      <a href="#plot/hasTheme" title="https://w3id.org/narn/plot/hasTheme">has theme</a>
+   </li>
+   <li>
+      <a href="#event/hasTraveller" title="https://w3id.org/narn/event/hasTraveller">has traveller</a>
+   </li>
+   <li>
+      <a href="#social/relations/hasValence"
+         title="https://w3id.org/narn/social/relations/hasValence">has valence</a>
+   </li>
+   <li>
+      <a href="#event/hasVictim" title="https://w3id.org/narn/event/hasVictim">has victim</a>
+   </li>
+   <li>
+      <a href="#event/hasWitness" title="https://w3id.org/narn/event/hasWitness">has witness</a>
+   </li>
+   <li>
+      <a href="#social/relations/hated" title="https://w3id.org/narn/social/relations/hated">hated</a>
+   </li>
+   <li>
+      <a href="#social/relations/hypnotised"
+         title="https://w3id.org/narn/social/relations/hypnotised">hypnotised</a>
+   </li>
+   <li>
+      <a href="#to/intervalRelation" title="https://w3id.org/narn/to/intervalRelation">interval relation</a>
+   </li>
+   <li>
+      <a href="#plot/involvedInDevice" title="https://w3id.org/narn/plot/involvedInDevice">involved in device</a>
+   </li>
+   <li>
+      <a href="#social/relations/isAKinsmanOf"
+         title="https://w3id.org/narn/social/relations/isAKinsmanOf">is a kinsman of</a>
+   </li>
+   <li>
+      <a href="#location/isAPartOf" title="https://w3id.org/narn/location/isAPartOf">is a part of</a>
+   </li>
+   <li>
+      <a href="#social/relations/isAnEnemyOf"
+         title="https://w3id.org/narn/social/relations/isAnEnemyOf">is an enemy of</a>
+   </li>
+   <li>
+      <a href="#event/isBegottenIn" title="https://w3id.org/narn/event/isBegottenIn">is begotten in</a>
+   </li>
+   <li>
+      <a href="#event/isCausedBy" title="https://w3id.org/narn/event/isCausedBy">is caused by</a>
+   </li>
+   <li>
+      <a href="#social/relations/isMarriedTo"
+         title="https://w3id.org/narn/social/relations/isMarriedTo">is married to</a>
+   </li>
+   <li>
+      <a href="#location/isNear" title="https://w3id.org/narn/location/isNear">is near</a>
+   </li>
+   <li>
+      <a href="#location/isStrictlyInsideOf"
+         title="https://w3id.org/narn/location/isStrictlyInsideOf">is strictly inside of</a>
+   </li>
+   <li>
+      <a href="#event/isSubEventOf" title="https://w3id.org/narn/event/isSubEventOf">is sub-event of</a>
+   </li>
+   <li>
+      <a href="#location/isTheCapitalOf" title="https://w3id.org/narn/location/isTheCapitalOf">is the capital of</a>
+   </li>
+   <li>
+      <a href="#plot/isUnitOf" title="https://w3id.org/narn/plot/isUnitOf">is unit of</a>
+   </li>
+   <li>
+      <a href="#social/relations/killed" title="https://w3id.org/narn/social/relations/killed">killed</a>
+   </li>
+   <li>
+      <a href="#social/relations/livedIn" title="https://w3id.org/narn/social/relations/livedIn">lived in</a>
+   </li>
+   <li>
+      <a href="#social/relations/loved" title="https://w3id.org/narn/social/relations/loved">loved</a>
+   </li>
+   <li>
+      <a href="#to/meets" title="https://w3id.org/narn/to/meets">meets</a>
+   </li>
+   <li>
+      <a href="#to/metBy" title="https://w3id.org/narn/to/metBy">met by</a>
+   </li>
+   <li>
+      <a href="#social/relations/mutuallyLoved"
+         title="https://w3id.org/narn/social/relations/mutuallyLoved">mutually loved</a>
+   </li>
+   <li>
+      <a href="#rcc/NTPP" title="https://w3id.org/narn/rcc/NTPP">non-tangential proper part</a>
+   </li>
+   <li>
+      <a href="#rcc/NTPPi" title="https://w3id.org/narn/rcc/NTPPi">non-tangential proper part inverse</a>
+   </li>
+   <li>
+      <a href="#to/occursAfter" title="https://w3id.org/narn/to/occursAfter">occurs after</a>
+   </li>
+   <li>
+      <a href="#event/occursAt" title="https://w3id.org/narn/event/occursAt">occurs at</a>
+   </li>
+   <li>
+      <a href="#to/occursBefore" title="https://w3id.org/narn/to/occursBefore">occurs before</a>
+   </li>
+   <li>
+      <a href="#to/occursDuring" title="https://w3id.org/narn/to/occursDuring">occurs during</a>
+   </li>
+   <li>
+      <a href="#plot/occursInUnit" title="https://w3id.org/narn/plot/occursInUnit">occurs in unit</a>
+   </li>
+   <li>
+      <a href="#to/occursSimultaneouslyTo" title="https://w3id.org/narn/to/occursSimultaneouslyTo">occurs simultaneously to</a>
+   </li>
+   <li>
+      <a href="#to/overlappedBy" title="https://w3id.org/narn/to/overlappedBy">overlapped by</a>
+   </li>
+   <li>
+      <a href="#to/overlaps" title="https://w3id.org/narn/to/overlaps">overlaps</a>
+   </li>
+   <li>
+      <a href="#rcc/PO" title="https://w3id.org/narn/rcc/PO">partially overlapping</a>
+   </li>
+   <li>
+      <a href="#action/performedBy" title="https://w3id.org/narn/action/performedBy">performed by</a>
+   </li>
+   <li>
+      <a href="#to/precededBy" title="https://w3id.org/narn/to/precededBy">preceded by</a>
+   </li>
+   <li>
+      <a href="#event/precedes" title="https://w3id.org/narn/event/precedes">precedes</a>
+   </li>
+   <li>
+      <a href="#to/precedes" title="https://w3id.org/narn/to/precedes">precedes</a>
+   </li>
+   <li>
+      <a href="#social/relations/ruled" title="https://w3id.org/narn/social/relations/ruled">ruled</a>
+   </li>
+   <li>
+      <a href="#social/relations/served" title="https://w3id.org/narn/social/relations/served">served</a>
+   </li>
+   <li>
+      <a href="#rcc/spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+   </li>
+   <li>
+      <a href="#to/startedBy" title="https://w3id.org/narn/to/startedBy">started by</a>
+   </li>
+   <li>
+      <a href="#to/starts" title="https://w3id.org/narn/to/starts">starts</a>
+   </li>
+   <li>
+      <a href="#to/startsAt" title="https://w3id.org/narn/to/startsAt">starts at</a>
+   </li>
+   <li>
+      <a href="#rcc/TPP" title="https://w3id.org/narn/rcc/TPP">tangential proper part</a>
+   </li>
+   <li>
+      <a href="#rcc/TPPi" title="https://w3id.org/narn/rcc/TPPi">tangential proper part inverse</a>
+   </li>
+   <li>
+      <a href="#plot/usesDevice" title="https://w3id.org/narn/plot/usesDevice">uses device</a>
+   </li>
+   <li>
+      <a href="#social/relations/wasHeldCaptiveIn"
+         title="https://w3id.org/narn/social/relations/wasHeldCaptiveIn">was held captive in</a>
+   </li>
+   <li>
+      <a href="#social/relations/wasKilledBy"
+         title="https://w3id.org/narn/social/relations/wasKilledBy">was killed by</a>
+   </li>
+   <li>
+      <a href="#social/relations/wasServedBy"
+         title="https://w3id.org/narn/social/relations/wasServedBy">was served by</a>
+   </li>
+   <li>
+      <a href="#social/relations/wasTheBestFriendOf"
+         title="https://w3id.org/narn/social/relations/wasTheBestFriendOf">was the best friend of</a>
+   </li>
+   <li>
+      <a href="#social/relations/wasTheChieftainOf"
+         title="https://w3id.org/narn/social/relations/wasTheChieftainOf">was the chieftain of</a>
+   </li>
+   <li>
+      <a href="#social/relations/wasTheKingOf"
+         title="https://w3id.org/narn/social/relations/wasTheKingOf">was the king of</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#to/hasDateTime" title="https://w3id.org/narn/to/hasDateTime">has date time</a>
+   </li>
+   <li>
+      <a href="#to/hasDuration" title="https://w3id.org/narn/to/hasDuration">has duration</a>
+   </li>
+   <li>
+      <a href="#plot/publishedDate" title="https://w3id.org/narn/plot/publishedDate">published date</a>
+   </li>
+   <li>
+      <a href="#plot/unitIndex" title="https://w3id.org/narn/plot/unitIndex">unit index</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#social/relations/ambivalent"
+         title="https://w3id.org/narn/social/relations/ambivalent">ambivalent</a>
+   </li>
+   <li>
+      <a href="#social/relations/negative" title="https://w3id.org/narn/social/relations/negative">negative</a>
+   </li>
+   <li>
+      <a href="#social/relations/positive" title="https://w3id.org/narn/social/relations/positive">positive</a>
+   </li>
+</ul><h4> Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist"/>
