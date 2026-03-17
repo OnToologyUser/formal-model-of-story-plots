@@ -1,0 +1,152 @@
+{
+  "@context" : {
+    "meets" : {
+      "@id" : "https://w3id.org/narn/to/meets",
+      "@type" : "@id"
+    },
+    "created" : {
+      "@id" : "https://purl.org/dc/terms/created"
+    },
+    "FiniteInterval" : {
+      "@id" : "https://w3id.org/narn/to/FiniteInterval"
+    },
+    "finishedBy" : {
+      "@id" : "https://w3id.org/narn/to/finishedBy",
+      "@type" : "@id"
+    },
+    "after" : {
+      "@id" : "https://w3id.org/narn/to/after",
+      "@type" : "@id"
+    },
+    "precedes" : {
+      "@id" : "https://w3id.org/narn/to/precedes",
+      "@type" : "@id"
+    },
+    "startedBy" : {
+      "@id" : "https://w3id.org/narn/to/startedBy",
+      "@type" : "@id"
+    },
+    "Instant" : {
+      "@id" : "https://w3id.org/narn/to/Instant"
+    },
+    "StartingInterval" : {
+      "@id" : "https://w3id.org/narn/to/StartingInterval"
+    },
+    "occursAfter" : {
+      "@id" : "https://w3id.org/narn/to/occursAfter",
+      "@type" : "@id"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "InfiniteInterval" : {
+      "@id" : "https://w3id.org/narn/to/InfiniteInterval"
+    },
+    "containsInterval" : {
+      "@id" : "https://w3id.org/narn/to/containsInterval",
+      "@type" : "@id"
+    },
+    "finishes" : {
+      "@id" : "https://w3id.org/narn/to/finishes",
+      "@type" : "@id"
+    },
+    "hasInstant" : {
+      "@id" : "https://w3id.org/narn/to/hasInstant",
+      "@type" : "@id"
+    },
+    "overlaps" : {
+      "@id" : "https://w3id.org/narn/to/overlaps",
+      "@type" : "@id"
+    },
+    "startsAt" : {
+      "@id" : "https://w3id.org/narn/to/startsAt",
+      "@type" : "@id"
+    },
+    "hasDuration" : {
+      "@id" : "https://w3id.org/narn/to/hasDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "Interval" : {
+      "@id" : "https://w3id.org/narn/to/Interval"
+    },
+    "creator" : {
+      "@id" : "https://purl.org/dc/terms/creator"
+    },
+    "precededBy" : {
+      "@id" : "https://w3id.org/narn/to/precededBy",
+      "@type" : "@id"
+    },
+    "occursSimultaneouslyTo" : {
+      "@id" : "https://w3id.org/narn/to/occursSimultaneouslyTo",
+      "@type" : "@id"
+    },
+    "TemporalEntity" : {
+      "@id" : "https://w3id.org/narn/to/TemporalEntity"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "https://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "hasDateTime" : {
+      "@id" : "https://w3id.org/narn/to/hasDateTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "EternalInterval" : {
+      "@id" : "https://w3id.org/narn/to/EternalInterval"
+    },
+    "endsAt" : {
+      "@id" : "https://w3id.org/narn/to/endsAt",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "https://purl.org/dc/terms/modified"
+    },
+    "overlappedBy" : {
+      "@id" : "https://w3id.org/narn/to/overlappedBy",
+      "@type" : "@id"
+    },
+    "EndingInterval" : {
+      "@id" : "https://w3id.org/narn/to/EndingInterval"
+    },
+    "starts" : {
+      "@id" : "https://w3id.org/narn/to/starts",
+      "@type" : "@id"
+    },
+    "metBy" : {
+      "@id" : "https://w3id.org/narn/to/metBy",
+      "@type" : "@id"
+    },
+    "occursBefore" : {
+      "@id" : "https://w3id.org/narn/to/occursBefore",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "during" : {
+      "@id" : "https://w3id.org/narn/to/during",
+      "@type" : "@id"
+    },
+    "before" : {
+      "@id" : "https://w3id.org/narn/to/before",
+      "@type" : "@id"
+    },
+    "intervalRelation" : {
+      "@id" : "https://w3id.org/narn/to/intervalRelation",
+      "@type" : "@id"
+    },
+    "equals" : {
+      "@id" : "https://w3id.org/narn/to/equals",
+      "@type" : "@id"
+    },
+    "occursDuring" : {
+      "@id" : "https://w3id.org/narn/to/occursDuring",
+      "@type" : "@id"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "https://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

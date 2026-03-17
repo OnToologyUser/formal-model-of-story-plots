@@ -1,0 +1,366 @@
+<h2 id="crossreference" class="list">Cross-reference for RCC Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by RCC Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/narn/location/borders" title="https://w3id.org/narn/location/borders">
+            <span>borders</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/narn/location/contains" title="https://w3id.org/narn/location/contains">
+            <span>contains</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DC" title="https://w3id.org/narn/rcc/DC">disconnected</a>
+      </li>
+      <li>
+         <a href="#EQ" title="https://w3id.org/narn/rcc/EQ">equal</a>
+      </li>
+      <li>
+         <a href="#EC" title="https://w3id.org/narn/rcc/EC">externally connected</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/narn/location/isAPartOf" title="https://w3id.org/narn/location/isAPartOf">
+            <span>is a part of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NTPP" title="https://w3id.org/narn/rcc/NTPP">non-tangential proper part</a>
+      </li>
+      <li>
+         <a href="#NTPPi" title="https://w3id.org/narn/rcc/NTPPi">non-tangential proper part inverse</a>
+      </li>
+      <li>
+         <a href="#PO" title="https://w3id.org/narn/rcc/PO">partially overlapping</a>
+      </li>
+      <li>
+         <a href="#spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+      </li>
+      <li>
+         <a href="#TPP" title="https://w3id.org/narn/rcc/TPP">tangential proper part</a>
+      </li>
+      <li>
+         <a href="#TPPi" title="https://w3id.org/narn/rcc/TPPi">tangential proper part inverse</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/narn/location/borders">
+      <h3>borders<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/location/borders</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#EC" title="https://w3id.org/narn/rcc/EC">externally connected</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/narn/location/contains">
+      <h3>contains<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/location/contains</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#EQ" title="https://w3id.org/narn/rcc/EQ">equal</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#NTPPi" title="https://w3id.org/narn/rcc/NTPPi">non-tangential proper part inverse</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#TPPi" title="https://w3id.org/narn/rcc/TPPi">tangential proper part inverse</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DC">
+      <h3>disconnected<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/rcc/DC</p>
+      <div class="comment">
+         <span class="markdown">Two regions share no points at all.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric, irreflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="EQ">
+      <h3>equal<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/rcc/EQ</p>
+      <div class="comment">
+         <span class="markdown">Same spatial extent. Equivalence relation.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric, transitive, reflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/narn/location/contains" title="https://w3id.org/narn/location/contains">contains</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/narn/location/isAPartOf" title="https://w3id.org/narn/location/isAPartOf">is a part of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="EC">
+      <h3>externally connected<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/rcc/EC</p>
+      <div class="comment">
+         <span class="markdown">Boundaries touch but interiors are disjoint.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric, irreflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/narn/location/borders" title="https://w3id.org/narn/location/borders">borders</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/narn/location/isAPartOf">
+      <h3>is a part of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/location/isAPartOf</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#EQ" title="https://w3id.org/narn/rcc/EQ">equal</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#NTPP" title="https://w3id.org/narn/rcc/NTPP">non-tangential proper part</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#TPP" title="https://w3id.org/narn/rcc/TPP">tangential proper part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="NTPP">
+      <h3>non-tangential proper part<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/rcc/NTPP</p>
+      <div class="comment">
+         <span class="markdown">First region entirely inside second, boundaries do not touch.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, transitive, irreflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/narn/location/isAPartOf" title="https://w3id.org/narn/location/isAPartOf">is a part of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#NTPPi" title="https://w3id.org/narn/rcc/NTPPi">non-tangential proper part inverse</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="NTPPi">
+      <h3>non-tangential proper part inverse<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/rcc/NTPPi</p>
+      <div class="comment">
+         <span class="markdown">First region entirely contains second, boundaries do not touch.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, transitive, irreflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/narn/location/contains" title="https://w3id.org/narn/location/contains">contains</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#NTPP" title="https://w3id.org/narn/rcc/NTPP">non-tangential proper part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="PO">
+      <h3>partially overlapping<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/rcc/PO</p>
+      <div class="comment">
+         <span class="markdown">Part of each region is inside the other but neither is contained.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric, irreflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="spatiallyRelatedTo">
+      <h3>spatially related to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/rcc/spatiallyRelatedTo</p>
+      <div class="comment">
+         <span class="markdown">The most general spatial relation between two regions.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric</p>
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#DC" title="https://w3id.org/narn/rcc/DC">disconnected</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#EQ" title="https://w3id.org/narn/rcc/EQ">equal</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#EC" title="https://w3id.org/narn/rcc/EC">externally connected</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#NTPP" title="https://w3id.org/narn/rcc/NTPP">non-tangential proper part</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#NTPPi" title="https://w3id.org/narn/rcc/NTPPi">non-tangential proper part inverse</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#PO" title="https://w3id.org/narn/rcc/PO">partially overlapping</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#TPP" title="https://w3id.org/narn/rcc/TPP">tangential proper part</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#TPPi" title="https://w3id.org/narn/rcc/TPPi">tangential proper part inverse</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/narn/location/Place"
+                  target="_blank"
+                  title="https://w3id.org/narn/location/Place">place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/narn/location/Place"
+                  target="_blank"
+                  title="https://w3id.org/narn/location/Place">place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="TPP">
+      <h3>tangential proper part<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/rcc/TPP</p>
+      <div class="comment">
+         <span class="markdown">First region entirely inside second, boundaries touch.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, irreflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/narn/location/isAPartOf" title="https://w3id.org/narn/location/isAPartOf">is a part of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#TPPi" title="https://w3id.org/narn/rcc/TPPi">tangential proper part inverse</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="TPPi">
+      <h3>tangential proper part inverse<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/narn/rcc/TPPi</p>
+      <div class="comment">
+         <span class="markdown">First region entirely contains second, boundaries touch.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, irreflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/narn/location/contains" title="https://w3id.org/narn/location/contains">contains</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#spatiallyRelatedTo" title="https://w3id.org/narn/rcc/spatiallyRelatedTo">spatially related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#TPP" title="https://w3id.org/narn/rcc/TPP">tangential proper part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>

@@ -1,0 +1,88 @@
+{
+  "@context" : {
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "isTheChildOf" : {
+      "@id" : "http://purl.org/family/isTheChildOf",
+      "@type" : "@id"
+    },
+    "isTheFatherOf" : {
+      "@id" : "http://purl.org/family/isTheFatherOf",
+      "@type" : "@id"
+    },
+    "isASibingOf" : {
+      "@id" : "http://purl.org/family/isASibingOf",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "isAChildOf" : {
+      "@id" : "http://purl.org/family/isAChildOf",
+      "@type" : "@id"
+    },
+    "isASonOf" : {
+      "@id" : "http://purl.org/family/isASonOf",
+      "@type" : "@id"
+    },
+    "isASisterOf" : {
+      "@id" : "http://purl.org/family/isASisterOf",
+      "@type" : "@id"
+    },
+    "isAParentOf" : {
+      "@id" : "http://purl.org/family/isAParentOf",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "isACousinOf" : {
+      "@id" : "http://purl.org/family/isACousinOf",
+      "@type" : "@id"
+    },
+    "isTheMotherOf" : {
+      "@id" : "http://purl.org/family/isTheMotherOf",
+      "@type" : "@id"
+    },
+    "Male" : {
+      "@id" : "http://purl.org/family/Male"
+    },
+    "Female" : {
+      "@id" : "http://purl.org/family/Female"
+    },
+    "isADaughterOf" : {
+      "@id" : "http://purl.org/family/isADaughterOf",
+      "@type" : "@id"
+    },
+    "isASiblingOf" : {
+      "@id" : "http://purl.org/family/isASiblingOf",
+      "@type" : "@id"
+    },
+    "isAnAncestorOf" : {
+      "@id" : "http://purl.org/family/isAnAncestorOf",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "isMarriedTo" : {
+      "@id" : "http://purl.org/family/isMarriedTo",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "isADescendentOf" : {
+      "@id" : "http://purl.org/family/isADescendentOf",
+      "@type" : "@id"
+    },
+    "isABrotherOf" : {
+      "@id" : "http://purl.org/family/isABrotherOf",
+      "@type" : "@id"
+    }
+  }
+}

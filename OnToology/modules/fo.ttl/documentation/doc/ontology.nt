@@ -1,0 +1,159 @@
+<http://purl.org/family/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/family/> <http://purl.org/dc/terms/created> "2023-11-19T14:42:42+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/family/> <http://purl.org/dc/terms/creator> <https://w3id.org/people/az/me> .
+<http://purl.org/family/> <http://purl.org/dc/terms/modified> "2026-01-23T13:42:42+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/family/> <http://purl.org/dc/terms/title> "The Family Ontology"@en .
+<http://purl.org/family/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for family relationships."@en .
+<http://purl.org/family/> <http://www.w3.org/2000/01/rdf-schema#label> "The family ontology"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/family/isABrotherOf
+<http://purl.org/family/isABrotherOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isABrotherOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/family/isASiblingOf> .
+<http://purl.org/family/isASiblingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isABrotherOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/family/Male> .
+<http://purl.org/family/isABrotherOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A male sibling of someone."@en .
+<http://purl.org/family/isABrotherOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a brother of"@en .
+# 
+# http://purl.org/family/isAChildOf
+<http://purl.org/family/isAChildOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isAChildOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/family/isADescendentOf> .
+<http://purl.org/family/isAChildOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between someone and their parent"@en .
+<http://purl.org/family/isAChildOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a child of"@en .
+# 
+# http://purl.org/family/isACousinOf
+<http://purl.org/family/isACousinOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isACousinOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/family/isACousinOf> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/family/isAParentOf> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/family/isASiblingOf> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/family/isAChildOf> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://purl.org/family/isACousinOf> <http://www.w3.org/2000/01/rdf-schema#comment> "One that is the child of a sibling of the parent of someone else."@en .
+<http://purl.org/family/isACousinOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a cousin of"@en .
+# 
+# http://purl.org/family/isADaughterOf
+<http://purl.org/family/isADaughterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isADaughterOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/family/isTheChildOf> .
+<http://purl.org/family/isTheChildOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isADaughterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/family/Female> .
+<http://purl.org/family/isADaughterOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a female child and his parent."@en .
+<http://purl.org/family/isADaughterOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a daughter of"@en .
+# 
+# http://purl.org/family/isADescendentOf
+<http://purl.org/family/isADescendentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isADescendentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://purl.org/family/isADescendentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between someone and one of their ancestors."@en .
+<http://purl.org/family/isADescendentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a descendent of"@en .
+# 
+# http://purl.org/family/isAParentOf
+<http://purl.org/family/isAParentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isAParentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/family/isAnAncestorOf> .
+<http://purl.org/family/isAParentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/family/isAChildOf> .
+<http://purl.org/family/isAParentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a parent and their child"@en .
+<http://purl.org/family/isAParentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a parent of"@en .
+# 
+# http://purl.org/family/isASibingOf
+<http://purl.org/family/isASibingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isASibingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/family/isASibingOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Two individuals who share the same parent."@en .
+<http://purl.org/family/isASibingOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a sibling of"@en .
+# 
+# http://purl.org/family/isASiblingOf
+# 
+# http://purl.org/family/isASisterOf
+<http://purl.org/family/isASisterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isASisterOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/family/isASiblingOf> .
+<http://purl.org/family/isASisterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/family/Female> .
+<http://purl.org/family/isASisterOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A female sibling of someone."@en .
+<http://purl.org/family/isASisterOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a sister of"@en .
+# 
+# http://purl.org/family/isASonOf
+<http://purl.org/family/isASonOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isASonOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/family/isTheChildOf> .
+<http://purl.org/family/isASonOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/family/Male> .
+<http://purl.org/family/isASonOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a male child and his parent."@en .
+<http://purl.org/family/isASonOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a son of"@en .
+# 
+# http://purl.org/family/isAnAncestorOf
+<http://purl.org/family/isAnAncestorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isAnAncestorOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/family/isADescendentOf> .
+<http://purl.org/family/isAnAncestorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://purl.org/family/isAnAncestorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between someone and one their of descendants."@en .
+<http://purl.org/family/isAnAncestorOf> <http://www.w3.org/2000/01/rdf-schema#label> "is an ancestor of"@en .
+# 
+# http://purl.org/family/isMarriedTo
+<http://purl.org/family/isMarriedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isMarriedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/family/isMarriedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "People united through marriage."@en .
+<http://purl.org/family/isMarriedTo> <http://www.w3.org/2000/01/rdf-schema#label> "is married to"@en .
+# 
+# http://purl.org/family/isTheChildOf
+# 
+# http://purl.org/family/isTheFatherOf
+<http://purl.org/family/isTheFatherOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isTheFatherOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/family/isAParentOf> .
+<http://purl.org/family/isTheFatherOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/family/Male> .
+<http://purl.org/family/isTheFatherOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a father and his child."@en .
+<http://purl.org/family/isTheFatherOf> <http://www.w3.org/2000/01/rdf-schema#label> "is the father of"@en .
+# 
+# http://purl.org/family/isTheMotherOf
+<http://purl.org/family/isTheMotherOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/family/isTheMotherOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/family/isAParentOf> .
+<http://purl.org/family/isTheMotherOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/family/Female> .
+<http://purl.org/family/isTheMotherOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a mother and his child."@en .
+<http://purl.org/family/isTheMotherOf> <http://www.w3.org/2000/01/rdf-schema#label> "is the mother of"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/family/Female
+<http://purl.org/family/Female> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/family/Female> <http://www.w3.org/2000/01/rdf-schema#comment> "A female individual. The gender may be a natural one, attributed at birth, or a given one by social conventions."@en .
+<http://purl.org/family/Female> <http://www.w3.org/2000/01/rdf-schema#label> "female"@en .
+# 
+# http://purl.org/family/Male
+<http://purl.org/family/Male> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/family/Male> <http://www.w3.org/2000/01/rdf-schema#comment> "A male individual. The gender may be a natural one, attributed at birth, or a given one by social conventions."@en .
+<http://purl.org/family/Male> <http://www.w3.org/2000/01/rdf-schema#label> "male"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

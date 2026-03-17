@@ -1,0 +1,451 @@
+@prefix : <https://w3id.org/narn/action/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/narn/action/> .
+
+<https://w3id.org/narn/action/> rdf:type owl:Ontology ;
+                                 owl:imports <https://w3id.org/narn/event/> ,
+                                             <https://w3id.org/narn/location/> ;
+                                 rdfs:comment "An ontology for describing actions in story plot"@en ;
+                                 rdfs:label "Actions Ontology"@en ;
+                                 <https://purl.org/dc/terms/created> "2026-03-11"^^xsd:date ;
+                                 <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;
+                                 <https://purl.org/dc/terms/modified> "2026-03-17"^^xsd:date ;
+                                 <https://purl.org/vocab/vann/preferredNamespacePrefix> "act" ;
+                                 <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/action/" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/vocab/vann/preferredNamespacePrefix
+<https://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/vocab/vann/preferredNamespaceUri
+<https://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/narn/action/causesByAction
+:causesByAction rdf:type owl:ObjectProperty ;
+                owl:propertyChainAxiom ( [ owl:inverseOf :performedBy
+                                         ]
+                                         :hasResult
+                                       ) ;
+                rdfs:comment "Inferred: if an agent performs an action with a result, the agent indirectly causes that result."@en ;
+                rdfs:label "causes by action"@en ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "brings about"@en .
+
+
+###  https://w3id.org/narn/action/hasInstrument
+:hasInstrument rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <https://w3id.org/narn/event/hasCause> ;
+               rdf:type owl:IrreflexiveProperty ;
+               rdfs:domain :Action ;
+               owl:propertyDisjointWith :hasTarget ,
+                                        :performedBy ;
+               rdfs:comment "An object used to perform the action (e.g. a sword)."@en ;
+               rdfs:label "has instrument"@en ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "using"@en .
+
+
+###  https://w3id.org/narn/action/hasIntention
+:hasIntention rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ,
+                       owl:IrreflexiveProperty ;
+              rdfs:domain :Action ;
+              rdfs:comment "The goal or purpose behind the action."@en ;
+              rdfs:label "has intention"@en ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "aims to"@en .
+
+
+###  https://w3id.org/narn/action/hasRecipient
+:hasRecipient rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <https://w3id.org/narn/event/hasParticipant> ;
+              rdf:type owl:IrreflexiveProperty ;
+              rdfs:domain :TransferAction ;
+              owl:propertyDisjointWith :performedBy ;
+              rdfs:comment "The character who receives something in a transfer action."@en ;
+              rdfs:label "has recipient"@en ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "received by"@en .
+
+
+###  https://w3id.org/narn/action/hasResult
+:hasResult rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <https://w3id.org/narn/event/causes> ;
+           rdfs:domain :Action ;
+           rdfs:range <https://w3id.org/narn/event/Event> ;
+           rdfs:comment "The event or state that results from the action."@en ;
+           rdfs:label "has result"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "results in"@en .
+
+
+###  https://w3id.org/narn/action/hasTarget
+:hasTarget rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <https://w3id.org/narn/event/hasPatient> ;
+           rdf:type owl:AsymmetricProperty ,
+                    owl:IrreflexiveProperty ;
+           rdfs:domain :Action ;
+           rdfs:comment "The entity that the action is directed towards."@en ;
+           rdfs:label "has target"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "directed at"@en .
+
+
+###  https://w3id.org/narn/action/performedBy
+:performedBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <https://w3id.org/narn/event/hasAgent> ;
+             rdfs:domain :Action ;
+             rdfs:comment "The agent who intentionally performs the action."@en ;
+             rdfs:label "performed by"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "done by"@en .
+
+
+###  https://w3id.org/narn/event/causes
+<https://w3id.org/narn/event/causes> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/creates
+<https://w3id.org/narn/event/creates> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/hasAgent
+<https://w3id.org/narn/event/hasAgent> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/hasCause
+<https://w3id.org/narn/event/hasCause> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/hasParticipant
+<https://w3id.org/narn/event/hasParticipant> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/hasPatient
+<https://w3id.org/narn/event/hasPatient> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/narn/action/Action
+:Action rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/narn/event/Event> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :performedBy ;
+                          owl:someValuesFrom owl:Thing
+                        ] ;
+        rdfs:comment "An intentional deed. Every action has at least one performer."@en ;
+        rdfs:label "action"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "deed"@en .
+
+
+###  https://w3id.org/narn/action/Attack
+:Attack rdf:type owl:Class ;
+        rdfs:subClassOf :ViolentAction ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasTarget ;
+                          owl:someValuesFrom owl:Thing
+                        ] ;
+        owl:disjointWith :Defend ;
+        rdfs:comment "An aggressive action aimed at harming a target."@en ;
+        rdfs:label "attack"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "assault"@en .
+
+
+###  https://w3id.org/narn/action/Build
+:Build rdf:type owl:Class ;
+       owl:equivalentClass [ owl:intersectionOf ( :CreationAction
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/narn/event/creates> ;
+                                                    owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+       rdfs:subClassOf :CreationAction ;
+       owl:disjointWith :Forge ;
+       rdfs:comment "The action of constructing a structure or settlement."@en ;
+       rdfs:label "build"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "construction"@en .
+
+
+###  https://w3id.org/narn/action/Command
+:Command rdf:type owl:Class ;
+         rdfs:subClassOf :CommunicativeAction ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasTarget ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         ] ;
+         rdfs:comment "The action of giving an authoritative order."@en ;
+         rdfs:label "command"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "order"@en .
+
+
+###  https://w3id.org/narn/action/CommunicativeAction
+:CommunicativeAction rdf:type owl:Class ;
+                     rdfs:subClassOf :Action ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasTarget ;
+                                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                                           owl:complementOf <https://w3id.org/narn/location/Place>
+                                                         ]
+                                     ] ;
+                     owl:disjointWith :MovementAction ,
+                                      :TransferAction ,
+                                      :ViolentAction ;
+                     rdfs:comment "An action involving communication between characters."@en ;
+                     rdfs:label "communicative action"@en ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "speech act"@en .
+
+
+###  https://w3id.org/narn/action/CreationAction
+:CreationAction rdf:type owl:Class ;
+                rdfs:subClassOf :Action ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <https://w3id.org/narn/event/creates> ;
+                                  owl:someValuesFrom owl:Thing
+                                ] ;
+                owl:disjointWith :TransferAction ;
+                rdfs:comment "An action that produces or transforms something."@en ;
+                rdfs:label "creation action"@en ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "making"@en .
+
+
+###  https://w3id.org/narn/action/Deceive
+:Deceive rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :CommunicativeAction
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasIntention ;
+                                                      owl:someValuesFrom :MisleadingIntention
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :CommunicativeAction ;
+         rdfs:comment "The action of intentionally misleading another character."@en ;
+         rdfs:label "deceive"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "deception"@en .
+
+
+###  https://w3id.org/narn/action/Defend
+:Defend rdf:type owl:Class ;
+        rdfs:subClassOf :ViolentAction ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasTarget ;
+                          owl:someValuesFrom owl:Thing
+                        ] ;
+        rdfs:comment "An action of protecting oneself or others from attack."@en ;
+        rdfs:label "defend"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "defence"@en .
+
+
+###  https://w3id.org/narn/action/Escape
+:Escape rdf:type owl:Class ;
+        rdfs:comment "The intention of getting away from danger."@en ;
+        rdfs:label "escape"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "evasion"@en .
+
+
+###  https://w3id.org/narn/action/Flee
+:Flee rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( :MovementAction
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasIntention ;
+                                                   owl:someValuesFrom :Escape
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:subClassOf :MovementAction ;
+      rdfs:comment "The action of running away from danger or pursuit."@en ;
+      rdfs:label "flee"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "flight"@en .
+
+
+###  https://w3id.org/narn/action/Forge
+:Forge rdf:type owl:Class ;
+       rdfs:subClassOf :CreationAction ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://w3id.org/narn/event/creates> ;
+                         owl:someValuesFrom owl:Thing
+                       ] ;
+       rdfs:comment "The action of creating or reshaping an object, especially a weapon."@en ;
+       rdfs:label "forge"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "smithing"@en .
+
+
+###  https://w3id.org/narn/action/Give
+:Give rdf:type owl:Class ;
+      rdfs:subClassOf :TransferAction ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasRecipient ;
+                        owl:someValuesFrom owl:Thing
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasInstrument ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                      ] ;
+      owl:disjointWith :Take ;
+      rdfs:comment "The action of voluntarily transferring something to another."@en ;
+      rdfs:label "give"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "bestowal"@en .
+
+
+###  https://w3id.org/narn/action/GoTo
+:GoTo rdf:type owl:Class ;
+      rdfs:subClassOf :MovementAction ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasTarget ;
+                        owl:allValuesFrom <https://w3id.org/narn/location/Place>
+                      ] ;
+      rdfs:comment "The action of deliberately travelling to a destination."@en ;
+      rdfs:label "go to"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "travel to"@en .
+
+
+###  https://w3id.org/narn/action/Kill
+:Kill rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( :ViolentAction
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasResult ;
+                                                   owl:someValuesFrom <https://w3id.org/narn/event/Death>
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTarget ;
+                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:subClassOf :ViolentAction ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasResult ;
+                        owl:allValuesFrom <https://w3id.org/narn/event/Death>
+                      ] ;
+      rdfs:comment "The action of causing the death of another."@en ;
+      rdfs:label "kill"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "slaying"@en .
+
+
+###  https://w3id.org/narn/action/MisleadingIntention
+:MisleadingIntention rdf:type owl:Class ;
+                     rdfs:comment "The intention of making another believe something false."@en ;
+                     rdfs:label "misleading intention"@en ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "intent to deceive"@en .
+
+
+###  https://w3id.org/narn/action/MovementAction
+:MovementAction rdf:type owl:Class ;
+                rdfs:subClassOf :Action ,
+                                <https://w3id.org/narn/event/MovementEvent> ;
+                owl:disjointWith :ViolentAction ;
+                rdfs:comment "An action involving deliberate physical movement."@en ;
+                rdfs:label "movement action"@en ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "locomotion"@en .
+
+
+###  https://w3id.org/narn/action/Reveal
+:Reveal rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :CommunicativeAction
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasResult ;
+                                                     owl:someValuesFrom <https://w3id.org/narn/event/Discovery>
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf :CommunicativeAction ;
+        rdfs:comment "The action of disclosing previously hidden information."@en ;
+        rdfs:label "reveal"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "disclosure"@en .
+
+
+###  https://w3id.org/narn/action/Speak
+:Speak rdf:type owl:Class ;
+       rdfs:subClassOf :CommunicativeAction ;
+       rdfs:comment "The action of verbal communication."@en ;
+       rdfs:label "speak"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "utterance"@en .
+
+
+###  https://w3id.org/narn/action/Take
+:Take rdf:type owl:Class ;
+      rdfs:subClassOf :TransferAction ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasTarget ;
+                        owl:someValuesFrom owl:Thing
+                      ] ;
+      rdfs:comment "The action of acquiring something, possibly by force."@en ;
+      rdfs:label "take"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "seizure"@en .
+
+
+###  https://w3id.org/narn/action/TransferAction
+:TransferAction rdf:type owl:Class ;
+                rdfs:subClassOf :Action ;
+                rdfs:comment "An action involving the transfer of possession."@en ;
+                rdfs:label "transfer action"@en ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "transfer"@en .
+
+
+###  https://w3id.org/narn/action/ViolentAction
+:ViolentAction rdf:type owl:Class ;
+               rdfs:subClassOf :Action ;
+               rdfs:comment "An action involving physical violence or force."@en ;
+               rdfs:label "violent action"@en ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "violent deed"@en .
+
+
+###  https://w3id.org/narn/event/Death
+<https://w3id.org/narn/event/Death> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/event/Discovery
+<https://w3id.org/narn/event/Discovery> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/event/Event
+<https://w3id.org/narn/event/Event> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/event/MovementEvent
+<https://w3id.org/narn/event/MovementEvent> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/location/Place
+<https://w3id.org/narn/location/Place> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

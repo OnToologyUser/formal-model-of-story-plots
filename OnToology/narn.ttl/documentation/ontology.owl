@@ -1,0 +1,1046 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:event="https://purl.org/event/"
+     xmlns:family="https://purl.org/family/"
+     xmlns:location="https://purl.org/location/"
+     xmlns:relations="https://purl.org/social/relations/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- https://purl.org/event/before -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/event/before"/>
+    
+
+
+    <!-- https://purl.org/event/begets -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/event/begets"/>
+    
+
+
+    <!-- https://purl.org/event/hasTraveller -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/event/hasTraveller"/>
+    
+
+
+    <!-- https://purl.org/event/precedes -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/event/precedes"/>
+    
+
+
+    <!-- https://purl.org/event/starts -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/event/starts"/>
+    
+
+
+    <!-- https://purl.org/family/isABrotherOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/family/isABrotherOf"/>
+    
+
+
+    <!-- https://purl.org/family/isADaughterOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/family/isADaughterOf"/>
+    
+
+
+    <!-- https://purl.org/family/isASisterOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/family/isASisterOf"/>
+    
+
+
+    <!-- https://purl.org/family/isASonOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/family/isASonOf"/>
+    
+
+
+    <!-- https://purl.org/family/isMarriedTo -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/family/isMarriedTo"/>
+    
+
+
+    <!-- https://purl.org/family/isSisterOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/family/isSisterOf"/>
+    
+
+
+    <!-- https://purl.org/family/isTheFatherOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/family/isTheFatherOf"/>
+    
+
+
+    <!-- https://purl.org/family/isTheMotherOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/family/isTheMotherOf"/>
+    
+
+
+    <!-- https://purl.org/location/isAPartOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/location/isAPartOf"/>
+    
+
+
+    <!-- https://purl.org/social/relations/hasFriend -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/hasFriend"/>
+    
+
+
+    <!-- https://purl.org/social/relations/hated -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/hated"/>
+    
+
+
+    <!-- https://purl.org/social/relations/isMarriedTo -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/isMarriedTo"/>
+    
+
+
+    <!-- https://purl.org/social/relations/killed -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/killed"/>
+    
+
+
+    <!-- https://purl.org/social/relations/livedIn -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/livedIn"/>
+    
+
+
+    <!-- https://purl.org/social/relations/livedin -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/livedin"/>
+    
+
+
+    <!-- https://purl.org/social/relations/loved -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/loved"/>
+    
+
+
+    <!-- https://purl.org/social/relations/served -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/served"/>
+    
+
+
+    <!-- https://purl.org/social/relations/wasTheBestFriendOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/wasTheBestFriendOf"/>
+    
+
+
+    <!-- https://purl.org/social/relations/wasTheKingOf -->
+
+
+    <AnnotationProperty rdf:about="https://purl.org/social/relations/wasTheKingOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+
+    <Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
+    <!-- https://purl.org/event/Battle -->
+
+
+    <Class rdf:about="https://purl.org/event/Battle"/>
+    
+
+
+    <!-- https://purl.org/event/Birth -->
+
+
+    <Class rdf:about="https://purl.org/event/Birth"/>
+    
+
+
+    <!-- https://purl.org/event/Instant -->
+
+
+    <Class rdf:about="https://purl.org/event/Instant"/>
+    
+
+
+    <!-- https://purl.org/event/Travel -->
+
+
+    <Class rdf:about="https://purl.org/event/Travel"/>
+    
+
+
+    <!-- https://purl.org/family/Female -->
+
+
+    <Class rdf:about="https://purl.org/family/Female"/>
+    
+
+
+    <!-- https://purl.org/family/Male -->
+
+
+    <Class rdf:about="https://purl.org/family/Male"/>
+    
+
+
+    <!-- https://purl.org/location/City -->
+
+
+    <Class rdf:about="https://purl.org/location/City"/>
+    
+
+
+    <!-- https://purl.org/location/Forest -->
+
+
+    <Class rdf:about="https://purl.org/location/Forest"/>
+    
+
+
+    <!-- https://purl.org/location/Hill -->
+
+
+    <Class rdf:about="https://purl.org/location/Hill"/>
+    
+
+
+    <!-- https://purl.org/location/Place -->
+
+
+    <Class rdf:about="https://purl.org/location/Place"/>
+    
+
+
+    <!-- https://purl.org/location/Realm -->
+
+
+    <Class rdf:about="https://purl.org/location/Realm"/>
+    
+
+
+    <!-- https://purl.org/location/Valley -->
+
+
+    <Class rdf:about="https://purl.org/location/Valley"/>
+    
+
+
+    <!-- https://purl.org/meo/Adan -->
+
+
+    <Class rdf:about="https://purl.org/meo/Adan"/>
+    
+
+
+    <!-- https://purl.org/meo/Atan -->
+
+
+    <Class rdf:about="https://purl.org/meo/Atan"/>
+    
+
+
+    <!-- https://purl.org/meo/Elda -->
+
+
+    <Class rdf:about="https://purl.org/meo/Elda"/>
+    
+
+
+    <!-- https://purl.org/meo/Eruhin -->
+
+
+    <Class rdf:about="https://purl.org/meo/Eruhin"/>
+    
+
+
+    <!-- https://purl.org/narn/Lócë -->
+
+
+    <Class rdf:about="https://purl.org/narn/Lócë"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://purl.org/narn/Adanedhel -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Adanedhel">
+        <rdf:type rdf:resource="https://purl.org/meo/Eruhin"/>
+        <sameAs rdf:resource="https://purl.org/narn/Agarwaen"/>
+        <sameAs rdf:resource="https://purl.org/narn/Thurin"/>
+        <rdfs:label xml:lang="sjn">Adanedhel</rdfs:label>
+        <rdfs:label xml:lang="en">Man-Elf</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Agarwaen -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Agarwaen"/>
+    
+
+
+    <!-- https://purl.org/narn/Thurin -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Thurin"/>
+    
+
+
+    <!-- https://purl.org/narn/Agarwaen -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Agarwaen">
+        <rdf:type rdf:resource="https://purl.org/meo/Atan"/>
+        <sameAs rdf:resource="https://purl.org/narn/Gorthol"/>
+        <sameAs rdf:resource="https://purl.org/narn/Mormegil"/>
+        <rdfs:label xml:lang="sjn">Agarwaen</rdfs:label>
+        <rdfs:label xml:lang="en">The Bloodstained</rdfs:label>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Nargothrond"/>
+        <relations:loved rdf:resource="https://purl.org/narn/Finduilas"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Gorthol -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Gorthol"/>
+    
+
+
+    <!-- https://purl.org/narn/Mormegil -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Mormegil"/>
+    
+
+
+    <!-- https://purl.org/narn/AmonRûdh -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/AmonRûdh">
+        <rdf:type rdf:resource="https://purl.org/location/Hill"/>
+        <rdfs:label xml:lang="sjn">Amon Rûdh</rdfs:label>
+        <rdfs:label xml:lang="en">Bald Hill</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Beleriand"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Angband -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Angband">
+        <rdf:type rdf:resource="https://purl.org/location/Place"/>
+        <rdfs:label xml:lang="sjn">Angband</rdfs:label>
+        <rdfs:label xml:lang="en">Iron Prison</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Beleriand"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Arda -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Arda">
+        <rdf:type rdf:resource="https://purl.org/location/Place"/>
+        <rdfs:label xml:lang="qya">Arda</rdfs:label>
+        <rdfs:label xml:lang="sjn">Ardhon</rdfs:label>
+        <rdfs:label xml:lang="en">The World</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Beleg -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Beleg">
+        <rdf:type rdf:resource="https://purl.org/family/Male"/>
+        <rdf:type rdf:resource="https://purl.org/meo/Elda"/>
+        <rdfs:label xml:lang="sjn">Beleg</rdfs:label>
+        <skos:altLabel xml:lang="sjn">Cúthalion</skos:altLabel>
+        <skos:altLabel xml:lang="en">Strongbow</skos:altLabel>
+        <relations:served rdf:resource="https://purl.org/narn/Thingol"/>
+        <relations:wasTheBestFriendOf rdf:resource="https://purl.org/narn/Túrin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Beleriand -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Beleriand">
+        <rdf:type rdf:resource="https://purl.org/location/Place"/>
+        <rdfs:label xml:lang="sjn">Beleriand</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Endor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Brandir -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Brandir">
+        <rdf:type rdf:resource="https://purl.org/meo/Atan"/>
+        <rdfs:label xml:lang="sjn">Brandir</rdfs:label>
+        <relations:loved rdf:resource="https://purl.org/narn/Níniel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Brethil -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Brethil">
+        <rdf:type rdf:resource="https://purl.org/location/Forest"/>
+        <rdfs:label xml:lang="sjn">Brethil</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Beleriand"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/DagnirGlaurunga -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/DagnirGlaurunga">
+        <rdf:type rdf:resource="https://purl.org/meo/Atan"/>
+        <sameAs rdf:resource="https://purl.org/narn/Turambar"/>
+        <sameAs rdf:resource="https://purl.org/narn/Túrin"/>
+        <rdfs:label xml:lang="en">Bane of Glaurung</rdfs:label>
+        <rdfs:label xml:lang="qya">Dagnir Glaurunga</rdfs:label>
+        <relations:killed rdf:resource="https://purl.org/narn/Glaurung"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Turambar -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Turambar"/>
+    
+
+
+    <!-- https://purl.org/narn/Túrin -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Túrin"/>
+    
+
+
+    <!-- https://purl.org/narn/Dor-lómin -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Dor-lómin">
+        <rdf:type rdf:resource="https://purl.org/location/Place"/>
+        <rdfs:label xml:lang="sjn">Dor-lómin</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Hithlum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Doriath -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Doriath">
+        <rdf:type rdf:resource="https://purl.org/location/Realm"/>
+        <rdfs:label xml:lang="sjn">Doriath</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Beleriand"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Endor -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Endor">
+        <rdf:type rdf:resource="https://purl.org/location/Place"/>
+        <rdfs:label xml:lang="qya">Endor</rdfs:label>
+        <rdfs:label xml:lang="en">Middle-earth</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Arda"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Finduilas -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Finduilas">
+        <rdf:type rdf:resource="https://purl.org/meo/Elda"/>
+        <rdfs:label xml:lang="sjn">Finduilas</rdfs:label>
+        <family:isADaughterOf rdf:resource="https://purl.org/narn/Orodreth"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Nargothrond"/>
+        <relations:loved rdf:resource="https://purl.org/narn/Agarwaen"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Gethron -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Gethron">
+        <rdf:type rdf:resource="https://purl.org/family/Male"/>
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label>Gethron</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Glaurung -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Glaurung">
+        <rdf:type rdf:resource="https://purl.org/narn/Lócë"/>
+        <rdfs:label xml:lang="sjn">Glaurung</rdfs:label>
+        <relations:served rdf:resource="https://purl.org/meo/morgoth"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Gondolin -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Gondolin">
+        <rdf:type rdf:resource="https://purl.org/location/City"/>
+        <rdfs:label xml:lang="sjn">Gondolin</rdfs:label>
+        <rdfs:label xml:lang="en">Hidden Rock</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Tumladen"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Gorthol -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Gorthol">
+        <rdf:type rdf:resource="https://purl.org/meo/Atan"/>
+        <sameAs rdf:resource="https://purl.org/narn/Neithan"/>
+        <rdfs:label xml:lang="sjn">Gorthol</rdfs:label>
+        <rdfs:label xml:lang="en">The Dread Helm</rdfs:label>
+        <relations:killed rdf:resource="https://purl.org/narn/Beleg"/>
+        <relations:livedin rdf:resource="https://purl.org/narn/AmonRûdh"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Neithan -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Neithan"/>
+    
+
+
+    <!-- https://purl.org/narn/Grithnir -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Grithnir">
+        <rdf:type rdf:resource="https://purl.org/family/Male"/>
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label>Grithnir</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Hithlum -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Hithlum">
+        <rdf:type rdf:resource="https://purl.org/location/Place"/>
+        <rdfs:label xml:lang="sjn">Hithlum</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Beleriand"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Huor -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Huor">
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label xml:lang="sjn">Huor</rdfs:label>
+        <family:isMarriedTo rdf:resource="https://purl.org/narn/Rían"/>
+        <family:isTheFatherOf rdf:resource="https://purl.org/narn/Tuor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Húrin -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Húrin">
+        <rdf:type rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label xml:lang="sjn">Húrin</rdfs:label>
+        <skos:altLabel xml:lang="sjn">Húrin Thalion</skos:altLabel>
+        <family:isABrotherOf rdf:resource="https://purl.org/narn/Huor"/>
+        <family:isMarriedTo rdf:resource="https://purl.org/narn/Morwen"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Angband"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Dor-lómin"/>
+        <relations:loved rdf:resource="https://purl.org/narn/Morwen"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Labadal -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Labadal">
+        <rdf:type rdf:resource="https://purl.org/family/Male"/>
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <sameAs rdf:resource="https://purl.org/narn/Sador"/>
+        <rdfs:label xml:lang="sjn">Labadal</rdfs:label>
+        <skos:altLabel xml:lang="en">Hopafoot</skos:altLabel>
+        <relations:hasFriend rdf:resource="https://purl.org/narn/Túrin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Sador -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Sador"/>
+    
+
+
+    <!-- https://purl.org/narn/Lalaith -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Lalaith">
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label xml:lang="sjn">Urwen</rdfs:label>
+        <skos:altLabel xml:lang="sjn">Lalaith</skos:altLabel>
+        <skos:altLabel xml:lang="en">Laughter</skos:altLabel>
+        <family:isADaughterOf rdf:resource="https://purl.org/narn/Húrin"/>
+        <family:isADaughterOf rdf:resource="https://purl.org/narn/Morwen"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Dor-lómin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Menegroth -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Menegroth">
+        <rdf:type rdf:resource="https://purl.org/location/City"/>
+        <rdfs:label xml:lang="sjn">Menegroth</rdfs:label>
+        <rdfs:label xml:lang="en">The Thousand Caves</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Doriath"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Mormegil -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Mormegil">
+        <rdf:type rdf:resource="https://purl.org/meo/Atan"/>
+        <sameAs rdf:resource="https://purl.org/narn/Turambar"/>
+        <rdfs:label xml:lang="en">Black Sword</rdfs:label>
+        <rdfs:label xml:lang="sjn">Mormegil</rdfs:label>
+        <relations:served rdf:resource="https://purl.org/narn/Orodreth"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Turambar -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Turambar"/>
+    
+
+
+    <!-- https://purl.org/narn/Morwen -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Morwen">
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label xml:lang="sjn">Morwen</rdfs:label>
+        <skos:altLabel xml:lang="sjn">Eledhwen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Elven-fair</skos:altLabel>
+        <family:isMarriedTo rdf:resource="https://purl.org/narn/Húrin"/>
+        <family:isSisterOf rdf:resource="https://purl.org/narn/Rían"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Dor-lómin"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Doriath"/>
+        <relations:loved rdf:resource="https://purl.org/narn/Húrin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Nargothrond -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Nargothrond">
+        <rdf:type rdf:resource="https://purl.org/location/City"/>
+        <rdfs:label xml:lang="sjn">Nargothrond</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Beleriand"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Neithan -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Neithan">
+        <rdf:type rdf:resource="https://purl.org/meo/Atan"/>
+        <rdfs:label xml:lang="sjn">Neithan</rdfs:label>
+        <rdfs:label xml:lang="en">The Wronged</rdfs:label>
+        <relations:killed rdf:resource="https://purl.org/narn/Forweg"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Nellas -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Nellas">
+        <rdf:type rdf:resource="https://purl.org/family/Female"/>
+        <rdf:type rdf:resource="https://purl.org/meo/Elda"/>
+        <rdfs:label xml:lang="sjn">Nellas</rdfs:label>
+        <relations:loved rdf:resource="https://purl.org/narn/Túrin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Nienor -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Nienor">
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <sameAs rdf:resource="https://purl.org/narn/Níniel"/>
+        <rdfs:label xml:lang="sjn">Nienor</rdfs:label>
+        <family:isADaughterOf rdf:resource="https://purl.org/narn/Húrin"/>
+        <family:isADaughterOf rdf:resource="https://purl.org/narn/Morwen"/>
+        <family:isASisterOf rdf:resource="https://purl.org/narn/Túrin"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Dor-lómin"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Doriath"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Níniel -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Níniel"/>
+    
+
+
+    <!-- https://purl.org/narn/NienorBirth -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/NienorBirth">
+        <rdf:type rdf:resource="https://purl.org/event/Birth"/>
+        <rdfs:label xml:lang="en">Nienor’s birth</rdfs:label>
+        <event:begets rdf:resource="https://purl.org/narn/Nienor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/NirnaethArnoeadiad -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/NirnaethArnoeadiad">
+        <rdf:type rdf:resource="https://purl.org/event/Battle"/>
+        <rdfs:label xml:lang="sjn">Nirnaeth Arnoediad</rdfs:label>
+        <rdfs:label xml:lang="en">Unnembered Tears</rdfs:label>
+        <event:precedes rdf:resource="https://purl.org/narn/NienorBirth"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Níniel -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Níniel">
+        <rdf:type rdf:resource="https://purl.org/meo/Atan"/>
+        <rdfs:label xml:lang="sjn">Níniel</rdfs:label>
+        <rdfs:label xml:lang="en">Tear-maiden</rdfs:label>
+        <relations:killed rdf:resource="https://purl.org/narn/Nienor"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Brethil"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Orodreth -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Orodreth">
+        <rdf:type rdf:resource="https://purl.org/meo/Elda"/>
+        <rdfs:label xml:lang="sjn">Orodreth</rdfs:label>
+        <relations:wasTheKingOf rdf:resource="https://purl.org/narn/Nargothrond"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Rían -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Rían">
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label xml:lang="sjn">Huor</rdfs:label>
+        <family:isMarriedTo rdf:resource="https://purl.org/narn/Huor"/>
+        <family:isTheMotherOf rdf:resource="https://purl.org/narn/Tuor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Sador -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Sador">
+        <rdf:type rdf:resource="https://purl.org/family/Male"/>
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label xml:lang="sjn">Sador</rdfs:label>
+        <skos:altLabel xml:lang="en">Loyal</skos:altLabel>
+        <relations:served rdf:resource="https://purl.org/narn/Húrin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Saeros -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Saeros">
+        <rdf:type rdf:resource="https://purl.org/family/Male"/>
+        <rdf:type rdf:resource="https://purl.org/meo/Elda"/>
+        <rdfs:label xml:lang="sjn">Saeros</rdfs:label>
+        <relations:hated rdf:resource="https://purl.org/narn/Túrin"/>
+        <relations:served rdf:resource="https://purl.org/narn/Thingol"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Thingol -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Thingol">
+        <rdf:type rdf:resource="https://purl.org/meo/Elda"/>
+        <rdfs:label xml:lang="en">Grey-cloak</rdfs:label>
+        <rdfs:label xml:lang="sjn">Thingol</rdfs:label>
+        <skos:altLabel xml:lang="sjn">Elu Thingol</skos:altLabel>
+        <skos:altLabel xml:lang="qya">Elwë</skos:altLabel>
+        <skos:altLabel xml:lang="qya">Elwë Singollo</skos:altLabel>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Menegroth"/>
+        <relations:wasTheKingOf rdf:resource="https://purl.org/narn/Doriath"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Thurin -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Thurin">
+        <rdf:type rdf:resource="https://purl.org/meo/Atan"/>
+        <rdfs:label xml:lang="en">Secret</rdfs:label>
+        <rdfs:label xml:lang="sjn">Thurin</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Tumladen -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Tumladen">
+        <rdf:type rdf:resource="https://purl.org/location/Valley"/>
+        <rdfs:label xml:lang="sjn">Tumladen</rdfs:label>
+        <location:isAPartOf rdf:resource="https://purl.org/narn/Beleriand"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Tuor -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Tuor">
+        <rdf:type rdf:resource="https://purl.org/family/Male"/>
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label xml:lang="sjn">Tuor</rdfs:label>
+        <family:isMarriedTo>
+            <rdf:Description>
+                <rdfs:label xml:lang="sjn">Idril Celebrindal</rdfs:label>
+            </rdf:Description>
+        </family:isMarriedTo>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Gondolin"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Turambar -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Turambar">
+        <rdf:type rdf:resource="https://purl.org/meo/Atan"/>
+        <rdfs:label xml:lang="en">Master of Doom</rdfs:label>
+        <rdfs:label xml:lang="qya">Turambar</rdfs:label>
+        <relations:isMarriedTo rdf:resource="https://purl.org/narn/Níniel"/>
+        <relations:killed rdf:resource="https://purl.org/narn/Brandir"/>
+        <relations:killed rdf:resource="https://purl.org/narn/Turambar"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Brethil"/>
+        <relations:loved rdf:resource="https://purl.org/narn/Níniel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/Túrin -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/Túrin">
+        <rdf:type rdf:resource="https://purl.org/meo/Adan"/>
+        <rdfs:label xml:lang="en">Túrin</rdfs:label>
+        <family:isASonOf rdf:resource="https://purl.org/narn/Húrin"/>
+        <family:isASonOf rdf:resource="https://purl.org/narn/Morwen"/>
+        <relations:hasFriend rdf:resource="https://purl.org/narn/Labadal"/>
+        <relations:killed rdf:resource="https://purl.org/narn/Saeros"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Dor-lómin"/>
+        <relations:livedIn rdf:resource="https://purl.org/narn/Doriath"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/TúrinBirth -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/TúrinBirth">
+        <rdf:type rdf:resource="https://purl.org/event/Birth"/>
+        <rdfs:label xml:lang="en">Túrin’s birth</rdfs:label>
+        <event:begets rdf:resource="https://purl.org/narn/Túrin"/>
+        <event:precedes rdf:resource="https://purl.org/narn/UrwenBirth"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purl.org/narn/TúrinGoesToDoriath -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/TúrinGoesToDoriath">
+        <rdf:type rdf:resource="https://purl.org/event/Travel"/>
+        <rdfs:label xml:lang="en">Túrin travels from Dor-lómin to Doriath</rdfs:label>
+        <event:hasTraveller rdf:resource="https://purl.org/narn/Gethron"/>
+        <event:hasTraveller rdf:resource="https://purl.org/narn/Grithnir"/>
+        <event:hasTraveller rdf:resource="https://purl.org/narn/Túrin"/>
+        <event:starts rdf:nodeID="genid3"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="https://purl.org/event/Instant"/>
+        <event:before rdf:resource="https://purl.org/narn/NienorBirth"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://purl.org/narn/UrwenBirth -->
+
+
+    <NamedIndividual rdf:about="https://purl.org/narn/UrwenBirth">
+        <rdf:type rdf:resource="https://purl.org/event/Birth"/>
+        <rdfs:label xml:lang="en">Urwen’s birth</rdfs:label>
+        <event:begets rdf:resource="https://purl.org/narn/Lalaith"/>
+        <event:precedes rdf:resource="https://purl.org/narn/NirnaethArnoeadiad"/>
+    </NamedIndividual>
+    <rdf:Description>
+        <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</qualifiedCardinality>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,568 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/narn/location/"
+     xml:base="https://w3id.org/narn/location/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="https://purl.org/vocab/vann/"
+     xmlns:terms="https://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/narn/location/">
+        <rdfs:comment xml:lang="en">An ontology for defining types of places and spatial relationships.</rdfs:comment>
+        <rdfs:label xml:lang="en">Place and Location Ontology</rdfs:label>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-11</terms:created>
+        <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <vann:preferredNamespacePrefix>loc</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/narn/location/</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/location/borders -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/location/borders">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/hasSpatialRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Two places share a boundary but neither contains the other.</rdfs:comment>
+        <rdfs:label xml:lang="en">borders</rdfs:label>
+        <skos:altLabel xml:lang="en">adjacent to</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/location/contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/location/contains">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/hasSpatialRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/location/isAPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:comment xml:lang="en">Inverse of isAPartOf.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+        <skos:altLabel xml:lang="en">includes</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/location/hasSpatialRelation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/location/hasSpatialRelation">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:comment xml:lang="en">A general spatial relation between two places.</rdfs:comment>
+        <rdfs:label xml:lang="en">has spatial relation</rdfs:label>
+        <skos:altLabel xml:lang="en">spatially related to</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/location/isAPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/location/isAPartOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/hasSpatialRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:comment xml:lang="en">Indicates that a place constitutes a subarea of another place.</rdfs:comment>
+        <rdfs:label xml:lang="en">is a part of</rdfs:label>
+        <skos:altLabel xml:lang="en">part of</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/location/isNear -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/location/isNear">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/hasSpatialRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Two places are in proximity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is near</rdfs:label>
+        <skos:altLabel xml:lang="en">close to</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/location/isStrictlyInsideOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/location/isStrictlyInsideOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/isAPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Stricter form of isAPartOf where boundaries do not touch.</rdfs:comment>
+        <rdfs:label xml:lang="en">is strictly inside of</rdfs:label>
+        <skos:altLabel xml:lang="en">strictly within</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/location/isTheCapitalOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/location/isTheCapitalOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/location/Settlement"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/location/Realm"/>
+        <rdfs:comment xml:lang="en">A settlement is the capital of a realm.</rdfs:comment>
+        <rdfs:label xml:lang="en">is the capital of</rdfs:label>
+        <skos:altLabel xml:lang="en">capital of</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/location/Building -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Building">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Place"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <rdfs:comment xml:lang="en">A constructed structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">building</rdfs:label>
+        <skos:altLabel xml:lang="en">structure</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/City -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/City">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Settlement"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/location/Village"/>
+        <rdfs:comment xml:lang="en">A large and significant settlement.</rdfs:comment>
+        <rdfs:label xml:lang="en">city</rdfs:label>
+        <skos:altLabel xml:lang="en">urban area</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Continent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Continent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/LandArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/location/isAPartOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="https://w3id.org/narn/location/LandArea"/>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/narn/location/isTheCapitalOf"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/narn/location/Settlement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A major landmass.</rdfs:comment>
+        <rdfs:label xml:lang="en">continent</rdfs:label>
+        <skos:altLabel xml:lang="en">landmass</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Desert -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Desert">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/location/Forest"/>
+        <rdfs:comment xml:lang="en">A barren, arid area with little vegetation.</rdfs:comment>
+        <rdfs:label xml:lang="en">desert</rdfs:label>
+        <skos:altLabel xml:lang="en">wasteland</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Forest -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Forest">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/WoodedArea"/>
+        <rdfs:comment xml:lang="en">A large, dense wooded area.</rdfs:comment>
+        <rdfs:label xml:lang="en">forest</rdfs:label>
+        <skos:altLabel xml:lang="en">wood</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Fortress -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Fortress">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Settlement"/>
+        <rdfs:comment xml:lang="en">A fortified place, typically a military stronghold.</rdfs:comment>
+        <rdfs:label xml:lang="en">fortress</rdfs:label>
+        <skos:altLabel xml:lang="en">stronghold</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Hill -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Hill">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <rdfs:comment xml:lang="en">A naturally raised area of land, smaller than a mountain.</rdfs:comment>
+        <rdfs:label xml:lang="en">hill</rdfs:label>
+        <skos:altLabel xml:lang="en">hillock</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Lake -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Lake">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <rdfs:comment xml:lang="en">A large body of water surrounded by land.</rdfs:comment>
+        <rdfs:label xml:lang="en">lake</rdfs:label>
+        <skos:altLabel xml:lang="en">body of water</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/LandArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/LandArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:comment xml:lang="en">A place that is primarily defined by its land territory.</rdfs:comment>
+        <rdfs:label xml:lang="en">land area</rdfs:label>
+        <skos:altLabel xml:lang="en">land</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Mountain -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Mountain">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/location/River"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/location/Sea"/>
+        <rdfs:comment xml:lang="en">A large natural elevation of the earth&apos;s surface.</rdfs:comment>
+        <rdfs:label xml:lang="en">mountain</rdfs:label>
+        <skos:altLabel xml:lang="en">peak</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/NaturalArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/NaturalArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Place"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/location/Settlement"/>
+        <rdfs:comment xml:lang="en">A place defined by natural geographic features rather than habitation.</rdfs:comment>
+        <rdfs:label xml:lang="en">natural area</rdfs:label>
+        <skos:altLabel xml:lang="en">natural feature</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Place -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Place">
+        <rdfs:comment xml:lang="en">A named location that has geographic or spatial significance in a story.</rdfs:comment>
+        <rdfs:label xml:lang="en">place</rdfs:label>
+        <skos:altLabel xml:lang="en">location</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Realm -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Realm">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/location/LandArea"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="https://w3id.org/narn/location/isTheCapitalOf"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Settlement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/LandArea"/>
+        <rdfs:comment xml:lang="en">A territory under the rule of a king or sovereign authority.</rdfs:comment>
+        <rdfs:label xml:lang="en">realm</rdfs:label>
+        <skos:altLabel xml:lang="en">kingdom</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Region -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Region">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:comment xml:lang="en">A large geographic area, typically contains multiple subplaces.</rdfs:comment>
+        <rdfs:label xml:lang="en">region</rdfs:label>
+        <skos:altLabel xml:lang="en">area</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/River -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/River">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <rdfs:comment xml:lang="en">A large natural stream of water.</rdfs:comment>
+        <rdfs:label xml:lang="en">river</rdfs:label>
+        <skos:altLabel xml:lang="en">waterway</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Sea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Sea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <rdfs:comment xml:lang="en">A large body of salt water.</rdfs:comment>
+        <rdfs:label xml:lang="en">sea</rdfs:label>
+        <skos:altLabel xml:lang="en">ocean</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Settlement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Settlement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/location/isAPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A place where people live permanently.</rdfs:comment>
+        <rdfs:label xml:lang="en">settlement</rdfs:label>
+        <skos:altLabel xml:lang="en">inhabited place</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Town -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Town">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Settlement"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/location/Village"/>
+        <rdfs:comment xml:lang="en">A settlement larger than a village but smaller than a city.</rdfs:comment>
+        <rdfs:label xml:lang="en">town</rdfs:label>
+        <skos:altLabel xml:lang="en">township</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/UndergroundCity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/UndergroundCity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/location/City"/>
+                    <rdf:Description rdf:about="https://w3id.org/narn/location/UndergroundPlace"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A city built underground, within caves or excavated halls.</rdfs:comment>
+        <rdfs:label xml:lang="en">underground city</rdfs:label>
+        <skos:altLabel xml:lang="en">subterranean city</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/UndergroundPlace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/UndergroundPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:comment xml:lang="en">A place located beneath the surface of the earth.</rdfs:comment>
+        <rdfs:label xml:lang="en">underground place</rdfs:label>
+        <skos:altLabel xml:lang="en">subterranean place</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Valley -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Valley">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <rdfs:comment xml:lang="en">A low area of land between hills or mountains.</rdfs:comment>
+        <rdfs:label xml:lang="en">valley</rdfs:label>
+        <skos:altLabel xml:lang="en">vale</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Village -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Village">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/Settlement"/>
+        <rdfs:comment xml:lang="en">A small settlement, typically in a rural area.</rdfs:comment>
+        <rdfs:label xml:lang="en">village</rdfs:label>
+        <skos:altLabel xml:lang="en">hamlet</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/WildArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/WildArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <rdfs:comment xml:lang="en">An uncultivated, uninhabited region.</rdfs:comment>
+        <rdfs:label xml:lang="en">wild area</rdfs:label>
+        <skos:altLabel xml:lang="en">wilderness</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/WoodedArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/WoodedArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/location/NaturalArea"/>
+        <rdfs:comment xml:lang="en">A land area predominantly covered by trees.</rdfs:comment>
+        <rdfs:label xml:lang="en">wooded area</rdfs:label>
+        <skos:altLabel xml:lang="en">woodland</skos:altLabel>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,442 @@
+<https://w3id.org/narn/action/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/narn/action/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/event/> .
+<https://w3id.org/narn/action/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/location/> .
+<https://w3id.org/narn/action/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing actions in story plot"@en .
+<https://w3id.org/narn/action/> <http://www.w3.org/2000/01/rdf-schema#label> "Actions Ontology"@en .
+<https://w3id.org/narn/action/> <https://purl.org/dc/terms/created> "2026-03-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/action/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .
+<https://w3id.org/narn/action/> <https://purl.org/dc/terms/modified> "2026-03-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/action/> <https://purl.org/vocab/vann/preferredNamespacePrefix> "act" .
+<https://w3id.org/narn/action/> <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/action/" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/vocab/vann/preferredNamespacePrefix
+<https://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/vocab/vann/preferredNamespaceUri
+<https://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/narn/action/causesByAction
+<https://w3id.org/narn/action/causesByAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/causesByAction> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/action/hasResult> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/action/performedBy> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/action/causesByAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Inferred: if an agent performs an action with a result, the agent indirectly causes that result."@en .
+<https://w3id.org/narn/action/causesByAction> <http://www.w3.org/2000/01/rdf-schema#label> "causes by action"@en .
+<https://w3id.org/narn/action/causesByAction> <http://www.w3.org/2004/02/skos/core#altLabel> "brings about"@en .
+# 
+# https://w3id.org/narn/action/hasInstrument
+<https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/hasCause> .
+<https://w3id.org/narn/event/hasCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/action/hasTarget> .
+<https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/action/performedBy> .
+<https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2000/01/rdf-schema#comment> "An object used to perform the action (e.g. a sword)."@en .
+<https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2000/01/rdf-schema#label> "has instrument"@en .
+<https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2004/02/skos/core#altLabel> "using"@en .
+# 
+# https://w3id.org/narn/action/hasIntention
+<https://w3id.org/narn/action/hasIntention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/hasIntention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/narn/action/hasIntention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/action/hasIntention> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/hasIntention> <http://www.w3.org/2000/01/rdf-schema#comment> "The goal or purpose behind the action."@en .
+<https://w3id.org/narn/action/hasIntention> <http://www.w3.org/2000/01/rdf-schema#label> "has intention"@en .
+<https://w3id.org/narn/action/hasIntention> <http://www.w3.org/2004/02/skos/core#altLabel> "aims to"@en .
+# 
+# https://w3id.org/narn/action/hasRecipient
+<https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/hasParticipant> .
+<https://w3id.org/narn/event/hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/TransferAction> .
+<https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/action/performedBy> .
+<https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/2000/01/rdf-schema#comment> "The character who receives something in a transfer action."@en .
+<https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/2000/01/rdf-schema#label> "has recipient"@en .
+<https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/2004/02/skos/core#altLabel> "received by"@en .
+# 
+# https://w3id.org/narn/action/hasResult
+<https://w3id.org/narn/action/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/causes> .
+<https://w3id.org/narn/event/causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/event/Event> .
+<https://w3id.org/narn/event/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The event or state that results from the action."@en .
+<https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
+<https://w3id.org/narn/action/hasResult> <http://www.w3.org/2004/02/skos/core#altLabel> "results in"@en .
+# 
+# https://w3id.org/narn/action/hasTarget
+<https://w3id.org/narn/action/hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/hasTarget> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/hasPatient> .
+<https://w3id.org/narn/event/hasPatient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/action/hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/action/hasTarget> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/hasTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity that the action is directed towards."@en .
+<https://w3id.org/narn/action/hasTarget> <http://www.w3.org/2000/01/rdf-schema#label> "has target"@en .
+<https://w3id.org/narn/action/hasTarget> <http://www.w3.org/2004/02/skos/core#altLabel> "directed at"@en .
+# 
+# https://w3id.org/narn/action/performedBy
+<https://w3id.org/narn/action/performedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/performedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/hasAgent> .
+<https://w3id.org/narn/event/hasAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/action/performedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/performedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The agent who intentionally performs the action."@en .
+<https://w3id.org/narn/action/performedBy> <http://www.w3.org/2000/01/rdf-schema#label> "performed by"@en .
+<https://w3id.org/narn/action/performedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "done by"@en .
+# 
+# https://w3id.org/narn/event/causes
+# 
+# https://w3id.org/narn/event/creates
+<https://w3id.org/narn/event/creates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/narn/event/hasAgent
+# 
+# https://w3id.org/narn/event/hasCause
+# 
+# https://w3id.org/narn/event/hasParticipant
+# 
+# https://w3id.org/narn/event/hasPatient
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/narn/action/Action
+<https://w3id.org/narn/action/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/Event> .
+<https://w3id.org/narn/action/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/performedBy> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/Action> <http://www.w3.org/2000/01/rdf-schema#comment> "An intentional deed. Every action has at least one performer."@en .
+<https://w3id.org/narn/action/Action> <http://www.w3.org/2000/01/rdf-schema#label> "action"@en .
+<https://w3id.org/narn/action/Action> <http://www.w3.org/2004/02/skos/core#altLabel> "deed"@en .
+# 
+# https://w3id.org/narn/action/Attack
+<https://w3id.org/narn/action/Attack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Attack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/ViolentAction> .
+<https://w3id.org/narn/action/Attack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasTarget> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/Attack> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/action/Defend> .
+<https://w3id.org/narn/action/Attack> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggressive action aimed at harming a target."@en .
+<https://w3id.org/narn/action/Attack> <http://www.w3.org/2000/01/rdf-schema#label> "attack"@en .
+<https://w3id.org/narn/action/Attack> <http://www.w3.org/2004/02/skos/core#altLabel> "assault"@en .
+# 
+# https://w3id.org/narn/action/Build
+<https://w3id.org/narn/action/Build> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Build> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/location/Place> .
+<https://w3id.org/narn/location/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/creates> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/action/CreationAction> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/action/Build> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/CreationAction> .
+<https://w3id.org/narn/action/Build> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/action/Forge> .
+<https://w3id.org/narn/action/Build> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of constructing a structure or settlement."@en .
+<https://w3id.org/narn/action/Build> <http://www.w3.org/2000/01/rdf-schema#label> "build"@en .
+<https://w3id.org/narn/action/Build> <http://www.w3.org/2004/02/skos/core#altLabel> "construction"@en .
+# 
+# https://w3id.org/narn/action/Command
+<https://w3id.org/narn/action/Command> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Command> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/CommunicativeAction> .
+<https://w3id.org/narn/action/Command> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasTarget> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/Command> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of giving an authoritative order."@en .
+<https://w3id.org/narn/action/Command> <http://www.w3.org/2000/01/rdf-schema#label> "command"@en .
+<https://w3id.org/narn/action/Command> <http://www.w3.org/2004/02/skos/core#altLabel> "order"@en .
+# 
+# https://w3id.org/narn/action/CommunicativeAction
+<https://w3id.org/narn/action/CommunicativeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/CommunicativeAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/CommunicativeAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#complementOf> <https://w3id.org/narn/location/Place> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasTarget> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/CommunicativeAction> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/action/MovementAction> .
+<https://w3id.org/narn/action/CommunicativeAction> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/action/TransferAction> .
+<https://w3id.org/narn/action/CommunicativeAction> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/action/ViolentAction> .
+<https://w3id.org/narn/action/CommunicativeAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action involving communication between characters."@en .
+<https://w3id.org/narn/action/CommunicativeAction> <http://www.w3.org/2000/01/rdf-schema#label> "communicative action"@en .
+<https://w3id.org/narn/action/CommunicativeAction> <http://www.w3.org/2004/02/skos/core#altLabel> "speech act"@en .
+# 
+# https://w3id.org/narn/action/CreationAction
+<https://w3id.org/narn/action/CreationAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/CreationAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/CreationAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/creates> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/CreationAction> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/action/TransferAction> .
+<https://w3id.org/narn/action/CreationAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action that produces or transforms something."@en .
+<https://w3id.org/narn/action/CreationAction> <http://www.w3.org/2000/01/rdf-schema#label> "creation action"@en .
+<https://w3id.org/narn/action/CreationAction> <http://www.w3.org/2004/02/skos/core#altLabel> "making"@en .
+# 
+# https://w3id.org/narn/action/Deceive
+<https://w3id.org/narn/action/Deceive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Deceive> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid14 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/action/MisleadingIntention> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasIntention> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/action/CommunicativeAction> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/action/Deceive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/CommunicativeAction> .
+<https://w3id.org/narn/action/Deceive> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of intentionally misleading another character."@en .
+<https://w3id.org/narn/action/Deceive> <http://www.w3.org/2000/01/rdf-schema#label> "deceive"@en .
+<https://w3id.org/narn/action/Deceive> <http://www.w3.org/2004/02/skos/core#altLabel> "deception"@en .
+# 
+# https://w3id.org/narn/action/Defend
+<https://w3id.org/narn/action/Defend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Defend> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/ViolentAction> .
+<https://w3id.org/narn/action/Defend> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasTarget> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/Defend> <http://www.w3.org/2000/01/rdf-schema#comment> "An action of protecting oneself or others from attack."@en .
+<https://w3id.org/narn/action/Defend> <http://www.w3.org/2000/01/rdf-schema#label> "defend"@en .
+<https://w3id.org/narn/action/Defend> <http://www.w3.org/2004/02/skos/core#altLabel> "defence"@en .
+# 
+# https://w3id.org/narn/action/Escape
+<https://w3id.org/narn/action/Escape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Escape> <http://www.w3.org/2000/01/rdf-schema#comment> "The intention of getting away from danger."@en .
+<https://w3id.org/narn/action/Escape> <http://www.w3.org/2000/01/rdf-schema#label> "escape"@en .
+<https://w3id.org/narn/action/Escape> <http://www.w3.org/2004/02/skos/core#altLabel> "evasion"@en .
+# 
+# https://w3id.org/narn/action/Flee
+<https://w3id.org/narn/action/Flee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Flee> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/action/Escape> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasIntention> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/action/MovementAction> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/action/Flee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/MovementAction> .
+<https://w3id.org/narn/action/Flee> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of running away from danger or pursuit."@en .
+<https://w3id.org/narn/action/Flee> <http://www.w3.org/2000/01/rdf-schema#label> "flee"@en .
+<https://w3id.org/narn/action/Flee> <http://www.w3.org/2004/02/skos/core#altLabel> "flight"@en .
+# 
+# https://w3id.org/narn/action/Forge
+<https://w3id.org/narn/action/Forge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Forge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/CreationAction> .
+<https://w3id.org/narn/action/Forge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/creates> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/Forge> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of creating or reshaping an object, especially a weapon."@en .
+<https://w3id.org/narn/action/Forge> <http://www.w3.org/2000/01/rdf-schema#label> "forge"@en .
+<https://w3id.org/narn/action/Forge> <http://www.w3.org/2004/02/skos/core#altLabel> "smithing"@en .
+# 
+# https://w3id.org/narn/action/Give
+<https://w3id.org/narn/action/Give> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Give> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/TransferAction> .
+<https://w3id.org/narn/action/Give> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasRecipient> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/Give> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasInstrument> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/Give> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/action/Take> .
+<https://w3id.org/narn/action/Give> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of voluntarily transferring something to another."@en .
+<https://w3id.org/narn/action/Give> <http://www.w3.org/2000/01/rdf-schema#label> "give"@en .
+<https://w3id.org/narn/action/Give> <http://www.w3.org/2004/02/skos/core#altLabel> "bestowal"@en .
+# 
+# https://w3id.org/narn/action/GoTo
+<https://w3id.org/narn/action/GoTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/GoTo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/MovementAction> .
+<https://w3id.org/narn/action/GoTo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/narn/location/Place> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasTarget> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/GoTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of deliberately travelling to a destination."@en .
+<https://w3id.org/narn/action/GoTo> <http://www.w3.org/2000/01/rdf-schema#label> "go to"@en .
+<https://w3id.org/narn/action/GoTo> <http://www.w3.org/2004/02/skos/core#altLabel> "travel to"@en .
+# 
+# https://w3id.org/narn/action/Kill
+<https://w3id.org/narn/action/Kill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Kill> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid27 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasTarget> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/event/Death> .
+<https://w3id.org/narn/event/Death> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasResult> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/action/ViolentAction> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/action/Kill> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/ViolentAction> .
+<https://w3id.org/narn/action/Kill> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/narn/event/Death> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasResult> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/Kill> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of causing the death of another."@en .
+<https://w3id.org/narn/action/Kill> <http://www.w3.org/2000/01/rdf-schema#label> "kill"@en .
+<https://w3id.org/narn/action/Kill> <http://www.w3.org/2004/02/skos/core#altLabel> "slaying"@en .
+# 
+# https://w3id.org/narn/action/MisleadingIntention
+<https://w3id.org/narn/action/MisleadingIntention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/MisleadingIntention> <http://www.w3.org/2000/01/rdf-schema#comment> "The intention of making another believe something false."@en .
+<https://w3id.org/narn/action/MisleadingIntention> <http://www.w3.org/2000/01/rdf-schema#label> "misleading intention"@en .
+<https://w3id.org/narn/action/MisleadingIntention> <http://www.w3.org/2004/02/skos/core#altLabel> "intent to deceive"@en .
+# 
+# https://w3id.org/narn/action/MovementAction
+<https://w3id.org/narn/action/MovementAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/MovementEvent> .
+<https://w3id.org/narn/event/MovementEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/action/ViolentAction> .
+<https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action involving deliberate physical movement."@en .
+<https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2000/01/rdf-schema#label> "movement action"@en .
+<https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2004/02/skos/core#altLabel> "locomotion"@en .
+# 
+# https://w3id.org/narn/action/Reveal
+<https://w3id.org/narn/action/Reveal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Reveal> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid34 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/event/Discovery> .
+<https://w3id.org/narn/event/Discovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasResult> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/action/CommunicativeAction> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/action/Reveal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/CommunicativeAction> .
+<https://w3id.org/narn/action/Reveal> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of disclosing previously hidden information."@en .
+<https://w3id.org/narn/action/Reveal> <http://www.w3.org/2000/01/rdf-schema#label> "reveal"@en .
+<https://w3id.org/narn/action/Reveal> <http://www.w3.org/2004/02/skos/core#altLabel> "disclosure"@en .
+# 
+# https://w3id.org/narn/action/Speak
+<https://w3id.org/narn/action/Speak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Speak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/CommunicativeAction> .
+<https://w3id.org/narn/action/Speak> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of verbal communication."@en .
+<https://w3id.org/narn/action/Speak> <http://www.w3.org/2000/01/rdf-schema#label> "speak"@en .
+<https://w3id.org/narn/action/Speak> <http://www.w3.org/2004/02/skos/core#altLabel> "utterance"@en .
+# 
+# https://w3id.org/narn/action/Take
+<https://w3id.org/narn/action/Take> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/Take> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/TransferAction> .
+<https://w3id.org/narn/action/Take> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasTarget> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/action/Take> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of acquiring something, possibly by force."@en .
+<https://w3id.org/narn/action/Take> <http://www.w3.org/2000/01/rdf-schema#label> "take"@en .
+<https://w3id.org/narn/action/Take> <http://www.w3.org/2004/02/skos/core#altLabel> "seizure"@en .
+# 
+# https://w3id.org/narn/action/TransferAction
+<https://w3id.org/narn/action/TransferAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/TransferAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/TransferAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action involving the transfer of possession."@en .
+<https://w3id.org/narn/action/TransferAction> <http://www.w3.org/2000/01/rdf-schema#label> "transfer action"@en .
+<https://w3id.org/narn/action/TransferAction> <http://www.w3.org/2004/02/skos/core#altLabel> "transfer"@en .
+# 
+# https://w3id.org/narn/action/ViolentAction
+<https://w3id.org/narn/action/ViolentAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/action/ViolentAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/Action> .
+<https://w3id.org/narn/action/ViolentAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action involving physical violence or force."@en .
+<https://w3id.org/narn/action/ViolentAction> <http://www.w3.org/2000/01/rdf-schema#label> "violent action"@en .
+<https://w3id.org/narn/action/ViolentAction> <http://www.w3.org/2004/02/skos/core#altLabel> "violent deed"@en .
+# 
+# https://w3id.org/narn/event/Death
+# 
+# https://w3id.org/narn/event/Discovery
+# 
+# https://w3id.org/narn/event/Event
+# 
+# https://w3id.org/narn/event/MovementEvent
+# 
+# https://w3id.org/narn/location/Place
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

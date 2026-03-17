@@ -1,0 +1,874 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/narn/event/"
+     xml:base="https://w3id.org/narn/event/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="https://purl.org/vocab/vann/"
+     xmlns:terms="https://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/narn/event/">
+        <owl:imports rdf:resource="https://w3id.org/narn/location/"/>
+        <owl:imports rdf:resource="https://w3id.org/narn/to/"/>
+        <rdfs:comment xml:lang="en">An ontology for describing events in story plots.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event Ontology</rdfs:label>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-15</terms:created>
+        <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <vann:preferredNamespacePrefix>evnt</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/narn/event/</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/event/begets -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/begets">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/event/hasParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Birth"/>
+        <rdfs:comment xml:lang="en">The character brought into existence by a birth event.</rdfs:comment>
+        <rdfs:label xml:lang="en">begets</rdfs:label>
+        <skos:altLabel xml:lang="en">brings forth</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/causes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/causes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/event/precedes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">This event causally leads to another event.</rdfs:comment>
+        <rdfs:label xml:lang="en">causes</rdfs:label>
+        <skos:altLabel xml:lang="en">leads to</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/creates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/creates">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">An entity produced or created by the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">creates</rdfs:label>
+        <skos:altLabel xml:lang="en">results in</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasAgent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/event/hasParticipant"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/event/hasWitness"/>
+        <rdfs:comment xml:lang="en">The entity that intentionally causes or performs the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has agent</rdfs:label>
+        <skos:altLabel xml:lang="en">done by</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasCause -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasCause">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">An entity involved as a contributing cause in the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has cause</rdfs:label>
+        <skos:altLabel xml:lang="en">caused by</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasDestination -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasDestination">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/event/occursAt"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/event/hasOrigin"/>
+        <rdfs:comment xml:lang="en">The ending place of a movement event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has destination</rdfs:label>
+        <skos:altLabel xml:lang="en">arrives at</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasOrigin -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasOrigin">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/event/occursAt"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:comment xml:lang="en">The starting place of a movement event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has origin</rdfs:label>
+        <skos:altLabel xml:lang="en">departs from</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasParticipant">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">An entity that takes part in the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+        <skos:altLabel xml:lang="en">involves</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasPatient -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasPatient">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/event/hasParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">The entity affected by the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has patient</rdfs:label>
+        <skos:altLabel xml:lang="en">affects</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasSubEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasSubEvent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">A smaller event that occurs as part of this one.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sub-event</rdfs:label>
+        <skos:altLabel xml:lang="en">contains event</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasTraveller -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasTraveller">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/event/hasParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Travel"/>
+        <rdfs:comment xml:lang="en">The character who undertakes the travel.</rdfs:comment>
+        <rdfs:label xml:lang="en">has traveller</rdfs:label>
+        <skos:altLabel xml:lang="en">travelled by</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasVictim -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasVictim">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/event/hasPatient"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">The entity that suffers harm in the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has victim</rdfs:label>
+        <skos:altLabel xml:lang="en">harms</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasWitness -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasWitness">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/event/hasParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">An entity that observes the event without acting.</rdfs:comment>
+        <rdfs:label xml:lang="en">has witness</rdfs:label>
+        <skos:altLabel xml:lang="en">observed by</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/isBegottenIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/isBegottenIn">
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/event/begets"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/event/Birth"/>
+        <rdfs:comment xml:lang="en">Inverse of begets. Links a character to the birth event that brings them into existence.</rdfs:comment>
+        <rdfs:label xml:lang="en">is begotten in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/isCausedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/isCausedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/event/causes"/>
+        <rdfs:comment xml:lang="en">Inverse of causes. This event results from another.</rdfs:comment>
+        <rdfs:label xml:lang="en">is caused by</rdfs:label>
+        <skos:altLabel xml:lang="en">results from</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/isSubEventOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/isSubEventOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/during"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/event/hasSubEvent"/>
+        <rdfs:comment xml:lang="en">This event is part of a larger event.</rdfs:comment>
+        <rdfs:label xml:lang="en">is sub-event of</rdfs:label>
+        <skos:altLabel xml:lang="en">part of event</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/occursAt -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/occursAt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:comment xml:lang="en">The place where the event occurs.</rdfs:comment>
+        <rdfs:label xml:lang="en">occurs at</rdfs:label>
+        <skos:altLabel xml:lang="en">takes place at</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/precedes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/precedes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/precedes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">This event occurs before another event.</rdfs:comment>
+        <rdfs:label xml:lang="en">precedes</rdfs:label>
+        <skos:altLabel xml:lang="en">comes before</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/during -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/during"/>
+    
+
+
+    <!-- https://w3id.org/narn/to/precedes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/precedes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/event/Battle -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Battle">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/ConflictEvent"/>
+        <rdfs:comment xml:lang="en">A large scale violent confrontation.</rdfs:comment>
+        <rdfs:label xml:lang="en">battle</rdfs:label>
+        <skos:altLabel xml:lang="en">armed conflict</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Betrayal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Betrayal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Meeting"/>
+        <rdfs:comment xml:lang="en">An act of disloyalty or treachery.</rdfs:comment>
+        <rdfs:label xml:lang="en">betrayal</rdfs:label>
+        <skos:altLabel xml:lang="en">treachery</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Birth -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Birth">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/LifeEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/begets"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/occursAt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Death"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Marriage"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Murder"/>
+        <rdfs:comment xml:lang="en">A character being born. Every birth begets at least one character.</rdfs:comment>
+        <rdfs:label xml:lang="en">birth</rdfs:label>
+        <skos:altLabel xml:lang="en">nativity</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Captivity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Captivity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">A character is held prisoner.</rdfs:comment>
+        <rdfs:label xml:lang="en">captivity</rdfs:label>
+        <skos:altLabel xml:lang="en">imprisonment</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/ConflictEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/ConflictEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
+        <rdfs:comment xml:lang="en">An event involving antagonism or violence.</rdfs:comment>
+        <rdfs:label xml:lang="en">conflict event</rdfs:label>
+        <skos:altLabel xml:lang="en">clash</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Coronation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Coronation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasAgent"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A ceremony of crowning a ruler.</rdfs:comment>
+        <rdfs:label xml:lang="en">coronation</rdfs:label>
+        <skos:altLabel xml:lang="en">crowning ceremony</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Council -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Council">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
+        <rdfs:comment xml:lang="en">A formal meeting for deliberation or the reach of a consensus.</rdfs:comment>
+        <rdfs:label xml:lang="en">council</rdfs:label>
+        <skos:altLabel xml:lang="en">deliberation</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Curse -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Curse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Prophecy"/>
+        <rdfs:comment xml:lang="en">A supernatural imprecation bringing misfortune.</rdfs:comment>
+        <rdfs:label xml:lang="en">curse</rdfs:label>
+        <skos:altLabel xml:lang="en">malediction</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Death -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Death">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/LifeEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasVictim"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A character dying. Every death has at least one victim.</rdfs:comment>
+        <rdfs:label xml:lang="en">death</rdfs:label>
+        <skos:altLabel xml:lang="en">demise</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Discovery -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Discovery">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">An event where something hidden is found or revealed.</rdfs:comment>
+        <rdfs:label xml:lang="en">discovery</rdfs:label>
+        <skos:altLabel xml:lang="en">revelation</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Duel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Duel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/ConflictEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasParticipant"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A fight between exactly two combatants.</rdfs:comment>
+        <rdfs:label xml:lang="en">duel</rdfs:label>
+        <skos:altLabel xml:lang="en">single combat</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Enchantment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Enchantment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">A magical spell or charm placed on a character.</rdfs:comment>
+        <rdfs:label xml:lang="en">enchantment</rdfs:label>
+        <skos:altLabel xml:lang="en">spell</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Event -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Event">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/FiniteInterval"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/occursAt"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A spatio-temporal occurrence involving participants at places.
+        Every event is a finite temporal interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">event</rdfs:label>
+        <skos:altLabel xml:lang="en">occurrence</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Exile -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Exile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
+        <rdfs:comment xml:lang="en">Forced departure from homeland.</rdfs:comment>
+        <rdfs:label xml:lang="en">exile</rdfs:label>
+        <skos:altLabel xml:lang="en">banishment</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Feast -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Feast">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
+        <rdfs:comment xml:lang="en">A large celebratory meal or banquet.</rdfs:comment>
+        <rdfs:label xml:lang="en">feast</rdfs:label>
+        <skos:altLabel xml:lang="en">banquet</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Flight -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Flight">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
+        <rdfs:comment xml:lang="en">Characters flee from danger.</rdfs:comment>
+        <rdfs:label xml:lang="en">flight</rdfs:label>
+        <skos:altLabel xml:lang="en">escape</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/LifeEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/LifeEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">A significant moment in a character&apos;s life.</rdfs:comment>
+        <rdfs:label xml:lang="en">life event</rdfs:label>
+        <skos:altLabel xml:lang="en">life occurrence</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Marriage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Marriage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/LifeEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasParticipant"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Two characters getting married. Involves exactly 2 participants.</rdfs:comment>
+        <rdfs:label xml:lang="en">marriage</rdfs:label>
+        <skos:altLabel xml:lang="en">wedding</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Meeting -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Meeting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
+        <rdfs:comment xml:lang="en">An encounter or gathering of characters.</rdfs:comment>
+        <rdfs:label xml:lang="en">meeting</rdfs:label>
+        <skos:altLabel xml:lang="en">encounter</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/MovementEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/MovementEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">An event involving physical movement of characters between places.</rdfs:comment>
+        <rdfs:label xml:lang="en">movement event</rdfs:label>
+        <skos:altLabel xml:lang="en">movement</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Murder -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Murder">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/event/Death"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasAgent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Death"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasAgent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Suicide"/>
+        <rdfs:comment xml:lang="en">A death caused intentionally by another. Has at least one agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">murder</rdfs:label>
+        <skos:altLabel xml:lang="en">homicide</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Prophecy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Prophecy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">A prediction of future events, often supernatural.</rdfs:comment>
+        <rdfs:label xml:lang="en">prophecy</rdfs:label>
+        <skos:altLabel xml:lang="en">foretelling</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Siege -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Siege">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/ConflictEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/occursAt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/narn/location/Settlement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A military blockade of a city or fortress.</rdfs:comment>
+        <rdfs:label xml:lang="en">siege</rdfs:label>
+        <skos:altLabel xml:lang="en">blockade</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/SocialEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/SocialEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">An event involving social interaction between characters.</rdfs:comment>
+        <rdfs:label xml:lang="en">social event</rdfs:label>
+        <skos:altLabel xml:lang="en">social gathering</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Suicide -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Suicide">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Death"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasVictim"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasAgent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A death where the victim is also the agent. At most one agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">suicide</rdfs:label>
+        <skos:altLabel xml:lang="en">self-killing</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Travel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Travel">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/event/MovementEvent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasDestination"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasOrigin"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasDestination"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasOrigin"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A journey. Every travel has origin and destination.</rdfs:comment>
+        <rdfs:label xml:lang="en">travel</rdfs:label>
+        <skos:altLabel xml:lang="en">journey</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Trial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Trial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
+        <rdfs:comment xml:lang="en">A judicial examination or hearing.</rdfs:comment>
+        <rdfs:label xml:lang="en">trial</rdfs:label>
+        <skos:altLabel xml:lang="en">judgement</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/War -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/War">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/event/ConflictEvent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/narn/event/hasSubEvent"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/narn/event/Battle"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/ConflictEvent"/>
+        <rdfs:comment xml:lang="en">A prolonged conflict with multiple battles.</rdfs:comment>
+        <rdfs:label xml:lang="en">war</rdfs:label>
+        <skos:altLabel xml:lang="en">prolonged conflict</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Place -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Place"/>
+    
+
+
+    <!-- https://w3id.org/narn/location/Settlement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Settlement"/>
+    
+
+
+    <!-- https://w3id.org/narn/to/FiniteInterval -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/FiniteInterval"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

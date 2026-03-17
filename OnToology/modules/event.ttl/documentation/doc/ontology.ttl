@@ -1,0 +1,576 @@
+@prefix : <https://w3id.org/narn/event/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/narn/event/> .
+
+<https://w3id.org/narn/event/> rdf:type owl:Ontology ;
+                                owl:imports <https://w3id.org/narn/location/> ,
+                                            <https://w3id.org/narn/to/> ;
+                                rdfs:comment "An ontology for describing events in story plots."@en ;
+                                rdfs:label "Event Ontology"@en ;
+                                <https://purl.org/dc/terms/created> "2026-03-15"^^xsd:date ;
+                                <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;
+                                <https://purl.org/dc/terms/modified> "2026-03-17"^^xsd:date ;
+                                <https://purl.org/vocab/vann/preferredNamespacePrefix> "evnt" ;
+                                <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/event/" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/vocab/vann/preferredNamespacePrefix
+<https://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/vocab/vann/preferredNamespaceUri
+<https://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/narn/event/begets
+:begets rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasParticipant ;
+        rdfs:domain :Birth ;
+        rdfs:comment "The character brought into existence by a birth event."@en ;
+        rdfs:label "begets"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "brings forth"@en .
+
+
+###  https://w3id.org/narn/event/causes
+:causes rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :precedes ;
+        rdf:type owl:AsymmetricProperty ,
+                 owl:TransitiveProperty ,
+                 owl:IrreflexiveProperty ;
+        rdfs:domain :Event ;
+        rdfs:range :Event ;
+        rdfs:comment "This event causally leads to another event."@en ;
+        rdfs:label "causes"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "leads to"@en .
+
+
+###  https://w3id.org/narn/event/creates
+:creates rdf:type owl:ObjectProperty ;
+         rdfs:domain :Event ;
+         rdfs:comment "An entity produced or created by the event."@en ;
+         rdfs:label "creates"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "results in"@en .
+
+
+###  https://w3id.org/narn/event/hasAgent
+:hasAgent rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasParticipant ;
+          rdf:type owl:IrreflexiveProperty ;
+          rdfs:domain :Event ;
+          owl:propertyDisjointWith :hasWitness ;
+          rdfs:comment "The entity that intentionally causes or performs the event."@en ;
+          rdfs:label "has agent"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "done by"@en .
+
+
+###  https://w3id.org/narn/event/hasCause
+:hasCause rdf:type owl:ObjectProperty ;
+          rdfs:domain :Event ;
+          rdfs:comment "An entity involved as a contributing cause in the event."@en ;
+          rdfs:label "has cause"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "caused by"@en .
+
+
+###  https://w3id.org/narn/event/hasDestination
+:hasDestination rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :occursAt ;
+                rdfs:domain :MovementEvent ;
+                rdfs:range <https://w3id.org/narn/location/Place> ;
+                owl:propertyDisjointWith :hasOrigin ;
+                rdfs:comment "The ending place of a movement event."@en ;
+                rdfs:label "has destination"@en ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "arrives at"@en .
+
+
+###  https://w3id.org/narn/event/hasOrigin
+:hasOrigin rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :occursAt ;
+           rdfs:domain :MovementEvent ;
+           rdfs:range <https://w3id.org/narn/location/Place> ;
+           rdfs:comment "The starting place of a movement event."@en ;
+           rdfs:label "has origin"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "departs from"@en .
+
+
+###  https://w3id.org/narn/event/hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty ;
+                rdfs:domain :Event ;
+                rdfs:comment "An entity that takes part in the event."@en ;
+                rdfs:label "has participant"@en ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "involves"@en .
+
+
+###  https://w3id.org/narn/event/hasPatient
+:hasPatient rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasParticipant ;
+            rdfs:domain :Event ;
+            rdfs:comment "The entity affected by the event."@en ;
+            rdfs:label "has patient"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "affects"@en .
+
+
+###  https://w3id.org/narn/event/hasSubEvent
+:hasSubEvent rdf:type owl:ObjectProperty ,
+                      owl:AsymmetricProperty ,
+                      owl:TransitiveProperty ,
+                      owl:IrreflexiveProperty ;
+             rdfs:domain :Event ;
+             rdfs:range :Event ;
+             rdfs:comment "A smaller event that occurs as part of this one."@en ;
+             rdfs:label "has sub-event"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "contains event"@en .
+
+
+###  https://w3id.org/narn/event/hasTraveller
+:hasTraveller rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasParticipant ;
+              rdfs:domain :Travel ;
+              rdfs:comment "The character who undertakes the travel."@en ;
+              rdfs:label "has traveller"@en ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "travelled by"@en .
+
+
+###  https://w3id.org/narn/event/hasVictim
+:hasVictim rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasPatient ;
+           rdfs:domain :Event ;
+           rdfs:comment "The entity that suffers harm in the event."@en ;
+           rdfs:label "has victim"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "harms"@en .
+
+
+###  https://w3id.org/narn/event/hasWitness
+:hasWitness rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasParticipant ;
+            rdfs:domain :Event ;
+            rdfs:comment "An entity that observes the event without acting."@en ;
+            rdfs:label "has witness"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "observed by"@en .
+
+
+###  https://w3id.org/narn/event/isBegottenIn
+:isBegottenIn rdf:type owl:ObjectProperty ;
+              owl:inverseOf :begets ;
+              rdfs:domain owl:Thing ;
+              rdfs:range :Birth ;
+              rdfs:comment "Inverse of begets. Links a character to the birth event that brings them into existence."@en ;
+              rdfs:label "is begotten in"@en .
+
+
+###  https://w3id.org/narn/event/isCausedBy
+:isCausedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :causes ;
+            rdfs:comment "Inverse of causes. This event results from another."@en ;
+            rdfs:label "is caused by"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "results from"@en .
+
+
+###  https://w3id.org/narn/event/isSubEventOf
+:isSubEventOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <https://w3id.org/narn/to/during> ;
+              owl:inverseOf :hasSubEvent ;
+              rdfs:comment "This event is part of a larger event."@en ;
+              rdfs:label "is sub-event of"@en ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "part of event"@en .
+
+
+###  https://w3id.org/narn/event/occursAt
+:occursAt rdf:type owl:ObjectProperty ,
+                   owl:IrreflexiveProperty ;
+          rdfs:domain :Event ;
+          rdfs:range <https://w3id.org/narn/location/Place> ;
+          rdfs:comment "The place where the event occurs."@en ;
+          rdfs:label "occurs at"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "takes place at"@en .
+
+
+###  https://w3id.org/narn/event/precedes
+:precedes rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <https://w3id.org/narn/to/precedes> ;
+          rdf:type owl:AsymmetricProperty ,
+                   owl:TransitiveProperty ,
+                   owl:IrreflexiveProperty ;
+          rdfs:domain :Event ;
+          rdfs:range :Event ;
+          rdfs:comment "This event occurs before another event."@en ;
+          rdfs:label "precedes"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "comes before"@en .
+
+
+###  https://w3id.org/narn/to/during
+<https://w3id.org/narn/to/during> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/to/precedes
+<https://w3id.org/narn/to/precedes> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/narn/event/Battle
+:Battle rdf:type owl:Class ;
+        rdfs:subClassOf :ConflictEvent ;
+        rdfs:comment "A large scale violent confrontation."@en ;
+        rdfs:label "battle"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "armed conflict"@en .
+
+
+###  https://w3id.org/narn/event/Betrayal
+:Betrayal rdf:type owl:Class ;
+          rdfs:subClassOf :Event ;
+          owl:disjointWith :Meeting ;
+          rdfs:comment "An act of disloyalty or treachery."@en ;
+          rdfs:label "betrayal"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "treachery"@en .
+
+
+###  https://w3id.org/narn/event/Birth
+:Birth rdf:type owl:Class ;
+       rdfs:subClassOf :LifeEvent ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :begets ;
+                         owl:someValuesFrom owl:Thing
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :occursAt ;
+                         owl:allValuesFrom <https://w3id.org/narn/location/Place>
+                       ] ;
+       owl:disjointWith :Death ,
+                        :Marriage ,
+                        :Murder ;
+       rdfs:comment "A character being born. Every birth begets at least one character."@en ;
+       rdfs:label "birth"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "nativity"@en .
+
+
+###  https://w3id.org/narn/event/Captivity
+:Captivity rdf:type owl:Class ;
+           rdfs:subClassOf :Event ;
+           rdfs:comment "A character is held prisoner."@en ;
+           rdfs:label "captivity"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "imprisonment"@en .
+
+
+###  https://w3id.org/narn/event/ConflictEvent
+:ConflictEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event ;
+               owl:disjointWith :MovementEvent ,
+                                :SocialEvent ;
+               rdfs:comment "An event involving antagonism or violence."@en ;
+               rdfs:label "conflict event"@en ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "clash"@en .
+
+
+###  https://w3id.org/narn/event/Coronation
+:Coronation rdf:type owl:Class ;
+            rdfs:subClassOf :SocialEvent ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasAgent ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ;
+            rdfs:comment "A ceremony of crowning a ruler."@en ;
+            rdfs:label "coronation"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "crowning ceremony"@en .
+
+
+###  https://w3id.org/narn/event/Council
+:Council rdf:type owl:Class ;
+         rdfs:subClassOf :SocialEvent ;
+         rdfs:comment "A formal meeting for deliberation or the reach of a consensus."@en ;
+         rdfs:label "council"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "deliberation"@en .
+
+
+###  https://w3id.org/narn/event/Curse
+:Curse rdf:type owl:Class ;
+       rdfs:subClassOf :Event ;
+       owl:disjointWith :Prophecy ;
+       rdfs:comment "A supernatural imprecation bringing misfortune."@en ;
+       rdfs:label "curse"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "malediction"@en .
+
+
+###  https://w3id.org/narn/event/Death
+:Death rdf:type owl:Class ;
+       rdfs:subClassOf :LifeEvent ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasVictim ;
+                         owl:someValuesFrom owl:Thing
+                       ] ;
+       rdfs:comment "A character dying. Every death has at least one victim."@en ;
+       rdfs:label "death"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "demise"@en .
+
+
+###  https://w3id.org/narn/event/Discovery
+:Discovery rdf:type owl:Class ;
+           rdfs:subClassOf :Event ;
+           rdfs:comment "An event where something hidden is found or revealed."@en ;
+           rdfs:label "discovery"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "revelation"@en .
+
+
+###  https://w3id.org/narn/event/Duel
+:Duel rdf:type owl:Class ;
+      rdfs:subClassOf :ConflictEvent ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasParticipant ;
+                        owl:cardinality "2"^^xsd:nonNegativeInteger
+                      ] ;
+      rdfs:comment "A fight between exactly two combatants."@en ;
+      rdfs:label "duel"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "single combat"@en .
+
+
+###  https://w3id.org/narn/event/Enchantment
+:Enchantment rdf:type owl:Class ;
+             rdfs:subClassOf :Event ;
+             rdfs:comment "A magical spell or charm placed on a character."@en ;
+             rdfs:label "enchantment"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "spell"@en .
+
+
+###  https://w3id.org/narn/event/Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/narn/to/FiniteInterval> ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasParticipant ;
+                         owl:someValuesFrom owl:Thing
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :occursAt ;
+                         owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                       ] ;
+       rdfs:comment """A spatio-temporal occurrence involving participants at places.
+        Every event is a finite temporal interval."""@en ;
+       rdfs:label "event"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "occurrence"@en .
+
+
+###  https://w3id.org/narn/event/Exile
+:Exile rdf:type owl:Class ;
+       rdfs:subClassOf :MovementEvent ;
+       rdfs:comment "Forced departure from homeland."@en ;
+       rdfs:label "exile"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "banishment"@en .
+
+
+###  https://w3id.org/narn/event/Feast
+:Feast rdf:type owl:Class ;
+       rdfs:subClassOf :SocialEvent ;
+       rdfs:comment "A large celebratory meal or banquet."@en ;
+       rdfs:label "feast"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "banquet"@en .
+
+
+###  https://w3id.org/narn/event/Flight
+:Flight rdf:type owl:Class ;
+        rdfs:subClassOf :MovementEvent ;
+        rdfs:comment "Characters flee from danger."@en ;
+        rdfs:label "flight"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "escape"@en .
+
+
+###  https://w3id.org/narn/event/LifeEvent
+:LifeEvent rdf:type owl:Class ;
+           rdfs:subClassOf :Event ;
+           rdfs:comment "A significant moment in a character's life."@en ;
+           rdfs:label "life event"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "life occurrence"@en .
+
+
+###  https://w3id.org/narn/event/Marriage
+:Marriage rdf:type owl:Class ;
+          rdfs:subClassOf :LifeEvent ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasParticipant ;
+                            owl:cardinality "2"^^xsd:nonNegativeInteger
+                          ] ;
+          rdfs:comment "Two characters getting married. Involves exactly 2 participants."@en ;
+          rdfs:label "marriage"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "wedding"@en .
+
+
+###  https://w3id.org/narn/event/Meeting
+:Meeting rdf:type owl:Class ;
+         rdfs:subClassOf :SocialEvent ;
+         rdfs:comment "An encounter or gathering of characters."@en ;
+         rdfs:label "meeting"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "encounter"@en .
+
+
+###  https://w3id.org/narn/event/MovementEvent
+:MovementEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event ;
+               rdfs:comment "An event involving physical movement of characters between places."@en ;
+               rdfs:label "movement event"@en ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "movement"@en .
+
+
+###  https://w3id.org/narn/event/Murder
+:Murder rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :Death
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasAgent ;
+                                                     owl:someValuesFrom owl:Thing
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf :Death ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasAgent ;
+                          owl:someValuesFrom owl:Thing
+                        ] ;
+        owl:disjointWith :Suicide ;
+        rdfs:comment "A death caused intentionally by another. Has at least one agent."@en ;
+        rdfs:label "murder"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "homicide"@en .
+
+
+###  https://w3id.org/narn/event/Prophecy
+:Prophecy rdf:type owl:Class ;
+          rdfs:subClassOf :Event ;
+          rdfs:comment "A prediction of future events, often supernatural."@en ;
+          rdfs:label "prophecy"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "foretelling"@en .
+
+
+###  https://w3id.org/narn/event/Siege
+:Siege rdf:type owl:Class ;
+       rdfs:subClassOf :ConflictEvent ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :occursAt ;
+                         owl:allValuesFrom <https://w3id.org/narn/location/Settlement>
+                       ] ;
+       rdfs:comment "A military blockade of a city or fortress."@en ;
+       rdfs:label "siege"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "blockade"@en .
+
+
+###  https://w3id.org/narn/event/SocialEvent
+:SocialEvent rdf:type owl:Class ;
+             rdfs:subClassOf :Event ;
+             rdfs:comment "An event involving social interaction between characters."@en ;
+             rdfs:label "social event"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "social gathering"@en .
+
+
+###  https://w3id.org/narn/event/Suicide
+:Suicide rdf:type owl:Class ;
+         rdfs:subClassOf :Death ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVictim ;
+                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAgent ;
+                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                         ] ;
+         rdfs:comment "A death where the victim is also the agent. At most one agent."@en ;
+         rdfs:label "suicide"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "self-killing"@en .
+
+
+###  https://w3id.org/narn/event/Travel
+:Travel rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :MovementEvent
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasDestination ;
+                                                     owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasOrigin ;
+                                                     owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf :MovementEvent ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDestination ;
+                          owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasOrigin ;
+                          owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                        ] ;
+        rdfs:comment "A journey. Every travel has origin and destination."@en ;
+        rdfs:label "travel"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "journey"@en .
+
+
+###  https://w3id.org/narn/event/Trial
+:Trial rdf:type owl:Class ;
+       rdfs:subClassOf :SocialEvent ;
+       rdfs:comment "A judicial examination or hearing."@en ;
+       rdfs:label "trial"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "judgement"@en .
+
+
+###  https://w3id.org/narn/event/War
+:War rdf:type owl:Class ;
+     owl:equivalentClass [ owl:intersectionOf ( :ConflictEvent
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasSubEvent ;
+                                                  owl:someValuesFrom :Battle
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+     rdfs:subClassOf :ConflictEvent ;
+     rdfs:comment "A prolonged conflict with multiple battles."@en ;
+     rdfs:label "war"@en ;
+     <http://www.w3.org/2004/02/skos/core#altLabel> "prolonged conflict"@en .
+
+
+###  https://w3id.org/narn/location/Place
+<https://w3id.org/narn/location/Place> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/location/Settlement
+<https://w3id.org/narn/location/Settlement> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/to/FiniteInterval
+<https://w3id.org/narn/to/FiniteInterval> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

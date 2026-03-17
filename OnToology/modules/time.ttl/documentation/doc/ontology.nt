@@ -1,0 +1,505 @@
+<https://w3id.org/narn/to/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/narn/to/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for temporal entities and Allen's temporal algebra."@en .
+<https://w3id.org/narn/to/> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Ontology"@en .
+<https://w3id.org/narn/to/> <https://purl.org/dc/terms/created> "2026-03-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/to/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .
+<https://w3id.org/narn/to/> <https://purl.org/dc/terms/modified> "2026-03-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/to/> <https://purl.org/vocab/vann/preferredNamespacePrefix> "to" .
+<https://w3id.org/narn/to/> <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/to/" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/vocab/vann/preferredNamespacePrefix
+<https://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/vocab/vann/preferredNamespaceUri
+<https://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/narn/to/after
+<https://w3id.org/narn/to/after> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/after> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/after> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/before> .
+<https://w3id.org/narn/to/after> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/after> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of before. X starts after Y ends."@en .
+<https://w3id.org/narn/to/after> <http://www.w3.org/2000/01/rdf-schema#label> "after"@en .
+<https://w3id.org/narn/to/after> <http://www.w3.org/2004/02/skos/core#altLabel> "follows"@en .
+# 
+# https://w3id.org/narn/to/before
+<https://w3id.org/narn/to/before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/before> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/before> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/precedes> .
+<https://w3id.org/narn/to/before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/before> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/to/overlaps> .
+<https://w3id.org/narn/to/before> <http://www.w3.org/2000/01/rdf-schema#comment> "X ends before Y starts."@en .
+<https://w3id.org/narn/to/before> <http://www.w3.org/2000/01/rdf-schema#label> "before"@en .
+<https://w3id.org/narn/to/before> <http://www.w3.org/2004/02/skos/core#altLabel> "precedes"@en .
+# 
+# https://w3id.org/narn/to/containsInterval
+<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/during> .
+<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of during. X entirely contains Y."@en .
+<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2000/01/rdf-schema#label> "contains interval"@en .
+<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "temporally contains"@en .
+# 
+# https://w3id.org/narn/to/during
+<https://w3id.org/narn/to/during> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/during> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/during> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/during> <http://www.w3.org/2000/01/rdf-schema#comment> "X occurs entirely within Y."@en .
+<https://w3id.org/narn/to/during> <http://www.w3.org/2000/01/rdf-schema#label> "during"@en .
+<https://w3id.org/narn/to/during> <http://www.w3.org/2004/02/skos/core#altLabel> "contained in"@en .
+# 
+# https://w3id.org/narn/to/endsAt
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/hasInstant> .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/to/startsAt> .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique ending instant."@en .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#label> "ends at"@en .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2004/02/skos/core#altLabel> "ending point"@en .
+# 
+# https://w3id.org/narn/to/equals
+<https://w3id.org/narn/to/equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/equals> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/to/equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
+<https://w3id.org/narn/to/equals> <http://www.w3.org/2000/01/rdf-schema#comment> "Same temporal extent."@en .
+<https://w3id.org/narn/to/equals> <http://www.w3.org/2000/01/rdf-schema#label> "equals"@en .
+<https://w3id.org/narn/to/equals> <http://www.w3.org/2004/02/skos/core#altLabel> "same time as"@en .
+# 
+# https://w3id.org/narn/to/finishedBy
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/finishes> .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of finishes. X ends when Y ends but Y starts before X starts."@en .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2000/01/rdf-schema#label> "finished by"@en .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "ended by"@en .
+# 
+# https://w3id.org/narn/to/finishes
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/2000/01/rdf-schema#comment> "X ends at same time as Y but starts after Y starts."@en .
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/2000/01/rdf-schema#label> "finishes"@en .
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/2004/02/skos/core#altLabel> "ends with"@en .
+# 
+# https://w3id.org/narn/to/hasInstant
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an interval to an instant that falls within or bounds it."@en .
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2000/01/rdf-schema#label> "has instant"@en .
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2004/02/skos/core#altLabel> "at instant"@en .
+# 
+# https://w3id.org/narn/to/intervalRelation
+<https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "General temporal relation between two intervals."@en .
+<https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2000/01/rdf-schema#label> "interval relation"@en .
+<https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2004/02/skos/core#altLabel> "Allen relation"@en .
+# 
+# https://w3id.org/narn/to/meets
+<https://w3id.org/narn/to/meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/precedes> .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/to/overlaps> .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/2000/01/rdf-schema#comment> "X ends exactly when Y starts."@en .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/2000/01/rdf-schema#label> "meets"@en .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/2004/02/skos/core#altLabel> "immediately before"@en .
+# 
+# https://w3id.org/narn/to/metBy
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/meets> .
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of meets. X starts exactly when Y ends."@en .
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/2000/01/rdf-schema#label> "met by"@en .
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/2004/02/skos/core#altLabel> "immediately after"@en .
+# 
+# https://w3id.org/narn/to/occursAfter
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/occursBefore> .
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of occursBefore."@en .
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2000/01/rdf-schema#label> "occurs after"@en .
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2004/02/skos/core#altLabel> "later than"@en .
+# 
+# https://w3id.org/narn/to/occursBefore
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/to/occursSimultaneouslyTo> .
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2000/01/rdf-schema#comment> "Instant strictly before another."@en .
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2000/01/rdf-schema#label> "occurs before"@en .
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2004/02/skos/core#altLabel> "earlier than"@en .
+# 
+# https://w3id.org/narn/to/occursDuring
+<https://w3id.org/narn/to/occursDuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2000/01/rdf-schema#comment> "An instant falls within the extent of an interval."@en .
+<https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2000/01/rdf-schema#label> "occurs during"@en .
+<https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2004/02/skos/core#altLabel> "within timeframe of"@en .
+# 
+# https://w3id.org/narn/to/occursSimultaneouslyTo
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Two instants at the same time."@en .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2000/01/rdf-schema#label> "occurs simultaneously to"@en .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2004/02/skos/core#altLabel> "at same time as"@en .
+# 
+# https://w3id.org/narn/to/overlappedBy
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/overlaps> .
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of overlaps. Y starts before X, ends after X starts but before X ends."@en .
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2000/01/rdf-schema#label> "overlapped by"@en .
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "partially after"@en .
+# 
+# https://w3id.org/narn/to/overlaps
+<https://w3id.org/narn/to/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/overlaps> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/overlaps> <http://www.w3.org/2000/01/rdf-schema#comment> "X starts before Y, ends after Y starts but before Y ends."@en .
+<https://w3id.org/narn/to/overlaps> <http://www.w3.org/2000/01/rdf-schema#label> "overlaps"@en .
+<https://w3id.org/narn/to/overlaps> <http://www.w3.org/2004/02/skos/core#altLabel> "partially before"@en .
+# 
+# https://w3id.org/narn/to/precededBy
+<https://w3id.org/narn/to/precededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/precededBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/precedes> .
+<https://w3id.org/narn/to/precededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/precededBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of precedes. X starts after or when Y ends."@en .
+<https://w3id.org/narn/to/precededBy> <http://www.w3.org/2000/01/rdf-schema#label> "preceded by"@en .
+<https://w3id.org/narn/to/precededBy> <http://www.w3.org/2004/02/skos/core#altLabel> "happens after"@en .
+# 
+# https://w3id.org/narn/to/precedes
+<https://w3id.org/narn/to/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/precedes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/precedes> <http://www.w3.org/2000/01/rdf-schema#comment> "X ends before or when Y starts."@en .
+<https://w3id.org/narn/to/precedes> <http://www.w3.org/2000/01/rdf-schema#label> "precedes"@en .
+<https://w3id.org/narn/to/precedes> <http://www.w3.org/2004/02/skos/core#altLabel> "happens before"@en .
+# 
+# https://w3id.org/narn/to/startedBy
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/starts> .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of starts. X starts when Y starts but Y ends after X ends."@en .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/2000/01/rdf-schema#label> "started by"@en .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "begun by"@en .
+# 
+# https://w3id.org/narn/to/starts
+<https://w3id.org/narn/to/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/starts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
+<https://w3id.org/narn/to/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/to/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/starts> <http://www.w3.org/2000/01/rdf-schema#comment> "X starts at same time as Y but ends before Y ends."@en .
+<https://w3id.org/narn/to/starts> <http://www.w3.org/2000/01/rdf-schema#label> "starts"@en .
+<https://w3id.org/narn/to/starts> <http://www.w3.org/2004/02/skos/core#altLabel> "begins with"@en .
+# 
+# https://w3id.org/narn/to/startsAt
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/hasInstant> .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique starting instant."@en .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#label> "starts at"@en .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/2004/02/skos/core#altLabel> "beginning point"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/narn/to/hasDateTime
+<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
+<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The calendar date and time of an instant."@en .
+<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "has date time"@en .
+<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2004/02/skos/core#altLabel> "dateTime value"@en .
+# 
+# https://w3id.org/narn/to/hasDuration
+<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The length of time spanned by an interval."@en .
+<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has duration"@en .
+<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2004/02/skos/core#altLabel> "time length"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/narn/to/EndingInterval
+<https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/to/Instant> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/endsAt> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval with a defined ending instant."@en .
+<https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2000/01/rdf-schema#label> "ending interval"@en .
+<https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "ending point"@en .
+# 
+# https://w3id.org/narn/to/EternalInterval
+<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid2 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#complementOf> <https://w3id.org/narn/to/StartingInterval> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#complementOf> <https://w3id.org/narn/to/EndingInterval> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/InfiniteInterval> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/InfiniteInterval> .
+<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/to/FiniteInterval> .
+<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval extending infinitely in both directions."@en .
+<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2000/01/rdf-schema#label> "eternal interval"@en .
+<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "everlasting interval"@en .
+# 
+# https://w3id.org/narn/to/FiniteInterval
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/to/Instant> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/startsAt> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/to/Instant> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/endsAt> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/Interval> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/EndingInterval> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/StartingInterval> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/narn/to/Instant> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/startsAt> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/narn/to/Instant> .
+_:genid15 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/endsAt> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/narn/to/Instant> .
+_:genid16 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/startsAt> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/to/InfiniteInterval> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval with both a starting and ending instant."@en .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#label> "finite interval"@en .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "bounded interval"@en .
+# 
+# https://w3id.org/narn/to/InfiniteInterval
+<https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval extending infinitely in at least one direction."@en .
+<https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2000/01/rdf-schema#label> "infinite interval"@en .
+<https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "unbounded interval"@en .
+# 
+# https://w3id.org/narn/to/Instant
+<https://w3id.org/narn/to/Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/to/Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/TemporalEntity> .
+<https://w3id.org/narn/to/Instant> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A single point in time with zero duration."@en .
+<https://w3id.org/narn/to/Instant> <http://www.w3.org/2000/01/rdf-schema#label> "instant"@en .
+<https://w3id.org/narn/to/Instant> <http://www.w3.org/2004/02/skos/core#altLabel> "time point"@en .
+# 
+# https://w3id.org/narn/to/Interval
+<https://w3id.org/narn/to/Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/to/Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/TemporalEntity> .
+<https://w3id.org/narn/to/Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/narn/to/Instant> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/hasInstant> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/to/Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "A continuous extent of time with nonzero duration."@en .
+<https://w3id.org/narn/to/Interval> <http://www.w3.org/2000/01/rdf-schema#label> "interval"@en .
+<https://w3id.org/narn/to/Interval> <http://www.w3.org/2004/02/skos/core#altLabel> "time span"@en .
+# 
+# https://w3id.org/narn/to/StartingInterval
+<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid18 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/to/Instant> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/startsAt> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/Interval> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/Interval> .
+<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/to/Instant> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/startsAt> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval with a defined starting instant."@en .
+<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2000/01/rdf-schema#label> "starting interval"@en .
+<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "begins with"@en .
+# 
+# https://w3id.org/narn/to/TemporalEntity
+<https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A thing that exists in time."@en .
+<https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "temporal entity"@en .
+<https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/2004/02/skos/core#altLabel> "time entity"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointProperties> .
+_:genid23 <http://www.w3.org/2002/07/owl#members> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/starts> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/startedBy> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/overlaps> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/overlappedBy> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/metBy> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/meets> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/finishes> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/finishedBy> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/equals> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/during> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/containsInterval> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/before> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/to/after> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

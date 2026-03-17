@@ -1,0 +1,466 @@
+<https://w3id.org/narn/social/relations/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/narn/social/relations/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/location/> .
+<https://w3id.org/narn/social/relations/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology defining social relationships between characters."@en .
+<https://w3id.org/narn/social/relations/> <http://www.w3.org/2000/01/rdf-schema#label> "Social Relations Ontology"@en .
+<https://w3id.org/narn/social/relations/> <https://purl.org/dc/terms/created> "2026-03-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/social/relations/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .
+<https://w3id.org/narn/social/relations/> <https://purl.org/dc/terms/modified> "2026-03-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/social/relations/> <https://purl.org/vocab/vann/preferredNamespacePrefix> "soc" .
+<https://w3id.org/narn/social/relations/> <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/social/relations/" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/vocab/vann/preferredNamespacePrefix
+<https://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/vocab/vann/preferredNamespaceUri
+<https://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/narn/social/relations/committedSuicide
+<https://w3id.org/narn/social/relations/committedSuicide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/committedSuicide> <http://www.w3.org/2000/01/rdf-schema#comment> "Self killing."@en .
+<https://w3id.org/narn/social/relations/committedSuicide> <http://www.w3.org/2000/01/rdf-schema#label> "committed suicide"@en .
+<https://w3id.org/narn/social/relations/committedSuicide> <http://www.w3.org/2004/02/skos/core#altLabel> "took own life"@en .
+# 
+# https://w3id.org/narn/social/relations/cursed
+<https://w3id.org/narn/social/relations/cursed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/cursed> <http://www.w3.org/2000/01/rdf-schema#comment> "Character placed a curse upon another."@en .
+<https://w3id.org/narn/social/relations/cursed> <http://www.w3.org/2000/01/rdf-schema#label> "cursed"@en .
+<https://w3id.org/narn/social/relations/cursed> <http://www.w3.org/2004/02/skos/core#altLabel> "placed a curse on"@en .
+# 
+# https://w3id.org/narn/social/relations/feared
+<https://w3id.org/narn/social/relations/feared> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/feared> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/social/relations/hasEmotionalRelationWith> .
+<https://w3id.org/narn/social/relations/feared> <http://www.w3.org/2000/01/rdf-schema#comment> "Character feared another character."@en .
+<https://w3id.org/narn/social/relations/feared> <http://www.w3.org/2000/01/rdf-schema#label> "feared"@en .
+<https://w3id.org/narn/social/relations/feared> <http://www.w3.org/2004/02/skos/core#altLabel> "had fear of"@en .
+# 
+# https://w3id.org/narn/social/relations/hasEmotionalRelationWith
+<https://w3id.org/narn/social/relations/hasEmotionalRelationWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/hasEmotionalRelationWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/narn/social/relations/hasEmotionalRelationWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/narn/social/relations/hasEmotionalRelationWith> <http://www.w3.org/2000/01/rdf-schema#comment> "General emotional relationship between two characters."@en .
+<https://w3id.org/narn/social/relations/hasEmotionalRelationWith> <http://www.w3.org/2000/01/rdf-schema#label> "has emotional relation with"@en .
+<https://w3id.org/narn/social/relations/hasEmotionalRelationWith> <http://www.w3.org/2004/02/skos/core#altLabel> "feels towards"@en .
+# 
+# https://w3id.org/narn/social/relations/hasFriend
+<https://w3id.org/narn/social/relations/hasFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/hasFriend> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/social/relations/hasEmotionalRelationWith> .
+<https://w3id.org/narn/social/relations/hasFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/social/relations/hasFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/social/relations/hasFriend> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/social/relations/isAnEnemyOf> .
+<https://w3id.org/narn/social/relations/hasFriend> <http://www.w3.org/2000/01/rdf-schema#comment> "Mutual friendship. Symmetric."@en .
+<https://w3id.org/narn/social/relations/hasFriend> <http://www.w3.org/2000/01/rdf-schema#label> "has friend"@en .
+<https://w3id.org/narn/social/relations/hasFriend> <http://www.w3.org/2004/02/skos/core#altLabel> "is a friend of"@en .
+# 
+# https://w3id.org/narn/social/relations/hasValence
+<https://w3id.org/narn/social/relations/hasValence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/hasValence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/narn/social/relations/hasValence> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/social/relations/EmotionalValence> .
+<https://w3id.org/narn/social/relations/hasValence> <http://www.w3.org/2000/01/rdf-schema#comment> "Assigns an emotional valence. Functional."@en .
+<https://w3id.org/narn/social/relations/hasValence> <http://www.w3.org/2000/01/rdf-schema#label> "has valence"@en .
+<https://w3id.org/narn/social/relations/hasValence> <http://www.w3.org/2004/02/skos/core#altLabel> "has sentiment"@en .
+# 
+# https://w3id.org/narn/social/relations/hated
+<https://w3id.org/narn/social/relations/hated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/hated> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/social/relations/hasEmotionalRelationWith> .
+<https://w3id.org/narn/social/relations/hated> <http://www.w3.org/2000/01/rdf-schema#comment> "Character had hatred towards another."@en .
+<https://w3id.org/narn/social/relations/hated> <http://www.w3.org/2000/01/rdf-schema#label> "hated"@en .
+<https://w3id.org/narn/social/relations/hated> <http://www.w3.org/2004/02/skos/core#altLabel> "had hatred for"@en .
+# 
+# https://w3id.org/narn/social/relations/hypnotised
+<https://w3id.org/narn/social/relations/hypnotised> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/hypnotised> <http://www.w3.org/2000/01/rdf-schema#comment> "Character placed another under a spell."@en .
+<https://w3id.org/narn/social/relations/hypnotised> <http://www.w3.org/2000/01/rdf-schema#label> "hypnotised"@en .
+<https://w3id.org/narn/social/relations/hypnotised> <http://www.w3.org/2004/02/skos/core#altLabel> "cast a spell on"@en .
+# 
+# https://w3id.org/narn/social/relations/isAKinsmanOf
+<https://w3id.org/narn/social/relations/isAKinsmanOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/isAKinsmanOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/social/relations/isAKinsmanOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Kinship or blood relation."@en .
+<https://w3id.org/narn/social/relations/isAKinsmanOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a kinsman of"@en .
+<https://w3id.org/narn/social/relations/isAKinsmanOf> <http://www.w3.org/2004/02/skos/core#altLabel> "kin of"@en .
+# 
+# https://w3id.org/narn/social/relations/isAnEnemyOf
+<https://w3id.org/narn/social/relations/isAnEnemyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/isAnEnemyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/social/relations/isAnEnemyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/social/relations/isAnEnemyOf> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/social/relations/wasServedBy> .
+<https://w3id.org/narn/social/relations/isAnEnemyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Antagonistic relation."@en .
+<https://w3id.org/narn/social/relations/isAnEnemyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is an enemy of"@en .
+<https://w3id.org/narn/social/relations/isAnEnemyOf> <http://www.w3.org/2004/02/skos/core#altLabel> "foe of"@en .
+# 
+# https://w3id.org/narn/social/relations/isMarriedTo
+<https://w3id.org/narn/social/relations/isMarriedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/isMarriedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/social/relations/isMarriedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/social/relations/isMarriedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Marriage relationship."@en .
+<https://w3id.org/narn/social/relations/isMarriedTo> <http://www.w3.org/2000/01/rdf-schema#label> "is married to"@en .
+<https://w3id.org/narn/social/relations/isMarriedTo> <http://www.w3.org/2004/02/skos/core#altLabel> "wed to"@en .
+# 
+# https://w3id.org/narn/social/relations/killed
+<https://w3id.org/narn/social/relations/killed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/killed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/social/relations/killed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/social/relations/killed> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/social/relations/served> .
+<https://w3id.org/narn/social/relations/killed> <http://www.w3.org/2000/01/rdf-schema#comment> "X killed Y."@en .
+<https://w3id.org/narn/social/relations/killed> <http://www.w3.org/2000/01/rdf-schema#label> "killed"@en .
+<https://w3id.org/narn/social/relations/killed> <http://www.w3.org/2004/02/skos/core#altLabel> "slew"@en .
+# 
+# https://w3id.org/narn/social/relations/livedIn
+<https://w3id.org/narn/social/relations/livedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/livedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/location/Place> .
+<https://w3id.org/narn/location/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/livedIn> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/wasTheKingOf> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/served> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/social/relations/livedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Character lived in a place during some period."@en .
+<https://w3id.org/narn/social/relations/livedIn> <http://www.w3.org/2000/01/rdf-schema#label> "lived in"@en .
+<https://w3id.org/narn/social/relations/livedIn> <http://www.w3.org/2004/02/skos/core#altLabel> "dwelt in"@en .
+# 
+# https://w3id.org/narn/social/relations/loved
+<https://w3id.org/narn/social/relations/loved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/loved> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/social/relations/hasEmotionalRelationWith> .
+<https://w3id.org/narn/social/relations/loved> <http://www.w3.org/2000/01/rdf-schema#comment> "Character had feelings of love towards another."@en .
+<https://w3id.org/narn/social/relations/loved> <http://www.w3.org/2000/01/rdf-schema#label> "loved"@en .
+<https://w3id.org/narn/social/relations/loved> <http://www.w3.org/2004/02/skos/core#altLabel> "had love for"@en .
+# 
+# https://w3id.org/narn/social/relations/mutuallyLoved
+<https://w3id.org/narn/social/relations/mutuallyLoved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/mutuallyLoved> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/social/relations/loved> .
+<https://w3id.org/narn/social/relations/mutuallyLoved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/social/relations/mutuallyLoved> <http://www.w3.org/2000/01/rdf-schema#comment> "Two characters loved each other."@en .
+<https://w3id.org/narn/social/relations/mutuallyLoved> <http://www.w3.org/2000/01/rdf-schema#label> "mutually loved"@en .
+<https://w3id.org/narn/social/relations/mutuallyLoved> <http://www.w3.org/2004/02/skos/core#altLabel> "reciprocally loved"@en .
+# 
+# https://w3id.org/narn/social/relations/ruled
+<https://w3id.org/narn/social/relations/ruled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/ruled> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/narn/social/relations/wasTheKingOf> .
+<https://w3id.org/narn/social/relations/ruled> <http://www.w3.org/2000/01/rdf-schema#comment> "Equivalent to wasTheKingOf."@en .
+<https://w3id.org/narn/social/relations/ruled> <http://www.w3.org/2000/01/rdf-schema#label> "ruled"@en .
+<https://w3id.org/narn/social/relations/ruled> <http://www.w3.org/2004/02/skos/core#altLabel> "governed"@en .
+# 
+# https://w3id.org/narn/social/relations/served
+<https://w3id.org/narn/social/relations/served> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/served> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/social/relations/served> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/social/relations/served> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/narn/social/relations/served> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/narn/social/relations/served> <http://www.w3.org/2000/01/rdf-schema#comment> "Character served another as a subordinate."@en .
+<https://w3id.org/narn/social/relations/served> <http://www.w3.org/2000/01/rdf-schema#label> "served"@en .
+<https://w3id.org/narn/social/relations/served> <http://www.w3.org/2004/02/skos/core#altLabel> "was in service of"@en .
+# 
+# https://w3id.org/narn/social/relations/wasHeldCaptiveIn
+<https://w3id.org/narn/social/relations/wasHeldCaptiveIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/wasHeldCaptiveIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/social/relations/livedIn> .
+<https://w3id.org/narn/social/relations/wasHeldCaptiveIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/location/Place> .
+<https://w3id.org/narn/social/relations/wasHeldCaptiveIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Character was imprisoned."@en .
+<https://w3id.org/narn/social/relations/wasHeldCaptiveIn> <http://www.w3.org/2000/01/rdf-schema#label> "was held captive in"@en .
+<https://w3id.org/narn/social/relations/wasHeldCaptiveIn> <http://www.w3.org/2004/02/skos/core#altLabel> "imprisoned in"@en .
+# 
+# https://w3id.org/narn/social/relations/wasKilledBy
+<https://w3id.org/narn/social/relations/wasKilledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/wasKilledBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/social/relations/killed> .
+<https://w3id.org/narn/social/relations/wasKilledBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of killed."@en .
+<https://w3id.org/narn/social/relations/wasKilledBy> <http://www.w3.org/2000/01/rdf-schema#label> "was killed by"@en .
+<https://w3id.org/narn/social/relations/wasKilledBy> <http://www.w3.org/2004/02/skos/core#altLabel> "slain by"@en .
+# 
+# https://w3id.org/narn/social/relations/wasServedBy
+<https://w3id.org/narn/social/relations/wasServedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/wasServedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/social/relations/served> .
+<https://w3id.org/narn/social/relations/wasServedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of served."@en .
+<https://w3id.org/narn/social/relations/wasServedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was served by"@en .
+<https://w3id.org/narn/social/relations/wasServedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "had as servant"@en .
+# 
+# https://w3id.org/narn/social/relations/wasTheBestFriendOf
+<https://w3id.org/narn/social/relations/wasTheBestFriendOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/wasTheBestFriendOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/social/relations/hasFriend> .
+<https://w3id.org/narn/social/relations/wasTheBestFriendOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/social/relations/wasTheBestFriendOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Particularly close friendship."@en .
+<https://w3id.org/narn/social/relations/wasTheBestFriendOf> <http://www.w3.org/2000/01/rdf-schema#label> "was the best friend of"@en .
+<https://w3id.org/narn/social/relations/wasTheBestFriendOf> <http://www.w3.org/2004/02/skos/core#altLabel> "closest companion of"@en .
+# 
+# https://w3id.org/narn/social/relations/wasTheChieftainOf
+<https://w3id.org/narn/social/relations/wasTheChieftainOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/wasTheChieftainOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/location/Place> .
+<https://w3id.org/narn/social/relations/wasTheChieftainOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Character was the chieftain of a people or place."@en .
+<https://w3id.org/narn/social/relations/wasTheChieftainOf> <http://www.w3.org/2000/01/rdf-schema#label> "was the chieftain of"@en .
+<https://w3id.org/narn/social/relations/wasTheChieftainOf> <http://www.w3.org/2004/02/skos/core#altLabel> "led as chief"@en .
+# 
+# https://w3id.org/narn/social/relations/wasTheKingOf
+<https://w3id.org/narn/social/relations/wasTheKingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/social/relations/wasTheKingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/social/relations/wasTheKingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/social/relations/wasTheKingOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/location/Place> .
+<https://w3id.org/narn/social/relations/wasTheKingOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Character was the ruler of a place."@en .
+<https://w3id.org/narn/social/relations/wasTheKingOf> <http://www.w3.org/2000/01/rdf-schema#label> "was the king of"@en .
+<https://w3id.org/narn/social/relations/wasTheKingOf> <http://www.w3.org/2004/02/skos/core#altLabel> "reigned over"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/narn/location/Place
+# 
+# https://w3id.org/narn/social/relations/Ally
+<https://w3id.org/narn/social/relations/Ally> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/Ally> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/social/relations/SocialRole> .
+<https://w3id.org/narn/social/relations/Ally> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/social/relations/Outlaw> .
+<https://w3id.org/narn/social/relations/Ally> <http://www.w3.org/2000/01/rdf-schema#comment> "One allied with others"@en .
+<https://w3id.org/narn/social/relations/Ally> <http://www.w3.org/2000/01/rdf-schema#label> "ally"@en .
+<https://w3id.org/narn/social/relations/Ally> <http://www.w3.org/2004/02/skos/core#altLabel> "companion"@en .
+# 
+# https://w3id.org/narn/social/relations/Chieftain
+<https://w3id.org/narn/social/relations/Chieftain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/Chieftain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/social/relations/PoliticalRole> .
+<https://w3id.org/narn/social/relations/Chieftain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/location/Place> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/social/relations/wasTheChieftainOf> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/social/relations/Chieftain> <http://www.w3.org/2000/01/rdf-schema#comment> "The leader of a people or tribe."@en .
+<https://w3id.org/narn/social/relations/Chieftain> <http://www.w3.org/2000/01/rdf-schema#label> "chieftain"@en .
+<https://w3id.org/narn/social/relations/Chieftain> <http://www.w3.org/2004/02/skos/core#altLabel> "chief"@en .
+# 
+# https://w3id.org/narn/social/relations/EmotionalValence
+<https://w3id.org/narn/social/relations/EmotionalValence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/EmotionalValence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#oneOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/positive> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/negative> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/ambivalent> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/EmotionalValence> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumerated class: {positive, negative, ambivalent}."@en .
+<https://w3id.org/narn/social/relations/EmotionalValence> <http://www.w3.org/2000/01/rdf-schema#label> "emotional valence"@en .
+<https://w3id.org/narn/social/relations/EmotionalValence> <http://www.w3.org/2004/02/skos/core#altLabel> "sentiment type"@en .
+# 
+# https://w3id.org/narn/social/relations/King
+<https://w3id.org/narn/social/relations/King> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/King> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/social/relations/PoliticalRole> .
+<https://w3id.org/narn/social/relations/King> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/location/Place> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/social/relations/wasTheKingOf> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/social/relations/King> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/narn/social/relations/Servant> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/social/relations/wasServedBy> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/social/relations/King> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/social/relations/Servant> .
+<https://w3id.org/narn/social/relations/King> <http://www.w3.org/2000/01/rdf-schema#comment> "A ruler of a realm or kingdom."@en .
+<https://w3id.org/narn/social/relations/King> <http://www.w3.org/2000/01/rdf-schema#label> "king"@en .
+<https://w3id.org/narn/social/relations/King> <http://www.w3.org/2004/02/skos/core#altLabel> "monarch"@en .
+# 
+# https://w3id.org/narn/social/relations/Leader
+<https://w3id.org/narn/social/relations/Leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/Leader> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/King> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/Chieftain> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/Leader> <http://www.w3.org/2000/01/rdf-schema#comment> "A leader is either a King or a Chieftain."@en .
+<https://w3id.org/narn/social/relations/Leader> <http://www.w3.org/2000/01/rdf-schema#label> "leader"@en .
+<https://w3id.org/narn/social/relations/Leader> <http://www.w3.org/2004/02/skos/core#altLabel> "ruler"@en .
+# 
+# https://w3id.org/narn/social/relations/MilitaryRole
+<https://w3id.org/narn/social/relations/MilitaryRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/MilitaryRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/social/relations/SocialRole> .
+<https://w3id.org/narn/social/relations/MilitaryRole> <http://www.w3.org/2000/01/rdf-schema#comment> "A social role related to military or combat functions."@en .
+<https://w3id.org/narn/social/relations/MilitaryRole> <http://www.w3.org/2000/01/rdf-schema#label> "military role"@en .
+<https://w3id.org/narn/social/relations/MilitaryRole> <http://www.w3.org/2004/02/skos/core#altLabel> "military position"@en .
+# 
+# https://w3id.org/narn/social/relations/NonLeader
+<https://w3id.org/narn/social/relations/NonLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/NonLeader> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#complementOf> <https://w3id.org/narn/social/relations/Leader> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/NonLeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Anyone who is not a Leader."@en .
+<https://w3id.org/narn/social/relations/NonLeader> <http://www.w3.org/2000/01/rdf-schema#label> "non-leader"@en .
+<https://w3id.org/narn/social/relations/NonLeader> <http://www.w3.org/2004/02/skos/core#altLabel> "non-ruler"@en .
+# 
+# https://w3id.org/narn/social/relations/Outlaw
+<https://w3id.org/narn/social/relations/Outlaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/Outlaw> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/social/relations/SocialRole> .
+<https://w3id.org/narn/social/relations/Outlaw> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/social/relations/isAnEnemyOf> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/social/relations/Outlaw> <http://www.w3.org/2000/01/rdf-schema#comment> "A person who lives outside the law."@en .
+<https://w3id.org/narn/social/relations/Outlaw> <http://www.w3.org/2000/01/rdf-schema#label> "outlaw"@en .
+<https://w3id.org/narn/social/relations/Outlaw> <http://www.w3.org/2004/02/skos/core#altLabel> "fugitive"@en .
+# 
+# https://w3id.org/narn/social/relations/PoliticalRole
+<https://w3id.org/narn/social/relations/PoliticalRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/PoliticalRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/social/relations/SocialRole> .
+<https://w3id.org/narn/social/relations/PoliticalRole> <http://www.w3.org/2000/01/rdf-schema#comment> "A social role involving governance or political authority."@en .
+<https://w3id.org/narn/social/relations/PoliticalRole> <http://www.w3.org/2000/01/rdf-schema#label> "political role"@en .
+<https://w3id.org/narn/social/relations/PoliticalRole> <http://www.w3.org/2004/02/skos/core#altLabel> "political position"@en .
+# 
+# https://w3id.org/narn/social/relations/PositiveRelation
+<https://w3id.org/narn/social/relations/PositiveRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/PositiveRelation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/narn/social/relations/positive> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/social/relations/hasValence> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/social/relations/PositiveRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation with positive emotional valence (owl:hasValue construct)."@en .
+<https://w3id.org/narn/social/relations/PositiveRelation> <http://www.w3.org/2000/01/rdf-schema#label> "positive relation"@en .
+<https://w3id.org/narn/social/relations/PositiveRelation> <http://www.w3.org/2004/02/skos/core#altLabel> "positive bond"@en .
+# 
+# https://w3id.org/narn/social/relations/RoyalServant
+<https://w3id.org/narn/social/relations/RoyalServant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/RoyalServant> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid16 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/social/relations/King> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/social/relations/served> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/Servant> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/social/relations/RoyalServant> <http://www.w3.org/2000/01/rdf-schema#comment> "A servant who serves a king."@en .
+<https://w3id.org/narn/social/relations/RoyalServant> <http://www.w3.org/2000/01/rdf-schema#label> "royal servant"@en .
+<https://w3id.org/narn/social/relations/RoyalServant> <http://www.w3.org/2004/02/skos/core#altLabel> "royal attendant"@en .
+# 
+# https://w3id.org/narn/social/relations/Servant
+<https://w3id.org/narn/social/relations/Servant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/Servant> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/social/relations/served> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/SocialRole> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/narn/social/relations/Servant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/social/relations/SocialRole> .
+<https://w3id.org/narn/social/relations/Servant> <http://www.w3.org/2000/01/rdf-schema#comment> "One who serves another."@en .
+<https://w3id.org/narn/social/relations/Servant> <http://www.w3.org/2000/01/rdf-schema#label> "servant"@en .
+<https://w3id.org/narn/social/relations/Servant> <http://www.w3.org/2004/02/skos/core#altLabel> "attendant"@en .
+# 
+# https://w3id.org/narn/social/relations/SocialRole
+<https://w3id.org/narn/social/relations/SocialRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/SocialRole> <http://www.w3.org/2000/01/rdf-schema#comment> "A role that a character plays in a social context."@en .
+<https://w3id.org/narn/social/relations/SocialRole> <http://www.w3.org/2000/01/rdf-schema#label> "social role"@en .
+<https://w3id.org/narn/social/relations/SocialRole> <http://www.w3.org/2004/02/skos/core#altLabel> "role"@en .
+# 
+# https://w3id.org/narn/social/relations/SuicidalCharacter
+<https://w3id.org/narn/social/relations/SuicidalCharacter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/narn/social/relations/SuicidalCharacter> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#hasSelf> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/social/relations/committedSuicide> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/narn/social/relations/SuicidalCharacter> <http://www.w3.org/2000/01/rdf-schema#comment> "A character who committed suicide."@en .
+<https://w3id.org/narn/social/relations/SuicidalCharacter> <http://www.w3.org/2000/01/rdf-schema#label> "suicidal character"@en .
+<https://w3id.org/narn/social/relations/SuicidalCharacter> <http://www.w3.org/2004/02/skos/core#altLabel> "self slain character"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/narn/social/relations/ambivalent
+<https://w3id.org/narn/social/relations/ambivalent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/narn/social/relations/ambivalent> <http://www.w3.org/2000/01/rdf-schema#comment> "An ambivalent or mixed emotional valence."@en .
+<https://w3id.org/narn/social/relations/ambivalent> <http://www.w3.org/2000/01/rdf-schema#label> "ambivalent"@en .
+<https://w3id.org/narn/social/relations/ambivalent> <http://www.w3.org/2004/02/skos/core#altLabel> "mixed sentiment"@en .
+# 
+# https://w3id.org/narn/social/relations/negative
+<https://w3id.org/narn/social/relations/negative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/narn/social/relations/negative> <http://www.w3.org/2000/01/rdf-schema#comment> "A negative emotional valence."@en .
+<https://w3id.org/narn/social/relations/negative> <http://www.w3.org/2000/01/rdf-schema#label> "negative"@en .
+<https://w3id.org/narn/social/relations/negative> <http://www.w3.org/2004/02/skos/core#altLabel> "negative sentiment"@en .
+# 
+# https://w3id.org/narn/social/relations/positive
+<https://w3id.org/narn/social/relations/positive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/narn/social/relations/positive> <http://www.w3.org/2000/01/rdf-schema#comment> "A positive emotional valence."@en .
+<https://w3id.org/narn/social/relations/positive> <http://www.w3.org/2000/01/rdf-schema#label> "positive"@en .
+<https://w3id.org/narn/social/relations/positive> <http://www.w3.org/2004/02/skos/core#altLabel> "positive sentiment"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointProperties> .
+_:genid25 <http://www.w3.org/2002/07/owl#members> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/loved> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/hated> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/social/relations/feared> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
