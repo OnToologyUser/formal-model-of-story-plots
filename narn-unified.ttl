@@ -1,0 +1,2219 @@
+@prefix narn: <https://w3id.org/narn/> .
+@prefix loc: <https://w3id.org/narn/location/> .
+@prefix to: <https://w3id.org/narn/to/> .
+@prefix rcc: <https://w3id.org/narn/rcc/> .
+@prefix soc: <https://w3id.org/narn/social/relations/> .
+@prefix evnt: <https://w3id.org/narn/event/> .
+@prefix plot: <https://w3id.org/narn/plot/> .
+@prefix act: <https://w3id.org/narn/action/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <https://purl.org/dc/terms/> .
+@prefix vann: <https://purl.org/vocab/vann/> .
+@prefix erdemonal: <https://w3id.org/people/erdemonal/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+narn: a owl:Ontology ;
+    rdfs:label "Formal Model of Story Plots"@en ;
+    rdfs:comment "An OWL ontology for modeling story plots and narrative structures. It provides a formal vocabulary to represent characters, locations, events, actions, and temporal relations within a narrative."@en ;
+    dct:created "2026-03-17"^^xsd:date ;
+    dct:creator erdemonal:me ;
+    vann:preferredNamespaceUri "https://w3id.org/narn/" ;
+    vann:preferredNamespacePrefix "narn" .
+
+#
+# Classes
+#
+loc:Place a owl:Class ;
+    rdfs:label "place"@en ;
+    skos:altLabel "location"@en ;
+    rdfs:comment """A named location that has geographic or spatial significance in a story."""@en .
+
+loc:Region a owl:Class ;
+    rdfs:subClassOf loc:Place ;
+    rdfs:label "region"@en ;
+    skos:altLabel "area"@en ;
+    rdfs:comment "A large geographic area, typically contains multiple subplaces."@en .
+
+loc:LandArea a owl:Class ;
+    rdfs:subClassOf loc:Place ;
+    rdfs:label "land area"@en ;
+    skos:altLabel "land"@en ;
+    rdfs:comment "A place that is primarily defined by its land territory."@en .
+
+loc:Continent a owl:Class ;
+    rdfs:subClassOf loc:LandArea ;
+    rdfs:label "continent"@en ;
+    skos:altLabel "landmass"@en ;
+    rdfs:comment "A major landmass."@en .
+
+loc:Realm a owl:Class ;
+    rdfs:subClassOf loc:LandArea ;
+    rdfs:label "realm"@en ;
+    skos:altLabel "kingdom"@en ;
+    rdfs:comment "A territory under the rule of a king or sovereign authority."@en .
+
+loc:NaturalArea a owl:Class ;
+    rdfs:subClassOf loc:Place ;
+    owl:disjointWith loc:Settlement ;
+    rdfs:label "natural area"@en ;
+    skos:altLabel "natural feature"@en ;
+    rdfs:comment "A place defined by natural geographic features rather than habitation."@en .
+
+loc:WoodedArea a owl:Class ;
+    rdfs:subClassOf loc:NaturalArea ;
+    rdfs:label "wooded area"@en ;
+    skos:altLabel "woodland"@en ;
+    rdfs:comment "A land area predominantly covered by trees."@en .
+
+loc:Forest a owl:Class ;
+    rdfs:subClassOf loc:WoodedArea ;
+    rdfs:label "forest"@en ;
+    skos:altLabel "wood"@en ;
+    rdfs:comment "A large, dense wooded area."@en .
+
+loc:Mountain a owl:Class ;
+    rdfs:subClassOf loc:NaturalArea ;
+    rdfs:label "mountain"@en ;
+    skos:altLabel "peak"@en ;
+    rdfs:comment "A large natural elevation of the earth's surface."@en .
+
+loc:Hill a owl:Class ;
+    rdfs:subClassOf loc:NaturalArea ;
+    rdfs:label "hill"@en ;
+    skos:altLabel "hillock"@en ;
+    rdfs:comment "A naturally raised area of land, smaller than a mountain."@en .
+
+loc:Valley a owl:Class ;
+    rdfs:subClassOf loc:NaturalArea ;
+    rdfs:label "valley"@en ;
+    skos:altLabel "vale"@en ;
+    rdfs:comment "A low area of land between hills or mountains."@en .
+
+loc:River a owl:Class ;
+    rdfs:subClassOf loc:NaturalArea ;
+    rdfs:label "river"@en ;
+    skos:altLabel "waterway"@en ;
+    rdfs:comment "A large natural stream of water."@en .
+
+loc:Lake a owl:Class ;
+    rdfs:subClassOf loc:NaturalArea ;
+    rdfs:label "lake"@en ;
+    skos:altLabel "body of water"@en ;
+    rdfs:comment "A large body of water surrounded by land."@en .
+
+loc:Sea a owl:Class ;
+    rdfs:subClassOf loc:NaturalArea ;
+    rdfs:label "sea"@en ;
+    skos:altLabel "ocean"@en ;
+    rdfs:comment "A large body of salt water."@en .
+
+loc:Desert a owl:Class ;
+    rdfs:subClassOf loc:NaturalArea ;
+    rdfs:label "desert"@en ;
+    skos:altLabel "wasteland"@en ;
+    rdfs:comment "A barren, arid area with little vegetation."@en .
+
+loc:WildArea a owl:Class ;
+    rdfs:subClassOf loc:NaturalArea ;
+    rdfs:label "wild area"@en ;
+    skos:altLabel "wilderness"@en ;
+    rdfs:comment "An uncultivated, uninhabited region."@en .
+
+loc:Settlement a owl:Class ;
+    rdfs:subClassOf loc:Place ;
+    rdfs:label "settlement"@en ;
+    skos:altLabel "inhabited place"@en ;
+    rdfs:comment "A place where people live permanently."@en .
+
+loc:City a owl:Class ;
+    rdfs:subClassOf loc:Settlement ;
+    rdfs:label "city"@en ;
+    skos:altLabel "urban area"@en ;
+    rdfs:comment "A large and significant settlement."@en .
+
+loc:Town a owl:Class ;
+    rdfs:subClassOf loc:Settlement ;
+    rdfs:label "town"@en ;
+    skos:altLabel "township"@en ;
+    rdfs:comment "A settlement larger than a village but smaller than a city."@en .
+
+loc:Village a owl:Class ;
+    rdfs:subClassOf loc:Settlement ;
+    rdfs:label "village"@en ;
+    skos:altLabel "hamlet"@en ;
+    rdfs:comment "A small settlement, typically in a rural area."@en .
+
+loc:Fortress a owl:Class ;
+    rdfs:subClassOf loc:Settlement ;
+    rdfs:label "fortress"@en ;
+    skos:altLabel "stronghold"@en ;
+    rdfs:comment "A fortified place, typically a military stronghold."@en .
+
+loc:Building a owl:Class ;
+    rdfs:subClassOf loc:Place ;
+    rdfs:label "building"@en ;
+    skos:altLabel "structure"@en ;
+    rdfs:comment "A constructed structure."@en .
+
+loc:UndergroundPlace a owl:Class ;
+    rdfs:subClassOf loc:Place ;
+    rdfs:label "underground place"@en ;
+    skos:altLabel "subterranean place"@en ;
+    rdfs:comment "A place located beneath the surface of the earth."@en .
+
+loc:UndergroundCity a owl:Class ;
+    rdfs:label "underground city"@en ;
+    skos:altLabel "subterranean city"@en ;
+    rdfs:comment "A city built underground, within caves or excavated halls."@en .
+
+#
+# Properties
+#
+loc:hasSpatialRelation a owl:ObjectProperty ;
+    rdfs:label "has spatial relation"@en ;
+    skos:altLabel "spatially related to"@en ;
+    rdfs:domain loc:Place ;
+    rdfs:range loc:Place ;
+    rdfs:comment "A general spatial relation between two places."@en .
+
+loc:isAPartOf a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf loc:hasSpatialRelation ;
+    rdfs:label "is a part of"@en ;
+    skos:altLabel "part of"@en ;
+    rdfs:domain loc:Place ;
+    rdfs:range loc:Place ;
+    rdfs:comment """Indicates that a place constitutes a subarea of another place."""@en .
+
+loc:contains a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf loc:isAPartOf ;
+    rdfs:subPropertyOf loc:hasSpatialRelation ;
+    rdfs:label "contains"@en ;
+    skos:altLabel "includes"@en ;
+    rdfs:domain loc:Place ;
+    rdfs:range loc:Place ;
+    rdfs:comment "Inverse of isAPartOf."@en .
+
+loc:isStrictlyInsideOf a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf loc:isAPartOf ;
+    rdfs:label "is strictly inside of"@en ;
+    skos:altLabel "strictly within"@en ;
+    rdfs:comment "Stricter form of isAPartOf where boundaries do not touch."@en .
+
+loc:borders a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:subPropertyOf loc:hasSpatialRelation ;
+    rdfs:label "borders"@en ;
+    skos:altLabel "adjacent to"@en ;
+    rdfs:comment "Two places share a boundary but neither contains the other."@en .
+
+loc:isNear a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:subPropertyOf loc:hasSpatialRelation ;
+    rdfs:label "is near"@en ;
+    skos:altLabel "close to"@en ;
+    rdfs:comment "Two places are in proximity."@en .
+
+loc:isTheCapitalOf a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:label "is the capital of"@en ;
+    skos:altLabel "capital of"@en ;
+    rdfs:domain loc:Settlement ;
+    rdfs:range loc:Realm ;
+    rdfs:comment "A settlement is the capital of a realm."@en .
+
+#
+# Axioms
+#
+loc:Forest owl:disjointWith loc:Desert .
+loc:Mountain owl:disjointWith loc:Sea .
+loc:River owl:disjointWith loc:Mountain .
+loc:Building owl:disjointWith loc:NaturalArea .
+loc:City owl:disjointWith loc:Village .
+loc:Town owl:disjointWith loc:Village .
+
+loc:UndergroundCity owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf ( loc:City loc:UndergroundPlace )
+] .
+
+
+loc:Realm owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        loc:LandArea
+        [ a owl:Restriction ;
+          owl:onProperty [ owl:inverseOf loc:isTheCapitalOf ] ;
+          owl:someValuesFrom loc:Settlement ]
+    )
+] .
+
+
+# Every Settlement is part of some place
+loc:Settlement rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty loc:isAPartOf ;
+    owl:someValuesFrom loc:Place
+] .
+
+
+# A Continent cannot have a capital 
+loc:Continent rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf loc:isTheCapitalOf ] ;
+    owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+    owl:onClass loc:Settlement
+] .
+
+
+loc:Continent rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty loc:isAPartOf ;
+    owl:allValuesFrom [
+        a owl:Class ;
+        owl:complementOf loc:LandArea
+    ]
+] .
+
+loc:borders a owl:IrreflexiveProperty .
+loc:isNear a owl:IrreflexiveProperty .
+
+
+#
+# Properties
+#
+rcc:spatiallyRelatedTo a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "spatially related to"@en ;
+    skos:altLabel "spatial relation"@en ;
+    rdfs:domain loc:Place ;
+    rdfs:range loc:Place ;
+    rdfs:comment "The most general spatial relation between two regions."@en .
+
+rcc:DC a owl:ObjectProperty, owl:SymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "disconnected"@en ;
+    skos:altLabel "disjoint regions"@en ;
+    rdfs:comment "Two regions share no points at all."@en .
+
+rcc:EC a owl:ObjectProperty, owl:SymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "externally connected"@en ;
+    skos:altLabel "touching regions"@en ;
+    rdfs:comment "Boundaries touch but interiors are disjoint."@en .
+
+rcc:PO a owl:ObjectProperty, owl:SymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "partially overlapping"@en ;
+    skos:altLabel "overlapping regions"@en ;
+    rdfs:comment "Part of each region is inside the other but neither is contained."@en .
+
+rcc:EQ a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "equal"@en ;
+    skos:altLabel "coextensive regions"@en ;
+    rdfs:comment "Same spatial extent. Equivalence relation."@en .
+
+rcc:TPP a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "tangential proper part"@en ;
+    skos:altLabel "tangential part"@en ;
+    rdfs:comment "First region entirely inside second, boundaries touch."@en .
+
+rcc:TPPi a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    owl:inverseOf rcc:TPP ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "tangential proper part inverse"@en ;
+    skos:altLabel "tangential whole"@en ;
+    rdfs:comment "First region entirely contains second, boundaries touch."@en .
+
+rcc:NTPP a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "non-tangential proper part"@en ;
+    skos:altLabel "interior part"@en ;
+    rdfs:comment "First region entirely inside second, boundaries do not touch."@en .
+
+rcc:NTPPi a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    owl:inverseOf rcc:NTPP ;
+    rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
+    rdfs:label "non-tangential proper part inverse"@en ;
+    skos:altLabel "interior whole"@en ;
+    rdfs:comment "First region entirely contains second, boundaries do not touch."@en .
+
+#
+# Axioms
+#
+rcc:NTPP rdfs:subPropertyOf loc:isAPartOf .
+rcc:TPP rdfs:subPropertyOf loc:isAPartOf .
+rcc:NTPPi rdfs:subPropertyOf loc:contains .
+rcc:TPPi rdfs:subPropertyOf loc:contains .
+rcc:EC rdfs:subPropertyOf loc:borders .
+
+rcc:EQ rdfs:subPropertyOf loc:isAPartOf .
+rcc:EQ rdfs:subPropertyOf loc:contains .
+
+
+rcc:DC owl:propertyDisjointWith loc:isAPartOf .  
+rcc:EC owl:propertyDisjointWith loc:isAPartOf . 
+rcc:PO owl:propertyDisjointWith loc:isAPartOf .  
+rcc:DC owl:propertyDisjointWith loc:borders .
+rcc:DC owl:propertyDisjointWith loc:isNear .
+rcc:DC owl:propertyDisjointWith loc:contains .  
+rcc:EC owl:propertyDisjointWith loc:contains .  
+rcc:EC owl:propertyDisjointWith rcc:NTPP .  
+rcc:PO owl:propertyDisjointWith loc:contains .  
+
+[] a owl:AllDisjointProperties ;
+    owl:members ( rcc:DC rcc:EC rcc:PO rcc:EQ rcc:TPP rcc:TPPi rcc:NTPP rcc:NTPPi ) .
+
+#
+# Classes
+#
+to:TemporalEntity a owl:Class ;
+    rdfs:label "temporal entity"@en ;
+    skos:altLabel "time entity"@en ;
+    rdfs:comment "A thing that exists in time."@en .
+
+to:Instant a owl:Class ;
+    rdfs:subClassOf to:TemporalEntity ;
+    owl:disjointWith to:Interval ;
+    rdfs:label "instant"@en ;
+    skos:altLabel "time point"@en ;
+    rdfs:comment "A single point in time with zero duration."@en .
+
+to:Interval a owl:Class ;
+    rdfs:subClassOf to:TemporalEntity ;
+    rdfs:label "interval"@en ;
+    skos:altLabel "time span"@en ;
+    rdfs:comment "A continuous extent of time with nonzero duration."@en .
+
+to:FiniteInterval a owl:Class ;
+    rdfs:subClassOf to:Interval, to:StartingInterval, to:EndingInterval ;
+    owl:disjointWith to:InfiniteInterval ;
+    rdfs:label "finite interval"@en ;
+    skos:altLabel "bounded interval"@en ;
+    rdfs:comment "An interval with both a starting and ending instant."@en .
+
+to:InfiniteInterval a owl:Class ;
+    rdfs:subClassOf to:Interval ;
+    rdfs:label "infinite interval"@en ;
+    skos:altLabel "unbounded interval"@en ;
+    rdfs:comment "An interval extending infinitely in at least one direction."@en .
+
+to:StartingInterval a owl:Class ;
+    rdfs:subClassOf to:Interval ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty to:startsAt ;
+        owl:someValuesFrom to:Instant
+    ] ;
+    rdfs:label "starting interval"@en ;
+    skos:altLabel "begins with"@en ;
+    rdfs:comment "An interval with a defined starting instant."@en .
+
+to:EndingInterval a owl:Class ;
+    rdfs:subClassOf to:Interval ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty to:endsAt ;
+        owl:someValuesFrom to:Instant
+    ] ;
+    rdfs:label "ending interval"@en ;
+    skos:altLabel "ending point"@en ;
+    rdfs:comment "An interval with a defined ending instant."@en .
+
+to:EternalInterval a owl:Class ;
+    rdfs:subClassOf to:InfiniteInterval ;
+    rdfs:label "eternal interval"@en ;
+    skos:altLabel "everlasting interval"@en ;
+    rdfs:comment "An interval extending infinitely in both directions."@en .
+
+# Properties
+to:occursBefore a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain to:Instant ;
+    rdfs:range to:Instant ;
+    owl:propertyDisjointWith to:occursSimultaneouslyTo ;
+    rdfs:label "occurs before"@en ;
+    skos:altLabel "earlier than"@en ;
+    rdfs:comment "Instant strictly before another."@en .
+
+to:occursAfter a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:occursBefore ;
+    rdfs:domain to:Instant ;
+    rdfs:range to:Instant ;
+    rdfs:label "occurs after"@en ;
+    skos:altLabel "later than"@en ;
+    rdfs:comment "Inverse of occursBefore."@en .
+
+to:occursSimultaneouslyTo a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty, owl:TransitiveProperty ;
+    rdfs:domain to:Instant ;
+    rdfs:range to:Instant ;
+    rdfs:label "occurs simultaneously to"@en ;
+    skos:altLabel "at same time as"@en ;
+    rdfs:comment "Two instants at the same time."@en .
+
+to:hasInstant a owl:ObjectProperty ;
+    rdfs:domain to:Interval ;
+    rdfs:range to:Instant ;
+    rdfs:label "has instant"@en ;
+    skos:altLabel "at instant"@en ;
+    rdfs:comment "Links an interval to an instant that falls within or bounds it."@en .
+
+to:startsAt a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf to:hasInstant ;
+    rdfs:domain to:Interval ;
+    rdfs:range to:Instant ;
+    rdfs:label "starts at"@en ;
+    skos:altLabel "beginning point"@en ;
+    rdfs:comment "The unique starting instant."@en .
+
+to:endsAt a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf to:hasInstant ;
+    rdfs:domain to:Interval ;
+    rdfs:range to:Instant ;
+    rdfs:label "ends at"@en ;
+    skos:altLabel "ending point"@en ;
+    rdfs:comment "The unique ending instant."@en .
+
+to:occursDuring a owl:ObjectProperty ;
+    rdfs:domain to:Instant ;
+    rdfs:range to:Interval ;
+    rdfs:label "occurs during"@en ;
+    skos:altLabel "within timeframe of"@en ;
+    rdfs:comment "An instant falls within the extent of an interval."@en .
+
+to:hasDateTime a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain to:Instant ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has date time"@en ;
+    skos:altLabel "dateTime value"@en ;
+    rdfs:comment "The calendar date and time of an instant."@en .
+
+to:hasDuration a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain to:Interval ;
+    rdfs:range xsd:duration ;
+    rdfs:label "has duration"@en ;
+    skos:altLabel "time length"@en ;
+    rdfs:comment "The length of time spanned by an interval."@en .
+
+to:intervalRelation a owl:ObjectProperty ;
+    rdfs:domain to:Interval ;
+    rdfs:range to:Interval ;
+    rdfs:label "interval relation"@en ;
+    skos:altLabel "Allen relation"@en ;
+    rdfs:comment "General temporal relation between two intervals."@en .
+
+to:before a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "before"@en ;
+    skos:altLabel "precedes"@en ;
+    rdfs:comment "X ends before Y starts."@en .
+
+to:after a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:before ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "after"@en ;
+    skos:altLabel "follows"@en ;
+    rdfs:comment "Inverse of before. X starts after Y ends."@en .
+
+to:meets a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "meets"@en ;
+    skos:altLabel "immediately before"@en ;
+    rdfs:comment "X ends exactly when Y starts."@en .
+
+to:metBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    owl:inverseOf to:meets ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "met by"@en ;
+    skos:altLabel "immediately after"@en ;
+    rdfs:comment "Inverse of meets. X starts exactly when Y ends."@en .
+
+to:overlaps a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    owl:propertyDisjointWith to:before, to:meets ;
+    rdfs:label "overlaps"@en ;
+    skos:altLabel "partially before"@en ;
+    rdfs:comment "X starts before Y, ends after Y starts but before Y ends."@en .
+
+to:overlappedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    owl:inverseOf to:overlaps ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "overlapped by"@en ;
+    skos:altLabel "partially after"@en ;
+    rdfs:comment "Inverse of overlaps. Y starts before X, ends after X starts but before X ends."@en .
+
+to:starts a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "starts"@en ;
+    skos:altLabel "begins with"@en ;
+    rdfs:comment "X starts at same time as Y but ends before Y ends."@en .
+
+to:startedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:starts ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "started by"@en ;
+    skos:altLabel "begun by"@en ;
+    rdfs:comment "Inverse of starts. X starts when Y starts but Y ends after X ends."@en .
+
+to:during a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "during"@en ;
+    skos:altLabel "contained in"@en ;
+    rdfs:comment "X occurs entirely within Y."@en .
+
+to:containsInterval a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:during ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "contains interval"@en ;
+    skos:altLabel "temporally contains"@en ;
+    rdfs:comment "Inverse of during. X entirely contains Y."@en .
+
+to:finishes a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "finishes"@en ;
+    skos:altLabel "ends with"@en ;
+    rdfs:comment "X ends at same time as Y but starts after Y starts."@en .
+
+to:finishedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:finishes ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "finished by"@en ;
+    skos:altLabel "ended by"@en ;
+    rdfs:comment "Inverse of finishes. X ends when Y ends but Y starts before X starts."@en .
+
+to:equals a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "equals"@en ;
+    skos:altLabel "same time as"@en ;
+    rdfs:comment "Same temporal extent."@en .
+
+
+to:precedes a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "precedes"@en ;
+    skos:altLabel "happens before"@en ;
+    rdfs:comment "X ends before or when Y starts."@en .
+
+to:before rdfs:subPropertyOf to:precedes .
+to:meets rdfs:subPropertyOf to:precedes .
+
+to:precededBy a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:precedes ;
+    rdfs:label "preceded by"@en ;
+    skos:altLabel "happens after"@en ;
+    rdfs:comment "Inverse of precedes. X starts after or when Y ends."@en .
+
+#
+# Axioms
+#
+# FiniteInterval ≡ Interval ⊓ ∃startsAt.Instant ⊓ ∃endsAt.Instant
+#
+to:FiniteInterval owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        to:Interval
+        [ a owl:Restriction ;
+          owl:onProperty to:startsAt ;
+          owl:someValuesFrom to:Instant ]
+        [ a owl:Restriction ;
+          owl:onProperty to:endsAt ;
+          owl:someValuesFrom to:Instant ]
+    )
+] .
+
+# EternalInterval ≡ InfiniteInterval ⊓ ¬StartingInterval ⊓ ¬EndingInterval
+to:EternalInterval owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        to:InfiniteInterval
+        [ a owl:Class ; owl:complementOf to:StartingInterval ]
+        [ a owl:Class ; owl:complementOf to:EndingInterval ]
+    )
+] .
+
+# A starting interval is any interval that has a beginning
+to:StartingInterval owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        to:Interval
+        [ a owl:Restriction ;
+          owl:onProperty to:startsAt ;
+          owl:someValuesFrom to:Instant ]
+    )
+] .
+
+
+# An Interval's instants are only Instants (not other intervals)
+to:Interval rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty to:hasInstant ;
+    owl:allValuesFrom to:Instant
+] .
+
+# startsAt and endsAt range only to Instants
+to:FiniteInterval rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty to:startsAt ;
+    owl:allValuesFrom to:Instant
+] .
+
+
+
+# A FiniteInterval has exactly 1 start instant and exactly 1 end instant
+to:FiniteInterval rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty to:startsAt ;
+    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass to:Instant
+] .
+to:FiniteInterval rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty to:endsAt ;
+    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass to:Instant
+] .
+
+to:EternalInterval owl:disjointWith to:FiniteInterval .
+
+
+to:startsAt owl:propertyDisjointWith to:endsAt .
+
+[] a owl:AllDisjointProperties ;
+    owl:members ( to:before to:after to:meets to:metBy
+                  to:overlaps to:overlappedBy to:starts to:startedBy
+                  to:during to:containsInterval to:finishes to:finishedBy
+                  to:equals ) .
+
+to:startsAt a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+to:endsAt a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+to:hasInstant a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+
+
+#
+# Classes
+#
+soc:SocialRole a owl:Class ;
+    rdfs:label "social role"@en ;
+    skos:altLabel "role"@en ;
+    rdfs:comment "A role that a character plays in a social context."@en .
+
+soc:PoliticalRole a owl:Class ;
+    rdfs:subClassOf soc:SocialRole ;
+    rdfs:label "political role"@en ;
+    skos:altLabel "political position"@en ;
+    rdfs:comment "A social role involving governance or political authority."@en .
+
+soc:MilitaryRole a owl:Class ;
+    rdfs:subClassOf soc:SocialRole ;
+    rdfs:label "military role"@en ;
+    skos:altLabel "military position"@en ;
+    rdfs:comment "A social role related to military or combat functions."@en .
+
+soc:King a owl:Class ;
+    rdfs:subClassOf soc:PoliticalRole ;
+    owl:disjointWith soc:Servant ;
+    rdfs:label "king"@en ;
+    skos:altLabel "monarch"@en ;
+    rdfs:comment "A ruler of a realm or kingdom."@en .
+
+soc:Chieftain a owl:Class ;
+    rdfs:subClassOf soc:PoliticalRole ;
+    rdfs:label "chieftain"@en ;
+    skos:altLabel "chief"@en ;
+    rdfs:comment "The leader of a people or tribe."@en .
+
+soc:Servant a owl:Class ;
+    rdfs:subClassOf soc:SocialRole ;
+    rdfs:label "servant"@en ;
+    skos:altLabel "attendant"@en ;
+    rdfs:comment "One who serves another."@en .
+
+soc:Outlaw a owl:Class ;
+    rdfs:subClassOf soc:SocialRole ;
+    rdfs:label "outlaw"@en ;
+    skos:altLabel "fugitive"@en ;
+    rdfs:comment "A person who lives outside the law."@en .
+
+soc:Ally a owl:Class ;
+    rdfs:subClassOf soc:SocialRole ;
+    owl:disjointWith soc:Outlaw ;
+    rdfs:label "ally"@en ;
+    skos:altLabel "companion"@en ;
+    rdfs:comment "One allied with others"@en .
+
+soc:Leader a owl:Class ;
+    rdfs:label "leader"@en ;
+    skos:altLabel "ruler"@en ;
+    rdfs:comment "A leader is either a King or a Chieftain."@en .
+
+soc:NonLeader a owl:Class ;
+    owl:complementOf soc:Leader ;
+    rdfs:label "non-leader"@en ;
+    skos:altLabel "non-ruler"@en ;
+    rdfs:comment "Anyone who is not a Leader."@en .
+
+soc:RoyalServant a owl:Class ;
+    owl:intersectionOf (
+        soc:Servant
+        [ a owl:Restriction ;
+          owl:onProperty soc:served ;
+          owl:someValuesFrom soc:King ]
+    ) ;
+    rdfs:label "royal servant"@en ;
+    skos:altLabel "royal attendant"@en ;
+    rdfs:comment "A servant who serves a king."@en .
+
+soc:EmotionalValence a owl:Class ;
+    owl:oneOf ( soc:positive soc:negative soc:ambivalent ) ;
+    rdfs:label "emotional valence"@en ;
+    skos:altLabel "sentiment type"@en ;
+    rdfs:comment "Enumerated class: {positive, negative, ambivalent}."@en .
+
+soc:positive a owl:NamedIndividual ; rdfs:label "positive"@en ; rdfs:comment "A positive emotional valence."@en  ;
+    skos:altLabel "positive sentiment"@en .
+soc:negative a owl:NamedIndividual ; rdfs:label "negative"@en ; rdfs:comment "A negative emotional valence."@en  ;
+    skos:altLabel "negative sentiment"@en .
+soc:ambivalent a owl:NamedIndividual ; rdfs:label "ambivalent"@en ; rdfs:comment "An ambivalent or mixed emotional valence."@en  ;
+    skos:altLabel "mixed sentiment"@en .
+
+soc:SuicidalCharacter a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty soc:committedSuicide ;
+        owl:hasSelf true
+    ] ;
+    rdfs:label "suicidal character"@en ;
+    skos:altLabel "self slain character"@en ;
+    rdfs:comment "A character who committed suicide."@en .
+
+#
+# Properties
+#
+soc:hasEmotionalRelationWith a owl:ObjectProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing ;
+    rdfs:label "has emotional relation with"@en ;
+    skos:altLabel "feels towards"@en ;
+    rdfs:comment "General emotional relationship between two characters."@en .
+
+soc:loved a owl:ObjectProperty ;
+    rdfs:subPropertyOf soc:hasEmotionalRelationWith ;
+    rdfs:label "loved"@en ;
+    skos:altLabel "had love for"@en ;
+    rdfs:comment "Character had feelings of love towards another."@en .
+
+soc:hated a owl:ObjectProperty ;
+    rdfs:subPropertyOf soc:hasEmotionalRelationWith ;
+    rdfs:label "hated"@en ;
+    skos:altLabel "had hatred for"@en ;
+    rdfs:comment "Character had hatred towards another."@en .
+
+soc:feared a owl:ObjectProperty ;
+    rdfs:subPropertyOf soc:hasEmotionalRelationWith ;
+    rdfs:label "feared"@en ;
+    skos:altLabel "had fear of"@en ;
+    rdfs:comment "Character feared another character."@en .
+
+soc:hasFriend a owl:ObjectProperty,
+    owl:SymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:subPropertyOf soc:hasEmotionalRelationWith ;
+    rdfs:label "has friend"@en ;
+    skos:altLabel "is a friend of"@en ;
+    rdfs:comment "Mutual friendship. Symmetric."@en .
+
+soc:wasTheBestFriendOf a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:subPropertyOf soc:hasFriend ;
+    rdfs:label "was the best friend of"@en ;
+    skos:altLabel "closest companion of"@en ;
+    rdfs:comment "Particularly close friendship."@en .
+
+soc:isAnEnemyOf a owl:ObjectProperty, owl:SymmetricProperty ;
+    owl:propertyDisjointWith soc:hasFriend ;
+    rdfs:label "is an enemy of"@en ;
+    skos:altLabel "foe of"@en ;
+    rdfs:comment "Antagonistic relation."@en .
+
+soc:mutuallyLoved a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:subPropertyOf soc:loved ;
+    rdfs:label "mutually loved"@en ;
+    skos:altLabel "reciprocally loved"@en ;
+    rdfs:comment "Two characters loved each other."@en .
+
+soc:served a owl:ObjectProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing ;
+    rdfs:label "served"@en ;
+    skos:altLabel "was in service of"@en ;
+    rdfs:comment "Character served another as a subordinate."@en .
+
+soc:wasServedBy a owl:ObjectProperty ;
+    owl:inverseOf soc:served ;
+    rdfs:label "was served by"@en ;
+    skos:altLabel "had as servant"@en ;
+    rdfs:comment "Inverse of served."@en .
+
+soc:wasTheKingOf a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:label "was the king of"@en ;
+    skos:altLabel "reigned over"@en ;
+    rdfs:range loc:Place ;
+    rdfs:comment "Character was the ruler of a place."@en .
+
+soc:wasTheChieftainOf a owl:ObjectProperty ;
+    rdfs:label "was the chieftain of"@en ;
+    skos:altLabel "led as chief"@en ;
+    rdfs:range loc:Place ;
+    rdfs:comment "Character was the chieftain of a people or place."@en .
+
+soc:ruled a owl:ObjectProperty ;
+    owl:equivalentProperty soc:wasTheKingOf ;
+    rdfs:label "ruled"@en ;
+    skos:altLabel "governed"@en ;
+    rdfs:comment "Equivalent to wasTheKingOf."@en .
+
+soc:livedIn a owl:ObjectProperty ;
+    rdfs:label "lived in"@en ;
+    skos:altLabel "dwelt in"@en ;
+    rdfs:range loc:Place ;
+    rdfs:comment "Character lived in a place during some period."@en .
+
+soc:wasHeldCaptiveIn a owl:ObjectProperty ;
+    rdfs:subPropertyOf soc:livedIn ;
+    rdfs:label "was held captive in"@en ;
+    skos:altLabel "imprisoned in"@en ;
+    rdfs:range loc:Place ;
+    rdfs:comment "Character was imprisoned."@en .
+
+soc:killed a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    rdfs:label "killed"@en ;
+    skos:altLabel "slew"@en ;
+    rdfs:comment "X killed Y."@en .
+
+soc:wasKilledBy a owl:ObjectProperty ;
+    owl:inverseOf soc:killed ;
+    rdfs:label "was killed by"@en ;
+    skos:altLabel "slain by"@en ;
+    rdfs:comment "Inverse of killed."@en .
+
+soc:committedSuicide a owl:ObjectProperty ;
+    rdfs:label "committed suicide"@en ;
+    skos:altLabel "took own life"@en ;
+    rdfs:comment "Self killing."@en .
+
+soc:cursed a owl:ObjectProperty ;
+    rdfs:label "cursed"@en ;
+    skos:altLabel "placed a curse on"@en ;
+    rdfs:comment "Character placed a curse upon another."@en .
+
+soc:hypnotised a owl:ObjectProperty ;
+    rdfs:label "hypnotised"@en ;
+    skos:altLabel "cast a spell on"@en ;
+    rdfs:comment "Character placed another under a spell."@en .
+
+soc:isAKinsmanOf a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "is a kinsman of"@en ;
+    skos:altLabel "kin of"@en ;
+    rdfs:comment "Kinship or blood relation."@en .
+
+soc:isMarriedTo a owl:ObjectProperty ;
+    a owl:SymmetricProperty, owl:IrreflexiveProperty ;
+    rdfs:label "is married to"@en ;
+    skos:altLabel "wed to"@en ;
+    rdfs:comment "Marriage relationship."@en .
+
+soc:hasValence a owl:ObjectProperty ;
+    a owl:FunctionalProperty ;
+    rdfs:range soc:EmotionalValence ;
+    rdfs:label "has valence"@en ;
+    skos:altLabel "has sentiment"@en ;
+    rdfs:comment "Assigns an emotional valence. Functional."@en .
+
+#
+# Axioms
+#
+soc:PositiveRelation a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty soc:hasValence ;
+        owl:hasValue soc:positive
+    ] ;
+    rdfs:label "positive relation"@en ;
+    skos:altLabel "positive bond"@en ;
+    rdfs:comment "A relation with positive emotional valence (owl:hasValue construct)."@en .
+
+
+soc:Leader owl:equivalentClass [
+    a owl:Class ;
+    owl:unionOf ( soc:King soc:Chieftain )
+] .
+
+soc:livedIn owl:propertyChainAxiom ( soc:served soc:wasTheKingOf ) .
+
+soc:King rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty soc:wasServedBy ;
+    owl:allValuesFrom soc:Servant
+] .
+
+soc:King rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty soc:wasTheKingOf ;
+    owl:someValuesFrom loc:Place
+] .
+
+soc:Outlaw rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty soc:isAnEnemyOf ;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass owl:Thing
+] .
+
+
+soc:isAnEnemyOf a owl:IrreflexiveProperty .
+soc:served a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+soc:hasFriend owl:propertyDisjointWith soc:isAnEnemyOf .
+soc:Ally owl:disjointWith soc:Outlaw .
+
+soc:Servant owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        soc:SocialRole
+        [ a owl:Restriction ;
+          owl:onProperty soc:served ;
+          owl:someValuesFrom owl:Thing ]
+    )
+] .
+
+soc:Chieftain rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty soc:wasTheChieftainOf ;
+    owl:someValuesFrom loc:Place
+] .
+
+
+soc:killed owl:propertyDisjointWith soc:served .
+soc:wasServedBy owl:propertyDisjointWith soc:isAnEnemyOf .
+
+[] a owl:AllDisjointProperties ;
+    owl:members ( soc:loved soc:hated soc:feared ) .
+
+
+#
+# Classes
+#
+evnt:Event a owl:Class ;
+    rdfs:subClassOf to:FiniteInterval ;
+    rdfs:label "event"@en ;
+    skos:altLabel "occurrence"@en ;
+    rdfs:comment """A spatio-temporal occurrence involving participants at places.
+        Every event is a finite temporal interval."""@en .
+
+evnt:LifeEvent a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "life event"@en ;
+    skos:altLabel "life occurrence"@en ;
+    rdfs:comment "A significant moment in a character's life."@en .
+
+evnt:Birth a owl:Class ;
+    rdfs:subClassOf evnt:LifeEvent ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty evnt:begets ;
+        owl:someValuesFrom owl:Thing
+    ] ;
+    rdfs:label "birth"@en ;
+    skos:altLabel "nativity"@en ;
+    rdfs:comment "A character being born. Every birth begets at least one character."@en .
+
+evnt:Death a owl:Class ;
+    rdfs:subClassOf evnt:LifeEvent ;
+    owl:disjointWith evnt:Birth ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty evnt:hasVictim ;
+        owl:someValuesFrom owl:Thing
+    ] ;
+    rdfs:label "death"@en ;
+    skos:altLabel "demise"@en ;
+    rdfs:comment "A character dying. Every death has at least one victim."@en .
+
+evnt:Suicide a owl:Class ;
+    rdfs:subClassOf evnt:Death ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty evnt:hasAgent ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass owl:Thing
+    ] ;
+    rdfs:label "suicide"@en ;
+    skos:altLabel "self-killing"@en ;
+    rdfs:comment "A death where the victim is also the agent. At most one agent."@en .
+
+evnt:Murder a owl:Class ;
+    rdfs:subClassOf evnt:Death ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty evnt:hasAgent ;
+        owl:someValuesFrom owl:Thing
+    ] ;
+    rdfs:label "murder"@en ;
+    skos:altLabel "homicide"@en ;
+    rdfs:comment "A death caused intentionally by another. Has at least one agent."@en .
+
+evnt:Marriage a owl:Class ;
+    rdfs:subClassOf evnt:LifeEvent ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty evnt:hasParticipant ;
+        owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+        owl:onClass owl:Thing
+    ] ;
+    rdfs:label "marriage"@en ;
+    skos:altLabel "wedding"@en ;
+    rdfs:comment "Two characters getting married. Involves exactly 2 participants."@en .
+
+evnt:ConflictEvent a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "conflict event"@en ;
+    skos:altLabel "clash"@en ;
+    rdfs:comment "An event involving antagonism or violence."@en .
+
+evnt:Battle a owl:Class ;
+    rdfs:subClassOf evnt:ConflictEvent ;
+    rdfs:label "battle"@en ;
+    skos:altLabel "armed conflict"@en ;
+    rdfs:comment "A large scale violent confrontation."@en .
+
+evnt:War a owl:Class ;
+    rdfs:subClassOf evnt:ConflictEvent ;
+    rdfs:label "war"@en ;
+    skos:altLabel "prolonged conflict"@en ;
+    rdfs:comment "A prolonged conflict with multiple battles."@en .
+
+evnt:Duel a owl:Class ;
+    rdfs:subClassOf evnt:ConflictEvent ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty evnt:hasParticipant ;
+        owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+        owl:onClass owl:Thing
+    ] ;
+    rdfs:label "duel"@en ;
+    skos:altLabel "single combat"@en ;
+    rdfs:comment "A fight between exactly two combatants."@en .
+
+evnt:Siege a owl:Class ;
+    rdfs:subClassOf evnt:ConflictEvent ;
+    rdfs:label "siege"@en ;
+    skos:altLabel "blockade"@en ;
+    rdfs:comment "A military blockade of a city or fortress."@en .
+
+evnt:MovementEvent a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "movement event"@en ;
+    skos:altLabel "movement"@en ;
+    rdfs:comment "An event involving physical movement of characters between places."@en .
+
+evnt:Travel a owl:Class ;
+    rdfs:subClassOf evnt:MovementEvent ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty evnt:hasOrigin ;
+        owl:someValuesFrom loc:Place
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty evnt:hasDestination ;
+        owl:someValuesFrom loc:Place
+    ] ;
+    rdfs:label "travel"@en ;
+    skos:altLabel "journey"@en ;
+    rdfs:comment "A journey. Every travel has origin and destination."@en .
+
+evnt:Flight a owl:Class ;
+    rdfs:subClassOf evnt:MovementEvent ;
+    rdfs:label "flight"@en ;
+    skos:altLabel "escape"@en ;
+    rdfs:comment "Characters flee from danger."@en .
+
+evnt:Exile a owl:Class ;
+    rdfs:subClassOf evnt:MovementEvent ;
+    rdfs:label "exile"@en ;
+    skos:altLabel "banishment"@en ;
+    rdfs:comment "Forced departure from homeland."@en .
+
+evnt:Captivity a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "captivity"@en ;
+    skos:altLabel "imprisonment"@en ;
+    rdfs:comment "A character is held prisoner."@en .
+
+evnt:SocialEvent a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "social event"@en ;
+    skos:altLabel "social gathering"@en ;
+    rdfs:comment "An event involving social interaction between characters."@en .
+
+evnt:Meeting a owl:Class ;
+    rdfs:subClassOf evnt:SocialEvent ;
+    rdfs:label "meeting"@en ;
+    skos:altLabel "encounter"@en ;
+    rdfs:comment "An encounter or gathering of characters."@en .
+
+evnt:Coronation a owl:Class ;
+    rdfs:subClassOf evnt:SocialEvent ;
+    rdfs:label "coronation"@en ;
+    skos:altLabel "crowning ceremony"@en ;
+    rdfs:comment "A ceremony of crowning a ruler."@en .
+
+evnt:Feast a owl:Class ;
+    rdfs:subClassOf evnt:SocialEvent ;
+    rdfs:label "feast"@en ;
+    skos:altLabel "banquet"@en ;
+    rdfs:comment "A large celebratory meal or banquet."@en .
+
+evnt:Council a owl:Class ;
+    rdfs:subClassOf evnt:SocialEvent ;
+    rdfs:label "council"@en ;
+    skos:altLabel "deliberation"@en ;
+    rdfs:comment "A formal meeting for deliberation or the reach of a consensus."@en .
+
+evnt:Trial a owl:Class ;
+    rdfs:subClassOf evnt:SocialEvent ;
+    rdfs:label "trial"@en ;
+    skos:altLabel "judgement"@en ;
+    rdfs:comment "A judicial examination or hearing."@en .
+
+evnt:Curse a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "curse"@en ;
+    skos:altLabel "malediction"@en ;
+    rdfs:comment "A supernatural imprecation bringing misfortune."@en .
+
+evnt:Prophecy a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "prophecy"@en ;
+    skos:altLabel "foretelling"@en ;
+    rdfs:comment "A prediction of future events, often supernatural."@en .
+
+evnt:Enchantment a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "enchantment"@en ;
+    skos:altLabel "spell"@en ;
+    rdfs:comment "A magical spell or charm placed on a character."@en .
+
+evnt:Discovery a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "discovery"@en ;
+    skos:altLabel "revelation"@en ;
+    rdfs:comment "An event where something hidden is found or revealed."@en .
+
+evnt:Betrayal a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:label "betrayal"@en ;
+    skos:altLabel "treachery"@en ;
+    rdfs:comment "An act of disloyalty or treachery."@en .
+
+#
+# Properties
+#
+
+evnt:hasParticipant a owl:ObjectProperty ;
+    rdfs:domain evnt:Event ;
+    rdfs:label "has participant"@en ;
+    skos:altLabel "involves"@en ;
+    rdfs:comment "An entity that takes part in the event."@en .
+
+evnt:hasAgent a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasParticipant ;
+    rdfs:domain evnt:Event ;
+    rdfs:label "has agent"@en ;
+    skos:altLabel "done by"@en ;
+    rdfs:comment "The entity that intentionally causes or performs the event."@en .
+
+evnt:hasPatient a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasParticipant ;
+    rdfs:domain evnt:Event ;
+    rdfs:label "has patient"@en ;
+    skos:altLabel "affects"@en ;
+    rdfs:comment "The entity affected by the event."@en .
+
+evnt:hasVictim a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasPatient ;
+    rdfs:domain evnt:Event ;
+    rdfs:label "has victim"@en ;
+    skos:altLabel "harms"@en ;
+    rdfs:comment "The entity that suffers harm in the event."@en .
+
+evnt:hasWitness a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasParticipant ;
+    rdfs:domain evnt:Event ;
+    rdfs:label "has witness"@en ;
+    skos:altLabel "observed by"@en ;
+    rdfs:comment "An entity that observes the event without acting."@en .
+
+evnt:begets a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasParticipant ;
+    rdfs:domain evnt:Birth ;
+    rdfs:label "begets"@en ;
+    skos:altLabel "brings forth"@en ;
+    rdfs:comment "The character brought into existence by a birth event."@en .
+
+evnt:isBegottenIn a owl:ObjectProperty ;
+    owl:inverseOf evnt:begets ;
+    rdfs:domain owl:Thing ;
+    rdfs:range evnt:Birth ;
+    rdfs:label "is begotten in"@en ;
+    rdfs:comment "Inverse of begets. Links a character to the birth event that brings them into existence."@en .
+
+evnt:hasTraveller a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasParticipant ;
+    rdfs:domain evnt:Travel ;
+    rdfs:label "has traveller"@en ;
+    skos:altLabel "travelled by"@en ;
+    rdfs:comment "The character who undertakes the travel."@en .
+
+evnt:occursAt a owl:ObjectProperty ;
+    rdfs:domain evnt:Event ;
+    rdfs:range loc:Place ;
+    rdfs:label "occurs at"@en ;
+    skos:altLabel "takes place at"@en ;
+    rdfs:comment "The place where the event occurs."@en .
+
+evnt:hasOrigin a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:occursAt ;
+    rdfs:domain evnt:MovementEvent ;
+    rdfs:range loc:Place ;
+    rdfs:label "has origin"@en ;
+    skos:altLabel "departs from"@en ;
+    rdfs:comment "The starting place of a movement event."@en .
+
+evnt:hasDestination a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:occursAt ;
+    rdfs:domain evnt:MovementEvent ;
+    rdfs:range loc:Place ;
+    rdfs:label "has destination"@en ;
+    skos:altLabel "arrives at"@en ;
+    rdfs:comment "The ending place of a movement event."@en .
+
+evnt:precedes a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:precedes ;
+    rdfs:domain evnt:Event ;
+    rdfs:range evnt:Event ;
+    rdfs:label "precedes"@en ;
+    skos:altLabel "comes before"@en ;
+    rdfs:comment "This event occurs before another event."@en .
+
+evnt:causes a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain evnt:Event ;
+    rdfs:range evnt:Event ;
+    rdfs:label "causes"@en ;
+    skos:altLabel "leads to"@en ;
+    rdfs:comment "This event causally leads to another event."@en .
+
+evnt:isCausedBy a owl:ObjectProperty ;
+    owl:inverseOf evnt:causes ;
+    rdfs:label "is caused by"@en ;
+    skos:altLabel "results from"@en ;
+    rdfs:comment "Inverse of causes. This event results from another."@en .
+
+evnt:hasSubEvent a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain evnt:Event ;
+    rdfs:range evnt:Event ;
+    rdfs:label "has sub-event"@en ;
+    skos:altLabel "contains event"@en ;
+    rdfs:comment "A smaller event that occurs as part of this one."@en .
+
+evnt:isSubEventOf a owl:ObjectProperty ;
+    owl:inverseOf evnt:hasSubEvent ;
+    rdfs:label "is sub-event of"@en ;
+    skos:altLabel "part of event"@en ;
+    rdfs:comment "This event is part of a larger event."@en .
+
+evnt:hasCause a owl:ObjectProperty ;
+    rdfs:domain evnt:Event ;
+    rdfs:label "has cause"@en ;
+    skos:altLabel "caused by"@en ;
+    rdfs:comment "An entity involved as a contributing cause in the event."@en .
+
+evnt:creates a owl:ObjectProperty ;
+    rdfs:domain evnt:Event ;
+    rdfs:label "creates"@en ;
+    skos:altLabel "results in"@en ;
+    rdfs:comment "An entity produced or created by the event."@en .
+
+#
+# Axioms
+#
+evnt:isSubEventOf rdfs:subPropertyOf to:during .
+evnt:causes rdfs:subPropertyOf evnt:precedes .
+evnt:Murder owl:disjointWith evnt:Suicide .
+evnt:Murder owl:disjointWith evnt:Birth .
+evnt:Birth owl:disjointWith evnt:Marriage .
+evnt:ConflictEvent owl:disjointWith evnt:SocialEvent .
+evnt:MovementEvent owl:disjointWith evnt:ConflictEvent .
+evnt:Curse owl:disjointWith evnt:Prophecy .
+evnt:Betrayal owl:disjointWith evnt:Meeting .
+
+evnt:Murder owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        evnt:Death
+        [ a owl:Restriction ;
+          owl:onProperty evnt:hasAgent ;
+          owl:someValuesFrom owl:Thing ]
+    )
+] .
+
+evnt:War owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        evnt:ConflictEvent
+        [ a owl:Restriction ;
+          owl:onProperty evnt:hasSubEvent ;
+          owl:someValuesFrom evnt:Battle ]
+    )
+] .
+
+evnt:Travel owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        evnt:MovementEvent
+        [ a owl:Restriction ;
+          owl:onProperty evnt:hasOrigin ;
+          owl:someValuesFrom loc:Place ]
+        [ a owl:Restriction ;
+          owl:onProperty evnt:hasDestination ;
+          owl:someValuesFrom loc:Place ]
+    )
+] .
+
+# A Birth occurs only at Places
+evnt:Birth rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty evnt:occursAt ;
+    owl:allValuesFrom loc:Place
+] .
+
+# Siege occurs only at fortified locations
+evnt:Siege rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty evnt:occursAt ;
+    owl:allValuesFrom loc:Settlement
+] .
+
+
+evnt:hasOrigin owl:propertyDisjointWith evnt:hasDestination .
+
+evnt:Suicide rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty evnt:hasVictim ;
+    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass owl:Thing
+] .
+
+evnt:Coronation rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty evnt:hasAgent ;
+    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass owl:Thing
+] .
+
+evnt:causes a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+evnt:precedes a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+evnt:hasSubEvent a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+evnt:hasAgent a owl:IrreflexiveProperty .
+evnt:occursAt a owl:IrreflexiveProperty .
+evnt:hasAgent owl:propertyDisjointWith evnt:hasWitness .
+
+evnt:Event rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty evnt:occursAt ;
+    owl:someValuesFrom loc:Place
+] .
+
+evnt:Event rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty evnt:hasParticipant ;
+    owl:someValuesFrom owl:Thing
+] .
+
+
+#
+# Classes
+#
+plot:Story a owl:Class ;
+    rdfs:label "story"@en ;
+    skos:altLabel "narrative"@en ;
+    rdfs:comment "A complete narrative work."@en .
+
+plot:NarrativeUnit a owl:Class ;
+    rdfs:label "narrative unit"@en ;
+    skos:altLabel "story division"@en ;
+    rdfs:comment "A structural division of a story."@en .
+
+plot:Part a owl:Class ;
+    rdfs:subClassOf plot:NarrativeUnit ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty plot:containsUnit ; owl:someValuesFrom plot:Chapter ] ;
+    rdfs:label "part"@en ;
+    skos:altLabel "story part"@en ;
+    rdfs:comment "A major division of a story containing chapters."@en .
+
+plot:Chapter a owl:Class ;
+    rdfs:subClassOf plot:NarrativeUnit ;
+    rdfs:label "chapter"@en ;
+    skos:altLabel "story chapter"@en ;
+    rdfs:comment "A numbered or titled section of a narrative."@en .
+
+plot:Scene a owl:Class ;
+    rdfs:subClassOf plot:NarrativeUnit ;
+    rdfs:label "scene"@en ;
+    skos:altLabel "story scene"@en ;
+    rdfs:comment "The smallest narrative unit; a continuous action in one setting."@en .
+
+plot:Act a owl:Class ;
+    rdfs:subClassOf plot:NarrativeUnit ;
+    rdfs:label "act"@en ;
+    skos:altLabel "story act"@en ;
+    rdfs:comment "A major division in drama or narrative, often five in classical structure."@en .
+
+plot:NarrativeElement a owl:Class ;
+    rdfs:label "narrative element"@en ;
+    skos:altLabel "story element"@en ;
+    rdfs:comment "A stage in the narrative arc."@en .
+
+plot:Exposition a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "exposition"@en ;
+    skos:altLabel "setup"@en ;
+    rdfs:comment "Introduction of setting, characters, and background."@en .
+
+plot:IncitingIncident a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "inciting incident"@en ;
+    skos:altLabel "catalyst"@en ;
+    rdfs:comment "The event that sets the main conflict in motion."@en .
+
+plot:RisingAction a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "rising action"@en ;
+    skos:altLabel "complication"@en ;
+    rdfs:comment "Series of events building tension toward the climax."@en .
+
+plot:Climax a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "climax"@en ;
+    skos:altLabel "turning point"@en ;
+    rdfs:comment "The turning point; the moment of highest tension."@en .
+
+plot:FallingAction a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "falling action"@en ;
+    skos:altLabel "unwinding"@en ;
+    rdfs:comment "Events after the climax leading to the resolution."@en .
+
+plot:Resolution a owl:Class ;
+    rdfs:subClassOf plot:NarrativeElement ;
+    rdfs:label "resolution"@en ;
+    skos:altLabel "conclusion"@en ;
+    rdfs:comment "The outcome; how the conflict is resolved."@en .
+
+plot:Denouement a owl:Class ;
+    owl:equivalentClass plot:Resolution ;
+    rdfs:label "denouement"@en ;
+    skos:altLabel "final outcome"@en ;
+    rdfs:comment "Equivalent to resolution. The unravelling of the plot."@en .
+
+plot:PlotDevice a owl:Class ;
+    rdfs:label "plot device"@en ;
+    skos:altLabel "narrative device"@en ;
+    rdfs:comment "A technique used to advance or structure the plot."@en .
+
+plot:PlotTwist a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "plot twist"@en ;
+    skos:altLabel "unexpected turn"@en ;
+    rdfs:comment "An unexpected revelation that changes the story's direction."@en .
+
+plot:Foreshadowing a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "foreshadowing"@en ;
+    skos:altLabel "hint of future events"@en ;
+    rdfs:comment "Hints or clues about future events in the story."@en .
+
+plot:DramaticIrony a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "dramatic irony"@en ;
+    skos:altLabel "audience knowledge gap"@en ;
+    rdfs:comment "When the audience knows more than the characters."@en .
+
+plot:Flashback a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "flashback"@en ;
+    skos:altLabel "retrospection"@en ;
+    rdfs:comment "A scene set in a time earlier than the main story."@en .
+
+plot:MacGuffin a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "MacGuffin"@en ;
+    skos:altLabel "plot motivator"@en ;
+    rdfs:comment "An object or goal that motivates the plot but has no intrinsic importance."@en .
+
+plot:Anagnorisis a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "anagnorisis"@en ;
+    skos:altLabel "moment of recognition"@en ;
+    rdfs:comment "The point in a play, novel, etc., in which a principal character recognizes or discovers another character's true identity or the true nature of their own circumstances."@en .
+
+plot:Peripeteia a owl:Class ;
+    rdfs:subClassOf plot:PlotDevice ;
+    rdfs:label "peripeteia"@en ;
+    skos:altLabel "reversal of fortune"@en ;
+    rdfs:comment "A sudden reversal of fortune or change in circumstances."@en .
+
+plot:Conflict a owl:Class ;
+    rdfs:label "conflict"@en ;
+    skos:altLabel "tension"@en ;
+    rdfs:comment "A struggle between opposing forces driving the plot."@en .
+
+plot:InternalConflict a owl:Class ;
+    rdfs:subClassOf plot:Conflict ;
+    owl:disjointWith plot:ExternalConflict ;
+    rdfs:label "internal conflict"@en ;
+    skos:altLabel "inner struggle"@en ;
+    rdfs:comment "Conflict within a character (e.g. moral dilemma, fear)."@en .
+
+plot:ExternalConflict a owl:Class ;
+    rdfs:subClassOf plot:Conflict ;
+    rdfs:label "external conflict"@en ;
+    skos:altLabel "outer struggle"@en ;
+    rdfs:comment "Conflict between a character and an external force (antagonist, nature, society)."@en .
+
+plot:CharacterRole a owl:Class ;
+    rdfs:label "character role"@en ;
+    skos:altLabel "story role"@en ;
+    rdfs:comment "The narrative function a character plays in the story."@en .
+
+plot:Protagonist a owl:Class ;
+    rdfs:subClassOf plot:CharacterRole ;
+    owl:disjointWith plot:Antagonist ;
+    rdfs:label "protagonist"@en ;
+    skos:altLabel "main character"@en ;
+    rdfs:comment "The main character; the one driving the action."@en .
+
+plot:Antagonist a owl:Class ;
+    rdfs:subClassOf plot:CharacterRole ;
+    rdfs:label "antagonist"@en ;
+    skos:altLabel "villain"@en ;
+    rdfs:comment "The character who opposes the protagonist."@en .
+
+plot:Mentor a owl:Class ;
+    rdfs:subClassOf plot:CharacterRole ;
+    rdfs:label "mentor"@en ;
+    skos:altLabel "guide figure"@en ;
+    rdfs:comment "A character who guides or teaches the protagonist."@en .
+
+plot:TragicHero a owl:Class ;
+    rdfs:subClassOf plot:CharacterRole ;
+    rdfs:label "tragic hero"@en ;
+    skos:altLabel "tragic protagonist"@en ;
+    rdfs:comment "A protagonist whose flaw leads to their downfall."@en .
+
+plot:Genre a owl:Class ;
+    rdfs:label "genre"@en ;
+    skos:altLabel "literary genre"@en ;
+    rdfs:comment "A category of narrative with shared conventions."@en .
+
+plot:Tragedy a owl:Class ;
+    rdfs:subClassOf plot:Genre ;
+    rdfs:label "tragedy"@en ;
+    skos:altLabel "tragic genre"@en ;
+    rdfs:comment "A story where the protagonist suffers a downfall."@en .
+
+plot:Epic a owl:Class ;
+    rdfs:subClassOf plot:Genre ;
+    rdfs:label "epic"@en ;
+    skos:altLabel "epic genre"@en ;
+    rdfs:comment "A long narrative involving heroic deeds and grand scale."@en .
+
+plot:Fantasy a owl:Class ;
+    rdfs:subClassOf plot:Genre ;
+    rdfs:label "fantasy"@en ;
+    skos:altLabel "fantasy genre"@en ;
+    rdfs:comment "A story with magical or supernatural elements."@en .
+
+#
+# Properties
+#
+plot:containsUnit a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain plot:NarrativeUnit ;
+    rdfs:range plot:NarrativeUnit ;
+    rdfs:label "contains unit"@en ;
+    skos:altLabel "includes unit"@en ;
+    rdfs:comment "Relates a narrative unit to its contained subunits."@en .
+
+plot:isUnitOf a owl:ObjectProperty ;
+    owl:inverseOf plot:containsUnit ;
+    rdfs:label "is unit of"@en ;
+    skos:altLabel "belongs to"@en ;
+    rdfs:comment "Inverse of containsUnit, relates a unit to its parent."@en .
+
+plot:hasNarrativeUnit a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:NarrativeUnit ;
+    rdfs:label "has narrative unit"@en ;
+    skos:altLabel "divided into"@en ;
+    rdfs:comment "Links a story to its structural units."@en .
+
+plot:unitIndex a owl:DatatypeProperty ;
+    rdfs:domain plot:NarrativeUnit ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:label "unit index"@en ;
+    skos:altLabel "sequence number"@en ;
+    rdfs:comment "The ordering position of a unit within its parent."@en .
+
+plot:hasNarrativeElement a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:NarrativeElement ;
+    rdfs:label "has narrative element"@en ;
+    skos:altLabel "has element"@en ;
+    rdfs:comment "Links a story to its plot stages."@en .
+
+plot:correspondsToEvent a owl:ObjectProperty ;
+    rdfs:domain plot:NarrativeElement ;
+    rdfs:range evnt:Event ;
+    rdfs:label "corresponds to event"@en ;
+    skos:altLabel "maps to event"@en ;
+    rdfs:comment "Maps a narrative element to the event it represents."@en .
+
+plot:occursInUnit a owl:ObjectProperty ;
+    rdfs:domain plot:NarrativeElement ;
+    rdfs:range plot:NarrativeUnit ;
+    rdfs:label "occurs in unit"@en ;
+    skos:altLabel "located in unit"@en ;
+    rdfs:comment "The narrative unit in which this element appears."@en .
+
+plot:usesDevice a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:PlotDevice ;
+    rdfs:label "uses device"@en ;
+    skos:altLabel "employs device"@en ;
+    rdfs:comment "Links a story to the plot devices it employs."@en .
+
+plot:deviceInvolvesCharacter a owl:ObjectProperty ;
+    rdfs:domain plot:PlotDevice ;
+    rdfs:label "device involves character"@en ;
+    skos:altLabel "device concerns"@en ;
+    rdfs:comment "A character involved in or affected by this plot device."@en .
+
+plot:foreshadowsEvent a owl:ObjectProperty ;
+    rdfs:domain plot:Foreshadowing ;
+    rdfs:range evnt:Event ;
+    rdfs:label "foreshadows event"@en ;
+    skos:altLabel "hints at"@en ;
+    rdfs:comment "The event that this foreshadowing hints at."@en .
+
+plot:hasRole a owl:ObjectProperty ;
+    rdfs:range plot:CharacterRole ;
+    rdfs:label "has role"@en ;
+    skos:altLabel "plays role"@en ;
+    rdfs:comment "The narrative role a character plays."@en .
+
+plot:hasConflict a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:Conflict ;
+    rdfs:label "has conflict"@en ;
+    skos:altLabel "has tension"@en ;
+    rdfs:comment "A conflict central to the story."@en .
+
+plot:conflictInvolves a owl:ObjectProperty ;
+    rdfs:domain plot:Conflict ;
+    rdfs:label "conflict involves"@en ;
+    skos:altLabel "tension involves"@en ;
+    rdfs:comment "A character or entity involved in the conflict."@en .
+
+plot:hasGenre a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range plot:Genre ;
+    rdfs:label "has genre"@en ;
+    skos:altLabel "genre is"@en ;
+    rdfs:comment "The genre(s) of the story."@en .
+
+plot:hasAuthor a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:label "has author"@en ;
+    skos:altLabel "written by"@en ;
+    rdfs:comment "The author of the story."@en .
+
+plot:hasTheme a owl:ObjectProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:label "has theme"@en ;
+    skos:altLabel "explores theme"@en ;
+    rdfs:comment "A thematic element or motif in the story."@en .
+
+plot:publishedDate a owl:DatatypeProperty ;
+    rdfs:domain plot:Story ;
+    rdfs:range xsd:date ;
+    rdfs:label "published date"@en ;
+    skos:altLabel "date published"@en ;
+    rdfs:comment "The date the story was published."@en .
+
+#
+# Axioms
+#
+plot:Story rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:hasNarrativeUnit ;
+    owl:someValuesFrom plot:NarrativeUnit
+] .
+
+plot:Scene rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:containsUnit ;
+    owl:allValuesFrom owl:Nothing
+] .
+
+plot:TragicHero owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        plot:Protagonist
+        [ a owl:Restriction ;
+          owl:onProperty plot:involvedInDevice ;
+          owl:someValuesFrom plot:Peripeteia ]
+    )
+] .
+
+
+plot:Anagnorisis owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        plot:PlotDevice
+        [ a owl:Restriction ;
+          owl:onProperty plot:correspondsToEvent ;
+          owl:someValuesFrom evnt:Discovery ]
+    )
+] .
+
+plot:Exposition owl:disjointWith plot:Climax .
+plot:Exposition owl:disjointWith plot:Resolution .
+plot:Climax owl:disjointWith plot:Resolution .
+plot:RisingAction owl:disjointWith plot:FallingAction .
+plot:IncitingIncident owl:disjointWith plot:Resolution .
+
+
+plot:PlotDevice owl:disjointWith plot:NarrativeElement .
+plot:Genre owl:disjointWith plot:Conflict .
+
+plot:Story rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:hasNarrativeElement ;
+    owl:someValuesFrom plot:Resolution
+] .
+
+plot:Story rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:hasNarrativeElement ;
+    owl:someValuesFrom plot:Climax
+] .
+
+plot:ExternalConflict rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:conflictInvolves ;
+    owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+    owl:onClass owl:Thing
+] .
+
+plot:InternalConflict rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:conflictInvolves ;
+    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass owl:Thing
+] .
+
+plot:Foreshadowing rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:foreshadowsEvent ;
+    owl:allValuesFrom evnt:Event
+] .
+
+plot:NarrativeUnit rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty plot:containsUnit ;
+    owl:allValuesFrom plot:NarrativeUnit
+] .
+
+plot:hasNarrativeUnit a owl:IrreflexiveProperty, owl:AsymmetricProperty .
+plot:follows a owl:ObjectProperty, owl:TransitiveProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    rdfs:domain plot:NarrativeUnit ;
+    rdfs:range plot:NarrativeUnit ;
+    rdfs:label "follows"@en ;
+    skos:altLabel "comes after"@en ;
+    rdfs:comment "One narrative unit sequentially comes after another."@en .
+plot:hasGenre a owl:IrreflexiveProperty .
+plot:hasAuthor a owl:FunctionalProperty .
+plot:publishedDate a owl:FunctionalProperty .
+
+plot:hasAuthor owl:propertyDisjointWith plot:conflictInvolves .
+
+plot:involvedInDevice a owl:ObjectProperty ;    
+    rdfs:label "involved in device"@en ;
+    skos:altLabel "affected by narrative device"@en ;
+    rdfs:comment "Links a character role to a narrative device that affects them."@en .
+
+
+#
+# Classes
+#
+act:Action a owl:Class ;
+    rdfs:subClassOf evnt:Event ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty act:performedBy ;
+        owl:someValuesFrom owl:Thing
+    ] ;
+    rdfs:label "action"@en ;
+    skos:altLabel "deed"@en ;
+    rdfs:comment "An intentional deed. Every action has at least one performer."@en .
+
+act:ViolentAction a owl:Class ;
+    rdfs:subClassOf act:Action ;
+    rdfs:label "violent action"@en ;
+    skos:altLabel "violent deed"@en ;
+    rdfs:comment "An action involving physical violence or force."@en .
+
+act:Attack a owl:Class ;
+    rdfs:subClassOf act:ViolentAction ;
+    rdfs:label "attack"@en ;
+    skos:altLabel "assault"@en ;
+    rdfs:comment "An aggressive action aimed at harming a target."@en .
+
+act:Kill a owl:Class ;
+    rdfs:subClassOf act:ViolentAction ;
+    rdfs:label "kill"@en ;
+    skos:altLabel "slaying"@en ;
+    rdfs:comment "The action of causing the death of another."@en .
+
+act:Defend a owl:Class ;
+    rdfs:subClassOf act:ViolentAction ;
+    rdfs:label "defend"@en ;
+    skos:altLabel "defence"@en ;
+    rdfs:comment "An action of protecting oneself or others from attack."@en .
+
+act:MovementAction a owl:Class ;
+    rdfs:subClassOf act:Action, evnt:MovementEvent ;
+    rdfs:label "movement action"@en ;
+    skos:altLabel "locomotion"@en ;
+    rdfs:comment "An action involving deliberate physical movement."@en .
+
+act:Flee a owl:Class ;
+    rdfs:subClassOf act:MovementAction ;
+    rdfs:label "flee"@en ;
+    skos:altLabel "flight"@en ;
+    rdfs:comment "The action of running away from danger or pursuit."@en .
+
+act:GoTo a owl:Class ;
+    rdfs:subClassOf act:MovementAction ;
+    rdfs:label "go to"@en ;
+    skos:altLabel "travel to"@en ;
+    rdfs:comment "The action of deliberately travelling to a destination."@en .
+
+act:CommunicativeAction a owl:Class ;
+    rdfs:subClassOf act:Action ;
+    rdfs:label "communicative action"@en ;
+    skos:altLabel "speech act"@en ;
+    rdfs:comment "An action involving communication between characters."@en .
+
+act:Speak a owl:Class ;
+    rdfs:subClassOf act:CommunicativeAction ;
+    rdfs:label "speak"@en ;
+    skos:altLabel "utterance"@en ;
+    rdfs:comment "The action of verbal communication."@en .
+
+act:Deceive a owl:Class ;
+    rdfs:subClassOf act:CommunicativeAction ;
+    rdfs:label "deceive"@en ;
+    skos:altLabel "deception"@en ;
+    rdfs:comment "The action of intentionally misleading another character."@en .
+
+act:Reveal a owl:Class ;
+    rdfs:subClassOf act:CommunicativeAction ;
+    rdfs:label "reveal"@en ;
+    skos:altLabel "disclosure"@en ;
+    rdfs:comment "The action of disclosing previously hidden information."@en .
+
+act:Command a owl:Class ;
+    rdfs:subClassOf act:CommunicativeAction ;
+    rdfs:label "command"@en ;
+    skos:altLabel "order"@en ;
+    rdfs:comment "The action of giving an authoritative order."@en .
+
+act:TransferAction a owl:Class ;
+    rdfs:subClassOf act:Action ;
+    rdfs:label "transfer action"@en ;
+    skos:altLabel "transfer"@en ;
+    rdfs:comment "An action involving the transfer of possession."@en .
+
+act:Give a owl:Class ;
+    rdfs:subClassOf act:TransferAction ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty act:hasRecipient ; owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "give"@en ;
+    skos:altLabel "bestowal"@en ;
+    rdfs:comment "The action of voluntarily transferring something to another."@en .
+
+act:Take a owl:Class ;
+    rdfs:subClassOf act:TransferAction ;
+    rdfs:label "take"@en ;
+    skos:altLabel "seizure"@en ;
+    rdfs:comment "The action of acquiring something, possibly by force."@en .
+
+act:CreationAction a owl:Class ;
+    rdfs:subClassOf act:Action ;
+    rdfs:label "creation action"@en ;
+    skos:altLabel "making"@en ;
+    rdfs:comment "An action that produces or transforms something."@en .
+
+act:Forge a owl:Class ;
+    rdfs:subClassOf act:CreationAction ;
+    rdfs:label "forge"@en ;
+    skos:altLabel "smithing"@en ;
+    rdfs:comment "The action of creating or reshaping an object, especially a weapon."@en .
+
+act:Build a owl:Class ;
+    rdfs:subClassOf act:CreationAction ;
+    rdfs:label "build"@en ;
+    skos:altLabel "construction"@en ;
+    rdfs:comment "The action of constructing a structure or settlement."@en .
+
+#
+# Properties
+#
+act:performedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasAgent ;
+    rdfs:domain act:Action ;
+    rdfs:label "performed by"@en ;
+    skos:altLabel "done by"@en ;
+    rdfs:comment "The agent who intentionally performs the action."@en .
+
+act:hasTarget a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasPatient ;
+    rdfs:domain act:Action ;
+    rdfs:label "has target"@en ;
+    skos:altLabel "directed at"@en ;
+    rdfs:comment "The entity that the action is directed towards."@en .
+
+act:hasInstrument a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasCause ;
+    rdfs:domain act:Action ;
+    rdfs:label "has instrument"@en ;
+    skos:altLabel "using"@en ;
+    rdfs:comment "An object used to perform the action (e.g. a sword)."@en .
+
+act:hasIntention a owl:ObjectProperty ;
+    rdfs:domain act:Action ;
+    rdfs:label "has intention"@en ;
+    skos:altLabel "aims to"@en ;
+    rdfs:comment "The goal or purpose behind the action."@en .
+
+act:hasResult a owl:ObjectProperty ;
+    rdfs:domain act:Action ;
+    rdfs:range evnt:Event ;
+    rdfs:label "has result"@en ;
+    skos:altLabel "results in"@en ;
+    rdfs:comment "The event or state that results from the action."@en .
+
+act:hasRecipient a owl:ObjectProperty ;
+    rdfs:subPropertyOf evnt:hasParticipant ;
+    rdfs:domain act:TransferAction ;
+    rdfs:label "has recipient"@en ;
+    skos:altLabel "received by"@en ;
+    rdfs:comment "The character who receives something in a transfer action."@en .
+
+#
+# Axioms
+#
+# A violent action cannot simultaneously be a communicative action
+act:ViolentAction owl:disjointWith act:CommunicativeAction .
+# A transfer action is disjoint from a creation action
+act:TransferAction owl:disjointWith act:CreationAction .
+# Movement vs violent
+act:MovementAction owl:disjointWith act:ViolentAction .
+# Communicative vs movement
+act:CommunicativeAction owl:disjointWith act:MovementAction .
+# Transfer vs communicative
+act:TransferAction owl:disjointWith act:CommunicativeAction .
+# Attack ⊓ Defend = ⊥ 
+act:Attack owl:disjointWith act:Defend .
+# Give ⊓ Take = ⊥
+act:Give owl:disjointWith act:Take .
+# Forge ⊓ Build = ⊥ 
+act:Forge owl:disjointWith act:Build .
+
+
+# A Kill is precisely a violent action whose result is a death, targeting exactly one entity
+act:Kill owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        act:ViolentAction
+        [ a owl:Restriction ;
+          owl:onProperty act:hasResult ;
+          owl:someValuesFrom evnt:Death ]
+        [ a owl:Restriction ;
+          owl:onProperty act:hasTarget ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onClass owl:Thing ]
+    )
+] .
+
+# Flee ≡ MovementAction ⊓ ∃hasIntention.Escape
+act:Escape a owl:Class ;
+    rdfs:label "escape"@en ;
+    skos:altLabel "evasion"@en ;
+    rdfs:comment "The intention of getting away from danger."@en .
+
+act:Flee owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        act:MovementAction
+        [ a owl:Restriction ;
+          owl:onProperty act:hasIntention ;
+          owl:someValuesFrom act:Escape ]
+    )
+] .
+
+
+# A deception is a communicative action intended to mislead
+act:MisleadingIntention a owl:Class ;
+    rdfs:label "misleading intention"@en ;
+    skos:altLabel "intent to deceive"@en ;
+    rdfs:comment "The intention of making another believe something false."@en .
+
+act:Deceive owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        act:CommunicativeAction
+        [ a owl:Restriction ;
+          owl:onProperty act:hasIntention ;
+          owl:someValuesFrom act:MisleadingIntention ]
+    )
+] .
+
+
+
+# A Give action transfers exactly 1 item 
+act:Give rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty act:hasInstrument ;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass owl:Thing
+] .
+
+# A Command has exactly 1 target 
+act:Command rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty act:hasTarget ;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass owl:Thing
+] .
+
+
+
+# An Attack always has a target
+act:Attack rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty act:hasTarget ;
+    owl:someValuesFrom owl:Thing
+] .
+
+# A Defend always has something being protected 
+act:Defend rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty act:hasTarget ;
+    owl:someValuesFrom owl:Thing
+] .
+
+# A CreationAction always produces something 
+act:CreationAction rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty evnt:creates ;
+    owl:someValuesFrom owl:Thing
+] .
+
+# Build ≡ CreationAction ⊓ ∃creates.Place
+act:Build owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        act:CreationAction
+        [ a owl:Restriction ;
+          owl:onProperty evnt:creates ;
+          owl:someValuesFrom loc:Place ]
+    )
+] .
+
+# Forge produces a physical object
+act:Forge rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty evnt:creates ;
+    owl:someValuesFrom owl:Thing
+] .
+
+# A Take action has a target 
+act:Take rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty act:hasTarget ;
+    owl:someValuesFrom owl:Thing
+] .
+
+# Reveal ≡ CommunicativeAction ⊓ ∃hasResult.Discovery
+act:Reveal owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        act:CommunicativeAction
+        [ a owl:Restriction ;
+          owl:onProperty act:hasResult ;
+          owl:someValuesFrom evnt:Discovery ]
+    )
+] .
+
+
+
+# GoTo action targets only places 
+act:GoTo rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty act:hasTarget ;
+    owl:allValuesFrom loc:Place
+] .
+
+# CommunicativeAction targets only characters
+act:CommunicativeAction rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty act:hasTarget ;
+    owl:allValuesFrom [
+        a owl:Class ;
+        owl:complementOf loc:Place
+    ]
+] .
+
+# A Kill can only result in a Death 
+act:Kill rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty act:hasResult ;
+    owl:allValuesFrom evnt:Death
+] .
+
+
+act:hasTarget a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+act:hasInstrument a owl:IrreflexiveProperty .
+act:hasRecipient a owl:IrreflexiveProperty .
+act:hasIntention a owl:IrreflexiveProperty, owl:FunctionalProperty .
+
+act:performedBy owl:propertyDisjointWith act:hasInstrument .
+act:hasTarget owl:propertyDisjointWith act:hasInstrument .
+act:performedBy owl:propertyDisjointWith act:hasRecipient .
+
+
+# If agent performs action and action has result, agent causes result
+act:causesByAction a owl:ObjectProperty ;
+    owl:propertyChainAxiom ( [ owl:inverseOf act:performedBy ] act:hasResult ) ;
+    rdfs:label "causes by action"@en ;
+    skos:altLabel "brings about"@en ;
+    rdfs:comment "Inferred: if an agent performs an action with a result, the agent indirectly causes that result."@en .
+
+
+# hasResult is also a causal relation
+act:hasResult rdfs:subPropertyOf evnt:causes .
