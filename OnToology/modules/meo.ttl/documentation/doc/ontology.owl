@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/meo/"
+     xml:base="http://purl.org/meo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.org/meo/">
+        <owl:imports rdf:resource="http://purl.org/family/"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-19T07:42:42+01:00</terms:created>
+        <terms:creator rdf:resource="https://w3id.org/people/az/me"/>
+        <terms:title xml:lang="en">The Middle-earth ontology</terms:title>
+        <rdfs:comment xml:lang="en">An ontology for J.R.R. Tolkienʼs legendarium.</rdfs:comment>
+        <rdfs:label xml:lang="en">The Middle-earth ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- _:genid-nodeid-node1jjtolt32x15 -->
+
+
+    <owl:ObjectProperty rdf:about="_:genid-nodeid-node1jjtolt32x15"/>
+    
+
+
+    <!-- _:genid-nodeid-node1jjtolt32x18 -->
+
+
+    <owl:ObjectProperty rdf:about="_:genid-nodeid-node1jjtolt32x18"/>
+    
+
+
+    <!-- _:genid-nodeid-node1jjtolt32x22 -->
+
+
+    <owl:ObjectProperty rdf:about="_:genid-nodeid-node1jjtolt32x22"/>
+    
+
+
+    <!-- _:genid-nodeid-node1jjtolt32x25 -->
+
+
+    <owl:ObjectProperty rdf:about="_:genid-nodeid-node1jjtolt32x25"/>
+    
+
+
+    <!-- http://purl.org/family/isAChildOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isAChildOf"/>
+    
+
+
+    <!-- http://purl.org/meo/served -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/meo/served">
+        <rdfs:comment xml:lang="en">Relates someone to someone else that they serve. Relation servant-master.</rdfs:comment>
+        <rdfs:label xml:lang="en">serves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/meo/serves -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/meo/serves"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/meo/Adan -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Adan">
+        <rdfs:comment xml:lang="en">The Edain (plural form of Adan) are the Men that belong to the Three Houses of Men that came to Beleriand in the elder days. Originally, “Adan” (plural “Edain”) is the Sindarin equivalent of Quenya “Atan” (plural “Atani”) but eventually came to mean this narrow subgroup.</rdfs:comment>
+        <rdfs:label xml:lang="sjn">Adan</rdfs:label>
+        <rdfs:label xml:lang="en">Man</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Ainu -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Ainu">
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Immortal"/>
+        <rdfs:comment xml:lang="en">The Ainur (plural form of Ainu) are the spirits created by Eru Ilúvatar before time existed</rdfs:comment>
+        <rdfs:label xml:lang="qya">Ainu</rdfs:label>
+        <rdfs:label xml:lang="en">Holy one</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Atan -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Atan">
+        <rdfs:comment xml:lang="en">The Atani (plural form of Atan) are the second born of the Children of Ilúvatar, the Men (i.e. Humans, not male people). They were given many names also by the Eldar.</rdfs:comment>
+        <rdfs:label xml:lang="sjn">Adan</rdfs:label>
+        <rdfs:label xml:lang="qya">Atan</rdfs:label>
+        <rdfs:label xml:lang="en">Man</rdfs:label>
+        <skos:altLabel xml:lang="en">After-born</skos:altLabel>
+        <skos:altLabel xml:lang="en">After-comer</skos:altLabel>
+        <skos:altLabel xml:lang="qya">Apanóna</skos:altLabel>
+        <skos:altLabel xml:lang="qya">Engwa</skos:altLabel>
+        <skos:altLabel xml:lang="en">Follower</skos:altLabel>
+        <skos:altLabel xml:lang="qya">Fírima</skos:altLabel>
+        <skos:altLabel xml:lang="qya">Hildo</skos:altLabel>
+        <skos:altLabel xml:lang="en">Human</skos:altLabel>
+        <skos:altLabel xml:lang="en">Mortal</skos:altLabel>
+        <skos:altLabel xml:lang="en">Secondborn</skos:altLabel>
+        <skos:altLabel xml:lang="en">Sickly</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Casar -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Casar">
+        <rdfs:comment xml:lang="en">The Casari (plural form of Casar in Quenya), more often called with the Sindarin variant Naugrim (plural of Naug in Sindarin), are the Dwarves created by the Vala Aulë.</rdfs:comment>
+        <rdfs:label xml:lang="qya">Casar</rdfs:label>
+        <rdfs:label xml:lang="en">Dwarf</rdfs:label>
+        <rdfs:label xml:lang="sjn">Naug</rdfs:label>
+        <skos:altLabel xml:lang="qya">Aulëonna</skos:altLabel>
+        <skos:altLabel xml:lang="en">Child of Aulë</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Elda -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Elda">
+        <rdfs:comment xml:lang="en">The Eldar (plural form of Elda) are the Elves. They initially called themselves the Quendi, but the Vala Oromë, who met them at lake Cuiviénen under the stars, called them the Eldar. Now only the Quendi who followed Oromë to the West call themselves Eldar.</rdfs:comment>
+        <rdfs:label xml:lang="qya">Elda</rdfs:label>
+        <rdfs:label xml:lang="sjn">Eledh</rdfs:label>
+        <rdfs:label xml:lang="en">Elf</rdfs:label>
+        <skos:altLabel xml:lang="en">Firstborn</skos:altLabel>
+        <skos:altLabel xml:lang="en">of the stars</skos:altLabel>
+        <skos:altLabel xml:lang="en">person of the stars</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Eruhin -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Eruhin">
+        <rdfs:comment xml:lang="en">The Eruhíni (plural form of Eruhin), literally “the Children of Eru”, are usually called the “Children of Ilúvatar”. They are the Elves and Men. “Children of Ilúvatar” is used to collectively refer to the two races of Men and Elves, and the singular form is rarely used.</rdfs:comment>
+        <rdfs:label xml:lang="en">Child of Ilúvatar</rdfs:label>
+        <rdfs:label xml:lang="qya">Eruhin</rdfs:label>
+        <skos:altLabel xml:lang="en">Child of Eru</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/EvilBeing -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/EvilBeing">
+        <rdfs:comment xml:lang="en">The evil beings are sentient agents that have chosen to do bad things, behave badly for the sake of doing bad, or became corrupted into doing evil. Some things are raised and bred to be evil. Some things are led to become evil by other evil beings by subversion. Some choose to become evil due to greed or as a way to overcome hardships of their lives.</rdfs:comment>
+        <rdfs:label xml:lang="en">evil being</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/God -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/God">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/meo/Eru"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A sperior entity. A singleton class that only contains Eru Ilúvatar, the One Allfather.</rdfs:comment>
+        <rdfs:label xml:lang="en">God</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Immortal -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Immortal">
+        <owl:disjointWith rdf:resource="http://purl.org/meo/Mortal"/>
+        <rdfs:comment xml:lang="en">An individual that does not die of natural death. Some immortals may die from wounds inflicted to them by violence or accident (like Elves), but some are truly eternal, like the Ainur).</rdfs:comment>
+        <rdfs:label xml:lang="en">immortal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Lócë -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Lócë">
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/EvilBeing"/>
+        <rdfs:comment xml:lang="en">Evil and powerful monster.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dragon</rdfs:label>
+        <rdfs:label xml:lang="qya">Lócë</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Maia -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Maia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Ainu"/>
+        <rdfs:comment xml:lang="en">The Maiar (plural form of Maia) are Ainur who entered Arda and serve the Valar.</rdfs:comment>
+        <rdfs:label xml:lang="en">Beautiful</rdfs:label>
+        <rdfs:label xml:lang="qya">Maia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Mortal -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Mortal">
+        <rdfs:comment xml:lang="en">Mortal living being, such as Men and Dwarces.</rdfs:comment>
+        <rdfs:label xml:lang="en">mortal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Peredhel -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Peredhel">
+        <rdfs:comment xml:lang="en">Peredhil are descendent of both elves and humans.</rdfs:comment>
+        <rdfs:label xml:lang="en">Half-elf</rdfs:label>
+        <rdfs:label xml:lang="sjn">Peredhel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Quendë -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Quendë">
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Eruhin"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Immortal"/>
+        <rdfs:comment xml:lang="en">The Quendi (plural form of Quendë) are the first born of the Children of Ilúvatar, the Elves. They are named thus because they were the only ones who spoke when they first appeared, before Men and Dwarves came to be. They are more often called the Eldar.</rdfs:comment>
+        <rdfs:label xml:lang="en">Elf</rdfs:label>
+        <rdfs:label xml:lang="qya">Quendë</rdfs:label>
+        <skos:altLabel xml:lang="qya">Elda</skos:altLabel>
+        <skos:altLabel xml:lang="en">Firstborn</skos:altLabel>
+        <skos:altLabel xml:lang="en">one that speaks</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Torog -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Torog">
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/EvilBeing"/>
+        <rdfs:comment xml:lang="en">The *Teryg (probably the plural form of Torog in Sindarin) are the Trolls, large humanoid monsters of great physical strength and weak intellect.</rdfs:comment>
+        <rdfs:label xml:lang="sjn">torog</rdfs:label>
+        <rdfs:label xml:lang="en">troll</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/meo/Vala -->
+
+
+    <owl:Class rdf:about="http://purl.org/meo/Vala">
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Ainu"/>
+        <rdfs:comment xml:lang="en">The Valar (plural form of Vala) are the most powerful Ainur who entered Arda, the world.</rdfs:comment>
+        <rdfs:label xml:lang="qya">Vala</rdfs:label>
+        <rdfs:label xml:lang="en">angelic power</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/meo/Eru -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/meo/Eru"/>
+    
+
+
+    <!-- http://purl.org/meo/eru -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/meo/eru">
+        <rdf:type rdf:resource="http://purl.org/meo/God"/>
+        <rdfs:comment xml:lang="en">The one God creator of everything.</rdfs:comment>
+        <rdfs:label xml:lang="qya">Eru</rdfs:label>
+        <rdfs:label xml:lang="en">The One</rdfs:label>
+        <skos:altLabel xml:lang="qya">Eru Ilúvatar</skos:altLabel>
+        <skos:altLabel xml:lang="en">God</skos:altLabel>
+        <skos:altLabel xml:lang="qya">Ilúvatar</skos:altLabel>
+        <skos:altLabel xml:lang="en">The Allfather</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/meo/melkor -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/meo/melkor">
+        <rdf:type rdf:resource="http://purl.org/meo/Vala"/>
+        <owl:sameAs rdf:resource="http://purl.org/meo/morgoth"/>
+        <rdfs:comment xml:lang="en">The greatest of the Ainur.</rdfs:comment>
+        <rdfs:label xml:lang="en">He who arises in might</rdfs:label>
+        <rdfs:label xml:lang="qya">Melkor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/meo/morgoth -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/meo/morgoth"/>
+    
+
+
+    <!-- http://purl.org/meo/morgoth -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/meo/morgoth">
+        <rdf:type rdf:resource="http://purl.org/meo/EvilBeing"/>
+        <rdfs:comment xml:lang="en">The only Vala who became evil. The enemy of all other Valar.</rdfs:comment>
+        <rdfs:label xml:lang="sjn">Morgoth</rdfs:label>
+        <rdfs:label xml:lang="en">The Black Enemy</rdfs:label>
+        <skos:altLabel xml:lang="sjn">Bauglir</skos:altLabel>
+        <skos:altLabel xml:lang="en">The Constrainer</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/family/isAChildOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/meo/Adan"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/family/isAChildOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/meo/Elda"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Peredhel"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="_:genid-nodeid-node1jjtolt32x15"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://purl.org/meo/Atan"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="_:genid-nodeid-node1jjtolt32x18"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://purl.org/meo/Atan"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Atan"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="_:genid-nodeid-node1jjtolt32x22"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://purl.org/meo/Elda"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="_:genid-nodeid-node1jjtolt32x25"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://purl.org/meo/Elda"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Elda"/>
+    </owl:Class>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/family/isAChildOf"/>
+        <owl:allValuesFrom rdf:resource="http://purl.org/meo/Atan"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Atan"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/family/isAChildOf"/>
+        <owl:allValuesFrom rdf:resource="http://purl.org/meo/Elda"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/Elda"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/meo/serves"/>
+        <owl:hasValue rdf:resource="http://purl.org/meo/morgoth"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/meo/EvilBeing"/>
+    </owl:Restriction>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

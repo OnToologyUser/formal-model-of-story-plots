@@ -1,0 +1,427 @@
+@prefix : <https://w3id.org/narn/social/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/narn/social/> .
+
+<https://w3id.org/narn/social/> rdf:type owl:Ontology ;
+                                 owl:imports <https://w3id.org/narn/location/> ;
+                                 rdfs:comment "An ontology defining social relationships between characters."@en ;
+                                 rdfs:label "Social Relations Ontology"@en ;
+                                 <https://purl.org/dc/terms/created> "2026-03-14"^^xsd:date ;
+                                 <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;
+                                 <https://purl.org/dc/terms/modified> "2026-03-17"^^xsd:date ;
+                                 <https://purl.org/vocab/vann/preferredNamespacePrefix> "soc" ;
+                                 <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/social/" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/narn/social/committedSuicide
+:committedSuicide rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Self killing."@en ;
+                  rdfs:label "committed suicide"@en ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "took own life"@en .
+
+
+###  https://w3id.org/narn/social/cursed
+:cursed rdf:type owl:ObjectProperty ;
+        rdfs:comment "Character placed a curse upon another."@en ;
+        rdfs:label "cursed"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "placed a curse on"@en .
+
+
+###  https://w3id.org/narn/social/feared
+:feared rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasEmotionalRelationWith ;
+        rdfs:comment "Character feared another character."@en ;
+        rdfs:label "feared"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "had fear of"@en .
+
+
+###  https://w3id.org/narn/social/hasEmotionalRelationWith
+:hasEmotionalRelationWith rdf:type owl:ObjectProperty ;
+                          rdfs:domain owl:Thing ;
+                          rdfs:range owl:Thing ;
+                          rdfs:comment "General emotional relationship between two characters."@en ;
+                          rdfs:label "has emotional relation with"@en ;
+                          <http://www.w3.org/2004/02/skos/core#altLabel> "feels towards"@en .
+
+
+###  https://w3id.org/narn/social/hasFriend
+:hasFriend rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasEmotionalRelationWith ;
+           rdf:type owl:SymmetricProperty ,
+                    owl:IrreflexiveProperty ;
+           owl:propertyDisjointWith :isAnEnemyOf ;
+           rdfs:comment "Mutual friendship. Symmetric."@en ;
+           rdfs:label "has friend"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "is a friend of"@en .
+
+
+###  https://w3id.org/narn/social/hasValence
+:hasValence rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:range :EmotionalValence ;
+            rdfs:comment "Assigns an emotional valence. Functional."@en ;
+            rdfs:label "has valence"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "has sentiment"@en .
+
+
+###  https://w3id.org/narn/social/hated
+:hated rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :hasEmotionalRelationWith ;
+       rdfs:comment "Character had hatred towards another."@en ;
+       rdfs:label "hated"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "had hatred for"@en .
+
+
+###  https://w3id.org/narn/social/hypnotised
+:hypnotised rdf:type owl:ObjectProperty ;
+            rdfs:comment "Character placed another under a spell."@en ;
+            rdfs:label "hypnotised"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "cast a spell on"@en .
+
+
+###  https://w3id.org/narn/social/isAKinsmanOf
+:isAKinsmanOf rdf:type owl:ObjectProperty ,
+                       owl:SymmetricProperty ;
+              rdfs:comment "Kinship or blood relation."@en ;
+              rdfs:label "is a kinsman of"@en ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "kin of"@en .
+
+
+###  https://w3id.org/narn/social/isAnEnemyOf
+:isAnEnemyOf rdf:type owl:ObjectProperty ,
+                      owl:SymmetricProperty ,
+                      owl:IrreflexiveProperty ;
+             owl:propertyDisjointWith :wasServedBy ;
+             rdfs:comment "Antagonistic relation."@en ;
+             rdfs:label "is an enemy of"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "foe of"@en .
+
+
+###  https://w3id.org/narn/social/isMarriedTo
+:isMarriedTo rdf:type owl:ObjectProperty ,
+                      owl:SymmetricProperty ,
+                      owl:IrreflexiveProperty ;
+             rdfs:comment "Marriage relationship."@en ;
+             rdfs:label "is married to"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "wed to"@en .
+
+
+###  https://w3id.org/narn/social/killed
+:killed rdf:type owl:ObjectProperty ,
+                 owl:AsymmetricProperty ,
+                 owl:IrreflexiveProperty ;
+        owl:propertyDisjointWith :served ;
+        rdfs:comment "X killed Y."@en ;
+        rdfs:label "killed"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "slew"@en .
+
+
+###  https://w3id.org/narn/social/livedIn
+:livedIn rdf:type owl:ObjectProperty ;
+         rdfs:range <https://w3id.org/narn/location/Place> ;
+         owl:propertyChainAxiom ( :served
+                                  :wasTheKingOf
+                                ) ;
+         rdfs:comment "Character lived in a place during some period."@en ;
+         rdfs:label "lived in"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "dwelt in"@en .
+
+
+###  https://w3id.org/narn/social/loved
+:loved rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :hasEmotionalRelationWith ;
+       rdfs:comment "Character had feelings of love towards another."@en ;
+       rdfs:label "loved"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "had love for"@en .
+
+
+###  https://w3id.org/narn/social/mutuallyLoved
+:mutuallyLoved rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :loved ;
+               rdf:type owl:SymmetricProperty ;
+               rdfs:comment "Two characters loved each other."@en ;
+               rdfs:label "mutually loved"@en ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "reciprocally loved"@en .
+
+
+###  https://w3id.org/narn/social/ruled
+:ruled rdf:type owl:ObjectProperty ;
+       owl:equivalentProperty :wasTheKingOf ;
+       rdfs:comment "Equivalent to wasTheKingOf."@en ;
+       rdfs:label "ruled"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "governed"@en .
+
+
+###  https://w3id.org/narn/social/served
+:served rdf:type owl:ObjectProperty ,
+                 owl:AsymmetricProperty ,
+                 owl:IrreflexiveProperty ;
+        rdfs:domain owl:Thing ;
+        rdfs:range owl:Thing ;
+        rdfs:comment "Character served another as a subordinate."@en ;
+        rdfs:label "served"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "was in service of"@en .
+
+
+###  https://w3id.org/narn/social/wasHeldCaptiveIn
+:wasHeldCaptiveIn rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :livedIn ;
+                  rdfs:range <https://w3id.org/narn/location/Place> ;
+                  rdfs:comment "Character was imprisoned."@en ;
+                  rdfs:label "was held captive in"@en ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "imprisoned in"@en .
+
+
+###  https://w3id.org/narn/social/wasKilledBy
+:wasKilledBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :killed ;
+             rdfs:comment "Inverse of killed."@en ;
+             rdfs:label "was killed by"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "slain by"@en .
+
+
+###  https://w3id.org/narn/social/wasServedBy
+:wasServedBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :served ;
+             rdfs:comment "Inverse of served."@en ;
+             rdfs:label "was served by"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "had as servant"@en .
+
+
+###  https://w3id.org/narn/social/wasTheBestFriendOf
+:wasTheBestFriendOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasFriend ;
+                    rdf:type owl:SymmetricProperty ;
+                    rdfs:comment "Particularly close friendship."@en ;
+                    rdfs:label "was the best friend of"@en ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "closest companion of"@en .
+
+
+###  https://w3id.org/narn/social/wasTheChieftainOf
+:wasTheChieftainOf rdf:type owl:ObjectProperty ;
+                   rdfs:range <https://w3id.org/narn/location/Place> ;
+                   rdfs:comment "Character was the chieftain of a people or place."@en ;
+                   rdfs:label "was the chieftain of"@en ;
+                   <http://www.w3.org/2004/02/skos/core#altLabel> "led as chief"@en .
+
+
+###  https://w3id.org/narn/social/wasTheKingOf
+:wasTheKingOf rdf:type owl:ObjectProperty ,
+                       owl:AsymmetricProperty ,
+                       owl:IrreflexiveProperty ;
+              rdfs:range <https://w3id.org/narn/location/Place> ;
+              rdfs:comment "Character was the ruler of a place."@en ;
+              rdfs:label "was the king of"@en ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "reigned over"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/narn/social/Ally
+:Ally rdf:type owl:Class ;
+      rdfs:subClassOf :SocialRole ;
+      owl:disjointWith :Outlaw ;
+      rdfs:comment "One allied with others"@en ;
+      rdfs:label "ally"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "companion"@en .
+
+
+###  https://w3id.org/narn/social/Chieftain
+:Chieftain rdf:type owl:Class ;
+           rdfs:subClassOf :PoliticalRole ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :wasTheChieftainOf ;
+                             owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                           ] ;
+           rdfs:comment "The leader of a people or tribe."@en ;
+           rdfs:label "chieftain"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "chief"@en .
+
+
+###  https://w3id.org/narn/social/EmotionalValence
+:EmotionalValence rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:oneOf ( :ambivalent
+                                                    :negative
+                                                    :positive
+                                                  )
+                                      ] ;
+                  rdfs:comment "Enumerated class: {positive, negative, ambivalent}."@en ;
+                  rdfs:label "emotional valence"@en ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "sentiment type"@en .
+
+
+###  https://w3id.org/narn/social/King
+:King rdf:type owl:Class ;
+      rdfs:subClassOf :PoliticalRole ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :wasTheKingOf ;
+                        owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :wasServedBy ;
+                        owl:allValuesFrom :Servant
+                      ] ;
+      owl:disjointWith :Servant ;
+      rdfs:comment "A ruler of a realm or kingdom."@en ;
+      rdfs:label "king"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "monarch"@en .
+
+
+###  https://w3id.org/narn/social/Leader
+:Leader rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:unionOf ( :Chieftain
+                                            :King
+                                          )
+                            ] ;
+        rdfs:comment "A leader is either a King or a Chieftain."@en ;
+        rdfs:label "leader"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "ruler"@en .
+
+
+###  https://w3id.org/narn/social/MilitaryRole
+:MilitaryRole rdf:type owl:Class ;
+              rdfs:subClassOf :SocialRole ;
+              rdfs:comment "A social role related to military or combat functions."@en ;
+              rdfs:label "military role"@en ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "military position"@en .
+
+
+###  https://w3id.org/narn/social/NonLeader
+:NonLeader rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Class ;
+                                 owl:complementOf :Leader
+                               ] ;
+           rdfs:comment "Anyone who is not a Leader."@en ;
+           rdfs:label "non-leader"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "non-ruler"@en .
+
+
+###  https://w3id.org/narn/social/Outlaw
+:Outlaw rdf:type owl:Class ;
+        rdfs:subClassOf :SocialRole ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isAnEnemyOf ;
+                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        ] ;
+        rdfs:comment "A person who lives outside the law."@en ;
+        rdfs:label "outlaw"@en ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "fugitive"@en .
+
+
+###  https://w3id.org/narn/social/PoliticalRole
+:PoliticalRole rdf:type owl:Class ;
+               rdfs:subClassOf :SocialRole ;
+               rdfs:comment "A social role involving governance or political authority."@en ;
+               rdfs:label "political role"@en ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "political position"@en .
+
+
+###  https://w3id.org/narn/social/PositiveRelation
+:PositiveRelation rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasValence ;
+                                        owl:hasValue :positive
+                                      ] ;
+                  rdfs:comment "A relation with positive emotional valence (owl:hasValue construct)."@en ;
+                  rdfs:label "positive relation"@en ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "positive bond"@en .
+
+
+###  https://w3id.org/narn/social/RoyalServant
+:RoyalServant rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Servant
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :served ;
+                                                           owl:someValuesFrom :King
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:comment "A servant who serves a king."@en ;
+              rdfs:label "royal servant"@en ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "royal attendant"@en .
+
+
+###  https://w3id.org/narn/social/Servant
+:Servant rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :SocialRole
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :served ;
+                                                      owl:someValuesFrom owl:Thing
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :SocialRole ;
+         rdfs:comment "One who serves another."@en ;
+         rdfs:label "servant"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "attendant"@en .
+
+
+###  https://w3id.org/narn/social/SocialRole
+:SocialRole rdf:type owl:Class ;
+            rdfs:comment "A role that a character plays in a social context."@en ;
+            rdfs:label "social role"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "role"@en .
+
+
+###  https://w3id.org/narn/social/SuicidalCharacter
+:SuicidalCharacter rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty :committedSuicide ;
+                                         owl:hasSelf "true"^^xsd:boolean
+                                       ] ;
+                   rdfs:comment "A character who committed suicide."@en ;
+                   rdfs:label "suicidal character"@en ;
+                   <http://www.w3.org/2004/02/skos/core#altLabel> "self slain character"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/narn/social/ambivalent
+:ambivalent rdf:type owl:NamedIndividual ;
+            rdfs:comment "An ambivalent or mixed emotional valence."@en ;
+            rdfs:label "ambivalent"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "mixed sentiment"@en .
+
+
+###  https://w3id.org/narn/social/negative
+:negative rdf:type owl:NamedIndividual ;
+          rdfs:comment "A negative emotional valence."@en ;
+          rdfs:label "negative"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "negative sentiment"@en .
+
+
+###  https://w3id.org/narn/social/positive
+:positive rdf:type owl:NamedIndividual ;
+          rdfs:comment "A positive emotional valence."@en ;
+          rdfs:label "positive"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "positive sentiment"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :feared
+                :hated
+                :loved
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

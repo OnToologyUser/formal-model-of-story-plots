@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/family/"
+     xml:base="http://purl.org/family/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.org/family/">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-19T14:42:42+01:00</terms:created>
+        <terms:creator rdf:resource="https://w3id.org/people/az/me"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-23T13:42:42+01:00</terms:modified>
+        <terms:title xml:lang="en">The Family Ontology</terms:title>
+        <rdfs:comment xml:lang="en">An ontology for family relationships.</rdfs:comment>
+        <rdfs:label xml:lang="en">The family ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/family/isABrotherOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isABrotherOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/family/isASiblingOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/family/Male"/>
+        <rdfs:comment xml:lang="en">A male sibling of someone.</rdfs:comment>
+        <rdfs:label xml:lang="en">is a brother of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isAChildOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isAChildOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/family/isADescendentOf"/>
+        <rdfs:comment xml:lang="en">A relation between someone and their parent</rdfs:comment>
+        <rdfs:label xml:lang="en">is a child of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isACousinOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isACousinOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/family/isAChildOf"/>
+            <rdf:Description rdf:about="http://purl.org/family/isASiblingOf"/>
+            <rdf:Description rdf:about="http://purl.org/family/isAParentOf"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">One that is the child of a sibling of the parent of someone else.</rdfs:comment>
+        <rdfs:label xml:lang="en">is a cousin of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isADaughterOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isADaughterOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/family/isTheChildOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/family/Female"/>
+        <rdfs:comment xml:lang="en">A relation between a female child and his parent.</rdfs:comment>
+        <rdfs:label xml:lang="en">is a daughter of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isADescendentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isADescendentOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">A relation between someone and one of their ancestors.</rdfs:comment>
+        <rdfs:label xml:lang="en">is a descendent of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isAParentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isAParentOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/family/isAnAncestorOf"/>
+        <owl:inverseOf rdf:resource="http://purl.org/family/isAChildOf"/>
+        <rdfs:comment xml:lang="en">A relation between a parent and their child</rdfs:comment>
+        <rdfs:label xml:lang="en">is a parent of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isASibingOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isASibingOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Two individuals who share the same parent.</rdfs:comment>
+        <rdfs:label xml:lang="en">is a sibling of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isASiblingOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isASiblingOf"/>
+    
+
+
+    <!-- http://purl.org/family/isASisterOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isASisterOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/family/isASiblingOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/family/Female"/>
+        <rdfs:comment xml:lang="en">A female sibling of someone.</rdfs:comment>
+        <rdfs:label xml:lang="en">is a sister of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isASonOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isASonOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/family/isTheChildOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/family/Male"/>
+        <rdfs:comment xml:lang="en">A relation between a male child and his parent.</rdfs:comment>
+        <rdfs:label xml:lang="en">is a son of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isAnAncestorOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isAnAncestorOf">
+        <owl:inverseOf rdf:resource="http://purl.org/family/isADescendentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">A relation between someone and one their of descendants.</rdfs:comment>
+        <rdfs:label xml:lang="en">is an ancestor of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isMarriedTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isMarriedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">People united through marriage.</rdfs:comment>
+        <rdfs:label xml:lang="en">is married to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isTheChildOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isTheChildOf"/>
+    
+
+
+    <!-- http://purl.org/family/isTheFatherOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isTheFatherOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/family/isAParentOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/family/Male"/>
+        <rdfs:comment xml:lang="en">A relation between a father and his child.</rdfs:comment>
+        <rdfs:label xml:lang="en">is the father of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/family/isTheMotherOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/family/isTheMotherOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/family/isAParentOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/family/Female"/>
+        <rdfs:comment xml:lang="en">A relation between a mother and his child.</rdfs:comment>
+        <rdfs:label xml:lang="en">is the mother of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/family/Female -->
+
+
+    <owl:Class rdf:about="http://purl.org/family/Female">
+        <rdfs:comment xml:lang="en">A female individual. The gender may be a natural one, attributed at birth, or a given one by social conventions.</rdfs:comment>
+        <rdfs:label xml:lang="en">female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/family/Male -->
+
+
+    <owl:Class rdf:about="http://purl.org/family/Male">
+        <rdfs:comment xml:lang="en">A male individual. The gender may be a natural one, attributed at birth, or a given one by social conventions.</rdfs:comment>
+        <rdfs:label xml:lang="en">male</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

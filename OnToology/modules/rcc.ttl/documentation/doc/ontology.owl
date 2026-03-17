@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/narn/rcc/"
+     xml:base="https://w3id.org/narn/rcc/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="https://purl.org/vocab/vann/"
+     xmlns:terms="https://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/narn/rcc/">
+        <owl:imports rdf:resource="https://w3id.org/narn/location/"/>
+        <rdfs:comment xml:lang="en">An OWL encoding of the Region Connection Calculus.</rdfs:comment>
+        <rdfs:label xml:lang="en">RCC Ontology</rdfs:label>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-13</terms:created>
+        <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <vann:preferredNamespacePrefix>rcc</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/narn/rcc/</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/location/borders -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/narn/location/borders">
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/DC"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/narn/location/contains -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/narn/location/contains">
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/DC"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/EC"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/PO"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/narn/location/isAPartOf -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/narn/location/isAPartOf">
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/DC"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/EC"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/PO"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/narn/location/isNear -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/narn/location/isNear">
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/DC"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/narn/rcc/DC -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/rcc/DC">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Two regions share no points at all.</rdfs:comment>
+        <rdfs:label xml:lang="en">disconnected</rdfs:label>
+        <skos:altLabel xml:lang="en">disjoint regions</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/rcc/EC -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/rcc/EC">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/borders"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/NTPP"/>
+        <rdfs:comment xml:lang="en">Boundaries touch but interiors are disjoint.</rdfs:comment>
+        <rdfs:label xml:lang="en">externally connected</rdfs:label>
+        <skos:altLabel xml:lang="en">touching regions</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/rcc/EQ -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/rcc/EQ">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/contains"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/isAPartOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Same spatial extent. Equivalence relation.</rdfs:comment>
+        <rdfs:label xml:lang="en">equal</rdfs:label>
+        <skos:altLabel xml:lang="en">coextensive regions</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/rcc/NTPP -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/rcc/NTPP">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/isAPartOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">First region entirely inside second, boundaries do not touch.</rdfs:comment>
+        <rdfs:label xml:lang="en">non-tangential proper part</rdfs:label>
+        <skos:altLabel xml:lang="en">interior part</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/rcc/NTPPi -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/rcc/NTPPi">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/contains"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/rcc/NTPP"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">First region entirely contains second, boundaries do not touch.</rdfs:comment>
+        <rdfs:label xml:lang="en">non-tangential proper part inverse</rdfs:label>
+        <skos:altLabel xml:lang="en">interior whole</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/rcc/PO -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/rcc/PO">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Part of each region is inside the other but neither is contained.</rdfs:comment>
+        <rdfs:label xml:lang="en">partially overlapping</rdfs:label>
+        <skos:altLabel xml:lang="en">overlapping regions</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/rcc/TPP -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/rcc/TPP">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/isAPartOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">First region entirely inside second, boundaries touch.</rdfs:comment>
+        <rdfs:label xml:lang="en">tangential proper part</rdfs:label>
+        <skos:altLabel xml:lang="en">tangential part</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/rcc/TPPi -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/rcc/TPPi">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/location/contains"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/rcc/TPP"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">First region entirely contains second, boundaries touch.</rdfs:comment>
+        <rdfs:label xml:lang="en">tangential proper part inverse</rdfs:label>
+        <skos:altLabel xml:lang="en">tangential whole</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/rcc/spatiallyRelatedTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/rcc/spatiallyRelatedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
+        <rdfs:comment xml:lang="en">The most general spatial relation between two regions.</rdfs:comment>
+        <rdfs:label xml:lang="en">spatially related to</rdfs:label>
+        <skos:altLabel xml:lang="en">spatial relation</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/narn/rcc/DC"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/rcc/EC"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/rcc/EQ"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/rcc/NTPP"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/rcc/NTPPi"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/rcc/PO"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/rcc/TPP"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/rcc/TPPi"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

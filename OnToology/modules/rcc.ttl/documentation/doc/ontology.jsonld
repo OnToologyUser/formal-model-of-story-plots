@@ -1,0 +1,270 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointProperties" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/narn/rcc/DC"
+    }, {
+      "@id" : "https://w3id.org/narn/rcc/EC"
+    }, {
+      "@id" : "https://w3id.org/narn/rcc/EQ"
+    }, {
+      "@id" : "https://w3id.org/narn/rcc/NTPP"
+    }, {
+      "@id" : "https://w3id.org/narn/rcc/NTPPi"
+    }, {
+      "@id" : "https://w3id.org/narn/rcc/PO"
+    }, {
+      "@id" : "https://w3id.org/narn/rcc/TPP"
+    }, {
+      "@id" : "https://w3id.org/narn/rcc/TPPi"
+    } ]
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/location/borders",
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "https://w3id.org/narn/rcc/DC"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/location/contains",
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "https://w3id.org/narn/rcc/DC"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/EC"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/PO"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/location/isAPartOf",
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "https://w3id.org/narn/rcc/DC"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/EC"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/PO"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/location/isNear",
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "https://w3id.org/narn/rcc/DC"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An OWL encoding of the Region Connection Calculus."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RCC Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/narn/location/"
+  } ],
+  "https://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-03-13"
+  } ],
+  "https://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://w3id.org/people/erdemonal/me"
+  } ],
+  "https://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-03-17"
+  } ],
+  "https://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "rcc"
+  } ],
+  "https://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/narn/rcc/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/DC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Two regions share no points at all."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "disconnected"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "disjoint regions"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/EC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Boundaries touch but interiors are disjoint."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "externally connected"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/narn/location/borders"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "https://w3id.org/narn/rcc/NTPP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "touching regions"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/EQ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#ReflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Same spatial extent. Equivalence relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "equal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/narn/location/contains"
+  }, {
+    "@id" : "https://w3id.org/narn/location/isAPartOf"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "coextensive regions"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/NTPP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "First region entirely inside second, boundaries do not touch."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "non-tangential proper part"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/narn/location/isAPartOf"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "interior part"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/NTPPi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "First region entirely contains second, boundaries do not touch."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "non-tangential proper part inverse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/narn/location/contains"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/narn/rcc/NTPP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "interior whole"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/PO",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Part of each region is inside the other but neither is contained."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "partially overlapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "overlapping regions"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/TPP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "First region entirely inside second, boundaries touch."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "tangential proper part"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/narn/location/isAPartOf"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "tangential part"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/TPPi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "First region entirely contains second, boundaries touch."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "tangential proper part inverse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/narn/location/contains"
+  }, {
+    "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/narn/rcc/TPP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "tangential whole"
+  } ]
+}, {
+  "@id" : "https://w3id.org/narn/rcc/spatiallyRelatedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The most general spatial relation between two regions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/narn/location/Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "spatially related to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/narn/location/Place"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "spatial relation"
+  } ]
+} ]

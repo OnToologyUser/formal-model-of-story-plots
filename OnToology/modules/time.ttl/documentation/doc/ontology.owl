@@ -1,0 +1,719 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/narn/to/"
+     xml:base="https://w3id.org/narn/to/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="https://purl.org/vocab/vann/"
+     xmlns:terms="https://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/narn/to/">
+        <rdfs:comment xml:lang="en">An ontology for temporal entities and Allen&apos;s temporal algebra.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal Ontology</rdfs:label>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-13</terms:created>
+        <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <vann:preferredNamespacePrefix>to</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/narn/to/</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/to/after -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/after">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/to/before"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">Inverse of before. X starts after Y ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">after</rdfs:label>
+        <skos:altLabel xml:lang="en">follows</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/before -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/before">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/precedes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/to/overlaps"/>
+        <rdfs:comment xml:lang="en">X ends before Y starts.</rdfs:comment>
+        <rdfs:label xml:lang="en">before</rdfs:label>
+        <skos:altLabel xml:lang="en">precedes</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/containsInterval -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/containsInterval">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/to/during"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">Inverse of during. X entirely contains Y.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains interval</rdfs:label>
+        <skos:altLabel xml:lang="en">temporally contains</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/during -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/during">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">X occurs entirely within Y.</rdfs:comment>
+        <rdfs:label xml:lang="en">during</rdfs:label>
+        <skos:altLabel xml:lang="en">contained in</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/endsAt -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/endsAt">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/hasInstant"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/to/startsAt"/>
+        <rdfs:comment xml:lang="en">The unique ending instant.</rdfs:comment>
+        <rdfs:label xml:lang="en">ends at</rdfs:label>
+        <skos:altLabel xml:lang="en">ending point</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/equals -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/equals">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Same temporal extent.</rdfs:comment>
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+        <skos:altLabel xml:lang="en">same time as</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/finishedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/finishedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/to/finishes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Inverse of finishes. X ends when Y ends but Y starts before X starts.</rdfs:comment>
+        <rdfs:label xml:lang="en">finished by</rdfs:label>
+        <skos:altLabel xml:lang="en">ended by</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/finishes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/finishes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">X ends at same time as Y but starts after Y starts.</rdfs:comment>
+        <rdfs:label xml:lang="en">finishes</rdfs:label>
+        <skos:altLabel xml:lang="en">ends with</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/hasInstant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/hasInstant">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <rdfs:comment xml:lang="en">Links an interval to an instant that falls within or bounds it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has instant</rdfs:label>
+        <skos:altLabel xml:lang="en">at instant</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/intervalRelation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/intervalRelation">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:comment xml:lang="en">General temporal relation between two intervals.</rdfs:comment>
+        <rdfs:label xml:lang="en">interval relation</rdfs:label>
+        <skos:altLabel xml:lang="en">Allen relation</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/meets -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/meets">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/precedes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/to/overlaps"/>
+        <rdfs:comment xml:lang="en">X ends exactly when Y starts.</rdfs:comment>
+        <rdfs:label xml:lang="en">meets</rdfs:label>
+        <skos:altLabel xml:lang="en">immediately before</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/metBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/metBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/to/meets"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Inverse of meets. X starts exactly when Y ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">met by</rdfs:label>
+        <skos:altLabel xml:lang="en">immediately after</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/occursAfter -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/occursAfter">
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/to/occursBefore"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <rdfs:comment xml:lang="en">Inverse of occursBefore.</rdfs:comment>
+        <rdfs:label xml:lang="en">occurs after</rdfs:label>
+        <skos:altLabel xml:lang="en">later than</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/occursBefore -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/occursBefore">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/to/occursSimultaneouslyTo"/>
+        <rdfs:comment xml:lang="en">Instant strictly before another.</rdfs:comment>
+        <rdfs:label xml:lang="en">occurs before</rdfs:label>
+        <skos:altLabel xml:lang="en">earlier than</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/occursDuring -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/occursDuring">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:comment xml:lang="en">An instant falls within the extent of an interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">occurs during</rdfs:label>
+        <skos:altLabel xml:lang="en">within timeframe of</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/occursSimultaneouslyTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/occursSimultaneouslyTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <rdfs:comment xml:lang="en">Two instants at the same time.</rdfs:comment>
+        <rdfs:label xml:lang="en">occurs simultaneously to</rdfs:label>
+        <skos:altLabel xml:lang="en">at same time as</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/overlappedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/overlappedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/to/overlaps"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Inverse of overlaps. Y starts before X, ends after X starts but before X ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">overlapped by</rdfs:label>
+        <skos:altLabel xml:lang="en">partially after</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/overlaps -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/overlaps">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">X starts before Y, ends after Y starts but before Y ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">overlaps</rdfs:label>
+        <skos:altLabel xml:lang="en">partially before</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/precededBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/precededBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/to/precedes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">Inverse of precedes. X starts after or when Y ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">preceded by</rdfs:label>
+        <skos:altLabel xml:lang="en">happens after</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/precedes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/precedes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">X ends before or when Y starts.</rdfs:comment>
+        <rdfs:label xml:lang="en">precedes</rdfs:label>
+        <skos:altLabel xml:lang="en">happens before</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/startedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/startedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/to/starts"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">Inverse of starts. X starts when Y starts but Y ends after X ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">started by</rdfs:label>
+        <skos:altLabel xml:lang="en">begun by</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/starts -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/starts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">X starts at same time as Y but ends before Y ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">starts</rdfs:label>
+        <skos:altLabel xml:lang="en">begins with</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/startsAt -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/startsAt">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/hasInstant"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <rdfs:comment xml:lang="en">The unique starting instant.</rdfs:comment>
+        <rdfs:label xml:lang="en">starts at</rdfs:label>
+        <skos:altLabel xml:lang="en">beginning point</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/to/hasDateTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/narn/to/hasDateTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The calendar date and time of an instant.</rdfs:comment>
+        <rdfs:label xml:lang="en">has date time</rdfs:label>
+        <skos:altLabel xml:lang="en">dateTime value</skos:altLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/hasDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/narn/to/hasDuration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+        <rdfs:comment xml:lang="en">The length of time spanned by an interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">has duration</rdfs:label>
+        <skos:altLabel xml:lang="en">time length</skos:altLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/to/EndingInterval -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/EndingInterval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/to/endsAt"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An interval with a defined ending instant.</rdfs:comment>
+        <rdfs:label xml:lang="en">ending interval</rdfs:label>
+        <skos:altLabel xml:lang="en">ending point</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/to/EternalInterval -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/EternalInterval">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/to/InfiniteInterval"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="https://w3id.org/narn/to/EndingInterval"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="https://w3id.org/narn/to/StartingInterval"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/InfiniteInterval"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/to/FiniteInterval"/>
+        <rdfs:comment xml:lang="en">An interval extending infinitely in both directions.</rdfs:comment>
+        <rdfs:label xml:lang="en">eternal interval</rdfs:label>
+        <skos:altLabel xml:lang="en">everlasting interval</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/to/FiniteInterval -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/FiniteInterval">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/to/Interval"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/narn/to/endsAt"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/narn/to/startsAt"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/EndingInterval"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/StartingInterval"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/to/startsAt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/to/endsAt"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/narn/to/Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/to/startsAt"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/narn/to/Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/to/InfiniteInterval"/>
+        <rdfs:comment xml:lang="en">An interval with both a starting and ending instant.</rdfs:comment>
+        <rdfs:label xml:lang="en">finite interval</rdfs:label>
+        <skos:altLabel xml:lang="en">bounded interval</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/to/InfiniteInterval -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/InfiniteInterval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:comment xml:lang="en">An interval extending infinitely in at least one direction.</rdfs:comment>
+        <rdfs:label xml:lang="en">infinite interval</rdfs:label>
+        <skos:altLabel xml:lang="en">unbounded interval</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/to/Instant -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/Instant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/TemporalEntity"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:comment xml:lang="en">A single point in time with zero duration.</rdfs:comment>
+        <rdfs:label xml:lang="en">instant</rdfs:label>
+        <skos:altLabel xml:lang="en">time point</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/to/Interval -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/Interval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/TemporalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/to/hasInstant"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A continuous extent of time with nonzero duration.</rdfs:comment>
+        <rdfs:label xml:lang="en">interval</rdfs:label>
+        <skos:altLabel xml:lang="en">time span</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/to/StartingInterval -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/StartingInterval">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/to/Interval"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/narn/to/startsAt"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/Interval"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/to/startsAt"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An interval with a defined starting instant.</rdfs:comment>
+        <rdfs:label xml:lang="en">starting interval</rdfs:label>
+        <skos:altLabel xml:lang="en">begins with</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/to/TemporalEntity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/TemporalEntity">
+        <rdfs:comment xml:lang="en">A thing that exists in time.</rdfs:comment>
+        <rdfs:label xml:lang="en">temporal entity</rdfs:label>
+        <skos:altLabel xml:lang="en">time entity</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/narn/to/after"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/before"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/containsInterval"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/during"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/equals"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/finishedBy"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/finishes"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/meets"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/metBy"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/overlappedBy"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/overlaps"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/startedBy"/>
+            <rdf:Description rdf:about="https://w3id.org/narn/to/starts"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

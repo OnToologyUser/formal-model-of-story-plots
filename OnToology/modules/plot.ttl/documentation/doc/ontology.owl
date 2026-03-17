@@ -1,0 +1,799 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/narn/plot/"
+     xml:base="https://w3id.org/narn/plot/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="https://purl.org/vocab/vann/"
+     xmlns:terms="https://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/narn/plot/">
+        <owl:imports rdf:resource="https://w3id.org/narn/event/"/>
+        <rdfs:comment xml:lang="en">An ontology for narrative and literary structure of stories.</rdfs:comment>
+        <rdfs:label xml:lang="en">Plot Structure Ontology</rdfs:label>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-16</terms:created>
+        <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <vann:preferredNamespacePrefix>plot</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/narn/plot/</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/plot/conflictInvolves -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/conflictInvolves">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Conflict"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/plot/hasAuthor"/>
+        <rdfs:comment xml:lang="en">A character or entity involved in the conflict.</rdfs:comment>
+        <rdfs:label xml:lang="en">conflict involves</rdfs:label>
+        <skos:altLabel xml:lang="en">tension involves</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/containsUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/containsUnit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:comment xml:lang="en">Relates a narrative unit to its contained subunits.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains unit</rdfs:label>
+        <skos:altLabel xml:lang="en">includes unit</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/correspondsToEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/correspondsToEvent">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/NarrativeElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">Maps a narrative element to the event it represents.</rdfs:comment>
+        <rdfs:label xml:lang="en">corresponds to event</rdfs:label>
+        <skos:altLabel xml:lang="en">maps to event</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/deviceInvolvesCharacter -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/deviceInvolvesCharacter">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:comment xml:lang="en">A character involved in or affected by this plot device.</rdfs:comment>
+        <rdfs:label xml:lang="en">device involves character</rdfs:label>
+        <skos:altLabel xml:lang="en">device concerns</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/follows -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/follows">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:comment xml:lang="en">One narrative unit sequentially comes after another.</rdfs:comment>
+        <rdfs:label xml:lang="en">follows</rdfs:label>
+        <skos:altLabel xml:lang="en">comes after</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/foreshadowsEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/foreshadowsEvent">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Foreshadowing"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/event/Event"/>
+        <rdfs:comment xml:lang="en">The event that this foreshadowing hints at.</rdfs:comment>
+        <rdfs:label xml:lang="en">foreshadows event</rdfs:label>
+        <skos:altLabel xml:lang="en">hints at</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/hasAuthor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/hasAuthor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Story"/>
+        <rdfs:comment xml:lang="en">The author of the story.</rdfs:comment>
+        <rdfs:label xml:lang="en">has author</rdfs:label>
+        <skos:altLabel xml:lang="en">written by</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/hasConflict -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/hasConflict">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Story"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/plot/Conflict"/>
+        <rdfs:comment xml:lang="en">A conflict central to the story.</rdfs:comment>
+        <rdfs:label xml:lang="en">has conflict</rdfs:label>
+        <skos:altLabel xml:lang="en">has tension</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/hasGenre -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/hasGenre">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Story"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/plot/Genre"/>
+        <rdfs:comment xml:lang="en">The genre(s) of the story.</rdfs:comment>
+        <rdfs:label xml:lang="en">has genre</rdfs:label>
+        <skos:altLabel xml:lang="en">genre is</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/hasNarrativeElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/hasNarrativeElement">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Story"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/plot/NarrativeElement"/>
+        <rdfs:comment xml:lang="en">Links a story to its plot stages.</rdfs:comment>
+        <rdfs:label xml:lang="en">has narrative element</rdfs:label>
+        <skos:altLabel xml:lang="en">has element</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/hasNarrativeUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/hasNarrativeUnit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Story"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:comment xml:lang="en">Links a story to its structural units.</rdfs:comment>
+        <rdfs:label xml:lang="en">has narrative unit</rdfs:label>
+        <skos:altLabel xml:lang="en">divided into</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/hasRole -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/hasRole">
+        <rdfs:range rdf:resource="https://w3id.org/narn/plot/CharacterRole"/>
+        <rdfs:comment xml:lang="en">The narrative role a character plays.</rdfs:comment>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+        <skos:altLabel xml:lang="en">plays role</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/hasTheme -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/hasTheme">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Story"/>
+        <rdfs:comment xml:lang="en">A thematic element or motif in the story.</rdfs:comment>
+        <rdfs:label xml:lang="en">has theme</rdfs:label>
+        <skos:altLabel xml:lang="en">explores theme</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/involvedInDevice -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/involvedInDevice">
+        <rdfs:comment xml:lang="en">Links a character role to a narrative device that affects them.</rdfs:comment>
+        <rdfs:label xml:lang="en">involved in device</rdfs:label>
+        <skos:altLabel xml:lang="en">affected by narrative device</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/isUnitOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/isUnitOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/narn/plot/containsUnit"/>
+        <rdfs:comment xml:lang="en">Inverse of containsUnit, relates a unit to its parent.</rdfs:comment>
+        <rdfs:label xml:lang="en">is unit of</rdfs:label>
+        <skos:altLabel xml:lang="en">belongs to</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/occursInUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/occursInUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/NarrativeElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:comment xml:lang="en">The narrative unit in which this element appears.</rdfs:comment>
+        <rdfs:label xml:lang="en">occurs in unit</rdfs:label>
+        <skos:altLabel xml:lang="en">located in unit</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/usesDevice -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/plot/usesDevice">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Story"/>
+        <rdfs:range rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:comment xml:lang="en">Links a story to the plot devices it employs.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses device</rdfs:label>
+        <skos:altLabel xml:lang="en">employs device</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/plot/publishedDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/narn/plot/publishedDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/Story"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">The date the story was published.</rdfs:comment>
+        <rdfs:label xml:lang="en">published date</rdfs:label>
+        <skos:altLabel xml:lang="en">date published</skos:altLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/narn/plot/unitIndex -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/narn/plot/unitIndex">
+        <rdfs:domain rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="en">The ordering position of a unit within its parent.</rdfs:comment>
+        <rdfs:label xml:lang="en">unit index</rdfs:label>
+        <skos:altLabel xml:lang="en">sequence number</skos:altLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/narn/plot/Act -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Act">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:comment xml:lang="en">A major division in drama or narrative, often five in classical structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">act</rdfs:label>
+        <skos:altLabel xml:lang="en">story act</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Anagnorisis -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Anagnorisis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/plot/PlotDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/narn/plot/correspondsToEvent"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/narn/event/Discovery"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:comment xml:lang="en">The point in a play, novel, etc., in which a principal character recognizes or discovers another character&apos;s true identity or the true nature of their own circumstances.</rdfs:comment>
+        <rdfs:label xml:lang="en">anagnorisis</rdfs:label>
+        <skos:altLabel xml:lang="en">moment of recognition</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Antagonist -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Antagonist">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/CharacterRole"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/Protagonist"/>
+        <rdfs:comment xml:lang="en">The character who opposes the protagonist.</rdfs:comment>
+        <rdfs:label xml:lang="en">antagonist</rdfs:label>
+        <skos:altLabel xml:lang="en">villain</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Chapter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Chapter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:comment xml:lang="en">A numbered or titled section of a narrative.</rdfs:comment>
+        <rdfs:label xml:lang="en">chapter</rdfs:label>
+        <skos:altLabel xml:lang="en">story chapter</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/CharacterRole -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/CharacterRole">
+        <rdfs:comment xml:lang="en">The narrative function a character plays in the story.</rdfs:comment>
+        <rdfs:label xml:lang="en">character role</rdfs:label>
+        <skos:altLabel xml:lang="en">story role</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Climax -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Climax">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeElement"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/Exposition"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/Resolution"/>
+        <rdfs:comment xml:lang="en">The turning point; the moment of highest tension.</rdfs:comment>
+        <rdfs:label xml:lang="en">climax</rdfs:label>
+        <skos:altLabel xml:lang="en">turning point</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Conflict -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Conflict">
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/Genre"/>
+        <rdfs:comment xml:lang="en">A struggle between opposing forces driving the plot.</rdfs:comment>
+        <rdfs:label xml:lang="en">conflict</rdfs:label>
+        <skos:altLabel xml:lang="en">tension</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Denouement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Denouement">
+        <owl:equivalentClass rdf:resource="https://w3id.org/narn/plot/Resolution"/>
+        <rdfs:comment xml:lang="en">Equivalent to resolution. The unravelling of the plot.</rdfs:comment>
+        <rdfs:label xml:lang="en">denouement</rdfs:label>
+        <skos:altLabel xml:lang="en">final outcome</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/DramaticIrony -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/DramaticIrony">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:comment xml:lang="en">When the audience knows more than the characters.</rdfs:comment>
+        <rdfs:label xml:lang="en">dramatic irony</rdfs:label>
+        <skos:altLabel xml:lang="en">audience knowledge gap</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Epic -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Epic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/Genre"/>
+        <rdfs:comment xml:lang="en">A long narrative involving heroic deeds and grand scale.</rdfs:comment>
+        <rdfs:label xml:lang="en">epic</rdfs:label>
+        <skos:altLabel xml:lang="en">epic genre</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Exposition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Exposition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeElement"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/Resolution"/>
+        <rdfs:comment xml:lang="en">Introduction of setting, characters, and background.</rdfs:comment>
+        <rdfs:label xml:lang="en">exposition</rdfs:label>
+        <skos:altLabel xml:lang="en">setup</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/ExternalConflict -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/ExternalConflict">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/Conflict"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/plot/conflictInvolves"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/InternalConflict"/>
+        <rdfs:comment xml:lang="en">Conflict between a character and an external force (antagonist, nature, society).</rdfs:comment>
+        <rdfs:label xml:lang="en">external conflict</rdfs:label>
+        <skos:altLabel xml:lang="en">outer struggle</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/FallingAction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/FallingAction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeElement"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/RisingAction"/>
+        <rdfs:comment xml:lang="en">Events after the climax leading to the resolution.</rdfs:comment>
+        <rdfs:label xml:lang="en">falling action</rdfs:label>
+        <skos:altLabel xml:lang="en">unwinding</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Fantasy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Fantasy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/Genre"/>
+        <rdfs:comment xml:lang="en">A story with magical or supernatural elements.</rdfs:comment>
+        <rdfs:label xml:lang="en">fantasy</rdfs:label>
+        <skos:altLabel xml:lang="en">fantasy genre</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Flashback -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Flashback">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:comment xml:lang="en">A scene set in a time earlier than the main story.</rdfs:comment>
+        <rdfs:label xml:lang="en">flashback</rdfs:label>
+        <skos:altLabel xml:lang="en">retrospection</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Foreshadowing -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Foreshadowing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/plot/foreshadowsEvent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/narn/event/Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Hints or clues about future events in the story.</rdfs:comment>
+        <rdfs:label xml:lang="en">foreshadowing</rdfs:label>
+        <skos:altLabel xml:lang="en">hint of future events</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Genre -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Genre">
+        <rdfs:comment xml:lang="en">A category of narrative with shared conventions.</rdfs:comment>
+        <rdfs:label xml:lang="en">genre</rdfs:label>
+        <skos:altLabel xml:lang="en">literary genre</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/IncitingIncident -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/IncitingIncident">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeElement"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/Resolution"/>
+        <rdfs:comment xml:lang="en">The event that sets the main conflict in motion.</rdfs:comment>
+        <rdfs:label xml:lang="en">inciting incident</rdfs:label>
+        <skos:altLabel xml:lang="en">catalyst</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/InternalConflict -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/InternalConflict">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/Conflict"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/plot/conflictInvolves"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Conflict within a character (e.g. moral dilemma, fear).</rdfs:comment>
+        <rdfs:label xml:lang="en">internal conflict</rdfs:label>
+        <skos:altLabel xml:lang="en">inner struggle</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/MacGuffin -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/MacGuffin">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:comment xml:lang="en">An object or goal that motivates the plot but has no intrinsic importance.</rdfs:comment>
+        <rdfs:label xml:lang="en">MacGuffin</rdfs:label>
+        <skos:altLabel xml:lang="en">plot motivator</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Mentor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Mentor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/CharacterRole"/>
+        <rdfs:comment xml:lang="en">A character who guides or teaches the protagonist.</rdfs:comment>
+        <rdfs:label xml:lang="en">mentor</rdfs:label>
+        <skos:altLabel xml:lang="en">guide figure</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/NarrativeElement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/NarrativeElement">
+        <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:comment xml:lang="en">A stage in the narrative arc.</rdfs:comment>
+        <rdfs:label xml:lang="en">narrative element</rdfs:label>
+        <skos:altLabel xml:lang="en">story element</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/NarrativeUnit -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/NarrativeUnit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/plot/containsUnit"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A structural division of a story.</rdfs:comment>
+        <rdfs:label xml:lang="en">narrative unit</rdfs:label>
+        <skos:altLabel xml:lang="en">story division</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Part -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Part">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/plot/containsUnit"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/plot/Chapter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A major division of a story containing chapters.</rdfs:comment>
+        <rdfs:label xml:lang="en">part</rdfs:label>
+        <skos:altLabel xml:lang="en">story part</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Peripeteia -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Peripeteia">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:comment xml:lang="en">A sudden reversal of fortune or change in circumstances.</rdfs:comment>
+        <rdfs:label xml:lang="en">peripeteia</rdfs:label>
+        <skos:altLabel xml:lang="en">reversal of fortune</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/PlotDevice -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/PlotDevice">
+        <rdfs:comment xml:lang="en">A technique used to advance or structure the plot.</rdfs:comment>
+        <rdfs:label xml:lang="en">plot device</rdfs:label>
+        <skos:altLabel xml:lang="en">narrative device</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/PlotTwist -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/PlotTwist">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
+        <rdfs:comment xml:lang="en">An unexpected revelation that changes the story&apos;s direction.</rdfs:comment>
+        <rdfs:label xml:lang="en">plot twist</rdfs:label>
+        <skos:altLabel xml:lang="en">unexpected turn</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Protagonist -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Protagonist">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/CharacterRole"/>
+        <rdfs:comment xml:lang="en">The main character; the one driving the action.</rdfs:comment>
+        <rdfs:label xml:lang="en">protagonist</rdfs:label>
+        <skos:altLabel xml:lang="en">main character</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Resolution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Resolution">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeElement"/>
+        <rdfs:comment xml:lang="en">The outcome; how the conflict is resolved.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution</rdfs:label>
+        <skos:altLabel xml:lang="en">conclusion</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/RisingAction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/RisingAction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeElement"/>
+        <rdfs:comment xml:lang="en">Series of events building tension toward the climax.</rdfs:comment>
+        <rdfs:label xml:lang="en">rising action</rdfs:label>
+        <skos:altLabel xml:lang="en">complication</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Scene -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Scene">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/plot/containsUnit"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The smallest narrative unit; a continuous action in one setting.</rdfs:comment>
+        <rdfs:label xml:lang="en">scene</rdfs:label>
+        <skos:altLabel xml:lang="en">story scene</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Story -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Story">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/plot/hasNarrativeElement"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/plot/Climax"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/plot/hasNarrativeElement"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/plot/Resolution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/narn/plot/hasNarrativeUnit"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/narn/plot/NarrativeUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A complete narrative work.</rdfs:comment>
+        <rdfs:label xml:lang="en">story</rdfs:label>
+        <skos:altLabel xml:lang="en">narrative</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/Tragedy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/Tragedy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/Genre"/>
+        <rdfs:comment xml:lang="en">A story where the protagonist suffers a downfall.</rdfs:comment>
+        <rdfs:label xml:lang="en">tragedy</rdfs:label>
+        <skos:altLabel xml:lang="en">tragic genre</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/plot/TragicHero -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/plot/TragicHero">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/narn/plot/Protagonist"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/narn/plot/involvedInDevice"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/narn/plot/Peripeteia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/CharacterRole"/>
+        <rdfs:comment xml:lang="en">A protagonist whose flaw leads to their downfall.</rdfs:comment>
+        <rdfs:label xml:lang="en">tragic hero</rdfs:label>
+        <skos:altLabel xml:lang="en">tragic protagonist</skos:altLabel>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

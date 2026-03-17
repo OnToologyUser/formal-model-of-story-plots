@@ -1,0 +1,128 @@
+{
+  "@context" : {
+    "Town" : {
+      "@id" : "https://w3id.org/narn/location/Town"
+    },
+    "isTheCapitalOf" : {
+      "@id" : "https://w3id.org/narn/location/isTheCapitalOf",
+      "@type" : "@id"
+    },
+    "created" : {
+      "@id" : "https://purl.org/dc/terms/created"
+    },
+    "Forest" : {
+      "@id" : "https://w3id.org/narn/location/Forest"
+    },
+    "WoodedArea" : {
+      "@id" : "https://w3id.org/narn/location/WoodedArea"
+    },
+    "River" : {
+      "@id" : "https://w3id.org/narn/location/River"
+    },
+    "isStrictlyInsideOf" : {
+      "@id" : "https://w3id.org/narn/location/isStrictlyInsideOf",
+      "@type" : "@id"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "contains" : {
+      "@id" : "https://w3id.org/narn/location/contains",
+      "@type" : "@id"
+    },
+    "LandArea" : {
+      "@id" : "https://w3id.org/narn/location/LandArea"
+    },
+    "isAPartOf" : {
+      "@id" : "https://w3id.org/narn/location/isAPartOf",
+      "@type" : "@id"
+    },
+    "UndergroundPlace" : {
+      "@id" : "https://w3id.org/narn/location/UndergroundPlace"
+    },
+    "UndergroundCity" : {
+      "@id" : "https://w3id.org/narn/location/UndergroundCity"
+    },
+    "creator" : {
+      "@id" : "https://purl.org/dc/terms/creator"
+    },
+    "Building" : {
+      "@id" : "https://w3id.org/narn/location/Building"
+    },
+    "Desert" : {
+      "@id" : "https://w3id.org/narn/location/Desert"
+    },
+    "Valley" : {
+      "@id" : "https://w3id.org/narn/location/Valley"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "https://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "Place" : {
+      "@id" : "https://w3id.org/narn/location/Place"
+    },
+    "Realm" : {
+      "@id" : "https://w3id.org/narn/location/Realm"
+    },
+    "hasSpatialRelation" : {
+      "@id" : "https://w3id.org/narn/location/hasSpatialRelation",
+      "@type" : "@id"
+    },
+    "Sea" : {
+      "@id" : "https://w3id.org/narn/location/Sea"
+    },
+    "borders" : {
+      "@id" : "https://w3id.org/narn/location/borders",
+      "@type" : "@id"
+    },
+    "Village" : {
+      "@id" : "https://w3id.org/narn/location/Village"
+    },
+    "modified" : {
+      "@id" : "https://purl.org/dc/terms/modified"
+    },
+    "Continent" : {
+      "@id" : "https://w3id.org/narn/location/Continent"
+    },
+    "Mountain" : {
+      "@id" : "https://w3id.org/narn/location/Mountain"
+    },
+    "Fortress" : {
+      "@id" : "https://w3id.org/narn/location/Fortress"
+    },
+    "City" : {
+      "@id" : "https://w3id.org/narn/location/City"
+    },
+    "Hill" : {
+      "@id" : "https://w3id.org/narn/location/Hill"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Lake" : {
+      "@id" : "https://w3id.org/narn/location/Lake"
+    },
+    "Settlement" : {
+      "@id" : "https://w3id.org/narn/location/Settlement"
+    },
+    "isNear" : {
+      "@id" : "https://w3id.org/narn/location/isNear",
+      "@type" : "@id"
+    },
+    "Region" : {
+      "@id" : "https://w3id.org/narn/location/Region"
+    },
+    "NaturalArea" : {
+      "@id" : "https://w3id.org/narn/location/NaturalArea"
+    },
+    "WildArea" : {
+      "@id" : "https://w3id.org/narn/location/WildArea"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "https://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

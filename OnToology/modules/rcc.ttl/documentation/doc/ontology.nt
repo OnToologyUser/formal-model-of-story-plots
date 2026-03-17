@@ -1,0 +1,165 @@
+<https://w3id.org/narn/rcc/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/narn/rcc/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/location/> .
+<https://w3id.org/narn/rcc/> <http://www.w3.org/2000/01/rdf-schema#comment> "An OWL encoding of the Region Connection Calculus."@en .
+<https://w3id.org/narn/rcc/> <http://www.w3.org/2000/01/rdf-schema#label> "RCC Ontology"@en .
+<https://w3id.org/narn/rcc/> <https://purl.org/dc/terms/created> "2026-03-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/rcc/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .
+<https://w3id.org/narn/rcc/> <https://purl.org/dc/terms/modified> "2026-03-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/rcc/> <https://purl.org/vocab/vann/preferredNamespacePrefix> "rcc" .
+<https://w3id.org/narn/rcc/> <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/rcc/" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/narn/location/borders
+<https://w3id.org/narn/location/borders> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/DC> .
+# 
+# https://w3id.org/narn/location/contains
+<https://w3id.org/narn/location/contains> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/DC> .
+<https://w3id.org/narn/location/contains> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/EC> .
+<https://w3id.org/narn/location/contains> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/PO> .
+# 
+# https://w3id.org/narn/location/isAPartOf
+<https://w3id.org/narn/location/isAPartOf> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/DC> .
+<https://w3id.org/narn/location/isAPartOf> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/EC> .
+<https://w3id.org/narn/location/isAPartOf> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/PO> .
+# 
+# https://w3id.org/narn/location/isNear
+<https://w3id.org/narn/location/isNear> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/DC> .
+# 
+# https://w3id.org/narn/rcc/DC
+<https://w3id.org/narn/rcc/DC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/rcc/DC> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
+<https://w3id.org/narn/rcc/DC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/rcc/DC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/rcc/DC> <http://www.w3.org/2000/01/rdf-schema#comment> "Two regions share no points at all."@en .
+<https://w3id.org/narn/rcc/DC> <http://www.w3.org/2000/01/rdf-schema#label> "disconnected"@en .
+<https://w3id.org/narn/rcc/DC> <http://www.w3.org/2004/02/skos/core#altLabel> "disjoint regions"@en .
+# 
+# https://w3id.org/narn/rcc/EC
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/location/borders> .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/NTPP> .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/2000/01/rdf-schema#comment> "Boundaries touch but interiors are disjoint."@en .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/2000/01/rdf-schema#label> "externally connected"@en .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/2004/02/skos/core#altLabel> "touching regions"@en .
+# 
+# https://w3id.org/narn/rcc/EQ
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/location/contains> .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/location/isAPartOf> .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2000/01/rdf-schema#comment> "Same spatial extent. Equivalence relation."@en .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2000/01/rdf-schema#label> "equal"@en .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2004/02/skos/core#altLabel> "coextensive regions"@en .
+# 
+# https://w3id.org/narn/rcc/NTPP
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/location/isAPartOf> .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2000/01/rdf-schema#comment> "First region entirely inside second, boundaries do not touch."@en .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2000/01/rdf-schema#label> "non-tangential proper part"@en .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2004/02/skos/core#altLabel> "interior part"@en .
+# 
+# https://w3id.org/narn/rcc/NTPPi
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/location/contains> .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/rcc/NTPP> .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2000/01/rdf-schema#comment> "First region entirely contains second, boundaries do not touch."@en .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2000/01/rdf-schema#label> "non-tangential proper part inverse"@en .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2004/02/skos/core#altLabel> "interior whole"@en .
+# 
+# https://w3id.org/narn/rcc/PO
+<https://w3id.org/narn/rcc/PO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/rcc/PO> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
+<https://w3id.org/narn/rcc/PO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/rcc/PO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/rcc/PO> <http://www.w3.org/2000/01/rdf-schema#comment> "Part of each region is inside the other but neither is contained."@en .
+<https://w3id.org/narn/rcc/PO> <http://www.w3.org/2000/01/rdf-schema#label> "partially overlapping"@en .
+<https://w3id.org/narn/rcc/PO> <http://www.w3.org/2004/02/skos/core#altLabel> "overlapping regions"@en .
+# 
+# https://w3id.org/narn/rcc/TPP
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/location/isAPartOf> .
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2000/01/rdf-schema#comment> "First region entirely inside second, boundaries touch."@en .
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2000/01/rdf-schema#label> "tangential proper part"@en .
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2004/02/skos/core#altLabel> "tangential part"@en .
+# 
+# https://w3id.org/narn/rcc/TPPi
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/location/contains> .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/rcc/TPP> .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2000/01/rdf-schema#comment> "First region entirely contains second, boundaries touch."@en .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2000/01/rdf-schema#label> "tangential proper part inverse"@en .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2004/02/skos/core#altLabel> "tangential whole"@en .
+# 
+# https://w3id.org/narn/rcc/spatiallyRelatedTo
+<https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/location/Place> .
+<https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/location/Place> .
+<https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The most general spatial relation between two regions."@en .
+<https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "spatially related to"@en .
+<https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/2004/02/skos/core#altLabel> "spatial relation"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointProperties> .
+_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/rcc/TPPi> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/rcc/TPP> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/rcc/PO> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/rcc/NTPPi> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/rcc/NTPP> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/rcc/EQ> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/rcc/EC> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/rcc/DC> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

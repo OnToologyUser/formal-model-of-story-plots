@@ -1,0 +1,163 @@
+@prefix : <https://w3id.org/narn/rcc/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/narn/rcc/> .
+
+<https://w3id.org/narn/rcc/> rdf:type owl:Ontology ;
+                              owl:imports <https://w3id.org/narn/location/> ;
+                              rdfs:comment "An OWL encoding of the Region Connection Calculus."@en ;
+                              rdfs:label "RCC Ontology"@en ;
+                              <https://purl.org/dc/terms/created> "2026-03-13"^^xsd:date ;
+                              <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;
+                              <https://purl.org/dc/terms/modified> "2026-03-17"^^xsd:date ;
+                              <https://purl.org/vocab/vann/preferredNamespacePrefix> "rcc" ;
+                              <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/rcc/" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/narn/location/borders
+<https://w3id.org/narn/location/borders> owl:propertyDisjointWith :DC .
+
+
+###  https://w3id.org/narn/location/contains
+<https://w3id.org/narn/location/contains> owl:propertyDisjointWith :DC ,
+                                                                   :EC ,
+                                                                   :PO .
+
+
+###  https://w3id.org/narn/location/isAPartOf
+<https://w3id.org/narn/location/isAPartOf> owl:propertyDisjointWith :DC ,
+                                                                    :EC ,
+                                                                    :PO .
+
+
+###  https://w3id.org/narn/location/isNear
+<https://w3id.org/narn/location/isNear> owl:propertyDisjointWith :DC .
+
+
+###  https://w3id.org/narn/rcc/DC
+:DC rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :spatiallyRelatedTo ;
+    rdf:type owl:SymmetricProperty ,
+             owl:IrreflexiveProperty ;
+    rdfs:comment "Two regions share no points at all."@en ;
+    rdfs:label "disconnected"@en ;
+    <http://www.w3.org/2004/02/skos/core#altLabel> "disjoint regions"@en .
+
+
+###  https://w3id.org/narn/rcc/EC
+:EC rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <https://w3id.org/narn/location/borders> ,
+                       :spatiallyRelatedTo ;
+    rdf:type owl:SymmetricProperty ,
+             owl:IrreflexiveProperty ;
+    owl:propertyDisjointWith :NTPP ;
+    rdfs:comment "Boundaries touch but interiors are disjoint."@en ;
+    rdfs:label "externally connected"@en ;
+    <http://www.w3.org/2004/02/skos/core#altLabel> "touching regions"@en .
+
+
+###  https://w3id.org/narn/rcc/EQ
+:EQ rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <https://w3id.org/narn/location/contains> ,
+                       <https://w3id.org/narn/location/isAPartOf> ,
+                       :spatiallyRelatedTo ;
+    rdf:type owl:SymmetricProperty ,
+             owl:TransitiveProperty ,
+             owl:ReflexiveProperty ;
+    rdfs:comment "Same spatial extent. Equivalence relation."@en ;
+    rdfs:label "equal"@en ;
+    <http://www.w3.org/2004/02/skos/core#altLabel> "coextensive regions"@en .
+
+
+###  https://w3id.org/narn/rcc/NTPP
+:NTPP rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf <https://w3id.org/narn/location/isAPartOf> ,
+                         :spatiallyRelatedTo ;
+      rdf:type owl:AsymmetricProperty ,
+               owl:TransitiveProperty ,
+               owl:IrreflexiveProperty ;
+      rdfs:comment "First region entirely inside second, boundaries do not touch."@en ;
+      rdfs:label "non-tangential proper part"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "interior part"@en .
+
+
+###  https://w3id.org/narn/rcc/NTPPi
+:NTPPi rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf <https://w3id.org/narn/location/contains> ,
+                          :spatiallyRelatedTo ;
+       owl:inverseOf :NTPP ;
+       rdf:type owl:AsymmetricProperty ,
+                owl:TransitiveProperty ,
+                owl:IrreflexiveProperty ;
+       rdfs:comment "First region entirely contains second, boundaries do not touch."@en ;
+       rdfs:label "non-tangential proper part inverse"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "interior whole"@en .
+
+
+###  https://w3id.org/narn/rcc/PO
+:PO rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :spatiallyRelatedTo ;
+    rdf:type owl:SymmetricProperty ,
+             owl:IrreflexiveProperty ;
+    rdfs:comment "Part of each region is inside the other but neither is contained."@en ;
+    rdfs:label "partially overlapping"@en ;
+    <http://www.w3.org/2004/02/skos/core#altLabel> "overlapping regions"@en .
+
+
+###  https://w3id.org/narn/rcc/TPP
+:TPP rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf <https://w3id.org/narn/location/isAPartOf> ,
+                        :spatiallyRelatedTo ;
+     rdf:type owl:AsymmetricProperty ,
+              owl:IrreflexiveProperty ;
+     rdfs:comment "First region entirely inside second, boundaries touch."@en ;
+     rdfs:label "tangential proper part"@en ;
+     <http://www.w3.org/2004/02/skos/core#altLabel> "tangential part"@en .
+
+
+###  https://w3id.org/narn/rcc/TPPi
+:TPPi rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf <https://w3id.org/narn/location/contains> ,
+                         :spatiallyRelatedTo ;
+      owl:inverseOf :TPP ;
+      rdf:type owl:AsymmetricProperty ,
+               owl:IrreflexiveProperty ;
+      rdfs:comment "First region entirely contains second, boundaries touch."@en ;
+      rdfs:label "tangential proper part inverse"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "tangential whole"@en .
+
+
+###  https://w3id.org/narn/rcc/spatiallyRelatedTo
+:spatiallyRelatedTo rdf:type owl:ObjectProperty ,
+                             owl:SymmetricProperty ;
+                    rdfs:domain <https://w3id.org/narn/location/Place> ;
+                    rdfs:range <https://w3id.org/narn/location/Place> ;
+                    rdfs:comment "The most general spatial relation between two regions."@en ;
+                    rdfs:label "spatially related to"@en ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "spatial relation"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :DC
+                :EC
+                :EQ
+                :NTPP
+                :NTPPi
+                :PO
+                :TPP
+                :TPPi
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

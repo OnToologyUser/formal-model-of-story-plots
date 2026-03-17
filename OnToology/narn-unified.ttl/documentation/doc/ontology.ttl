@@ -1,0 +1,2634 @@
+@prefix : <https://w3id.org/narn/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/narn/> .
+
+<https://w3id.org/narn/> rdf:type owl:Ontology ;
+                          rdfs:comment "An OWL ontology for modeling story plots and narrative structures. It provides a formal vocabulary to represent characters, locations, events, actions, and temporal relations within a narrative."@en ;
+                          rdfs:label "Formal Model of Story Plots"@en ;
+                          <https://purl.org/dc/terms/created> "2026-03-17"^^xsd:date ;
+                          <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;
+                          <https://purl.org/vocab/vann/preferredNamespacePrefix> "narn" ;
+                          <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/vocab/vann/preferredNamespacePrefix
+<https://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/vocab/vann/preferredNamespaceUri
+<https://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/narn/action/causesByAction
+<https://w3id.org/narn/action/causesByAction> rdf:type owl:ObjectProperty ;
+                                              owl:propertyChainAxiom ( [ owl:inverseOf <https://w3id.org/narn/action/performedBy>
+                                                                       ]
+                                                                       <https://w3id.org/narn/action/hasResult>
+                                                                     ) ;
+                                              rdfs:comment "Inferred: if an agent performs an action with a result, the agent indirectly causes that result."@en ;
+                                              rdfs:label "causes by action"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "brings about"@en .
+
+
+###  https://w3id.org/narn/action/hasInstrument
+<https://w3id.org/narn/action/hasInstrument> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/narn/event/hasCause> ;
+                                             rdf:type owl:IrreflexiveProperty ;
+                                             rdfs:domain <https://w3id.org/narn/action/Action> ;
+                                             owl:propertyDisjointWith <https://w3id.org/narn/action/hasTarget> ,
+                                                                      <https://w3id.org/narn/action/performedBy> ;
+                                             rdfs:comment "An object used to perform the action (e.g. a sword)."@en ;
+                                             rdfs:label "has instrument"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "using"@en .
+
+
+###  https://w3id.org/narn/action/hasIntention
+<https://w3id.org/narn/action/hasIntention> rdf:type owl:ObjectProperty ,
+                                                     owl:FunctionalProperty ,
+                                                     owl:IrreflexiveProperty ;
+                                            rdfs:domain <https://w3id.org/narn/action/Action> ;
+                                            rdfs:comment "The goal or purpose behind the action."@en ;
+                                            rdfs:label "has intention"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "aims to"@en .
+
+
+###  https://w3id.org/narn/action/hasRecipient
+<https://w3id.org/narn/action/hasRecipient> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <https://w3id.org/narn/event/hasParticipant> ;
+                                            rdf:type owl:IrreflexiveProperty ;
+                                            rdfs:domain <https://w3id.org/narn/action/TransferAction> ;
+                                            owl:propertyDisjointWith <https://w3id.org/narn/action/performedBy> ;
+                                            rdfs:comment "The character who receives something in a transfer action."@en ;
+                                            rdfs:label "has recipient"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "received by"@en .
+
+
+###  https://w3id.org/narn/action/hasResult
+<https://w3id.org/narn/action/hasResult> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <https://w3id.org/narn/event/causes> ;
+                                         rdfs:domain <https://w3id.org/narn/action/Action> ;
+                                         rdfs:range <https://w3id.org/narn/event/Event> ;
+                                         rdfs:comment "The event or state that results from the action."@en ;
+                                         rdfs:label "has result"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "results in"@en .
+
+
+###  https://w3id.org/narn/action/hasTarget
+<https://w3id.org/narn/action/hasTarget> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <https://w3id.org/narn/event/hasPatient> ;
+                                         rdf:type owl:AsymmetricProperty ,
+                                                  owl:IrreflexiveProperty ;
+                                         rdfs:domain <https://w3id.org/narn/action/Action> ;
+                                         rdfs:comment "The entity that the action is directed towards."@en ;
+                                         rdfs:label "has target"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "directed at"@en .
+
+
+###  https://w3id.org/narn/action/performedBy
+<https://w3id.org/narn/action/performedBy> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <https://w3id.org/narn/event/hasAgent> ;
+                                           rdfs:domain <https://w3id.org/narn/action/Action> ;
+                                           rdfs:comment "The agent who intentionally performs the action."@en ;
+                                           rdfs:label "performed by"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "done by"@en .
+
+
+###  https://w3id.org/narn/event/begets
+<https://w3id.org/narn/event/begets> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <https://w3id.org/narn/event/hasParticipant> ;
+                                     rdfs:domain <https://w3id.org/narn/event/Birth> ;
+                                     rdfs:comment "The character brought into existence by a birth event."@en ;
+                                     rdfs:label "begets"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "brings forth"@en .
+
+
+###  https://w3id.org/narn/event/causes
+<https://w3id.org/narn/event/causes> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <https://w3id.org/narn/event/precedes> ;
+                                     rdf:type owl:AsymmetricProperty ,
+                                              owl:TransitiveProperty ,
+                                              owl:IrreflexiveProperty ;
+                                     rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                     rdfs:range <https://w3id.org/narn/event/Event> ;
+                                     rdfs:comment "This event causally leads to another event."@en ;
+                                     rdfs:label "causes"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "leads to"@en .
+
+
+###  https://w3id.org/narn/event/creates
+<https://w3id.org/narn/event/creates> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                      rdfs:comment "An entity produced or created by the event."@en ;
+                                      rdfs:label "creates"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "results in"@en .
+
+
+###  https://w3id.org/narn/event/hasAgent
+<https://w3id.org/narn/event/hasAgent> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <https://w3id.org/narn/event/hasParticipant> ;
+                                       rdf:type owl:IrreflexiveProperty ;
+                                       rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                       owl:propertyDisjointWith <https://w3id.org/narn/event/hasWitness> ;
+                                       rdfs:comment "The entity that intentionally causes or performs the event."@en ;
+                                       rdfs:label "has agent"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "done by"@en .
+
+
+###  https://w3id.org/narn/event/hasCause
+<https://w3id.org/narn/event/hasCause> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                       rdfs:comment "An entity involved as a contributing cause in the event."@en ;
+                                       rdfs:label "has cause"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "caused by"@en .
+
+
+###  https://w3id.org/narn/event/hasDestination
+<https://w3id.org/narn/event/hasDestination> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/narn/event/occursAt> ;
+                                             rdfs:domain <https://w3id.org/narn/event/MovementEvent> ;
+                                             rdfs:range <https://w3id.org/narn/location/Place> ;
+                                             owl:propertyDisjointWith <https://w3id.org/narn/event/hasOrigin> ;
+                                             rdfs:comment "The ending place of a movement event."@en ;
+                                             rdfs:label "has destination"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "arrives at"@en .
+
+
+###  https://w3id.org/narn/event/hasOrigin
+<https://w3id.org/narn/event/hasOrigin> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf <https://w3id.org/narn/event/occursAt> ;
+                                        rdfs:domain <https://w3id.org/narn/event/MovementEvent> ;
+                                        rdfs:range <https://w3id.org/narn/location/Place> ;
+                                        rdfs:comment "The starting place of a movement event."@en ;
+                                        rdfs:label "has origin"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "departs from"@en .
+
+
+###  https://w3id.org/narn/event/hasParticipant
+<https://w3id.org/narn/event/hasParticipant> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                             rdfs:comment "An entity that takes part in the event."@en ;
+                                             rdfs:label "has participant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "involves"@en .
+
+
+###  https://w3id.org/narn/event/hasPatient
+<https://w3id.org/narn/event/hasPatient> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <https://w3id.org/narn/event/hasParticipant> ;
+                                         rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                         rdfs:comment "The entity affected by the event."@en ;
+                                         rdfs:label "has patient"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "affects"@en .
+
+
+###  https://w3id.org/narn/event/hasSubEvent
+<https://w3id.org/narn/event/hasSubEvent> rdf:type owl:ObjectProperty ,
+                                                   owl:AsymmetricProperty ,
+                                                   owl:TransitiveProperty ,
+                                                   owl:IrreflexiveProperty ;
+                                          rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                          rdfs:range <https://w3id.org/narn/event/Event> ;
+                                          rdfs:comment "A smaller event that occurs as part of this one."@en ;
+                                          rdfs:label "has sub-event"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "contains event"@en .
+
+
+###  https://w3id.org/narn/event/hasTraveller
+<https://w3id.org/narn/event/hasTraveller> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <https://w3id.org/narn/event/hasParticipant> ;
+                                           rdfs:domain <https://w3id.org/narn/event/Travel> ;
+                                           rdfs:comment "The character who undertakes the travel."@en ;
+                                           rdfs:label "has traveller"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "travelled by"@en .
+
+
+###  https://w3id.org/narn/event/hasVictim
+<https://w3id.org/narn/event/hasVictim> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf <https://w3id.org/narn/event/hasPatient> ;
+                                        rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                        rdfs:comment "The entity that suffers harm in the event."@en ;
+                                        rdfs:label "has victim"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "harms"@en .
+
+
+###  https://w3id.org/narn/event/hasWitness
+<https://w3id.org/narn/event/hasWitness> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <https://w3id.org/narn/event/hasParticipant> ;
+                                         rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                         rdfs:comment "An entity that observes the event without acting."@en ;
+                                         rdfs:label "has witness"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "observed by"@en .
+
+
+###  https://w3id.org/narn/event/isBegottenIn
+<https://w3id.org/narn/event/isBegottenIn> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <https://w3id.org/narn/event/begets> ;
+                                           rdfs:domain owl:Thing ;
+                                           rdfs:range <https://w3id.org/narn/event/Birth> ;
+                                           rdfs:comment "Inverse of begets. Links a character to the birth event that brings them into existence."@en ;
+                                           rdfs:label "is begotten in"@en .
+
+
+###  https://w3id.org/narn/event/isCausedBy
+<https://w3id.org/narn/event/isCausedBy> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <https://w3id.org/narn/event/causes> ;
+                                         rdfs:comment "Inverse of causes. This event results from another."@en ;
+                                         rdfs:label "is caused by"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "results from"@en .
+
+
+###  https://w3id.org/narn/event/isSubEventOf
+<https://w3id.org/narn/event/isSubEventOf> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <https://w3id.org/narn/to/during> ;
+                                           owl:inverseOf <https://w3id.org/narn/event/hasSubEvent> ;
+                                           rdfs:comment "This event is part of a larger event."@en ;
+                                           rdfs:label "is sub-event of"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "part of event"@en .
+
+
+###  https://w3id.org/narn/event/occursAt
+<https://w3id.org/narn/event/occursAt> rdf:type owl:ObjectProperty ,
+                                                owl:IrreflexiveProperty ;
+                                       rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                       rdfs:range <https://w3id.org/narn/location/Place> ;
+                                       rdfs:comment "The place where the event occurs."@en ;
+                                       rdfs:label "occurs at"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "takes place at"@en .
+
+
+###  https://w3id.org/narn/event/precedes
+<https://w3id.org/narn/event/precedes> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <https://w3id.org/narn/to/precedes> ;
+                                       rdf:type owl:AsymmetricProperty ,
+                                                owl:TransitiveProperty ,
+                                                owl:IrreflexiveProperty ;
+                                       rdfs:domain <https://w3id.org/narn/event/Event> ;
+                                       rdfs:range <https://w3id.org/narn/event/Event> ;
+                                       rdfs:comment "This event occurs before another event."@en ;
+                                       rdfs:label "precedes"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "comes before"@en .
+
+
+###  https://w3id.org/narn/location/borders
+<https://w3id.org/narn/location/borders> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <https://w3id.org/narn/location/hasSpatialRelation> ;
+                                         rdf:type owl:SymmetricProperty ,
+                                                  owl:IrreflexiveProperty ;
+                                         owl:propertyDisjointWith <https://w3id.org/narn/rcc/DC> ;
+                                         rdfs:comment "Two places share a boundary but neither contains the other."@en ;
+                                         rdfs:label "borders"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "adjacent to"@en .
+
+
+###  https://w3id.org/narn/location/contains
+<https://w3id.org/narn/location/contains> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <https://w3id.org/narn/location/hasSpatialRelation> ;
+                                          owl:inverseOf <https://w3id.org/narn/location/isAPartOf> ;
+                                          rdf:type owl:TransitiveProperty ;
+                                          rdfs:domain <https://w3id.org/narn/location/Place> ;
+                                          rdfs:range <https://w3id.org/narn/location/Place> ;
+                                          owl:propertyDisjointWith <https://w3id.org/narn/rcc/DC> ,
+                                                                   <https://w3id.org/narn/rcc/EC> ,
+                                                                   <https://w3id.org/narn/rcc/PO> ;
+                                          rdfs:comment "Inverse of isAPartOf."@en ;
+                                          rdfs:label "contains"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "includes"@en .
+
+
+###  https://w3id.org/narn/location/hasSpatialRelation
+<https://w3id.org/narn/location/hasSpatialRelation> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://w3id.org/narn/location/Place> ;
+                                                    rdfs:range <https://w3id.org/narn/location/Place> ;
+                                                    rdfs:comment "A general spatial relation between two places."@en ;
+                                                    rdfs:label "has spatial relation"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "spatially related to"@en .
+
+
+###  https://w3id.org/narn/location/isAPartOf
+<https://w3id.org/narn/location/isAPartOf> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <https://w3id.org/narn/location/hasSpatialRelation> ;
+                                           rdf:type owl:TransitiveProperty ;
+                                           rdfs:domain <https://w3id.org/narn/location/Place> ;
+                                           rdfs:range <https://w3id.org/narn/location/Place> ;
+                                           owl:propertyDisjointWith <https://w3id.org/narn/rcc/DC> ,
+                                                                    <https://w3id.org/narn/rcc/EC> ,
+                                                                    <https://w3id.org/narn/rcc/PO> ;
+                                           rdfs:comment "Indicates that a place constitutes a subarea of another place."@en ;
+                                           rdfs:label "is a part of"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "part of"@en .
+
+
+###  https://w3id.org/narn/location/isNear
+<https://w3id.org/narn/location/isNear> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf <https://w3id.org/narn/location/hasSpatialRelation> ;
+                                        rdf:type owl:SymmetricProperty ,
+                                                 owl:IrreflexiveProperty ;
+                                        owl:propertyDisjointWith <https://w3id.org/narn/rcc/DC> ;
+                                        rdfs:comment "Two places are in proximity."@en ;
+                                        rdfs:label "is near"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "close to"@en .
+
+
+###  https://w3id.org/narn/location/isStrictlyInsideOf
+<https://w3id.org/narn/location/isStrictlyInsideOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <https://w3id.org/narn/location/isAPartOf> ;
+                                                    rdf:type owl:AsymmetricProperty ,
+                                                             owl:TransitiveProperty ,
+                                                             owl:IrreflexiveProperty ;
+                                                    rdfs:comment "Stricter form of isAPartOf where boundaries do not touch."@en ;
+                                                    rdfs:label "is strictly inside of"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "strictly within"@en .
+
+
+###  https://w3id.org/narn/location/isTheCapitalOf
+<https://w3id.org/narn/location/isTheCapitalOf> rdf:type owl:ObjectProperty ,
+                                                         owl:FunctionalProperty ;
+                                                rdfs:domain <https://w3id.org/narn/location/Settlement> ;
+                                                rdfs:range <https://w3id.org/narn/location/Realm> ;
+                                                rdfs:comment "A settlement is the capital of a realm."@en ;
+                                                rdfs:label "is the capital of"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "capital of"@en .
+
+
+###  https://w3id.org/narn/plot/conflictInvolves
+<https://w3id.org/narn/plot/conflictInvolves> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <https://w3id.org/narn/plot/Conflict> ;
+                                              owl:propertyDisjointWith <https://w3id.org/narn/plot/hasAuthor> ;
+                                              rdfs:comment "A character or entity involved in the conflict."@en ;
+                                              rdfs:label "conflict involves"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "tension involves"@en .
+
+
+###  https://w3id.org/narn/plot/containsUnit
+<https://w3id.org/narn/plot/containsUnit> rdf:type owl:ObjectProperty ,
+                                                   owl:TransitiveProperty ;
+                                          rdfs:domain <https://w3id.org/narn/plot/NarrativeUnit> ;
+                                          rdfs:range <https://w3id.org/narn/plot/NarrativeUnit> ;
+                                          rdfs:comment "Relates a narrative unit to its contained subunits."@en ;
+                                          rdfs:label "contains unit"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "includes unit"@en .
+
+
+###  https://w3id.org/narn/plot/correspondsToEvent
+<https://w3id.org/narn/plot/correspondsToEvent> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/narn/plot/NarrativeElement> ;
+                                                rdfs:range <https://w3id.org/narn/event/Event> ;
+                                                rdfs:comment "Maps a narrative element to the event it represents."@en ;
+                                                rdfs:label "corresponds to event"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "maps to event"@en .
+
+
+###  https://w3id.org/narn/plot/deviceInvolvesCharacter
+<https://w3id.org/narn/plot/deviceInvolvesCharacter> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://w3id.org/narn/plot/PlotDevice> ;
+                                                     rdfs:comment "A character involved in or affected by this plot device."@en ;
+                                                     rdfs:label "device involves character"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#altLabel> "device concerns"@en .
+
+
+###  https://w3id.org/narn/plot/follows
+<https://w3id.org/narn/plot/follows> rdf:type owl:ObjectProperty ,
+                                              owl:AsymmetricProperty ,
+                                              owl:TransitiveProperty ,
+                                              owl:IrreflexiveProperty ;
+                                     rdfs:domain <https://w3id.org/narn/plot/NarrativeUnit> ;
+                                     rdfs:range <https://w3id.org/narn/plot/NarrativeUnit> ;
+                                     rdfs:comment "One narrative unit sequentially comes after another."@en ;
+                                     rdfs:label "follows"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "comes after"@en .
+
+
+###  https://w3id.org/narn/plot/foreshadowsEvent
+<https://w3id.org/narn/plot/foreshadowsEvent> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <https://w3id.org/narn/plot/Foreshadowing> ;
+                                              rdfs:range <https://w3id.org/narn/event/Event> ;
+                                              rdfs:comment "The event that this foreshadowing hints at."@en ;
+                                              rdfs:label "foreshadows event"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "hints at"@en .
+
+
+###  https://w3id.org/narn/plot/hasAuthor
+<https://w3id.org/narn/plot/hasAuthor> rdf:type owl:ObjectProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:domain <https://w3id.org/narn/plot/Story> ;
+                                       rdfs:comment "The author of the story."@en ;
+                                       rdfs:label "has author"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "written by"@en .
+
+
+###  https://w3id.org/narn/plot/hasConflict
+<https://w3id.org/narn/plot/hasConflict> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <https://w3id.org/narn/plot/Story> ;
+                                         rdfs:range <https://w3id.org/narn/plot/Conflict> ;
+                                         rdfs:comment "A conflict central to the story."@en ;
+                                         rdfs:label "has conflict"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "has tension"@en .
+
+
+###  https://w3id.org/narn/plot/hasGenre
+<https://w3id.org/narn/plot/hasGenre> rdf:type owl:ObjectProperty ,
+                                               owl:IrreflexiveProperty ;
+                                      rdfs:domain <https://w3id.org/narn/plot/Story> ;
+                                      rdfs:range <https://w3id.org/narn/plot/Genre> ;
+                                      rdfs:comment "The genre(s) of the story."@en ;
+                                      rdfs:label "has genre"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "genre is"@en .
+
+
+###  https://w3id.org/narn/plot/hasNarrativeElement
+<https://w3id.org/narn/plot/hasNarrativeElement> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://w3id.org/narn/plot/Story> ;
+                                                 rdfs:range <https://w3id.org/narn/plot/NarrativeElement> ;
+                                                 rdfs:comment "Links a story to its plot stages."@en ;
+                                                 rdfs:label "has narrative element"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "has element"@en .
+
+
+###  https://w3id.org/narn/plot/hasNarrativeUnit
+<https://w3id.org/narn/plot/hasNarrativeUnit> rdf:type owl:ObjectProperty ,
+                                                       owl:AsymmetricProperty ,
+                                                       owl:IrreflexiveProperty ;
+                                              rdfs:domain <https://w3id.org/narn/plot/Story> ;
+                                              rdfs:range <https://w3id.org/narn/plot/NarrativeUnit> ;
+                                              rdfs:comment "Links a story to its structural units."@en ;
+                                              rdfs:label "has narrative unit"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "divided into"@en .
+
+
+###  https://w3id.org/narn/plot/hasRole
+<https://w3id.org/narn/plot/hasRole> rdf:type owl:ObjectProperty ;
+                                     rdfs:range <https://w3id.org/narn/plot/CharacterRole> ;
+                                     rdfs:comment "The narrative role a character plays."@en ;
+                                     rdfs:label "has role"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "plays role"@en .
+
+
+###  https://w3id.org/narn/plot/hasTheme
+<https://w3id.org/narn/plot/hasTheme> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/narn/plot/Story> ;
+                                      rdfs:comment "A thematic element or motif in the story."@en ;
+                                      rdfs:label "has theme"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "explores theme"@en .
+
+
+###  https://w3id.org/narn/plot/involvedInDevice
+<https://w3id.org/narn/plot/involvedInDevice> rdf:type owl:ObjectProperty ;
+                                              rdfs:comment "Links a character role to a narrative device that affects them."@en ;
+                                              rdfs:label "involved in device"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "affected by narrative device"@en .
+
+
+###  https://w3id.org/narn/plot/isUnitOf
+<https://w3id.org/narn/plot/isUnitOf> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <https://w3id.org/narn/plot/containsUnit> ;
+                                      rdfs:comment "Inverse of containsUnit, relates a unit to its parent."@en ;
+                                      rdfs:label "is unit of"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "belongs to"@en .
+
+
+###  https://w3id.org/narn/plot/occursInUnit
+<https://w3id.org/narn/plot/occursInUnit> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <https://w3id.org/narn/plot/NarrativeElement> ;
+                                          rdfs:range <https://w3id.org/narn/plot/NarrativeUnit> ;
+                                          rdfs:comment "The narrative unit in which this element appears."@en ;
+                                          rdfs:label "occurs in unit"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "located in unit"@en .
+
+
+###  https://w3id.org/narn/plot/usesDevice
+<https://w3id.org/narn/plot/usesDevice> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/narn/plot/Story> ;
+                                        rdfs:range <https://w3id.org/narn/plot/PlotDevice> ;
+                                        rdfs:comment "Links a story to the plot devices it employs."@en ;
+                                        rdfs:label "uses device"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "employs device"@en .
+
+
+###  https://w3id.org/narn/rcc/DC
+<https://w3id.org/narn/rcc/DC> rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <https://w3id.org/narn/rcc/spatiallyRelatedTo> ;
+                               rdf:type owl:SymmetricProperty ,
+                                        owl:IrreflexiveProperty ;
+                               rdfs:comment "Two regions share no points at all."@en ;
+                               rdfs:label "disconnected"@en ;
+                               <http://www.w3.org/2004/02/skos/core#altLabel> "disjoint regions"@en .
+
+
+###  https://w3id.org/narn/rcc/EC
+<https://w3id.org/narn/rcc/EC> rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <https://w3id.org/narn/location/borders> ,
+                                                  <https://w3id.org/narn/rcc/spatiallyRelatedTo> ;
+                               rdf:type owl:SymmetricProperty ,
+                                        owl:IrreflexiveProperty ;
+                               owl:propertyDisjointWith <https://w3id.org/narn/rcc/NTPP> ;
+                               rdfs:comment "Boundaries touch but interiors are disjoint."@en ;
+                               rdfs:label "externally connected"@en ;
+                               <http://www.w3.org/2004/02/skos/core#altLabel> "touching regions"@en .
+
+
+###  https://w3id.org/narn/rcc/EQ
+<https://w3id.org/narn/rcc/EQ> rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <https://w3id.org/narn/location/contains> ,
+                                                  <https://w3id.org/narn/location/isAPartOf> ,
+                                                  <https://w3id.org/narn/rcc/spatiallyRelatedTo> ;
+                               rdf:type owl:SymmetricProperty ,
+                                        owl:TransitiveProperty ,
+                                        owl:ReflexiveProperty ;
+                               rdfs:comment "Same spatial extent. Equivalence relation."@en ;
+                               rdfs:label "equal"@en ;
+                               <http://www.w3.org/2004/02/skos/core#altLabel> "coextensive regions"@en .
+
+
+###  https://w3id.org/narn/rcc/NTPP
+<https://w3id.org/narn/rcc/NTPP> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf <https://w3id.org/narn/location/isAPartOf> ,
+                                                    <https://w3id.org/narn/rcc/spatiallyRelatedTo> ;
+                                 rdf:type owl:AsymmetricProperty ,
+                                          owl:TransitiveProperty ,
+                                          owl:IrreflexiveProperty ;
+                                 rdfs:comment "First region entirely inside second, boundaries do not touch."@en ;
+                                 rdfs:label "non-tangential proper part"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "interior part"@en .
+
+
+###  https://w3id.org/narn/rcc/NTPPi
+<https://w3id.org/narn/rcc/NTPPi> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <https://w3id.org/narn/location/contains> ,
+                                                     <https://w3id.org/narn/rcc/spatiallyRelatedTo> ;
+                                  owl:inverseOf <https://w3id.org/narn/rcc/NTPP> ;
+                                  rdf:type owl:AsymmetricProperty ,
+                                           owl:TransitiveProperty ,
+                                           owl:IrreflexiveProperty ;
+                                  rdfs:comment "First region entirely contains second, boundaries do not touch."@en ;
+                                  rdfs:label "non-tangential proper part inverse"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "interior whole"@en .
+
+
+###  https://w3id.org/narn/rcc/PO
+<https://w3id.org/narn/rcc/PO> rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <https://w3id.org/narn/rcc/spatiallyRelatedTo> ;
+                               rdf:type owl:SymmetricProperty ,
+                                        owl:IrreflexiveProperty ;
+                               rdfs:comment "Part of each region is inside the other but neither is contained."@en ;
+                               rdfs:label "partially overlapping"@en ;
+                               <http://www.w3.org/2004/02/skos/core#altLabel> "overlapping regions"@en .
+
+
+###  https://w3id.org/narn/rcc/TPP
+<https://w3id.org/narn/rcc/TPP> rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf <https://w3id.org/narn/location/isAPartOf> ,
+                                                   <https://w3id.org/narn/rcc/spatiallyRelatedTo> ;
+                                rdf:type owl:AsymmetricProperty ,
+                                         owl:IrreflexiveProperty ;
+                                rdfs:comment "First region entirely inside second, boundaries touch."@en ;
+                                rdfs:label "tangential proper part"@en ;
+                                <http://www.w3.org/2004/02/skos/core#altLabel> "tangential part"@en .
+
+
+###  https://w3id.org/narn/rcc/TPPi
+<https://w3id.org/narn/rcc/TPPi> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf <https://w3id.org/narn/location/contains> ,
+                                                    <https://w3id.org/narn/rcc/spatiallyRelatedTo> ;
+                                 owl:inverseOf <https://w3id.org/narn/rcc/TPP> ;
+                                 rdf:type owl:AsymmetricProperty ,
+                                          owl:IrreflexiveProperty ;
+                                 rdfs:comment "First region entirely contains second, boundaries touch."@en ;
+                                 rdfs:label "tangential proper part inverse"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "tangential whole"@en .
+
+
+###  https://w3id.org/narn/rcc/spatiallyRelatedTo
+<https://w3id.org/narn/rcc/spatiallyRelatedTo> rdf:type owl:ObjectProperty ,
+                                                        owl:SymmetricProperty ;
+                                               rdfs:domain <https://w3id.org/narn/location/Place> ;
+                                               rdfs:range <https://w3id.org/narn/location/Place> ;
+                                               rdfs:comment "The most general spatial relation between two regions."@en ;
+                                               rdfs:label "spatially related to"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#altLabel> "spatial relation"@en .
+
+
+###  https://w3id.org/narn/social/committedSuicide
+<https://w3id.org/narn/social/committedSuicide> rdf:type owl:ObjectProperty ;
+                                                rdfs:comment "Self killing."@en ;
+                                                rdfs:label "committed suicide"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "took own life"@en .
+
+
+###  https://w3id.org/narn/social/cursed
+<https://w3id.org/narn/social/cursed> rdf:type owl:ObjectProperty ;
+                                      rdfs:comment "Character placed a curse upon another."@en ;
+                                      rdfs:label "cursed"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "placed a curse on"@en .
+
+
+###  https://w3id.org/narn/social/feared
+<https://w3id.org/narn/social/feared> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <https://w3id.org/narn/social/hasEmotionalRelationWith> ;
+                                      rdfs:comment "Character feared another character."@en ;
+                                      rdfs:label "feared"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "had fear of"@en .
+
+
+###  https://w3id.org/narn/social/hasEmotionalRelationWith
+<https://w3id.org/narn/social/hasEmotionalRelationWith> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain owl:Thing ;
+                                                        rdfs:range owl:Thing ;
+                                                        rdfs:comment "General emotional relationship between two characters."@en ;
+                                                        rdfs:label "has emotional relation with"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#altLabel> "feels towards"@en .
+
+
+###  https://w3id.org/narn/social/hasFriend
+<https://w3id.org/narn/social/hasFriend> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <https://w3id.org/narn/social/hasEmotionalRelationWith> ;
+                                         rdf:type owl:SymmetricProperty ,
+                                                  owl:IrreflexiveProperty ;
+                                         owl:propertyDisjointWith <https://w3id.org/narn/social/isAnEnemyOf> ;
+                                         rdfs:comment "Mutual friendship. Symmetric."@en ;
+                                         rdfs:label "has friend"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "is a friend of"@en .
+
+
+###  https://w3id.org/narn/social/hasValence
+<https://w3id.org/narn/social/hasValence> rdf:type owl:ObjectProperty ,
+                                                   owl:FunctionalProperty ;
+                                          rdfs:range <https://w3id.org/narn/social/EmotionalValence> ;
+                                          rdfs:comment "Assigns an emotional valence. Functional."@en ;
+                                          rdfs:label "has valence"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "has sentiment"@en .
+
+
+###  https://w3id.org/narn/social/hated
+<https://w3id.org/narn/social/hated> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <https://w3id.org/narn/social/hasEmotionalRelationWith> ;
+                                     rdfs:comment "Character had hatred towards another."@en ;
+                                     rdfs:label "hated"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "had hatred for"@en .
+
+
+###  https://w3id.org/narn/social/hypnotised
+<https://w3id.org/narn/social/hypnotised> rdf:type owl:ObjectProperty ;
+                                          rdfs:comment "Character placed another under a spell."@en ;
+                                          rdfs:label "hypnotised"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "cast a spell on"@en .
+
+
+###  https://w3id.org/narn/social/isAKinsmanOf
+<https://w3id.org/narn/social/isAKinsmanOf> rdf:type owl:ObjectProperty ,
+                                                     owl:SymmetricProperty ;
+                                            rdfs:comment "Kinship or blood relation."@en ;
+                                            rdfs:label "is a kinsman of"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "kin of"@en .
+
+
+###  https://w3id.org/narn/social/isAnEnemyOf
+<https://w3id.org/narn/social/isAnEnemyOf> rdf:type owl:ObjectProperty ,
+                                                    owl:SymmetricProperty ,
+                                                    owl:IrreflexiveProperty ;
+                                           owl:propertyDisjointWith <https://w3id.org/narn/social/wasServedBy> ;
+                                           rdfs:comment "Antagonistic relation."@en ;
+                                           rdfs:label "is an enemy of"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "foe of"@en .
+
+
+###  https://w3id.org/narn/social/isMarriedTo
+<https://w3id.org/narn/social/isMarriedTo> rdf:type owl:ObjectProperty ,
+                                                    owl:SymmetricProperty ,
+                                                    owl:IrreflexiveProperty ;
+                                           rdfs:comment "Marriage relationship."@en ;
+                                           rdfs:label "is married to"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "wed to"@en .
+
+
+###  https://w3id.org/narn/social/killed
+<https://w3id.org/narn/social/killed> rdf:type owl:ObjectProperty ,
+                                               owl:AsymmetricProperty ,
+                                               owl:IrreflexiveProperty ;
+                                      owl:propertyDisjointWith <https://w3id.org/narn/social/served> ;
+                                      rdfs:comment "X killed Y."@en ;
+                                      rdfs:label "killed"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "slew"@en .
+
+
+###  https://w3id.org/narn/social/livedIn
+<https://w3id.org/narn/social/livedIn> rdf:type owl:ObjectProperty ;
+                                       rdfs:range <https://w3id.org/narn/location/Place> ;
+                                       owl:propertyChainAxiom ( <https://w3id.org/narn/social/served>
+                                                                <https://w3id.org/narn/social/wasTheKingOf>
+                                                              ) ;
+                                       rdfs:comment "Character lived in a place during some period."@en ;
+                                       rdfs:label "lived in"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "dwelt in"@en .
+
+
+###  https://w3id.org/narn/social/loved
+<https://w3id.org/narn/social/loved> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <https://w3id.org/narn/social/hasEmotionalRelationWith> ;
+                                     rdfs:comment "Character had feelings of love towards another."@en ;
+                                     rdfs:label "loved"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "had love for"@en .
+
+
+###  https://w3id.org/narn/social/mutuallyLoved
+<https://w3id.org/narn/social/mutuallyLoved> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/narn/social/loved> ;
+                                             rdf:type owl:SymmetricProperty ;
+                                             rdfs:comment "Two characters loved each other."@en ;
+                                             rdfs:label "mutually loved"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "reciprocally loved"@en .
+
+
+###  https://w3id.org/narn/social/ruled
+<https://w3id.org/narn/social/ruled> rdf:type owl:ObjectProperty ;
+                                     owl:equivalentProperty <https://w3id.org/narn/social/wasTheKingOf> ;
+                                     rdfs:comment "Equivalent to wasTheKingOf."@en ;
+                                     rdfs:label "ruled"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "governed"@en .
+
+
+###  https://w3id.org/narn/social/served
+<https://w3id.org/narn/social/served> rdf:type owl:ObjectProperty ,
+                                               owl:AsymmetricProperty ,
+                                               owl:IrreflexiveProperty ;
+                                      rdfs:domain owl:Thing ;
+                                      rdfs:range owl:Thing ;
+                                      rdfs:comment "Character served another as a subordinate."@en ;
+                                      rdfs:label "served"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "was in service of"@en .
+
+
+###  https://w3id.org/narn/social/wasHeldCaptiveIn
+<https://w3id.org/narn/social/wasHeldCaptiveIn> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <https://w3id.org/narn/social/livedIn> ;
+                                                rdfs:range <https://w3id.org/narn/location/Place> ;
+                                                rdfs:comment "Character was imprisoned."@en ;
+                                                rdfs:label "was held captive in"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "imprisoned in"@en .
+
+
+###  https://w3id.org/narn/social/wasKilledBy
+<https://w3id.org/narn/social/wasKilledBy> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <https://w3id.org/narn/social/killed> ;
+                                           rdfs:comment "Inverse of killed."@en ;
+                                           rdfs:label "was killed by"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "slain by"@en .
+
+
+###  https://w3id.org/narn/social/wasServedBy
+<https://w3id.org/narn/social/wasServedBy> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <https://w3id.org/narn/social/served> ;
+                                           rdfs:comment "Inverse of served."@en ;
+                                           rdfs:label "was served by"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "had as servant"@en .
+
+
+###  https://w3id.org/narn/social/wasTheBestFriendOf
+<https://w3id.org/narn/social/wasTheBestFriendOf> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <https://w3id.org/narn/social/hasFriend> ;
+                                                  rdf:type owl:SymmetricProperty ;
+                                                  rdfs:comment "Particularly close friendship."@en ;
+                                                  rdfs:label "was the best friend of"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "closest companion of"@en .
+
+
+###  https://w3id.org/narn/social/wasTheChieftainOf
+<https://w3id.org/narn/social/wasTheChieftainOf> rdf:type owl:ObjectProperty ;
+                                                 rdfs:range <https://w3id.org/narn/location/Place> ;
+                                                 rdfs:comment "Character was the chieftain of a people or place."@en ;
+                                                 rdfs:label "was the chieftain of"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "led as chief"@en .
+
+
+###  https://w3id.org/narn/social/wasTheKingOf
+<https://w3id.org/narn/social/wasTheKingOf> rdf:type owl:ObjectProperty ,
+                                                     owl:AsymmetricProperty ,
+                                                     owl:IrreflexiveProperty ;
+                                            rdfs:range <https://w3id.org/narn/location/Place> ;
+                                            rdfs:comment "Character was the ruler of a place."@en ;
+                                            rdfs:label "was the king of"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "reigned over"@en .
+
+
+###  https://w3id.org/narn/to/after
+<https://w3id.org/narn/to/after> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                 owl:inverseOf <https://w3id.org/narn/to/before> ;
+                                 rdf:type owl:TransitiveProperty ;
+                                 rdfs:comment "Inverse of before. X starts after Y ends."@en ;
+                                 rdfs:label "after"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "follows"@en .
+
+
+###  https://w3id.org/narn/to/before
+<https://w3id.org/narn/to/before> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ,
+                                                     <https://w3id.org/narn/to/precedes> ;
+                                  rdf:type owl:TransitiveProperty ;
+                                  owl:propertyDisjointWith <https://w3id.org/narn/to/overlaps> ;
+                                  rdfs:comment "X ends before Y starts."@en ;
+                                  rdfs:label "before"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "precedes"@en .
+
+
+###  https://w3id.org/narn/to/containsInterval
+<https://w3id.org/narn/to/containsInterval> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                            owl:inverseOf <https://w3id.org/narn/to/during> ;
+                                            rdf:type owl:TransitiveProperty ;
+                                            rdfs:comment "Inverse of during. X entirely contains Y."@en ;
+                                            rdfs:label "contains interval"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "temporally contains"@en .
+
+
+###  https://w3id.org/narn/to/during
+<https://w3id.org/narn/to/during> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                  rdf:type owl:TransitiveProperty ;
+                                  rdfs:comment "X occurs entirely within Y."@en ;
+                                  rdfs:label "during"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "contained in"@en .
+
+
+###  https://w3id.org/narn/to/endsAt
+<https://w3id.org/narn/to/endsAt> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <https://w3id.org/narn/to/hasInstant> ;
+                                  rdf:type owl:FunctionalProperty ,
+                                           owl:AsymmetricProperty ,
+                                           owl:IrreflexiveProperty ;
+                                  rdfs:domain <https://w3id.org/narn/to/Interval> ;
+                                  rdfs:range <https://w3id.org/narn/to/Instant> ;
+                                  owl:propertyDisjointWith <https://w3id.org/narn/to/startsAt> ;
+                                  rdfs:comment "The unique ending instant."@en ;
+                                  rdfs:label "ends at"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "ending point"@en .
+
+
+###  https://w3id.org/narn/to/equals
+<https://w3id.org/narn/to/equals> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                  rdf:type owl:SymmetricProperty ,
+                                           owl:TransitiveProperty ,
+                                           owl:ReflexiveProperty ;
+                                  rdfs:comment "Same temporal extent."@en ;
+                                  rdfs:label "equals"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "same time as"@en .
+
+
+###  https://w3id.org/narn/to/finishedBy
+<https://w3id.org/narn/to/finishedBy> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                      owl:inverseOf <https://w3id.org/narn/to/finishes> ;
+                                      rdf:type owl:AsymmetricProperty ,
+                                               owl:TransitiveProperty ,
+                                               owl:IrreflexiveProperty ;
+                                      rdfs:comment "Inverse of finishes. X ends when Y ends but Y starts before X starts."@en ;
+                                      rdfs:label "finished by"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "ended by"@en .
+
+
+###  https://w3id.org/narn/to/finishes
+<https://w3id.org/narn/to/finishes> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                    rdf:type owl:AsymmetricProperty ,
+                                             owl:TransitiveProperty ,
+                                             owl:IrreflexiveProperty ;
+                                    rdfs:comment "X ends at same time as Y but starts after Y starts."@en ;
+                                    rdfs:label "finishes"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "ends with"@en .
+
+
+###  https://w3id.org/narn/to/hasInstant
+<https://w3id.org/narn/to/hasInstant> rdf:type owl:ObjectProperty ,
+                                               owl:AsymmetricProperty ,
+                                               owl:IrreflexiveProperty ;
+                                      rdfs:domain <https://w3id.org/narn/to/Interval> ;
+                                      rdfs:range <https://w3id.org/narn/to/Instant> ;
+                                      rdfs:comment "Links an interval to an instant that falls within or bounds it."@en ;
+                                      rdfs:label "has instant"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "at instant"@en .
+
+
+###  https://w3id.org/narn/to/intervalRelation
+<https://w3id.org/narn/to/intervalRelation> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <https://w3id.org/narn/to/Interval> ;
+                                            rdfs:range <https://w3id.org/narn/to/Interval> ;
+                                            rdfs:comment "General temporal relation between two intervals."@en ;
+                                            rdfs:label "interval relation"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "Allen relation"@en .
+
+
+###  https://w3id.org/narn/to/meets
+<https://w3id.org/narn/to/meets> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ,
+                                                    <https://w3id.org/narn/to/precedes> ;
+                                 rdf:type owl:AsymmetricProperty ,
+                                          owl:IrreflexiveProperty ;
+                                 owl:propertyDisjointWith <https://w3id.org/narn/to/overlaps> ;
+                                 rdfs:comment "X ends exactly when Y starts."@en ;
+                                 rdfs:label "meets"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "immediately before"@en .
+
+
+###  https://w3id.org/narn/to/metBy
+<https://w3id.org/narn/to/metBy> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                 owl:inverseOf <https://w3id.org/narn/to/meets> ;
+                                 rdf:type owl:AsymmetricProperty ,
+                                          owl:IrreflexiveProperty ;
+                                 rdfs:comment "Inverse of meets. X starts exactly when Y ends."@en ;
+                                 rdfs:label "met by"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "immediately after"@en .
+
+
+###  https://w3id.org/narn/to/occursAfter
+<https://w3id.org/narn/to/occursAfter> rdf:type owl:ObjectProperty ;
+                                       owl:inverseOf <https://w3id.org/narn/to/occursBefore> ;
+                                       rdf:type owl:TransitiveProperty ;
+                                       rdfs:domain <https://w3id.org/narn/to/Instant> ;
+                                       rdfs:range <https://w3id.org/narn/to/Instant> ;
+                                       rdfs:comment "Inverse of occursBefore."@en ;
+                                       rdfs:label "occurs after"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "later than"@en .
+
+
+###  https://w3id.org/narn/to/occursBefore
+<https://w3id.org/narn/to/occursBefore> rdf:type owl:ObjectProperty ,
+                                                 owl:TransitiveProperty ;
+                                        rdfs:domain <https://w3id.org/narn/to/Instant> ;
+                                        rdfs:range <https://w3id.org/narn/to/Instant> ;
+                                        owl:propertyDisjointWith <https://w3id.org/narn/to/occursSimultaneouslyTo> ;
+                                        rdfs:comment "Instant strictly before another."@en ;
+                                        rdfs:label "occurs before"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "earlier than"@en .
+
+
+###  https://w3id.org/narn/to/occursDuring
+<https://w3id.org/narn/to/occursDuring> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/narn/to/Instant> ;
+                                        rdfs:range <https://w3id.org/narn/to/Interval> ;
+                                        rdfs:comment "An instant falls within the extent of an interval."@en ;
+                                        rdfs:label "occurs during"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "within timeframe of"@en .
+
+
+###  https://w3id.org/narn/to/occursSimultaneouslyTo
+<https://w3id.org/narn/to/occursSimultaneouslyTo> rdf:type owl:ObjectProperty ,
+                                                           owl:SymmetricProperty ,
+                                                           owl:TransitiveProperty ,
+                                                           owl:ReflexiveProperty ;
+                                                  rdfs:domain <https://w3id.org/narn/to/Instant> ;
+                                                  rdfs:range <https://w3id.org/narn/to/Instant> ;
+                                                  rdfs:comment "Two instants at the same time."@en ;
+                                                  rdfs:label "occurs simultaneously to"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "at same time as"@en .
+
+
+###  https://w3id.org/narn/to/overlappedBy
+<https://w3id.org/narn/to/overlappedBy> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                        owl:inverseOf <https://w3id.org/narn/to/overlaps> ;
+                                        rdf:type owl:AsymmetricProperty ,
+                                                 owl:IrreflexiveProperty ;
+                                        rdfs:comment "Inverse of overlaps. Y starts before X, ends after X starts but before X ends."@en ;
+                                        rdfs:label "overlapped by"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "partially after"@en .
+
+
+###  https://w3id.org/narn/to/overlaps
+<https://w3id.org/narn/to/overlaps> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                    rdf:type owl:AsymmetricProperty ,
+                                             owl:IrreflexiveProperty ;
+                                    rdfs:comment "X starts before Y, ends after Y starts but before Y ends."@en ;
+                                    rdfs:label "overlaps"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "partially before"@en .
+
+
+###  https://w3id.org/narn/to/precededBy
+<https://w3id.org/narn/to/precededBy> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <https://w3id.org/narn/to/precedes> ;
+                                      rdf:type owl:TransitiveProperty ;
+                                      rdfs:comment "Inverse of precedes. X starts after or when Y ends."@en ;
+                                      rdfs:label "preceded by"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "happens after"@en .
+
+
+###  https://w3id.org/narn/to/precedes
+<https://w3id.org/narn/to/precedes> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                    rdf:type owl:TransitiveProperty ;
+                                    rdfs:comment "X ends before or when Y starts."@en ;
+                                    rdfs:label "precedes"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "happens before"@en .
+
+
+###  https://w3id.org/narn/to/startedBy
+<https://w3id.org/narn/to/startedBy> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                     owl:inverseOf <https://w3id.org/narn/to/starts> ;
+                                     rdf:type owl:AsymmetricProperty ,
+                                              owl:TransitiveProperty ,
+                                              owl:IrreflexiveProperty ;
+                                     rdfs:comment "Inverse of starts. X starts when Y starts but Y ends after X ends."@en ;
+                                     rdfs:label "started by"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "begun by"@en .
+
+
+###  https://w3id.org/narn/to/starts
+<https://w3id.org/narn/to/starts> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <https://w3id.org/narn/to/intervalRelation> ;
+                                  rdf:type owl:AsymmetricProperty ,
+                                           owl:TransitiveProperty ,
+                                           owl:IrreflexiveProperty ;
+                                  rdfs:comment "X starts at same time as Y but ends before Y ends."@en ;
+                                  rdfs:label "starts"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "begins with"@en .
+
+
+###  https://w3id.org/narn/to/startsAt
+<https://w3id.org/narn/to/startsAt> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <https://w3id.org/narn/to/hasInstant> ;
+                                    rdf:type owl:FunctionalProperty ,
+                                             owl:AsymmetricProperty ,
+                                             owl:IrreflexiveProperty ;
+                                    rdfs:domain <https://w3id.org/narn/to/Interval> ;
+                                    rdfs:range <https://w3id.org/narn/to/Instant> ;
+                                    rdfs:comment "The unique starting instant."@en ;
+                                    rdfs:label "starts at"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "beginning point"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/narn/plot/publishedDate
+<https://w3id.org/narn/plot/publishedDate> rdf:type owl:DatatypeProperty ,
+                                                    owl:FunctionalProperty ;
+                                           rdfs:domain <https://w3id.org/narn/plot/Story> ;
+                                           rdfs:range xsd:date ;
+                                           rdfs:comment "The date the story was published."@en ;
+                                           rdfs:label "published date"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "date published"@en .
+
+
+###  https://w3id.org/narn/plot/unitIndex
+<https://w3id.org/narn/plot/unitIndex> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <https://w3id.org/narn/plot/NarrativeUnit> ;
+                                       rdfs:range xsd:positiveInteger ;
+                                       rdfs:comment "The ordering position of a unit within its parent."@en ;
+                                       rdfs:label "unit index"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "sequence number"@en .
+
+
+###  https://w3id.org/narn/to/hasDateTime
+<https://w3id.org/narn/to/hasDateTime> rdf:type owl:DatatypeProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:domain <https://w3id.org/narn/to/Instant> ;
+                                       rdfs:range xsd:dateTime ;
+                                       rdfs:comment "The calendar date and time of an instant."@en ;
+                                       rdfs:label "has date time"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "dateTime value"@en .
+
+
+###  https://w3id.org/narn/to/hasDuration
+<https://w3id.org/narn/to/hasDuration> rdf:type owl:DatatypeProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:domain <https://w3id.org/narn/to/Interval> ;
+                                       rdfs:range xsd:duration ;
+                                       rdfs:comment "The length of time spanned by an interval."@en ;
+                                       rdfs:label "has duration"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "time length"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/narn/action/Action
+<https://w3id.org/narn/action/Action> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/event/Event> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/narn/action/performedBy> ;
+                                                        owl:someValuesFrom owl:Thing
+                                                      ] ;
+                                      rdfs:comment "An intentional deed. Every action has at least one performer."@en ;
+                                      rdfs:label "action"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "deed"@en .
+
+
+###  https://w3id.org/narn/action/Attack
+<https://w3id.org/narn/action/Attack> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/action/ViolentAction> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/narn/action/hasTarget> ;
+                                                        owl:someValuesFrom owl:Thing
+                                                      ] ;
+                                      owl:disjointWith <https://w3id.org/narn/action/Defend> ;
+                                      rdfs:comment "An aggressive action aimed at harming a target."@en ;
+                                      rdfs:label "attack"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "assault"@en .
+
+
+###  https://w3id.org/narn/action/Build
+<https://w3id.org/narn/action/Build> rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/action/CreationAction>
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/narn/event/creates> ;
+                                                                                  owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                     rdfs:subClassOf <https://w3id.org/narn/action/CreationAction> ;
+                                     owl:disjointWith <https://w3id.org/narn/action/Forge> ;
+                                     rdfs:comment "The action of constructing a structure or settlement."@en ;
+                                     rdfs:label "build"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "construction"@en .
+
+
+###  https://w3id.org/narn/action/Command
+<https://w3id.org/narn/action/Command> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/narn/action/CommunicativeAction> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/narn/action/hasTarget> ;
+                                                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                       rdfs:comment "The action of giving an authoritative order."@en ;
+                                       rdfs:label "command"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "order"@en .
+
+
+###  https://w3id.org/narn/action/CommunicativeAction
+<https://w3id.org/narn/action/CommunicativeAction> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/narn/action/Action> ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/narn/action/hasTarget> ;
+                                                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                         owl:complementOf <https://w3id.org/narn/location/Place>
+                                                                                       ]
+                                                                   ] ;
+                                                   owl:disjointWith <https://w3id.org/narn/action/MovementAction> ,
+                                                                    <https://w3id.org/narn/action/TransferAction> ,
+                                                                    <https://w3id.org/narn/action/ViolentAction> ;
+                                                   rdfs:comment "An action involving communication between characters."@en ;
+                                                   rdfs:label "communicative action"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "speech act"@en .
+
+
+###  https://w3id.org/narn/action/CreationAction
+<https://w3id.org/narn/action/CreationAction> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/narn/action/Action> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://w3id.org/narn/event/creates> ;
+                                                                owl:someValuesFrom owl:Thing
+                                                              ] ;
+                                              owl:disjointWith <https://w3id.org/narn/action/TransferAction> ;
+                                              rdfs:comment "An action that produces or transforms something."@en ;
+                                              rdfs:label "creation action"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "making"@en .
+
+
+###  https://w3id.org/narn/action/Deceive
+<https://w3id.org/narn/action/Deceive> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/action/CommunicativeAction>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/narn/action/hasIntention> ;
+                                                                                    owl:someValuesFrom <https://w3id.org/narn/action/MisleadingIntention>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/narn/action/CommunicativeAction> ;
+                                       rdfs:comment "The action of intentionally misleading another character."@en ;
+                                       rdfs:label "deceive"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "deception"@en .
+
+
+###  https://w3id.org/narn/action/Defend
+<https://w3id.org/narn/action/Defend> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/action/ViolentAction> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/narn/action/hasTarget> ;
+                                                        owl:someValuesFrom owl:Thing
+                                                      ] ;
+                                      rdfs:comment "An action of protecting oneself or others from attack."@en ;
+                                      rdfs:label "defend"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "defence"@en .
+
+
+###  https://w3id.org/narn/action/Escape
+<https://w3id.org/narn/action/Escape> rdf:type owl:Class ;
+                                      rdfs:comment "The intention of getting away from danger."@en ;
+                                      rdfs:label "escape"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "evasion"@en .
+
+
+###  https://w3id.org/narn/action/Flee
+<https://w3id.org/narn/action/Flee> rdf:type owl:Class ;
+                                    owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/action/MovementAction>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <https://w3id.org/narn/action/hasIntention> ;
+                                                                                 owl:someValuesFrom <https://w3id.org/narn/action/Escape>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                    rdfs:subClassOf <https://w3id.org/narn/action/MovementAction> ;
+                                    rdfs:comment "The action of running away from danger or pursuit."@en ;
+                                    rdfs:label "flee"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "flight"@en .
+
+
+###  https://w3id.org/narn/action/Forge
+<https://w3id.org/narn/action/Forge> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/narn/action/CreationAction> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/narn/event/creates> ;
+                                                       owl:someValuesFrom owl:Thing
+                                                     ] ;
+                                     rdfs:comment "The action of creating or reshaping an object, especially a weapon."@en ;
+                                     rdfs:label "forge"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "smithing"@en .
+
+
+###  https://w3id.org/narn/action/Give
+<https://w3id.org/narn/action/Give> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/action/TransferAction> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/action/hasRecipient> ;
+                                                      owl:someValuesFrom owl:Thing
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/action/hasInstrument> ;
+                                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                    owl:disjointWith <https://w3id.org/narn/action/Take> ;
+                                    rdfs:comment "The action of voluntarily transferring something to another."@en ;
+                                    rdfs:label "give"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "bestowal"@en .
+
+
+###  https://w3id.org/narn/action/GoTo
+<https://w3id.org/narn/action/GoTo> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/action/MovementAction> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/action/hasTarget> ;
+                                                      owl:allValuesFrom <https://w3id.org/narn/location/Place>
+                                                    ] ;
+                                    rdfs:comment "The action of deliberately travelling to a destination."@en ;
+                                    rdfs:label "go to"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "travel to"@en .
+
+
+###  https://w3id.org/narn/action/Kill
+<https://w3id.org/narn/action/Kill> rdf:type owl:Class ;
+                                    owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/action/ViolentAction>
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <https://w3id.org/narn/action/hasResult> ;
+                                                                                 owl:someValuesFrom <https://w3id.org/narn/event/Death>
+                                                                               ]
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <https://w3id.org/narn/action/hasTarget> ;
+                                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                    rdfs:subClassOf <https://w3id.org/narn/action/ViolentAction> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/action/hasResult> ;
+                                                      owl:allValuesFrom <https://w3id.org/narn/event/Death>
+                                                    ] ;
+                                    rdfs:comment "The action of causing the death of another."@en ;
+                                    rdfs:label "kill"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "slaying"@en .
+
+
+###  https://w3id.org/narn/action/MisleadingIntention
+<https://w3id.org/narn/action/MisleadingIntention> rdf:type owl:Class ;
+                                                   rdfs:comment "The intention of making another believe something false."@en ;
+                                                   rdfs:label "misleading intention"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "intent to deceive"@en .
+
+
+###  https://w3id.org/narn/action/MovementAction
+<https://w3id.org/narn/action/MovementAction> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/narn/action/Action> ,
+                                                              <https://w3id.org/narn/event/MovementEvent> ;
+                                              owl:disjointWith <https://w3id.org/narn/action/ViolentAction> ;
+                                              rdfs:comment "An action involving deliberate physical movement."@en ;
+                                              rdfs:label "movement action"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "locomotion"@en .
+
+
+###  https://w3id.org/narn/action/Reveal
+<https://w3id.org/narn/action/Reveal> rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/action/CommunicativeAction>
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/narn/action/hasResult> ;
+                                                                                   owl:someValuesFrom <https://w3id.org/narn/event/Discovery>
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/narn/action/CommunicativeAction> ;
+                                      rdfs:comment "The action of disclosing previously hidden information."@en ;
+                                      rdfs:label "reveal"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "disclosure"@en .
+
+
+###  https://w3id.org/narn/action/Speak
+<https://w3id.org/narn/action/Speak> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/narn/action/CommunicativeAction> ;
+                                     rdfs:comment "The action of verbal communication."@en ;
+                                     rdfs:label "speak"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "utterance"@en .
+
+
+###  https://w3id.org/narn/action/Take
+<https://w3id.org/narn/action/Take> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/action/TransferAction> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/action/hasTarget> ;
+                                                      owl:someValuesFrom owl:Thing
+                                                    ] ;
+                                    rdfs:comment "The action of acquiring something, possibly by force."@en ;
+                                    rdfs:label "take"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "seizure"@en .
+
+
+###  https://w3id.org/narn/action/TransferAction
+<https://w3id.org/narn/action/TransferAction> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/narn/action/Action> ;
+                                              rdfs:comment "An action involving the transfer of possession."@en ;
+                                              rdfs:label "transfer action"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "transfer"@en .
+
+
+###  https://w3id.org/narn/action/ViolentAction
+<https://w3id.org/narn/action/ViolentAction> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/narn/action/Action> ;
+                                             rdfs:comment "An action involving physical violence or force."@en ;
+                                             rdfs:label "violent action"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "violent deed"@en .
+
+
+###  https://w3id.org/narn/event/Battle
+<https://w3id.org/narn/event/Battle> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/narn/event/ConflictEvent> ;
+                                     rdfs:comment "A large scale violent confrontation."@en ;
+                                     rdfs:label "battle"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "armed conflict"@en .
+
+
+###  https://w3id.org/narn/event/Betrayal
+<https://w3id.org/narn/event/Betrayal> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                       owl:disjointWith <https://w3id.org/narn/event/Meeting> ;
+                                       rdfs:comment "An act of disloyalty or treachery."@en ;
+                                       rdfs:label "betrayal"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "treachery"@en .
+
+
+###  https://w3id.org/narn/event/Birth
+<https://w3id.org/narn/event/Birth> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/event/LifeEvent> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/event/begets> ;
+                                                      owl:someValuesFrom owl:Thing
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/event/occursAt> ;
+                                                      owl:allValuesFrom <https://w3id.org/narn/location/Place>
+                                                    ] ;
+                                    owl:disjointWith <https://w3id.org/narn/event/Death> ,
+                                                     <https://w3id.org/narn/event/Marriage> ,
+                                                     <https://w3id.org/narn/event/Murder> ;
+                                    rdfs:comment "A character being born. Every birth begets at least one character."@en ;
+                                    rdfs:label "birth"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "nativity"@en .
+
+
+###  https://w3id.org/narn/event/Captivity
+<https://w3id.org/narn/event/Captivity> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                        rdfs:comment "A character is held prisoner."@en ;
+                                        rdfs:label "captivity"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "imprisonment"@en .
+
+
+###  https://w3id.org/narn/event/ConflictEvent
+<https://w3id.org/narn/event/ConflictEvent> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                            owl:disjointWith <https://w3id.org/narn/event/MovementEvent> ,
+                                                             <https://w3id.org/narn/event/SocialEvent> ;
+                                            rdfs:comment "An event involving antagonism or violence."@en ;
+                                            rdfs:label "conflict event"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "clash"@en .
+
+
+###  https://w3id.org/narn/event/Coronation
+<https://w3id.org/narn/event/Coronation> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/narn/event/SocialEvent> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <https://w3id.org/narn/event/hasAgent> ;
+                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                         ] ;
+                                         rdfs:comment "A ceremony of crowning a ruler."@en ;
+                                         rdfs:label "coronation"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "crowning ceremony"@en .
+
+
+###  https://w3id.org/narn/event/Council
+<https://w3id.org/narn/event/Council> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/event/SocialEvent> ;
+                                      rdfs:comment "A formal meeting for deliberation or the reach of a consensus."@en ;
+                                      rdfs:label "council"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "deliberation"@en .
+
+
+###  https://w3id.org/narn/event/Curse
+<https://w3id.org/narn/event/Curse> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                    owl:disjointWith <https://w3id.org/narn/event/Prophecy> ;
+                                    rdfs:comment "A supernatural imprecation bringing misfortune."@en ;
+                                    rdfs:label "curse"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "malediction"@en .
+
+
+###  https://w3id.org/narn/event/Death
+<https://w3id.org/narn/event/Death> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/event/LifeEvent> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/event/hasVictim> ;
+                                                      owl:someValuesFrom owl:Thing
+                                                    ] ;
+                                    rdfs:comment "A character dying. Every death has at least one victim."@en ;
+                                    rdfs:label "death"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "demise"@en .
+
+
+###  https://w3id.org/narn/event/Discovery
+<https://w3id.org/narn/event/Discovery> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                        rdfs:comment "An event where something hidden is found or revealed."@en ;
+                                        rdfs:label "discovery"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "revelation"@en .
+
+
+###  https://w3id.org/narn/event/Duel
+<https://w3id.org/narn/event/Duel> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/narn/event/ConflictEvent> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/narn/event/hasParticipant> ;
+                                                     owl:cardinality "2"^^xsd:nonNegativeInteger
+                                                   ] ;
+                                   rdfs:comment "A fight between exactly two combatants."@en ;
+                                   rdfs:label "duel"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "single combat"@en .
+
+
+###  https://w3id.org/narn/event/Enchantment
+<https://w3id.org/narn/event/Enchantment> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                          rdfs:comment "A magical spell or charm placed on a character."@en ;
+                                          rdfs:label "enchantment"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "spell"@en .
+
+
+###  https://w3id.org/narn/event/Event
+<https://w3id.org/narn/event/Event> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/to/FiniteInterval> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/event/hasParticipant> ;
+                                                      owl:someValuesFrom owl:Thing
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/event/occursAt> ;
+                                                      owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                    ] ;
+                                    rdfs:comment """A spatio-temporal occurrence involving participants at places.
+        Every event is a finite temporal interval."""@en ;
+                                    rdfs:label "event"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "occurrence"@en .
+
+
+###  https://w3id.org/narn/event/Exile
+<https://w3id.org/narn/event/Exile> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/event/MovementEvent> ;
+                                    rdfs:comment "Forced departure from homeland."@en ;
+                                    rdfs:label "exile"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "banishment"@en .
+
+
+###  https://w3id.org/narn/event/Feast
+<https://w3id.org/narn/event/Feast> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/event/SocialEvent> ;
+                                    rdfs:comment "A large celebratory meal or banquet."@en ;
+                                    rdfs:label "feast"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "banquet"@en .
+
+
+###  https://w3id.org/narn/event/Flight
+<https://w3id.org/narn/event/Flight> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/narn/event/MovementEvent> ;
+                                     rdfs:comment "Characters flee from danger."@en ;
+                                     rdfs:label "flight"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "escape"@en .
+
+
+###  https://w3id.org/narn/event/LifeEvent
+<https://w3id.org/narn/event/LifeEvent> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                        rdfs:comment "A significant moment in a character's life."@en ;
+                                        rdfs:label "life event"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "life occurrence"@en .
+
+
+###  https://w3id.org/narn/event/Marriage
+<https://w3id.org/narn/event/Marriage> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/narn/event/LifeEvent> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/narn/event/hasParticipant> ;
+                                                         owl:cardinality "2"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                       rdfs:comment "Two characters getting married. Involves exactly 2 participants."@en ;
+                                       rdfs:label "marriage"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "wedding"@en .
+
+
+###  https://w3id.org/narn/event/Meeting
+<https://w3id.org/narn/event/Meeting> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/event/SocialEvent> ;
+                                      rdfs:comment "An encounter or gathering of characters."@en ;
+                                      rdfs:label "meeting"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "encounter"@en .
+
+
+###  https://w3id.org/narn/event/MovementEvent
+<https://w3id.org/narn/event/MovementEvent> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                            rdfs:comment "An event involving physical movement of characters between places."@en ;
+                                            rdfs:label "movement event"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "movement"@en .
+
+
+###  https://w3id.org/narn/event/Murder
+<https://w3id.org/narn/event/Murder> rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/event/Death>
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/narn/event/hasAgent> ;
+                                                                                  owl:someValuesFrom owl:Thing
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                     rdfs:subClassOf <https://w3id.org/narn/event/Death> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/narn/event/hasAgent> ;
+                                                       owl:someValuesFrom owl:Thing
+                                                     ] ;
+                                     owl:disjointWith <https://w3id.org/narn/event/Suicide> ;
+                                     rdfs:comment "A death caused intentionally by another. Has at least one agent."@en ;
+                                     rdfs:label "murder"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "homicide"@en .
+
+
+###  https://w3id.org/narn/event/Prophecy
+<https://w3id.org/narn/event/Prophecy> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                       rdfs:comment "A prediction of future events, often supernatural."@en ;
+                                       rdfs:label "prophecy"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "foretelling"@en .
+
+
+###  https://w3id.org/narn/event/Siege
+<https://w3id.org/narn/event/Siege> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/event/ConflictEvent> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/event/occursAt> ;
+                                                      owl:allValuesFrom <https://w3id.org/narn/location/Settlement>
+                                                    ] ;
+                                    rdfs:comment "A military blockade of a city or fortress."@en ;
+                                    rdfs:label "siege"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "blockade"@en .
+
+
+###  https://w3id.org/narn/event/SocialEvent
+<https://w3id.org/narn/event/SocialEvent> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/narn/event/Event> ;
+                                          rdfs:comment "An event involving social interaction between characters."@en ;
+                                          rdfs:label "social event"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "social gathering"@en .
+
+
+###  https://w3id.org/narn/event/Suicide
+<https://w3id.org/narn/event/Suicide> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/event/Death> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/narn/event/hasVictim> ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/narn/event/hasAgent> ;
+                                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                      rdfs:comment "A death where the victim is also the agent. At most one agent."@en ;
+                                      rdfs:label "suicide"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "self-killing"@en .
+
+
+###  https://w3id.org/narn/event/Travel
+<https://w3id.org/narn/event/Travel> rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/event/MovementEvent>
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/narn/event/hasDestination> ;
+                                                                                  owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                                                ]
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/narn/event/hasOrigin> ;
+                                                                                  owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                     rdfs:subClassOf <https://w3id.org/narn/event/MovementEvent> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/narn/event/hasDestination> ;
+                                                       owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/narn/event/hasOrigin> ;
+                                                       owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                     ] ;
+                                     rdfs:comment "A journey. Every travel has origin and destination."@en ;
+                                     rdfs:label "travel"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "journey"@en .
+
+
+###  https://w3id.org/narn/event/Trial
+<https://w3id.org/narn/event/Trial> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/event/SocialEvent> ;
+                                    rdfs:comment "A judicial examination or hearing."@en ;
+                                    rdfs:label "trial"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "judgement"@en .
+
+
+###  https://w3id.org/narn/event/War
+<https://w3id.org/narn/event/War> rdf:type owl:Class ;
+                                  owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/event/ConflictEvent>
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/narn/event/hasSubEvent> ;
+                                                                               owl:someValuesFrom <https://w3id.org/narn/event/Battle>
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  rdfs:subClassOf <https://w3id.org/narn/event/ConflictEvent> ;
+                                  rdfs:comment "A prolonged conflict with multiple battles."@en ;
+                                  rdfs:label "war"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "prolonged conflict"@en .
+
+
+###  https://w3id.org/narn/location/Building
+<https://w3id.org/narn/location/Building> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/narn/location/Place> ;
+                                          owl:disjointWith <https://w3id.org/narn/location/NaturalArea> ;
+                                          rdfs:comment "A constructed structure."@en ;
+                                          rdfs:label "building"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "structure"@en .
+
+
+###  https://w3id.org/narn/location/City
+<https://w3id.org/narn/location/City> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/location/Settlement> ;
+                                      owl:disjointWith <https://w3id.org/narn/location/Village> ;
+                                      rdfs:comment "A large and significant settlement."@en ;
+                                      rdfs:label "city"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "urban area"@en .
+
+
+###  https://w3id.org/narn/location/Continent
+<https://w3id.org/narn/location/Continent> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/narn/location/LandArea> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/narn/location/isAPartOf> ;
+                                                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                 owl:complementOf <https://w3id.org/narn/location/LandArea>
+                                                                               ]
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty [ owl:inverseOf <https://w3id.org/narn/location/isTheCapitalOf>
+                                                                            ] ;
+                                                             owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass <https://w3id.org/narn/location/Settlement>
+                                                           ] ;
+                                           rdfs:comment "A major landmass."@en ;
+                                           rdfs:label "continent"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "landmass"@en .
+
+
+###  https://w3id.org/narn/location/Desert
+<https://w3id.org/narn/location/Desert> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/location/NaturalArea> ;
+                                        owl:disjointWith <https://w3id.org/narn/location/Forest> ;
+                                        rdfs:comment "A barren, arid area with little vegetation."@en ;
+                                        rdfs:label "desert"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "wasteland"@en .
+
+
+###  https://w3id.org/narn/location/Forest
+<https://w3id.org/narn/location/Forest> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/location/WoodedArea> ;
+                                        rdfs:comment "A large, dense wooded area."@en ;
+                                        rdfs:label "forest"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "wood"@en .
+
+
+###  https://w3id.org/narn/location/Fortress
+<https://w3id.org/narn/location/Fortress> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/narn/location/Settlement> ;
+                                          rdfs:comment "A fortified place, typically a military stronghold."@en ;
+                                          rdfs:label "fortress"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "stronghold"@en .
+
+
+###  https://w3id.org/narn/location/Hill
+<https://w3id.org/narn/location/Hill> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/location/NaturalArea> ;
+                                      rdfs:comment "A naturally raised area of land, smaller than a mountain."@en ;
+                                      rdfs:label "hill"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "hillock"@en .
+
+
+###  https://w3id.org/narn/location/Lake
+<https://w3id.org/narn/location/Lake> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/location/NaturalArea> ;
+                                      rdfs:comment "A large body of water surrounded by land."@en ;
+                                      rdfs:label "lake"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "body of water"@en .
+
+
+###  https://w3id.org/narn/location/LandArea
+<https://w3id.org/narn/location/LandArea> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/narn/location/Place> ;
+                                          rdfs:comment "A place that is primarily defined by its land territory."@en ;
+                                          rdfs:label "land area"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "land"@en .
+
+
+###  https://w3id.org/narn/location/Mountain
+<https://w3id.org/narn/location/Mountain> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/narn/location/NaturalArea> ;
+                                          owl:disjointWith <https://w3id.org/narn/location/River> ,
+                                                           <https://w3id.org/narn/location/Sea> ;
+                                          rdfs:comment "A large natural elevation of the earth's surface."@en ;
+                                          rdfs:label "mountain"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "peak"@en .
+
+
+###  https://w3id.org/narn/location/NaturalArea
+<https://w3id.org/narn/location/NaturalArea> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/narn/location/Place> ;
+                                             owl:disjointWith <https://w3id.org/narn/location/Settlement> ;
+                                             rdfs:comment "A place defined by natural geographic features rather than habitation."@en ;
+                                             rdfs:label "natural area"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "natural feature"@en .
+
+
+###  https://w3id.org/narn/location/Place
+<https://w3id.org/narn/location/Place> rdf:type owl:Class ;
+                                       rdfs:comment "A named location that has geographic or spatial significance in a story."@en ;
+                                       rdfs:label "place"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "location"@en .
+
+
+###  https://w3id.org/narn/location/Realm
+<https://w3id.org/narn/location/Realm> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/location/LandArea>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty [ owl:inverseOf <https://w3id.org/narn/location/isTheCapitalOf>
+                                                                                                   ] ;
+                                                                                    owl:someValuesFrom <https://w3id.org/narn/location/Settlement>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/narn/location/LandArea> ;
+                                       rdfs:comment "A territory under the rule of a king or sovereign authority."@en ;
+                                       rdfs:label "realm"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "kingdom"@en .
+
+
+###  https://w3id.org/narn/location/Region
+<https://w3id.org/narn/location/Region> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/location/Place> ;
+                                        rdfs:comment "A large geographic area, typically contains multiple subplaces."@en ;
+                                        rdfs:label "region"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "area"@en .
+
+
+###  https://w3id.org/narn/location/River
+<https://w3id.org/narn/location/River> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/narn/location/NaturalArea> ;
+                                       rdfs:comment "A large natural stream of water."@en ;
+                                       rdfs:label "river"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "waterway"@en .
+
+
+###  https://w3id.org/narn/location/Sea
+<https://w3id.org/narn/location/Sea> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/narn/location/NaturalArea> ;
+                                     rdfs:comment "A large body of salt water."@en ;
+                                     rdfs:label "sea"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "ocean"@en .
+
+
+###  https://w3id.org/narn/location/Settlement
+<https://w3id.org/narn/location/Settlement> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/narn/location/Place> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/narn/location/isAPartOf> ;
+                                                              owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                            ] ;
+                                            rdfs:comment "A place where people live permanently."@en ;
+                                            rdfs:label "settlement"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "inhabited place"@en .
+
+
+###  https://w3id.org/narn/location/Town
+<https://w3id.org/narn/location/Town> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/location/Settlement> ;
+                                      owl:disjointWith <https://w3id.org/narn/location/Village> ;
+                                      rdfs:comment "A settlement larger than a village but smaller than a city."@en ;
+                                      rdfs:label "town"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "township"@en .
+
+
+###  https://w3id.org/narn/location/UndergroundCity
+<https://w3id.org/narn/location/UndergroundCity> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/location/City>
+                                                                                            <https://w3id.org/narn/location/UndergroundPlace>
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:comment "A city built underground, within caves or excavated halls."@en ;
+                                                 rdfs:label "underground city"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "subterranean city"@en .
+
+
+###  https://w3id.org/narn/location/UndergroundPlace
+<https://w3id.org/narn/location/UndergroundPlace> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/narn/location/Place> ;
+                                                  rdfs:comment "A place located beneath the surface of the earth."@en ;
+                                                  rdfs:label "underground place"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "subterranean place"@en .
+
+
+###  https://w3id.org/narn/location/Valley
+<https://w3id.org/narn/location/Valley> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/location/NaturalArea> ;
+                                        rdfs:comment "A low area of land between hills or mountains."@en ;
+                                        rdfs:label "valley"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "vale"@en .
+
+
+###  https://w3id.org/narn/location/Village
+<https://w3id.org/narn/location/Village> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/narn/location/Settlement> ;
+                                         rdfs:comment "A small settlement, typically in a rural area."@en ;
+                                         rdfs:label "village"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "hamlet"@en .
+
+
+###  https://w3id.org/narn/location/WildArea
+<https://w3id.org/narn/location/WildArea> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/narn/location/NaturalArea> ;
+                                          rdfs:comment "An uncultivated, uninhabited region."@en ;
+                                          rdfs:label "wild area"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "wilderness"@en .
+
+
+###  https://w3id.org/narn/location/WoodedArea
+<https://w3id.org/narn/location/WoodedArea> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/narn/location/NaturalArea> ;
+                                            rdfs:comment "A land area predominantly covered by trees."@en ;
+                                            rdfs:label "wooded area"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "woodland"@en .
+
+
+###  https://w3id.org/narn/plot/Act
+<https://w3id.org/narn/plot/Act> rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeUnit> ;
+                                 rdfs:comment "A major division in drama or narrative, often five in classical structure."@en ;
+                                 rdfs:label "act"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "story act"@en .
+
+
+###  https://w3id.org/narn/plot/Anagnorisis
+<https://w3id.org/narn/plot/Anagnorisis> rdf:type owl:Class ;
+                                         owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/plot/PlotDevice>
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/narn/plot/correspondsToEvent> ;
+                                                                                      owl:someValuesFrom <https://w3id.org/narn/event/Discovery>
+                                                                                    ]
+                                                                                  ) ;
+                                                               rdf:type owl:Class
+                                                             ] ;
+                                         rdfs:subClassOf <https://w3id.org/narn/plot/PlotDevice> ;
+                                         rdfs:comment "The point in a play, novel, etc., in which a principal character recognizes or discovers another character's true identity or the true nature of their own circumstances."@en ;
+                                         rdfs:label "anagnorisis"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "moment of recognition"@en .
+
+
+###  https://w3id.org/narn/plot/Antagonist
+<https://w3id.org/narn/plot/Antagonist> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/plot/CharacterRole> ;
+                                        owl:disjointWith <https://w3id.org/narn/plot/Protagonist> ;
+                                        rdfs:comment "The character who opposes the protagonist."@en ;
+                                        rdfs:label "antagonist"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "villain"@en .
+
+
+###  https://w3id.org/narn/plot/Chapter
+<https://w3id.org/narn/plot/Chapter> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeUnit> ;
+                                     rdfs:comment "A numbered or titled section of a narrative."@en ;
+                                     rdfs:label "chapter"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "story chapter"@en .
+
+
+###  https://w3id.org/narn/plot/CharacterRole
+<https://w3id.org/narn/plot/CharacterRole> rdf:type owl:Class ;
+                                           rdfs:comment "The narrative function a character plays in the story."@en ;
+                                           rdfs:label "character role"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "story role"@en .
+
+
+###  https://w3id.org/narn/plot/Climax
+<https://w3id.org/narn/plot/Climax> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeElement> ;
+                                    owl:disjointWith <https://w3id.org/narn/plot/Exposition> ,
+                                                     <https://w3id.org/narn/plot/Resolution> ;
+                                    rdfs:comment "The turning point; the moment of highest tension."@en ;
+                                    rdfs:label "climax"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "turning point"@en .
+
+
+###  https://w3id.org/narn/plot/Conflict
+<https://w3id.org/narn/plot/Conflict> rdf:type owl:Class ;
+                                      owl:disjointWith <https://w3id.org/narn/plot/Genre> ;
+                                      rdfs:comment "A struggle between opposing forces driving the plot."@en ;
+                                      rdfs:label "conflict"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "tension"@en .
+
+
+###  https://w3id.org/narn/plot/Denouement
+<https://w3id.org/narn/plot/Denouement> rdf:type owl:Class ;
+                                        owl:equivalentClass <https://w3id.org/narn/plot/Resolution> ;
+                                        rdfs:comment "Equivalent to resolution. The unravelling of the plot."@en ;
+                                        rdfs:label "denouement"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "final outcome"@en .
+
+
+###  https://w3id.org/narn/plot/DramaticIrony
+<https://w3id.org/narn/plot/DramaticIrony> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/narn/plot/PlotDevice> ;
+                                           rdfs:comment "When the audience knows more than the characters."@en ;
+                                           rdfs:label "dramatic irony"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "audience knowledge gap"@en .
+
+
+###  https://w3id.org/narn/plot/Epic
+<https://w3id.org/narn/plot/Epic> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/narn/plot/Genre> ;
+                                  rdfs:comment "A long narrative involving heroic deeds and grand scale."@en ;
+                                  rdfs:label "epic"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "epic genre"@en .
+
+
+###  https://w3id.org/narn/plot/Exposition
+<https://w3id.org/narn/plot/Exposition> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeElement> ;
+                                        owl:disjointWith <https://w3id.org/narn/plot/Resolution> ;
+                                        rdfs:comment "Introduction of setting, characters, and background."@en ;
+                                        rdfs:label "exposition"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "setup"@en .
+
+
+###  https://w3id.org/narn/plot/ExternalConflict
+<https://w3id.org/narn/plot/ExternalConflict> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/narn/plot/Conflict> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://w3id.org/narn/plot/conflictInvolves> ;
+                                                                owl:minCardinality "2"^^xsd:nonNegativeInteger
+                                                              ] ;
+                                              owl:disjointWith <https://w3id.org/narn/plot/InternalConflict> ;
+                                              rdfs:comment "Conflict between a character and an external force (antagonist, nature, society)."@en ;
+                                              rdfs:label "external conflict"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "outer struggle"@en .
+
+
+###  https://w3id.org/narn/plot/FallingAction
+<https://w3id.org/narn/plot/FallingAction> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeElement> ;
+                                           owl:disjointWith <https://w3id.org/narn/plot/RisingAction> ;
+                                           rdfs:comment "Events after the climax leading to the resolution."@en ;
+                                           rdfs:label "falling action"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "unwinding"@en .
+
+
+###  https://w3id.org/narn/plot/Fantasy
+<https://w3id.org/narn/plot/Fantasy> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/narn/plot/Genre> ;
+                                     rdfs:comment "A story with magical or supernatural elements."@en ;
+                                     rdfs:label "fantasy"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "fantasy genre"@en .
+
+
+###  https://w3id.org/narn/plot/Flashback
+<https://w3id.org/narn/plot/Flashback> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/narn/plot/PlotDevice> ;
+                                       rdfs:comment "A scene set in a time earlier than the main story."@en ;
+                                       rdfs:label "flashback"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "retrospection"@en .
+
+
+###  https://w3id.org/narn/plot/Foreshadowing
+<https://w3id.org/narn/plot/Foreshadowing> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/narn/plot/PlotDevice> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/narn/plot/foreshadowsEvent> ;
+                                                             owl:allValuesFrom <https://w3id.org/narn/event/Event>
+                                                           ] ;
+                                           rdfs:comment "Hints or clues about future events in the story."@en ;
+                                           rdfs:label "foreshadowing"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "hint of future events"@en .
+
+
+###  https://w3id.org/narn/plot/Genre
+<https://w3id.org/narn/plot/Genre> rdf:type owl:Class ;
+                                   rdfs:comment "A category of narrative with shared conventions."@en ;
+                                   rdfs:label "genre"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "literary genre"@en .
+
+
+###  https://w3id.org/narn/plot/IncitingIncident
+<https://w3id.org/narn/plot/IncitingIncident> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeElement> ;
+                                              owl:disjointWith <https://w3id.org/narn/plot/Resolution> ;
+                                              rdfs:comment "The event that sets the main conflict in motion."@en ;
+                                              rdfs:label "inciting incident"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "catalyst"@en .
+
+
+###  https://w3id.org/narn/plot/InternalConflict
+<https://w3id.org/narn/plot/InternalConflict> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/narn/plot/Conflict> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://w3id.org/narn/plot/conflictInvolves> ;
+                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                              ] ;
+                                              rdfs:comment "Conflict within a character (e.g. moral dilemma, fear)."@en ;
+                                              rdfs:label "internal conflict"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "inner struggle"@en .
+
+
+###  https://w3id.org/narn/plot/MacGuffin
+<https://w3id.org/narn/plot/MacGuffin> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/narn/plot/PlotDevice> ;
+                                       rdfs:comment "An object or goal that motivates the plot but has no intrinsic importance."@en ;
+                                       rdfs:label "MacGuffin"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "plot motivator"@en .
+
+
+###  https://w3id.org/narn/plot/Mentor
+<https://w3id.org/narn/plot/Mentor> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/plot/CharacterRole> ;
+                                    rdfs:comment "A character who guides or teaches the protagonist."@en ;
+                                    rdfs:label "mentor"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "guide figure"@en .
+
+
+###  https://w3id.org/narn/plot/NarrativeElement
+<https://w3id.org/narn/plot/NarrativeElement> rdf:type owl:Class ;
+                                              owl:disjointWith <https://w3id.org/narn/plot/PlotDevice> ;
+                                              rdfs:comment "A stage in the narrative arc."@en ;
+                                              rdfs:label "narrative element"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "story element"@en .
+
+
+###  https://w3id.org/narn/plot/NarrativeUnit
+<https://w3id.org/narn/plot/NarrativeUnit> rdf:type owl:Class ;
+                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/narn/plot/containsUnit> ;
+                                                             owl:allValuesFrom <https://w3id.org/narn/plot/NarrativeUnit>
+                                                           ] ;
+                                           rdfs:comment "A structural division of a story."@en ;
+                                           rdfs:label "narrative unit"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "story division"@en .
+
+
+###  https://w3id.org/narn/plot/Part
+<https://w3id.org/narn/plot/Part> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeUnit> ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/narn/plot/containsUnit> ;
+                                                    owl:someValuesFrom <https://w3id.org/narn/plot/Chapter>
+                                                  ] ;
+                                  rdfs:comment "A major division of a story containing chapters."@en ;
+                                  rdfs:label "part"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "story part"@en .
+
+
+###  https://w3id.org/narn/plot/Peripeteia
+<https://w3id.org/narn/plot/Peripeteia> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/plot/PlotDevice> ;
+                                        rdfs:comment "A sudden reversal of fortune or change in circumstances."@en ;
+                                        rdfs:label "peripeteia"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "reversal of fortune"@en .
+
+
+###  https://w3id.org/narn/plot/PlotDevice
+<https://w3id.org/narn/plot/PlotDevice> rdf:type owl:Class ;
+                                        rdfs:comment "A technique used to advance or structure the plot."@en ;
+                                        rdfs:label "plot device"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "narrative device"@en .
+
+
+###  https://w3id.org/narn/plot/PlotTwist
+<https://w3id.org/narn/plot/PlotTwist> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/narn/plot/PlotDevice> ;
+                                       rdfs:comment "An unexpected revelation that changes the story's direction."@en ;
+                                       rdfs:label "plot twist"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "unexpected turn"@en .
+
+
+###  https://w3id.org/narn/plot/Protagonist
+<https://w3id.org/narn/plot/Protagonist> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/narn/plot/CharacterRole> ;
+                                         rdfs:comment "The main character; the one driving the action."@en ;
+                                         rdfs:label "protagonist"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "main character"@en .
+
+
+###  https://w3id.org/narn/plot/Resolution
+<https://w3id.org/narn/plot/Resolution> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeElement> ;
+                                        rdfs:comment "The outcome; how the conflict is resolved."@en ;
+                                        rdfs:label "resolution"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "conclusion"@en .
+
+
+###  https://w3id.org/narn/plot/RisingAction
+<https://w3id.org/narn/plot/RisingAction> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeElement> ;
+                                          rdfs:comment "Series of events building tension toward the climax."@en ;
+                                          rdfs:label "rising action"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "complication"@en .
+
+
+###  https://w3id.org/narn/plot/Scene
+<https://w3id.org/narn/plot/Scene> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/narn/plot/NarrativeUnit> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/narn/plot/containsUnit> ;
+                                                     owl:allValuesFrom owl:Nothing
+                                                   ] ;
+                                   rdfs:comment "The smallest narrative unit; a continuous action in one setting."@en ;
+                                   rdfs:label "scene"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "story scene"@en .
+
+
+###  https://w3id.org/narn/plot/Story
+<https://w3id.org/narn/plot/Story> rdf:type owl:Class ;
+                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/narn/plot/hasNarrativeElement> ;
+                                                     owl:someValuesFrom <https://w3id.org/narn/plot/Climax>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/narn/plot/hasNarrativeElement> ;
+                                                     owl:someValuesFrom <https://w3id.org/narn/plot/Resolution>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/narn/plot/hasNarrativeUnit> ;
+                                                     owl:someValuesFrom <https://w3id.org/narn/plot/NarrativeUnit>
+                                                   ] ;
+                                   rdfs:comment "A complete narrative work."@en ;
+                                   rdfs:label "story"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "narrative"@en .
+
+
+###  https://w3id.org/narn/plot/Tragedy
+<https://w3id.org/narn/plot/Tragedy> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/narn/plot/Genre> ;
+                                     rdfs:comment "A story where the protagonist suffers a downfall."@en ;
+                                     rdfs:label "tragedy"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "tragic genre"@en .
+
+
+###  https://w3id.org/narn/plot/TragicHero
+<https://w3id.org/narn/plot/TragicHero> rdf:type owl:Class ;
+                                        owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/plot/Protagonist>
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/narn/plot/involvedInDevice> ;
+                                                                                     owl:someValuesFrom <https://w3id.org/narn/plot/Peripeteia>
+                                                                                   ]
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ] ;
+                                        rdfs:subClassOf <https://w3id.org/narn/plot/CharacterRole> ;
+                                        rdfs:comment "A protagonist whose flaw leads to their downfall."@en ;
+                                        rdfs:label "tragic hero"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "tragic protagonist"@en .
+
+
+###  https://w3id.org/narn/social/Ally
+<https://w3id.org/narn/social/Ally> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/social/SocialRole> ;
+                                    owl:disjointWith <https://w3id.org/narn/social/Outlaw> ;
+                                    rdfs:comment "One allied with others"@en ;
+                                    rdfs:label "ally"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "companion"@en .
+
+
+###  https://w3id.org/narn/social/Chieftain
+<https://w3id.org/narn/social/Chieftain> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/narn/social/PoliticalRole> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <https://w3id.org/narn/social/wasTheChieftainOf> ;
+                                                           owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                         ] ;
+                                         rdfs:comment "The leader of a people or tribe."@en ;
+                                         rdfs:label "chieftain"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "chief"@en .
+
+
+###  https://w3id.org/narn/social/EmotionalValence
+<https://w3id.org/narn/social/EmotionalValence> rdf:type owl:Class ;
+                                                owl:equivalentClass [ rdf:type owl:Class ;
+                                                                      owl:oneOf ( <https://w3id.org/narn/social/ambivalent>
+                                                                                  <https://w3id.org/narn/social/negative>
+                                                                                  <https://w3id.org/narn/social/positive>
+                                                                                )
+                                                                    ] ;
+                                                rdfs:comment "Enumerated class: {positive, negative, ambivalent}."@en ;
+                                                rdfs:label "emotional valence"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "sentiment type"@en .
+
+
+###  https://w3id.org/narn/social/King
+<https://w3id.org/narn/social/King> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/social/PoliticalRole> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/social/wasTheKingOf> ;
+                                                      owl:someValuesFrom <https://w3id.org/narn/location/Place>
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/social/wasServedBy> ;
+                                                      owl:allValuesFrom <https://w3id.org/narn/social/Servant>
+                                                    ] ;
+                                    owl:disjointWith <https://w3id.org/narn/social/Servant> ;
+                                    rdfs:comment "A ruler of a realm or kingdom."@en ;
+                                    rdfs:label "king"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "monarch"@en .
+
+
+###  https://w3id.org/narn/social/Leader
+<https://w3id.org/narn/social/Leader> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:unionOf ( <https://w3id.org/narn/social/Chieftain>
+                                                                          <https://w3id.org/narn/social/King>
+                                                                        )
+                                                          ] ;
+                                      rdfs:comment "A leader is either a King or a Chieftain."@en ;
+                                      rdfs:label "leader"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "ruler"@en .
+
+
+###  https://w3id.org/narn/social/MilitaryRole
+<https://w3id.org/narn/social/MilitaryRole> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/narn/social/SocialRole> ;
+                                            rdfs:comment "A social role related to military or combat functions."@en ;
+                                            rdfs:label "military role"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "military position"@en .
+
+
+###  https://w3id.org/narn/social/NonLeader
+<https://w3id.org/narn/social/NonLeader> rdf:type owl:Class ;
+                                         owl:equivalentClass [ rdf:type owl:Class ;
+                                                               owl:complementOf <https://w3id.org/narn/social/Leader>
+                                                             ] ;
+                                         rdfs:comment "Anyone who is not a Leader."@en ;
+                                         rdfs:label "non-leader"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "non-ruler"@en .
+
+
+###  https://w3id.org/narn/social/Outlaw
+<https://w3id.org/narn/social/Outlaw> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/narn/social/SocialRole> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/narn/social/isAnEnemyOf> ;
+                                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                      rdfs:comment "A person who lives outside the law."@en ;
+                                      rdfs:label "outlaw"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "fugitive"@en .
+
+
+###  https://w3id.org/narn/social/PoliticalRole
+<https://w3id.org/narn/social/PoliticalRole> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/narn/social/SocialRole> ;
+                                             rdfs:comment "A social role involving governance or political authority."@en ;
+                                             rdfs:label "political role"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "political position"@en .
+
+
+###  https://w3id.org/narn/social/PositiveRelation
+<https://w3id.org/narn/social/PositiveRelation> rdf:type owl:Class ;
+                                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/narn/social/hasValence> ;
+                                                                      owl:hasValue <https://w3id.org/narn/social/positive>
+                                                                    ] ;
+                                                rdfs:comment "A relation with positive emotional valence (owl:hasValue construct)."@en ;
+                                                rdfs:label "positive relation"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "positive bond"@en .
+
+
+###  https://w3id.org/narn/social/RoyalServant
+<https://w3id.org/narn/social/RoyalServant> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/social/Servant>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/narn/social/served> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/narn/social/King>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:comment "A servant who serves a king."@en ;
+                                            rdfs:label "royal servant"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "royal attendant"@en .
+
+
+###  https://w3id.org/narn/social/Servant
+<https://w3id.org/narn/social/Servant> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/social/SocialRole>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/narn/social/served> ;
+                                                                                    owl:someValuesFrom owl:Thing
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/narn/social/SocialRole> ;
+                                       rdfs:comment "One who serves another."@en ;
+                                       rdfs:label "servant"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "attendant"@en .
+
+
+###  https://w3id.org/narn/social/SocialRole
+<https://w3id.org/narn/social/SocialRole> rdf:type owl:Class ;
+                                          rdfs:comment "A role that a character plays in a social context."@en ;
+                                          rdfs:label "social role"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "role"@en .
+
+
+###  https://w3id.org/narn/social/SuicidalCharacter
+<https://w3id.org/narn/social/SuicidalCharacter> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://w3id.org/narn/social/committedSuicide> ;
+                                                                       owl:hasSelf "true"^^xsd:boolean
+                                                                     ] ;
+                                                 rdfs:comment "A character who committed suicide."@en ;
+                                                 rdfs:label "suicidal character"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "self slain character"@en .
+
+
+###  https://w3id.org/narn/to/EndingInterval
+<https://w3id.org/narn/to/EndingInterval> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/narn/to/Interval> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/narn/to/endsAt> ;
+                                                            owl:someValuesFrom <https://w3id.org/narn/to/Instant>
+                                                          ] ;
+                                          rdfs:comment "An interval with a defined ending instant."@en ;
+                                          rdfs:label "ending interval"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "ending point"@en .
+
+
+###  https://w3id.org/narn/to/EternalInterval
+<https://w3id.org/narn/to/EternalInterval> rdf:type owl:Class ;
+                                           owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/to/InfiniteInterval>
+                                                                                      [ rdf:type owl:Class ;
+                                                                                        owl:complementOf <https://w3id.org/narn/to/EndingInterval>
+                                                                                      ]
+                                                                                      [ rdf:type owl:Class ;
+                                                                                        owl:complementOf <https://w3id.org/narn/to/StartingInterval>
+                                                                                      ]
+                                                                                    ) ;
+                                                                 rdf:type owl:Class
+                                                               ] ;
+                                           rdfs:subClassOf <https://w3id.org/narn/to/InfiniteInterval> ;
+                                           owl:disjointWith <https://w3id.org/narn/to/FiniteInterval> ;
+                                           rdfs:comment "An interval extending infinitely in both directions."@en ;
+                                           rdfs:label "eternal interval"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "everlasting interval"@en .
+
+
+###  https://w3id.org/narn/to/FiniteInterval
+<https://w3id.org/narn/to/FiniteInterval> rdf:type owl:Class ;
+                                          owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/to/Interval>
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <https://w3id.org/narn/to/endsAt> ;
+                                                                                       owl:someValuesFrom <https://w3id.org/narn/to/Instant>
+                                                                                     ]
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <https://w3id.org/narn/to/startsAt> ;
+                                                                                       owl:someValuesFrom <https://w3id.org/narn/to/Instant>
+                                                                                     ]
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ] ;
+                                          rdfs:subClassOf <https://w3id.org/narn/to/EndingInterval> ,
+                                                          <https://w3id.org/narn/to/Interval> ,
+                                                          <https://w3id.org/narn/to/StartingInterval> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/narn/to/startsAt> ;
+                                                            owl:allValuesFrom <https://w3id.org/narn/to/Instant>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/narn/to/endsAt> ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <https://w3id.org/narn/to/Instant>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/narn/to/startsAt> ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <https://w3id.org/narn/to/Instant>
+                                                          ] ;
+                                          owl:disjointWith <https://w3id.org/narn/to/InfiniteInterval> ;
+                                          rdfs:comment "An interval with both a starting and ending instant."@en ;
+                                          rdfs:label "finite interval"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "bounded interval"@en .
+
+
+###  https://w3id.org/narn/to/InfiniteInterval
+<https://w3id.org/narn/to/InfiniteInterval> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/narn/to/Interval> ;
+                                            rdfs:comment "An interval extending infinitely in at least one direction."@en ;
+                                            rdfs:label "infinite interval"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "unbounded interval"@en .
+
+
+###  https://w3id.org/narn/to/Instant
+<https://w3id.org/narn/to/Instant> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/narn/to/TemporalEntity> ;
+                                   owl:disjointWith <https://w3id.org/narn/to/Interval> ;
+                                   rdfs:comment "A single point in time with zero duration."@en ;
+                                   rdfs:label "instant"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "time point"@en .
+
+
+###  https://w3id.org/narn/to/Interval
+<https://w3id.org/narn/to/Interval> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/narn/to/TemporalEntity> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/narn/to/hasInstant> ;
+                                                      owl:allValuesFrom <https://w3id.org/narn/to/Instant>
+                                                    ] ;
+                                    rdfs:comment "A continuous extent of time with nonzero duration."@en ;
+                                    rdfs:label "interval"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "time span"@en .
+
+
+###  https://w3id.org/narn/to/StartingInterval
+<https://w3id.org/narn/to/StartingInterval> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/narn/to/Interval>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/narn/to/startsAt> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/narn/to/Instant>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:subClassOf <https://w3id.org/narn/to/Interval> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/narn/to/startsAt> ;
+                                                              owl:someValuesFrom <https://w3id.org/narn/to/Instant>
+                                                            ] ;
+                                            rdfs:comment "An interval with a defined starting instant."@en ;
+                                            rdfs:label "starting interval"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "begins with"@en .
+
+
+###  https://w3id.org/narn/to/TemporalEntity
+<https://w3id.org/narn/to/TemporalEntity> rdf:type owl:Class ;
+                                          rdfs:comment "A thing that exists in time."@en ;
+                                          rdfs:label "temporal entity"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "time entity"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/narn/social/ambivalent
+<https://w3id.org/narn/social/ambivalent> rdf:type owl:NamedIndividual ;
+                                          rdfs:comment "An ambivalent or mixed emotional valence."@en ;
+                                          rdfs:label "ambivalent"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "mixed sentiment"@en .
+
+
+###  https://w3id.org/narn/social/negative
+<https://w3id.org/narn/social/negative> rdf:type owl:NamedIndividual ;
+                                        rdfs:comment "A negative emotional valence."@en ;
+                                        rdfs:label "negative"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "negative sentiment"@en .
+
+
+###  https://w3id.org/narn/social/positive
+<https://w3id.org/narn/social/positive> rdf:type owl:NamedIndividual ;
+                                        rdfs:comment "A positive emotional valence."@en ;
+                                        rdfs:label "positive"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "positive sentiment"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( <https://w3id.org/narn/rcc/DC>
+                <https://w3id.org/narn/rcc/EC>
+                <https://w3id.org/narn/rcc/EQ>
+                <https://w3id.org/narn/rcc/NTPP>
+                <https://w3id.org/narn/rcc/NTPPi>
+                <https://w3id.org/narn/rcc/PO>
+                <https://w3id.org/narn/rcc/TPP>
+                <https://w3id.org/narn/rcc/TPPi>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( <https://w3id.org/narn/social/feared>
+                <https://w3id.org/narn/social/hated>
+                <https://w3id.org/narn/social/loved>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( <https://w3id.org/narn/to/after>
+                <https://w3id.org/narn/to/before>
+                <https://w3id.org/narn/to/containsInterval>
+                <https://w3id.org/narn/to/during>
+                <https://w3id.org/narn/to/equals>
+                <https://w3id.org/narn/to/finishedBy>
+                <https://w3id.org/narn/to/finishes>
+                <https://w3id.org/narn/to/meets>
+                <https://w3id.org/narn/to/metBy>
+                <https://w3id.org/narn/to/overlappedBy>
+                <https://w3id.org/narn/to/overlaps>
+                <https://w3id.org/narn/to/startedBy>
+                <https://w3id.org/narn/to/starts>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
