@@ -60,7 +60,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                        ]
                                                                        <https://w3id.org/narn/action/hasResult>
                                                                      ) ;
-                                              rdfs:comment "Inferred: if an agent performs an action with a result, the agent indirectly causes that result."@en ;
+                                              rdfs:comment "If an agent performs an action with a result, the agent indirectly causes that result."@en ;
                                               rdfs:label "causes by action"@en ;
                                               <http://www.w3.org/2004/02/skos/core#altLabel> "brings about"@en .
 

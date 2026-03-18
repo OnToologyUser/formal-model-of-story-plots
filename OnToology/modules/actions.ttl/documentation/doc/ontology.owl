@@ -45,7 +45,7 @@
             </rdf:Description>
             <rdf:Description rdf:about="https://w3id.org/narn/action/hasResult"/>
         </owl:propertyChainAxiom>
-        <rdfs:comment xml:lang="en">Inferred: if an agent performs an action with a result, the agent indirectly causes that result.</rdfs:comment>
+        <rdfs:comment xml:lang="en">If an agent performs an action with a result, the agent indirectly causes that result.</rdfs:comment>
         <rdfs:label xml:lang="en">causes by action</rdfs:label>
         <skos:altLabel xml:lang="en">brings about</skos:altLabel>
     </owl:ObjectProperty>

@@ -27,7 +27,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
 _:genid3 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/action/performedBy> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://w3id.org/narn/action/causesByAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Inferred: if an agent performs an action with a result, the agent indirectly causes that result."@en .
+<https://w3id.org/narn/action/causesByAction> <http://www.w3.org/2000/01/rdf-schema#comment> "If an agent performs an action with a result, the agent indirectly causes that result."@en .
 <https://w3id.org/narn/action/causesByAction> <http://www.w3.org/2000/01/rdf-schema#label> "causes by action"@en .
 <https://w3id.org/narn/action/causesByAction> <http://www.w3.org/2004/02/skos/core#altLabel> "brings about"@en .
 # 

@@ -2214,7 +2214,7 @@ act:causesByAction a owl:ObjectProperty ;
     owl:propertyChainAxiom ( [ owl:inverseOf act:performedBy ] act:hasResult ) ;
     rdfs:label "causes by action"@en ;
     skos:altLabel "brings about"@en ;
-    rdfs:comment "Inferred: if an agent performs an action with a result, the agent indirectly causes that result."@en .
+    rdfs:comment "If an agent performs an action with a result, the agent indirectly causes that result."@en .
 
 
 # hasResult is also a causal relation
