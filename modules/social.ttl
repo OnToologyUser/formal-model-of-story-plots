@@ -18,7 +18,7 @@
 soc: a owl:Ontology ;
      owl:imports loc: ;
      rdfs:label "Social Relations Ontology"@en ;
-     rdfs:comment """An ontology defining social relationships between characters."""@en ;
+     rdfs:comment """An ontology defining social relationships between characters in stories."""@en ;
      dct:created "2026-03-14"^^xsd:date ;
      dct:modified "2026-03-17"^^xsd:date ;
      dct:creator erdemonal:me ;

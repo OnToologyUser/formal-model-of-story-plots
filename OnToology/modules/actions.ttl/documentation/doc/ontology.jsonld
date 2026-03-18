@@ -231,7 +231,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An ontology for describing actions in story plot"
+    "@value" : "An ontology for describing actions in story plots."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

@@ -9,7 +9,7 @@
 <https://w3id.org/narn/action/> rdf:type owl:Ontology ;
                                  owl:imports <https://w3id.org/narn/event/> ,
                                              <https://w3id.org/narn/location/> ;
-                                 rdfs:comment "An ontology for describing actions in story plot"@en ;
+                                 rdfs:comment "An ontology for describing actions in story plots."@en ;
                                  rdfs:label "Actions Ontology"@en ;
                                  <https://purl.org/dc/terms/created> "2026-03-11"^^xsd:date ;
                                  <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;

@@ -19,7 +19,7 @@
 act: a owl:Ontology ;
      owl:imports evnt:, loc: ;
      rdfs:label "Actions Ontology"@en ;
-     rdfs:comment """An ontology for describing actions in story plot"""@en ;
+     rdfs:comment """An ontology for describing actions in story plots."""@en ;
      dct:created "2026-03-11"^^xsd:date ;
      dct:modified "2026-03-17"^^xsd:date ;
      dct:creator erdemonal:me ;

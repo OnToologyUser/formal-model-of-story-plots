@@ -1,6 +1,6 @@
 <https://w3id.org/narn/social/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/narn/social/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/location/> .
-<https://w3id.org/narn/social/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology defining social relationships between characters."@en .
+<https://w3id.org/narn/social/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology defining social relationships between characters in stories."@en .
 <https://w3id.org/narn/social/> <http://www.w3.org/2000/01/rdf-schema#label> "Social Relations Ontology"@en .
 <https://w3id.org/narn/social/> <https://purl.org/dc/terms/created> "2026-03-14"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/social/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .

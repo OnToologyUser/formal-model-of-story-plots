@@ -1,7 +1,7 @@
 <https://w3id.org/narn/action/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/narn/action/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/event/> .
 <https://w3id.org/narn/action/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/narn/location/> .
-<https://w3id.org/narn/action/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing actions in story plot"@en .
+<https://w3id.org/narn/action/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing actions in story plots."@en .
 <https://w3id.org/narn/action/> <http://www.w3.org/2000/01/rdf-schema#label> "Actions Ontology"@en .
 <https://w3id.org/narn/action/> <https://purl.org/dc/terms/created> "2026-03-11"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/action/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .

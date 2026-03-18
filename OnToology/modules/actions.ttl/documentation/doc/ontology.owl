@@ -12,7 +12,7 @@
     <owl:Ontology rdf:about="https://w3id.org/narn/action/">
         <owl:imports rdf:resource="https://w3id.org/narn/event/"/>
         <owl:imports rdf:resource="https://w3id.org/narn/location/"/>
-        <rdfs:comment xml:lang="en">An ontology for describing actions in story plot</rdfs:comment>
+        <rdfs:comment xml:lang="en">An ontology for describing actions in story plots.</rdfs:comment>
         <rdfs:label xml:lang="en">Actions Ontology</rdfs:label>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-11</terms:created>
         <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>

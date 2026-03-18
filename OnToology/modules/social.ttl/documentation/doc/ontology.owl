@@ -11,7 +11,7 @@
      xmlns:terms="https://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/narn/social/">
         <owl:imports rdf:resource="https://w3id.org/narn/location/"/>
-        <rdfs:comment xml:lang="en">An ontology defining social relationships between characters.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An ontology defining social relationships between characters in stories.</rdfs:comment>
         <rdfs:label xml:lang="en">Social Relations Ontology</rdfs:label>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-14</terms:created>
         <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
