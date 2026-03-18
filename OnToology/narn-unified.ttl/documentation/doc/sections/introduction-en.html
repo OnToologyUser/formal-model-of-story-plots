@@ -1,3 +1,502 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+    
+The Narn Ontology provides a formal vocabulary for describing story plots. The ontology is structured into seven modules. Each module addresses different aspects of the story, such as places and spatial hierarchy https://w3id.org/narn/location/, spatial topology using the Region Connection Calculus https://w3id.org/narn/rcc/, temporal entities and Allen's temporal algebra https://w3id.org/narn/to/, social relations https://w3id.org/narn/social/, event types and participant roles https://w3id.org/narn/event/, narrative structure https://w3id.org/narn/plot/, and actions https://w3id.org/narn/action/. The ontology is instantiated from *Narn i Chîn Húrin* ([narn-instances.ttl](https://raw.githubusercontent.com/erdemonal/formal-model-of-story-plots/main/narn-instances.ttl)).
+
+## Competency questions 
+
+The following competency questions were tested using SPARQL. Each competency question is presented with its SPARQL query, followed by the corresponding result set produced by the reasoner.
+
+### 1) Who is the parent of X? married to X? relative to X?
+
+```sparql
+PREFIX fo: &lt;https://purl.org/family/&gt;
+PREFIX soc: &lt;https://w3id.org/narn/social/&gt;
+SELECT ?parent ?relation ?other WHERE {
+  { ?parent fo:isTheFatherOf|fo:isTheMotherOf ?other . BIND("parent of" AS ?relation) }
+  UNION
+  { ?parent fo:isMarriedTo ?other . BIND("married to" AS ?relation) }
+  UNION
+  { ?parent soc:isMarriedTo ?other . BIND("married to" AS ?relation) }
+  UNION
+  { ?parent soc:isAKinsmanOf ?other . BIND("kinsman of" AS ?relation) }
+}
+```
+
+```text
+&lt;https://w3id.org/narn/Húrin&gt; "parent of" &lt;https://w3id.org/narn/Túrin&gt; .
+&lt;https://w3id.org/narn/Mîm&gt; "parent of" &lt;https://w3id.org/narn/Khîm&gt; .
+&lt;https://w3id.org/narn/Mîm&gt; "parent of" &lt;https://w3id.org/narn/Ibun&gt; .
+&lt;https://w3id.org/narn/Huor&gt; "parent of" &lt;https://w3id.org/narn/Tuor&gt; .
+&lt;https://w3id.org/narn/Húrin&gt; "parent of" &lt;https://w3id.org/narn/Nienor&gt; .
+&lt;https://w3id.org/narn/Húrin&gt; "parent of" &lt;https://w3id.org/narn/Lalaith&gt; .
+&lt;https://w3id.org/narn/Morwen&gt; "parent of" &lt;https://w3id.org/narn/Túrin&gt; .
+&lt;https://w3id.org/narn/Rían&gt; "parent of" &lt;https://w3id.org/narn/Tuor&gt; .
+&lt;https://w3id.org/narn/Morwen&gt; "parent of" &lt;https://w3id.org/narn/Nienor&gt; .
+&lt;https://w3id.org/narn/Morwen&gt; "parent of" &lt;https://w3id.org/narn/Lalaith&gt; .
+&lt;https://w3id.org/narn/Húrin&gt; "married to" &lt;https://w3id.org/narn/Morwen&gt; .
+&lt;https://w3id.org/narn/Tuor&gt; "married to" &lt;https://w3id.org/narn/Idril&gt; .
+&lt;https://w3id.org/narn/Rían&gt; "married to" &lt;https://w3id.org/narn/Huor&gt; .
+&lt;https://w3id.org/narn/Huor&gt; "married to" &lt;https://w3id.org/narn/Rían&gt; .
+&lt;https://w3id.org/narn/Morwen&gt; "married to" &lt;https://w3id.org/narn/Húrin&gt; .
+&lt;https://w3id.org/narn/Turambar&gt; "married to" &lt;https://w3id.org/narn/Níniel&gt; .
+&lt;https://w3id.org/narn/Túrin&gt; "kinsman of" &lt;https://w3id.org/narn/Nienor&gt; .
+```
+
+### 2) Where did character X go during the story?
+
+```sparql
+PREFIX soc: &lt;https://w3id.org/narn/social/&gt;
+PREFIX narn: &lt;https://w3id.org/narn/&gt;
+SELECT ?place WHERE {
+  narn:Túrin soc:livedIn ?place .
+}
+```
+
+```text
+&lt;https://w3id.org/narn/Dor-lómin&gt; .
+&lt;https://w3id.org/narn/Doriath&gt; .
+```
+
+### 3) Who was involved in event E?
+
+```sparql
+PREFIX evnt: &lt;https://w3id.org/narn/event/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?eventLabel ?participant WHERE {
+  ?event evnt:hasParticipant|evnt:hasAgent|evnt:hasVictim|evnt:hasWitness ?participant .
+  ?event rdfs:label ?eventLabel .
+}
+```
+
+```text
+"Birth of Túrin"@en &lt;https://w3id.org/narn/Morwen&gt; .
+"Marriage of Turambar and Níniel"@en &lt;https://w3id.org/narn/Níniel&gt; .
+"Marriage of Turambar and Níniel"@en &lt;https://w3id.org/narn/Turambar&gt; .
+"Túrin's time in Brethil"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Fall of Nargothrond"@en &lt;https://w3id.org/narn/Orodreth&gt; .
+"Fall of Nargothrond"@en &lt;https://w3id.org/narn/Glaurung&gt; .
+"Fall of Nargothrond"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Túrin's time in Nargothrond"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Túrin at Amon Rûdh"@en &lt;https://w3id.org/narn/Mîm&gt; .
+"Túrin at Amon Rûdh"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Túrin among the outlaws"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Trial of Túrin in absence"@en &lt;https://w3id.org/narn/Nellas&gt; .
+"Trial of Túrin in absence"@en &lt;https://w3id.org/narn/Thingol&gt; .
+"Túrin's time in Doriath"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Nirnaeth Arnoediad"@sjn &lt;https://w3id.org/narn/Huor&gt; .
+"Battle of Unnumbered Tears"@en &lt;https://w3id.org/narn/Huor&gt; .
+"Nirnaeth Arnoediad"@sjn &lt;https://w3id.org/narn/Húrin&gt; .
+"Battle of Unnumbered Tears"@en &lt;https://w3id.org/narn/Húrin&gt; .
+"Exile of Túrin from Doriath"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Flight of survivors from the fall of Nargothrond"@en &lt;https://w3id.org/narn/Finduilas&gt; .
+"Duel between Turambar and Glaurung at Cabed-en-Aras"@en &lt;https://w3id.org/narn/Glaurung&gt; .
+"Duel between Turambar and Glaurung at Cabed-en-Aras"@en &lt;https://w3id.org/narn/Turambar&gt; .
+"Siege and sack of Nargothrond"@en &lt;https://w3id.org/narn/Orodreth&gt; .
+"Siege and sack of Nargothrond"@en &lt;https://w3id.org/narn/Glaurung&gt; .
+"Túrin meets Beleg in the wild"@en &lt;https://w3id.org/narn/Beleg&gt; .
+"Túrin meets Beleg in the wild"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Captivity of Húrin"@en &lt;https://purl.org/meo/morgoth&gt; .
+"The truth about Níniel is revealed"@en &lt;https://w3id.org/narn/Glaurung&gt; .
+"Slaying of Glaurung"@en &lt;https://w3id.org/narn/Turambar&gt; .
+"Glaurung hypnotises Níniel"@en &lt;https://w3id.org/narn/Glaurung&gt; .
+"Death of Beleg"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Mîm curses Andróg"@en &lt;https://w3id.org/narn/Mîm&gt; .
+"Killing of Khîm"@en &lt;https://w3id.org/narn/Andróg&gt; .
+"Killing of Forweg"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Death of Saeros"@en &lt;https://w3id.org/narn/Túrin&gt; .
+"Death of Brandir"@en &lt;https://w3id.org/narn/Turambar&gt; .
+"Morgoth's doom: thou shalt see with my eyes"@en &lt;https://purl.org/meo/morgoth&gt; .
+"Mîm betrays Túrin to the Orcs"@en &lt;https://w3id.org/narn/Mîm&gt; .
+"Death of Saeros"@en &lt;https://w3id.org/narn/Saeros&gt; .
+"Slaying of Glaurung"@en &lt;https://w3id.org/narn/Glaurung&gt; .
+"Death of Beleg"@en &lt;https://w3id.org/narn/Beleg&gt; .
+"Killing of Khîm"@en &lt;https://w3id.org/narn/Khîm&gt; .
+"Killing of Forweg"@en &lt;https://w3id.org/narn/Forweg&gt; .
+"Death of Níniel"@en &lt;https://w3id.org/narn/Níniel&gt; .
+"Death of Turambar"@en &lt;https://w3id.org/narn/Turambar&gt; .
+"Death of Brandir"@en &lt;https://w3id.org/narn/Brandir&gt; .
+"Mîm betrays Túrin to the Orcs"@en &lt;https://w3id.org/narn/Andróg&gt; .
+"Siege and sack of Nargothrond"@en &lt;https://w3id.org/narn/Túrin&gt; .
+```
+
+### 4) Did event E1 happen before event E2?
+
+```sparql
+PREFIX to: &lt;https://w3id.org/narn/to/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?e1Label ?e2Label WHERE {
+  ?e1 to:before ?e2 .
+  ?e1 rdfs:label ?e1Label .
+  ?e2 rdfs:label ?e2Label .
+}
+```
+
+```text
+"Birth of Túrin"@en "Birth of Lalaith"@en .
+"Slaying of Glaurung"@en "Death of Níniel"@en .
+"Glaurung hypnotises Níniel"@en "Marriage of Turambar and Níniel"@en .
+"Fall of Nargothrond"@en "Túrin's time in Brethil"@en .
+"Túrin's time in Nargothrond"@en "Fall of Nargothrond"@en .
+"Death of Beleg"@en "Túrin's time in Nargothrond"@en .
+"Túrin at Amon Rûdh"@en "Death of Beleg"@en .
+"Killing of Forweg"@en "Túrin at Amon Rûdh"@en .
+"Túrin among the outlaws"@en "Killing of Forweg"@en .
+"Death of Saeros"@en "Túrin among the outlaws"@en .
+"Túrin's time in Doriath"@en "Death of Saeros"@en .
+"Túrin travels to Doriath"@en "Túrin's time in Doriath"@en .
+"Nirnaeth Arnoediad"@sjn "Birth of Nienor"@en .
+"Battle of Unnumbered Tears"@en "Birth of Nienor"@en .
+"Birth of Lalaith"@en "Nirnaeth Arnoediad"@sjn .
+"Birth of Lalaith"@en "Battle of Unnumbered Tears"@en .
+"The truth about Níniel is revealed"@en "Death of Níniel"@en .
+"Mîm betrays Túrin to the Orcs"@en "Death of Beleg"@en .
+"Exile of Túrin from Doriath"@en "Túrin among the outlaws"@en .
+"Túrin travels to Nargothrond"@en "Túrin's time in Nargothrond"@en .
+"Brandir reveals the truth to Turambar"@en "Death of Brandir"@en .
+"Morgoth pronounces his curse on the children of Húrin"@en "Túrin travels to Doriath"@en .
+"Túrin flees Doriath after killing Saeros"@en "Túrin among the outlaws"@en .
+"Death of Brandir"@en "Death of Turambar"@en .
+"Death of Níniel"@en "Death of Brandir"@en .
+```
+
+### 5) Where did event E occur?
+
+```sparql
+PREFIX evnt: &lt;https://w3id.org/narn/event/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?eventLabel ?placeLabel WHERE {
+  ?event evnt:occursAt ?place .
+  ?event rdfs:label ?eventLabel .
+  ?place rdfs:label ?placeLabel .
+}
+```
+
+```text
+"Birth of Túrin"@en "Dor-lómin"@sjn .
+"Birth of Túrin"@en "Land of Echoes"@en .
+"Slaying of Glaurung"@en "Brethil"@sjn .
+"Marriage of Turambar and Níniel"@en "Brethil"@sjn .
+"Glaurung hypnotises Níniel"@en "Nargothrond"@sjn .
+"Túrin's time in Brethil"@en "Brethil"@sjn .
+"Fall of Nargothrond"@en "Nargothrond"@sjn .
+"Reforging of Anglachel into Gurthang"@en "Nargothrond"@sjn .
+"Túrin's time in Nargothrond"@en "Nargothrond"@sjn .
+"Death of Beleg"@en "Beleriand"@sjn .
+"Mîm curses Andróg"@en "Amon Rûdh"@sjn .
+"Mîm curses Andróg"@en "Bald Hill"@en .
+"Killing of Khîm"@en "Amon Rûdh"@sjn .
+"Killing of Khîm"@en "Bald Hill"@en .
+"Túrin at Amon Rûdh"@en "Amon Rûdh"@sjn .
+"Túrin at Amon Rûdh"@en "Bald Hill"@en .
+"Killing of Forweg"@en "Beleriand"@sjn .
+"Túrin among the outlaws"@en "Beleriand"@sjn .
+"Trial of Túrin in absence"@en "Menegroth"@sjn .
+"Trial of Túrin in absence"@en "The Thousand Caves"@en .
+"Death of Saeros"@en "Doriath"@sjn .
+"Death of Saeros"@en "Land of the Fence"@en .
+"Túrin's time in Doriath"@en "Doriath"@sjn .
+"Túrin's time in Doriath"@en "Land of the Fence"@en .
+"Captivity of Húrin"@en "Angband"@sjn .
+"Captivity of Húrin"@en "Iron Prison"@en .
+"Nirnaeth Arnoediad"@sjn "Beleriand"@sjn .
+"Battle of Unnumbered Tears"@en "Beleriand"@sjn .
+"Birth of Nienor"@en "Dor-lómin"@sjn .
+"Birth of Nienor"@en "Land of Echoes"@en .
+"Birth of Lalaith"@en "Dor-lómin"@sjn .
+"Birth of Lalaith"@en "Land of Echoes"@en .
+"The truth about Níniel is revealed"@en "Brethil"@sjn .
+"Flight of survivors from the fall of Nargothrond"@en "Nargothrond"@sjn .
+"Morgoth's doom: thou shalt see with my eyes"@en "Angband"@sjn .
+"Morgoth's doom: thou shalt see with my eyes"@en "Iron Prison"@en .
+"Duel between Turambar and Glaurung at Cabed-en-Aras"@en "Cabed-en-Aras"@sjn .
+"Duel between Turambar and Glaurung at Cabed-en-Aras"@en "Deer's Leap"@en .
+"Siege and sack of Nargothrond"@en "Nargothrond"@sjn .
+"Mîm betrays Túrin to the Orcs"@en "Amon Rûdh"@sjn .
+"Mîm betrays Túrin to the Orcs"@en "Bald Hill"@en .
+"Túrin meets Beleg in the wild"@en "Beleriand"@sjn .
+"Exile of Túrin from Doriath"@en "Doriath"@sjn .
+"Exile of Túrin from Doriath"@en "Land of the Fence"@en .
+"Wars of Beleriand"@en "Beleriand"@sjn .
+"Túrin travels to Nargothrond"@en "Beleriand"@sjn .
+"Túrin attacks Orcs as an outlaw leader"@en "Amon Rûdh"@sjn .
+"Túrin attacks Orcs as an outlaw leader"@en "Bald Hill"@en .
+"Brandir reveals the truth to Turambar"@en "Brethil"@sjn .
+"Morgoth pronounces his curse on the children of Húrin"@en "Angband"@sjn .
+"Morgoth pronounces his curse on the children of Húrin"@en "Iron Prison"@en .
+"Túrin flees Doriath after killing Saeros"@en "Doriath"@sjn .
+"Túrin flees Doriath after killing Saeros"@en "Land of the Fence"@en .
+"Glaurung deceives and hypnotises Níniel"@en "Nargothrond"@sjn .
+"Beleg brings Anglachel to rescue Túrin"@en "Beleriand"@sjn .
+"Túrin accidentally kills Beleg"@en "Beleriand"@sjn .
+"Túrin kills Saeros"@en "Doriath"@sjn .
+"Túrin kills Saeros"@en "Land of the Fence"@en .
+"Death of Turambar"@en "Brethil"@sjn .
+"Death of Brandir"@en "Brethil"@sjn .
+"Death of Níniel"@en "Cabed-en-Aras"@sjn .
+"Death of Níniel"@en "Deer's Leap"@en .
+```
+
+### 6) Is it possible to be in locations L1 and L2 at the same time?
+
+```sparql
+PREFIX rcc: &lt;https://w3id.org/narn/rcc/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?p1Label ?p2Label WHERE {
+  ?p1 rcc:DC ?p2 .
+  ?p1 rdfs:label ?p1Label .
+  ?p2 rdfs:label ?p2Label .
+}
+```
+
+```text
+"Nargothrond"@sjn "Doriath"@sjn .
+"Nargothrond"@sjn "Land of the Fence"@en .
+"Angband"@sjn "Doriath"@sjn .
+"Angband"@sjn "Land of the Fence"@en .
+"Iron Prison"@en "Doriath"@sjn .
+"Iron Prison"@en "Land of the Fence"@en .
+"Amon Rûdh"@sjn "Nargothrond"@sjn .
+"Bald Hill"@en "Nargothrond"@sjn .
+"Amon Rûdh"@sjn "Doriath"@sjn .
+"Amon Rûdh"@sjn "Land of the Fence"@en .
+"Bald Hill"@en "Doriath"@sjn .
+"Bald Hill"@en "Land of the Fence"@en .
+```
+
+### 7) What event ends story S?
+
+```sparql
+PREFIX plot: &lt;https://w3id.org/narn/plot/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?resolutionLabel ?eventLabel WHERE {
+  ?story plot:hasNarrativeElement ?resolution .
+  ?resolution a plot:Resolution .
+  ?resolution rdfs:label ?resolutionLabel .
+  ?resolution plot:correspondsToEvent ?event .
+  ?event rdfs:label ?eventLabel .
+}
+```
+
+```text
+"Resolution: Deaths of Níniel and Turambar"@en "Death of Níniel"@en .
+"Resolution: Deaths of Níniel and Turambar"@en "Death of Turambar"@en .
+```
+
+### 8) What item was used as part of event E (or action A)?
+
+```sparql
+PREFIX evnt: &lt;https://w3id.org/narn/event/&gt;
+PREFIX act: &lt;https://w3id.org/narn/action/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?eventLabel ?itemLabel WHERE {
+  { ?event evnt:hasCause ?item }
+  UNION
+  { ?event act:hasInstrument ?item }
+  ?event rdfs:label ?eventLabel .
+  ?item rdfs:label ?itemLabel .
+}
+```
+
+```text
+"Death of Beleg"@en "Anglachel"@sjn .
+"Death of Turambar"@en "Gurthang"@sjn .
+"Death of Turambar"@en "Iron of Death"@en .
+"Beleg brings Anglachel to rescue Túrin"@en "Anglachel"@sjn .
+"Reforging of Anglachel into Gurthang"@en "Anglachel"@sjn .
+"Slaying of Glaurung"@en "Gurthang"@sjn .
+"Slaying of Glaurung"@en "Iron of Death"@en .
+"Túrin accidentally kills Beleg"@en "Anglachel"@sjn .
+"Túrin attacks Orcs as an outlaw leader"@en "Anglachel"@sjn .
+"Beleg brings Anglachel to rescue Túrin"@en "Anglachel"@sjn .
+```
+
+### 9) Who killed whom?
+
+```sparql
+PREFIX soc: &lt;https://w3id.org/narn/social/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?killerLabel ?victimLabel WHERE {
+  ?killer soc:killed ?victim .
+  ?killer rdfs:label ?killerLabel .
+  ?victim rdfs:label ?victimLabel .
+}
+```
+
+```text
+"Túrin"@en "Saeros"@sjn .
+"Andróg"@sjn "Khîm"@sjn .
+"Níniel"@sjn "Nienor"@sjn .
+"Níniel"@sjn "Mourning"@en .
+"Tear-maiden"@en "Nienor"@sjn .
+"Tear-maiden"@en "Mourning"@en .
+"Dagnir Glaurunga"@qya "Glaurung"@sjn .
+"Dagnir Glaurunga"@qya "The Golden"@en .
+"Bane of Glaurung"@en "Glaurung"@sjn .
+"Bane of Glaurung"@en "The Golden"@en .
+"Turambar"@qya "Turambar"@qya .
+"Turambar"@qya "Master of Doom"@en .
+"Master of Doom"@en "Turambar"@qya .
+"Master of Doom"@en "Master of Doom"@en .
+"Turambar"@qya "Brandir"@sjn .
+"Master of Doom"@en "Brandir"@sjn .
+"Gorthol"@sjn "Beleg"@sjn .
+"The Dread Helm"@en "Beleg"@sjn .
+"Neithan"@sjn "Forweg"@sjn .
+"The Wronged"@en "Forweg"@sjn .
+```
+
+### 10) Is it possible that the same person appears under different names?
+
+```sparql
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?name1 ?name2 WHERE {
+  ?a owl:sameAs ?b .
+  ?a rdfs:label ?name1 .
+  ?b rdfs:label ?name2 .
+  FILTER(?a != ?b)
+}
+```
+
+```text
+"Neithan"@sjn "Túrin"@en .
+"The Wronged"@en "Túrin"@en .
+"Níniel"@sjn "Nienor"@sjn .
+"Níniel"@sjn "Mourning"@en .
+"Tear-maiden"@en "Nienor"@sjn .
+"Tear-maiden"@en "Mourning"@en .
+"Dagnir Glaurunga"@qya "Turambar"@qya .
+"Dagnir Glaurunga"@qya "Master of Doom"@en .
+"Bane of Glaurung"@en "Turambar"@qya .
+"Bane of Glaurung"@en "Master of Doom"@en .
+"Turambar"@qya "Mormegil"@sjn .
+"Turambar"@qya "Black Sword"@en .
+"Master of Doom"@en "Mormegil"@sjn .
+"Master of Doom"@en "Black Sword"@en .
+"Mormegil"@sjn "Thurin"@sjn .
+"Mormegil"@sjn "Secret"@en .
+"Black Sword"@en "Thurin"@sjn .
+"Black Sword"@en "Secret"@en .
+"Thurin"@sjn "Adanedhel"@sjn .
+"Thurin"@sjn "Man-Elf"@en .
+"Secret"@en "Adanedhel"@sjn .
+"Secret"@en "Man-Elf"@en .
+"Adanedhel"@sjn "Agarwaen"@sjn .
+"Adanedhel"@sjn "The Bloodstained"@en .
+"Man-Elf"@en "Agarwaen"@sjn .
+"Man-Elf"@en "The Bloodstained"@en .
+"Agarwaen"@sjn "Gorthol"@sjn .
+"Agarwaen"@sjn "The Dread Helm"@en .
+"The Bloodstained"@en "Gorthol"@sjn .
+"The Bloodstained"@en "The Dread Helm"@en .
+"Gorthol"@sjn "Neithan"@sjn .
+"Gorthol"@sjn "The Wronged"@en .
+"The Dread Helm"@en "Neithan"@sjn .
+"The Dread Helm"@en "The Wronged"@en .
+"Morgoth"@sjn "Melkor"@qya .
+"Morgoth"@sjn "He who arises in might"@en .
+"The Black Enemy"@en "Melkor"@qya .
+"The Black Enemy"@en "He who arises in might"@en .
+```
+
+### 11) What is the narrative arc of the story?
+
+```sparql
+PREFIX plot: &lt;https://w3id.org/narn/plot/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?elementType ?elementLabel WHERE {
+  ?story plot:hasNarrativeElement ?element .
+  ?element a ?elementType .
+  ?element rdfs:label ?elementLabel .
+}
+```
+
+```text
+&lt;https://w3id.org/narn/plot/Exposition&gt; "Exposition: Húrin's family and the curse of Morgoth"@en .
+&lt;https://w3id.org/narn/plot/FallingAction&gt; "Falling action: aftermath of revelation and deaths"@en .
+&lt;https://w3id.org/narn/plot/Resolution&gt; "Resolution: Deaths of Níniel and Turambar"@en .
+&lt;https://w3id.org/narn/plot/Climax&gt; "Climax: Slaying of Glaurung and truth revealed"@en .
+&lt;https://w3id.org/narn/plot/RisingAction&gt; "Rising action: Túrin's wanderings and tragedies"@en .
+&lt;https://w3id.org/narn/plot/IncitingIncident&gt; "Inciting incident: Túrin sent to Doriath"@en .
+```
+
+### 12) What caused an event?
+
+```sparql
+PREFIX evnt: &lt;https://w3id.org/narn/event/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?effectLabel ?causeLabel WHERE {
+  ?effect evnt:isCausedBy ?cause .
+  ?effect rdfs:label ?effectLabel .
+  ?cause rdfs:label ?causeLabel .
+}
+```
+
+```text
+"Captivity of Húrin"@en "Nirnaeth Arnoediad"@sjn .
+"Captivity of Húrin"@en "Battle of Unnumbered Tears"@en .
+"Mîm curses Andróg"@en "Killing of Khîm"@en .
+"Death of Níniel"@en "The truth about Níniel is revealed"@en .
+"Exile of Túrin from Doriath"@en "Death of Saeros"@en .
+```
+
+### 13) Which subevents are part of a larger event?
+
+```sparql
+PREFIX evnt: &lt;https://w3id.org/narn/event/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?parentLabel ?subLabel WHERE {
+  ?parent evnt:hasSubEvent ?sub .
+  ?parent rdfs:label ?parentLabel .
+  ?sub rdfs:label ?subLabel .
+}
+```
+
+```text
+"Wars of Beleriand"@en "Nirnaeth Arnoediad"@sjn .
+"Wars of Beleriand"@en "Battle of Unnumbered Tears"@en .
+```
+
+
+### 14) Which characters are explicitly different?
+
+```sparql
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?aLabel ?bLabel WHERE {
+  ?a owl:differentFrom ?b .
+  ?a rdfs:label ?aLabel .
+  ?b rdfs:label ?bLabel .
+}
+```
+
+```text
+"Húrin"@sjn "Huor"@sjn .
+"Gurthang"@sjn "Anglachel"@sjn .
+"Iron of Death"@en "Anglachel"@sjn .
+"Nargothrond"@sjn "Menegroth"@sjn .
+"Nargothrond"@sjn "The Thousand Caves"@en .
+"Doriath"@sjn "Brethil"@sjn .
+"Land of the Fence"@en "Brethil"@sjn .
+"Doriath"@sjn "Hithlum"@sjn .
+"Doriath"@sjn "Land of Mist"@en .
+"Land of the Fence"@en "Hithlum"@sjn .
+"Land of the Fence"@en "Land of Mist"@en .
+"Grithnir"@sjn "Gethron"@sjn .
+"Ibun"@sjn "Khîm"@sjn .
+"Thingol"@sjn "Orodreth"@sjn .
+"Grey-cloak"@en "Orodreth"@sjn .
+"Beleg"@sjn "Saeros"@sjn .
+"Tuor"@sjn "Túrin"@en .
+"Nienor"@sjn "Urwen"@sjn .
+"Mourning"@en "Urwen"@sjn .
+"Túrin"@en "Glaurung"@sjn .
+"Túrin"@en "The Golden"@en .
+"Túrin"@en "Thingol"@sjn .
+"Túrin"@en "Grey-cloak"@en .
+"Túrin"@en "Beleg"@sjn .
+"Morwen"@sjn "Rían"@sjn .
+```
+
+</span>
