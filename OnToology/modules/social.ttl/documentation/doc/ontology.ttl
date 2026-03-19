@@ -17,26 +17,6 @@
                                  <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/social/" .
 
 #################################################################
-#    Annotation properties
-#################################################################
-
-###  http://www.w3.org/2004/02/skos/core#altLabel
-<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
-
-
-###  https://purl.org/dc/terms/created
-<https://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
-
-
-###  https://purl.org/dc/terms/creator
-<https://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
-
-
-###  https://purl.org/dc/terms/modified
-<https://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
-
-
-#################################################################
 #    Object Properties
 #################################################################
 

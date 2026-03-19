@@ -12,48 +12,6 @@
 # 
 # #################################################################
 # #
-# #    Annotation properties
-# #
-# #################################################################
-# 
-# 
-# http://www.w3.org/2004/02/skos/core#altLabel
-<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://www.w3.org/2004/02/skos/core#example
-<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/dc/terms/created
-<https://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/dc/terms/creator
-<https://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/dc/terms/modified
-<https://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/vocab/vann/preferredNamespacePrefix
-<https://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/vocab/vann/preferredNamespaceUri
-<https://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Datatypes
-# #
-# #################################################################
-# 
-# 
-# http://www.w3.org/2001/XMLSchema#date
-<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-# 
-# 
-# 
-# #################################################################
-# #
 # #    Object Properties
 # #
 # #################################################################
@@ -77,7 +35,6 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://w3id.org/narn/action/hasInstrument
 <https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/hasCause> .
-<https://w3id.org/narn/event/hasCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 <https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/Action> .
 <https://w3id.org/narn/action/hasInstrument> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/action/hasTarget> .
@@ -100,7 +57,6 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://w3id.org/narn/action/hasRecipient
 <https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/hasParticipant> .
-<https://w3id.org/narn/event/hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 <https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/TransferAction> .
 <https://w3id.org/narn/action/hasRecipient> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/action/performedBy> .
@@ -112,10 +68,8 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://w3id.org/narn/action/hasResult
 <https://w3id.org/narn/action/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/causes> .
-<https://w3id.org/narn/event/causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/Action> .
 <https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/event/Event> .
-<https://w3id.org/narn/event/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The event or state that results from the action."@en .
 <https://w3id.org/narn/action/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
 <https://w3id.org/narn/action/hasResult> <http://www.w3.org/2004/02/skos/core#altLabel> "results in"@en .
@@ -124,7 +78,6 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://w3id.org/narn/action/hasTarget
 <https://w3id.org/narn/action/hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/hasTarget> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/hasPatient> .
-<https://w3id.org/narn/event/hasPatient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/action/hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 <https://w3id.org/narn/action/hasTarget> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/Action> .
@@ -136,25 +89,11 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://w3id.org/narn/action/performedBy
 <https://w3id.org/narn/action/performedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/performedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/hasAgent> .
-<https://w3id.org/narn/event/hasAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/action/performedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/action/Action> .
 <https://w3id.org/narn/action/performedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The agent who intentionally performs the action."@en .
 <https://w3id.org/narn/action/performedBy> <http://www.w3.org/2000/01/rdf-schema#label> "performed by"@en .
 <https://w3id.org/narn/action/performedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "done by"@en .
 <https://w3id.org/narn/action/performedBy> <http://www.w3.org/2004/02/skos/core#example> "The Slaying of Glaurung was performed by Turambar."@en .
-# 
-# https://w3id.org/narn/event/causes
-# 
-# https://w3id.org/narn/event/creates
-<https://w3id.org/narn/event/creates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
-# https://w3id.org/narn/event/hasAgent
-# 
-# https://w3id.org/narn/event/hasCause
-# 
-# https://w3id.org/narn/event/hasParticipant
-# 
-# https://w3id.org/narn/event/hasPatient
 # 
 # 
 # 
@@ -199,7 +138,6 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
 _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/location/Place> .
-<https://w3id.org/narn/location/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/creates> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -369,7 +307,6 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
 _:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/event/Death> .
-<https://w3id.org/narn/event/Death> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasResult> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -396,7 +333,6 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/narn/action/MovementAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/action/Action> .
 <https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/MovementEvent> .
-<https://w3id.org/narn/event/MovementEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/action/ViolentAction> .
 <https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action involving deliberate physical movement."@en .
 <https://w3id.org/narn/action/MovementAction> <http://www.w3.org/2000/01/rdf-schema#label> "movement action"@en .
@@ -412,7 +348,6 @@ _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
 _:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/event/Discovery> .
-<https://w3id.org/narn/event/Discovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/action/hasResult> .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -459,15 +394,5 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/narn/action/ViolentAction> <http://www.w3.org/2000/01/rdf-schema#label> "violent action"@en .
 <https://w3id.org/narn/action/ViolentAction> <http://www.w3.org/2004/02/skos/core#altLabel> "violent deed"@en .
 <https://w3id.org/narn/action/ViolentAction> <http://www.w3.org/2004/02/skos/core#example> "The Slaying of Glaurung is a violent action performed by Turambar."@en .
-# 
-# https://w3id.org/narn/event/Death
-# 
-# https://w3id.org/narn/event/Discovery
-# 
-# https://w3id.org/narn/event/Event
-# 
-# https://w3id.org/narn/event/MovementEvent
-# 
-# https://w3id.org/narn/location/Place
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

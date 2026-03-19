@@ -25,46 +25,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
-    
-
-
-    <!-- https://purl.org/dc/terms/created -->
-
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/created"/>
-    
-
-
-    <!-- https://purl.org/dc/terms/creator -->
-
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- https://purl.org/dc/terms/modified -->
-
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////

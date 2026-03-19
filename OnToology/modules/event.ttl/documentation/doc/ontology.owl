@@ -26,86 +26,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#example -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
-    
-
-
-    <!-- https://purl.org/dc/terms/created -->
-
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/created"/>
-    
-
-
-    <!-- https://purl.org/dc/terms/creator -->
-
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- https://purl.org/dc/terms/modified -->
-
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
-    
-
-
-    <!-- https://purl.org/vocab/vann/preferredNamespacePrefix -->
-
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
-
-
-    <!-- https://purl.org/vocab/vann/preferredNamespaceUri -->
-
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
-
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -377,20 +297,6 @@
         <skos:altLabel xml:lang="en">comes before</skos:altLabel>
         <skos:example xml:lang="en">The Nirnaeth Arnoediad precedes Túrin&apos;s journey to Doriath.</skos:example>
     </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/narn/to/during -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/during"/>
-    
-
-
-    <!-- https://w3id.org/narn/to/precedes -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/precedes"/>
     
 
 
@@ -896,27 +802,6 @@
         <skos:altLabel xml:lang="en">prolonged conflict</skos:altLabel>
         <skos:example xml:lang="en">The Wars of Beleriand include the Nirnaeth Arnoediad.</skos:example>
     </owl:Class>
-    
-
-
-    <!-- https://w3id.org/narn/location/Place -->
-
-
-    <owl:Class rdf:about="https://w3id.org/narn/location/Place"/>
-    
-
-
-    <!-- https://w3id.org/narn/location/Settlement -->
-
-
-    <owl:Class rdf:about="https://w3id.org/narn/location/Settlement"/>
-    
-
-
-    <!-- https://w3id.org/narn/to/FiniteInterval -->
-
-
-    <owl:Class rdf:about="https://w3id.org/narn/to/FiniteInterval"/>
 </rdf:RDF>
 
 

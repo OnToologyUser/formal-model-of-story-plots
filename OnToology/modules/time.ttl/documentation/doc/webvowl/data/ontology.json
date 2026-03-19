@@ -1,0 +1,1358 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/narn/to" ],
+    "iri" : "https://w3id.org/narn/to/",
+    "author" : [ "https://w3id.org/people/erdemonal/me" ],
+    "labels" : {
+      "en" : "Temporal Ontology"
+    },
+    "comments" : {
+      "en" : "A formal ontology defining temporal entities and the relations of Allen interval algebra."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://w3id.org/people/erdemonal/me",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-03-13",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "to",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-03-19",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/narn/to/",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "24",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:intersectionOf"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/narn/to/FiniteInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "bounded interval",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Battle of Unnumbered Tears constitutes a finite interval possessing defined chronological boundaries.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FiniteInterval",
+      "en" : "finite interval"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "A bounded temporal interval defined by both a distinct starting instant and a distinct ending instant."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "24",
+    "superClasses" : [ "25", "26", "1" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/TemporalEntity",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "time entity",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The moment of Túrin's birth and the span of his life represent temporal entities.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TemporalEntity",
+      "en" : "temporal entity"
+    },
+    "subClasses" : [ "11", "1" ],
+    "comment" : {
+      "en" : "An entity existing within a specific temporal dimension."
+    },
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/narn/to/Interval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "time span",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The complete timeline of the Narn represents a temporal interval.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Interval",
+      "en" : "interval"
+    },
+    "subClasses" : [ "25", "24", "32", "26" ],
+    "comment" : {
+      "en" : "A continuous temporal entity characterized by a strictly positive duration."
+    },
+    "id" : "1",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/EndingInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ending point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A historical epoch stretching back indefinitely but concluding at a specific catastrophe represents an ending interval.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EndingInterval",
+      "en" : "ending interval"
+    },
+    "subClasses" : [ "24" ],
+    "comment" : {
+      "en" : "An interval bounded by a distinct ending instant but lacking a defined starting point."
+    },
+    "id" : "25",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#duration",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "duration"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "4",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/narn/to/Instant",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "time point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The precise moment of Túrin's birth constitutes an instant.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Instant",
+      "en" : "instant"
+    },
+    "comment" : {
+      "en" : "A temporal entity representing a single point in time with a duration of strictly zero."
+    },
+    "id" : "11",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/InfiniteInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "unbounded interval",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The lifespan of an immortal Elf represents an infinite interval extending continuously into the future.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InfiniteInterval",
+      "en" : "infinite interval"
+    },
+    "subClasses" : [ "31" ],
+    "comment" : {
+      "en" : "A temporal interval extending infinitely in at least one direction."
+    },
+    "id" : "32",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/StartingInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "begins with",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The life of an Elf exemplifies a starting interval since it begins at birth but possesses no natural conclusion.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "StartingInterval",
+      "en" : "starting interval"
+    },
+    "subClasses" : [ "24" ],
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "An interval bounded by a distinct starting instant but lacking a defined ending point."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "26",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/EternalInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "everlasting interval",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The continuous existence of the universe Eä serves as an eternal interval.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EternalInterval",
+      "en" : "eternal interval"
+    },
+    "intersection" : [ "32" ],
+    "comment" : {
+      "en" : "A temporally unbounded interval extending infinitely into both the past and the future."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "31",
+    "superClasses" : [ "32" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "42",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "43",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "45",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "47",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "48",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/narn/to/hasDuration",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "2",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "time length",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval representing Túrin's time in Doriath has a duration measured in several years.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDuration",
+      "en" : "has duration"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The absolute temporal length spanned by a defined interval."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/narn/to/precedes",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "happens before",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The span of the Nirnaeth Arnoediad temporally precedes Túrin's journey to Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "precedes",
+      "en" : "precedes"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "subproperty" : [ "6", "7" ],
+    "comment" : {
+      "en" : "The primary interval concludes either strictly prior to or exactly at the commencement of the secondary interval."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/narn/to/finishedBy",
+    "inverse" : "9",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ended by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn is finished by the interval representing the death of Turambar.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "finishedBy",
+      "en" : "finished by"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "Both intervals share identical ending instants while the primary interval commences strictly before the secondary interval begins."
+    },
+    "attributes" : [ "transitive", "irreflexive", "object", "asymmetric" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/narn/to/finishes",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ends with",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval representing the death of Turambar finishes the overarching timeline of the Narn.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "finishes",
+      "en" : "finishes"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "Both intervals share identical ending instants while the primary interval commences strictly after the secondary interval begins."
+    },
+    "attributes" : [ "transitive", "irreflexive", "object", "asymmetric" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/narn/to/occursBefore",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "earlier than",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The moment of Túrin's birth occurs before the moment of Lalaith's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursBefore",
+      "en" : "occurs before"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "A temporal relation placing the first instant chronologically prior to the second."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/narn/to/endsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ending point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Battle of Unnumbered Tears ends at the precise instant of the final retreat.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "endsAt",
+      "en" : "ends at"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The absolute ending instant bounding the conclusion of a temporal interval."
+    },
+    "attributes" : [ "functional", "irreflexive", "object", "asymmetric" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/narn/to/intervalRelation",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "1",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Allen relation",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The relational mapping between the birth of Túrin and the birth of Lalaith constitutes an interval relation.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "intervalRelation",
+      "en" : "interval relation"
+    },
+    "domain" : "1",
+    "subproperty" : [ "14", "15", "3", "16", "17", "8", "6", "18", "9", "7", "19", "20", "21", "22" ],
+    "comment" : {
+      "en" : "A topological temporal relation between two distinct intervals."
+    },
+    "attributes" : [ "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/narn/to/hasInstant",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "at instant",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn has an instant mapped to the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInstant",
+      "en" : "has instant"
+    },
+    "domain" : "1",
+    "subproperty" : [ "12", "23" ],
+    "comment" : {
+      "en" : "The association between a temporal interval and a specific instant contained within or bounding it."
+    },
+    "attributes" : [ "irreflexive", "object", "asymmetric" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/narn/to/startedBy",
+    "inverse" : "21",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "begun by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn is started by the interval representing the birth of Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startedBy",
+      "en" : "started by"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "Both intervals share identical starting instants while the primary interval extends strictly beyond the conclusion of the secondary interval."
+    },
+    "attributes" : [ "transitive", "irreflexive", "object", "asymmetric" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/narn/to/occursDuring",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "1",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "within timeframe of",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The precise moment of Khîm's death occurs during the interval of Túrin's habitation at Amon Rûdh.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursDuring",
+      "en" : "occurs during"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The enclosure of a specific instant strictly within the temporal boundaries of an interval."
+    },
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "range" : "26",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "32",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "1",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "1",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "25",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/narn/to/meets",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "immediately before",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The chronological span of the Nirnaeth Arnoediad meets the interval of Húrin's captivity without any intervening gap.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "meets",
+      "en" : "meets"
+    },
+    "superproperty" : [ "5", "3" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "The ending instant of the primary interval is chronologically identical to the starting instant of the secondary interval."
+    },
+    "attributes" : [ "irreflexive", "object", "asymmetric" ],
+    "id" : "7"
+  }, {
+    "range" : "1",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "27",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "1",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "27",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/narn/to/occursSimultaneouslyTo",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "at same time as",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Two separate observations mapping to the exact same chronological instant occur simultaneously.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursSimultaneouslyTo",
+      "en" : "occurs simultaneously to"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "A temporal relation linking two distinct instants that occupy the exact same chronological position."
+    },
+    "attributes" : [ "transitive", "object", "symmetric", "reflexive" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/narn/to/equals",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "same time as",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The temporal span of the Siege of Nargothrond equals the chronological span of the Fall of Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "equals",
+      "en" : "equals"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "Absolute chronological equivalence where two intervals share identical starting and ending instants."
+    },
+    "attributes" : [ "transitive", "object", "symmetric", "reflexive" ],
+    "id" : "14"
+  }, {
+    "range" : "32",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/narn/to/startsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "beginning point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The chronological span of the Narn starts at the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startsAt",
+      "en" : "starts at"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "The absolute starting instant bounding the beginning of a temporal interval."
+    },
+    "attributes" : [ "functional", "irreflexive", "object", "asymmetric", "allValues" ],
+    "id" : "42"
+  }, {
+    "range" : "1",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/narn/to/during",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "contained in",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval representing the killing of Khîm occurs strictly during Túrin's habitation at Amon Rûdh.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "during",
+      "en" : "during"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "The primary interval is strictly and completely enclosed within the chronological boundaries of the secondary interval."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/narn/to/hasInstant",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "at instant",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn has an instant mapped to the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInstant",
+      "en" : "has instant"
+    },
+    "domain" : "1",
+    "subproperty" : [ "12", "23" ],
+    "comment" : {
+      "en" : "The association between a temporal interval and a specific instant contained within or bounding it."
+    },
+    "attributes" : [ "irreflexive", "object", "asymmetric", "allValues" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/narn/to/startsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "beginning point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The chronological span of the Narn starts at the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startsAt",
+      "en" : "starts at"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "26",
+    "comment" : {
+      "en" : "The absolute starting instant bounding the beginning of a temporal interval."
+    },
+    "attributes" : [ "functional", "irreflexive", "object", "asymmetric", "someValues" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/narn/to/endsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ending point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Battle of Unnumbered Tears ends at the precise instant of the final retreat.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "endsAt",
+      "en" : "ends at"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "25",
+    "comment" : {
+      "en" : "The absolute ending instant bounding the conclusion of a temporal interval."
+    },
+    "attributes" : [ "functional", "irreflexive", "object", "asymmetric", "someValues" ],
+    "id" : "47"
+  }, {
+    "range" : "24",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://w3id.org/narn/to/after",
+    "inverse" : "6",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "follows",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval of Nienor's birth occurs strictly after the conclusion of the Nirnaeth Arnoediad.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "after",
+      "en" : "after"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "The primary interval commences strictly subsequent to the conclusion of the secondary interval."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/narn/to/starts",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "begins with",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval representing the birth of Túrin starts the overarching timeline of the Narn.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "starts",
+      "en" : "starts"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "Both intervals share identical starting instants while the primary interval concludes strictly before the secondary interval."
+    },
+    "attributes" : [ "transitive", "irreflexive", "object", "asymmetric" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/narn/to/overlaps",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "partially before",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval of Túrin's time among the outlaws overlaps with the beginning of his time at Amon Rûdh.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "overlaps",
+      "en" : "overlaps"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "The primary interval begins before the secondary interval and concludes strictly within its duration."
+    },
+    "attributes" : [ "irreflexive", "object", "asymmetric" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/narn/to/startsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "beginning point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The chronological span of the Narn starts at the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startsAt",
+      "en" : "starts at"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The absolute starting instant bounding the beginning of a temporal interval."
+    },
+    "attributes" : [ "functional", "irreflexive", "object", "asymmetric" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/narn/to/precededBy",
+    "inverse" : "3",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "happens after",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's journey to Doriath is temporally preceded by the span of the Nirnaeth Arnoediad.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "precededBy",
+      "en" : "preceded by"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "The primary interval commences either strictly subsequent to or exactly at the conclusion of the secondary interval."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/narn/to/occursAfter",
+    "inverse" : "10",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "later than",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The moment of Nienor's birth occurs after the moment of Lalaith's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursAfter",
+      "en" : "occurs after"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "A temporal relation placing the first instant chronologically subsequent to the second."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/narn/to/metBy",
+    "inverse" : "7",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "immediately after",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval of Húrin's captivity is met by the conclusion of the Nirnaeth Arnoediad.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "metBy",
+      "en" : "met by"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "The starting instant of the primary interval is chronologically identical to the ending instant of the secondary interval."
+    },
+    "attributes" : [ "irreflexive", "object", "asymmetric" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/narn/to/hasDateTime",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "46",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "dateTime value",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The instant of publication maps to a specific dateTime value in the standard calendar.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDateTime",
+      "en" : "has date time"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The standardized chronological date and time value of a specific temporal instant."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/narn/to/before",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "precedes",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval of Túrin's birth occurs strictly before the interval of Lalaith's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "before",
+      "en" : "before"
+    },
+    "superproperty" : [ "5", "3" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "The primary interval concludes strictly prior to the commencement of the secondary interval."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/narn/to/overlappedBy",
+    "inverse" : "20",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "partially after",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's time at Amon Rûdh is overlapped by the preceding interval of his time among the outlaws.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "overlappedBy",
+      "en" : "overlapped by"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "The primary interval begins strictly within the duration of the secondary interval and concludes after it."
+    },
+    "attributes" : [ "irreflexive", "object", "asymmetric" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/narn/to/containsInterval",
+    "inverse" : "16",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "4",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "temporally contains",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn temporally contains the interval of Túrin's time in Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "containsInterval",
+      "en" : "contains interval"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "The primary interval strictly and completely encloses the chronological boundaries of the secondary interval."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "22"
+  } ]
+}

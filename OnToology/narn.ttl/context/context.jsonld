@@ -1,0 +1,133 @@
+{
+  "@context" : {
+    "hasTraveller" : {
+      "@id" : "https://purl.org/event/hasTraveller"
+    },
+    "Adan" : {
+      "@id" : "https://purl.org/meo/Adan"
+    },
+    "livedin" : {
+      "@id" : "https://purl.org/social/relations/livedin"
+    },
+    "Atan" : {
+      "@id" : "https://purl.org/meo/Atan"
+    },
+    "Forest" : {
+      "@id" : "https://purl.org/location/Forest"
+    },
+    "isTheFatherOf" : {
+      "@id" : "https://purl.org/family/isTheFatherOf"
+    },
+    "hasFriend" : {
+      "@id" : "https://purl.org/social/relations/hasFriend"
+    },
+    "precedes" : {
+      "@id" : "https://purl.org/event/precedes"
+    },
+    "Travel" : {
+      "@id" : "https://purl.org/event/Travel"
+    },
+    "Instant" : {
+      "@id" : "https://purl.org/event/Instant"
+    },
+    "killed" : {
+      "@id" : "https://purl.org/social/relations/killed"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Eruhin" : {
+      "@id" : "https://purl.org/meo/Eruhin"
+    },
+    "isAPartOf" : {
+      "@id" : "https://purl.org/location/isAPartOf"
+    },
+    "isASonOf" : {
+      "@id" : "https://purl.org/family/isASonOf"
+    },
+    "Lócë" : {
+      "@id" : "https://purl.org/narn/Lócë"
+    },
+    "isASisterOf" : {
+      "@id" : "https://purl.org/family/isASisterOf"
+    },
+    "isTheMotherOf" : {
+      "@id" : "https://purl.org/family/isTheMotherOf"
+    },
+    "Male" : {
+      "@id" : "https://purl.org/family/Male"
+    },
+    "Error1" : {
+      "@id" : "http://org.semanticweb.owlapi/error#Error1"
+    },
+    "Battle" : {
+      "@id" : "https://purl.org/event/Battle"
+    },
+    "Birth" : {
+      "@id" : "https://purl.org/event/Birth"
+    },
+    "livedIn" : {
+      "@id" : "https://purl.org/social/relations/livedIn"
+    },
+    "Valley" : {
+      "@id" : "https://purl.org/location/Valley"
+    },
+    "Female" : {
+      "@id" : "https://purl.org/family/Female"
+    },
+    "isADaughterOf" : {
+      "@id" : "https://purl.org/family/isADaughterOf"
+    },
+    "Place" : {
+      "@id" : "https://purl.org/location/Place"
+    },
+    "Realm" : {
+      "@id" : "https://purl.org/location/Realm"
+    },
+    "wasTheBestFriendOf" : {
+      "@id" : "https://purl.org/social/relations/wasTheBestFriendOf"
+    },
+    "hated" : {
+      "@id" : "https://purl.org/social/relations/hated"
+    },
+    "City" : {
+      "@id" : "https://purl.org/location/City"
+    },
+    "starts" : {
+      "@id" : "https://purl.org/event/starts"
+    },
+    "Hill" : {
+      "@id" : "https://purl.org/location/Hill"
+    },
+    "isMarriedTo" : {
+      "@id" : "https://purl.org/family/isMarriedTo"
+    },
+    "isABrotherOf" : {
+      "@id" : "https://purl.org/family/isABrotherOf"
+    },
+    "Elda" : {
+      "@id" : "https://purl.org/meo/Elda"
+    },
+    "loved" : {
+      "@id" : "https://purl.org/social/relations/loved"
+    },
+    "before" : {
+      "@id" : "https://purl.org/event/before"
+    },
+    "served" : {
+      "@id" : "https://purl.org/social/relations/served"
+    },
+    "isSisterOf" : {
+      "@id" : "https://purl.org/family/isSisterOf"
+    },
+    "wasTheKingOf" : {
+      "@id" : "https://purl.org/social/relations/wasTheKingOf"
+    },
+    "begets" : {
+      "@id" : "https://purl.org/event/begets"
+    }
+  }
+}

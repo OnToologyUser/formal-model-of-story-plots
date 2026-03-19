@@ -12,48 +12,6 @@
 # 
 # #################################################################
 # #
-# #    Annotation properties
-# #
-# #################################################################
-# 
-# 
-# http://www.w3.org/2004/02/skos/core#altLabel
-<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://www.w3.org/2004/02/skos/core#example
-<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/dc/terms/created
-<https://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/dc/terms/creator
-<https://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/dc/terms/modified
-<https://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/vocab/vann/preferredNamespacePrefix
-<https://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://purl.org/vocab/vann/preferredNamespaceUri
-<https://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Datatypes
-# #
-# #################################################################
-# 
-# 
-# http://www.w3.org/2001/XMLSchema#date
-<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-# 
-# 
-# 
-# #################################################################
-# #
 # #    Object Properties
 # #
 # #################################################################
@@ -113,7 +71,6 @@
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/occursAt> .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/event/MovementEvent> .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/location/Place> .
-<https://w3id.org/narn/location/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/event/hasOrigin> .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#comment> "The ending place of a movement event."@en .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#label> "has destination"@en .
@@ -206,7 +163,6 @@
 # https://w3id.org/narn/event/isSubEventOf
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/during> .
-<https://w3id.org/narn/to/during> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/event/hasSubEvent> .
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This event is part of a larger event."@en .
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2000/01/rdf-schema#label> "is subevent of"@en .
@@ -226,7 +182,6 @@
 # https://w3id.org/narn/event/precedes
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/precedes> .
-<https://w3id.org/narn/to/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
@@ -236,10 +191,6 @@
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/2000/01/rdf-schema#label> "precedes"@en .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/2004/02/skos/core#altLabel> "comes before"@en .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/2004/02/skos/core#example> "The Nirnaeth Arnoediad precedes Túrin's journey to Doriath."@en .
-# 
-# https://w3id.org/narn/to/during
-# 
-# https://w3id.org/narn/to/precedes
 # 
 # 
 # 
@@ -376,7 +327,6 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/narn/event/Event
 <https://w3id.org/narn/event/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/FiniteInterval> .
-<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
 _:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/hasParticipant> .
@@ -488,7 +438,6 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/narn/event/Siege> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/ConflictEvent> .
 <https://w3id.org/narn/event/Siege> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
 _:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/narn/location/Settlement> .
-<https://w3id.org/narn/location/Settlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/occursAt> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/narn/event/Siege> <http://www.w3.org/2000/01/rdf-schema#comment> "A military blockade of a city or fortress."@en .
@@ -581,11 +530,5 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/narn/event/War> <http://www.w3.org/2000/01/rdf-schema#label> "war"@en .
 <https://w3id.org/narn/event/War> <http://www.w3.org/2004/02/skos/core#altLabel> "prolonged conflict"@en .
 <https://w3id.org/narn/event/War> <http://www.w3.org/2004/02/skos/core#example> "The Wars of Beleriand include the Nirnaeth Arnoediad."@en .
-# 
-# https://w3id.org/narn/location/Place
-# 
-# https://w3id.org/narn/location/Settlement
-# 
-# https://w3id.org/narn/to/FiniteInterval
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,5712 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/narn/location", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/narn/action", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/narn/event", "https://w3id.org/narn/to" ],
+    "iri" : "https://w3id.org/narn/action/",
+    "author" : [ "https://w3id.org/people/erdemonal/me" ],
+    "labels" : {
+      "en" : "Actions Ontology"
+    },
+    "comments" : {
+      "en" : "An ontology for describing actions in story plots."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://w3id.org/people/erdemonal/me",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-03-11",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "act",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-03-19",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/narn/action/",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "10",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "116",
+    "type" : "owl:Class"
+  }, {
+    "id" : "124",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "129",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "135",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "138",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "140",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "132",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "152",
+    "type" : "owl:Class"
+  }, {
+    "id" : "168",
+    "type" : "owl:Class"
+  }, {
+    "id" : "133",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "99",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "154",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "136",
+    "type" : "owl:Class"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "146",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "156",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "126",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "134",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "139",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "31",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "238",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "239",
+    "type" : "owl:Class"
+  }, {
+    "id" : "131",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "141",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "159",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "102",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "143",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/narn/event/Murder",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "homicide",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The death of Saeros is caused by Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Murder",
+      "en" : "murder"
+    },
+    "intersection" : [ "11" ],
+    "comment" : {
+      "en" : "A death caused intentionally by another."
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Valley",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "vale",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Tumladen is the valley where Gondolin was built.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Valley",
+      "en" : "valley"
+    },
+    "comment" : {
+      "en" : "A low area of land between hills or mountains."
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Trial",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "judgement",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The trial of Túrin in absence, where Nellas testifies.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Trial",
+      "en" : "trial"
+    },
+    "comment" : {
+      "en" : "A judicial examination or hearing."
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Action",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "deed",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin killing Saeros is an action performed by Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Action",
+      "en" : "action"
+    },
+    "subClasses" : [ "20", "36", "37", "38", "7" ],
+    "comment" : {
+      "en" : "An intentional deed. Every action has at least one performer."
+    },
+    "id" : "30",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/River",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "waterway",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The river Narog flows near Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "River",
+      "en" : "river"
+    },
+    "comment" : {
+      "en" : "A large natural stream of water."
+    },
+    "attributes" : [ "external" ],
+    "id" : "41",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/TemporalEntity",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "time entity",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The moment of Túrin's birth and the span of his life represent temporal entities.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TemporalEntity",
+      "en" : "temporal entity"
+    },
+    "subClasses" : [ "45", "44" ],
+    "comment" : {
+      "en" : "An entity existing within a specific temporal dimension."
+    },
+    "attributes" : [ "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/narn/event/Council",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "deliberation",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A council of the Elves in Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Council",
+      "en" : "council"
+    },
+    "comment" : {
+      "en" : "A formal meeting for deliberation or the reaching of a consensus."
+    },
+    "attributes" : [ "external" ],
+    "id" : "80",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Marriage",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "wedding",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The marriage of Turambar and Níniel in Brethil.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Marriage",
+      "en" : "marriage"
+    },
+    "comment" : {
+      "en" : "A formal union between two characters."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Deceive",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "deception",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Glaurung deceives and hypnotises Níniel at Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Deceive",
+      "en" : "deceive"
+    },
+    "intersection" : [ "20" ],
+    "comment" : {
+      "en" : "The action of intentionally misleading another character."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "19",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Death",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "demise",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The death of Beleg is caused by Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Death",
+      "en" : "death"
+    },
+    "subClasses" : [ "10", "88" ],
+    "comment" : {
+      "en" : "The death of a character."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Region",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "area",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Beleriand is a region containing Doriath, Hithlum, and Brethil.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Region",
+      "en" : "region"
+    },
+    "comment" : {
+      "en" : "A large geographic area, typically contains multiple subplaces."
+    },
+    "attributes" : [ "external" ],
+    "id" : "89",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/GoTo",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "travel to",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin goes to Nargothrond seeking refuge.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GoTo",
+      "en" : "go to"
+    },
+    "comment" : {
+      "en" : "The action of deliberately travelling to a destination."
+    },
+    "id" : "97",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Exile",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "banishment",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The exile of Túrin from Doriath after the death of Saeros.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Exile",
+      "en" : "exile"
+    },
+    "comment" : {
+      "en" : "A forced departure from the homeland."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75",
+    "superClasses" : [ "70" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/CreationAction",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "making",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The smiths of Nargothrond reforge Anglachel into Gurthang.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CreationAction",
+      "en" : "creation action"
+    },
+    "subClasses" : [ "101", "102" ],
+    "comment" : {
+      "en" : "An action that produces or transforms something."
+    },
+    "id" : "37",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Reveal",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "disclosure",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The truth about Níniel is revealed after the slaying of Glaurung.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Reveal",
+      "en" : "reveal"
+    },
+    "intersection" : [ "20" ],
+    "comment" : {
+      "en" : "The action of disclosing previously hidden information."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "104",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/WoodedArea",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "woodland",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Brethil is a wooded area in Beleriand.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "WoodedArea",
+      "en" : "wooded area"
+    },
+    "subClasses" : [ "107" ],
+    "comment" : {
+      "en" : "A land area predominantly covered by trees."
+    },
+    "attributes" : [ "external" ],
+    "id" : "106",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/NaturalArea",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "natural feature",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Brethil is a natural area east of Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NaturalArea",
+      "en" : "natural area"
+    },
+    "subClasses" : [ "106", "108", "109", "41", "110", "21", "111", "112", "113" ],
+    "comment" : {
+      "en" : "A place defined by natural geographic features rather than habitation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Command",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "order",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Morgoth orders his servants to attack Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Command",
+      "en" : "command"
+    },
+    "comment" : {
+      "en" : "The action of giving an authoritative order."
+    },
+    "id" : "115",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Battle",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "armed conflict",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Nirnaeth Arnoediad is the Battle of Unnumbered Tears.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Battle",
+      "en" : "battle"
+    },
+    "comment" : {
+      "en" : "A large scale violent confrontation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "116",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/LandArea",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "land",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Dor-lómin is a land area in Hithlum.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LandArea",
+      "en" : "land area"
+    },
+    "subClasses" : [ "125", "126" ],
+    "comment" : {
+      "en" : "A place that is primarily defined by its land territory."
+    },
+    "attributes" : [ "external" ],
+    "id" : "124",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/UndergroundCity",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "subterranean city",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Menegroth is an underground city, the capital of Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "UndergroundCity",
+      "en" : "underground city"
+    },
+    "intersection" : [ "48", "128" ],
+    "comment" : {
+      "en" : "A city built underground, within caves or excavated halls."
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/narn/event/War",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "prolonged conflict",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Wars of Beleriand include the Nirnaeth Arnoediad.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "War",
+      "en" : "war"
+    },
+    "intersection" : [ "58" ],
+    "comment" : {
+      "en" : "A prolonged conflict composed of multiple battles."
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "129",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/SocialEvent",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "social gathering",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The trial of Túrin in absence at Menegroth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SocialEvent",
+      "en" : "social event"
+    },
+    "subClasses" : [ "132", "80", "133", "134", "33" ],
+    "comment" : {
+      "en" : "An event involving social interaction between characters."
+    },
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Escape",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "evasion",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's intention when fleeing Doriath is escape from judgement.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Escape",
+      "en" : "escape"
+    },
+    "comment" : {
+      "en" : "The intention of getting away from danger."
+    },
+    "id" : "135"
+  }, {
+    "iri" : "https://w3id.org/narn/event/Prophecy",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "foretelling",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Morgoth's doom: thou shalt see with my eyes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Prophecy",
+      "en" : "prophecy"
+    },
+    "comment" : {
+      "en" : "A prediction of future events, often supernatural."
+    },
+    "attributes" : [ "external" ],
+    "id" : "82",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Suicide",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "self-destruction",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Turambar dies by falling on his own sword Gurthang.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Suicide",
+      "en" : "suicide"
+    },
+    "comment" : {
+      "en" : "A form of death in which the agent and the victim are identical."
+    },
+    "attributes" : [ "external" ],
+    "id" : "88",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Take",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "seizure",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Morgoth takes Húrin captive after the Nirnaeth Arnoediad.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Take",
+      "en" : "take"
+    },
+    "comment" : {
+      "en" : "The action of acquiring something, possibly by force."
+    },
+    "id" : "9",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Forge",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "smithing",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The reforging of Anglachel into Gurthang in Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Forge",
+      "en" : "forge"
+    },
+    "comment" : {
+      "en" : "The action of creating or reshaping an object, especially a weapon."
+    },
+    "id" : "101",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Curse",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "malediction",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Mîm curses Andróg after the killing of Khîm.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Curse",
+      "en" : "curse"
+    },
+    "comment" : {
+      "en" : "A supernatural imprecation bringing misfortune."
+    },
+    "attributes" : [ "external" ],
+    "id" : "56",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/ConflictEvent",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "clash",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Nirnaeth Arnoediad is a conflict event in Beleriand.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConflictEvent",
+      "en" : "conflict event"
+    },
+    "subClasses" : [ "116", "136", "129", "137" ],
+    "comment" : {
+      "en" : "An event characterised by antagonism or violence."
+    },
+    "attributes" : [ "external" ],
+    "id" : "58",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/Interval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "time span",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The complete timeline of the Narn represents a temporal interval.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Interval",
+      "en" : "interval"
+    },
+    "subClasses" : [ "138", "139", "140", "141" ],
+    "comment" : {
+      "en" : "A continuous temporal entity characterized by a strictly positive duration."
+    },
+    "attributes" : [ "external" ],
+    "id" : "44",
+    "superClasses" : [ "71" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Give",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "bestowal",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Beleg gives Anglachel to Túrin to rescue him.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Give",
+      "en" : "give"
+    },
+    "comment" : {
+      "en" : "The action of voluntarily transferring something to another."
+    },
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/EndingInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ending point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A historical epoch stretching back indefinitely but concluding at a specific catastrophe represents an ending interval.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EndingInterval",
+      "en" : "ending interval"
+    },
+    "subClasses" : [ "139" ],
+    "comment" : {
+      "en" : "An interval bounded by a distinct ending instant but lacking a defined starting point."
+    },
+    "attributes" : [ "external" ],
+    "id" : "138",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Birth",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "nativity",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The birth of Túrin takes place in Dor-lómin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Birth",
+      "en" : "birth"
+    },
+    "comment" : {
+      "en" : "The coming into existence of a character."
+    },
+    "attributes" : [ "external" ],
+    "id" : "17",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/InfiniteInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "unbounded interval",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The lifespan of an immortal Elf represents an infinite interval extending continuously into the future.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InfiniteInterval",
+      "en" : "infinite interval"
+    },
+    "subClasses" : [ "146" ],
+    "comment" : {
+      "en" : "A temporal interval extending infinitely in at least one direction."
+    },
+    "attributes" : [ "external" ],
+    "id" : "140",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Event",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "occurrence",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Battle of Unnumbered Tears is an event occurring in Beleriand.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "event"
+    },
+    "subClasses" : [ "34", "30", "84", "82", "14", "87", "52", "54", "56", "58", "70" ],
+    "comment" : {
+      "en" : "A spatio-temporal occurrence involving participants and locations. Every event is a finite temporal interval."
+    },
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "139" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/MovementEvent",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "movement",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin travels from Dor-lómin to Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MovementEvent",
+      "en" : "movement event"
+    },
+    "subClasses" : [ "73", "75", "77", "38" ],
+    "comment" : {
+      "en" : "An event involving physical movement of characters between places."
+    },
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Settlement",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "inhabited place",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Menegroth is a settlement within Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Settlement",
+      "en" : "settlement"
+    },
+    "subClasses" : [ "48", "50", "1", "4" ],
+    "comment" : {
+      "en" : "A place where people live permanently."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Siege",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "blockade",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The siege and sack of Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Siege",
+      "en" : "siege"
+    },
+    "comment" : {
+      "en" : "A military blockade of a city or fortress."
+    },
+    "attributes" : [ "external" ],
+    "id" : "137",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/TransferAction",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "transfer",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Beleg brings Anglachel to Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TransferAction",
+      "en" : "transfer action"
+    },
+    "subClasses" : [ "6", "9" ],
+    "comment" : {
+      "en" : "An action involving the transfer of possession."
+    },
+    "id" : "7",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Coronation",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "crowning ceremony",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Turgon is crowned King of Gondolin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Coronation",
+      "en" : "coronation"
+    },
+    "comment" : {
+      "en" : "A ceremony of crowning a ruler."
+    },
+    "attributes" : [ "external" ],
+    "id" : "132",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Hill",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "hillock",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Amon Rûdh is a hill where Túrin hid with Mîm.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Hill",
+      "en" : "hill"
+    },
+    "comment" : {
+      "en" : "A naturally raised area of land, smaller than a mountain."
+    },
+    "attributes" : [ "external" ],
+    "id" : "108",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Continent",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "landmass",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Endor is a continent within Arda.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Continent",
+      "en" : "continent"
+    },
+    "comment" : {
+      "en" : "A major landmass."
+    },
+    "attributes" : [ "external" ],
+    "id" : "125",
+    "superClasses" : [ "124" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/LifeEvent",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "life occurrence",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The birth of Túrin in Dor-lómin is a life event.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LifeEvent",
+      "en" : "life event"
+    },
+    "subClasses" : [ "13", "11", "17" ],
+    "comment" : {
+      "en" : "A significant moment in a character's life."
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Sea",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ocean",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Belegaer is the Great Sea west of Middle-earth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sea",
+      "en" : "sea"
+    },
+    "comment" : {
+      "en" : "A large body of salt water."
+    },
+    "attributes" : [ "external" ],
+    "id" : "110",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Mountain",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "peak",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Ered Wethrin borders Hithlum.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Mountain",
+      "en" : "mountain"
+    },
+    "comment" : {
+      "en" : "A large natural elevation of the earth's surface."
+    },
+    "attributes" : [ "external" ],
+    "id" : "111",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Attack",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "assault",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin attacks the Orcs at Amon Rûdh using Anglachel.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Attack",
+      "en" : "attack"
+    },
+    "comment" : {
+      "en" : "An aggressive action aimed at harming a target."
+    },
+    "id" : "152",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Speak",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "utterance",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Brandir speaks the truth to Turambar about Níniel's identity.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Speak",
+      "en" : "speak"
+    },
+    "comment" : {
+      "en" : "The action of verbal communication."
+    },
+    "id" : "168",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Feast",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "banquet",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A feast held in the halls of Menegroth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Feast",
+      "en" : "feast"
+    },
+    "comment" : {
+      "en" : "A large celebratory meal or banquet."
+    },
+    "attributes" : [ "external" ],
+    "id" : "133",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/CommunicativeAction",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "speech act",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Turambar speaks to Túrin about his journey.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CommunicativeAction",
+      "en" : "communicative action"
+    },
+    "subClasses" : [ "19", "104", "115", "168" ],
+    "comment" : {
+      "en" : "An action involving communication between characters."
+    },
+    "id" : "20",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#duration",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "171",
+    "label" : {
+      "IRI-based" : "duration"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "24",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "99",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/narn/action/Defend",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "defence",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Beleg defends Túrin's camp from Orc raids.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Defend",
+      "en" : "defend"
+    },
+    "comment" : {
+      "en" : "An action of protecting oneself or others from attack."
+    },
+    "id" : "154",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Desert",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "wasteland",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Anfauglith is a desert north of Beleriand.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Desert",
+      "en" : "desert"
+    },
+    "comment" : {
+      "en" : "A barren, arid area with little vegetation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "112",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Travel",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "journey",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin travels from Dor-lómin to Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Travel",
+      "en" : "travel"
+    },
+    "intersection" : [ "70" ],
+    "comment" : {
+      "en" : "A journey. Every travel has origin and destination."
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "73",
+    "superClasses" : [ "70" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Duel",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "single combat",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The duel between Turambar and Glaurung at Cabed-en-Aras.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Duel",
+      "en" : "duel"
+    },
+    "comment" : {
+      "en" : "A fight between exactly two combatants."
+    },
+    "attributes" : [ "external" ],
+    "id" : "136",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "164",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://w3id.org/narn/location/Town",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "township",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "There is a town along the road between Doriath and Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Town",
+      "en" : "town"
+    },
+    "comment" : {
+      "en" : "A settlement larger than a village but smaller than a city."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Flight",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "escape",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The flight of survivors from the fall of Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Flight",
+      "en" : "flight"
+    },
+    "comment" : {
+      "en" : "An event in which characters flee from danger."
+    },
+    "attributes" : [ "external" ],
+    "id" : "77",
+    "superClasses" : [ "70" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/EternalInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "everlasting interval",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The continuous existence of the universe Eä serves as an eternal interval.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EternalInterval",
+      "en" : "eternal interval"
+    },
+    "intersection" : [ "140" ],
+    "comment" : {
+      "en" : "A temporally unbounded interval extending infinitely into both the past and the future."
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "146",
+    "superClasses" : [ "140" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Forest",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "wood",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Brethil is a forest where Túrin lived under the name Turambar.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Forest",
+      "en" : "forest"
+    },
+    "comment" : {
+      "en" : "A large, dense wooded area."
+    },
+    "attributes" : [ "external" ],
+    "id" : "107",
+    "superClasses" : [ "106" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Kill",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "slaying",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin kills Saeros in Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Kill",
+      "en" : "kill"
+    },
+    "intersection" : [ "36" ],
+    "comment" : {
+      "en" : "The action of causing the death of another."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "156",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Fortress",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "stronghold",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Angband is Morgoth's fortress in the Iron Mountains.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Fortress",
+      "en" : "fortress"
+    },
+    "comment" : {
+      "en" : "A fortified place, typically a military stronghold."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Realm",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "kingdom",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Doriath is a realm ruled by King Thingol, with Menegroth as its capital.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Realm",
+      "en" : "realm"
+    },
+    "intersection" : [ "124" ],
+    "comment" : {
+      "en" : "A territory under the rule of a king or sovereign authority."
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "126",
+    "superClasses" : [ "124" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/ViolentAction",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "violent deed",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Slaying of Glaurung is a violent action performed by Turambar.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ViolentAction",
+      "en" : "violent action"
+    },
+    "subClasses" : [ "152", "154", "156" ],
+    "comment" : {
+      "en" : "An action involving physical violence or force."
+    },
+    "id" : "36",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Meeting",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "encounter",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin meets Beleg in the wild.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Meeting",
+      "en" : "meeting"
+    },
+    "comment" : {
+      "en" : "An encounter or gathering of characters."
+    },
+    "attributes" : [ "external" ],
+    "id" : "134",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/MovementAction",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "locomotion",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin travels to Nargothrond after the death of Beleg.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MovementAction",
+      "en" : "movement action"
+    },
+    "subClasses" : [ "97", "159" ],
+    "comment" : {
+      "en" : "An action involving deliberate physical movement."
+    },
+    "id" : "38",
+    "superClasses" : [ "30", "70" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Lake",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "body of water",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "There is a lake near the hidden city of Gondolin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Lake",
+      "en" : "lake"
+    },
+    "comment" : {
+      "en" : "A large body of water surrounded by land."
+    },
+    "attributes" : [ "external" ],
+    "id" : "109",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/FiniteInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "bounded interval",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Battle of Unnumbered Tears constitutes a finite interval possessing defined chronological boundaries.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FiniteInterval",
+      "en" : "finite interval"
+    },
+    "subClasses" : [ "35" ],
+    "intersection" : [ "44" ],
+    "comment" : {
+      "en" : "A bounded temporal interval defined by both a distinct starting instant and a distinct ending instant."
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "139",
+    "superClasses" : [ "138", "141", "44" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Betrayal",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "treachery",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Mîm betrays Túrin to the Orcs at Amon Rûdh.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Betrayal",
+      "en" : "betrayal"
+    },
+    "comment" : {
+      "en" : "An act of disloyalty involving betrayal of trust."
+    },
+    "attributes" : [ "external" ],
+    "id" : "54",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Village",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "hamlet",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "There is a small village in Brethil where woodsmen live.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Village",
+      "en" : "village"
+    },
+    "comment" : {
+      "en" : "A small settlement, typically in a rural area."
+    },
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "95",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "31",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "238",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/narn/action/MisleadingIntention",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "intent to deceive",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Glaurung's intention when hypnotising Níniel is to mislead her about her identity.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MisleadingIntention",
+      "en" : "misleading intention"
+    },
+    "comment" : {
+      "en" : "The intention of making another believe something false."
+    },
+    "id" : "239"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "131",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/narn/location/City",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "urban area",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Gondolin is a hidden city in Tumladen.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "en" : "city"
+    },
+    "comment" : {
+      "en" : "A large and significant settlement."
+    },
+    "attributes" : [ "external" ],
+    "id" : "48",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Discovery",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "revelation",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The truth about Níniel's identity is revealed.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Discovery",
+      "en" : "discovery"
+    },
+    "comment" : {
+      "en" : "An event where something hidden is found or revealed."
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/UndergroundPlace",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "subterranean place",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Menegroth and Nargothrond are underground places.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "UndergroundPlace",
+      "en" : "underground place"
+    },
+    "comment" : {
+      "en" : "A place located beneath the surface of the earth."
+    },
+    "attributes" : [ "external" ],
+    "id" : "128",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/narn/event/Enchantment",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "spell",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Glaurung hypnotises Níniel at Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Enchantment",
+      "en" : "enchantment"
+    },
+    "comment" : {
+      "en" : "A magical effect imposed on a character."
+    },
+    "attributes" : [ "external" ],
+    "id" : "84",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/Instant",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "time point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The precise moment of Túrin's birth constitutes an instant.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Instant",
+      "en" : "instant"
+    },
+    "comment" : {
+      "en" : "A temporal entity representing a single point in time with a duration of strictly zero."
+    },
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "71" ]
+  }, {
+    "iri" : "https://w3id.org/narn/to/StartingInterval",
+    "baseIri" : "https://w3id.org/narn/to",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "begins with",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The life of an Elf exemplifies a starting interval since it begins at birth but possesses no natural conclusion.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "StartingInterval",
+      "en" : "starting interval"
+    },
+    "subClasses" : [ "139" ],
+    "intersection" : [ "44" ],
+    "comment" : {
+      "en" : "An interval bounded by a distinct starting instant but lacking a defined ending point."
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "141",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Place",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "location",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Beleriand is a place in Middle-earth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Place",
+      "en" : "place"
+    },
+    "subClasses" : [ "124", "2", "22", "89", "143", "128" ],
+    "comment" : {
+      "en" : "A named location that has geographic or spatial significance in a story."
+    },
+    "attributes" : [ "external" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://w3id.org/narn/event/Captivity",
+    "baseIri" : "https://w3id.org/narn/event",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "imprisonment",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The captivity of Húrin in Angband by Morgoth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Captivity",
+      "en" : "captivity"
+    },
+    "comment" : {
+      "en" : "An event in which a character is held as a prisoner."
+    },
+    "attributes" : [ "external" ],
+    "id" : "87",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Flee",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "flight",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin flees Doriath after killing Saeros.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Flee",
+      "en" : "flee"
+    },
+    "intersection" : [ "38" ],
+    "comment" : {
+      "en" : "The action of running away from danger or pursuit."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "159",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/narn/action/Build",
+    "baseIri" : "https://w3id.org/narn/action",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "construction",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Elves built the hidden city of Gondolin in Tumladen.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Build",
+      "en" : "build"
+    },
+    "intersection" : [ "37" ],
+    "comment" : {
+      "en" : "The action of constructing a structure or settlement."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "102",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/Building",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "structure",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The great hall of Menegroth is a building within the city.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Building",
+      "en" : "building"
+    },
+    "comment" : {
+      "en" : "A constructed structure."
+    },
+    "attributes" : [ "external" ],
+    "id" : "143",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/narn/location/WildArea",
+    "baseIri" : "https://w3id.org/narn/location",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "wilderness",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The wild lands between Doriath and Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "WildArea",
+      "en" : "wild area"
+    },
+    "comment" : {
+      "en" : "An uncultivated, uninhabited region."
+    },
+    "attributes" : [ "external" ],
+    "id" : "113",
+    "superClasses" : [ "22" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "120",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "122",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "145",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "150",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "155",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "158",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "162",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "170",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "172",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "173",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "177",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "178",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "181",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "183",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "184",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "185",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "186",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "187",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "188",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "189",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "190",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "191",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "193",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "195",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "197",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "198",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "200",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "201",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "202",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "203",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "199",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "204",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "205",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "176",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "206",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "207",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "208",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "210",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "211",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "212",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "213",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "214",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "215",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "216",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "217",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "218",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "219",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "220",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "221",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "222",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "223",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "174",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "224",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "225",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "226",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "227",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "228",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "229",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "231",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "232",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "209",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "235",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "236",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "240",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "241",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "242",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "243",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "244",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "245",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "246",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "247",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "175",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "248",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "249",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "251",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "252",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "254",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "250",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "258",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "259",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "260",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "261",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "262",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "263",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "264",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "265",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "266",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "267",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "268",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "269",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "270",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "271",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "272",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "234",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "273",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "5"
+  }, {
+    "range" : "7",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "12"
+  }, {
+    "range" : "14",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "14",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "range" : "20",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/narn/to/precedes",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "happens before",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The span of the Nirnaeth Arnoediad temporally precedes Túrin's journey to Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "precedes",
+      "en" : "precedes"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "subproperty" : [ "26", "27", "28" ],
+    "comment" : {
+      "en" : "The primary interval concludes either strictly prior to or exactly at the commencement of the secondary interval."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/narn/action/hasInstrument",
+    "baseIri" : "https://w3id.org/narn/action",
+    "range" : "31",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "using",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Slaying of Glaurung has instrument Gurthang.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInstrument",
+      "en" : "has instrument"
+    },
+    "superproperty" : [ "32" ],
+    "minCardinality" : "1",
+    "domain" : "30",
+    "comment" : {
+      "en" : "An object used to perform the action (e.g. a sword)."
+    },
+    "attributes" : [ "object", "irreflexive" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/narn/location/isStrictlyInsideOf",
+    "baseIri" : "https://w3id.org/narn/location",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "strictly within",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Gondolin is strictly inside of Tumladen.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isStrictlyInsideOf",
+      "en" : "is strictly inside of"
+    },
+    "superproperty" : [ "40" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "Stricter form of isAPartOf where boundaries do not touch."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric", "transitive" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/narn/to/finishes",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ends with",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval representing the death of Turambar finishes the overarching timeline of the Narn.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "finishes",
+      "en" : "finishes"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "Both intervals share identical ending instants while the primary interval commences strictly after the secondary interval begins."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric", "transitive" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/narn/to/endsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ending point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Battle of Unnumbered Tears ends at the precise instant of the final retreat.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "endsAt",
+      "en" : "ends at"
+    },
+    "superproperty" : [ "46" ],
+    "domain" : "44",
+    "comment" : {
+      "en" : "The absolute ending instant bounding the conclusion of a temporal interval."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "functional", "asymmetric" ],
+    "id" : "43"
+  }, {
+    "range" : "2",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "2",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "35",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "35",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "35",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "35",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/narn/to/intervalRelation",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "44",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Allen relation",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The relational mapping between the birth of Túrin and the birth of Lalaith constitutes an interval relation.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "intervalRelation",
+      "en" : "interval relation"
+    },
+    "domain" : "44",
+    "subproperty" : [ "59", "60", "23", "61", "62", "63", "26", "64", "42", "28", "65", "66", "67", "68" ],
+    "comment" : {
+      "en" : "A topological temporal relation between two distinct intervals."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "35",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "70",
+    "domain" : "73",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "72"
+  }, {
+    "range" : "70",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "70",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "70",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/narn/to/occursDuring",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "44",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "within timeframe of",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The precise moment of Khîm's death occurs during the interval of Túrin's habitation at Amon Rûdh.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursDuring",
+      "en" : "occurs during"
+    },
+    "domain" : "45",
+    "comment" : {
+      "en" : "The enclosure of a specific instant strictly within the temporal boundaries of an interval."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "https://w3id.org/narn/to/meets",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "immediately before",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The chronological span of the Nirnaeth Arnoediad meets the interval of Húrin's captivity without any intervening gap.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "meets",
+      "en" : "meets"
+    },
+    "superproperty" : [ "25", "23" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "The ending instant of the primary interval is chronologically identical to the starting instant of the secondary interval."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric" ],
+    "id" : "28"
+  }, {
+    "range" : "35",
+    "domain" : "82",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "35",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "range" : "35",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "range" : "35",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/narn/to/occursSimultaneouslyTo",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "at same time as",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Two separate observations mapping to the exact same chronological instant occur simultaneously.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursSimultaneouslyTo",
+      "en" : "occurs simultaneously to"
+    },
+    "domain" : "45",
+    "comment" : {
+      "en" : "A temporal relation linking two distinct instants that occupy the exact same chronological position."
+    },
+    "attributes" : [ "external", "object", "reflexive", "symmetric", "transitive" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://w3id.org/narn/event/isCausedBy",
+    "inverse" : "93",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "35",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "results from",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The exile of Túrin is caused by the death of Saeros.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isCausedBy",
+      "en" : "is caused by"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "Inverse of causes. This event results from another."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasTraveller",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "95",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "travelled by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin, Gethron and Grithnir are travellers in the journey to Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTraveller",
+      "en" : "has traveller"
+    },
+    "superproperty" : [ "96" ],
+    "domain" : "73",
+    "comment" : {
+      "en" : "The character who undertakes the travel."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasAgent",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "99",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "done by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The death of Saeros has agent Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasAgent",
+      "en" : "has agent"
+    },
+    "superproperty" : [ "96" ],
+    "maxCardinality" : "1",
+    "cardinality" : "1",
+    "domain" : "35",
+    "subproperty" : [ "100" ],
+    "comment" : {
+      "en" : "The entity that intentionally causes or performs the event."
+    },
+    "attributes" : [ "external", "object", "irreflexive" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/narn/to/precededBy",
+    "inverse" : "23",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "happens after",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's journey to Doriath is temporally preceded by the span of the Nirnaeth Arnoediad.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "precededBy",
+      "en" : "preceded by"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "The primary interval commences either strictly subsequent to or exactly at the conclusion of the secondary interval."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://w3id.org/narn/action/hasResult",
+    "baseIri" : "https://w3id.org/narn/action",
+    "range" : "35",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "results in",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Brandir's speech results in the truth about Níniel being revealed.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "superproperty" : [ "93" ],
+    "domain" : "30",
+    "comment" : {
+      "en" : "The event or state that results from the action."
+    },
+    "attributes" : [ "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://w3id.org/narn/event/precedes",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "35",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "comes before",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Nirnaeth Arnoediad precedes Túrin's journey to Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "precedes",
+      "en" : "precedes"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "35",
+    "subproperty" : [ "93" ],
+    "comment" : {
+      "en" : "This event occurs before another event."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric", "transitive" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/narn/event/creates",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "99",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "results in",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The reforging of Anglachel creates Gurthang.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "creates",
+      "en" : "creates"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "An entity produced or created by the event."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "114"
+  }, {
+    "iri" : "https://w3id.org/narn/action/hasTarget",
+    "baseIri" : "https://w3id.org/narn/action",
+    "range" : "31",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "directed at",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Slaying of Glaurung has target Glaurung.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTarget",
+      "en" : "has target"
+    },
+    "superproperty" : [ "118" ],
+    "minCardinality" : "1",
+    "domain" : "30",
+    "comment" : {
+      "en" : "The entity that the action is directed towards."
+    },
+    "attributes" : [ "object", "irreflexive", "asymmetric" ],
+    "id" : "117"
+  }, {
+    "iri" : "https://w3id.org/narn/action/causesByAction",
+    "baseIri" : "https://w3id.org/narn/action",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "brings about",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Turambar causes the death of Glaurung by performing the slaying.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "causesByAction",
+      "en" : "causes by action"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "If an agent performs an action with a result, the agent indirectly causes that result."
+    },
+    "attributes" : [ "object" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://w3id.org/narn/action/hasIntention",
+    "baseIri" : "https://w3id.org/narn/action",
+    "range" : "31",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "aims to",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's flight from Doriath has the intention of escaping judgement.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasIntention",
+      "en" : "has intention"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "The goal or purpose behind the action."
+    },
+    "attributes" : [ "object", "irreflexive", "functional" ],
+    "id" : "120"
+  }, {
+    "iri" : "https://w3id.org/narn/to/occursBefore",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "earlier than",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The moment of Túrin's birth occurs before the moment of Lalaith's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursBefore",
+      "en" : "occurs before"
+    },
+    "domain" : "45",
+    "comment" : {
+      "en" : "A temporal relation placing the first instant chronologically prior to the second."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "121"
+  }, {
+    "iri" : "https://w3id.org/narn/location/isNear",
+    "baseIri" : "https://w3id.org/narn/location",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "close to",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The river Narog is near Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isNear",
+      "en" : "is near"
+    },
+    "superproperty" : [ "123" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "Two places are in proximity."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "symmetric" ],
+    "id" : "122"
+  }, {
+    "iri" : "https://w3id.org/narn/action/hasRecipient",
+    "baseIri" : "https://w3id.org/narn/action",
+    "range" : "131",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "received by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Beleg's gift of Anglachel has recipient Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasRecipient",
+      "en" : "has recipient"
+    },
+    "superproperty" : [ "96" ],
+    "domain" : "7",
+    "comment" : {
+      "en" : "The character who receives something in a transfer action."
+    },
+    "attributes" : [ "object", "irreflexive" ],
+    "id" : "130"
+  }, {
+    "range" : "90",
+    "domain" : "143",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "142"
+  }, {
+    "range" : "90",
+    "domain" : "128",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "144"
+  }, {
+    "iri" : "https://w3id.org/narn/to/equals",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "same time as",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The temporal span of the Siege of Nargothrond equals the chronological span of the Fall of Nargothrond.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "equals",
+      "en" : "equals"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "Absolute chronological equivalence where two intervals share identical starting and ending instants."
+    },
+    "attributes" : [ "external", "object", "reflexive", "symmetric", "transitive" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/narn/location/contains",
+    "inverse" : "40",
+    "baseIri" : "https://w3id.org/narn/location",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "includes",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Beleriand contains Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "contains",
+      "en" : "contains"
+    },
+    "superproperty" : [ "123" ],
+    "domain" : "90",
+    "comment" : {
+      "en" : "Inverse of isAPartOf."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "145"
+  }, {
+    "range" : "90",
+    "domain" : "124",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "147"
+  }, {
+    "range" : "90",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://w3id.org/narn/to/overlaps",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "partially before",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval of Túrin's time among the outlaws overlaps with the beginning of his time at Amon Rûdh.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "overlaps",
+      "en" : "overlaps"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "The primary interval begins before the secondary interval and concludes strictly within its duration."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric" ],
+    "id" : "66"
+  }, {
+    "range" : "90",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "149"
+  }, {
+    "range" : "90",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "range" : "36",
+    "domain" : "152",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "151"
+  }, {
+    "range" : "36",
+    "domain" : "154",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "range" : "36",
+    "domain" : "156",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "155"
+  }, {
+    "range" : "38",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "157"
+  }, {
+    "range" : "38",
+    "domain" : "159",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "158"
+  }, {
+    "range" : "139",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "160"
+  }, {
+    "range" : "141",
+    "domain" : "139",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "iri" : "https://w3id.org/narn/to/occursAfter",
+    "inverse" : "121",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "later than",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The moment of Nienor's birth occurs after the moment of Lalaith's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursAfter",
+      "en" : "occurs after"
+    },
+    "domain" : "45",
+    "comment" : {
+      "en" : "A temporal relation placing the first instant chronologically subsequent to the second."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://w3id.org/narn/to/hasDateTime",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "164",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "dateTime value",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The instant of publication maps to a specific dateTime value in the standard calendar.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDateTime",
+      "en" : "has date time"
+    },
+    "domain" : "45",
+    "comment" : {
+      "en" : "The standardized chronological date and time value of a specific temporal instant."
+    },
+    "attributes" : [ "external", "functional", "datatype" ],
+    "id" : "163"
+  }, {
+    "iri" : "https://w3id.org/narn/to/before",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "precedes",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval of Túrin's birth occurs strictly before the interval of Lalaith's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "before",
+      "en" : "before"
+    },
+    "superproperty" : [ "25", "23" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "The primary interval concludes strictly prior to the commencement of the secondary interval."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/narn/to/overlappedBy",
+    "inverse" : "66",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "partially after",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's time at Amon Rûdh is overlapped by the preceding interval of his time among the outlaws.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "overlappedBy",
+      "en" : "overlapped by"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "The primary interval begins strictly within the duration of the secondary interval and concludes after it."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric" ],
+    "id" : "64"
+  }, {
+    "range" : "20",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "20",
+    "domain" : "115",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "166"
+  }, {
+    "iri" : "https://w3id.org/narn/to/containsInterval",
+    "inverse" : "61",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "temporally contains",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn temporally contains the interval of Túrin's time in Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "containsInterval",
+      "en" : "contains interval"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "The primary interval strictly and completely encloses the chronological boundaries of the secondary interval."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "68"
+  }, {
+    "range" : "20",
+    "domain" : "168",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  }, {
+    "iri" : "https://w3id.org/narn/to/hasDuration",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "171",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "time length",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval representing Túrin's time in Doriath has a duration measured in several years.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDuration",
+      "en" : "has duration"
+    },
+    "domain" : "44",
+    "comment" : {
+      "en" : "The absolute temporal length spanned by a defined interval."
+    },
+    "attributes" : [ "external", "functional", "datatype" ],
+    "id" : "170"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasCause",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "99",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "caused by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The death of Beleg has cause Anglachel.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasCause",
+      "en" : "has cause"
+    },
+    "domain" : "35",
+    "subproperty" : [ "29" ],
+    "comment" : {
+      "en" : "An entity involved as a contributing cause in the event."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/narn/to/finishedBy",
+    "inverse" : "42",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ended by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn is finished by the interval representing the death of Turambar.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "finishedBy",
+      "en" : "finished by"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "Both intervals share identical ending instants while the primary interval commences strictly before the secondary interval begins."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric", "transitive" ],
+    "id" : "63"
+  }, {
+    "range" : "88",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "172"
+  }, {
+    "iri" : "https://w3id.org/narn/event/occursAt",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "takes place at",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Captivity of Húrin occurs at Angband.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursAt",
+      "en" : "occurs at"
+    },
+    "domain" : "35",
+    "subproperty" : [ "174", "175" ],
+    "comment" : {
+      "en" : "The place where the event occurs."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "someValues" ],
+    "id" : "173"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasPatient",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "99",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "affects",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Glaurung hypnotises Níniel, with Níniel as the patient.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPatient",
+      "en" : "has patient"
+    },
+    "superproperty" : [ "96" ],
+    "domain" : "35",
+    "subproperty" : [ "176", "117" ],
+    "comment" : {
+      "en" : "The entity affected by the event."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "118"
+  }, {
+    "range" : "82",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "177"
+  }, {
+    "range" : "70",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "178"
+  }, {
+    "iri" : "https://w3id.org/narn/event/occursAt",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "takes place at",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Captivity of Húrin occurs at Angband.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursAt",
+      "en" : "occurs at"
+    },
+    "domain" : "17",
+    "subproperty" : [ "174", "175" ],
+    "comment" : {
+      "en" : "The place where the event occurs."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "allValues" ],
+    "id" : "181"
+  }, {
+    "range" : "34",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "183"
+  }, {
+    "range" : "10",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "184"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasSubEvent",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "35",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "contains event",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Wars of Beleriand has subevent the Nirnaeth Arnoediad.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSubEvent",
+      "en" : "has subevent"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "A smaller event that occurs as part of this one."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric", "transitive" ],
+    "id" : "185"
+  }, {
+    "iri" : "https://w3id.org/narn/to/startedBy",
+    "inverse" : "67",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "begun by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn is started by the interval representing the birth of Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startedBy",
+      "en" : "started by"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "Both intervals share identical starting instants while the primary interval extends strictly beyond the conclusion of the secondary interval."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric", "transitive" ],
+    "id" : "60"
+  }, {
+    "range" : "11",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "186"
+  }, {
+    "range" : "134",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "187"
+  }, {
+    "range" : "13",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "188"
+  }, {
+    "iri" : "https://w3id.org/narn/event/occursAt",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "takes place at",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Captivity of Húrin occurs at Angband.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursAt",
+      "en" : "occurs at"
+    },
+    "domain" : "35",
+    "subproperty" : [ "174", "175" ],
+    "comment" : {
+      "en" : "The place where the event occurs."
+    },
+    "attributes" : [ "external", "object", "irreflexive" ],
+    "id" : "189"
+  }, {
+    "iri" : "https://w3id.org/narn/action/hasResult",
+    "baseIri" : "https://w3id.org/narn/action",
+    "range" : "11",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "results in",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Brandir's speech results in the truth about Níniel being revealed.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "superproperty" : [ "93" ],
+    "domain" : "156",
+    "comment" : {
+      "en" : "The event or state that results from the action."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "190"
+  }, {
+    "iri" : "https://w3id.org/narn/action/hasTarget",
+    "baseIri" : "https://w3id.org/narn/action",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "directed at",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Slaying of Glaurung has target Glaurung.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTarget",
+      "en" : "has target"
+    },
+    "superproperty" : [ "118" ],
+    "domain" : "97",
+    "comment" : {
+      "en" : "The entity that the action is directed towards."
+    },
+    "attributes" : [ "object", "irreflexive", "asymmetric", "allValues" ],
+    "id" : "191"
+  }, {
+    "range" : "36",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "193"
+  }, {
+    "range" : "9",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "195"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasWitness",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "99",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "observed by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Mîm's betrayal has witness Andróg.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasWitness",
+      "en" : "has witness"
+    },
+    "superproperty" : [ "96" ],
+    "domain" : "35",
+    "comment" : {
+      "en" : "An entity that observes the event without acting."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "197"
+  }, {
+    "iri" : "https://w3id.org/narn/to/hasInstant",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "at instant",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn has an instant mapped to the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInstant",
+      "en" : "has instant"
+    },
+    "domain" : "44",
+    "subproperty" : [ "43", "199" ],
+    "comment" : {
+      "en" : "The association between a temporal interval and a specific instant contained within or bounding it."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric", "allValues" ],
+    "id" : "198"
+  }, {
+    "range" : "44",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "200"
+  }, {
+    "iri" : "https://w3id.org/narn/to/startsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "beginning point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The chronological span of the Narn starts at the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startsAt",
+      "en" : "starts at"
+    },
+    "superproperty" : [ "46" ],
+    "domain" : "141",
+    "comment" : {
+      "en" : "The absolute starting instant bounding the beginning of a temporal interval."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "functional", "asymmetric", "someValues" ],
+    "id" : "201"
+  }, {
+    "range" : "139",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "202"
+  }, {
+    "iri" : "https://w3id.org/narn/to/endsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "ending point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Battle of Unnumbered Tears ends at the precise instant of the final retreat.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "endsAt",
+      "en" : "ends at"
+    },
+    "superproperty" : [ "46" ],
+    "domain" : "138",
+    "comment" : {
+      "en" : "The absolute ending instant bounding the conclusion of a temporal interval."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "functional", "asymmetric", "someValues" ],
+    "id" : "203"
+  }, {
+    "iri" : "https://w3id.org/narn/to/startsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "beginning point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The chronological span of the Narn starts at the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startsAt",
+      "en" : "starts at"
+    },
+    "superproperty" : [ "46" ],
+    "domain" : "44",
+    "comment" : {
+      "en" : "The absolute starting instant bounding the beginning of a temporal interval."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "functional", "asymmetric" ],
+    "id" : "199"
+  }, {
+    "iri" : "https://w3id.org/narn/to/starts",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "begins with",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval representing the birth of Túrin starts the overarching timeline of the Narn.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "starts",
+      "en" : "starts"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "Both intervals share identical starting instants while the primary interval concludes strictly before the secondary interval."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric", "transitive" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://w3id.org/narn/to/startsAt",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "beginning point",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The chronological span of the Narn starts at the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startsAt",
+      "en" : "starts at"
+    },
+    "superproperty" : [ "46" ],
+    "domain" : "139",
+    "comment" : {
+      "en" : "The absolute starting instant bounding the beginning of a temporal interval."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "functional", "asymmetric", "allValues" ],
+    "id" : "204"
+  }, {
+    "range" : "140",
+    "domain" : "139",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "205"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasVictim",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "99",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "harms",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The death of Beleg has victim Beleg.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasVictim",
+      "en" : "has victim"
+    },
+    "superproperty" : [ "118" ],
+    "cardinality" : "1",
+    "domain" : "35",
+    "comment" : {
+      "en" : "The entity that suffers harm in the event."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "176"
+  }, {
+    "range" : "50",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "206"
+  }, {
+    "iri" : "https://w3id.org/narn/location/isAPartOf",
+    "baseIri" : "https://w3id.org/narn/location",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "part of",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Dor-lómin is a part of Hithlum.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isAPartOf",
+      "en" : "is a part of"
+    },
+    "superproperty" : [ "123" ],
+    "domain" : "2",
+    "subproperty" : [ "39" ],
+    "comment" : {
+      "en" : "Indicates that a place constitutes a subarea of another place."
+    },
+    "attributes" : [ "external", "object", "transitive", "someValues" ],
+    "id" : "207"
+  }, {
+    "iri" : "https://w3id.org/narn/location/isTheCapitalOf",
+    "baseIri" : "https://w3id.org/narn/location",
+    "range" : "126",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "capital of",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Menegroth is the capital of Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isTheCapitalOf",
+      "en" : "is the capital of"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "A settlement is the capital of a realm."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "208"
+  }, {
+    "iri" : "https://w3id.org/narn/location/hasSpatialRelation",
+    "baseIri" : "https://w3id.org/narn/location",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "spatially related to",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Doriath has a spatial relation to Brethil, as they border each other.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSpatialRelation",
+      "en" : "has spatial relation"
+    },
+    "domain" : "90",
+    "subproperty" : [ "40", "209", "145", "122" ],
+    "comment" : {
+      "en" : "A general spatial relation between two places."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "123"
+  }, {
+    "range" : "2",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "210"
+  }, {
+    "range" : "107",
+    "domain" : "112",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "211"
+  }, {
+    "range" : "50",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "212"
+  }, {
+    "range" : "41",
+    "domain" : "111",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "213"
+  }, {
+    "range" : "110",
+    "domain" : "111",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "214"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasOrigin",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "departs from",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's journey to Doriath has origin Dor-lómin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOrigin",
+      "en" : "has origin"
+    },
+    "superproperty" : [ "189" ],
+    "domain" : "73",
+    "comment" : {
+      "en" : "The starting place of a movement event."
+    },
+    "attributes" : [ "external", "object", "someValues" ],
+    "id" : "215"
+  }, {
+    "iri" : "https://w3id.org/narn/event/occursAt",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "2",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "takes place at",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Captivity of Húrin occurs at Angband.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "occursAt",
+      "en" : "occurs at"
+    },
+    "domain" : "137",
+    "subproperty" : [ "174", "175" ],
+    "comment" : {
+      "en" : "The place where the event occurs."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "allValues" ],
+    "id" : "216"
+  }, {
+    "range" : "22",
+    "domain" : "143",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "217"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasDestination",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "arrives at",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's journey has destination Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDestination",
+      "en" : "has destination"
+    },
+    "superproperty" : [ "189" ],
+    "domain" : "73",
+    "comment" : {
+      "en" : "The ending place of a movement event."
+    },
+    "attributes" : [ "external", "object", "someValues" ],
+    "id" : "218"
+  }, {
+    "range" : "22",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "219"
+  }, {
+    "range" : "22",
+    "domain" : "109",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "220"
+  }, {
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "221"
+  }, {
+    "range" : "22",
+    "domain" : "110",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "222"
+  }, {
+    "range" : "22",
+    "domain" : "108",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "223"
+  }, {
+    "iri" : "https://w3id.org/narn/event/causes",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "35",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "leads to",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The death of Saeros causes the exile of Túrin from Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "causes",
+      "en" : "causes"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "35",
+    "subproperty" : [ "105" ],
+    "comment" : {
+      "en" : "This event causally leads to another event."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric", "transitive" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasOrigin",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "departs from",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's journey to Doriath has origin Dor-lómin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOrigin",
+      "en" : "has origin"
+    },
+    "superproperty" : [ "189" ],
+    "domain" : "70",
+    "comment" : {
+      "en" : "The starting place of a movement event."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "174"
+  }, {
+    "iri" : "https://w3id.org/narn/location/isAPartOf",
+    "baseIri" : "https://w3id.org/narn/location",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "part of",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Dor-lómin is a part of Hithlum.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isAPartOf",
+      "en" : "is a part of"
+    },
+    "superproperty" : [ "123" ],
+    "domain" : "90",
+    "subproperty" : [ "39" ],
+    "comment" : {
+      "en" : "Indicates that a place constitutes a subarea of another place."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "40"
+  }, {
+    "range" : "22",
+    "domain" : "106",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "224"
+  }, {
+    "range" : "106",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "225"
+  }, {
+    "range" : "11",
+    "domain" : "88",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "226"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "227"
+  }, {
+    "range" : "37",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "228"
+  }, {
+    "range" : "37",
+    "domain" : "101",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "229"
+  }, {
+    "range" : "30",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "230"
+  }, {
+    "range" : "30",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "231"
+  }, {
+    "range" : "71",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
+  }, {
+    "range" : "71",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "233"
+  }, {
+    "iri" : "https://w3id.org/narn/to/hasInstant",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "45",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "at instant",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The overarching timeline of the Narn has an instant mapped to the moment of Túrin's birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInstant",
+      "en" : "has instant"
+    },
+    "domain" : "44",
+    "subproperty" : [ "43", "199" ],
+    "comment" : {
+      "en" : "The association between a temporal interval and a specific instant contained within or bounding it."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/narn/location/borders",
+    "baseIri" : "https://w3id.org/narn/location",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "adjacent to",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Doriath borders Brethil.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "borders",
+      "en" : "borders"
+    },
+    "superproperty" : [ "123" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "Two places share a boundary but neither contains the other."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "symmetric" ],
+    "id" : "209"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasParticipant",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "99",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "involves",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Battle of Unnumbered Tears has participant Húrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasParticipant",
+      "en" : "has participant"
+    },
+    "cardinality" : "2",
+    "domain" : "35",
+    "subproperty" : [ "98", "118", "130", "234", "94", "197" ],
+    "comment" : {
+      "en" : "An entity that takes part in the event."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "96"
+  }, {
+    "range" : "30",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "235"
+  }, {
+    "range" : "30",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "236"
+  }, {
+    "range" : "30",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
+    "range" : "140",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "240"
+  }, {
+    "range" : "138",
+    "domain" : "139",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "241"
+  }, {
+    "range" : "35",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "242"
+  }, {
+    "range" : "35",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "243"
+  }, {
+    "range" : "44",
+    "domain" : "139",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "244"
+  }, {
+    "range" : "44",
+    "domain" : "141",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "245"
+  }, {
+    "range" : "44",
+    "domain" : "140",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "246"
+  }, {
+    "range" : "154",
+    "domain" : "152",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "247"
+  }, {
+    "iri" : "https://w3id.org/narn/event/hasDestination",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "90",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "arrives at",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin's journey has destination Doriath.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDestination",
+      "en" : "has destination"
+    },
+    "superproperty" : [ "189" ],
+    "domain" : "70",
+    "comment" : {
+      "en" : "The ending place of a movement event."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "175"
+  }, {
+    "range" : "101",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "248"
+  }, {
+    "range" : "36",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "249"
+  }, {
+    "iri" : "https://w3id.org/narn/to/during",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "contained in",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval representing the killing of Khîm occurs strictly during Túrin's habitation at Amon Rûdh.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "during",
+      "en" : "during"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "subproperty" : [ "250" ],
+    "comment" : {
+      "en" : "The primary interval is strictly and completely enclosed within the chronological boundaries of the secondary interval."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "61"
+  }, {
+    "range" : "38",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "251"
+  }, {
+    "range" : "7",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "252"
+  }, {
+    "range" : "7",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "254"
+  }, {
+    "iri" : "https://w3id.org/narn/event/isSubEventOf",
+    "inverse" : "185",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "35",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "part of event",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Nirnaeth Arnoediad is a subevent of the Wars of Beleriand.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSubEventOf",
+      "en" : "is subevent of"
+    },
+    "superproperty" : [ "61" ],
+    "domain" : "35",
+    "comment" : {
+      "en" : "This event is part of a larger event."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "250"
+  }, {
+    "iri" : "https://w3id.org/narn/to/after",
+    "inverse" : "26",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "follows",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval of Nienor's birth occurs strictly after the conclusion of the Nirnaeth Arnoediad.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "after",
+      "en" : "after"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "The primary interval commences strictly subsequent to the conclusion of the secondary interval."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "65"
+  }, {
+    "range" : "58",
+    "domain" : "129",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "258"
+  }, {
+    "range" : "58",
+    "domain" : "136",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "259"
+  }, {
+    "range" : "44",
+    "domain" : "138",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "260"
+  }, {
+    "range" : "58",
+    "domain" : "137",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "261"
+  }, {
+    "range" : "34",
+    "domain" : "134",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "262"
+  }, {
+    "range" : "34",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "263"
+  }, {
+    "iri" : "https://w3id.org/narn/action/performedBy",
+    "baseIri" : "https://w3id.org/narn/action",
+    "range" : "31",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "done by",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The Slaying of Glaurung was performed by Turambar.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "performedBy",
+      "en" : "performed by"
+    },
+    "superproperty" : [ "98" ],
+    "domain" : "30",
+    "comment" : {
+      "en" : "The agent who intentionally performs the action."
+    },
+    "attributes" : [ "object" ],
+    "id" : "100"
+  }, {
+    "range" : "58",
+    "domain" : "116",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "264"
+  }, {
+    "range" : "34",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "265"
+  }, {
+    "range" : "34",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "266"
+  }, {
+    "range" : "34",
+    "domain" : "132",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "267"
+  }, {
+    "iri" : "https://w3id.org/narn/to/metBy",
+    "inverse" : "28",
+    "baseIri" : "https://w3id.org/narn/to",
+    "range" : "24",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "immediately after",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The interval of Húrin's captivity is met by the conclusion of the Nirnaeth Arnoediad.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "metBy",
+      "en" : "met by"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "24",
+    "comment" : {
+      "en" : "The starting instant of the primary interval is chronologically identical to the ending instant of the secondary interval."
+    },
+    "attributes" : [ "external", "object", "irreflexive", "asymmetric" ],
+    "id" : "62"
+  }, {
+    "range" : "124",
+    "domain" : "126",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "268"
+  }, {
+    "range" : "22",
+    "domain" : "112",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "269"
+  }, {
+    "range" : "22",
+    "domain" : "111",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "270"
+  }, {
+    "iri" : "https://w3id.org/narn/event/isBegottenIn",
+    "inverse" : "234",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "17",
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Túrin is begotten in the birth of Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isBegottenIn",
+      "en" : "is begotten in"
+    },
+    "domain" : "238",
+    "comment" : {
+      "en" : "Inverse of begets. Links a character to the birth event that brings them into existence."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "271"
+  }, {
+    "range" : "124",
+    "domain" : "125",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "272"
+  }, {
+    "iri" : "https://w3id.org/narn/event/begets",
+    "baseIri" : "https://w3id.org/narn/event",
+    "range" : "238",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "brings forth",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The birth of Túrin begets Túrin.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "begets",
+      "en" : "begets"
+    },
+    "superproperty" : [ "96" ],
+    "domain" : "17",
+    "comment" : {
+      "en" : "The character brought into existence by a birth event."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "234"
+  }, {
+    "range" : "22",
+    "domain" : "113",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "273"
+  } ]
+}
