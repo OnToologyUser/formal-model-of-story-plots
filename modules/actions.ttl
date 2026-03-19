@@ -12,6 +12,11 @@
 @prefix vann: <https://purl.org/vocab/vann/> .
 @prefix erdemonal: <https://w3id.org/people/erdemonal/> .
 
+dct:created a owl:AnnotationProperty .
+dct:creator a owl:AnnotationProperty .
+dct:modified a owl:AnnotationProperty .
+skos:altLabel a owl:AnnotationProperty .
+
 #
 # Actions Ontology
 # Defines character actions with agent, patient, instrument, intention, and result
@@ -19,9 +24,9 @@
 act: a owl:Ontology ;
      owl:imports evnt:, loc: ;
      rdfs:label "Actions Ontology"@en ;
-     rdfs:comment """An ontology for describing actions in story plots."""@en ;
+     rdfs:comment "An ontology for describing actions in story plots."@en ;
      dct:created "2026-03-11"^^xsd:date ;
-     dct:modified "2026-03-17"^^xsd:date ;
+     dct:modified "2026-03-19"^^xsd:date ;
      dct:creator erdemonal:me ;
      vann:preferredNamespaceUri "https://w3id.org/narn/action/" ;
      vann:preferredNamespacePrefix "act" .
@@ -38,116 +43,135 @@ act:Action a owl:Class ;
     ] ;
     rdfs:label "action"@en ;
     skos:altLabel "deed"@en ;
-    rdfs:comment "An intentional deed. Every action has at least one performer."@en .
+    rdfs:comment "An intentional deed. Every action has at least one performer."@en ;
+    skos:example "Túrin killing Saeros is an action performed by Túrin."@en .
 
 act:ViolentAction a owl:Class ;
     rdfs:subClassOf act:Action ;
     rdfs:label "violent action"@en ;
     skos:altLabel "violent deed"@en ;
-    rdfs:comment "An action involving physical violence or force."@en .
+    rdfs:comment "An action involving physical violence or force."@en ;
+    skos:example "The Slaying of Glaurung is a violent action performed by Turambar."@en .
 
 act:Attack a owl:Class ;
     rdfs:subClassOf act:ViolentAction ;
     rdfs:label "attack"@en ;
     skos:altLabel "assault"@en ;
-    rdfs:comment "An aggressive action aimed at harming a target."@en .
+    rdfs:comment "An aggressive action aimed at harming a target."@en ;
+    skos:example "Túrin attacks the Orcs at Amon Rûdh using Anglachel."@en .
 
 act:Kill a owl:Class ;
     rdfs:subClassOf act:ViolentAction ;
     rdfs:label "kill"@en ;
     skos:altLabel "slaying"@en ;
-    rdfs:comment "The action of causing the death of another."@en .
+    rdfs:comment "The action of causing the death of another."@en ;
+    skos:example "Túrin kills Saeros in Doriath."@en .
 
 act:Defend a owl:Class ;
     rdfs:subClassOf act:ViolentAction ;
     rdfs:label "defend"@en ;
     skos:altLabel "defence"@en ;
-    rdfs:comment "An action of protecting oneself or others from attack."@en .
+    rdfs:comment "An action of protecting oneself or others from attack."@en ;
+    skos:example "Beleg defends Túrin's camp from Orc raids."@en .
 
 act:MovementAction a owl:Class ;
     rdfs:subClassOf act:Action, evnt:MovementEvent ;
     rdfs:label "movement action"@en ;
     skos:altLabel "locomotion"@en ;
-    rdfs:comment "An action involving deliberate physical movement."@en .
+    rdfs:comment "An action involving deliberate physical movement."@en ;
+    skos:example "Túrin travels to Nargothrond after the death of Beleg."@en .
 
 act:Flee a owl:Class ;
     rdfs:subClassOf act:MovementAction ;
     rdfs:label "flee"@en ;
     skos:altLabel "flight"@en ;
-    rdfs:comment "The action of running away from danger or pursuit."@en .
+    rdfs:comment "The action of running away from danger or pursuit."@en ;
+    skos:example "Túrin flees Doriath after killing Saeros."@en .
 
 act:GoTo a owl:Class ;
     rdfs:subClassOf act:MovementAction ;
     rdfs:label "go to"@en ;
     skos:altLabel "travel to"@en ;
-    rdfs:comment "The action of deliberately travelling to a destination."@en .
+    rdfs:comment "The action of deliberately travelling to a destination."@en ;
+    skos:example "Túrin goes to Nargothrond seeking refuge."@en .
 
 act:CommunicativeAction a owl:Class ;
     rdfs:subClassOf act:Action ;
     rdfs:label "communicative action"@en ;
     skos:altLabel "speech act"@en ;
-    rdfs:comment "An action involving communication between characters."@en .
+    rdfs:comment "An action involving communication between characters."@en ;
+    skos:example "Turambar speaks to Túrin about his journey."@en .
 
 act:Speak a owl:Class ;
     rdfs:subClassOf act:CommunicativeAction ;
     rdfs:label "speak"@en ;
     skos:altLabel "utterance"@en ;
-    rdfs:comment "The action of verbal communication."@en .
+    rdfs:comment "The action of verbal communication."@en ;
+    skos:example "Brandir speaks the truth to Turambar about Níniel's identity."@en .
 
 act:Deceive a owl:Class ;
     rdfs:subClassOf act:CommunicativeAction ;
     rdfs:label "deceive"@en ;
     skos:altLabel "deception"@en ;
-    rdfs:comment "The action of intentionally misleading another character."@en .
+    rdfs:comment "The action of intentionally misleading another character."@en ;
+    skos:example "Glaurung deceives and hypnotises Níniel at Nargothrond."@en .
 
 act:Reveal a owl:Class ;
     rdfs:subClassOf act:CommunicativeAction ;
     rdfs:label "reveal"@en ;
     skos:altLabel "disclosure"@en ;
-    rdfs:comment "The action of disclosing previously hidden information."@en .
+    rdfs:comment "The action of disclosing previously hidden information."@en ;
+    skos:example "The truth about Níniel is revealed after the slaying of Glaurung."@en .
 
 act:Command a owl:Class ;
     rdfs:subClassOf act:CommunicativeAction ;
     rdfs:label "command"@en ;
     skos:altLabel "order"@en ;
-    rdfs:comment "The action of giving an authoritative order."@en .
+    rdfs:comment "The action of giving an authoritative order."@en ;
+    skos:example "Morgoth orders his servants to attack Nargothrond."@en .
 
 act:TransferAction a owl:Class ;
     rdfs:subClassOf act:Action ;
     rdfs:label "transfer action"@en ;
     skos:altLabel "transfer"@en ;
-    rdfs:comment "An action involving the transfer of possession."@en .
+    rdfs:comment "An action involving the transfer of possession."@en ;
+    skos:example "Beleg brings Anglachel to Túrin."@en .
 
 act:Give a owl:Class ;
     rdfs:subClassOf act:TransferAction ;
     rdfs:subClassOf [ a owl:Restriction ; owl:onProperty act:hasRecipient ; owl:someValuesFrom owl:Thing ] ;
     rdfs:label "give"@en ;
     skos:altLabel "bestowal"@en ;
-    rdfs:comment "The action of voluntarily transferring something to another."@en .
+    rdfs:comment "The action of voluntarily transferring something to another."@en ;
+    skos:example "Beleg gives Anglachel to Túrin to rescue him."@en .
 
 act:Take a owl:Class ;
     rdfs:subClassOf act:TransferAction ;
     rdfs:label "take"@en ;
     skos:altLabel "seizure"@en ;
-    rdfs:comment "The action of acquiring something, possibly by force."@en .
+    rdfs:comment "The action of acquiring something, possibly by force."@en ;
+    skos:example "Morgoth takes Húrin captive after the Nirnaeth Arnoediad."@en .
 
 act:CreationAction a owl:Class ;
     rdfs:subClassOf act:Action ;
     rdfs:label "creation action"@en ;
     skos:altLabel "making"@en ;
-    rdfs:comment "An action that produces or transforms something."@en .
+    rdfs:comment "An action that produces or transforms something."@en ;
+    skos:example "The smiths of Nargothrond reforge Anglachel into Gurthang."@en .
 
 act:Forge a owl:Class ;
     rdfs:subClassOf act:CreationAction ;
     rdfs:label "forge"@en ;
     skos:altLabel "smithing"@en ;
-    rdfs:comment "The action of creating or reshaping an object, especially a weapon."@en .
+    rdfs:comment "The action of creating or reshaping an object, especially a weapon."@en ;
+    skos:example "The reforging of Anglachel into Gurthang in Nargothrond."@en .
 
 act:Build a owl:Class ;
     rdfs:subClassOf act:CreationAction ;
     rdfs:label "build"@en ;
     skos:altLabel "construction"@en ;
-    rdfs:comment "The action of constructing a structure or settlement."@en .
+    rdfs:comment "The action of constructing a structure or settlement."@en ;
+    skos:example "The Elves built the hidden city of Gondolin in Tumladen."@en .
 
 #
 # Properties
@@ -157,41 +181,47 @@ act:performedBy a owl:ObjectProperty ;
     rdfs:domain act:Action ;
     rdfs:label "performed by"@en ;
     skos:altLabel "done by"@en ;
-    rdfs:comment "The agent who intentionally performs the action."@en .
+    rdfs:comment "The agent who intentionally performs the action."@en ;
+    skos:example "The Slaying of Glaurung was performed by Turambar."@en .
 
 act:hasTarget a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasPatient ;
     rdfs:domain act:Action ;
     rdfs:label "has target"@en ;
     skos:altLabel "directed at"@en ;
-    rdfs:comment "The entity that the action is directed towards."@en .
+    rdfs:comment "The entity that the action is directed towards."@en ;
+    skos:example "The Slaying of Glaurung has target Glaurung."@en .
 
 act:hasInstrument a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasCause ;
     rdfs:domain act:Action ;
     rdfs:label "has instrument"@en ;
     skos:altLabel "using"@en ;
-    rdfs:comment "An object used to perform the action (e.g. a sword)."@en .
+    rdfs:comment "An object used to perform the action (e.g. a sword)."@en ;
+    skos:example "The Slaying of Glaurung has instrument Gurthang."@en .
 
 act:hasIntention a owl:ObjectProperty ;
     rdfs:domain act:Action ;
     rdfs:label "has intention"@en ;
     skos:altLabel "aims to"@en ;
-    rdfs:comment "The goal or purpose behind the action."@en .
+    rdfs:comment "The goal or purpose behind the action."@en ;
+    skos:example "Túrin's flight from Doriath has the intention of escaping judgement."@en .
 
 act:hasResult a owl:ObjectProperty ;
     rdfs:domain act:Action ;
     rdfs:range evnt:Event ;
     rdfs:label "has result"@en ;
     skos:altLabel "results in"@en ;
-    rdfs:comment "The event or state that results from the action."@en .
+    rdfs:comment "The event or state that results from the action."@en ;
+    skos:example "Brandir's speech results in the truth about Níniel being revealed."@en .
 
 act:hasRecipient a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain act:TransferAction ;
     rdfs:label "has recipient"@en ;
     skos:altLabel "received by"@en ;
-    rdfs:comment "The character who receives something in a transfer action."@en .
+    rdfs:comment "The character who receives something in a transfer action."@en ;
+    skos:example "Beleg's gift of Anglachel has recipient Túrin."@en .
 
 #
 # Axioms
@@ -233,7 +263,8 @@ act:Kill owl:equivalentClass [
 act:Escape a owl:Class ;
     rdfs:label "escape"@en ;
     skos:altLabel "evasion"@en ;
-    rdfs:comment "The intention of getting away from danger."@en .
+    rdfs:comment "The intention of getting away from danger."@en ;
+    skos:example "Túrin's intention when fleeing Doriath is escape from judgement."@en .
 
 act:Flee owl:equivalentClass [
     a owl:Class ;
@@ -250,7 +281,8 @@ act:Flee owl:equivalentClass [
 act:MisleadingIntention a owl:Class ;
     rdfs:label "misleading intention"@en ;
     skos:altLabel "intent to deceive"@en ;
-    rdfs:comment "The intention of making another believe something false."@en .
+    rdfs:comment "The intention of making another believe something false."@en ;
+    skos:example "Glaurung's intention when hypnotising Níniel is to mislead her about her identity."@en .
 
 act:Deceive owl:equivalentClass [
     a owl:Class ;
@@ -381,7 +413,8 @@ act:causesByAction a owl:ObjectProperty ;
     owl:propertyChainAxiom ( [ owl:inverseOf act:performedBy ] act:hasResult ) ;
     rdfs:label "causes by action"@en ;
     skos:altLabel "brings about"@en ;
-    rdfs:comment "If an agent performs an action with a result, the agent indirectly causes that result."@en .
+    rdfs:comment "If an agent performs an action with a result, the agent indirectly causes that result."@en ;
+    skos:example "Turambar causes the death of Glaurung by performing the slaying."@en .
 
 
 # hasResult is also a causal relation

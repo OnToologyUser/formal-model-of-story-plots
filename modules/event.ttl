@@ -12,6 +12,11 @@
 @prefix vann: <https://purl.org/vocab/vann/> .
 @prefix erdemonal: <https://w3id.org/people/erdemonal/> .
 
+dct:created a owl:AnnotationProperty .
+dct:creator a owl:AnnotationProperty .
+dct:modified a owl:AnnotationProperty .
+skos:altLabel a owl:AnnotationProperty .
+
 #
 # Event Ontology for Story Plot Modelling
 # Defines event types and their relationships to characters, places, and time
@@ -19,9 +24,9 @@
 evnt: a owl:Ontology ;
       owl:imports to:, loc: ;
       rdfs:label "Event Ontology"@en ;
-      rdfs:comment """An ontology for describing events in story plots."""@en ;
+      rdfs:comment "An ontology for describing events in story plots."@en ;
       dct:created "2026-03-15"^^xsd:date ;
-      dct:modified "2026-03-17"^^xsd:date ;
+      dct:modified "2026-03-19"^^xsd:date ;
      dct:creator erdemonal:me ;
      vann:preferredNamespaceUri "https://w3id.org/narn/event/" ;
      vann:preferredNamespacePrefix "evnt" .
@@ -33,14 +38,15 @@ evnt:Event a owl:Class ;
     rdfs:subClassOf to:FiniteInterval ;
     rdfs:label "event"@en ;
     skos:altLabel "occurrence"@en ;
-    rdfs:comment """A spatio-temporal occurrence involving participants at places.
-        Every event is a finite temporal interval."""@en .
+    rdfs:comment "A spatio-temporal occurrence involving participants and locations. Every event is a finite temporal interval."@en ;
+    skos:example "The Battle of Unnumbered Tears is an event occurring in Beleriand."@en .
 
 evnt:LifeEvent a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "life event"@en ;
     skos:altLabel "life occurrence"@en ;
-    rdfs:comment "A significant moment in a character's life."@en .
+    rdfs:comment "A significant moment in a character's life."@en ;
+    skos:example "The birth of Túrin in Dor-lómin is a life event."@en .
 
 evnt:Birth a owl:Class ;
     rdfs:subClassOf evnt:LifeEvent ;
@@ -51,7 +57,8 @@ evnt:Birth a owl:Class ;
     ] ;
     rdfs:label "birth"@en ;
     skos:altLabel "nativity"@en ;
-    rdfs:comment "A character being born. Every birth begets at least one character."@en .
+    rdfs:comment "The coming into existence of a character."@en ;
+    skos:example "The birth of Túrin takes place in Dor-lómin."@en .
 
 evnt:Death a owl:Class ;
     rdfs:subClassOf evnt:LifeEvent ;
@@ -63,7 +70,8 @@ evnt:Death a owl:Class ;
     ] ;
     rdfs:label "death"@en ;
     skos:altLabel "demise"@en ;
-    rdfs:comment "A character dying. Every death has at least one victim."@en .
+    rdfs:comment "The death of a character."@en ;
+    skos:example "The death of Beleg is caused by Túrin."@en .
 
 evnt:Suicide a owl:Class ;
     rdfs:subClassOf evnt:Death ;
@@ -74,8 +82,9 @@ evnt:Suicide a owl:Class ;
         owl:onClass owl:Thing
     ] ;
     rdfs:label "suicide"@en ;
-    skos:altLabel "self-killing"@en ;
-    rdfs:comment "A death where the victim is also the agent. At most one agent."@en .
+    skos:altLabel "self-destruction"@en ;
+    rdfs:comment "A form of death in which the agent and the victim are identical."@en ;
+    skos:example "Turambar dies by falling on his own sword Gurthang."@en .
 
 evnt:Murder a owl:Class ;
     rdfs:subClassOf evnt:Death ;
@@ -86,7 +95,8 @@ evnt:Murder a owl:Class ;
     ] ;
     rdfs:label "murder"@en ;
     skos:altLabel "homicide"@en ;
-    rdfs:comment "A death caused intentionally by another. Has at least one agent."@en .
+    rdfs:comment "A death caused intentionally by another."@en ;
+    skos:example "The death of Saeros is caused by Túrin."@en .
 
 evnt:Marriage a owl:Class ;
     rdfs:subClassOf evnt:LifeEvent ;
@@ -98,25 +108,29 @@ evnt:Marriage a owl:Class ;
     ] ;
     rdfs:label "marriage"@en ;
     skos:altLabel "wedding"@en ;
-    rdfs:comment "Two characters getting married. Involves exactly 2 participants."@en .
+    rdfs:comment "A formal union between two characters."@en ;
+    skos:example "The marriage of Turambar and Níniel in Brethil."@en .
 
 evnt:ConflictEvent a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "conflict event"@en ;
     skos:altLabel "clash"@en ;
-    rdfs:comment "An event involving antagonism or violence."@en .
+    rdfs:comment "An event characterised by antagonism or violence."@en ;
+    skos:example "The Nirnaeth Arnoediad is a conflict event in Beleriand."@en .
 
 evnt:Battle a owl:Class ;
     rdfs:subClassOf evnt:ConflictEvent ;
     rdfs:label "battle"@en ;
     skos:altLabel "armed conflict"@en ;
-    rdfs:comment "A large scale violent confrontation."@en .
+    rdfs:comment "A large scale violent confrontation."@en ;
+    skos:example "The Nirnaeth Arnoediad is the Battle of Unnumbered Tears."@en .
 
 evnt:War a owl:Class ;
     rdfs:subClassOf evnt:ConflictEvent ;
     rdfs:label "war"@en ;
     skos:altLabel "prolonged conflict"@en ;
-    rdfs:comment "A prolonged conflict with multiple battles."@en .
+    rdfs:comment "A prolonged conflict composed of multiple battles."@en ;
+    skos:example "The Wars of Beleriand include the Nirnaeth Arnoediad."@en .
 
 evnt:Duel a owl:Class ;
     rdfs:subClassOf evnt:ConflictEvent ;
@@ -128,19 +142,22 @@ evnt:Duel a owl:Class ;
     ] ;
     rdfs:label "duel"@en ;
     skos:altLabel "single combat"@en ;
-    rdfs:comment "A fight between exactly two combatants."@en .
+    rdfs:comment "A fight between exactly two combatants."@en ;
+    skos:example "The duel between Turambar and Glaurung at Cabed-en-Aras."@en .
 
 evnt:Siege a owl:Class ;
     rdfs:subClassOf evnt:ConflictEvent ;
     rdfs:label "siege"@en ;
     skos:altLabel "blockade"@en ;
-    rdfs:comment "A military blockade of a city or fortress."@en .
+    rdfs:comment "A military blockade of a city or fortress."@en ;
+    skos:example "The siege and sack of Nargothrond."@en .
 
 evnt:MovementEvent a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "movement event"@en ;
     skos:altLabel "movement"@en ;
-    rdfs:comment "An event involving physical movement of characters between places."@en .
+    rdfs:comment "An event involving physical movement of characters between places."@en ;
+    skos:example "Túrin travels from Dor-lómin to Doriath."@en .
 
 evnt:Travel a owl:Class ;
     rdfs:subClassOf evnt:MovementEvent ;
@@ -156,91 +173,106 @@ evnt:Travel a owl:Class ;
     ] ;
     rdfs:label "travel"@en ;
     skos:altLabel "journey"@en ;
-    rdfs:comment "A journey. Every travel has origin and destination."@en .
+    rdfs:comment "A journey. Every travel has origin and destination."@en ;
+    skos:example "Túrin travels from Dor-lómin to Doriath."@en .
 
 evnt:Flight a owl:Class ;
     rdfs:subClassOf evnt:MovementEvent ;
     rdfs:label "flight"@en ;
     skos:altLabel "escape"@en ;
-    rdfs:comment "Characters flee from danger."@en .
+    rdfs:comment "An event in which characters flee from danger."@en ;
+    skos:example "The flight of survivors from the fall of Nargothrond."@en .
 
 evnt:Exile a owl:Class ;
     rdfs:subClassOf evnt:MovementEvent ;
     rdfs:label "exile"@en ;
     skos:altLabel "banishment"@en ;
-    rdfs:comment "Forced departure from homeland."@en .
+    rdfs:comment "A forced departure from the homeland."@en ;
+    skos:example "The exile of Túrin from Doriath after the death of Saeros."@en .
 
 evnt:Captivity a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "captivity"@en ;
     skos:altLabel "imprisonment"@en ;
-    rdfs:comment "A character is held prisoner."@en .
+    rdfs:comment "An event in which a character is held as a prisoner."@en ;
+    skos:example "The captivity of Húrin in Angband by Morgoth."@en .
 
 evnt:SocialEvent a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "social event"@en ;
     skos:altLabel "social gathering"@en ;
-    rdfs:comment "An event involving social interaction between characters."@en .
+    rdfs:comment "An event involving social interaction between characters."@en ;
+    skos:example "The trial of Túrin in absence at Menegroth."@en .
 
 evnt:Meeting a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "meeting"@en ;
     skos:altLabel "encounter"@en ;
-    rdfs:comment "An encounter or gathering of characters."@en .
+    rdfs:comment "An encounter or gathering of characters."@en ;
+    skos:example "Túrin meets Beleg in the wild."@en .
 
 evnt:Coronation a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "coronation"@en ;
     skos:altLabel "crowning ceremony"@en ;
-    rdfs:comment "A ceremony of crowning a ruler."@en .
+    rdfs:comment "A ceremony of crowning a ruler."@en ;
+    skos:example "Turgon is crowned King of Gondolin."@en .
 
 evnt:Feast a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "feast"@en ;
     skos:altLabel "banquet"@en ;
-    rdfs:comment "A large celebratory meal or banquet."@en .
+    rdfs:comment "A large celebratory meal or banquet."@en ;
+    skos:example "A feast held in the halls of Menegroth."@en .
 
 evnt:Council a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "council"@en ;
     skos:altLabel "deliberation"@en ;
-    rdfs:comment "A formal meeting for deliberation or the reach of a consensus."@en .
+    rdfs:comment "A formal meeting for deliberation or the reaching of a consensus."@en ;
+    skos:example "A council of the Elves in Nargothrond."@en .
 
 evnt:Trial a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "trial"@en ;
     skos:altLabel "judgement"@en ;
-    rdfs:comment "A judicial examination or hearing."@en .
+    rdfs:comment "A judicial examination or hearing."@en ;
+    skos:example "The trial of Túrin in absence, where Nellas testifies."@en .
 
 evnt:Curse a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "curse"@en ;
     skos:altLabel "malediction"@en ;
-    rdfs:comment "A supernatural imprecation bringing misfortune."@en .
+    rdfs:comment "A supernatural imprecation bringing misfortune."@en ;
+    skos:example "Mîm curses Andróg after the killing of Khîm."@en .
 
 evnt:Prophecy a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "prophecy"@en ;
     skos:altLabel "foretelling"@en ;
-    rdfs:comment "A prediction of future events, often supernatural."@en .
+    rdfs:comment "A prediction of future events, often supernatural."@en ;
+    skos:example "Morgoth's doom: thou shalt see with my eyes."@en .
 
 evnt:Enchantment a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "enchantment"@en ;
     skos:altLabel "spell"@en ;
-    rdfs:comment "A magical spell or charm placed on a character."@en .
+    rdfs:comment "A magical effect imposed on a character."@en ;
+    skos:example "Glaurung hypnotises Níniel at Nargothrond."@en .
 
 evnt:Discovery a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "discovery"@en ;
     skos:altLabel "revelation"@en ;
-    rdfs:comment "An event where something hidden is found or revealed."@en .
+    rdfs:comment "An event where something hidden is found or revealed."@en ;
+    skos:example "The truth about Níniel's identity is revealed."@en .
 
 evnt:Betrayal a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "betrayal"@en ;
     skos:altLabel "treachery"@en ;
-    rdfs:comment "An act of disloyalty or treachery."@en .
+    rdfs:comment "An act of disloyalty involving betrayal of trust."@en ;
+    skos:example "Mîm betrays Túrin to the Orcs at Amon Rûdh."@en .
 
 #
 # Properties
@@ -250,63 +282,72 @@ evnt:hasParticipant a owl:ObjectProperty ;
     rdfs:domain evnt:Event ;
     rdfs:label "has participant"@en ;
     skos:altLabel "involves"@en ;
-    rdfs:comment "An entity that takes part in the event."@en .
+    rdfs:comment "An entity that takes part in the event."@en ;
+    skos:example "The Battle of Unnumbered Tears has participant Húrin."@en .
 
 evnt:hasAgent a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Event ;
     rdfs:label "has agent"@en ;
     skos:altLabel "done by"@en ;
-    rdfs:comment "The entity that intentionally causes or performs the event."@en .
+    rdfs:comment "The entity that intentionally causes or performs the event."@en ;
+    skos:example "The death of Saeros has agent Túrin."@en .
 
 evnt:hasPatient a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Event ;
     rdfs:label "has patient"@en ;
     skos:altLabel "affects"@en ;
-    rdfs:comment "The entity affected by the event."@en .
+    rdfs:comment "The entity affected by the event."@en ;
+    skos:example "Glaurung hypnotises Níniel, with Níniel as the patient."@en .
 
 evnt:hasVictim a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasPatient ;
     rdfs:domain evnt:Event ;
     rdfs:label "has victim"@en ;
     skos:altLabel "harms"@en ;
-    rdfs:comment "The entity that suffers harm in the event."@en .
+    rdfs:comment "The entity that suffers harm in the event."@en ;
+    skos:example "The death of Beleg has victim Beleg."@en .
 
 evnt:hasWitness a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Event ;
     rdfs:label "has witness"@en ;
     skos:altLabel "observed by"@en ;
-    rdfs:comment "An entity that observes the event without acting."@en .
+    rdfs:comment "An entity that observes the event without acting."@en ;
+    skos:example "Mîm's betrayal has witness Andróg."@en .
 
 evnt:begets a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Birth ;
     rdfs:label "begets"@en ;
     skos:altLabel "brings forth"@en ;
-    rdfs:comment "The character brought into existence by a birth event."@en .
+    rdfs:comment "The character brought into existence by a birth event."@en ;
+    skos:example "The birth of Túrin begets Túrin."@en .
 
 evnt:isBegottenIn a owl:ObjectProperty ;
     owl:inverseOf evnt:begets ;
     rdfs:domain owl:Thing ;
     rdfs:range evnt:Birth ;
     rdfs:label "is begotten in"@en ;
-    rdfs:comment "Inverse of begets. Links a character to the birth event that brings them into existence."@en .
+    rdfs:comment "Inverse of begets. Links a character to the birth event that brings them into existence."@en ;
+    skos:example "Túrin is begotten in the birth of Túrin."@en .
 
 evnt:hasTraveller a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Travel ;
     rdfs:label "has traveller"@en ;
     skos:altLabel "travelled by"@en ;
-    rdfs:comment "The character who undertakes the travel."@en .
+    rdfs:comment "The character who undertakes the travel."@en ;
+    skos:example "Túrin, Gethron and Grithnir are travellers in the journey to Doriath."@en .
 
 evnt:occursAt a owl:ObjectProperty ;
     rdfs:domain evnt:Event ;
     rdfs:range loc:Place ;
     rdfs:label "occurs at"@en ;
     skos:altLabel "takes place at"@en ;
-    rdfs:comment "The place where the event occurs."@en .
+    rdfs:comment "The place where the event occurs."@en ;
+    skos:example "The Captivity of Húrin occurs at Angband."@en .
 
 evnt:hasOrigin a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:occursAt ;
@@ -314,7 +355,8 @@ evnt:hasOrigin a owl:ObjectProperty ;
     rdfs:range loc:Place ;
     rdfs:label "has origin"@en ;
     skos:altLabel "departs from"@en ;
-    rdfs:comment "The starting place of a movement event."@en .
+    rdfs:comment "The starting place of a movement event."@en ;
+    skos:example "Túrin's journey to Doriath has origin Dor-lómin."@en .
 
 evnt:hasDestination a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:occursAt ;
@@ -322,7 +364,8 @@ evnt:hasDestination a owl:ObjectProperty ;
     rdfs:range loc:Place ;
     rdfs:label "has destination"@en ;
     skos:altLabel "arrives at"@en ;
-    rdfs:comment "The ending place of a movement event."@en .
+    rdfs:comment "The ending place of a movement event."@en ;
+    skos:example "Túrin's journey has destination Doriath."@en .
 
 evnt:precedes a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:subPropertyOf to:precedes ;
@@ -330,45 +373,52 @@ evnt:precedes a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:range evnt:Event ;
     rdfs:label "precedes"@en ;
     skos:altLabel "comes before"@en ;
-    rdfs:comment "This event occurs before another event."@en .
+    rdfs:comment "This event occurs before another event."@en ;
+    skos:example "The Nirnaeth Arnoediad precedes Túrin's journey to Doriath."@en .
 
 evnt:causes a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain evnt:Event ;
     rdfs:range evnt:Event ;
     rdfs:label "causes"@en ;
     skos:altLabel "leads to"@en ;
-    rdfs:comment "This event causally leads to another event."@en .
+    rdfs:comment "This event causally leads to another event."@en ;
+    skos:example "The death of Saeros causes the exile of Túrin from Doriath."@en .
 
 evnt:isCausedBy a owl:ObjectProperty ;
     owl:inverseOf evnt:causes ;
     rdfs:label "is caused by"@en ;
     skos:altLabel "results from"@en ;
-    rdfs:comment "Inverse of causes. This event results from another."@en .
+    rdfs:comment "Inverse of causes. This event results from another."@en ;
+    skos:example "The exile of Túrin is caused by the death of Saeros."@en .
 
 evnt:hasSubEvent a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain evnt:Event ;
     rdfs:range evnt:Event ;
-    rdfs:label "has sub-event"@en ;
+    rdfs:label "has subevent"@en ;
     skos:altLabel "contains event"@en ;
-    rdfs:comment "A smaller event that occurs as part of this one."@en .
+    rdfs:comment "A smaller event that occurs as part of this one."@en ;
+    skos:example "The Wars of Beleriand has subevent the Nirnaeth Arnoediad."@en .
 
 evnt:isSubEventOf a owl:ObjectProperty ;
     owl:inverseOf evnt:hasSubEvent ;
-    rdfs:label "is sub-event of"@en ;
+    rdfs:label "is subevent of"@en ;
     skos:altLabel "part of event"@en ;
-    rdfs:comment "This event is part of a larger event."@en .
+    rdfs:comment "This event is part of a larger event."@en ;
+    skos:example "The Nirnaeth Arnoediad is a subevent of the Wars of Beleriand."@en .
 
 evnt:hasCause a owl:ObjectProperty ;
     rdfs:domain evnt:Event ;
     rdfs:label "has cause"@en ;
     skos:altLabel "caused by"@en ;
-    rdfs:comment "An entity involved as a contributing cause in the event."@en .
+    rdfs:comment "An entity involved as a contributing cause in the event."@en ;
+    skos:example "The death of Beleg has cause Anglachel."@en .
 
 evnt:creates a owl:ObjectProperty ;
     rdfs:domain evnt:Event ;
     rdfs:label "creates"@en ;
     skos:altLabel "results in"@en ;
-    rdfs:comment "An entity produced or created by the event."@en .
+    rdfs:comment "An entity produced or created by the event."@en ;
+    skos:example "The reforging of Anglachel creates Gurthang."@en .
 
 #
 # Axioms

@@ -10,15 +10,20 @@
 @prefix vann: <https://purl.org/vocab/vann/> .
 @prefix erdemonal: <https://w3id.org/people/erdemonal/> .
 
+dct:created a owl:AnnotationProperty .
+dct:creator a owl:AnnotationProperty .
+dct:modified a owl:AnnotationProperty .
+skos:altLabel a owl:AnnotationProperty .
+
 #
 # Place and Location Ontology
 # Defines types of places and spatial relationships
 #
 loc: a owl:Ontology ;
      rdfs:label "Place and Location Ontology"@en ;
-     rdfs:comment """An ontology for defining types of places and spatial relationships."""@en ;
+     rdfs:comment "An ontology for defining types of places and spatial relationships."@en ;
      dct:created "2026-03-11"^^xsd:date ;
-     dct:modified "2026-03-17"^^xsd:date ;
+     dct:modified "2026-03-19"^^xsd:date ;
      dct:creator erdemonal:me ;
      vann:preferredNamespaceUri "https://w3id.org/narn/location/" ;
      vann:preferredNamespacePrefix "loc" .
@@ -29,145 +34,169 @@ loc: a owl:Ontology ;
 loc:Place a owl:Class ;
     rdfs:label "place"@en ;
     skos:altLabel "location"@en ;
-    rdfs:comment """A named location that has geographic or spatial significance in a story."""@en .
+    rdfs:comment """A named location that has geographic or spatial significance in a story."""@en ;
+    skos:example "Beleriand is a place in Middle-earth."@en .
 
 loc:Region a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "region"@en ;
     skos:altLabel "area"@en ;
-    rdfs:comment "A large geographic area, typically contains multiple subplaces."@en .
+    rdfs:comment "A large geographic area, typically contains multiple subplaces."@en ;
+    skos:example "Beleriand is a region containing Doriath, Hithlum, and Brethil."@en .
 
 loc:LandArea a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "land area"@en ;
     skos:altLabel "land"@en ;
-    rdfs:comment "A place that is primarily defined by its land territory."@en .
+    rdfs:comment "A place that is primarily defined by its land territory."@en ;
+    skos:example "Dor-lómin is a land area in Hithlum."@en .
 
 loc:Continent a owl:Class ;
     rdfs:subClassOf loc:LandArea ;
     rdfs:label "continent"@en ;
     skos:altLabel "landmass"@en ;
-    rdfs:comment "A major landmass."@en .
+    rdfs:comment "A major landmass."@en ;
+    skos:example "Endor is a continent within Arda."@en .
 
 loc:Realm a owl:Class ;
     rdfs:subClassOf loc:LandArea ;
     rdfs:label "realm"@en ;
     skos:altLabel "kingdom"@en ;
-    rdfs:comment "A territory under the rule of a king or sovereign authority."@en .
+    rdfs:comment "A territory under the rule of a king or sovereign authority."@en ;
+    skos:example "Doriath is a realm ruled by King Thingol, with Menegroth as its capital."@en .
 
 loc:NaturalArea a owl:Class ;
     rdfs:subClassOf loc:Place ;
     owl:disjointWith loc:Settlement ;
     rdfs:label "natural area"@en ;
     skos:altLabel "natural feature"@en ;
-    rdfs:comment "A place defined by natural geographic features rather than habitation."@en .
-
+    rdfs:comment "A place defined by natural geographic features rather than habitation."@en ;
+    skos:example "Brethil is a natural area east of Doriath."@en .
+    
 loc:WoodedArea a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "wooded area"@en ;
     skos:altLabel "woodland"@en ;
-    rdfs:comment "A land area predominantly covered by trees."@en .
+    rdfs:comment "A land area predominantly covered by trees."@en ;
+    skos:example "Brethil is a wooded area in Beleriand."@en .
 
 loc:Forest a owl:Class ;
     rdfs:subClassOf loc:WoodedArea ;
     rdfs:label "forest"@en ;
     skos:altLabel "wood"@en ;
-    rdfs:comment "A large, dense wooded area."@en .
+    rdfs:comment "A large, dense wooded area."@en ;
+    skos:example "Brethil is a forest where Túrin lived under the name Turambar."@en .
 
 loc:Mountain a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "mountain"@en ;
     skos:altLabel "peak"@en ;
-    rdfs:comment "A large natural elevation of the earth's surface."@en .
-
+    rdfs:comment "A large natural elevation of the earth's surface."@en ;
+    skos:example "Ered Wethrin borders Hithlum."@en .
+    
 loc:Hill a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "hill"@en ;
     skos:altLabel "hillock"@en ;
-    rdfs:comment "A naturally raised area of land, smaller than a mountain."@en .
-
+    rdfs:comment "A naturally raised area of land, smaller than a mountain."@en ;
+    skos:example "Amon Rûdh is a hill where Túrin hid with Mîm."@en .
+    
 loc:Valley a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "valley"@en ;
     skos:altLabel "vale"@en ;
-    rdfs:comment "A low area of land between hills or mountains."@en .
+    rdfs:comment "A low area of land between hills or mountains."@en ;
+    skos:example "Tumladen is the valley where Gondolin was built."@en .
 
 loc:River a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "river"@en ;
     skos:altLabel "waterway"@en ;
-    rdfs:comment "A large natural stream of water."@en .
+    rdfs:comment "A large natural stream of water."@en ;
+    skos:example "The river Narog flows near Nargothrond."@en .
 
 loc:Lake a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "lake"@en ;
     skos:altLabel "body of water"@en ;
-    rdfs:comment "A large body of water surrounded by land."@en .
+    rdfs:comment "A large body of water surrounded by land."@en ;
+    skos:example "There is a lake near the hidden city of Gondolin."@en .
 
 loc:Sea a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "sea"@en ;
     skos:altLabel "ocean"@en ;
-    rdfs:comment "A large body of salt water."@en .
+    rdfs:comment "A large body of salt water."@en ;
+    skos:example "Belegaer is the Great Sea west of Middle-earth."@en .
 
 loc:Desert a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "desert"@en ;
     skos:altLabel "wasteland"@en ;
-    rdfs:comment "A barren, arid area with little vegetation."@en .
+    rdfs:comment "A barren, arid area with little vegetation."@en ;
+    skos:example "The Anfauglith is a desert north of Beleriand."@en .
 
 loc:WildArea a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "wild area"@en ;
     skos:altLabel "wilderness"@en ;
-    rdfs:comment "An uncultivated, uninhabited region."@en .
+    rdfs:comment "An uncultivated, uninhabited region."@en ;
+    skos:example "The wild lands between Doriath and Nargothrond."@en .
 
 loc:Settlement a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "settlement"@en ;
     skos:altLabel "inhabited place"@en ;
-    rdfs:comment "A place where people live permanently."@en .
+    rdfs:comment "A place where people live permanently."@en ;
+    skos:example "Menegroth is a settlement within Doriath."@en .
 
 loc:City a owl:Class ;
     rdfs:subClassOf loc:Settlement ;
     rdfs:label "city"@en ;
     skos:altLabel "urban area"@en ;
-    rdfs:comment "A large and significant settlement."@en .
+    rdfs:comment "A large and significant settlement."@en ;
+    skos:example "Gondolin is a hidden city in Tumladen."@en .
 
 loc:Town a owl:Class ;
     rdfs:subClassOf loc:Settlement ;
     rdfs:label "town"@en ;
     skos:altLabel "township"@en ;
-    rdfs:comment "A settlement larger than a village but smaller than a city."@en .
+    rdfs:comment "A settlement larger than a village but smaller than a city."@en ;
+    skos:example "There is a town along the road between Doriath and Nargothrond."@en .
 
 loc:Village a owl:Class ;
     rdfs:subClassOf loc:Settlement ;
     rdfs:label "village"@en ;
     skos:altLabel "hamlet"@en ;
-    rdfs:comment "A small settlement, typically in a rural area."@en .
+    rdfs:comment "A small settlement, typically in a rural area."@en ;
+    skos:example "There is a small village in Brethil where woodsmen live."@en .
 
 loc:Fortress a owl:Class ;
     rdfs:subClassOf loc:Settlement ;
     rdfs:label "fortress"@en ;
     skos:altLabel "stronghold"@en ;
-    rdfs:comment "A fortified place, typically a military stronghold."@en .
+    rdfs:comment "A fortified place, typically a military stronghold."@en ;
+    skos:example "Angband is Morgoth's fortress in the Iron Mountains."@en .
 
 loc:Building a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "building"@en ;
     skos:altLabel "structure"@en ;
-    rdfs:comment "A constructed structure."@en .
+    rdfs:comment "A constructed structure."@en ;
+    skos:example "The great hall of Menegroth is a building within the city."@en .
 
 loc:UndergroundPlace a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "underground place"@en ;
     skos:altLabel "subterranean place"@en ;
-    rdfs:comment "A place located beneath the surface of the earth."@en .
+    rdfs:comment "A place located beneath the surface of the earth."@en ;
+    skos:example "Menegroth and Nargothrond are underground places."@en .
 
 loc:UndergroundCity a owl:Class ;
     rdfs:label "underground city"@en ;
     skos:altLabel "subterranean city"@en ;
-    rdfs:comment "A city built underground, within caves or excavated halls."@en .
+    rdfs:comment "A city built underground, within caves or excavated halls."@en ;
+    skos:example "Menegroth is an underground city, the capital of Doriath."@en .
 
 #
 # Properties
@@ -177,7 +206,8 @@ loc:hasSpatialRelation a owl:ObjectProperty ;
     skos:altLabel "spatially related to"@en ;
     rdfs:domain loc:Place ;
     rdfs:range loc:Place ;
-    rdfs:comment "A general spatial relation between two places."@en .
+    rdfs:comment "A general spatial relation between two places."@en ;
+    skos:example "Doriath has a spatial relation to Brethil, as they border each other."@en .
 
 loc:isAPartOf a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:subPropertyOf loc:hasSpatialRelation ;
@@ -185,7 +215,8 @@ loc:isAPartOf a owl:ObjectProperty, owl:TransitiveProperty ;
     skos:altLabel "part of"@en ;
     rdfs:domain loc:Place ;
     rdfs:range loc:Place ;
-    rdfs:comment """Indicates that a place constitutes a subarea of another place."""@en .
+    rdfs:comment """Indicates that a place constitutes a subarea of another place."""@en ;
+    skos:example "Dor-lómin is a part of Hithlum."@en .
 
 loc:contains a owl:ObjectProperty, owl:TransitiveProperty ;
     owl:inverseOf loc:isAPartOf ;
@@ -194,32 +225,37 @@ loc:contains a owl:ObjectProperty, owl:TransitiveProperty ;
     skos:altLabel "includes"@en ;
     rdfs:domain loc:Place ;
     rdfs:range loc:Place ;
-    rdfs:comment "Inverse of isAPartOf."@en .
+    rdfs:comment "Inverse of isAPartOf."@en ;
+    skos:example "Beleriand contains Doriath."@en .
 
 loc:isStrictlyInsideOf a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf loc:isAPartOf ;
     rdfs:label "is strictly inside of"@en ;
     skos:altLabel "strictly within"@en ;
-    rdfs:comment "Stricter form of isAPartOf where boundaries do not touch."@en .
+    rdfs:comment "Stricter form of isAPartOf where boundaries do not touch."@en ;
+    skos:example "Gondolin is strictly inside of Tumladen."@en .
 
 loc:borders a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:subPropertyOf loc:hasSpatialRelation ;
     rdfs:label "borders"@en ;
     skos:altLabel "adjacent to"@en ;
-    rdfs:comment "Two places share a boundary but neither contains the other."@en .
+    rdfs:comment "Two places share a boundary but neither contains the other."@en ;
+    skos:example "Doriath borders Brethil."@en .
 
 loc:isNear a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:subPropertyOf loc:hasSpatialRelation ;
     rdfs:label "is near"@en ;
     skos:altLabel "close to"@en ;
-    rdfs:comment "Two places are in proximity."@en .
+    rdfs:comment "Two places are in proximity."@en ;
+    skos:example "The river Narog is near Nargothrond."@en .
 
 loc:isTheCapitalOf a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:label "is the capital of"@en ;
     skos:altLabel "capital of"@en ;
     rdfs:domain loc:Settlement ;
     rdfs:range loc:Realm ;
-    rdfs:comment "A settlement is the capital of a realm."@en .
+    rdfs:comment "A settlement is the capital of a realm."@en ;
+    skos:example "Menegroth is the capital of Doriath."@en .
 
 #
 # Axioms

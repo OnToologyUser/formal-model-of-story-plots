@@ -14,160 +14,186 @@
 @prefix erdemonal: <https://w3id.org/people/erdemonal/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dct:created a owl:AnnotationProperty .
+dct:creator a owl:AnnotationProperty .
+dct:modified a owl:AnnotationProperty .
+skos:altLabel a owl:AnnotationProperty .
 
 narn: a owl:Ontology ;
     rdfs:label "Formal Model of Story Plots"@en ;
     rdfs:comment "An OWL ontology for modeling story plots and narrative structures. It provides a formal vocabulary to represent characters, locations, events, actions, and temporal relations within a narrative."@en ;
     dct:created "2026-03-17"^^xsd:date ;
+    dct:modified "2026-03-19"^^xsd:date ;
     dct:creator erdemonal:me ;
     vann:preferredNamespaceUri "https://w3id.org/narn/" ;
     vann:preferredNamespacePrefix "narn" .
 
-#
-# Classes
-#
 loc:Place a owl:Class ;
     rdfs:label "place"@en ;
     skos:altLabel "location"@en ;
-    rdfs:comment """A named location that has geographic or spatial significance in a story."""@en .
+    rdfs:comment """A named location that has geographic or spatial significance in a story."""@en ;
+    skos:example "Beleriand is a place in Middle-earth."@en .
 
 loc:Region a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "region"@en ;
     skos:altLabel "area"@en ;
-    rdfs:comment "A large geographic area, typically contains multiple subplaces."@en .
+    rdfs:comment "A large geographic area, typically contains multiple subplaces."@en ;
+    skos:example "Beleriand is a region containing Doriath, Hithlum, and Brethil."@en .
 
 loc:LandArea a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "land area"@en ;
     skos:altLabel "land"@en ;
-    rdfs:comment "A place that is primarily defined by its land territory."@en .
+    rdfs:comment "A place that is primarily defined by its land territory."@en ;
+    skos:example "Dor-lómin is a land area in Hithlum."@en .
 
 loc:Continent a owl:Class ;
     rdfs:subClassOf loc:LandArea ;
     rdfs:label "continent"@en ;
     skos:altLabel "landmass"@en ;
-    rdfs:comment "A major landmass."@en .
+    rdfs:comment "A major landmass."@en ;
+    skos:example "Endor is a continent within Arda."@en .
 
 loc:Realm a owl:Class ;
     rdfs:subClassOf loc:LandArea ;
     rdfs:label "realm"@en ;
     skos:altLabel "kingdom"@en ;
-    rdfs:comment "A territory under the rule of a king or sovereign authority."@en .
+    rdfs:comment "A territory under the rule of a king or sovereign authority."@en ;
+    skos:example "Doriath is a realm ruled by King Thingol, with Menegroth as its capital."@en .
 
 loc:NaturalArea a owl:Class ;
     rdfs:subClassOf loc:Place ;
     owl:disjointWith loc:Settlement ;
     rdfs:label "natural area"@en ;
     skos:altLabel "natural feature"@en ;
-    rdfs:comment "A place defined by natural geographic features rather than habitation."@en .
-
+    rdfs:comment "A place defined by natural geographic features rather than habitation."@en ;
+    skos:example "Brethil is a natural area east of Doriath."@en .
+    
 loc:WoodedArea a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "wooded area"@en ;
     skos:altLabel "woodland"@en ;
-    rdfs:comment "A land area predominantly covered by trees."@en .
+    rdfs:comment "A land area predominantly covered by trees."@en ;
+    skos:example "Brethil is a wooded area in Beleriand."@en .
 
 loc:Forest a owl:Class ;
     rdfs:subClassOf loc:WoodedArea ;
     rdfs:label "forest"@en ;
     skos:altLabel "wood"@en ;
-    rdfs:comment "A large, dense wooded area."@en .
+    rdfs:comment "A large, dense wooded area."@en ;
+    skos:example "Brethil is a forest where Túrin lived under the name Turambar."@en .
 
 loc:Mountain a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "mountain"@en ;
     skos:altLabel "peak"@en ;
-    rdfs:comment "A large natural elevation of the earth's surface."@en .
-
+    rdfs:comment "A large natural elevation of the earth's surface."@en ;
+    skos:example "Ered Wethrin borders Hithlum."@en .
+    
 loc:Hill a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "hill"@en ;
     skos:altLabel "hillock"@en ;
-    rdfs:comment "A naturally raised area of land, smaller than a mountain."@en .
-
+    rdfs:comment "A naturally raised area of land, smaller than a mountain."@en ;
+    skos:example "Amon Rûdh is a hill where Túrin hid with Mîm."@en .
+    
 loc:Valley a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "valley"@en ;
     skos:altLabel "vale"@en ;
-    rdfs:comment "A low area of land between hills or mountains."@en .
+    rdfs:comment "A low area of land between hills or mountains."@en ;
+    skos:example "Tumladen is the valley where Gondolin was built."@en .
 
 loc:River a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "river"@en ;
     skos:altLabel "waterway"@en ;
-    rdfs:comment "A large natural stream of water."@en .
+    rdfs:comment "A large natural stream of water."@en ;
+    skos:example "The river Narog flows near Nargothrond."@en .
 
 loc:Lake a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "lake"@en ;
     skos:altLabel "body of water"@en ;
-    rdfs:comment "A large body of water surrounded by land."@en .
+    rdfs:comment "A large body of water surrounded by land."@en ;
+    skos:example "There is a lake near the hidden city of Gondolin."@en .
 
 loc:Sea a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "sea"@en ;
     skos:altLabel "ocean"@en ;
-    rdfs:comment "A large body of salt water."@en .
+    rdfs:comment "A large body of salt water."@en ;
+    skos:example "Belegaer is the Great Sea west of Middle-earth."@en .
 
 loc:Desert a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "desert"@en ;
     skos:altLabel "wasteland"@en ;
-    rdfs:comment "A barren, arid area with little vegetation."@en .
+    rdfs:comment "A barren, arid area with little vegetation."@en ;
+    skos:example "The Anfauglith is a desert north of Beleriand."@en .
 
 loc:WildArea a owl:Class ;
     rdfs:subClassOf loc:NaturalArea ;
     rdfs:label "wild area"@en ;
     skos:altLabel "wilderness"@en ;
-    rdfs:comment "An uncultivated, uninhabited region."@en .
+    rdfs:comment "An uncultivated, uninhabited region."@en ;
+    skos:example "The wild lands between Doriath and Nargothrond."@en .
 
 loc:Settlement a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "settlement"@en ;
     skos:altLabel "inhabited place"@en ;
-    rdfs:comment "A place where people live permanently."@en .
+    rdfs:comment "A place where people live permanently."@en ;
+    skos:example "Menegroth is a settlement within Doriath."@en .
 
 loc:City a owl:Class ;
     rdfs:subClassOf loc:Settlement ;
     rdfs:label "city"@en ;
     skos:altLabel "urban area"@en ;
-    rdfs:comment "A large and significant settlement."@en .
+    rdfs:comment "A large and significant settlement."@en ;
+    skos:example "Gondolin is a hidden city in Tumladen."@en .
 
 loc:Town a owl:Class ;
     rdfs:subClassOf loc:Settlement ;
     rdfs:label "town"@en ;
     skos:altLabel "township"@en ;
-    rdfs:comment "A settlement larger than a village but smaller than a city."@en .
+    rdfs:comment "A settlement larger than a village but smaller than a city."@en ;
+    skos:example "There is a town along the road between Doriath and Nargothrond."@en .
 
 loc:Village a owl:Class ;
     rdfs:subClassOf loc:Settlement ;
     rdfs:label "village"@en ;
     skos:altLabel "hamlet"@en ;
-    rdfs:comment "A small settlement, typically in a rural area."@en .
+    rdfs:comment "A small settlement, typically in a rural area."@en ;
+    skos:example "There is a small village in Brethil where woodsmen live."@en .
 
 loc:Fortress a owl:Class ;
     rdfs:subClassOf loc:Settlement ;
     rdfs:label "fortress"@en ;
     skos:altLabel "stronghold"@en ;
-    rdfs:comment "A fortified place, typically a military stronghold."@en .
+    rdfs:comment "A fortified place, typically a military stronghold."@en ;
+    skos:example "Angband is Morgoth's fortress in the Iron Mountains."@en .
 
 loc:Building a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "building"@en ;
     skos:altLabel "structure"@en ;
-    rdfs:comment "A constructed structure."@en .
+    rdfs:comment "A constructed structure."@en ;
+    skos:example "The great hall of Menegroth is a building within the city."@en .
 
 loc:UndergroundPlace a owl:Class ;
     rdfs:subClassOf loc:Place ;
     rdfs:label "underground place"@en ;
     skos:altLabel "subterranean place"@en ;
-    rdfs:comment "A place located beneath the surface of the earth."@en .
+    rdfs:comment "A place located beneath the surface of the earth."@en ;
+    skos:example "Menegroth and Nargothrond are underground places."@en .
 
 loc:UndergroundCity a owl:Class ;
     rdfs:label "underground city"@en ;
     skos:altLabel "subterranean city"@en ;
-    rdfs:comment "A city built underground, within caves or excavated halls."@en .
+    rdfs:comment "A city built underground, within caves or excavated halls."@en ;
+    skos:example "Menegroth is an underground city, the capital of Doriath."@en .
 
 #
 # Properties
@@ -177,7 +203,8 @@ loc:hasSpatialRelation a owl:ObjectProperty ;
     skos:altLabel "spatially related to"@en ;
     rdfs:domain loc:Place ;
     rdfs:range loc:Place ;
-    rdfs:comment "A general spatial relation between two places."@en .
+    rdfs:comment "A general spatial relation between two places."@en ;
+    skos:example "Doriath has a spatial relation to Brethil, as they border each other."@en .
 
 loc:isAPartOf a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:subPropertyOf loc:hasSpatialRelation ;
@@ -185,7 +212,8 @@ loc:isAPartOf a owl:ObjectProperty, owl:TransitiveProperty ;
     skos:altLabel "part of"@en ;
     rdfs:domain loc:Place ;
     rdfs:range loc:Place ;
-    rdfs:comment """Indicates that a place constitutes a subarea of another place."""@en .
+    rdfs:comment """Indicates that a place constitutes a subarea of another place."""@en ;
+    skos:example "Dor-lómin is a part of Hithlum."@en .
 
 loc:contains a owl:ObjectProperty, owl:TransitiveProperty ;
     owl:inverseOf loc:isAPartOf ;
@@ -194,32 +222,37 @@ loc:contains a owl:ObjectProperty, owl:TransitiveProperty ;
     skos:altLabel "includes"@en ;
     rdfs:domain loc:Place ;
     rdfs:range loc:Place ;
-    rdfs:comment "Inverse of isAPartOf."@en .
+    rdfs:comment "Inverse of isAPartOf."@en ;
+    skos:example "Beleriand contains Doriath."@en .
 
 loc:isStrictlyInsideOf a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf loc:isAPartOf ;
     rdfs:label "is strictly inside of"@en ;
     skos:altLabel "strictly within"@en ;
-    rdfs:comment "Stricter form of isAPartOf where boundaries do not touch."@en .
+    rdfs:comment "Stricter form of isAPartOf where boundaries do not touch."@en ;
+    skos:example "Gondolin is strictly inside of Tumladen."@en .
 
 loc:borders a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:subPropertyOf loc:hasSpatialRelation ;
     rdfs:label "borders"@en ;
     skos:altLabel "adjacent to"@en ;
-    rdfs:comment "Two places share a boundary but neither contains the other."@en .
+    rdfs:comment "Two places share a boundary but neither contains the other."@en ;
+    skos:example "Doriath borders Brethil."@en .
 
 loc:isNear a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:subPropertyOf loc:hasSpatialRelation ;
     rdfs:label "is near"@en ;
     skos:altLabel "close to"@en ;
-    rdfs:comment "Two places are in proximity."@en .
+    rdfs:comment "Two places are in proximity."@en ;
+    skos:example "The river Narog is near Nargothrond."@en .
 
 loc:isTheCapitalOf a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:label "is the capital of"@en ;
     skos:altLabel "capital of"@en ;
     rdfs:domain loc:Settlement ;
     rdfs:range loc:Realm ;
-    rdfs:comment "A settlement is the capital of a realm."@en .
+    rdfs:comment "A settlement is the capital of a realm."@en ;
+    skos:example "Menegroth is the capital of Doriath."@en .
 
 #
 # Axioms
@@ -277,66 +310,412 @@ loc:Continent rdfs:subClassOf [
 loc:borders a owl:IrreflexiveProperty .
 loc:isNear a owl:IrreflexiveProperty .
 
+to:TemporalEntity a owl:Class ;
+    rdfs:label "temporal entity"@en ;
+    skos:altLabel "time entity"@en ;
+    rdfs:comment "An entity existing within a specific temporal dimension."@en ;
+    skos:example "The moment of Túrin's birth and the span of his life represent temporal entities."@en .
+
+to:Instant a owl:Class ;
+    rdfs:subClassOf to:TemporalEntity ;
+    owl:disjointWith to:Interval ;
+    rdfs:label "instant"@en ;
+    skos:altLabel "time point"@en ;
+    rdfs:comment "A temporal entity representing a single point in time with a duration of strictly zero."@en ;
+    skos:example "The precise moment of Túrin's birth constitutes an instant."@en .
+
+to:Interval a owl:Class ;
+    rdfs:subClassOf to:TemporalEntity ;
+    rdfs:label "interval"@en ;
+    skos:altLabel "time span"@en ;
+    rdfs:comment "A continuous temporal entity characterized by a strictly positive duration."@en ;
+    skos:example "The complete timeline of the Narn represents a temporal interval."@en .
+
+to:FiniteInterval a owl:Class ;
+    rdfs:subClassOf to:Interval, to:StartingInterval, to:EndingInterval ;
+    owl:disjointWith to:InfiniteInterval ;
+    rdfs:label "finite interval"@en ;
+    skos:altLabel "bounded interval"@en ;
+    rdfs:comment "A bounded temporal interval defined by both a distinct starting instant and a distinct ending instant."@en ;
+    skos:example "The Battle of Unnumbered Tears constitutes a finite interval possessing defined chronological boundaries."@en .
+
+to:InfiniteInterval a owl:Class ;
+    rdfs:subClassOf to:Interval ;
+    rdfs:label "infinite interval"@en ;
+    skos:altLabel "unbounded interval"@en ;
+    rdfs:comment "A temporal interval extending infinitely in at least one direction."@en ;
+    skos:example "The lifespan of an immortal Elf represents an infinite interval extending continuously into the future."@en .
+
+to:StartingInterval a owl:Class ;
+    rdfs:subClassOf to:Interval ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty to:startsAt ;
+        owl:someValuesFrom to:Instant
+    ] ;
+    rdfs:label "starting interval"@en ;
+    skos:altLabel "begins with"@en ;
+    rdfs:comment "An interval bounded by a distinct starting instant but lacking a defined ending point."@en ;
+    skos:example "The life of an Elf exemplifies a starting interval since it begins at birth but possesses no natural conclusion."@en .
+
+to:EndingInterval a owl:Class ;
+    rdfs:subClassOf to:Interval ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty to:endsAt ;
+        owl:someValuesFrom to:Instant
+    ] ;
+    rdfs:label "ending interval"@en ;
+    skos:altLabel "ending point"@en ;
+    rdfs:comment "An interval bounded by a distinct ending instant but lacking a defined starting point."@en ;
+    skos:example "A historical epoch stretching back indefinitely but concluding at a specific catastrophe represents an ending interval."@en .
+
+to:EternalInterval a owl:Class ;
+    rdfs:subClassOf to:InfiniteInterval ;
+    rdfs:label "eternal interval"@en ;
+    skos:altLabel "everlasting interval"@en ;
+    rdfs:comment "A temporally unbounded interval extending infinitely into both the past and the future."@en ;
+    skos:example "The continuous existence of the universe Eä serves as an eternal interval."@en .
+
+# Properties
+to:occursBefore a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain to:Instant ;
+    rdfs:range to:Instant ;
+    owl:propertyDisjointWith to:occursSimultaneouslyTo ;
+    rdfs:label "occurs before"@en ;
+    skos:altLabel "earlier than"@en ;
+    rdfs:comment "A temporal relation placing the first instant chronologically prior to the second."@en ;
+    skos:example "The moment of Túrin's birth occurs before the moment of Lalaith's birth."@en .
+
+to:occursAfter a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:occursBefore ;
+    rdfs:domain to:Instant ;
+    rdfs:range to:Instant ;
+    rdfs:label "occurs after"@en ;
+    skos:altLabel "later than"@en ;
+    rdfs:comment "A temporal relation placing the first instant chronologically subsequent to the second."@en ;
+    skos:example "The moment of Nienor's birth occurs after the moment of Lalaith's birth."@en .
+
+to:occursSimultaneouslyTo a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty, owl:TransitiveProperty ;
+    rdfs:domain to:Instant ;
+    rdfs:range to:Instant ;
+    rdfs:label "occurs simultaneously to"@en ;
+    skos:altLabel "at same time as"@en ;
+    rdfs:comment "A temporal relation linking two distinct instants that occupy the exact same chronological position."@en ;
+    skos:example "Two separate observations mapping to the exact same chronological instant occur simultaneously."@en .
+
+to:hasInstant a owl:ObjectProperty ;
+    rdfs:domain to:Interval ;
+    rdfs:range to:Instant ;
+    rdfs:label "has instant"@en ;
+    skos:altLabel "at instant"@en ;
+    rdfs:comment "The association between a temporal interval and a specific instant contained within or bounding it."@en ;
+    skos:example "The overarching timeline of the Narn has an instant mapped to the moment of Túrin's birth."@en .
+
+to:startsAt a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf to:hasInstant ;
+    rdfs:domain to:Interval ;
+    rdfs:range to:Instant ;
+    rdfs:label "starts at"@en ;
+    skos:altLabel "beginning point"@en ;
+    rdfs:comment "The absolute starting instant bounding the beginning of a temporal interval."@en ;
+    skos:example "The chronological span of the Narn starts at the moment of Túrin's birth."@en .
+
+to:endsAt a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf to:hasInstant ;
+    rdfs:domain to:Interval ;
+    rdfs:range to:Instant ;
+    rdfs:label "ends at"@en ;
+    skos:altLabel "ending point"@en ;
+    rdfs:comment "The absolute ending instant bounding the conclusion of a temporal interval."@en ;
+    skos:example "The Battle of Unnumbered Tears ends at the precise instant of the final retreat."@en .
+
+to:occursDuring a owl:ObjectProperty ;
+    rdfs:domain to:Instant ;
+    rdfs:range to:Interval ;
+    rdfs:label "occurs during"@en ;
+    skos:altLabel "within timeframe of"@en ;
+    rdfs:comment "The enclosure of a specific instant strictly within the temporal boundaries of an interval."@en ;
+    skos:example "The precise moment of Khîm's death occurs during the interval of Túrin's habitation at Amon Rûdh."@en .
+
+to:hasDateTime a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain to:Instant ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has date time"@en ;
+    skos:altLabel "dateTime value"@en ;
+    rdfs:comment "The standardized chronological date and time value of a specific temporal instant."@en ;
+    skos:example "The instant of publication maps to a specific dateTime value in the standard calendar."@en .
+
+to:hasDuration a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain to:Interval ;
+    rdfs:range xsd:duration ;
+    rdfs:label "has duration"@en ;
+    skos:altLabel "time length"@en ;
+    rdfs:comment "The absolute temporal length spanned by a defined interval."@en ;
+    skos:example "The interval representing Túrin's time in Doriath has a duration measured in several years."@en .
+
+to:intervalRelation a owl:ObjectProperty ;
+    rdfs:domain to:Interval ;
+    rdfs:range to:Interval ;
+    rdfs:label "interval relation"@en ;
+    skos:altLabel "Allen relation"@en ;
+    rdfs:comment "A topological temporal relation between two distinct intervals."@en ;
+    skos:example "The relational mapping between the birth of Túrin and the birth of Lalaith constitutes an interval relation."@en .
+
+to:before a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "before"@en ;
+    skos:altLabel "precedes"@en ;
+    rdfs:comment "The primary interval concludes strictly prior to the commencement of the secondary interval."@en ;
+    skos:example "The interval of Túrin's birth occurs strictly before the interval of Lalaith's birth."@en .
+
+to:after a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:before ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "after"@en ;
+    skos:altLabel "follows"@en ;
+    rdfs:comment "The primary interval commences strictly subsequent to the conclusion of the secondary interval."@en ;
+    skos:example "The interval of Nienor's birth occurs strictly after the conclusion of the Nirnaeth Arnoediad."@en .
+
+to:meets a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "meets"@en ;
+    skos:altLabel "immediately before"@en ;
+    rdfs:comment "The ending instant of the primary interval is chronologically identical to the starting instant of the secondary interval."@en ;
+    skos:example "The chronological span of the Nirnaeth Arnoediad meets the interval of Húrin's captivity without any intervening gap."@en .
+
+to:metBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    owl:inverseOf to:meets ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "met by"@en ;
+    skos:altLabel "immediately after"@en ;
+    rdfs:comment "The starting instant of the primary interval is chronologically identical to the ending instant of the secondary interval."@en ;
+    skos:example "The interval of Húrin's captivity is met by the conclusion of the Nirnaeth Arnoediad."@en .
+
+to:overlaps a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    owl:propertyDisjointWith to:before, to:meets ;
+    rdfs:label "overlaps"@en ;
+    skos:altLabel "partially before"@en ;
+    rdfs:comment "The primary interval begins before the secondary interval and concludes strictly within its duration."@en ;
+    skos:example "The interval of Túrin's time among the outlaws overlaps with the beginning of his time at Amon Rûdh."@en .
+
+to:overlappedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
+    owl:inverseOf to:overlaps ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "overlapped by"@en ;
+    skos:altLabel "partially after"@en ;
+    rdfs:comment "The primary interval begins strictly within the duration of the secondary interval and concludes after it."@en ;
+    skos:example "Túrin's time at Amon Rûdh is overlapped by the preceding interval of his time among the outlaws."@en .
+
+to:starts a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "starts"@en ;
+    skos:altLabel "begins with"@en ;
+    rdfs:comment "Both intervals share identical starting instants while the primary interval concludes strictly before the secondary interval."@en ;
+    skos:example "The interval representing the birth of Túrin starts the overarching timeline of the Narn."@en .
+
+to:startedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:starts ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "started by"@en ;
+    skos:altLabel "begun by"@en ;
+    rdfs:comment "Both intervals share identical starting instants while the primary interval extends strictly beyond the conclusion of the secondary interval."@en ;
+    skos:example "The overarching timeline of the Narn is started by the interval representing the birth of Túrin."@en .
+
+to:during a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "during"@en ;
+    skos:altLabel "contained in"@en ;
+    rdfs:comment "The primary interval is strictly and completely enclosed within the chronological boundaries of the secondary interval."@en ;
+    skos:example "The interval representing the killing of Khîm occurs strictly during Túrin's habitation at Amon Rûdh."@en .
+
+to:containsInterval a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:during ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "contains interval"@en ;
+    skos:altLabel "temporally contains"@en ;
+    rdfs:comment "The primary interval strictly and completely encloses the chronological boundaries of the secondary interval."@en ;
+    skos:example "The overarching timeline of the Narn temporally contains the interval of Túrin's time in Doriath."@en .
+
+to:finishes a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "finishes"@en ;
+    skos:altLabel "ends with"@en ;
+    rdfs:comment "Both intervals share identical ending instants while the primary interval commences strictly after the secondary interval begins."@en ;
+    skos:example "The interval representing the death of Turambar finishes the overarching timeline of the Narn."@en .
+
+to:finishedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:finishes ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "finished by"@en ;
+    skos:altLabel "ended by"@en ;
+    rdfs:comment "Both intervals share identical ending instants while the primary interval commences strictly before the secondary interval begins."@en ;
+    skos:example "The overarching timeline of the Narn is finished by the interval representing the death of Turambar."@en .
+
+to:equals a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "equals"@en ;
+    skos:altLabel "same time as"@en ;
+    rdfs:comment "Absolute chronological equivalence where two intervals share identical starting and ending instants."@en ;
+    skos:example "The temporal span of the Siege of Nargothrond equals the chronological span of the Fall of Nargothrond."@en .
+
+to:precedes a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf to:intervalRelation ;
+    rdfs:label "precedes"@en ;
+    skos:altLabel "happens before"@en ;
+    rdfs:comment "The primary interval concludes either strictly prior to or exactly at the commencement of the secondary interval."@en ;
+    skos:example "The span of the Nirnaeth Arnoediad temporally precedes Túrin's journey to Doriath."@en .
+
+to:before rdfs:subPropertyOf to:precedes .
+to:meets rdfs:subPropertyOf to:precedes .
+
+to:precededBy a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf to:precedes ;
+    rdfs:label "preceded by"@en ;
+    skos:altLabel "happens after"@en ;
+    rdfs:comment "The primary interval commences either strictly subsequent to or exactly at the conclusion of the secondary interval."@en ;
+    skos:example "Túrin's journey to Doriath is temporally preceded by the span of the Nirnaeth Arnoediad."@en .
 
 #
-# Properties
+# Axioms
 #
+to:FiniteInterval owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        to:Interval
+        [ a owl:Restriction ;
+          owl:onProperty to:startsAt ;
+          owl:someValuesFrom to:Instant ]
+        [ a owl:Restriction ;
+          owl:onProperty to:endsAt ;
+          owl:someValuesFrom to:Instant ]
+    )
+] .
+
+to:EternalInterval owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        to:InfiniteInterval
+        [ a owl:Class ; owl:complementOf to:StartingInterval ]
+        [ a owl:Class ; owl:complementOf to:EndingInterval ]
+    )
+] .
+
+to:StartingInterval owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+        to:Interval
+        [ a owl:Restriction ;
+          owl:onProperty to:startsAt ;
+          owl:someValuesFrom to:Instant ]
+    )
+] .
+
+to:Interval rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty to:hasInstant ;
+    owl:allValuesFrom to:Instant
+] .
+
+to:FiniteInterval rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty to:startsAt ;
+    owl:allValuesFrom to:Instant
+] .
+
+to:FiniteInterval rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty to:startsAt ;
+    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass to:Instant
+] .
+to:FiniteInterval rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty to:endsAt ;
+    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass to:Instant
+] .
+
+to:EternalInterval owl:disjointWith to:FiniteInterval .
+
+to:startsAt owl:propertyDisjointWith to:endsAt .
+
+[] a owl:AllDisjointProperties ;
+    owl:members ( to:before to:after to:meets to:metBy
+                  to:overlaps to:overlappedBy to:starts to:startedBy
+                  to:during to:containsInterval to:finishes to:finishedBy
+                  to:equals ) .
+
+to:startsAt a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+to:endsAt a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+to:hasInstant a owl:AsymmetricProperty, owl:IrreflexiveProperty .
+
 rcc:spatiallyRelatedTo a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label "spatially related to"@en ;
     skos:altLabel "spatial relation"@en ;
     rdfs:domain loc:Place ;
     rdfs:range loc:Place ;
-    rdfs:comment "The most general spatial relation between two regions."@en .
+    rdfs:comment "The most general spatial relation between two regions."@en ;
+    skos:example "Doriath is spatially related to Brethil."@en .
 
 rcc:DC a owl:ObjectProperty, owl:SymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
     rdfs:label "disconnected"@en ;
     skos:altLabel "disjoint regions"@en ;
-    rdfs:comment "Two regions share no points at all."@en .
+    rdfs:comment "Describes a spatial relation where two regions are strictly disjoint and share no spatial points."@en ;
+    skos:example "Angband and Doriath are disconnected since they share no spatial regions."@en .
 
 rcc:EC a owl:ObjectProperty, owl:SymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
     rdfs:label "externally connected"@en ;
     skos:altLabel "touching regions"@en ;
-    rdfs:comment "Boundaries touch but interiors are disjoint."@en .
+    rdfs:comment "Denotes a relation where the boundaries of two regions intersect while their interiors remain disjoint."@en ;
+    skos:example "Brethil is externally connected to Doriath because their boundaries touch."@en .
 
 rcc:PO a owl:ObjectProperty, owl:SymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
     rdfs:label "partially overlapping"@en ;
     skos:altLabel "overlapping regions"@en ;
-    rdfs:comment "Part of each region is inside the other but neither is contained."@en .
+    rdfs:comment "Indicates that two regions share a common interior subset without either fully subsuming the other."@en ;
+    skos:example "The wild lands partially overlap with Brethil."@en .
 
 rcc:EQ a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty, owl:TransitiveProperty ;
     rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
     rdfs:label "equal"@en ;
     skos:altLabel "coextensive regions"@en ;
-    rdfs:comment "Same spatial extent. Equivalence relation."@en .
+    rdfs:comment "Represents spatial equivalence where two distinct entities occupy the exact identical spatial extent."@en ;
+    skos:example "The Thousand Caves and Menegroth are spatially equal entities."@en .
 
 rcc:TPP a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
     rdfs:label "tangential proper part"@en ;
     skos:altLabel "tangential part"@en ;
-    rdfs:comment "First region entirely inside second, boundaries touch."@en .
+    rdfs:comment "Defines a state where the primary region is entirely subsumed by the secondary region while sharing at least one boundary point."@en ;
+    skos:example "Hithlum is a tangential proper part of Beleriand."@en .
 
 rcc:TPPi a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
     owl:inverseOf rcc:TPP ;
     rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
     rdfs:label "tangential proper part inverse"@en ;
     skos:altLabel "tangential whole"@en ;
-    rdfs:comment "First region entirely contains second, boundaries touch."@en .
+    rdfs:comment "The inverse relation where the primary region completely subsumes the secondary region while sharing boundary points."@en ;
+    skos:example "Beleriand represents the tangential proper part inverse of Hithlum."@en .
 
 rcc:NTPP a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
     rdfs:label "non-tangential proper part"@en ;
     skos:altLabel "interior part"@en ;
-    rdfs:comment "First region entirely inside second, boundaries do not touch."@en .
+    rdfs:comment "Specifies a relation where the primary region is strictly contained within the interior of the secondary region with no shared boundary points."@en ;
+    skos:example "Dor-lómin is a non-tangential proper part of Hithlum as it is completely enclosed."@en .
 
 rcc:NTPPi a owl:ObjectProperty, owl:TransitiveProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
     owl:inverseOf rcc:NTPP ;
     rdfs:subPropertyOf rcc:spatiallyRelatedTo ;
     rdfs:label "non-tangential proper part inverse"@en ;
     skos:altLabel "interior whole"@en ;
-    rdfs:comment "First region entirely contains second, boundaries do not touch."@en .
+    rdfs:comment "The inverse relation where the primary region completely and strictly contains the secondary region within its interior."@en ;
+    skos:example "Hithlum is the non-tangential proper part inverse of Dor-lómin."@en .
 
 #
 # Axioms
@@ -364,392 +743,75 @@ rcc:PO owl:propertyDisjointWith loc:contains .
 [] a owl:AllDisjointProperties ;
     owl:members ( rcc:DC rcc:EC rcc:PO rcc:EQ rcc:TPP rcc:TPPi rcc:NTPP rcc:NTPPi ) .
 
-#
-# Classes
-#
-to:TemporalEntity a owl:Class ;
-    rdfs:label "temporal entity"@en ;
-    skos:altLabel "time entity"@en ;
-    rdfs:comment "A thing that exists in time."@en .
-
-to:Instant a owl:Class ;
-    rdfs:subClassOf to:TemporalEntity ;
-    owl:disjointWith to:Interval ;
-    rdfs:label "instant"@en ;
-    skos:altLabel "time point"@en ;
-    rdfs:comment "A single point in time with zero duration."@en .
-
-to:Interval a owl:Class ;
-    rdfs:subClassOf to:TemporalEntity ;
-    rdfs:label "interval"@en ;
-    skos:altLabel "time span"@en ;
-    rdfs:comment "A continuous extent of time with nonzero duration."@en .
-
-to:FiniteInterval a owl:Class ;
-    rdfs:subClassOf to:Interval, to:StartingInterval, to:EndingInterval ;
-    owl:disjointWith to:InfiniteInterval ;
-    rdfs:label "finite interval"@en ;
-    skos:altLabel "bounded interval"@en ;
-    rdfs:comment "An interval with both a starting and ending instant."@en .
-
-to:InfiniteInterval a owl:Class ;
-    rdfs:subClassOf to:Interval ;
-    rdfs:label "infinite interval"@en ;
-    skos:altLabel "unbounded interval"@en ;
-    rdfs:comment "An interval extending infinitely in at least one direction."@en .
-
-to:StartingInterval a owl:Class ;
-    rdfs:subClassOf to:Interval ;
-    rdfs:subClassOf [
-        a owl:Restriction ;
-        owl:onProperty to:startsAt ;
-        owl:someValuesFrom to:Instant
-    ] ;
-    rdfs:label "starting interval"@en ;
-    skos:altLabel "begins with"@en ;
-    rdfs:comment "An interval with a defined starting instant."@en .
-
-to:EndingInterval a owl:Class ;
-    rdfs:subClassOf to:Interval ;
-    rdfs:subClassOf [
-        a owl:Restriction ;
-        owl:onProperty to:endsAt ;
-        owl:someValuesFrom to:Instant
-    ] ;
-    rdfs:label "ending interval"@en ;
-    skos:altLabel "ending point"@en ;
-    rdfs:comment "An interval with a defined ending instant."@en .
-
-to:EternalInterval a owl:Class ;
-    rdfs:subClassOf to:InfiniteInterval ;
-    rdfs:label "eternal interval"@en ;
-    skos:altLabel "everlasting interval"@en ;
-    rdfs:comment "An interval extending infinitely in both directions."@en .
-
-# Properties
-to:occursBefore a owl:ObjectProperty, owl:TransitiveProperty ;
-    rdfs:domain to:Instant ;
-    rdfs:range to:Instant ;
-    owl:propertyDisjointWith to:occursSimultaneouslyTo ;
-    rdfs:label "occurs before"@en ;
-    skos:altLabel "earlier than"@en ;
-    rdfs:comment "Instant strictly before another."@en .
-
-to:occursAfter a owl:ObjectProperty, owl:TransitiveProperty ;
-    owl:inverseOf to:occursBefore ;
-    rdfs:domain to:Instant ;
-    rdfs:range to:Instant ;
-    rdfs:label "occurs after"@en ;
-    skos:altLabel "later than"@en ;
-    rdfs:comment "Inverse of occursBefore."@en .
-
-to:occursSimultaneouslyTo a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty, owl:TransitiveProperty ;
-    rdfs:domain to:Instant ;
-    rdfs:range to:Instant ;
-    rdfs:label "occurs simultaneously to"@en ;
-    skos:altLabel "at same time as"@en ;
-    rdfs:comment "Two instants at the same time."@en .
-
-to:hasInstant a owl:ObjectProperty ;
-    rdfs:domain to:Interval ;
-    rdfs:range to:Instant ;
-    rdfs:label "has instant"@en ;
-    skos:altLabel "at instant"@en ;
-    rdfs:comment "Links an interval to an instant that falls within or bounds it."@en .
-
-to:startsAt a owl:ObjectProperty, owl:FunctionalProperty ;
-    rdfs:subPropertyOf to:hasInstant ;
-    rdfs:domain to:Interval ;
-    rdfs:range to:Instant ;
-    rdfs:label "starts at"@en ;
-    skos:altLabel "beginning point"@en ;
-    rdfs:comment "The unique starting instant."@en .
-
-to:endsAt a owl:ObjectProperty, owl:FunctionalProperty ;
-    rdfs:subPropertyOf to:hasInstant ;
-    rdfs:domain to:Interval ;
-    rdfs:range to:Instant ;
-    rdfs:label "ends at"@en ;
-    skos:altLabel "ending point"@en ;
-    rdfs:comment "The unique ending instant."@en .
-
-to:occursDuring a owl:ObjectProperty ;
-    rdfs:domain to:Instant ;
-    rdfs:range to:Interval ;
-    rdfs:label "occurs during"@en ;
-    skos:altLabel "within timeframe of"@en ;
-    rdfs:comment "An instant falls within the extent of an interval."@en .
-
-to:hasDateTime a owl:DatatypeProperty, owl:FunctionalProperty ;
-    rdfs:domain to:Instant ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "has date time"@en ;
-    skos:altLabel "dateTime value"@en ;
-    rdfs:comment "The calendar date and time of an instant."@en .
-
-to:hasDuration a owl:DatatypeProperty, owl:FunctionalProperty ;
-    rdfs:domain to:Interval ;
-    rdfs:range xsd:duration ;
-    rdfs:label "has duration"@en ;
-    skos:altLabel "time length"@en ;
-    rdfs:comment "The length of time spanned by an interval."@en .
-
-to:intervalRelation a owl:ObjectProperty ;
-    rdfs:domain to:Interval ;
-    rdfs:range to:Interval ;
-    rdfs:label "interval relation"@en ;
-    skos:altLabel "Allen relation"@en ;
-    rdfs:comment "General temporal relation between two intervals."@en .
-
-to:before a owl:ObjectProperty, owl:TransitiveProperty ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "before"@en ;
-    skos:altLabel "precedes"@en ;
-    rdfs:comment "X ends before Y starts."@en .
-
-to:after a owl:ObjectProperty, owl:TransitiveProperty ;
-    owl:inverseOf to:before ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "after"@en ;
-    skos:altLabel "follows"@en ;
-    rdfs:comment "Inverse of before. X starts after Y ends."@en .
-
-to:meets a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "meets"@en ;
-    skos:altLabel "immediately before"@en ;
-    rdfs:comment "X ends exactly when Y starts."@en .
-
-to:metBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
-    owl:inverseOf to:meets ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "met by"@en ;
-    skos:altLabel "immediately after"@en ;
-    rdfs:comment "Inverse of meets. X starts exactly when Y ends."@en .
-
-to:overlaps a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    owl:propertyDisjointWith to:before, to:meets ;
-    rdfs:label "overlaps"@en ;
-    skos:altLabel "partially before"@en ;
-    rdfs:comment "X starts before Y, ends after Y starts but before Y ends."@en .
-
-to:overlappedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
-    owl:inverseOf to:overlaps ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "overlapped by"@en ;
-    skos:altLabel "partially after"@en ;
-    rdfs:comment "Inverse of overlaps. Y starts before X, ends after X starts but before X ends."@en .
-
-to:starts a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "starts"@en ;
-    skos:altLabel "begins with"@en ;
-    rdfs:comment "X starts at same time as Y but ends before Y ends."@en .
-
-to:startedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
-    owl:inverseOf to:starts ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "started by"@en ;
-    skos:altLabel "begun by"@en ;
-    rdfs:comment "Inverse of starts. X starts when Y starts but Y ends after X ends."@en .
-
-to:during a owl:ObjectProperty, owl:TransitiveProperty ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "during"@en ;
-    skos:altLabel "contained in"@en ;
-    rdfs:comment "X occurs entirely within Y."@en .
-
-to:containsInterval a owl:ObjectProperty, owl:TransitiveProperty ;
-    owl:inverseOf to:during ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "contains interval"@en ;
-    skos:altLabel "temporally contains"@en ;
-    rdfs:comment "Inverse of during. X entirely contains Y."@en .
-
-to:finishes a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "finishes"@en ;
-    skos:altLabel "ends with"@en ;
-    rdfs:comment "X ends at same time as Y but starts after Y starts."@en .
-
-to:finishedBy a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty, owl:TransitiveProperty ;
-    owl:inverseOf to:finishes ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "finished by"@en ;
-    skos:altLabel "ended by"@en ;
-    rdfs:comment "Inverse of finishes. X ends when Y ends but Y starts before X starts."@en .
-
-to:equals a owl:ObjectProperty, owl:SymmetricProperty, owl:ReflexiveProperty, owl:TransitiveProperty ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "equals"@en ;
-    skos:altLabel "same time as"@en ;
-    rdfs:comment "Same temporal extent."@en .
-
-
-to:precedes a owl:ObjectProperty, owl:TransitiveProperty ;
-    rdfs:subPropertyOf to:intervalRelation ;
-    rdfs:label "precedes"@en ;
-    skos:altLabel "happens before"@en ;
-    rdfs:comment "X ends before or when Y starts."@en .
-
-to:before rdfs:subPropertyOf to:precedes .
-to:meets rdfs:subPropertyOf to:precedes .
-
-to:precededBy a owl:ObjectProperty, owl:TransitiveProperty ;
-    owl:inverseOf to:precedes ;
-    rdfs:label "preceded by"@en ;
-    skos:altLabel "happens after"@en ;
-    rdfs:comment "Inverse of precedes. X starts after or when Y ends."@en .
-
-#
-# Axioms
-#
-# FiniteInterval ≡ Interval ⊓ ∃startsAt.Instant ⊓ ∃endsAt.Instant
-#
-to:FiniteInterval owl:equivalentClass [
-    a owl:Class ;
-    owl:intersectionOf (
-        to:Interval
-        [ a owl:Restriction ;
-          owl:onProperty to:startsAt ;
-          owl:someValuesFrom to:Instant ]
-        [ a owl:Restriction ;
-          owl:onProperty to:endsAt ;
-          owl:someValuesFrom to:Instant ]
-    )
-] .
-
-# EternalInterval ≡ InfiniteInterval ⊓ ¬StartingInterval ⊓ ¬EndingInterval
-to:EternalInterval owl:equivalentClass [
-    a owl:Class ;
-    owl:intersectionOf (
-        to:InfiniteInterval
-        [ a owl:Class ; owl:complementOf to:StartingInterval ]
-        [ a owl:Class ; owl:complementOf to:EndingInterval ]
-    )
-] .
-
-# A starting interval is any interval that has a beginning
-to:StartingInterval owl:equivalentClass [
-    a owl:Class ;
-    owl:intersectionOf (
-        to:Interval
-        [ a owl:Restriction ;
-          owl:onProperty to:startsAt ;
-          owl:someValuesFrom to:Instant ]
-    )
-] .
-
-
-# An Interval's instants are only Instants (not other intervals)
-to:Interval rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty to:hasInstant ;
-    owl:allValuesFrom to:Instant
-] .
-
-# startsAt and endsAt range only to Instants
-to:FiniteInterval rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty to:startsAt ;
-    owl:allValuesFrom to:Instant
-] .
-
-
-
-# A FiniteInterval has exactly 1 start instant and exactly 1 end instant
-to:FiniteInterval rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty to:startsAt ;
-    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:onClass to:Instant
-] .
-to:FiniteInterval rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty to:endsAt ;
-    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:onClass to:Instant
-] .
-
-to:EternalInterval owl:disjointWith to:FiniteInterval .
-
-
-to:startsAt owl:propertyDisjointWith to:endsAt .
-
-[] a owl:AllDisjointProperties ;
-    owl:members ( to:before to:after to:meets to:metBy
-                  to:overlaps to:overlappedBy to:starts to:startedBy
-                  to:during to:containsInterval to:finishes to:finishedBy
-                  to:equals ) .
-
-to:startsAt a owl:AsymmetricProperty, owl:IrreflexiveProperty .
-to:endsAt a owl:AsymmetricProperty, owl:IrreflexiveProperty .
-to:hasInstant a owl:AsymmetricProperty, owl:IrreflexiveProperty .
-
-
-#
-# Classes
-#
 soc:SocialRole a owl:Class ;
     rdfs:label "social role"@en ;
     skos:altLabel "role"@en ;
-    rdfs:comment "A role that a character plays in a social context."@en .
+    rdfs:comment "A defined structural position that a character occupies within a social context."@en ;
+    skos:example "Thingol occupies the social role of a King."@en .
 
 soc:PoliticalRole a owl:Class ;
     rdfs:subClassOf soc:SocialRole ;
     rdfs:label "political role"@en ;
     skos:altLabel "political position"@en ;
-    rdfs:comment "A social role involving governance or political authority."@en .
+    rdfs:comment "A specific social role involving governance or formal political authority."@en ;
+    skos:example "The positions of King and Chieftain serve as political roles."@en .
 
 soc:MilitaryRole a owl:Class ;
     rdfs:subClassOf soc:SocialRole ;
     rdfs:label "military role"@en ;
     skos:altLabel "military position"@en ;
-    rdfs:comment "A social role related to military or combat functions."@en .
+    rdfs:comment "A social role structurally related to military leadership or combat functions."@en ;
+    skos:example "Serving as a captain or general in the armies of Beleriand represents a military role."@en .
 
 soc:King a owl:Class ;
     rdfs:subClassOf soc:PoliticalRole ;
     owl:disjointWith soc:Servant ;
     rdfs:label "king"@en ;
     skos:altLabel "monarch"@en ;
-    rdfs:comment "A ruler of a realm or kingdom."@en .
+    rdfs:comment "Designates the supreme sovereign or monarch of a defined realm or kingdom."@en ;
+    skos:example "Thingol serves as the King governing the realm of Doriath."@en .
 
 soc:Chieftain a owl:Class ;
     rdfs:subClassOf soc:PoliticalRole ;
     rdfs:label "chieftain"@en ;
     skos:altLabel "chief"@en ;
-    rdfs:comment "The leader of a people or tribe."@en .
+    rdfs:comment "Denotes the principal leader or head of a specific people or tribal group."@en ;
+    skos:example "Brandir acts as the chieftain leading the people of Brethil."@en .
 
 soc:Servant a owl:Class ;
     rdfs:subClassOf soc:SocialRole ;
     rdfs:label "servant"@en ;
     skos:altLabel "attendant"@en ;
-    rdfs:comment "One who serves another."@en .
+    rdfs:comment "Identifies an individual bound to the service and assistance of another figure."@en ;
+    skos:example "Sador operates as a servant in the household of Húrin."@en .
 
 soc:Outlaw a owl:Class ;
     rdfs:subClassOf soc:SocialRole ;
     rdfs:label "outlaw"@en ;
     skos:altLabel "fugitive"@en ;
-    rdfs:comment "A person who lives outside the law."@en .
+    rdfs:comment "Classifies an individual existing outside the protection and constraints of organized legal structures."@en ;
+    skos:example "Forweg and Andróg operate as outlaws in the wild lands."@en .
 
 soc:Ally a owl:Class ;
     rdfs:subClassOf soc:SocialRole ;
     owl:disjointWith soc:Outlaw ;
     rdfs:label "ally"@en ;
     skos:altLabel "companion"@en ;
-    rdfs:comment "One allied with others"@en .
+    rdfs:comment "Represents an individual united with others in a formal or informal alliance."@en ;
+    skos:example "Beleg stands as a steadfast ally to Túrin."@en .
 
 soc:Leader a owl:Class ;
     rdfs:label "leader"@en ;
     skos:altLabel "ruler"@en ;
-    rdfs:comment "A leader is either a King or a Chieftain."@en .
+    rdfs:comment "A general classification encompassing sovereign figures such as a King or a Chieftain."@en ;
+    skos:example "Figures such as King Thingol and Chieftain Brandir act as leaders."@en .
 
 soc:NonLeader a owl:Class ;
     owl:complementOf soc:Leader ;
     rdfs:label "non-leader"@en ;
     skos:altLabel "non-ruler"@en ;
-    rdfs:comment "Anyone who is not a Leader."@en .
+    rdfs:comment "Categorizes individuals who hold no sovereign or primary leadership authority."@en ;
+    skos:example "A servant like Sador is classified as a non-leader."@en .
 
 soc:RoyalServant a owl:Class ;
     owl:intersectionOf (
@@ -760,19 +822,29 @@ soc:RoyalServant a owl:Class ;
     ) ;
     rdfs:label "royal servant"@en ;
     skos:altLabel "royal attendant"@en ;
-    rdfs:comment "A servant who serves a king."@en .
+    rdfs:comment "Designates a servant specifically sworn to the service of a royal monarch."@en ;
+    skos:example "Beleg qualifies as a royal servant by virtue of serving King Thingol."@en .
 
 soc:EmotionalValence a owl:Class ;
     owl:oneOf ( soc:positive soc:negative soc:ambivalent ) ;
     rdfs:label "emotional valence"@en ;
     skos:altLabel "sentiment type"@en ;
-    rdfs:comment "Enumerated class: {positive, negative, ambivalent}."@en .
+    rdfs:comment "Defines a classification of emotional sentiments comprising positive negative or ambivalent states."@en ;
+    skos:example "Húrin possesses a positive valence whereas Glaurung possesses a negative valence."@en .
 
-soc:positive a owl:NamedIndividual ; rdfs:label "positive"@en ; rdfs:comment "A positive emotional valence."@en  ;
+soc:positive a owl:NamedIndividual ; 
+    rdfs:label "positive"@en ; 
+    rdfs:comment "Represents a constructive and affirmative emotional state."@en ;
     skos:altLabel "positive sentiment"@en .
-soc:negative a owl:NamedIndividual ; rdfs:label "negative"@en ; rdfs:comment "A negative emotional valence."@en  ;
+
+soc:negative a owl:NamedIndividual ; 
+    rdfs:label "negative"@en ; 
+    rdfs:comment "Represents a destructive or hostile emotional state."@en ;
     skos:altLabel "negative sentiment"@en .
-soc:ambivalent a owl:NamedIndividual ; rdfs:label "ambivalent"@en ; rdfs:comment "An ambivalent or mixed emotional valence."@en  ;
+
+soc:ambivalent a owl:NamedIndividual ; 
+    rdfs:label "ambivalent"@en ; 
+    rdfs:comment "Represents a mixed or unresolved emotional state."@en ;
     skos:altLabel "mixed sentiment"@en .
 
 soc:SuicidalCharacter a owl:Class ;
@@ -783,7 +855,19 @@ soc:SuicidalCharacter a owl:Class ;
     ] ;
     rdfs:label "suicidal character"@en ;
     skos:altLabel "self slain character"@en ;
-    rdfs:comment "A character who committed suicide."@en .
+    rdfs:comment "Identifies a narrative figure who intentionally caused their own death."@en ;
+    skos:example "Both Túrin and Níniel are categorized as suicidal characters."@en .
+
+soc:PositiveRelation a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty soc:hasValence ;
+        owl:hasValue soc:positive
+    ] ;
+    rdfs:label "positive relation"@en ;
+    skos:altLabel "positive bond"@en ;
+    rdfs:comment "Denotes a relational bond characterized by a strictly positive emotional valence."@en ;
+    skos:example "Húrin maintains a positive relation due to his affirmative emotional valence."@en .
 
 #
 # Properties
@@ -793,152 +877,165 @@ soc:hasEmotionalRelationWith a owl:ObjectProperty ;
     rdfs:range owl:Thing ;
     rdfs:label "has emotional relation with"@en ;
     skos:altLabel "feels towards"@en ;
-    rdfs:comment "General emotional relationship between two characters."@en .
+    rdfs:comment "Defines a broad emotional directedness or sentiment from one character toward another."@en ;
+    skos:example "Saeros holds a deep emotional relation rooted in hatred towards Túrin."@en .
 
 soc:loved a owl:ObjectProperty ;
     rdfs:subPropertyOf soc:hasEmotionalRelationWith ;
     rdfs:label "loved"@en ;
     skos:altLabel "had love for"@en ;
-    rdfs:comment "Character had feelings of love towards another."@en .
+    rdfs:comment "Indicates a profound sentiment of affection or love directed at another entity."@en ;
+    skos:example "Húrin held a deep affection and loved Morwen."@en .
 
 soc:hated a owl:ObjectProperty ;
     rdfs:subPropertyOf soc:hasEmotionalRelationWith ;
     rdfs:label "hated"@en ;
     skos:altLabel "had hatred for"@en ;
-    rdfs:comment "Character had hatred towards another."@en .
+    rdfs:comment "Indicates a profound sentiment of malice or hatred directed at another entity."@en ;
+    skos:example "Saeros harbored intense resentment and hated Túrin."@en .
 
 soc:feared a owl:ObjectProperty ;
     rdfs:subPropertyOf soc:hasEmotionalRelationWith ;
     rdfs:label "feared"@en ;
     skos:altLabel "had fear of"@en ;
-    rdfs:comment "Character feared another character."@en .
+    rdfs:comment "Denotes a state of dread or apprehension regarding another character."@en ;
+    skos:example "Glaurung recognized the threat and feared Túrin."@en .
 
 soc:hasFriend a owl:ObjectProperty,
     owl:SymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf soc:hasEmotionalRelationWith ;
     rdfs:label "has friend"@en ;
     skos:altLabel "is a friend of"@en ;
-    rdfs:comment "Mutual friendship. Symmetric."@en .
+    rdfs:comment "Represents a symmetric and mutual bond of friendship between two entities."@en ;
+    skos:example "Túrin maintains a mutual friendship and has friend Sador."@en .
 
 soc:wasTheBestFriendOf a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:subPropertyOf soc:hasFriend ;
     rdfs:label "was the best friend of"@en ;
     skos:altLabel "closest companion of"@en ;
-    rdfs:comment "Particularly close friendship."@en .
+    rdfs:comment "Specifies an exceptionally close and prioritized bond of mutual friendship."@en ;
+    skos:example "Beleg proved his loyalty and was the best friend of Túrin."@en .
 
 soc:isAnEnemyOf a owl:ObjectProperty, owl:SymmetricProperty ;
     owl:propertyDisjointWith soc:hasFriend ;
     rdfs:label "is an enemy of"@en ;
     skos:altLabel "foe of"@en ;
-    rdfs:comment "Antagonistic relation."@en .
+    rdfs:comment "Defines a fundamentally antagonistic and hostile relationship."@en ;
+    skos:example "Morgoth stands as a prime antagonist and is an enemy of Húrin."@en .
 
 soc:mutuallyLoved a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:subPropertyOf soc:loved ;
     rdfs:label "mutually loved"@en ;
     skos:altLabel "reciprocally loved"@en ;
-    rdfs:comment "Two characters loved each other."@en .
+    rdfs:comment "Describes a symmetric emotional state where two characters share reciprocal affection."@en ;
+    skos:example "Turambar and Níniel shared a bond and mutually loved each other."@en .
 
 soc:served a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range owl:Thing ;
     rdfs:label "served"@en ;
     skos:altLabel "was in service of"@en ;
-    rdfs:comment "Character served another as a subordinate."@en .
+    rdfs:comment "Indicates a hierarchical relationship where one character acts as a subordinate to another."@en ;
+    skos:example "Sador was loyal and served Húrin."@en .
 
 soc:wasServedBy a owl:ObjectProperty ;
     owl:inverseOf soc:served ;
     rdfs:label "was served by"@en ;
     skos:altLabel "had as servant"@en ;
-    rdfs:comment "Inverse of served."@en .
+    rdfs:comment "The inverse relation designating the superior who receives service."@en ;
+    skos:example "Húrin held authority and was served by Sador."@en .
 
 soc:wasTheKingOf a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:label "was the king of"@en ;
     skos:altLabel "reigned over"@en ;
     rdfs:range loc:Place ;
-    rdfs:comment "Character was the ruler of a place."@en .
+    rdfs:comment "Specifies the geographical or political domain over which a character held absolute royal authority."@en ;
+    skos:example "Thingol held supreme authority and was the king of Doriath."@en .
 
 soc:wasTheChieftainOf a owl:ObjectProperty ;
     rdfs:label "was the chieftain of"@en ;
     skos:altLabel "led as chief"@en ;
     rdfs:range loc:Place ;
-    rdfs:comment "Character was the chieftain of a people or place."@en .
+    rdfs:comment "Specifies the domain or people over which a character exercised tribal leadership."@en ;
+    skos:example "Brandir guided his people and was the chieftain of Brethil."@en .
 
 soc:ruled a owl:ObjectProperty ;
     owl:equivalentProperty soc:wasTheKingOf ;
     rdfs:label "ruled"@en ;
     skos:altLabel "governed"@en ;
-    rdfs:comment "Equivalent to wasTheKingOf."@en .
+    rdfs:comment "Functions as an equivalent property signifying sovereign rule over a domain."@en ;
+    skos:example "Thingol governed and ruled Doriath."@en .
 
 soc:livedIn a owl:ObjectProperty ;
     rdfs:label "lived in"@en ;
     skos:altLabel "dwelt in"@en ;
     rdfs:range loc:Place ;
-    rdfs:comment "Character lived in a place during some period."@en .
+    rdfs:comment "Indicates a geographical location where a character resided for a significant duration."@en ;
+    skos:example "Túrin spent parts of his life and lived in Dor-lómin and Doriath."@en .
 
 soc:wasHeldCaptiveIn a owl:ObjectProperty ;
     rdfs:subPropertyOf soc:livedIn ;
     rdfs:label "was held captive in"@en ;
     skos:altLabel "imprisoned in"@en ;
     rdfs:range loc:Place ;
-    rdfs:comment "Character was imprisoned."@en .
+    rdfs:comment "Specifies a location where a character was forcibly imprisoned or contained."@en ;
+    skos:example "Húrin suffered greatly and was held captive in Angband."@en .
 
 soc:killed a owl:ObjectProperty, owl:IrreflexiveProperty, owl:AsymmetricProperty ;
     rdfs:label "killed"@en ;
     skos:altLabel "slew"@en ;
-    rdfs:comment "X killed Y."@en .
+    rdfs:comment "Indicates a fatal action where the subject directly causes the death of the object."@en ;
+    skos:example "Túrin engaged in a fatal conflict and killed Saeros."@en .
 
 soc:wasKilledBy a owl:ObjectProperty ;
     owl:inverseOf soc:killed ;
     rdfs:label "was killed by"@en ;
     skos:altLabel "slain by"@en ;
-    rdfs:comment "Inverse of killed."@en .
+    rdfs:comment "The inverse relation specifying the perpetrator of a fatal action against the subject."@en ;
+    skos:example "Beleg suffered a tragic fate and was killed by Gorthol."@en .
 
 soc:committedSuicide a owl:ObjectProperty ;
     rdfs:label "committed suicide"@en ;
     skos:altLabel "took own life"@en ;
-    rdfs:comment "Self killing."@en .
+    rdfs:comment "Denotes the tragic act of a character intentionally taking their own life."@en ;
+    skos:example "Túrin fell into despair and committed suicide with his sword Gurthang."@en .
 
 soc:cursed a owl:ObjectProperty ;
     rdfs:label "cursed"@en ;
     skos:altLabel "placed a curse on"@en ;
-    rdfs:comment "Character placed a curse upon another."@en .
+    rdfs:comment "Describes an act where a character invokes supernatural malevolence or a curse upon another."@en ;
+    skos:example "Mîm sought revenge and cursed Andróg after the killing of Khîm."@en .
 
 soc:hypnotised a owl:ObjectProperty ;
     rdfs:label "hypnotised"@en ;
     skos:altLabel "cast a spell on"@en ;
-    rdfs:comment "Character placed another under a spell."@en .
+    rdfs:comment "Indicates the act of subjecting another character to a mental spell or hypnotic enchantment."@en ;
+    skos:example "Glaurung used his power and hypnotised Níniel."@en .
 
 soc:isAKinsmanOf a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label "is a kinsman of"@en ;
     skos:altLabel "kin of"@en ;
-    rdfs:comment "Kinship or blood relation."@en .
+    rdfs:comment "Represents a symmetric bond based on shared familial lineage or blood relation."@en ;
+    skos:example "Túrin shares a bloodline and is a kinsman of Nienor."@en .
 
 soc:isMarriedTo a owl:ObjectProperty ;
     a owl:SymmetricProperty, owl:IrreflexiveProperty ;
     rdfs:label "is married to"@en ;
     skos:altLabel "wed to"@en ;
-    rdfs:comment "Marriage relationship."@en .
+    rdfs:comment "Denotes a formal and symmetric matrimonial relationship between two entities."@en ;
+    skos:example "Turambar formalized his bond and is married to Níniel."@en .
 
 soc:hasValence a owl:ObjectProperty ;
     a owl:FunctionalProperty ;
     rdfs:range soc:EmotionalValence ;
     rdfs:label "has valence"@en ;
     skos:altLabel "has sentiment"@en ;
-    rdfs:comment "Assigns an emotional valence. Functional."@en .
+    rdfs:comment "Functionally assigns a specific emotional state or valence to a relational entity."@en ;
+    skos:example "Húrin acts functionally and has valence positive."@en .
 
 #
 # Axioms
 #
-soc:PositiveRelation a owl:Class ;
-    owl:equivalentClass [
-        a owl:Restriction ;
-        owl:onProperty soc:hasValence ;
-        owl:hasValue soc:positive
-    ] ;
-    rdfs:label "positive relation"@en ;
-    skos:altLabel "positive bond"@en ;
-    rdfs:comment "A relation with positive emotional valence (owl:hasValue construct)."@en .
-
 
 soc:Leader owl:equivalentClass [
     a owl:Class ;
@@ -995,22 +1092,19 @@ soc:wasServedBy owl:propertyDisjointWith soc:isAnEnemyOf .
 [] a owl:AllDisjointProperties ;
     owl:members ( soc:loved soc:hated soc:feared ) .
 
-
-#
-# Classes
-#
 evnt:Event a owl:Class ;
     rdfs:subClassOf to:FiniteInterval ;
     rdfs:label "event"@en ;
     skos:altLabel "occurrence"@en ;
-    rdfs:comment """A spatio-temporal occurrence involving participants at places.
-        Every event is a finite temporal interval."""@en .
+    rdfs:comment "A spatio-temporal occurrence involving participants and locations. Every event is a finite temporal interval."@en ;
+    skos:example "The Battle of Unnumbered Tears is an event occurring in Beleriand."@en .
 
 evnt:LifeEvent a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "life event"@en ;
     skos:altLabel "life occurrence"@en ;
-    rdfs:comment "A significant moment in a character's life."@en .
+    rdfs:comment "A significant moment in a character's life."@en ;
+    skos:example "The birth of Túrin in Dor-lómin is a life event."@en .
 
 evnt:Birth a owl:Class ;
     rdfs:subClassOf evnt:LifeEvent ;
@@ -1021,7 +1115,8 @@ evnt:Birth a owl:Class ;
     ] ;
     rdfs:label "birth"@en ;
     skos:altLabel "nativity"@en ;
-    rdfs:comment "A character being born. Every birth begets at least one character."@en .
+    rdfs:comment "The coming into existence of a character."@en ;
+    skos:example "The birth of Túrin takes place in Dor-lómin."@en .
 
 evnt:Death a owl:Class ;
     rdfs:subClassOf evnt:LifeEvent ;
@@ -1033,7 +1128,8 @@ evnt:Death a owl:Class ;
     ] ;
     rdfs:label "death"@en ;
     skos:altLabel "demise"@en ;
-    rdfs:comment "A character dying. Every death has at least one victim."@en .
+    rdfs:comment "The death of a character."@en ;
+    skos:example "The death of Beleg is caused by Túrin."@en .
 
 evnt:Suicide a owl:Class ;
     rdfs:subClassOf evnt:Death ;
@@ -1044,8 +1140,9 @@ evnt:Suicide a owl:Class ;
         owl:onClass owl:Thing
     ] ;
     rdfs:label "suicide"@en ;
-    skos:altLabel "self-killing"@en ;
-    rdfs:comment "A death where the victim is also the agent. At most one agent."@en .
+    skos:altLabel "self-destruction"@en ;
+    rdfs:comment "A form of death in which the agent and the victim are identical."@en ;
+    skos:example "Turambar dies by falling on his own sword Gurthang."@en .
 
 evnt:Murder a owl:Class ;
     rdfs:subClassOf evnt:Death ;
@@ -1056,7 +1153,8 @@ evnt:Murder a owl:Class ;
     ] ;
     rdfs:label "murder"@en ;
     skos:altLabel "homicide"@en ;
-    rdfs:comment "A death caused intentionally by another. Has at least one agent."@en .
+    rdfs:comment "A death caused intentionally by another."@en ;
+    skos:example "The death of Saeros is caused by Túrin."@en .
 
 evnt:Marriage a owl:Class ;
     rdfs:subClassOf evnt:LifeEvent ;
@@ -1068,25 +1166,29 @@ evnt:Marriage a owl:Class ;
     ] ;
     rdfs:label "marriage"@en ;
     skos:altLabel "wedding"@en ;
-    rdfs:comment "Two characters getting married. Involves exactly 2 participants."@en .
+    rdfs:comment "A formal union between two characters."@en ;
+    skos:example "The marriage of Turambar and Níniel in Brethil."@en .
 
 evnt:ConflictEvent a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "conflict event"@en ;
     skos:altLabel "clash"@en ;
-    rdfs:comment "An event involving antagonism or violence."@en .
+    rdfs:comment "An event characterised by antagonism or violence."@en ;
+    skos:example "The Nirnaeth Arnoediad is a conflict event in Beleriand."@en .
 
 evnt:Battle a owl:Class ;
     rdfs:subClassOf evnt:ConflictEvent ;
     rdfs:label "battle"@en ;
     skos:altLabel "armed conflict"@en ;
-    rdfs:comment "A large scale violent confrontation."@en .
+    rdfs:comment "A large scale violent confrontation."@en ;
+    skos:example "The Nirnaeth Arnoediad is the Battle of Unnumbered Tears."@en .
 
 evnt:War a owl:Class ;
     rdfs:subClassOf evnt:ConflictEvent ;
     rdfs:label "war"@en ;
     skos:altLabel "prolonged conflict"@en ;
-    rdfs:comment "A prolonged conflict with multiple battles."@en .
+    rdfs:comment "A prolonged conflict composed of multiple battles."@en ;
+    skos:example "The Wars of Beleriand include the Nirnaeth Arnoediad."@en .
 
 evnt:Duel a owl:Class ;
     rdfs:subClassOf evnt:ConflictEvent ;
@@ -1098,19 +1200,22 @@ evnt:Duel a owl:Class ;
     ] ;
     rdfs:label "duel"@en ;
     skos:altLabel "single combat"@en ;
-    rdfs:comment "A fight between exactly two combatants."@en .
+    rdfs:comment "A fight between exactly two combatants."@en ;
+    skos:example "The duel between Turambar and Glaurung at Cabed-en-Aras."@en .
 
 evnt:Siege a owl:Class ;
     rdfs:subClassOf evnt:ConflictEvent ;
     rdfs:label "siege"@en ;
     skos:altLabel "blockade"@en ;
-    rdfs:comment "A military blockade of a city or fortress."@en .
+    rdfs:comment "A military blockade of a city or fortress."@en ;
+    skos:example "The siege and sack of Nargothrond."@en .
 
 evnt:MovementEvent a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "movement event"@en ;
     skos:altLabel "movement"@en ;
-    rdfs:comment "An event involving physical movement of characters between places."@en .
+    rdfs:comment "An event involving physical movement of characters between places."@en ;
+    skos:example "Túrin travels from Dor-lómin to Doriath."@en .
 
 evnt:Travel a owl:Class ;
     rdfs:subClassOf evnt:MovementEvent ;
@@ -1126,91 +1231,106 @@ evnt:Travel a owl:Class ;
     ] ;
     rdfs:label "travel"@en ;
     skos:altLabel "journey"@en ;
-    rdfs:comment "A journey. Every travel has origin and destination."@en .
+    rdfs:comment "A journey. Every travel has origin and destination."@en ;
+    skos:example "Túrin travels from Dor-lómin to Doriath."@en .
 
 evnt:Flight a owl:Class ;
     rdfs:subClassOf evnt:MovementEvent ;
     rdfs:label "flight"@en ;
     skos:altLabel "escape"@en ;
-    rdfs:comment "Characters flee from danger."@en .
+    rdfs:comment "An event in which characters flee from danger."@en ;
+    skos:example "The flight of survivors from the fall of Nargothrond."@en .
 
 evnt:Exile a owl:Class ;
     rdfs:subClassOf evnt:MovementEvent ;
     rdfs:label "exile"@en ;
     skos:altLabel "banishment"@en ;
-    rdfs:comment "Forced departure from homeland."@en .
+    rdfs:comment "A forced departure from the homeland."@en ;
+    skos:example "The exile of Túrin from Doriath after the death of Saeros."@en .
 
 evnt:Captivity a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "captivity"@en ;
     skos:altLabel "imprisonment"@en ;
-    rdfs:comment "A character is held prisoner."@en .
+    rdfs:comment "An event in which a character is held as a prisoner."@en ;
+    skos:example "The captivity of Húrin in Angband by Morgoth."@en .
 
 evnt:SocialEvent a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "social event"@en ;
     skos:altLabel "social gathering"@en ;
-    rdfs:comment "An event involving social interaction between characters."@en .
+    rdfs:comment "An event involving social interaction between characters."@en ;
+    skos:example "The trial of Túrin in absence at Menegroth."@en .
 
 evnt:Meeting a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "meeting"@en ;
     skos:altLabel "encounter"@en ;
-    rdfs:comment "An encounter or gathering of characters."@en .
+    rdfs:comment "An encounter or gathering of characters."@en ;
+    skos:example "Túrin meets Beleg in the wild."@en .
 
 evnt:Coronation a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "coronation"@en ;
     skos:altLabel "crowning ceremony"@en ;
-    rdfs:comment "A ceremony of crowning a ruler."@en .
+    rdfs:comment "A ceremony of crowning a ruler."@en ;
+    skos:example "Turgon is crowned King of Gondolin."@en .
 
 evnt:Feast a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "feast"@en ;
     skos:altLabel "banquet"@en ;
-    rdfs:comment "A large celebratory meal or banquet."@en .
+    rdfs:comment "A large celebratory meal or banquet."@en ;
+    skos:example "A feast held in the halls of Menegroth."@en .
 
 evnt:Council a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "council"@en ;
     skos:altLabel "deliberation"@en ;
-    rdfs:comment "A formal meeting for deliberation or the reach of a consensus."@en .
+    rdfs:comment "A formal meeting for deliberation or the reaching of a consensus."@en ;
+    skos:example "A council of the Elves in Nargothrond."@en .
 
 evnt:Trial a owl:Class ;
     rdfs:subClassOf evnt:SocialEvent ;
     rdfs:label "trial"@en ;
     skos:altLabel "judgement"@en ;
-    rdfs:comment "A judicial examination or hearing."@en .
+    rdfs:comment "A judicial examination or hearing."@en ;
+    skos:example "The trial of Túrin in absence, where Nellas testifies."@en .
 
 evnt:Curse a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "curse"@en ;
     skos:altLabel "malediction"@en ;
-    rdfs:comment "A supernatural imprecation bringing misfortune."@en .
+    rdfs:comment "A supernatural imprecation bringing misfortune."@en ;
+    skos:example "Mîm curses Andróg after the killing of Khîm."@en .
 
 evnt:Prophecy a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "prophecy"@en ;
     skos:altLabel "foretelling"@en ;
-    rdfs:comment "A prediction of future events, often supernatural."@en .
+    rdfs:comment "A prediction of future events, often supernatural."@en ;
+    skos:example "Morgoth's doom: thou shalt see with my eyes."@en .
 
 evnt:Enchantment a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "enchantment"@en ;
     skos:altLabel "spell"@en ;
-    rdfs:comment "A magical spell or charm placed on a character."@en .
+    rdfs:comment "A magical effect imposed on a character."@en ;
+    skos:example "Glaurung hypnotises Níniel at Nargothrond."@en .
 
 evnt:Discovery a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "discovery"@en ;
     skos:altLabel "revelation"@en ;
-    rdfs:comment "An event where something hidden is found or revealed."@en .
+    rdfs:comment "An event where something hidden is found or revealed."@en ;
+    skos:example "The truth about Níniel's identity is revealed."@en .
 
 evnt:Betrayal a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:label "betrayal"@en ;
     skos:altLabel "treachery"@en ;
-    rdfs:comment "An act of disloyalty or treachery."@en .
+    rdfs:comment "An act of disloyalty involving betrayal of trust."@en ;
+    skos:example "Mîm betrays Túrin to the Orcs at Amon Rûdh."@en .
 
 #
 # Properties
@@ -1220,63 +1340,72 @@ evnt:hasParticipant a owl:ObjectProperty ;
     rdfs:domain evnt:Event ;
     rdfs:label "has participant"@en ;
     skos:altLabel "involves"@en ;
-    rdfs:comment "An entity that takes part in the event."@en .
+    rdfs:comment "An entity that takes part in the event."@en ;
+    skos:example "The Battle of Unnumbered Tears has participant Húrin."@en .
 
 evnt:hasAgent a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Event ;
     rdfs:label "has agent"@en ;
     skos:altLabel "done by"@en ;
-    rdfs:comment "The entity that intentionally causes or performs the event."@en .
+    rdfs:comment "The entity that intentionally causes or performs the event."@en ;
+    skos:example "The death of Saeros has agent Túrin."@en .
 
 evnt:hasPatient a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Event ;
     rdfs:label "has patient"@en ;
     skos:altLabel "affects"@en ;
-    rdfs:comment "The entity affected by the event."@en .
+    rdfs:comment "The entity affected by the event."@en ;
+    skos:example "Glaurung hypnotises Níniel, with Níniel as the patient."@en .
 
 evnt:hasVictim a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasPatient ;
     rdfs:domain evnt:Event ;
     rdfs:label "has victim"@en ;
     skos:altLabel "harms"@en ;
-    rdfs:comment "The entity that suffers harm in the event."@en .
+    rdfs:comment "The entity that suffers harm in the event."@en ;
+    skos:example "The death of Beleg has victim Beleg."@en .
 
 evnt:hasWitness a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Event ;
     rdfs:label "has witness"@en ;
     skos:altLabel "observed by"@en ;
-    rdfs:comment "An entity that observes the event without acting."@en .
+    rdfs:comment "An entity that observes the event without acting."@en ;
+    skos:example "Mîm's betrayal has witness Andróg."@en .
 
 evnt:begets a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Birth ;
     rdfs:label "begets"@en ;
     skos:altLabel "brings forth"@en ;
-    rdfs:comment "The character brought into existence by a birth event."@en .
+    rdfs:comment "The character brought into existence by a birth event."@en ;
+    skos:example "The birth of Túrin begets Túrin."@en .
 
 evnt:isBegottenIn a owl:ObjectProperty ;
     owl:inverseOf evnt:begets ;
     rdfs:domain owl:Thing ;
     rdfs:range evnt:Birth ;
     rdfs:label "is begotten in"@en ;
-    rdfs:comment "Inverse of begets. Links a character to the birth event that brings them into existence."@en .
+    rdfs:comment "Inverse of begets. Links a character to the birth event that brings them into existence."@en ;
+    skos:example "Túrin is begotten in the birth of Túrin."@en .
 
 evnt:hasTraveller a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain evnt:Travel ;
     rdfs:label "has traveller"@en ;
     skos:altLabel "travelled by"@en ;
-    rdfs:comment "The character who undertakes the travel."@en .
+    rdfs:comment "The character who undertakes the travel."@en ;
+    skos:example "Túrin, Gethron and Grithnir are travellers in the journey to Doriath."@en .
 
 evnt:occursAt a owl:ObjectProperty ;
     rdfs:domain evnt:Event ;
     rdfs:range loc:Place ;
     rdfs:label "occurs at"@en ;
     skos:altLabel "takes place at"@en ;
-    rdfs:comment "The place where the event occurs."@en .
+    rdfs:comment "The place where the event occurs."@en ;
+    skos:example "The Captivity of Húrin occurs at Angband."@en .
 
 evnt:hasOrigin a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:occursAt ;
@@ -1284,7 +1413,8 @@ evnt:hasOrigin a owl:ObjectProperty ;
     rdfs:range loc:Place ;
     rdfs:label "has origin"@en ;
     skos:altLabel "departs from"@en ;
-    rdfs:comment "The starting place of a movement event."@en .
+    rdfs:comment "The starting place of a movement event."@en ;
+    skos:example "Túrin's journey to Doriath has origin Dor-lómin."@en .
 
 evnt:hasDestination a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:occursAt ;
@@ -1292,7 +1422,8 @@ evnt:hasDestination a owl:ObjectProperty ;
     rdfs:range loc:Place ;
     rdfs:label "has destination"@en ;
     skos:altLabel "arrives at"@en ;
-    rdfs:comment "The ending place of a movement event."@en .
+    rdfs:comment "The ending place of a movement event."@en ;
+    skos:example "Túrin's journey has destination Doriath."@en .
 
 evnt:precedes a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:subPropertyOf to:precedes ;
@@ -1300,45 +1431,52 @@ evnt:precedes a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:range evnt:Event ;
     rdfs:label "precedes"@en ;
     skos:altLabel "comes before"@en ;
-    rdfs:comment "This event occurs before another event."@en .
+    rdfs:comment "This event occurs before another event."@en ;
+    skos:example "The Nirnaeth Arnoediad precedes Túrin's journey to Doriath."@en .
 
 evnt:causes a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain evnt:Event ;
     rdfs:range evnt:Event ;
     rdfs:label "causes"@en ;
     skos:altLabel "leads to"@en ;
-    rdfs:comment "This event causally leads to another event."@en .
+    rdfs:comment "This event causally leads to another event."@en ;
+    skos:example "The death of Saeros causes the exile of Túrin from Doriath."@en .
 
 evnt:isCausedBy a owl:ObjectProperty ;
     owl:inverseOf evnt:causes ;
     rdfs:label "is caused by"@en ;
     skos:altLabel "results from"@en ;
-    rdfs:comment "Inverse of causes. This event results from another."@en .
+    rdfs:comment "Inverse of causes. This event results from another."@en ;
+    skos:example "The exile of Túrin is caused by the death of Saeros."@en .
 
 evnt:hasSubEvent a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain evnt:Event ;
     rdfs:range evnt:Event ;
-    rdfs:label "has sub-event"@en ;
+    rdfs:label "has subevent"@en ;
     skos:altLabel "contains event"@en ;
-    rdfs:comment "A smaller event that occurs as part of this one."@en .
+    rdfs:comment "A smaller event that occurs as part of this one."@en ;
+    skos:example "The Wars of Beleriand has subevent the Nirnaeth Arnoediad."@en .
 
 evnt:isSubEventOf a owl:ObjectProperty ;
     owl:inverseOf evnt:hasSubEvent ;
-    rdfs:label "is sub-event of"@en ;
+    rdfs:label "is subevent of"@en ;
     skos:altLabel "part of event"@en ;
-    rdfs:comment "This event is part of a larger event."@en .
+    rdfs:comment "This event is part of a larger event."@en ;
+    skos:example "The Nirnaeth Arnoediad is a subevent of the Wars of Beleriand."@en .
 
 evnt:hasCause a owl:ObjectProperty ;
     rdfs:domain evnt:Event ;
     rdfs:label "has cause"@en ;
     skos:altLabel "caused by"@en ;
-    rdfs:comment "An entity involved as a contributing cause in the event."@en .
+    rdfs:comment "An entity involved as a contributing cause in the event."@en ;
+    skos:example "The death of Beleg has cause Anglachel."@en .
 
 evnt:creates a owl:ObjectProperty ;
     rdfs:domain evnt:Event ;
     rdfs:label "creates"@en ;
     skos:altLabel "results in"@en ;
-    rdfs:comment "An entity produced or created by the event."@en .
+    rdfs:comment "An entity produced or created by the event."@en ;
+    skos:example "The reforging of Anglachel creates Gurthang."@en .
 
 #
 # Axioms
@@ -1436,209 +1574,239 @@ evnt:Event rdfs:subClassOf [
     owl:someValuesFrom owl:Thing
 ] .
 
-
-#
-# Classes
-#
 plot:Story a owl:Class ;
     rdfs:label "story"@en ;
     skos:altLabel "narrative"@en ;
-    rdfs:comment "A complete narrative work."@en .
+    rdfs:comment "A complete narrative work."@en ;
+    skos:example "The Narn i Chîn Húrin is a story by J.R.R. Tolkien."@en .
 
 plot:NarrativeUnit a owl:Class ;
     rdfs:label "narrative unit"@en ;
     skos:altLabel "story division"@en ;
-    rdfs:comment "A structural division of a story."@en .
+    rdfs:comment "A structural division of a story."@en ;
+    skos:example "Part I: The Childhood of Túrin is a narrative unit."@en .
 
 plot:Part a owl:Class ;
     rdfs:subClassOf plot:NarrativeUnit ;
     rdfs:subClassOf [ a owl:Restriction ; owl:onProperty plot:containsUnit ; owl:someValuesFrom plot:Chapter ] ;
     rdfs:label "part"@en ;
     skos:altLabel "story part"@en ;
-    rdfs:comment "A major division of a story containing chapters."@en .
+    rdfs:comment "A major division of a story containing chapters."@en ;
+    skos:example "Part III: Túrin in Nargothrond and Brethil is a major story part."@en .
 
 plot:Chapter a owl:Class ;
     rdfs:subClassOf plot:NarrativeUnit ;
     rdfs:label "chapter"@en ;
     skos:altLabel "story chapter"@en ;
-    rdfs:comment "A numbered or titled section of a narrative."@en .
+    rdfs:comment "A numbered or titled section of a narrative."@en ;
+    skos:example "Túrin in Dor-lómin is a chapter in the Narn."@en .
 
 plot:Scene a owl:Class ;
     rdfs:subClassOf plot:NarrativeUnit ;
     rdfs:label "scene"@en ;
     skos:altLabel "story scene"@en ;
-    rdfs:comment "The smallest narrative unit; a continuous action in one setting."@en .
+    rdfs:comment "The smallest narrative unit; a continuous action in one setting."@en ;
+    skos:example "The scene where Túrin accidentally kills Beleg."@en .
 
 plot:Act a owl:Class ;
     rdfs:subClassOf plot:NarrativeUnit ;
     rdfs:label "act"@en ;
     skos:altLabel "story act"@en ;
-    rdfs:comment "A major division in drama or narrative, often five in classical structure."@en .
+    rdfs:comment "A major division in drama or narrative, often five in classical structure."@en ;
+    skos:example "Act III of a five act tragedy."@en .
 
 plot:NarrativeElement a owl:Class ;
     rdfs:label "narrative element"@en ;
     skos:altLabel "story element"@en ;
-    rdfs:comment "A stage in the narrative arc."@en .
+    rdfs:comment "A stage in the narrative arc."@en ;
+    skos:example "The Climax of the Narn is a narrative element."@en .
 
 plot:Exposition a owl:Class ;
     rdfs:subClassOf plot:NarrativeElement ;
     rdfs:label "exposition"@en ;
     skos:altLabel "setup"@en ;
-    rdfs:comment "Introduction of setting, characters, and background."@en .
+    rdfs:comment "Introduction of setting, characters, and background."@en ;
+    skos:example "Húrin's family and the curse of Morgoth."@en .
 
 plot:IncitingIncident a owl:Class ;
     rdfs:subClassOf plot:NarrativeElement ;
     rdfs:label "inciting incident"@en ;
     skos:altLabel "catalyst"@en ;
-    rdfs:comment "The event that sets the main conflict in motion."@en .
+    rdfs:comment "The event that sets the main conflict in motion."@en ;
+    skos:example "Túrin is sent to Doriath, setting his wanderings in motion."@en .
 
 plot:RisingAction a owl:Class ;
     rdfs:subClassOf plot:NarrativeElement ;
     rdfs:label "rising action"@en ;
     skos:altLabel "complication"@en ;
-    rdfs:comment "Series of events building tension toward the climax."@en .
+    rdfs:comment "Series of events building tension toward the climax."@en ;
+    skos:example "Túrin's wanderings and tragedies such as the death of his father, his exile, and battles."@en .
 
 plot:Climax a owl:Class ;
     rdfs:subClassOf plot:NarrativeElement ;
     rdfs:label "climax"@en ;
     skos:altLabel "turning point"@en ;
-    rdfs:comment "The turning point; the moment of highest tension."@en .
+    rdfs:comment "The turning point; the moment of highest tension."@en ;
+    skos:example "The slaying of Glaurung and the truth about Níniel revealed."@en .
 
 plot:FallingAction a owl:Class ;
     rdfs:subClassOf plot:NarrativeElement ;
     rdfs:label "falling action"@en ;
     skos:altLabel "unwinding"@en ;
-    rdfs:comment "Events after the climax leading to the resolution."@en .
+    rdfs:comment "Events after the climax leading to the resolution."@en ;
+    skos:example "The aftermath of the revelation and the deaths that follow."@en .
 
 plot:Resolution a owl:Class ;
     rdfs:subClassOf plot:NarrativeElement ;
     rdfs:label "resolution"@en ;
     skos:altLabel "conclusion"@en ;
-    rdfs:comment "The outcome; how the conflict is resolved."@en .
+    rdfs:comment "The outcome; how the conflict is resolved."@en ;
+    skos:example "The deaths of Níniel and Turambar resolve the Narn."@en .
 
 plot:Denouement a owl:Class ;
     owl:equivalentClass plot:Resolution ;
     rdfs:label "denouement"@en ;
     skos:altLabel "final outcome"@en ;
-    rdfs:comment "Equivalent to resolution. The unravelling of the plot."@en .
+    rdfs:comment "The final unravelling of the plot."@en ;
+    skos:example "Both Níniel and Turambar perish in the denouement of the Narn."@en .
 
 plot:PlotDevice a owl:Class ;
     rdfs:label "plot device"@en ;
     skos:altLabel "narrative device"@en ;
-    rdfs:comment "A technique used to advance or structure the plot."@en .
+    rdfs:comment "A technique used to advance or structure the plot."@en ;
+    skos:example "Dramatic irony is a plot device used throughout the Narn."@en .
 
 plot:PlotTwist a owl:Class ;
     rdfs:subClassOf plot:PlotDevice ;
     rdfs:label "plot twist"@en ;
     skos:altLabel "unexpected turn"@en ;
-    rdfs:comment "An unexpected revelation that changes the story's direction."@en .
+    rdfs:comment "An unexpected revelation that changes the story's direction."@en ;
+    skos:example "Níniel's true identity as Nienor, sister of Túrin."@en .
 
 plot:Foreshadowing a owl:Class ;
     rdfs:subClassOf plot:PlotDevice ;
     rdfs:label "foreshadowing"@en ;
     skos:altLabel "hint of future events"@en ;
-    rdfs:comment "Hints or clues about future events in the story."@en .
+    rdfs:comment "Hints or clues about future events in the story."@en ;
+    skos:example "Morgoth's curse foreshadows all the tragedies that befall Húrin's children."@en .
 
 plot:DramaticIrony a owl:Class ;
     rdfs:subClassOf plot:PlotDevice ;
     rdfs:label "dramatic irony"@en ;
     skos:altLabel "audience knowledge gap"@en ;
-    rdfs:comment "When the audience knows more than the characters."@en .
+    rdfs:comment "When the audience knows more than the characters."@en ;
+    skos:example "The audience knows Túrin's identity while others do not."@en .
 
 plot:Flashback a owl:Class ;
     rdfs:subClassOf plot:PlotDevice ;
     rdfs:label "flashback"@en ;
     skos:altLabel "retrospection"@en ;
-    rdfs:comment "A scene set in a time earlier than the main story."@en .
+    rdfs:comment "A scene set in a time earlier than the main story."@en ;
+    skos:example "Húrin's memories of his family before the war."@en .
 
 plot:MacGuffin a owl:Class ;
     rdfs:subClassOf plot:PlotDevice ;
     rdfs:label "MacGuffin"@en ;
     skos:altLabel "plot motivator"@en ;
-    rdfs:comment "An object or goal that motivates the plot but has no intrinsic importance."@en .
+    rdfs:comment "An object or goal that motivates the plot but has no intrinsic importance."@en ;
+    skos:example "The Dragon-helm marks Túrin's identity wherever he goes."@en .
 
 plot:Anagnorisis a owl:Class ;
     rdfs:subClassOf plot:PlotDevice ;
     rdfs:label "anagnorisis"@en ;
     skos:altLabel "moment of recognition"@en ;
-    rdfs:comment "The point in a play, novel, etc., in which a principal character recognizes or discovers another character's true identity or the true nature of their own circumstances."@en .
+    rdfs:comment "A moment where a character makes a critical discovery about an identity or situation."@en ;
+    skos:example "Níniel discovers she is Nienor, sister of Túrin."@en .
 
 plot:Peripeteia a owl:Class ;
     rdfs:subClassOf plot:PlotDevice ;
     rdfs:label "peripeteia"@en ;
     skos:altLabel "reversal of fortune"@en ;
-    rdfs:comment "A sudden reversal of fortune or change in circumstances."@en .
+    rdfs:comment "A sudden reversal of fortune or change in circumstances."@en ;
+    skos:example "Turambar's triumph over Glaurung turns to ruin when the truth is revealed."@en .
 
 plot:Conflict a owl:Class ;
     rdfs:label "conflict"@en ;
     skos:altLabel "tension"@en ;
-    rdfs:comment "A struggle between opposing forces driving the plot."@en .
+    rdfs:comment "A struggle between opposing forces driving the plot."@en ;
+    skos:example "Morgoth's curse against Húrin's family is a central conflict."@en .
 
 plot:InternalConflict a owl:Class ;
     rdfs:subClassOf plot:Conflict ;
     owl:disjointWith plot:ExternalConflict ;
     rdfs:label "internal conflict"@en ;
     skos:altLabel "inner struggle"@en ;
-    rdfs:comment "Conflict within a character (e.g. moral dilemma, fear)."@en .
+    rdfs:comment "Conflict within a character such as a moral dilemma or fear."@en ;    
+    skos:example "Túrin's struggle against fate and his own pride."@en .
 
 plot:ExternalConflict a owl:Class ;
     rdfs:subClassOf plot:Conflict ;
     rdfs:label "external conflict"@en ;
     skos:altLabel "outer struggle"@en ;
-    rdfs:comment "Conflict between a character and an external force (antagonist, nature, society)."@en .
+    rdfs:comment "Conflict between a character and an external force such as an antagonist, nature, or society."@en ;
+    skos:example "Morgoth's curse against Húrin's family involves Morgoth and Húrin."@en .
 
 plot:CharacterRole a owl:Class ;
     rdfs:label "character role"@en ;
     skos:altLabel "story role"@en ;
-    rdfs:comment "The narrative function a character plays in the story."@en .
+    rdfs:comment "The narrative function a character plays in the story."@en ;
+    skos:example "Túrin has the role of Protagonist and Tragic Hero."@en .
 
 plot:Protagonist a owl:Class ;
     rdfs:subClassOf plot:CharacterRole ;
     owl:disjointWith plot:Antagonist ;
     rdfs:label "protagonist"@en ;
     skos:altLabel "main character"@en ;
-    rdfs:comment "The main character; the one driving the action."@en .
+    rdfs:comment "The main character; the one driving the action."@en ;
+    skos:example "Túrin is the protagonist of the Narn."@en .
 
 plot:Antagonist a owl:Class ;
     rdfs:subClassOf plot:CharacterRole ;
     rdfs:label "antagonist"@en ;
     skos:altLabel "villain"@en ;
-    rdfs:comment "The character who opposes the protagonist."@en .
+    rdfs:comment "The character who opposes the protagonist."@en ;
+    skos:example "Glaurung is the antagonist who opposes Túrin."@en .
 
 plot:Mentor a owl:Class ;
     rdfs:subClassOf plot:CharacterRole ;
     rdfs:label "mentor"@en ;
     skos:altLabel "guide figure"@en ;
-    rdfs:comment "A character who guides or teaches the protagonist."@en .
+    rdfs:comment "A character who guides or teaches the protagonist."@en ;
+    skos:example "Beleg serves as mentor to the young Túrin."@en .
 
 plot:TragicHero a owl:Class ;
     rdfs:subClassOf plot:CharacterRole ;
     rdfs:label "tragic hero"@en ;
     skos:altLabel "tragic protagonist"@en ;
-    rdfs:comment "A protagonist whose flaw leads to their downfall."@en .
+    rdfs:comment "A protagonist whose flaw leads to their downfall."@en ;
+    skos:example "Túrin is a tragic hero whose pride leads to his downfall."@en .
 
 plot:Genre a owl:Class ;
     rdfs:label "genre"@en ;
     skos:altLabel "literary genre"@en ;
-    rdfs:comment "A category of narrative with shared conventions."@en .
+    rdfs:comment "A category of narrative with shared conventions."@en ;
+    skos:example "The Narn fits into genres like Tragedy and Epic."@en .
 
 plot:Tragedy a owl:Class ;
     rdfs:subClassOf plot:Genre ;
     rdfs:label "tragedy"@en ;
     skos:altLabel "tragic genre"@en ;
-    rdfs:comment "A story where the protagonist suffers a downfall."@en .
+    rdfs:comment "A story where the protagonist suffers a downfall."@en ;
+    skos:example "The Narn is a tragedy: Túrin and Nienor both perish."@en .
 
 plot:Epic a owl:Class ;
     rdfs:subClassOf plot:Genre ;
     rdfs:label "epic"@en ;
     skos:altLabel "epic genre"@en ;
-    rdfs:comment "A long narrative involving heroic deeds and grand scale."@en .
+    rdfs:comment "A long narrative involving heroic deeds and grand scale."@en ;
+    skos:example "The Narn is an epic spanning wars, exiles, and dragon slaying."@en .
 
 plot:Fantasy a owl:Class ;
     rdfs:subClassOf plot:Genre ;
     rdfs:label "fantasy"@en ;
     skos:altLabel "fantasy genre"@en ;
-    rdfs:comment "A story with magical or supernatural elements."@en .
+    rdfs:comment "A story with magical or supernatural elements."@en ;
+    skos:example "The Narn is a fantasy with dragons, curses, and enchantments."@en .
 
 #
 # Properties
@@ -1648,113 +1816,130 @@ plot:containsUnit a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:range plot:NarrativeUnit ;
     rdfs:label "contains unit"@en ;
     skos:altLabel "includes unit"@en ;
-    rdfs:comment "Relates a narrative unit to its contained subunits."@en .
+    rdfs:comment "Relates a narrative unit to its contained subunits."@en ;
+    skos:example "Part I contains the chapter Túrin in Dor-lómin."@en .
 
 plot:isUnitOf a owl:ObjectProperty ;
     owl:inverseOf plot:containsUnit ;
     rdfs:label "is unit of"@en ;
     skos:altLabel "belongs to"@en ;
-    rdfs:comment "Inverse of containsUnit, relates a unit to its parent."@en .
+    rdfs:comment "Inverse of containsUnit, relates a unit to its parent."@en ;
+    skos:example "The chapter Túrin in Dor-lómin is a unit of Part I."@en .
 
 plot:hasNarrativeUnit a owl:ObjectProperty ;
     rdfs:domain plot:Story ;
     rdfs:range plot:NarrativeUnit ;
     rdfs:label "has narrative unit"@en ;
     skos:altLabel "divided into"@en ;
-    rdfs:comment "Links a story to its structural units."@en .
+    rdfs:comment "Links a story to its structural units."@en ;
+    skos:example "The Narn has narrative units Part I, Part II, Part III."@en .
 
 plot:unitIndex a owl:DatatypeProperty ;
     rdfs:domain plot:NarrativeUnit ;
     rdfs:range xsd:positiveInteger ;
     rdfs:label "unit index"@en ;
     skos:altLabel "sequence number"@en ;
-    rdfs:comment "The ordering position of a unit within its parent."@en .
+    rdfs:comment "The ordering position of a unit within its parent."@en ;
+    skos:example "Part I has unit index 1."@en .
 
 plot:hasNarrativeElement a owl:ObjectProperty ;
     rdfs:domain plot:Story ;
     rdfs:range plot:NarrativeElement ;
     rdfs:label "has narrative element"@en ;
     skos:altLabel "has element"@en ;
-    rdfs:comment "Links a story to its plot stages."@en .
+    rdfs:comment "Links a story to its plot stages."@en ;
+    skos:example "The Narn includes narrative elements like Exposition and Climax."@en .
 
 plot:correspondsToEvent a owl:ObjectProperty ;
     rdfs:domain plot:NarrativeElement ;
     rdfs:range evnt:Event ;
     rdfs:label "corresponds to event"@en ;
     skos:altLabel "maps to event"@en ;
-    rdfs:comment "Maps a narrative element to the event it represents."@en .
+    rdfs:comment "Maps a narrative element to the event it represents."@en ;
+    skos:example "The Climax corresponds to the Slaying of Glaurung."@en .
 
 plot:occursInUnit a owl:ObjectProperty ;
     rdfs:domain plot:NarrativeElement ;
     rdfs:range plot:NarrativeUnit ;
     rdfs:label "occurs in unit"@en ;
     skos:altLabel "located in unit"@en ;
-    rdfs:comment "The narrative unit in which this element appears."@en .
+    rdfs:comment "The narrative unit in which this element appears."@en ;
+    skos:example "The Falling Action occurs in Part III."@en .
 
 plot:usesDevice a owl:ObjectProperty ;
     rdfs:domain plot:Story ;
     rdfs:range plot:PlotDevice ;
     rdfs:label "uses device"@en ;
     skos:altLabel "employs device"@en ;
-    rdfs:comment "Links a story to the plot devices it employs."@en .
+    rdfs:comment "Links a story to the plot devices it employs."@en ;
+    skos:example "The Narn uses devices: Dramatic Irony, Anagnorisis, Peripeteia."@en .
 
 plot:deviceInvolvesCharacter a owl:ObjectProperty ;
     rdfs:domain plot:PlotDevice ;
     rdfs:label "device involves character"@en ;
     skos:altLabel "device concerns"@en ;
-    rdfs:comment "A character involved in or affected by this plot device."@en .
+    rdfs:comment "A character involved in or affected by this plot device."@en ;
+    skos:example "The Anagnorisis device involves Níniel and Turambar."@en .
 
 plot:foreshadowsEvent a owl:ObjectProperty ;
     rdfs:domain plot:Foreshadowing ;
     rdfs:range evnt:Event ;
     rdfs:label "foreshadows event"@en ;
     skos:altLabel "hints at"@en ;
-    rdfs:comment "The event that this foreshadowing hints at."@en .
+    rdfs:comment "The event that this foreshadowing hints at."@en ;
+    skos:example "Morgoth's curse foreshadows the death of Turambar."@en .
 
 plot:hasRole a owl:ObjectProperty ;
     rdfs:range plot:CharacterRole ;
     rdfs:label "has role"@en ;
     skos:altLabel "plays role"@en ;
-    rdfs:comment "The narrative role a character plays."@en .
+    rdfs:comment "The narrative role a character plays."@en ;
+    skos:example "Túrin has role Protagonist and Tragic Hero."@en .
 
 plot:hasConflict a owl:ObjectProperty ;
     rdfs:domain plot:Story ;
     rdfs:range plot:Conflict ;
     rdfs:label "has conflict"@en ;
     skos:altLabel "has tension"@en ;
-    rdfs:comment "A conflict central to the story."@en .
+    rdfs:comment "A conflict central to the story."@en ;
+    skos:example "Morgoth's curse against Húrin's family is a conflict in the Narn."@en .
 
 plot:conflictInvolves a owl:ObjectProperty ;
     rdfs:domain plot:Conflict ;
     rdfs:label "conflict involves"@en ;
     skos:altLabel "tension involves"@en ;
-    rdfs:comment "A character or entity involved in the conflict."@en .
+    rdfs:comment "A character or entity involved in the conflict."@en ;
+    skos:example "Morgoth's curse involves Morgoth and Húrin."@en .
 
 plot:hasGenre a owl:ObjectProperty ;
     rdfs:domain plot:Story ;
     rdfs:range plot:Genre ;
     rdfs:label "has genre"@en ;
     skos:altLabel "genre is"@en ;
-    rdfs:comment "The genre(s) of the story."@en .
+    rdfs:comment "The genre(s) of the story."@en ;
+    skos:example "The Narn has genre Tragedy, Epic, and Fantasy."@en .
 
 plot:hasAuthor a owl:ObjectProperty ;
     rdfs:domain plot:Story ;
     rdfs:label "has author"@en ;
     skos:altLabel "written by"@en ;
-    rdfs:comment "The author of the story."@en .
+    rdfs:comment "The author of the story."@en ;
+    skos:example "The Narn has author J.R.R. Tolkien."@en .
 
 plot:hasTheme a owl:ObjectProperty ;
     rdfs:domain plot:Story ;
     rdfs:label "has theme"@en ;
     skos:altLabel "explores theme"@en ;
-    rdfs:comment "A thematic element or motif in the story."@en .
+    rdfs:comment "A thematic element or motif in the story."@en ;
+    skos:example "The Narn explores themes like fate and pride."@en .
 
 plot:publishedDate a owl:DatatypeProperty ;
     rdfs:domain plot:Story ;
     rdfs:range xsd:date ;
     rdfs:label "published date"@en ;
     skos:altLabel "date published"@en ;
-    rdfs:comment "The date the story was published."@en .
+    rdfs:comment "The date the story was published."@en ;
+    skos:example "The Narn was published on 2007-04-17."@en .
 
 #
 # Axioms
@@ -1846,7 +2031,8 @@ plot:follows a owl:ObjectProperty, owl:TransitiveProperty, owl:IrreflexiveProper
     rdfs:range plot:NarrativeUnit ;
     rdfs:label "follows"@en ;
     skos:altLabel "comes after"@en ;
-    rdfs:comment "One narrative unit sequentially comes after another."@en .
+    rdfs:comment "One narrative unit sequentially comes after another."@en ;
+    skos:example "Part II follows Part I in the Narn."@en .
 plot:hasGenre a owl:IrreflexiveProperty .
 plot:hasAuthor a owl:FunctionalProperty .
 plot:publishedDate a owl:FunctionalProperty .
@@ -1856,12 +2042,9 @@ plot:hasAuthor owl:propertyDisjointWith plot:conflictInvolves .
 plot:involvedInDevice a owl:ObjectProperty ;    
     rdfs:label "involved in device"@en ;
     skos:altLabel "affected by narrative device"@en ;
-    rdfs:comment "Links a character role to a narrative device that affects them."@en .
+    rdfs:comment "Links a character role to a narrative device that affects them."@en ;
+    skos:example "Túrin is involved in the Peripeteia device."@en .
 
-
-#
-# Classes
-#
 act:Action a owl:Class ;
     rdfs:subClassOf evnt:Event ;
     rdfs:subClassOf [
@@ -1871,116 +2054,135 @@ act:Action a owl:Class ;
     ] ;
     rdfs:label "action"@en ;
     skos:altLabel "deed"@en ;
-    rdfs:comment "An intentional deed. Every action has at least one performer."@en .
+    rdfs:comment "An intentional deed. Every action has at least one performer."@en ;
+    skos:example "Túrin killing Saeros is an action performed by Túrin."@en .
 
 act:ViolentAction a owl:Class ;
     rdfs:subClassOf act:Action ;
     rdfs:label "violent action"@en ;
     skos:altLabel "violent deed"@en ;
-    rdfs:comment "An action involving physical violence or force."@en .
+    rdfs:comment "An action involving physical violence or force."@en ;
+    skos:example "The Slaying of Glaurung is a violent action performed by Turambar."@en .
 
 act:Attack a owl:Class ;
     rdfs:subClassOf act:ViolentAction ;
     rdfs:label "attack"@en ;
     skos:altLabel "assault"@en ;
-    rdfs:comment "An aggressive action aimed at harming a target."@en .
+    rdfs:comment "An aggressive action aimed at harming a target."@en ;
+    skos:example "Túrin attacks the Orcs at Amon Rûdh using Anglachel."@en .
 
 act:Kill a owl:Class ;
     rdfs:subClassOf act:ViolentAction ;
     rdfs:label "kill"@en ;
     skos:altLabel "slaying"@en ;
-    rdfs:comment "The action of causing the death of another."@en .
+    rdfs:comment "The action of causing the death of another."@en ;
+    skos:example "Túrin kills Saeros in Doriath."@en .
 
 act:Defend a owl:Class ;
     rdfs:subClassOf act:ViolentAction ;
     rdfs:label "defend"@en ;
     skos:altLabel "defence"@en ;
-    rdfs:comment "An action of protecting oneself or others from attack."@en .
+    rdfs:comment "An action of protecting oneself or others from attack."@en ;
+    skos:example "Beleg defends Túrin's camp from Orc raids."@en .
 
 act:MovementAction a owl:Class ;
     rdfs:subClassOf act:Action, evnt:MovementEvent ;
     rdfs:label "movement action"@en ;
     skos:altLabel "locomotion"@en ;
-    rdfs:comment "An action involving deliberate physical movement."@en .
+    rdfs:comment "An action involving deliberate physical movement."@en ;
+    skos:example "Túrin travels to Nargothrond after the death of Beleg."@en .
 
 act:Flee a owl:Class ;
     rdfs:subClassOf act:MovementAction ;
     rdfs:label "flee"@en ;
     skos:altLabel "flight"@en ;
-    rdfs:comment "The action of running away from danger or pursuit."@en .
+    rdfs:comment "The action of running away from danger or pursuit."@en ;
+    skos:example "Túrin flees Doriath after killing Saeros."@en .
 
 act:GoTo a owl:Class ;
     rdfs:subClassOf act:MovementAction ;
     rdfs:label "go to"@en ;
     skos:altLabel "travel to"@en ;
-    rdfs:comment "The action of deliberately travelling to a destination."@en .
+    rdfs:comment "The action of deliberately travelling to a destination."@en ;
+    skos:example "Túrin goes to Nargothrond seeking refuge."@en .
 
 act:CommunicativeAction a owl:Class ;
     rdfs:subClassOf act:Action ;
     rdfs:label "communicative action"@en ;
     skos:altLabel "speech act"@en ;
-    rdfs:comment "An action involving communication between characters."@en .
+    rdfs:comment "An action involving communication between characters."@en ;
+    skos:example "Turambar speaks to Túrin about his journey."@en .
 
 act:Speak a owl:Class ;
     rdfs:subClassOf act:CommunicativeAction ;
     rdfs:label "speak"@en ;
     skos:altLabel "utterance"@en ;
-    rdfs:comment "The action of verbal communication."@en .
+    rdfs:comment "The action of verbal communication."@en ;
+    skos:example "Brandir speaks the truth to Turambar about Níniel's identity."@en .
 
 act:Deceive a owl:Class ;
     rdfs:subClassOf act:CommunicativeAction ;
     rdfs:label "deceive"@en ;
     skos:altLabel "deception"@en ;
-    rdfs:comment "The action of intentionally misleading another character."@en .
+    rdfs:comment "The action of intentionally misleading another character."@en ;
+    skos:example "Glaurung deceives and hypnotises Níniel at Nargothrond."@en .
 
 act:Reveal a owl:Class ;
     rdfs:subClassOf act:CommunicativeAction ;
     rdfs:label "reveal"@en ;
     skos:altLabel "disclosure"@en ;
-    rdfs:comment "The action of disclosing previously hidden information."@en .
+    rdfs:comment "The action of disclosing previously hidden information."@en ;
+    skos:example "The truth about Níniel is revealed after the slaying of Glaurung."@en .
 
 act:Command a owl:Class ;
     rdfs:subClassOf act:CommunicativeAction ;
     rdfs:label "command"@en ;
     skos:altLabel "order"@en ;
-    rdfs:comment "The action of giving an authoritative order."@en .
+    rdfs:comment "The action of giving an authoritative order."@en ;
+    skos:example "Morgoth orders his servants to attack Nargothrond."@en .
 
 act:TransferAction a owl:Class ;
     rdfs:subClassOf act:Action ;
     rdfs:label "transfer action"@en ;
     skos:altLabel "transfer"@en ;
-    rdfs:comment "An action involving the transfer of possession."@en .
+    rdfs:comment "An action involving the transfer of possession."@en ;
+    skos:example "Beleg brings Anglachel to Túrin."@en .
 
 act:Give a owl:Class ;
     rdfs:subClassOf act:TransferAction ;
     rdfs:subClassOf [ a owl:Restriction ; owl:onProperty act:hasRecipient ; owl:someValuesFrom owl:Thing ] ;
     rdfs:label "give"@en ;
     skos:altLabel "bestowal"@en ;
-    rdfs:comment "The action of voluntarily transferring something to another."@en .
+    rdfs:comment "The action of voluntarily transferring something to another."@en ;
+    skos:example "Beleg gives Anglachel to Túrin to rescue him."@en .
 
 act:Take a owl:Class ;
     rdfs:subClassOf act:TransferAction ;
     rdfs:label "take"@en ;
     skos:altLabel "seizure"@en ;
-    rdfs:comment "The action of acquiring something, possibly by force."@en .
+    rdfs:comment "The action of acquiring something, possibly by force."@en ;
+    skos:example "Morgoth takes Húrin captive after the Nirnaeth Arnoediad."@en .
 
 act:CreationAction a owl:Class ;
     rdfs:subClassOf act:Action ;
     rdfs:label "creation action"@en ;
     skos:altLabel "making"@en ;
-    rdfs:comment "An action that produces or transforms something."@en .
+    rdfs:comment "An action that produces or transforms something."@en ;
+    skos:example "The smiths of Nargothrond reforge Anglachel into Gurthang."@en .
 
 act:Forge a owl:Class ;
     rdfs:subClassOf act:CreationAction ;
     rdfs:label "forge"@en ;
     skos:altLabel "smithing"@en ;
-    rdfs:comment "The action of creating or reshaping an object, especially a weapon."@en .
+    rdfs:comment "The action of creating or reshaping an object, especially a weapon."@en ;
+    skos:example "The reforging of Anglachel into Gurthang in Nargothrond."@en .
 
 act:Build a owl:Class ;
     rdfs:subClassOf act:CreationAction ;
     rdfs:label "build"@en ;
     skos:altLabel "construction"@en ;
-    rdfs:comment "The action of constructing a structure or settlement."@en .
+    rdfs:comment "The action of constructing a structure or settlement."@en ;
+    skos:example "The Elves built the hidden city of Gondolin in Tumladen."@en .
 
 #
 # Properties
@@ -1990,41 +2192,47 @@ act:performedBy a owl:ObjectProperty ;
     rdfs:domain act:Action ;
     rdfs:label "performed by"@en ;
     skos:altLabel "done by"@en ;
-    rdfs:comment "The agent who intentionally performs the action."@en .
+    rdfs:comment "The agent who intentionally performs the action."@en ;
+    skos:example "The Slaying of Glaurung was performed by Turambar."@en .
 
 act:hasTarget a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasPatient ;
     rdfs:domain act:Action ;
     rdfs:label "has target"@en ;
     skos:altLabel "directed at"@en ;
-    rdfs:comment "The entity that the action is directed towards."@en .
+    rdfs:comment "The entity that the action is directed towards."@en ;
+    skos:example "The Slaying of Glaurung has target Glaurung."@en .
 
 act:hasInstrument a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasCause ;
     rdfs:domain act:Action ;
     rdfs:label "has instrument"@en ;
     skos:altLabel "using"@en ;
-    rdfs:comment "An object used to perform the action (e.g. a sword)."@en .
+    rdfs:comment "An object used to perform the action (e.g. a sword)."@en ;
+    skos:example "The Slaying of Glaurung has instrument Gurthang."@en .
 
 act:hasIntention a owl:ObjectProperty ;
     rdfs:domain act:Action ;
     rdfs:label "has intention"@en ;
     skos:altLabel "aims to"@en ;
-    rdfs:comment "The goal or purpose behind the action."@en .
+    rdfs:comment "The goal or purpose behind the action."@en ;
+    skos:example "Túrin's flight from Doriath has the intention of escaping judgement."@en .
 
 act:hasResult a owl:ObjectProperty ;
     rdfs:domain act:Action ;
     rdfs:range evnt:Event ;
     rdfs:label "has result"@en ;
     skos:altLabel "results in"@en ;
-    rdfs:comment "The event or state that results from the action."@en .
+    rdfs:comment "The event or state that results from the action."@en ;
+    skos:example "Brandir's speech results in the truth about Níniel being revealed."@en .
 
 act:hasRecipient a owl:ObjectProperty ;
     rdfs:subPropertyOf evnt:hasParticipant ;
     rdfs:domain act:TransferAction ;
     rdfs:label "has recipient"@en ;
     skos:altLabel "received by"@en ;
-    rdfs:comment "The character who receives something in a transfer action."@en .
+    rdfs:comment "The character who receives something in a transfer action."@en ;
+    skos:example "Beleg's gift of Anglachel has recipient Túrin."@en .
 
 #
 # Axioms
@@ -2066,7 +2274,8 @@ act:Kill owl:equivalentClass [
 act:Escape a owl:Class ;
     rdfs:label "escape"@en ;
     skos:altLabel "evasion"@en ;
-    rdfs:comment "The intention of getting away from danger."@en .
+    rdfs:comment "The intention of getting away from danger."@en ;
+    skos:example "Túrin's intention when fleeing Doriath is escape from judgement."@en .
 
 act:Flee owl:equivalentClass [
     a owl:Class ;
@@ -2083,7 +2292,8 @@ act:Flee owl:equivalentClass [
 act:MisleadingIntention a owl:Class ;
     rdfs:label "misleading intention"@en ;
     skos:altLabel "intent to deceive"@en ;
-    rdfs:comment "The intention of making another believe something false."@en .
+    rdfs:comment "The intention of making another believe something false."@en ;
+    skos:example "Glaurung's intention when hypnotising Níniel is to mislead her about her identity."@en .
 
 act:Deceive owl:equivalentClass [
     a owl:Class ;
@@ -2214,7 +2424,8 @@ act:causesByAction a owl:ObjectProperty ;
     owl:propertyChainAxiom ( [ owl:inverseOf act:performedBy ] act:hasResult ) ;
     rdfs:label "causes by action"@en ;
     skos:altLabel "brings about"@en ;
-    rdfs:comment "If an agent performs an action with a result, the agent indirectly causes that result."@en .
+    rdfs:comment "If an agent performs an action with a result, the agent indirectly causes that result."@en ;
+    skos:example "Turambar causes the death of Glaurung by performing the slaying."@en .
 
 
 # hasResult is also a causal relation
