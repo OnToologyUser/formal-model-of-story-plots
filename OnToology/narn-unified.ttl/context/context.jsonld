@@ -47,6 +47,9 @@
     "Death" : {
       "@id" : "https://w3id.org/narn/event/Death"
     },
+    "example" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#example"
+    },
     "committedSuicide" : {
       "@id" : "https://w3id.org/narn/social/committedSuicide",
       "@type" : "@id"
@@ -589,6 +592,9 @@
     },
     "Village" : {
       "@id" : "https://w3id.org/narn/location/Village"
+    },
+    "modified" : {
+      "@id" : "https://purl.org/dc/terms/modified"
     },
     "overlappedBy" : {
       "@id" : "https://w3id.org/narn/to/overlappedBy",

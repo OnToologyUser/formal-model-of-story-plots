@@ -4,9 +4,30 @@
 <https://w3id.org/narn/rcc/> <http://www.w3.org/2000/01/rdf-schema#label> "RCC Ontology"@en .
 <https://w3id.org/narn/rcc/> <https://purl.org/dc/terms/created> "2026-03-13"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/rcc/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .
-<https://w3id.org/narn/rcc/> <https://purl.org/dc/terms/modified> "2026-03-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/rcc/> <https://purl.org/dc/terms/modified> "2026-03-19"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/rcc/> <https://purl.org/vocab/vann/preferredNamespacePrefix> "rcc" .
 <https://w3id.org/narn/rcc/> <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/rcc/" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # 
 # 
 # #################################################################
@@ -37,9 +58,10 @@
 <https://w3id.org/narn/rcc/DC> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
 <https://w3id.org/narn/rcc/DC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <https://w3id.org/narn/rcc/DC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/rcc/DC> <http://www.w3.org/2000/01/rdf-schema#comment> "Two regions share no points at all."@en .
+<https://w3id.org/narn/rcc/DC> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a spatial relation where two regions are strictly disjoint and share no spatial points."@en .
 <https://w3id.org/narn/rcc/DC> <http://www.w3.org/2000/01/rdf-schema#label> "disconnected"@en .
 <https://w3id.org/narn/rcc/DC> <http://www.w3.org/2004/02/skos/core#altLabel> "disjoint regions"@en .
+<https://w3id.org/narn/rcc/DC> <http://www.w3.org/2004/02/skos/core#example> "Angband and Doriath are disconnected since they share no spatial regions."@en .
 # 
 # https://w3id.org/narn/rcc/EC
 <https://w3id.org/narn/rcc/EC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -48,9 +70,10 @@
 <https://w3id.org/narn/rcc/EC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <https://w3id.org/narn/rcc/EC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 <https://w3id.org/narn/rcc/EC> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/rcc/NTPP> .
-<https://w3id.org/narn/rcc/EC> <http://www.w3.org/2000/01/rdf-schema#comment> "Boundaries touch but interiors are disjoint."@en .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a relation where the boundaries of two regions intersect while their interiors remain disjoint."@en .
 <https://w3id.org/narn/rcc/EC> <http://www.w3.org/2000/01/rdf-schema#label> "externally connected"@en .
 <https://w3id.org/narn/rcc/EC> <http://www.w3.org/2004/02/skos/core#altLabel> "touching regions"@en .
+<https://w3id.org/narn/rcc/EC> <http://www.w3.org/2004/02/skos/core#example> "Brethil is externally connected to Doriath because their boundaries touch."@en .
 # 
 # https://w3id.org/narn/rcc/EQ
 <https://w3id.org/narn/rcc/EQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -60,9 +83,10 @@
 <https://w3id.org/narn/rcc/EQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <https://w3id.org/narn/rcc/EQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/rcc/EQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
-<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2000/01/rdf-schema#comment> "Same spatial extent. Equivalence relation."@en .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents spatial equivalence where two distinct entities occupy the exact identical spatial extent."@en .
 <https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2000/01/rdf-schema#label> "equal"@en .
 <https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2004/02/skos/core#altLabel> "coextensive regions"@en .
+<https://w3id.org/narn/rcc/EQ> <http://www.w3.org/2004/02/skos/core#example> "The Thousand Caves and Menegroth are spatially equal entities."@en .
 # 
 # https://w3id.org/narn/rcc/NTPP
 <https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -71,9 +95,10 @@
 <https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2000/01/rdf-schema#comment> "First region entirely inside second, boundaries do not touch."@en .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a relation where the primary region is strictly contained within the interior of the secondary region with no shared boundary points."@en .
 <https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2000/01/rdf-schema#label> "non-tangential proper part"@en .
 <https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2004/02/skos/core#altLabel> "interior part"@en .
+<https://w3id.org/narn/rcc/NTPP> <http://www.w3.org/2004/02/skos/core#example> "Dor-lómin is a non-tangential proper part of Hithlum as it is completely enclosed."@en .
 # 
 # https://w3id.org/narn/rcc/NTPPi
 <https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -83,18 +108,20 @@
 <https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2000/01/rdf-schema#comment> "First region entirely contains second, boundaries do not touch."@en .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse relation where the primary region completely and strictly contains the secondary region within its interior."@en .
 <https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2000/01/rdf-schema#label> "non-tangential proper part inverse"@en .
 <https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2004/02/skos/core#altLabel> "interior whole"@en .
+<https://w3id.org/narn/rcc/NTPPi> <http://www.w3.org/2004/02/skos/core#example> "Hithlum is the non-tangential proper part inverse of Dor-lómin."@en .
 # 
 # https://w3id.org/narn/rcc/PO
 <https://w3id.org/narn/rcc/PO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/rcc/PO> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
 <https://w3id.org/narn/rcc/PO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <https://w3id.org/narn/rcc/PO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/rcc/PO> <http://www.w3.org/2000/01/rdf-schema#comment> "Part of each region is inside the other but neither is contained."@en .
+<https://w3id.org/narn/rcc/PO> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that two regions share a common interior subset without either fully subsuming the other."@en .
 <https://w3id.org/narn/rcc/PO> <http://www.w3.org/2000/01/rdf-schema#label> "partially overlapping"@en .
 <https://w3id.org/narn/rcc/PO> <http://www.w3.org/2004/02/skos/core#altLabel> "overlapping regions"@en .
+<https://w3id.org/narn/rcc/PO> <http://www.w3.org/2004/02/skos/core#example> "The wild lands partially overlap with Brethil."@en .
 # 
 # https://w3id.org/narn/rcc/TPP
 <https://w3id.org/narn/rcc/TPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -102,9 +129,10 @@
 <https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/rcc/spatiallyRelatedTo> .
 <https://w3id.org/narn/rcc/TPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/rcc/TPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2000/01/rdf-schema#comment> "First region entirely inside second, boundaries touch."@en .
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a state where the primary region is entirely subsumed by the secondary region while sharing at least one boundary point."@en .
 <https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2000/01/rdf-schema#label> "tangential proper part"@en .
 <https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2004/02/skos/core#altLabel> "tangential part"@en .
+<https://w3id.org/narn/rcc/TPP> <http://www.w3.org/2004/02/skos/core#example> "Hithlum is a tangential proper part of Beleriand."@en .
 # 
 # https://w3id.org/narn/rcc/TPPi
 <https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -113,9 +141,10 @@
 <https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/rcc/TPP> .
 <https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2000/01/rdf-schema#comment> "First region entirely contains second, boundaries touch."@en .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse relation where the primary region completely subsumes the secondary region while sharing boundary points."@en .
 <https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2000/01/rdf-schema#label> "tangential proper part inverse"@en .
 <https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2004/02/skos/core#altLabel> "tangential whole"@en .
+<https://w3id.org/narn/rcc/TPPi> <http://www.w3.org/2004/02/skos/core#example> "Beleriand represents the tangential proper part inverse of Hithlum."@en .
 # 
 # https://w3id.org/narn/rcc/spatiallyRelatedTo
 <https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -125,6 +154,7 @@
 <https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The most general spatial relation between two regions."@en .
 <https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "spatially related to"@en .
 <https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/2004/02/skos/core#altLabel> "spatial relation"@en .
+<https://w3id.org/narn/rcc/spatiallyRelatedTo> <http://www.w3.org/2004/02/skos/core#example> "Doriath is spatially related to Brethil."@en .
 # 
 # 
 # 

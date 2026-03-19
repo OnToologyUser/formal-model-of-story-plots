@@ -15,10 +15,50 @@
         <rdfs:label xml:lang="en">Plot Structure Ontology</rdfs:label>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-16</terms:created>
         <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-19</terms:modified>
         <vann:preferredNamespacePrefix>plot</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/narn/plot/</vann:preferredNamespaceUri>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
     
 
 
@@ -43,6 +83,7 @@
         <rdfs:comment xml:lang="en">A character or entity involved in the conflict.</rdfs:comment>
         <rdfs:label xml:lang="en">conflict involves</rdfs:label>
         <skos:altLabel xml:lang="en">tension involves</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse involves Morgoth and Húrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -57,6 +98,7 @@
         <rdfs:comment xml:lang="en">Relates a narrative unit to its contained subunits.</rdfs:comment>
         <rdfs:label xml:lang="en">contains unit</rdfs:label>
         <skos:altLabel xml:lang="en">includes unit</skos:altLabel>
+        <skos:example xml:lang="en">Part I contains the chapter Túrin in Dor-lómin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -70,6 +112,7 @@
         <rdfs:comment xml:lang="en">Maps a narrative element to the event it represents.</rdfs:comment>
         <rdfs:label xml:lang="en">corresponds to event</rdfs:label>
         <skos:altLabel xml:lang="en">maps to event</skos:altLabel>
+        <skos:example xml:lang="en">The Climax corresponds to the Slaying of Glaurung.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -82,6 +125,7 @@
         <rdfs:comment xml:lang="en">A character involved in or affected by this plot device.</rdfs:comment>
         <rdfs:label xml:lang="en">device involves character</rdfs:label>
         <skos:altLabel xml:lang="en">device concerns</skos:altLabel>
+        <skos:example xml:lang="en">The Anagnorisis device involves Níniel and Turambar.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -98,6 +142,7 @@
         <rdfs:comment xml:lang="en">One narrative unit sequentially comes after another.</rdfs:comment>
         <rdfs:label xml:lang="en">follows</rdfs:label>
         <skos:altLabel xml:lang="en">comes after</skos:altLabel>
+        <skos:example xml:lang="en">Part II follows Part I in the Narn.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -111,6 +156,7 @@
         <rdfs:comment xml:lang="en">The event that this foreshadowing hints at.</rdfs:comment>
         <rdfs:label xml:lang="en">foreshadows event</rdfs:label>
         <skos:altLabel xml:lang="en">hints at</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse foreshadows the death of Turambar.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -124,6 +170,7 @@
         <rdfs:comment xml:lang="en">The author of the story.</rdfs:comment>
         <rdfs:label xml:lang="en">has author</rdfs:label>
         <skos:altLabel xml:lang="en">written by</skos:altLabel>
+        <skos:example xml:lang="en">The Narn has author J.R.R. Tolkien.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -137,6 +184,7 @@
         <rdfs:comment xml:lang="en">A conflict central to the story.</rdfs:comment>
         <rdfs:label xml:lang="en">has conflict</rdfs:label>
         <skos:altLabel xml:lang="en">has tension</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse against Húrin&apos;s family is a conflict in the Narn.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -151,6 +199,7 @@
         <rdfs:comment xml:lang="en">The genre(s) of the story.</rdfs:comment>
         <rdfs:label xml:lang="en">has genre</rdfs:label>
         <skos:altLabel xml:lang="en">genre is</skos:altLabel>
+        <skos:example xml:lang="en">The Narn has genre Tragedy, Epic, and Fantasy.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -164,6 +213,7 @@
         <rdfs:comment xml:lang="en">Links a story to its plot stages.</rdfs:comment>
         <rdfs:label xml:lang="en">has narrative element</rdfs:label>
         <skos:altLabel xml:lang="en">has element</skos:altLabel>
+        <skos:example xml:lang="en">The Narn includes narrative elements like Exposition and Climax.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -179,6 +229,7 @@
         <rdfs:comment xml:lang="en">Links a story to its structural units.</rdfs:comment>
         <rdfs:label xml:lang="en">has narrative unit</rdfs:label>
         <skos:altLabel xml:lang="en">divided into</skos:altLabel>
+        <skos:example xml:lang="en">The Narn has narrative units Part I, Part II, Part III.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -191,6 +242,7 @@
         <rdfs:comment xml:lang="en">The narrative role a character plays.</rdfs:comment>
         <rdfs:label xml:lang="en">has role</rdfs:label>
         <skos:altLabel xml:lang="en">plays role</skos:altLabel>
+        <skos:example xml:lang="en">Túrin has role Protagonist and Tragic Hero.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -203,6 +255,7 @@
         <rdfs:comment xml:lang="en">A thematic element or motif in the story.</rdfs:comment>
         <rdfs:label xml:lang="en">has theme</rdfs:label>
         <skos:altLabel xml:lang="en">explores theme</skos:altLabel>
+        <skos:example xml:lang="en">The Narn explores themes like fate and pride.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -214,6 +267,7 @@
         <rdfs:comment xml:lang="en">Links a character role to a narrative device that affects them.</rdfs:comment>
         <rdfs:label xml:lang="en">involved in device</rdfs:label>
         <skos:altLabel xml:lang="en">affected by narrative device</skos:altLabel>
+        <skos:example xml:lang="en">Túrin is involved in the Peripeteia device.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -226,6 +280,7 @@
         <rdfs:comment xml:lang="en">Inverse of containsUnit, relates a unit to its parent.</rdfs:comment>
         <rdfs:label xml:lang="en">is unit of</rdfs:label>
         <skos:altLabel xml:lang="en">belongs to</skos:altLabel>
+        <skos:example xml:lang="en">The chapter Túrin in Dor-lómin is a unit of Part I.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -239,6 +294,7 @@
         <rdfs:comment xml:lang="en">The narrative unit in which this element appears.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs in unit</rdfs:label>
         <skos:altLabel xml:lang="en">located in unit</skos:altLabel>
+        <skos:example xml:lang="en">The Falling Action occurs in Part III.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -252,6 +308,7 @@
         <rdfs:comment xml:lang="en">Links a story to the plot devices it employs.</rdfs:comment>
         <rdfs:label xml:lang="en">uses device</rdfs:label>
         <skos:altLabel xml:lang="en">employs device</skos:altLabel>
+        <skos:example xml:lang="en">The Narn uses devices: Dramatic Irony, Anagnorisis, Peripeteia.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -278,6 +335,7 @@
         <rdfs:comment xml:lang="en">The date the story was published.</rdfs:comment>
         <rdfs:label xml:lang="en">published date</rdfs:label>
         <skos:altLabel xml:lang="en">date published</skos:altLabel>
+        <skos:example xml:lang="en">The Narn was published on 2007-04-17.</skos:example>
     </owl:DatatypeProperty>
     
 
@@ -291,6 +349,7 @@
         <rdfs:comment xml:lang="en">The ordering position of a unit within its parent.</rdfs:comment>
         <rdfs:label xml:lang="en">unit index</rdfs:label>
         <skos:altLabel xml:lang="en">sequence number</skos:altLabel>
+        <skos:example xml:lang="en">Part I has unit index 1.</skos:example>
     </owl:DatatypeProperty>
     
 
@@ -315,6 +374,7 @@
         <rdfs:comment xml:lang="en">A major division in drama or narrative, often five in classical structure.</rdfs:comment>
         <rdfs:label xml:lang="en">act</rdfs:label>
         <skos:altLabel xml:lang="en">story act</skos:altLabel>
+        <skos:example xml:lang="en">Act III of a five act tragedy.</skos:example>
     </owl:Class>
     
 
@@ -335,9 +395,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
-        <rdfs:comment xml:lang="en">The point in a play, novel, etc., in which a principal character recognizes or discovers another character&apos;s true identity or the true nature of their own circumstances.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A moment where a character makes a critical discovery about an identity or situation.</rdfs:comment>
         <rdfs:label xml:lang="en">anagnorisis</rdfs:label>
         <skos:altLabel xml:lang="en">moment of recognition</skos:altLabel>
+        <skos:example xml:lang="en">Níniel discovers she is Nienor, sister of Túrin.</skos:example>
     </owl:Class>
     
 
@@ -351,6 +412,7 @@
         <rdfs:comment xml:lang="en">The character who opposes the protagonist.</rdfs:comment>
         <rdfs:label xml:lang="en">antagonist</rdfs:label>
         <skos:altLabel xml:lang="en">villain</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung is the antagonist who opposes Túrin.</skos:example>
     </owl:Class>
     
 
@@ -363,6 +425,7 @@
         <rdfs:comment xml:lang="en">A numbered or titled section of a narrative.</rdfs:comment>
         <rdfs:label xml:lang="en">chapter</rdfs:label>
         <skos:altLabel xml:lang="en">story chapter</skos:altLabel>
+        <skos:example xml:lang="en">Túrin in Dor-lómin is a chapter in the Narn.</skos:example>
     </owl:Class>
     
 
@@ -374,6 +437,7 @@
         <rdfs:comment xml:lang="en">The narrative function a character plays in the story.</rdfs:comment>
         <rdfs:label xml:lang="en">character role</rdfs:label>
         <skos:altLabel xml:lang="en">story role</skos:altLabel>
+        <skos:example xml:lang="en">Túrin has the role of Protagonist and Tragic Hero.</skos:example>
     </owl:Class>
     
 
@@ -388,6 +452,7 @@
         <rdfs:comment xml:lang="en">The turning point; the moment of highest tension.</rdfs:comment>
         <rdfs:label xml:lang="en">climax</rdfs:label>
         <skos:altLabel xml:lang="en">turning point</skos:altLabel>
+        <skos:example xml:lang="en">The slaying of Glaurung and the truth about Níniel revealed.</skos:example>
     </owl:Class>
     
 
@@ -400,6 +465,7 @@
         <rdfs:comment xml:lang="en">A struggle between opposing forces driving the plot.</rdfs:comment>
         <rdfs:label xml:lang="en">conflict</rdfs:label>
         <skos:altLabel xml:lang="en">tension</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse against Húrin&apos;s family is a central conflict.</skos:example>
     </owl:Class>
     
 
@@ -409,9 +475,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/plot/Denouement">
         <owl:equivalentClass rdf:resource="https://w3id.org/narn/plot/Resolution"/>
-        <rdfs:comment xml:lang="en">Equivalent to resolution. The unravelling of the plot.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The final unravelling of the plot.</rdfs:comment>
         <rdfs:label xml:lang="en">denouement</rdfs:label>
         <skos:altLabel xml:lang="en">final outcome</skos:altLabel>
+        <skos:example xml:lang="en">Both Níniel and Turambar perish in the denouement of the Narn.</skos:example>
     </owl:Class>
     
 
@@ -424,6 +491,7 @@
         <rdfs:comment xml:lang="en">When the audience knows more than the characters.</rdfs:comment>
         <rdfs:label xml:lang="en">dramatic irony</rdfs:label>
         <skos:altLabel xml:lang="en">audience knowledge gap</skos:altLabel>
+        <skos:example xml:lang="en">The audience knows Túrin&apos;s identity while others do not.</skos:example>
     </owl:Class>
     
 
@@ -436,6 +504,7 @@
         <rdfs:comment xml:lang="en">A long narrative involving heroic deeds and grand scale.</rdfs:comment>
         <rdfs:label xml:lang="en">epic</rdfs:label>
         <skos:altLabel xml:lang="en">epic genre</skos:altLabel>
+        <skos:example xml:lang="en">The Narn is an epic spanning wars, exiles, and dragon slaying.</skos:example>
     </owl:Class>
     
 
@@ -449,6 +518,7 @@
         <rdfs:comment xml:lang="en">Introduction of setting, characters, and background.</rdfs:comment>
         <rdfs:label xml:lang="en">exposition</rdfs:label>
         <skos:altLabel xml:lang="en">setup</skos:altLabel>
+        <skos:example xml:lang="en">Húrin&apos;s family and the curse of Morgoth.</skos:example>
     </owl:Class>
     
 
@@ -465,9 +535,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/InternalConflict"/>
-        <rdfs:comment xml:lang="en">Conflict between a character and an external force (antagonist, nature, society).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Conflict between a character and an external force such as an antagonist, nature, or society.</rdfs:comment>
         <rdfs:label xml:lang="en">external conflict</rdfs:label>
         <skos:altLabel xml:lang="en">outer struggle</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse against Húrin&apos;s family involves Morgoth and Húrin.</skos:example>
     </owl:Class>
     
 
@@ -481,6 +552,7 @@
         <rdfs:comment xml:lang="en">Events after the climax leading to the resolution.</rdfs:comment>
         <rdfs:label xml:lang="en">falling action</rdfs:label>
         <skos:altLabel xml:lang="en">unwinding</skos:altLabel>
+        <skos:example xml:lang="en">The aftermath of the revelation and the deaths that follow.</skos:example>
     </owl:Class>
     
 
@@ -493,6 +565,7 @@
         <rdfs:comment xml:lang="en">A story with magical or supernatural elements.</rdfs:comment>
         <rdfs:label xml:lang="en">fantasy</rdfs:label>
         <skos:altLabel xml:lang="en">fantasy genre</skos:altLabel>
+        <skos:example xml:lang="en">The Narn is a fantasy with dragons, curses, and enchantments.</skos:example>
     </owl:Class>
     
 
@@ -505,6 +578,7 @@
         <rdfs:comment xml:lang="en">A scene set in a time earlier than the main story.</rdfs:comment>
         <rdfs:label xml:lang="en">flashback</rdfs:label>
         <skos:altLabel xml:lang="en">retrospection</skos:altLabel>
+        <skos:example xml:lang="en">Húrin&apos;s memories of his family before the war.</skos:example>
     </owl:Class>
     
 
@@ -523,6 +597,7 @@
         <rdfs:comment xml:lang="en">Hints or clues about future events in the story.</rdfs:comment>
         <rdfs:label xml:lang="en">foreshadowing</rdfs:label>
         <skos:altLabel xml:lang="en">hint of future events</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse foreshadows all the tragedies that befall Húrin&apos;s children.</skos:example>
     </owl:Class>
     
 
@@ -534,6 +609,7 @@
         <rdfs:comment xml:lang="en">A category of narrative with shared conventions.</rdfs:comment>
         <rdfs:label xml:lang="en">genre</rdfs:label>
         <skos:altLabel xml:lang="en">literary genre</skos:altLabel>
+        <skos:example xml:lang="en">The Narn fits into genres like Tragedy and Epic.</skos:example>
     </owl:Class>
     
 
@@ -547,6 +623,7 @@
         <rdfs:comment xml:lang="en">The event that sets the main conflict in motion.</rdfs:comment>
         <rdfs:label xml:lang="en">inciting incident</rdfs:label>
         <skos:altLabel xml:lang="en">catalyst</skos:altLabel>
+        <skos:example xml:lang="en">Túrin is sent to Doriath, setting his wanderings in motion.</skos:example>
     </owl:Class>
     
 
@@ -562,9 +639,10 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Conflict within a character (e.g. moral dilemma, fear).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Conflict within a character such as a moral dilemma or fear.</rdfs:comment>
         <rdfs:label xml:lang="en">internal conflict</rdfs:label>
         <skos:altLabel xml:lang="en">inner struggle</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s struggle against fate and his own pride.</skos:example>
     </owl:Class>
     
 
@@ -577,6 +655,7 @@
         <rdfs:comment xml:lang="en">An object or goal that motivates the plot but has no intrinsic importance.</rdfs:comment>
         <rdfs:label xml:lang="en">MacGuffin</rdfs:label>
         <skos:altLabel xml:lang="en">plot motivator</skos:altLabel>
+        <skos:example xml:lang="en">The Dragon-helm marks Túrin&apos;s identity wherever he goes.</skos:example>
     </owl:Class>
     
 
@@ -589,6 +668,7 @@
         <rdfs:comment xml:lang="en">A character who guides or teaches the protagonist.</rdfs:comment>
         <rdfs:label xml:lang="en">mentor</rdfs:label>
         <skos:altLabel xml:lang="en">guide figure</skos:altLabel>
+        <skos:example xml:lang="en">Beleg serves as mentor to the young Túrin.</skos:example>
     </owl:Class>
     
 
@@ -601,6 +681,7 @@
         <rdfs:comment xml:lang="en">A stage in the narrative arc.</rdfs:comment>
         <rdfs:label xml:lang="en">narrative element</rdfs:label>
         <skos:altLabel xml:lang="en">story element</skos:altLabel>
+        <skos:example xml:lang="en">The Climax of the Narn is a narrative element.</skos:example>
     </owl:Class>
     
 
@@ -618,6 +699,7 @@
         <rdfs:comment xml:lang="en">A structural division of a story.</rdfs:comment>
         <rdfs:label xml:lang="en">narrative unit</rdfs:label>
         <skos:altLabel xml:lang="en">story division</skos:altLabel>
+        <skos:example xml:lang="en">Part I: The Childhood of Túrin is a narrative unit.</skos:example>
     </owl:Class>
     
 
@@ -636,6 +718,7 @@
         <rdfs:comment xml:lang="en">A major division of a story containing chapters.</rdfs:comment>
         <rdfs:label xml:lang="en">part</rdfs:label>
         <skos:altLabel xml:lang="en">story part</skos:altLabel>
+        <skos:example xml:lang="en">Part III: Túrin in Nargothrond and Brethil is a major story part.</skos:example>
     </owl:Class>
     
 
@@ -648,6 +731,7 @@
         <rdfs:comment xml:lang="en">A sudden reversal of fortune or change in circumstances.</rdfs:comment>
         <rdfs:label xml:lang="en">peripeteia</rdfs:label>
         <skos:altLabel xml:lang="en">reversal of fortune</skos:altLabel>
+        <skos:example xml:lang="en">Turambar&apos;s triumph over Glaurung turns to ruin when the truth is revealed.</skos:example>
     </owl:Class>
     
 
@@ -659,6 +743,7 @@
         <rdfs:comment xml:lang="en">A technique used to advance or structure the plot.</rdfs:comment>
         <rdfs:label xml:lang="en">plot device</rdfs:label>
         <skos:altLabel xml:lang="en">narrative device</skos:altLabel>
+        <skos:example xml:lang="en">Dramatic irony is a plot device used throughout the Narn.</skos:example>
     </owl:Class>
     
 
@@ -671,6 +756,7 @@
         <rdfs:comment xml:lang="en">An unexpected revelation that changes the story&apos;s direction.</rdfs:comment>
         <rdfs:label xml:lang="en">plot twist</rdfs:label>
         <skos:altLabel xml:lang="en">unexpected turn</skos:altLabel>
+        <skos:example xml:lang="en">Níniel&apos;s true identity as Nienor, sister of Túrin.</skos:example>
     </owl:Class>
     
 
@@ -683,6 +769,7 @@
         <rdfs:comment xml:lang="en">The main character; the one driving the action.</rdfs:comment>
         <rdfs:label xml:lang="en">protagonist</rdfs:label>
         <skos:altLabel xml:lang="en">main character</skos:altLabel>
+        <skos:example xml:lang="en">Túrin is the protagonist of the Narn.</skos:example>
     </owl:Class>
     
 
@@ -695,6 +782,7 @@
         <rdfs:comment xml:lang="en">The outcome; how the conflict is resolved.</rdfs:comment>
         <rdfs:label xml:lang="en">resolution</rdfs:label>
         <skos:altLabel xml:lang="en">conclusion</skos:altLabel>
+        <skos:example xml:lang="en">The deaths of Níniel and Turambar resolve the Narn.</skos:example>
     </owl:Class>
     
 
@@ -707,6 +795,7 @@
         <rdfs:comment xml:lang="en">Series of events building tension toward the climax.</rdfs:comment>
         <rdfs:label xml:lang="en">rising action</rdfs:label>
         <skos:altLabel xml:lang="en">complication</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s wanderings and tragedies such as the death of his father, his exile, and battles.</skos:example>
     </owl:Class>
     
 
@@ -725,6 +814,7 @@
         <rdfs:comment xml:lang="en">The smallest narrative unit; a continuous action in one setting.</rdfs:comment>
         <rdfs:label xml:lang="en">scene</rdfs:label>
         <skos:altLabel xml:lang="en">story scene</skos:altLabel>
+        <skos:example xml:lang="en">The scene where Túrin accidentally kills Beleg.</skos:example>
     </owl:Class>
     
 
@@ -754,6 +844,7 @@
         <rdfs:comment xml:lang="en">A complete narrative work.</rdfs:comment>
         <rdfs:label xml:lang="en">story</rdfs:label>
         <skos:altLabel xml:lang="en">narrative</skos:altLabel>
+        <skos:example xml:lang="en">The Narn i Chîn Húrin is a story by J.R.R. Tolkien.</skos:example>
     </owl:Class>
     
 
@@ -766,6 +857,7 @@
         <rdfs:comment xml:lang="en">A story where the protagonist suffers a downfall.</rdfs:comment>
         <rdfs:label xml:lang="en">tragedy</rdfs:label>
         <skos:altLabel xml:lang="en">tragic genre</skos:altLabel>
+        <skos:example xml:lang="en">The Narn is a tragedy: Túrin and Nienor both perish.</skos:example>
     </owl:Class>
     
 
@@ -789,6 +881,7 @@
         <rdfs:comment xml:lang="en">A protagonist whose flaw leads to their downfall.</rdfs:comment>
         <rdfs:label xml:lang="en">tragic hero</rdfs:label>
         <skos:altLabel xml:lang="en">tragic protagonist</skos:altLabel>
+        <skos:example xml:lang="en">Túrin is a tragic hero whose pride leads to his downfall.</skos:example>
     </owl:Class>
 </rdf:RDF>
 

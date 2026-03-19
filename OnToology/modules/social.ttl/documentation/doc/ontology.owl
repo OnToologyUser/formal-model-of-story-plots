@@ -11,14 +11,54 @@
      xmlns:terms="https://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/narn/social/">
         <owl:imports rdf:resource="https://w3id.org/narn/location/"/>
-        <rdfs:comment xml:lang="en">An ontology defining social relationships between characters in stories.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An ontology defining structural social relationships and hierarchies between characters in narratives.</rdfs:comment>
         <rdfs:label xml:lang="en">Social Relations Ontology</rdfs:label>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-14</terms:created>
         <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-19</terms:modified>
         <vann:preferredNamespacePrefix>soc</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/narn/social/</vann:preferredNamespaceUri>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
     
 
 
@@ -38,9 +78,10 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/committedSuicide">
-        <rdfs:comment xml:lang="en">Self killing.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes the tragic act of a character intentionally taking their own life.</rdfs:comment>
         <rdfs:label xml:lang="en">committed suicide</rdfs:label>
         <skos:altLabel xml:lang="en">took own life</skos:altLabel>
+        <skos:example xml:lang="en">Túrin fell into despair and committed suicide with his sword Gurthang.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -49,9 +90,10 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/cursed">
-        <rdfs:comment xml:lang="en">Character placed a curse upon another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes an act where a character invokes supernatural malevolence or a curse upon another.</rdfs:comment>
         <rdfs:label xml:lang="en">cursed</rdfs:label>
         <skos:altLabel xml:lang="en">placed a curse on</skos:altLabel>
+        <skos:example xml:lang="en">Mîm sought revenge and cursed Andróg after the killing of Khîm.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -61,9 +103,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/feared">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/hasEmotionalRelationWith"/>
-        <rdfs:comment xml:lang="en">Character feared another character.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes a state of dread or apprehension regarding another character.</rdfs:comment>
         <rdfs:label xml:lang="en">feared</rdfs:label>
         <skos:altLabel xml:lang="en">had fear of</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung recognized the threat and feared Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -74,9 +117,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/hasEmotionalRelationWith">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="en">General emotional relationship between two characters.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines a broad emotional directedness or sentiment from one character toward another.</rdfs:comment>
         <rdfs:label xml:lang="en">has emotional relation with</rdfs:label>
         <skos:altLabel xml:lang="en">feels towards</skos:altLabel>
+        <skos:example xml:lang="en">Saeros holds a deep emotional relation rooted in hatred towards Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -89,9 +133,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/social/isAnEnemyOf"/>
-        <rdfs:comment xml:lang="en">Mutual friendship. Symmetric.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a symmetric and mutual bond of friendship between two entities.</rdfs:comment>
         <rdfs:label xml:lang="en">has friend</rdfs:label>
         <skos:altLabel xml:lang="en">is a friend of</skos:altLabel>
+        <skos:example xml:lang="en">Túrin maintains a mutual friendship and has friend Sador.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -102,9 +147,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/hasValence">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/social/EmotionalValence"/>
-        <rdfs:comment xml:lang="en">Assigns an emotional valence. Functional.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Functionally assigns a specific emotional state or valence to a relational entity.</rdfs:comment>
         <rdfs:label xml:lang="en">has valence</rdfs:label>
         <skos:altLabel xml:lang="en">has sentiment</skos:altLabel>
+        <skos:example xml:lang="en">Húrin acts functionally and has valence positive.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -114,9 +160,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/hated">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/hasEmotionalRelationWith"/>
-        <rdfs:comment xml:lang="en">Character had hatred towards another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a profound sentiment of malice or hatred directed at another entity.</rdfs:comment>
         <rdfs:label xml:lang="en">hated</rdfs:label>
         <skos:altLabel xml:lang="en">had hatred for</skos:altLabel>
+        <skos:example xml:lang="en">Saeros harbored intense resentment and hated Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -125,9 +172,10 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/hypnotised">
-        <rdfs:comment xml:lang="en">Character placed another under a spell.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the act of subjecting another character to a mental spell or hypnotic enchantment.</rdfs:comment>
         <rdfs:label xml:lang="en">hypnotised</rdfs:label>
         <skos:altLabel xml:lang="en">cast a spell on</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung used his power and hypnotised Níniel.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -137,9 +185,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/isAKinsmanOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:comment xml:lang="en">Kinship or blood relation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a symmetric bond based on shared familial lineage or blood relation.</rdfs:comment>
         <rdfs:label xml:lang="en">is a kinsman of</rdfs:label>
         <skos:altLabel xml:lang="en">kin of</skos:altLabel>
+        <skos:example xml:lang="en">Túrin shares a bloodline and is a kinsman of Nienor.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -151,9 +200,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/social/wasServedBy"/>
-        <rdfs:comment xml:lang="en">Antagonistic relation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines a fundamentally antagonistic and hostile relationship.</rdfs:comment>
         <rdfs:label xml:lang="en">is an enemy of</rdfs:label>
         <skos:altLabel xml:lang="en">foe of</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth stands as a prime antagonist and is an enemy of Húrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -164,9 +214,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/isMarriedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Marriage relationship.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes a formal and symmetric matrimonial relationship between two entities.</rdfs:comment>
         <rdfs:label xml:lang="en">is married to</rdfs:label>
         <skos:altLabel xml:lang="en">wed to</skos:altLabel>
+        <skos:example xml:lang="en">Turambar formalized his bond and is married to Níniel.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -178,9 +229,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/social/served"/>
-        <rdfs:comment xml:lang="en">X killed Y.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a fatal action where the subject directly causes the death of the object.</rdfs:comment>
         <rdfs:label xml:lang="en">killed</rdfs:label>
         <skos:altLabel xml:lang="en">slew</skos:altLabel>
+        <skos:example xml:lang="en">Túrin engaged in a fatal conflict and killed Saeros.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -194,9 +246,10 @@
             <rdf:Description rdf:about="https://w3id.org/narn/social/served"/>
             <rdf:Description rdf:about="https://w3id.org/narn/social/wasTheKingOf"/>
         </owl:propertyChainAxiom>
-        <rdfs:comment xml:lang="en">Character lived in a place during some period.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a geographical location where a character resided for a significant duration.</rdfs:comment>
         <rdfs:label xml:lang="en">lived in</rdfs:label>
         <skos:altLabel xml:lang="en">dwelt in</skos:altLabel>
+        <skos:example xml:lang="en">Túrin spent parts of his life and lived in Dor-lómin and Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -206,9 +259,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/loved">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/hasEmotionalRelationWith"/>
-        <rdfs:comment xml:lang="en">Character had feelings of love towards another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a profound sentiment of affection or love directed at another entity.</rdfs:comment>
         <rdfs:label xml:lang="en">loved</rdfs:label>
         <skos:altLabel xml:lang="en">had love for</skos:altLabel>
+        <skos:example xml:lang="en">Húrin held a deep affection and loved Morwen.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -219,9 +273,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/mutuallyLoved">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/loved"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:comment xml:lang="en">Two characters loved each other.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes a symmetric emotional state where two characters share reciprocal affection.</rdfs:comment>
         <rdfs:label xml:lang="en">mutually loved</rdfs:label>
         <skos:altLabel xml:lang="en">reciprocally loved</skos:altLabel>
+        <skos:example xml:lang="en">Turambar and Níniel shared a bond and mutually loved each other.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -231,9 +286,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/ruled">
         <owl:equivalentProperty rdf:resource="https://w3id.org/narn/social/wasTheKingOf"/>
-        <rdfs:comment xml:lang="en">Equivalent to wasTheKingOf.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Functions as an equivalent property signifying sovereign rule over a domain.</rdfs:comment>
         <rdfs:label xml:lang="en">ruled</rdfs:label>
         <skos:altLabel xml:lang="en">governed</skos:altLabel>
+        <skos:example xml:lang="en">Thingol governed and ruled Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -246,9 +302,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="en">Character served another as a subordinate.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a hierarchical relationship where one character acts as a subordinate to another.</rdfs:comment>
         <rdfs:label xml:lang="en">served</rdfs:label>
         <skos:altLabel xml:lang="en">was in service of</skos:altLabel>
+        <skos:example xml:lang="en">Sador was loyal and served Húrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -259,9 +316,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasHeldCaptiveIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/livedIn"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
-        <rdfs:comment xml:lang="en">Character was imprisoned.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies a location where a character was forcibly imprisoned or contained.</rdfs:comment>
         <rdfs:label xml:lang="en">was held captive in</rdfs:label>
         <skos:altLabel xml:lang="en">imprisoned in</skos:altLabel>
+        <skos:example xml:lang="en">Húrin suffered greatly and was held captive in Angband.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -271,9 +329,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasKilledBy">
         <owl:inverseOf rdf:resource="https://w3id.org/narn/social/killed"/>
-        <rdfs:comment xml:lang="en">Inverse of killed.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse relation specifying the perpetrator of a fatal action against the subject.</rdfs:comment>
         <rdfs:label xml:lang="en">was killed by</rdfs:label>
         <skos:altLabel xml:lang="en">slain by</skos:altLabel>
+        <skos:example xml:lang="en">Beleg suffered a tragic fate and was killed by Gorthol.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -283,9 +342,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasServedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/narn/social/served"/>
-        <rdfs:comment xml:lang="en">Inverse of served.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse relation designating the superior who receives service.</rdfs:comment>
         <rdfs:label xml:lang="en">was served by</rdfs:label>
         <skos:altLabel xml:lang="en">had as servant</skos:altLabel>
+        <skos:example xml:lang="en">Húrin held authority and was served by Sador.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -296,9 +356,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasTheBestFriendOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/hasFriend"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:comment xml:lang="en">Particularly close friendship.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies an exceptionally close and prioritized bond of mutual friendship.</rdfs:comment>
         <rdfs:label xml:lang="en">was the best friend of</rdfs:label>
         <skos:altLabel xml:lang="en">closest companion of</skos:altLabel>
+        <skos:example xml:lang="en">Beleg proved his loyalty and was the best friend of Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -308,9 +369,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasTheChieftainOf">
         <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
-        <rdfs:comment xml:lang="en">Character was the chieftain of a people or place.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the domain or people over which a character exercised tribal leadership.</rdfs:comment>
         <rdfs:label xml:lang="en">was the chieftain of</rdfs:label>
         <skos:altLabel xml:lang="en">led as chief</skos:altLabel>
+        <skos:example xml:lang="en">Brandir guided his people and was the chieftain of Brethil.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -322,9 +384,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
-        <rdfs:comment xml:lang="en">Character was the ruler of a place.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the geographical or political domain over which a character held absolute royal authority.</rdfs:comment>
         <rdfs:label xml:lang="en">was the king of</rdfs:label>
         <skos:altLabel xml:lang="en">reigned over</skos:altLabel>
+        <skos:example xml:lang="en">Thingol held supreme authority and was the king of Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -347,9 +410,10 @@
     <owl:Class rdf:about="https://w3id.org/narn/social/Ally">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/social/SocialRole"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/social/Outlaw"/>
-        <rdfs:comment xml:lang="en">One allied with others</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents an individual united with others in a formal or informal alliance.</rdfs:comment>
         <rdfs:label xml:lang="en">ally</rdfs:label>
         <skos:altLabel xml:lang="en">companion</skos:altLabel>
+        <skos:example xml:lang="en">Beleg stands as a steadfast ally to Túrin.</skos:example>
     </owl:Class>
     
 
@@ -365,9 +429,10 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The leader of a people or tribe.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes the principal leader or head of a specific people or tribal group.</rdfs:comment>
         <rdfs:label xml:lang="en">chieftain</rdfs:label>
         <skos:altLabel xml:lang="en">chief</skos:altLabel>
+        <skos:example xml:lang="en">Brandir acts as the chieftain leading the people of Brethil.</skos:example>
     </owl:Class>
     
 
@@ -385,9 +450,10 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">Enumerated class: {positive, negative, ambivalent}.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines a classification of emotional sentiments comprising positive negative or ambivalent states.</rdfs:comment>
         <rdfs:label xml:lang="en">emotional valence</rdfs:label>
         <skos:altLabel xml:lang="en">sentiment type</skos:altLabel>
+        <skos:example xml:lang="en">Húrin possesses a positive valence whereas Glaurung possesses a negative valence.</skos:example>
     </owl:Class>
     
 
@@ -410,9 +476,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/social/Servant"/>
-        <rdfs:comment xml:lang="en">A ruler of a realm or kingdom.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Designates the supreme sovereign or monarch of a defined realm or kingdom.</rdfs:comment>
         <rdfs:label xml:lang="en">king</rdfs:label>
         <skos:altLabel xml:lang="en">monarch</skos:altLabel>
+        <skos:example xml:lang="en">Thingol serves as the King governing the realm of Doriath.</skos:example>
     </owl:Class>
     
 
@@ -429,9 +496,10 @@
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">A leader is either a King or a Chieftain.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A general classification encompassing sovereign figures such as a King or a Chieftain.</rdfs:comment>
         <rdfs:label xml:lang="en">leader</rdfs:label>
         <skos:altLabel xml:lang="en">ruler</skos:altLabel>
+        <skos:example xml:lang="en">Figures such as King Thingol and Chieftain Brandir act as leaders.</skos:example>
     </owl:Class>
     
 
@@ -441,9 +509,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/social/MilitaryRole">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/social/SocialRole"/>
-        <rdfs:comment xml:lang="en">A social role related to military or combat functions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A social role structurally related to military leadership or combat functions.</rdfs:comment>
         <rdfs:label xml:lang="en">military role</rdfs:label>
         <skos:altLabel xml:lang="en">military position</skos:altLabel>
+        <skos:example xml:lang="en">Serving as a captain or general in the armies of Beleriand represents a military role.</skos:example>
     </owl:Class>
     
 
@@ -457,9 +526,10 @@
                 <owl:complementOf rdf:resource="https://w3id.org/narn/social/Leader"/>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">Anyone who is not a Leader.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Categorizes individuals who hold no sovereign or primary leadership authority.</rdfs:comment>
         <rdfs:label xml:lang="en">non-leader</rdfs:label>
         <skos:altLabel xml:lang="en">non-ruler</skos:altLabel>
+        <skos:example xml:lang="en">A servant like Sador is classified as a non-leader.</skos:example>
     </owl:Class>
     
 
@@ -475,9 +545,10 @@
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A person who lives outside the law.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Classifies an individual existing outside the protection and constraints of organized legal structures.</rdfs:comment>
         <rdfs:label xml:lang="en">outlaw</rdfs:label>
         <skos:altLabel xml:lang="en">fugitive</skos:altLabel>
+        <skos:example xml:lang="en">Forweg and Andróg operate as outlaws in the wild lands.</skos:example>
     </owl:Class>
     
 
@@ -487,9 +558,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/social/PoliticalRole">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/social/SocialRole"/>
-        <rdfs:comment xml:lang="en">A social role involving governance or political authority.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A specific social role involving governance or formal political authority.</rdfs:comment>
         <rdfs:label xml:lang="en">political role</rdfs:label>
         <skos:altLabel xml:lang="en">political position</skos:altLabel>
+        <skos:example xml:lang="en">The positions of King and Chieftain serve as political roles.</skos:example>
     </owl:Class>
     
 
@@ -504,9 +576,10 @@
                 <owl:hasValue rdf:resource="https://w3id.org/narn/social/positive"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">A relation with positive emotional valence (owl:hasValue construct).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes a relational bond characterized by a strictly positive emotional valence.</rdfs:comment>
         <rdfs:label xml:lang="en">positive relation</rdfs:label>
         <skos:altLabel xml:lang="en">positive bond</skos:altLabel>
+        <skos:example xml:lang="en">Húrin maintains a positive relation due to his affirmative emotional valence.</skos:example>
     </owl:Class>
     
 
@@ -526,9 +599,10 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">A servant who serves a king.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Designates a servant specifically sworn to the service of a royal monarch.</rdfs:comment>
         <rdfs:label xml:lang="en">royal servant</rdfs:label>
         <skos:altLabel xml:lang="en">royal attendant</skos:altLabel>
+        <skos:example xml:lang="en">Beleg qualifies as a royal servant by virtue of serving King Thingol.</skos:example>
     </owl:Class>
     
 
@@ -549,9 +623,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/social/SocialRole"/>
-        <rdfs:comment xml:lang="en">One who serves another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies an individual bound to the service and assistance of another figure.</rdfs:comment>
         <rdfs:label xml:lang="en">servant</rdfs:label>
         <skos:altLabel xml:lang="en">attendant</skos:altLabel>
+        <skos:example xml:lang="en">Sador operates as a servant in the household of Húrin.</skos:example>
     </owl:Class>
     
 
@@ -560,9 +635,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/narn/social/SocialRole">
-        <rdfs:comment xml:lang="en">A role that a character plays in a social context.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A defined structural position that a character occupies within a social context.</rdfs:comment>
         <rdfs:label xml:lang="en">social role</rdfs:label>
         <skos:altLabel xml:lang="en">role</skos:altLabel>
+        <skos:example xml:lang="en">Thingol occupies the social role of a King.</skos:example>
     </owl:Class>
     
 
@@ -577,9 +653,10 @@
                 <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">A character who committed suicide.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies a narrative figure who intentionally caused their own death.</rdfs:comment>
         <rdfs:label xml:lang="en">suicidal character</rdfs:label>
         <skos:altLabel xml:lang="en">self slain character</skos:altLabel>
+        <skos:example xml:lang="en">Both Túrin and Níniel are categorized as suicidal characters.</skos:example>
     </owl:Class>
     
 
@@ -600,7 +677,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/narn/social/ambivalent">
-        <rdfs:comment xml:lang="en">An ambivalent or mixed emotional valence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a mixed or unresolved emotional state.</rdfs:comment>
         <rdfs:label xml:lang="en">ambivalent</rdfs:label>
         <skos:altLabel xml:lang="en">mixed sentiment</skos:altLabel>
     </owl:NamedIndividual>
@@ -611,7 +688,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/narn/social/negative">
-        <rdfs:comment xml:lang="en">A negative emotional valence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a destructive or hostile emotional state.</rdfs:comment>
         <rdfs:label xml:lang="en">negative</rdfs:label>
         <skos:altLabel xml:lang="en">negative sentiment</skos:altLabel>
     </owl:NamedIndividual>
@@ -622,7 +699,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/narn/social/positive">
-        <rdfs:comment xml:lang="en">A positive emotional valence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a constructive and affirmative emotional state.</rdfs:comment>
         <rdfs:label xml:lang="en">positive</rdfs:label>
         <skos:altLabel xml:lang="en">positive sentiment</skos:altLabel>
     </owl:NamedIndividual>

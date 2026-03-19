@@ -3,7 +3,7 @@
 <https://w3id.org/narn/location/> <http://www.w3.org/2000/01/rdf-schema#label> "Place and Location Ontology"@en .
 <https://w3id.org/narn/location/> <https://purl.org/dc/terms/created> "2026-03-11"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/location/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .
-<https://w3id.org/narn/location/> <https://purl.org/dc/terms/modified> "2026-03-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/location/> <https://purl.org/dc/terms/modified> "2026-03-19"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/location/> <https://purl.org/vocab/vann/preferredNamespacePrefix> "loc" .
 <https://w3id.org/narn/location/> <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/location/" .
 # 
@@ -17,6 +17,9 @@
 # 
 # http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://purl.org/dc/terms/created
 <https://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -62,6 +65,7 @@
 <https://w3id.org/narn/location/borders> <http://www.w3.org/2000/01/rdf-schema#comment> "Two places share a boundary but neither contains the other."@en .
 <https://w3id.org/narn/location/borders> <http://www.w3.org/2000/01/rdf-schema#label> "borders"@en .
 <https://w3id.org/narn/location/borders> <http://www.w3.org/2004/02/skos/core#altLabel> "adjacent to"@en .
+<https://w3id.org/narn/location/borders> <http://www.w3.org/2004/02/skos/core#example> "Doriath borders Brethil."@en .
 # 
 # https://w3id.org/narn/location/contains
 <https://w3id.org/narn/location/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -73,6 +77,7 @@
 <https://w3id.org/narn/location/contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of isAPartOf."@en .
 <https://w3id.org/narn/location/contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
 <https://w3id.org/narn/location/contains> <http://www.w3.org/2004/02/skos/core#altLabel> "includes"@en .
+<https://w3id.org/narn/location/contains> <http://www.w3.org/2004/02/skos/core#example> "Beleriand contains Doriath."@en .
 # 
 # https://w3id.org/narn/location/hasSpatialRelation
 <https://w3id.org/narn/location/hasSpatialRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -81,6 +86,7 @@
 <https://w3id.org/narn/location/hasSpatialRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "A general spatial relation between two places."@en .
 <https://w3id.org/narn/location/hasSpatialRelation> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial relation"@en .
 <https://w3id.org/narn/location/hasSpatialRelation> <http://www.w3.org/2004/02/skos/core#altLabel> "spatially related to"@en .
+<https://w3id.org/narn/location/hasSpatialRelation> <http://www.w3.org/2004/02/skos/core#example> "Doriath has a spatial relation to Brethil, as they border each other."@en .
 # 
 # https://w3id.org/narn/location/isAPartOf
 <https://w3id.org/narn/location/isAPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -91,6 +97,7 @@
 <https://w3id.org/narn/location/isAPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a place constitutes a subarea of another place."@en .
 <https://w3id.org/narn/location/isAPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is a part of"@en .
 <https://w3id.org/narn/location/isAPartOf> <http://www.w3.org/2004/02/skos/core#altLabel> "part of"@en .
+<https://w3id.org/narn/location/isAPartOf> <http://www.w3.org/2004/02/skos/core#example> "Dor-lómin is a part of Hithlum."@en .
 # 
 # https://w3id.org/narn/location/isNear
 <https://w3id.org/narn/location/isNear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -100,6 +107,7 @@
 <https://w3id.org/narn/location/isNear> <http://www.w3.org/2000/01/rdf-schema#comment> "Two places are in proximity."@en .
 <https://w3id.org/narn/location/isNear> <http://www.w3.org/2000/01/rdf-schema#label> "is near"@en .
 <https://w3id.org/narn/location/isNear> <http://www.w3.org/2004/02/skos/core#altLabel> "close to"@en .
+<https://w3id.org/narn/location/isNear> <http://www.w3.org/2004/02/skos/core#example> "The river Narog is near Nargothrond."@en .
 # 
 # https://w3id.org/narn/location/isStrictlyInsideOf
 <https://w3id.org/narn/location/isStrictlyInsideOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -110,6 +118,7 @@
 <https://w3id.org/narn/location/isStrictlyInsideOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Stricter form of isAPartOf where boundaries do not touch."@en .
 <https://w3id.org/narn/location/isStrictlyInsideOf> <http://www.w3.org/2000/01/rdf-schema#label> "is strictly inside of"@en .
 <https://w3id.org/narn/location/isStrictlyInsideOf> <http://www.w3.org/2004/02/skos/core#altLabel> "strictly within"@en .
+<https://w3id.org/narn/location/isStrictlyInsideOf> <http://www.w3.org/2004/02/skos/core#example> "Gondolin is strictly inside of Tumladen."@en .
 # 
 # https://w3id.org/narn/location/isTheCapitalOf
 <https://w3id.org/narn/location/isTheCapitalOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -119,6 +128,7 @@
 <https://w3id.org/narn/location/isTheCapitalOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A settlement is the capital of a realm."@en .
 <https://w3id.org/narn/location/isTheCapitalOf> <http://www.w3.org/2000/01/rdf-schema#label> "is the capital of"@en .
 <https://w3id.org/narn/location/isTheCapitalOf> <http://www.w3.org/2004/02/skos/core#altLabel> "capital of"@en .
+<https://w3id.org/narn/location/isTheCapitalOf> <http://www.w3.org/2004/02/skos/core#example> "Menegroth is the capital of Doriath."@en .
 # 
 # 
 # 
@@ -136,6 +146,7 @@
 <https://w3id.org/narn/location/Building> <http://www.w3.org/2000/01/rdf-schema#comment> "A constructed structure."@en .
 <https://w3id.org/narn/location/Building> <http://www.w3.org/2000/01/rdf-schema#label> "building"@en .
 <https://w3id.org/narn/location/Building> <http://www.w3.org/2004/02/skos/core#altLabel> "structure"@en .
+<https://w3id.org/narn/location/Building> <http://www.w3.org/2004/02/skos/core#example> "The great hall of Menegroth is a building within the city."@en .
 # 
 # https://w3id.org/narn/location/City
 <https://w3id.org/narn/location/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -144,6 +155,7 @@
 <https://w3id.org/narn/location/City> <http://www.w3.org/2000/01/rdf-schema#comment> "A large and significant settlement."@en .
 <https://w3id.org/narn/location/City> <http://www.w3.org/2000/01/rdf-schema#label> "city"@en .
 <https://w3id.org/narn/location/City> <http://www.w3.org/2004/02/skos/core#altLabel> "urban area"@en .
+<https://w3id.org/narn/location/City> <http://www.w3.org/2004/02/skos/core#example> "Gondolin is a hidden city in Tumladen."@en .
 # 
 # https://w3id.org/narn/location/Continent
 <https://w3id.org/narn/location/Continent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -163,6 +175,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/location/Continent> <http://www.w3.org/2000/01/rdf-schema#comment> "A major landmass."@en .
 <https://w3id.org/narn/location/Continent> <http://www.w3.org/2000/01/rdf-schema#label> "continent"@en .
 <https://w3id.org/narn/location/Continent> <http://www.w3.org/2004/02/skos/core#altLabel> "landmass"@en .
+<https://w3id.org/narn/location/Continent> <http://www.w3.org/2004/02/skos/core#example> "Endor is a continent within Arda."@en .
 # 
 # https://w3id.org/narn/location/Desert
 <https://w3id.org/narn/location/Desert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -171,6 +184,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/location/Desert> <http://www.w3.org/2000/01/rdf-schema#comment> "A barren, arid area with little vegetation."@en .
 <https://w3id.org/narn/location/Desert> <http://www.w3.org/2000/01/rdf-schema#label> "desert"@en .
 <https://w3id.org/narn/location/Desert> <http://www.w3.org/2004/02/skos/core#altLabel> "wasteland"@en .
+<https://w3id.org/narn/location/Desert> <http://www.w3.org/2004/02/skos/core#example> "The Anfauglith is a desert north of Beleriand."@en .
 # 
 # https://w3id.org/narn/location/Forest
 <https://w3id.org/narn/location/Forest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -178,6 +192,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/location/Forest> <http://www.w3.org/2000/01/rdf-schema#comment> "A large, dense wooded area."@en .
 <https://w3id.org/narn/location/Forest> <http://www.w3.org/2000/01/rdf-schema#label> "forest"@en .
 <https://w3id.org/narn/location/Forest> <http://www.w3.org/2004/02/skos/core#altLabel> "wood"@en .
+<https://w3id.org/narn/location/Forest> <http://www.w3.org/2004/02/skos/core#example> "Brethil is a forest where Túrin lived under the name Turambar."@en .
 # 
 # https://w3id.org/narn/location/Fortress
 <https://w3id.org/narn/location/Fortress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -185,6 +200,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/location/Fortress> <http://www.w3.org/2000/01/rdf-schema#comment> "A fortified place, typically a military stronghold."@en .
 <https://w3id.org/narn/location/Fortress> <http://www.w3.org/2000/01/rdf-schema#label> "fortress"@en .
 <https://w3id.org/narn/location/Fortress> <http://www.w3.org/2004/02/skos/core#altLabel> "stronghold"@en .
+<https://w3id.org/narn/location/Fortress> <http://www.w3.org/2004/02/skos/core#example> "Angband is Morgoth's fortress in the Iron Mountains."@en .
 # 
 # https://w3id.org/narn/location/Hill
 <https://w3id.org/narn/location/Hill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -192,6 +208,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/location/Hill> <http://www.w3.org/2000/01/rdf-schema#comment> "A naturally raised area of land, smaller than a mountain."@en .
 <https://w3id.org/narn/location/Hill> <http://www.w3.org/2000/01/rdf-schema#label> "hill"@en .
 <https://w3id.org/narn/location/Hill> <http://www.w3.org/2004/02/skos/core#altLabel> "hillock"@en .
+<https://w3id.org/narn/location/Hill> <http://www.w3.org/2004/02/skos/core#example> "Amon Rûdh is a hill where Túrin hid with Mîm."@en .
 # 
 # https://w3id.org/narn/location/Lake
 <https://w3id.org/narn/location/Lake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -199,6 +216,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/location/Lake> <http://www.w3.org/2000/01/rdf-schema#comment> "A large body of water surrounded by land."@en .
 <https://w3id.org/narn/location/Lake> <http://www.w3.org/2000/01/rdf-schema#label> "lake"@en .
 <https://w3id.org/narn/location/Lake> <http://www.w3.org/2004/02/skos/core#altLabel> "body of water"@en .
+<https://w3id.org/narn/location/Lake> <http://www.w3.org/2004/02/skos/core#example> "There is a lake near the hidden city of Gondolin."@en .
 # 
 # https://w3id.org/narn/location/LandArea
 <https://w3id.org/narn/location/LandArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -206,6 +224,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/location/LandArea> <http://www.w3.org/2000/01/rdf-schema#comment> "A place that is primarily defined by its land territory."@en .
 <https://w3id.org/narn/location/LandArea> <http://www.w3.org/2000/01/rdf-schema#label> "land area"@en .
 <https://w3id.org/narn/location/LandArea> <http://www.w3.org/2004/02/skos/core#altLabel> "land"@en .
+<https://w3id.org/narn/location/LandArea> <http://www.w3.org/2004/02/skos/core#example> "Dor-lómin is a land area in Hithlum."@en .
 # 
 # https://w3id.org/narn/location/Mountain
 <https://w3id.org/narn/location/Mountain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -215,6 +234,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/location/Mountain> <http://www.w3.org/2000/01/rdf-schema#comment> "A large natural elevation of the earth's surface."@en .
 <https://w3id.org/narn/location/Mountain> <http://www.w3.org/2000/01/rdf-schema#label> "mountain"@en .
 <https://w3id.org/narn/location/Mountain> <http://www.w3.org/2004/02/skos/core#altLabel> "peak"@en .
+<https://w3id.org/narn/location/Mountain> <http://www.w3.org/2004/02/skos/core#example> "Ered Wethrin borders Hithlum."@en .
 # 
 # https://w3id.org/narn/location/NaturalArea
 <https://w3id.org/narn/location/NaturalArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -223,12 +243,14 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/location/NaturalArea> <http://www.w3.org/2000/01/rdf-schema#comment> "A place defined by natural geographic features rather than habitation."@en .
 <https://w3id.org/narn/location/NaturalArea> <http://www.w3.org/2000/01/rdf-schema#label> "natural area"@en .
 <https://w3id.org/narn/location/NaturalArea> <http://www.w3.org/2004/02/skos/core#altLabel> "natural feature"@en .
+<https://w3id.org/narn/location/NaturalArea> <http://www.w3.org/2004/02/skos/core#example> "Brethil is a natural area east of Doriath."@en .
 # 
 # https://w3id.org/narn/location/Place
 <https://w3id.org/narn/location/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/location/Place> <http://www.w3.org/2000/01/rdf-schema#comment> "A named location that has geographic or spatial significance in a story."@en .
 <https://w3id.org/narn/location/Place> <http://www.w3.org/2000/01/rdf-schema#label> "place"@en .
 <https://w3id.org/narn/location/Place> <http://www.w3.org/2004/02/skos/core#altLabel> "location"@en .
+<https://w3id.org/narn/location/Place> <http://www.w3.org/2004/02/skos/core#example> "Beleriand is a place in Middle-earth."@en .
 # 
 # https://w3id.org/narn/location/Realm
 <https://w3id.org/narn/location/Realm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -249,6 +271,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://w3id.org/narn/location/Realm> <http://www.w3.org/2000/01/rdf-schema#comment> "A territory under the rule of a king or sovereign authority."@en .
 <https://w3id.org/narn/location/Realm> <http://www.w3.org/2000/01/rdf-schema#label> "realm"@en .
 <https://w3id.org/narn/location/Realm> <http://www.w3.org/2004/02/skos/core#altLabel> "kingdom"@en .
+<https://w3id.org/narn/location/Realm> <http://www.w3.org/2004/02/skos/core#example> "Doriath is a realm ruled by King Thingol, with Menegroth as its capital."@en .
 # 
 # https://w3id.org/narn/location/Region
 <https://w3id.org/narn/location/Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -256,6 +279,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://w3id.org/narn/location/Region> <http://www.w3.org/2000/01/rdf-schema#comment> "A large geographic area, typically contains multiple subplaces."@en .
 <https://w3id.org/narn/location/Region> <http://www.w3.org/2000/01/rdf-schema#label> "region"@en .
 <https://w3id.org/narn/location/Region> <http://www.w3.org/2004/02/skos/core#altLabel> "area"@en .
+<https://w3id.org/narn/location/Region> <http://www.w3.org/2004/02/skos/core#example> "Beleriand is a region containing Doriath, Hithlum, and Brethil."@en .
 # 
 # https://w3id.org/narn/location/River
 <https://w3id.org/narn/location/River> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -263,6 +287,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://w3id.org/narn/location/River> <http://www.w3.org/2000/01/rdf-schema#comment> "A large natural stream of water."@en .
 <https://w3id.org/narn/location/River> <http://www.w3.org/2000/01/rdf-schema#label> "river"@en .
 <https://w3id.org/narn/location/River> <http://www.w3.org/2004/02/skos/core#altLabel> "waterway"@en .
+<https://w3id.org/narn/location/River> <http://www.w3.org/2004/02/skos/core#example> "The river Narog flows near Nargothrond."@en .
 # 
 # https://w3id.org/narn/location/Sea
 <https://w3id.org/narn/location/Sea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -270,6 +295,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://w3id.org/narn/location/Sea> <http://www.w3.org/2000/01/rdf-schema#comment> "A large body of salt water."@en .
 <https://w3id.org/narn/location/Sea> <http://www.w3.org/2000/01/rdf-schema#label> "sea"@en .
 <https://w3id.org/narn/location/Sea> <http://www.w3.org/2004/02/skos/core#altLabel> "ocean"@en .
+<https://w3id.org/narn/location/Sea> <http://www.w3.org/2004/02/skos/core#example> "Belegaer is the Great Sea west of Middle-earth."@en .
 # 
 # https://w3id.org/narn/location/Settlement
 <https://w3id.org/narn/location/Settlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -281,6 +307,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/narn/location/Settlement> <http://www.w3.org/2000/01/rdf-schema#comment> "A place where people live permanently."@en .
 <https://w3id.org/narn/location/Settlement> <http://www.w3.org/2000/01/rdf-schema#label> "settlement"@en .
 <https://w3id.org/narn/location/Settlement> <http://www.w3.org/2004/02/skos/core#altLabel> "inhabited place"@en .
+<https://w3id.org/narn/location/Settlement> <http://www.w3.org/2004/02/skos/core#example> "Menegroth is a settlement within Doriath."@en .
 # 
 # https://w3id.org/narn/location/Town
 <https://w3id.org/narn/location/Town> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -289,6 +316,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/narn/location/Town> <http://www.w3.org/2000/01/rdf-schema#comment> "A settlement larger than a village but smaller than a city."@en .
 <https://w3id.org/narn/location/Town> <http://www.w3.org/2000/01/rdf-schema#label> "town"@en .
 <https://w3id.org/narn/location/Town> <http://www.w3.org/2004/02/skos/core#altLabel> "township"@en .
+<https://w3id.org/narn/location/Town> <http://www.w3.org/2004/02/skos/core#example> "There is a town along the road between Doriath and Nargothrond."@en .
 # 
 # https://w3id.org/narn/location/UndergroundCity
 <https://w3id.org/narn/location/UndergroundCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -304,6 +332,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/narn/location/UndergroundCity> <http://www.w3.org/2000/01/rdf-schema#comment> "A city built underground, within caves or excavated halls."@en .
 <https://w3id.org/narn/location/UndergroundCity> <http://www.w3.org/2000/01/rdf-schema#label> "underground city"@en .
 <https://w3id.org/narn/location/UndergroundCity> <http://www.w3.org/2004/02/skos/core#altLabel> "subterranean city"@en .
+<https://w3id.org/narn/location/UndergroundCity> <http://www.w3.org/2004/02/skos/core#example> "Menegroth is an underground city, the capital of Doriath."@en .
 # 
 # https://w3id.org/narn/location/UndergroundPlace
 <https://w3id.org/narn/location/UndergroundPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -311,6 +340,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/narn/location/UndergroundPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "A place located beneath the surface of the earth."@en .
 <https://w3id.org/narn/location/UndergroundPlace> <http://www.w3.org/2000/01/rdf-schema#label> "underground place"@en .
 <https://w3id.org/narn/location/UndergroundPlace> <http://www.w3.org/2004/02/skos/core#altLabel> "subterranean place"@en .
+<https://w3id.org/narn/location/UndergroundPlace> <http://www.w3.org/2004/02/skos/core#example> "Menegroth and Nargothrond are underground places."@en .
 # 
 # https://w3id.org/narn/location/Valley
 <https://w3id.org/narn/location/Valley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -318,6 +348,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/narn/location/Valley> <http://www.w3.org/2000/01/rdf-schema#comment> "A low area of land between hills or mountains."@en .
 <https://w3id.org/narn/location/Valley> <http://www.w3.org/2000/01/rdf-schema#label> "valley"@en .
 <https://w3id.org/narn/location/Valley> <http://www.w3.org/2004/02/skos/core#altLabel> "vale"@en .
+<https://w3id.org/narn/location/Valley> <http://www.w3.org/2004/02/skos/core#example> "Tumladen is the valley where Gondolin was built."@en .
 # 
 # https://w3id.org/narn/location/Village
 <https://w3id.org/narn/location/Village> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -325,6 +356,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/narn/location/Village> <http://www.w3.org/2000/01/rdf-schema#comment> "A small settlement, typically in a rural area."@en .
 <https://w3id.org/narn/location/Village> <http://www.w3.org/2000/01/rdf-schema#label> "village"@en .
 <https://w3id.org/narn/location/Village> <http://www.w3.org/2004/02/skos/core#altLabel> "hamlet"@en .
+<https://w3id.org/narn/location/Village> <http://www.w3.org/2004/02/skos/core#example> "There is a small village in Brethil where woodsmen live."@en .
 # 
 # https://w3id.org/narn/location/WildArea
 <https://w3id.org/narn/location/WildArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -332,6 +364,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/narn/location/WildArea> <http://www.w3.org/2000/01/rdf-schema#comment> "An uncultivated, uninhabited region."@en .
 <https://w3id.org/narn/location/WildArea> <http://www.w3.org/2000/01/rdf-schema#label> "wild area"@en .
 <https://w3id.org/narn/location/WildArea> <http://www.w3.org/2004/02/skos/core#altLabel> "wilderness"@en .
+<https://w3id.org/narn/location/WildArea> <http://www.w3.org/2004/02/skos/core#example> "The wild lands between Doriath and Nargothrond."@en .
 # 
 # https://w3id.org/narn/location/WoodedArea
 <https://w3id.org/narn/location/WoodedArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -339,5 +372,6 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/narn/location/WoodedArea> <http://www.w3.org/2000/01/rdf-schema#comment> "A land area predominantly covered by trees."@en .
 <https://w3id.org/narn/location/WoodedArea> <http://www.w3.org/2000/01/rdf-schema#label> "wooded area"@en .
 <https://w3id.org/narn/location/WoodedArea> <http://www.w3.org/2004/02/skos/core#altLabel> "woodland"@en .
+<https://w3id.org/narn/location/WoodedArea> <http://www.w3.org/2004/02/skos/core#example> "Brethil is a wooded area in Beleriand."@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

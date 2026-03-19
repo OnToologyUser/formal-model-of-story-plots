@@ -12,9 +12,29 @@
                                rdfs:label "Plot Structure Ontology"@en ;
                                <https://purl.org/dc/terms/created> "2026-03-16"^^xsd:date ;
                                <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;
-                               <https://purl.org/dc/terms/modified> "2026-03-17"^^xsd:date ;
+                               <https://purl.org/dc/terms/modified> "2026-03-19"^^xsd:date ;
                                <https://purl.org/vocab/vann/preferredNamespacePrefix> "plot" ;
                                <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/plot/" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
@@ -26,7 +46,8 @@
                   owl:propertyDisjointWith :hasAuthor ;
                   rdfs:comment "A character or entity involved in the conflict."@en ;
                   rdfs:label "conflict involves"@en ;
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "tension involves"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "tension involves"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "Morgoth's curse involves Morgoth and Húrin."@en .
 
 
 ###  https://w3id.org/narn/plot/containsUnit
@@ -36,7 +57,8 @@
               rdfs:range :NarrativeUnit ;
               rdfs:comment "Relates a narrative unit to its contained subunits."@en ;
               rdfs:label "contains unit"@en ;
-              <http://www.w3.org/2004/02/skos/core#altLabel> "includes unit"@en .
+              <http://www.w3.org/2004/02/skos/core#altLabel> "includes unit"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "Part I contains the chapter Túrin in Dor-lómin."@en .
 
 
 ###  https://w3id.org/narn/plot/correspondsToEvent
@@ -45,7 +67,8 @@
                     rdfs:range <https://w3id.org/narn/event/Event> ;
                     rdfs:comment "Maps a narrative element to the event it represents."@en ;
                     rdfs:label "corresponds to event"@en ;
-                    <http://www.w3.org/2004/02/skos/core#altLabel> "maps to event"@en .
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "maps to event"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "The Climax corresponds to the Slaying of Glaurung."@en .
 
 
 ###  https://w3id.org/narn/plot/deviceInvolvesCharacter
@@ -53,7 +76,8 @@
                          rdfs:domain :PlotDevice ;
                          rdfs:comment "A character involved in or affected by this plot device."@en ;
                          rdfs:label "device involves character"@en ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "device concerns"@en .
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "device concerns"@en ;
+                         <http://www.w3.org/2004/02/skos/core#example> "The Anagnorisis device involves Níniel and Turambar."@en .
 
 
 ###  https://w3id.org/narn/plot/follows
@@ -65,7 +89,8 @@
          rdfs:range :NarrativeUnit ;
          rdfs:comment "One narrative unit sequentially comes after another."@en ;
          rdfs:label "follows"@en ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "comes after"@en .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "comes after"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "Part II follows Part I in the Narn."@en .
 
 
 ###  https://w3id.org/narn/plot/foreshadowsEvent
@@ -74,7 +99,8 @@
                   rdfs:range <https://w3id.org/narn/event/Event> ;
                   rdfs:comment "The event that this foreshadowing hints at."@en ;
                   rdfs:label "foreshadows event"@en ;
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "hints at"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "hints at"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "Morgoth's curse foreshadows the death of Turambar."@en .
 
 
 ###  https://w3id.org/narn/plot/hasAuthor
@@ -83,7 +109,8 @@
            rdfs:domain :Story ;
            rdfs:comment "The author of the story."@en ;
            rdfs:label "has author"@en ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "written by"@en .
+           <http://www.w3.org/2004/02/skos/core#altLabel> "written by"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "The Narn has author J.R.R. Tolkien."@en .
 
 
 ###  https://w3id.org/narn/plot/hasConflict
@@ -92,7 +119,8 @@
              rdfs:range :Conflict ;
              rdfs:comment "A conflict central to the story."@en ;
              rdfs:label "has conflict"@en ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "has tension"@en .
+             <http://www.w3.org/2004/02/skos/core#altLabel> "has tension"@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "Morgoth's curse against Húrin's family is a conflict in the Narn."@en .
 
 
 ###  https://w3id.org/narn/plot/hasGenre
@@ -102,7 +130,8 @@
           rdfs:range :Genre ;
           rdfs:comment "The genre(s) of the story."@en ;
           rdfs:label "has genre"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "genre is"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "genre is"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "The Narn has genre Tragedy, Epic, and Fantasy."@en .
 
 
 ###  https://w3id.org/narn/plot/hasNarrativeElement
@@ -111,7 +140,8 @@
                      rdfs:range :NarrativeElement ;
                      rdfs:comment "Links a story to its plot stages."@en ;
                      rdfs:label "has narrative element"@en ;
-                     <http://www.w3.org/2004/02/skos/core#altLabel> "has element"@en .
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "has element"@en ;
+                     <http://www.w3.org/2004/02/skos/core#example> "The Narn includes narrative elements like Exposition and Climax."@en .
 
 
 ###  https://w3id.org/narn/plot/hasNarrativeUnit
@@ -122,7 +152,8 @@
                   rdfs:range :NarrativeUnit ;
                   rdfs:comment "Links a story to its structural units."@en ;
                   rdfs:label "has narrative unit"@en ;
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "divided into"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "divided into"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "The Narn has narrative units Part I, Part II, Part III."@en .
 
 
 ###  https://w3id.org/narn/plot/hasRole
@@ -130,7 +161,8 @@
          rdfs:range :CharacterRole ;
          rdfs:comment "The narrative role a character plays."@en ;
          rdfs:label "has role"@en ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "plays role"@en .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "plays role"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "Túrin has role Protagonist and Tragic Hero."@en .
 
 
 ###  https://w3id.org/narn/plot/hasTheme
@@ -138,14 +170,16 @@
           rdfs:domain :Story ;
           rdfs:comment "A thematic element or motif in the story."@en ;
           rdfs:label "has theme"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "explores theme"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "explores theme"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "The Narn explores themes like fate and pride."@en .
 
 
 ###  https://w3id.org/narn/plot/involvedInDevice
 :involvedInDevice rdf:type owl:ObjectProperty ;
                   rdfs:comment "Links a character role to a narrative device that affects them."@en ;
                   rdfs:label "involved in device"@en ;
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "affected by narrative device"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "affected by narrative device"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "Túrin is involved in the Peripeteia device."@en .
 
 
 ###  https://w3id.org/narn/plot/isUnitOf
@@ -153,7 +187,8 @@
           owl:inverseOf :containsUnit ;
           rdfs:comment "Inverse of containsUnit, relates a unit to its parent."@en ;
           rdfs:label "is unit of"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "belongs to"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "belongs to"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "The chapter Túrin in Dor-lómin is a unit of Part I."@en .
 
 
 ###  https://w3id.org/narn/plot/occursInUnit
@@ -162,7 +197,8 @@
               rdfs:range :NarrativeUnit ;
               rdfs:comment "The narrative unit in which this element appears."@en ;
               rdfs:label "occurs in unit"@en ;
-              <http://www.w3.org/2004/02/skos/core#altLabel> "located in unit"@en .
+              <http://www.w3.org/2004/02/skos/core#altLabel> "located in unit"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "The Falling Action occurs in Part III."@en .
 
 
 ###  https://w3id.org/narn/plot/usesDevice
@@ -171,7 +207,8 @@
             rdfs:range :PlotDevice ;
             rdfs:comment "Links a story to the plot devices it employs."@en ;
             rdfs:label "uses device"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "employs device"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "employs device"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "The Narn uses devices: Dramatic Irony, Anagnorisis, Peripeteia."@en .
 
 
 #################################################################
@@ -185,7 +222,8 @@
                rdfs:range xsd:date ;
                rdfs:comment "The date the story was published."@en ;
                rdfs:label "published date"@en ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "date published"@en .
+               <http://www.w3.org/2004/02/skos/core#altLabel> "date published"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "The Narn was published on 2007-04-17."@en .
 
 
 ###  https://w3id.org/narn/plot/unitIndex
@@ -194,7 +232,8 @@
            rdfs:range xsd:positiveInteger ;
            rdfs:comment "The ordering position of a unit within its parent."@en ;
            rdfs:label "unit index"@en ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "sequence number"@en .
+           <http://www.w3.org/2004/02/skos/core#altLabel> "sequence number"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "Part I has unit index 1."@en .
 
 
 #################################################################
@@ -206,7 +245,8 @@
      rdfs:subClassOf :NarrativeUnit ;
      rdfs:comment "A major division in drama or narrative, often five in classical structure."@en ;
      rdfs:label "act"@en ;
-     <http://www.w3.org/2004/02/skos/core#altLabel> "story act"@en .
+     <http://www.w3.org/2004/02/skos/core#altLabel> "story act"@en ;
+     <http://www.w3.org/2004/02/skos/core#example> "Act III of a five act tragedy."@en .
 
 
 ###  https://w3id.org/narn/plot/Anagnorisis
@@ -220,9 +260,10 @@
                                    rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :PlotDevice ;
-             rdfs:comment "The point in a play, novel, etc., in which a principal character recognizes or discovers another character's true identity or the true nature of their own circumstances."@en ;
+             rdfs:comment "A moment where a character makes a critical discovery about an identity or situation."@en ;
              rdfs:label "anagnorisis"@en ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "moment of recognition"@en .
+             <http://www.w3.org/2004/02/skos/core#altLabel> "moment of recognition"@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "Níniel discovers she is Nienor, sister of Túrin."@en .
 
 
 ###  https://w3id.org/narn/plot/Antagonist
@@ -231,7 +272,8 @@
             owl:disjointWith :Protagonist ;
             rdfs:comment "The character who opposes the protagonist."@en ;
             rdfs:label "antagonist"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "villain"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "villain"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "Glaurung is the antagonist who opposes Túrin."@en .
 
 
 ###  https://w3id.org/narn/plot/Chapter
@@ -239,14 +281,16 @@
          rdfs:subClassOf :NarrativeUnit ;
          rdfs:comment "A numbered or titled section of a narrative."@en ;
          rdfs:label "chapter"@en ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "story chapter"@en .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "story chapter"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "Túrin in Dor-lómin is a chapter in the Narn."@en .
 
 
 ###  https://w3id.org/narn/plot/CharacterRole
 :CharacterRole rdf:type owl:Class ;
                rdfs:comment "The narrative function a character plays in the story."@en ;
                rdfs:label "character role"@en ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "story role"@en .
+               <http://www.w3.org/2004/02/skos/core#altLabel> "story role"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "Túrin has the role of Protagonist and Tragic Hero."@en .
 
 
 ###  https://w3id.org/narn/plot/Climax
@@ -256,7 +300,8 @@
                          :Resolution ;
         rdfs:comment "The turning point; the moment of highest tension."@en ;
         rdfs:label "climax"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "turning point"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "turning point"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "The slaying of Glaurung and the truth about Níniel revealed."@en .
 
 
 ###  https://w3id.org/narn/plot/Conflict
@@ -264,15 +309,17 @@
           owl:disjointWith :Genre ;
           rdfs:comment "A struggle between opposing forces driving the plot."@en ;
           rdfs:label "conflict"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "tension"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "tension"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "Morgoth's curse against Húrin's family is a central conflict."@en .
 
 
 ###  https://w3id.org/narn/plot/Denouement
 :Denouement rdf:type owl:Class ;
             owl:equivalentClass :Resolution ;
-            rdfs:comment "Equivalent to resolution. The unravelling of the plot."@en ;
+            rdfs:comment "The final unravelling of the plot."@en ;
             rdfs:label "denouement"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "final outcome"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "final outcome"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "Both Níniel and Turambar perish in the denouement of the Narn."@en .
 
 
 ###  https://w3id.org/narn/plot/DramaticIrony
@@ -280,7 +327,8 @@
                rdfs:subClassOf :PlotDevice ;
                rdfs:comment "When the audience knows more than the characters."@en ;
                rdfs:label "dramatic irony"@en ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "audience knowledge gap"@en .
+               <http://www.w3.org/2004/02/skos/core#altLabel> "audience knowledge gap"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "The audience knows Túrin's identity while others do not."@en .
 
 
 ###  https://w3id.org/narn/plot/Epic
@@ -288,7 +336,8 @@
       rdfs:subClassOf :Genre ;
       rdfs:comment "A long narrative involving heroic deeds and grand scale."@en ;
       rdfs:label "epic"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "epic genre"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "epic genre"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "The Narn is an epic spanning wars, exiles, and dragon slaying."@en .
 
 
 ###  https://w3id.org/narn/plot/Exposition
@@ -297,7 +346,8 @@
             owl:disjointWith :Resolution ;
             rdfs:comment "Introduction of setting, characters, and background."@en ;
             rdfs:label "exposition"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "setup"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "setup"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "Húrin's family and the curse of Morgoth."@en .
 
 
 ###  https://w3id.org/narn/plot/ExternalConflict
@@ -308,9 +358,10 @@
                                     owl:minCardinality "2"^^xsd:nonNegativeInteger
                                   ] ;
                   owl:disjointWith :InternalConflict ;
-                  rdfs:comment "Conflict between a character and an external force (antagonist, nature, society)."@en ;
+                  rdfs:comment "Conflict between a character and an external force such as an antagonist, nature, or society."@en ;
                   rdfs:label "external conflict"@en ;
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "outer struggle"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "outer struggle"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "Morgoth's curse against Húrin's family involves Morgoth and Húrin."@en .
 
 
 ###  https://w3id.org/narn/plot/FallingAction
@@ -319,7 +370,8 @@
                owl:disjointWith :RisingAction ;
                rdfs:comment "Events after the climax leading to the resolution."@en ;
                rdfs:label "falling action"@en ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "unwinding"@en .
+               <http://www.w3.org/2004/02/skos/core#altLabel> "unwinding"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "The aftermath of the revelation and the deaths that follow."@en .
 
 
 ###  https://w3id.org/narn/plot/Fantasy
@@ -327,7 +379,8 @@
          rdfs:subClassOf :Genre ;
          rdfs:comment "A story with magical or supernatural elements."@en ;
          rdfs:label "fantasy"@en ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "fantasy genre"@en .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "fantasy genre"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "The Narn is a fantasy with dragons, curses, and enchantments."@en .
 
 
 ###  https://w3id.org/narn/plot/Flashback
@@ -335,7 +388,8 @@
            rdfs:subClassOf :PlotDevice ;
            rdfs:comment "A scene set in a time earlier than the main story."@en ;
            rdfs:label "flashback"@en ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "retrospection"@en .
+           <http://www.w3.org/2004/02/skos/core#altLabel> "retrospection"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "Húrin's memories of his family before the war."@en .
 
 
 ###  https://w3id.org/narn/plot/Foreshadowing
@@ -347,14 +401,16 @@
                                ] ;
                rdfs:comment "Hints or clues about future events in the story."@en ;
                rdfs:label "foreshadowing"@en ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "hint of future events"@en .
+               <http://www.w3.org/2004/02/skos/core#altLabel> "hint of future events"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "Morgoth's curse foreshadows all the tragedies that befall Húrin's children."@en .
 
 
 ###  https://w3id.org/narn/plot/Genre
 :Genre rdf:type owl:Class ;
        rdfs:comment "A category of narrative with shared conventions."@en ;
        rdfs:label "genre"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "literary genre"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "literary genre"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "The Narn fits into genres like Tragedy and Epic."@en .
 
 
 ###  https://w3id.org/narn/plot/IncitingIncident
@@ -363,7 +419,8 @@
                   owl:disjointWith :Resolution ;
                   rdfs:comment "The event that sets the main conflict in motion."@en ;
                   rdfs:label "inciting incident"@en ;
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "catalyst"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "catalyst"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "Túrin is sent to Doriath, setting his wanderings in motion."@en .
 
 
 ###  https://w3id.org/narn/plot/InternalConflict
@@ -373,9 +430,10 @@
                                     owl:onProperty :conflictInvolves ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ;
-                  rdfs:comment "Conflict within a character (e.g. moral dilemma, fear)."@en ;
+                  rdfs:comment "Conflict within a character such as a moral dilemma or fear."@en ;
                   rdfs:label "internal conflict"@en ;
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "inner struggle"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "inner struggle"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "Túrin's struggle against fate and his own pride."@en .
 
 
 ###  https://w3id.org/narn/plot/MacGuffin
@@ -383,7 +441,8 @@
            rdfs:subClassOf :PlotDevice ;
            rdfs:comment "An object or goal that motivates the plot but has no intrinsic importance."@en ;
            rdfs:label "MacGuffin"@en ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "plot motivator"@en .
+           <http://www.w3.org/2004/02/skos/core#altLabel> "plot motivator"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "The Dragon-helm marks Túrin's identity wherever he goes."@en .
 
 
 ###  https://w3id.org/narn/plot/Mentor
@@ -391,7 +450,8 @@
         rdfs:subClassOf :CharacterRole ;
         rdfs:comment "A character who guides or teaches the protagonist."@en ;
         rdfs:label "mentor"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "guide figure"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "guide figure"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "Beleg serves as mentor to the young Túrin."@en .
 
 
 ###  https://w3id.org/narn/plot/NarrativeElement
@@ -399,7 +459,8 @@
                   owl:disjointWith :PlotDevice ;
                   rdfs:comment "A stage in the narrative arc."@en ;
                   rdfs:label "narrative element"@en ;
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "story element"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "story element"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "The Climax of the Narn is a narrative element."@en .
 
 
 ###  https://w3id.org/narn/plot/NarrativeUnit
@@ -410,7 +471,8 @@
                                ] ;
                rdfs:comment "A structural division of a story."@en ;
                rdfs:label "narrative unit"@en ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "story division"@en .
+               <http://www.w3.org/2004/02/skos/core#altLabel> "story division"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "Part I: The Childhood of Túrin is a narrative unit."@en .
 
 
 ###  https://w3id.org/narn/plot/Part
@@ -422,7 +484,8 @@
                       ] ;
       rdfs:comment "A major division of a story containing chapters."@en ;
       rdfs:label "part"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "story part"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "story part"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Part III: Túrin in Nargothrond and Brethil is a major story part."@en .
 
 
 ###  https://w3id.org/narn/plot/Peripeteia
@@ -430,14 +493,16 @@
             rdfs:subClassOf :PlotDevice ;
             rdfs:comment "A sudden reversal of fortune or change in circumstances."@en ;
             rdfs:label "peripeteia"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "reversal of fortune"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "reversal of fortune"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "Turambar's triumph over Glaurung turns to ruin when the truth is revealed."@en .
 
 
 ###  https://w3id.org/narn/plot/PlotDevice
 :PlotDevice rdf:type owl:Class ;
             rdfs:comment "A technique used to advance or structure the plot."@en ;
             rdfs:label "plot device"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "narrative device"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "narrative device"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "Dramatic irony is a plot device used throughout the Narn."@en .
 
 
 ###  https://w3id.org/narn/plot/PlotTwist
@@ -445,7 +510,8 @@
            rdfs:subClassOf :PlotDevice ;
            rdfs:comment "An unexpected revelation that changes the story's direction."@en ;
            rdfs:label "plot twist"@en ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "unexpected turn"@en .
+           <http://www.w3.org/2004/02/skos/core#altLabel> "unexpected turn"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "Níniel's true identity as Nienor, sister of Túrin."@en .
 
 
 ###  https://w3id.org/narn/plot/Protagonist
@@ -453,7 +519,8 @@
              rdfs:subClassOf :CharacterRole ;
              rdfs:comment "The main character; the one driving the action."@en ;
              rdfs:label "protagonist"@en ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "main character"@en .
+             <http://www.w3.org/2004/02/skos/core#altLabel> "main character"@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "Túrin is the protagonist of the Narn."@en .
 
 
 ###  https://w3id.org/narn/plot/Resolution
@@ -461,7 +528,8 @@
             rdfs:subClassOf :NarrativeElement ;
             rdfs:comment "The outcome; how the conflict is resolved."@en ;
             rdfs:label "resolution"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "conclusion"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "conclusion"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "The deaths of Níniel and Turambar resolve the Narn."@en .
 
 
 ###  https://w3id.org/narn/plot/RisingAction
@@ -469,7 +537,8 @@
               rdfs:subClassOf :NarrativeElement ;
               rdfs:comment "Series of events building tension toward the climax."@en ;
               rdfs:label "rising action"@en ;
-              <http://www.w3.org/2004/02/skos/core#altLabel> "complication"@en .
+              <http://www.w3.org/2004/02/skos/core#altLabel> "complication"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "Túrin's wanderings and tragedies such as the death of his father, his exile, and battles."@en .
 
 
 ###  https://w3id.org/narn/plot/Scene
@@ -481,7 +550,8 @@
                        ] ;
        rdfs:comment "The smallest narrative unit; a continuous action in one setting."@en ;
        rdfs:label "scene"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "story scene"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "story scene"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "The scene where Túrin accidentally kills Beleg."@en .
 
 
 ###  https://w3id.org/narn/plot/Story
@@ -500,7 +570,8 @@
                        ] ;
        rdfs:comment "A complete narrative work."@en ;
        rdfs:label "story"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "narrative"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "narrative"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "The Narn i Chîn Húrin is a story by J.R.R. Tolkien."@en .
 
 
 ###  https://w3id.org/narn/plot/Tragedy
@@ -508,7 +579,8 @@
          rdfs:subClassOf :Genre ;
          rdfs:comment "A story where the protagonist suffers a downfall."@en ;
          rdfs:label "tragedy"@en ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "tragic genre"@en .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "tragic genre"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "The Narn is a tragedy: Túrin and Nienor both perish."@en .
 
 
 ###  https://w3id.org/narn/plot/TragicHero
@@ -524,7 +596,8 @@
             rdfs:subClassOf :CharacterRole ;
             rdfs:comment "A protagonist whose flaw leads to their downfall."@en ;
             rdfs:label "tragic hero"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "tragic protagonist"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "tragic protagonist"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "Túrin is a tragic hero whose pride leads to his downfall."@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

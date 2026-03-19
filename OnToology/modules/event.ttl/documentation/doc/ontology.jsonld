@@ -198,6 +198,30 @@
     } ]
   } ]
 }, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/narn/event/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -222,7 +246,7 @@
   } ],
   "https://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-03-17"
+    "@value" : "2026-03-19"
   } ],
   "https://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "evnt"
@@ -247,13 +271,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "armed conflict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Nirnaeth Arnoediad is the Battle of Unnumbered Tears."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Betrayal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An act of disloyalty or treachery."
+    "@value" : "An act of disloyalty involving betrayal of trust."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -268,13 +296,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "treachery"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Mîm betrays Túrin to the Orcs at Amon Rûdh."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Birth",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A character being born. Every birth begets at least one character."
+    "@value" : "The coming into existence of a character."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -297,13 +329,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "nativity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The birth of Túrin takes place in Dor-lómin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Captivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A character is held prisoner."
+    "@value" : "An event in which a character is held as a prisoner."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -315,13 +351,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "imprisonment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The captivity of Húrin in Angband by Morgoth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/ConflictEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An event involving antagonism or violence."
+    "@value" : "An event characterised by antagonism or violence."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -338,6 +378,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "clash"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Nirnaeth Arnoediad is a conflict event in Beleriand."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Coronation",
@@ -358,13 +402,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "crowning ceremony"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Turgon is crowned King of Gondolin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Council",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A formal meeting for deliberation or the reach of a consensus."
+    "@value" : "A formal meeting for deliberation or the reaching of a consensus."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -376,6 +424,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "deliberation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A council of the Elves in Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Curse",
@@ -397,13 +449,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "malediction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Mîm curses Andróg after the killing of Khîm."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Death",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A character dying. Every death has at least one victim."
+    "@value" : "The death of a character."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -417,6 +473,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "demise"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The death of Beleg is caused by Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Discovery",
@@ -435,6 +495,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "revelation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The truth about Níniel's identity is revealed."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Duel",
@@ -455,13 +519,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "single combat"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The duel between Turambar and Glaurung at Cabed-en-Aras."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Enchantment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A magical spell or charm placed on a character."
+    "@value" : "A magical effect imposed on a character."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -473,13 +541,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "spell"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Glaurung hypnotises Níniel at Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A spatio-temporal occurrence involving participants at places.\n        Every event is a finite temporal interval."
+    "@value" : "A spatio-temporal occurrence involving participants and locations. Every event is a finite temporal interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -495,13 +567,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "occurrence"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Battle of Unnumbered Tears is an event occurring in Beleriand."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Exile",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Forced departure from homeland."
+    "@value" : "A forced departure from the homeland."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -513,6 +589,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "banishment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The exile of Túrin from Doriath after the death of Saeros."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Feast",
@@ -531,13 +611,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "banquet"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A feast held in the halls of Menegroth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Flight",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Characters flee from danger."
+    "@value" : "An event in which characters flee from danger."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -549,6 +633,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "escape"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The flight of survivors from the fall of Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/LifeEvent",
@@ -567,13 +655,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "life occurrence"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The birth of Túrin in Dor-lómin is a life event."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Marriage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Two characters getting married. Involves exactly 2 participants."
+    "@value" : "A formal union between two characters."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -587,6 +679,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "wedding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The marriage of Turambar and Níniel in Brethil."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Meeting",
@@ -605,6 +701,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "encounter"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin meets Beleg in the wild."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/MovementEvent",
@@ -623,13 +723,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "movement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin travels from Dor-lómin to Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Murder",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A death caused intentionally by another. Has at least one agent."
+    "@value" : "A death caused intentionally by another."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -649,6 +753,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "homicide"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The death of Saeros is caused by Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Prophecy",
@@ -667,6 +775,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "foretelling"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Morgoth's doom: thou shalt see with my eyes."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Siege",
@@ -687,6 +799,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "blockade"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The siege and sack of Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/SocialEvent",
@@ -705,13 +821,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "social gathering"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The trial of Túrin in absence at Menegroth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Suicide",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A death where the victim is also the agent. At most one agent."
+    "@value" : "A form of death in which the agent and the victim are identical."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -726,7 +846,11 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
-    "@value" : "self-killing"
+    "@value" : "self-destruction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Turambar dies by falling on his own sword Gurthang."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Travel",
@@ -752,6 +876,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "journey"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin travels from Dor-lómin to Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/Trial",
@@ -770,13 +898,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "judgement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The trial of Túrin in absence, where Nellas testifies."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/War",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A prolonged conflict with multiple battles."
+    "@value" : "A prolonged conflict composed of multiple battles."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -791,6 +923,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "prolonged conflict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Wars of Beleriand include the Nirnaeth Arnoediad."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/begets",
@@ -812,6 +948,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "brings forth"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The birth of Túrin begets Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/causes",
@@ -836,6 +976,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "leads to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The death of Saeros causes the exile of Túrin from Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/creates",
@@ -854,6 +998,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "results in"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The reforging of Anglachel creates Gurthang."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasAgent",
@@ -878,6 +1026,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "done by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The death of Saeros has agent Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasCause",
@@ -896,6 +1048,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "caused by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The death of Beleg has cause Anglachel."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasDestination",
@@ -923,6 +1079,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "arrives at"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin's journey has destination Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasOrigin",
@@ -947,6 +1107,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "departs from"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin's journey to Doriath has origin Dor-lómin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasParticipant",
@@ -965,6 +1129,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "involves"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Battle of Unnumbered Tears has participant Húrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasPatient",
@@ -986,6 +1154,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "affects"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Glaurung hypnotises Níniel, with Níniel as the patient."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasSubEvent",
@@ -999,7 +1171,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has sub-event"
+    "@value" : "has subevent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/narn/event/Event"
@@ -1007,6 +1179,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "contains event"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Wars of Beleriand has subevent the Nirnaeth Arnoediad."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasTraveller",
@@ -1028,6 +1204,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "travelled by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin, Gethron and Grithnir are travellers in the journey to Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasVictim",
@@ -1049,6 +1229,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "harms"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The death of Beleg has victim Beleg."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/hasWitness",
@@ -1070,6 +1254,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "observed by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Mîm's betrayal has witness Andróg."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/isBegottenIn",
@@ -1090,6 +1278,10 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/narn/event/begets"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin is begotten in the birth of Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/isCausedBy",
@@ -1108,6 +1300,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "results from"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The exile of Túrin is caused by the death of Saeros."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/isSubEventOf",
@@ -1118,7 +1314,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "is sub-event of"
+    "@value" : "is subevent of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/narn/to/during"
@@ -1129,6 +1325,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "part of event"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Nirnaeth Arnoediad is a subevent of the Wars of Beleriand."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/occursAt",
@@ -1150,6 +1350,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "takes place at"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Captivity of Húrin occurs at Angband."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/event/precedes",
@@ -1174,5 +1378,24 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "comes before"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Nirnaeth Arnoediad precedes Túrin's journey to Doriath."
   } ]
+}, {
+  "@id" : "https://w3id.org/narn/location/Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/narn/location/Settlement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/narn/to/FiniteInterval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/narn/to/during",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/narn/to/precedes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 } ]

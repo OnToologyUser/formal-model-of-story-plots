@@ -7,6 +7,9 @@
     "created" : {
       "@id" : "https://purl.org/dc/terms/created"
     },
+    "example" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#example"
+    },
     "FiniteInterval" : {
       "@id" : "https://w3id.org/narn/to/FiniteInterval"
     },

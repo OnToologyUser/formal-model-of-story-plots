@@ -120,6 +120,18 @@
     "@id" : "https://w3id.org/narn/plot/Chapter"
   } ]
 }, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/narn/plot/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -142,7 +154,7 @@
   } ],
   "https://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-03-17"
+    "@value" : "2026-03-19"
   } ],
   "https://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "plot"
@@ -167,13 +179,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "story act"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Act III of a five act tragedy."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Anagnorisis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The point in a play, novel, etc., in which a principal character recognizes or discovers another character's true identity or the true nature of their own circumstances."
+    "@value" : "A moment where a character makes a critical discovery about an identity or situation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -188,6 +204,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "moment of recognition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Níniel discovers she is Nienor, sister of Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Antagonist",
@@ -209,6 +229,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "villain"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Glaurung is the antagonist who opposes Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Chapter",
@@ -227,6 +251,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "story chapter"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin in Dor-lómin is a chapter in the Narn."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/CharacterRole",
@@ -242,6 +270,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "story role"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin has the role of Protagonist and Tragic Hero."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Climax",
@@ -265,6 +297,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "turning point"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The slaying of Glaurung and the truth about Níniel revealed."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Conflict",
@@ -283,13 +319,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "tension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Morgoth's curse against Húrin's family is a central conflict."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Denouement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Equivalent to resolution. The unravelling of the plot."
+    "@value" : "The final unravelling of the plot."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -301,6 +341,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "final outcome"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Both Níniel and Turambar perish in the denouement of the Narn."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/DramaticIrony",
@@ -319,6 +363,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "audience knowledge gap"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The audience knows Túrin's identity while others do not."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Epic",
@@ -337,6 +385,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "epic genre"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn is an epic spanning wars, exiles, and dragon slaying."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Exposition",
@@ -358,13 +410,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "setup"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Húrin's family and the curse of Morgoth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/ExternalConflict",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Conflict between a character and an external force (antagonist, nature, society)."
+    "@value" : "Conflict between a character and an external force such as an antagonist, nature, or society."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -381,6 +437,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "outer struggle"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Morgoth's curse against Húrin's family involves Morgoth and Húrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/FallingAction",
@@ -402,6 +462,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "unwinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The aftermath of the revelation and the deaths that follow."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Fantasy",
@@ -420,6 +484,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "fantasy genre"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn is a fantasy with dragons, curses, and enchantments."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Flashback",
@@ -438,6 +506,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "retrospection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Húrin's memories of his family before the war."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Foreshadowing",
@@ -458,6 +530,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "hint of future events"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Morgoth's curse foreshadows all the tragedies that befall Húrin's children."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Genre",
@@ -473,6 +549,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "literary genre"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn fits into genres like Tragedy and Epic."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/IncitingIncident",
@@ -494,13 +574,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "catalyst"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin is sent to Doriath, setting his wanderings in motion."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/InternalConflict",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Conflict within a character (e.g. moral dilemma, fear)."
+    "@value" : "Conflict within a character such as a moral dilemma or fear."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -514,6 +598,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "inner struggle"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin's struggle against fate and his own pride."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/MacGuffin",
@@ -532,6 +620,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "plot motivator"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Dragon-helm marks Túrin's identity wherever he goes."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Mentor",
@@ -550,6 +642,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "guide figure"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Beleg serves as mentor to the young Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/NarrativeElement",
@@ -568,6 +664,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "story element"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Climax of the Narn is a narrative element."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/NarrativeUnit",
@@ -586,6 +686,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "story division"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Part I: The Childhood of Túrin is a narrative unit."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Part",
@@ -606,6 +710,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "story part"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Part III: Túrin in Nargothrond and Brethil is a major story part."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Peripeteia",
@@ -624,6 +732,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "reversal of fortune"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Turambar's triumph over Glaurung turns to ruin when the truth is revealed."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/PlotDevice",
@@ -639,6 +751,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "narrative device"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Dramatic irony is a plot device used throughout the Narn."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/PlotTwist",
@@ -657,6 +773,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "unexpected turn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Níniel's true identity as Nienor, sister of Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Protagonist",
@@ -675,6 +795,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "main character"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin is the protagonist of the Narn."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Resolution",
@@ -693,6 +817,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "conclusion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The deaths of Níniel and Turambar resolve the Narn."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/RisingAction",
@@ -711,6 +839,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "complication"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin's wanderings and tragedies such as the death of his father, his exile, and battles."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Scene",
@@ -731,6 +863,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "story scene"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The scene where Túrin accidentally kills Beleg."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Story",
@@ -753,6 +889,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "narrative"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn i Chîn Húrin is a story by J.R.R. Tolkien."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/Tragedy",
@@ -771,6 +911,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "tragic genre"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn is a tragedy: Túrin and Nienor both perish."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/TragicHero",
@@ -792,6 +936,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "tragic protagonist"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin is a tragic hero whose pride leads to his downfall."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/conflictInvolves",
@@ -813,6 +961,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "tension involves"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Morgoth's curse involves Morgoth and Húrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/containsUnit",
@@ -834,6 +986,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "includes unit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Part I contains the chapter Túrin in Dor-lómin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/correspondsToEvent",
@@ -855,6 +1011,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "maps to event"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Climax corresponds to the Slaying of Glaurung."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/deviceInvolvesCharacter",
@@ -873,6 +1033,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "device concerns"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Anagnorisis device involves Níniel and Turambar."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/follows",
@@ -894,6 +1058,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "comes after"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Part II follows Part I in the Narn."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/foreshadowsEvent",
@@ -915,6 +1083,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "hints at"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Morgoth's curse foreshadows the death of Turambar."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/hasAuthor",
@@ -933,6 +1105,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "written by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn has author J.R.R. Tolkien."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/hasConflict",
@@ -954,6 +1130,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "has tension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Morgoth's curse against Húrin's family is a conflict in the Narn."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/hasGenre",
@@ -975,6 +1155,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "genre is"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn has genre Tragedy, Epic, and Fantasy."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/hasNarrativeElement",
@@ -996,6 +1180,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "has element"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn includes narrative elements like Exposition and Climax."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/hasNarrativeUnit",
@@ -1017,6 +1205,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "divided into"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn has narrative units Part I, Part II, Part III."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/hasRole",
@@ -1035,6 +1227,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "plays role"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin has role Protagonist and Tragic Hero."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/hasTheme",
@@ -1053,6 +1249,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "explores theme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn explores themes like fate and pride."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/involvedInDevice",
@@ -1068,6 +1268,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "affected by narrative device"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin is involved in the Peripeteia device."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/isUnitOf",
@@ -1086,6 +1290,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "belongs to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The chapter Túrin in Dor-lómin is a unit of Part I."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/occursInUnit",
@@ -1107,6 +1315,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "located in unit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Falling Action occurs in Part III."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/publishedDate",
@@ -1128,6 +1340,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "date published"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn was published on 2007-04-17."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/unitIndex",
@@ -1149,6 +1365,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "sequence number"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Part I has unit index 1."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/plot/usesDevice",
@@ -1170,5 +1390,9 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "employs device"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Narn uses devices: Dramatic Irony, Anagnorisis, Peripeteia."
   } ]
 } ]

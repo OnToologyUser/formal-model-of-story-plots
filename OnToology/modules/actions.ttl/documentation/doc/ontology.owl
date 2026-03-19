@@ -16,10 +16,90 @@
         <rdfs:label xml:lang="en">Actions Ontology</rdfs:label>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-11</terms:created>
         <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-19</terms:modified>
         <vann:preferredNamespacePrefix>act</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/narn/action/</vann:preferredNamespaceUri>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -48,6 +128,7 @@
         <rdfs:comment xml:lang="en">If an agent performs an action with a result, the agent indirectly causes that result.</rdfs:comment>
         <rdfs:label xml:lang="en">causes by action</rdfs:label>
         <skos:altLabel xml:lang="en">brings about</skos:altLabel>
+        <skos:example xml:lang="en">Turambar causes the death of Glaurung by performing the slaying.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -64,6 +145,7 @@
         <rdfs:comment xml:lang="en">An object used to perform the action (e.g. a sword).</rdfs:comment>
         <rdfs:label xml:lang="en">has instrument</rdfs:label>
         <skos:altLabel xml:lang="en">using</skos:altLabel>
+        <skos:example xml:lang="en">The Slaying of Glaurung has instrument Gurthang.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -78,6 +160,7 @@
         <rdfs:comment xml:lang="en">The goal or purpose behind the action.</rdfs:comment>
         <rdfs:label xml:lang="en">has intention</rdfs:label>
         <skos:altLabel xml:lang="en">aims to</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s flight from Doriath has the intention of escaping judgement.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -93,6 +176,7 @@
         <rdfs:comment xml:lang="en">The character who receives something in a transfer action.</rdfs:comment>
         <rdfs:label xml:lang="en">has recipient</rdfs:label>
         <skos:altLabel xml:lang="en">received by</skos:altLabel>
+        <skos:example xml:lang="en">Beleg&apos;s gift of Anglachel has recipient Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -107,6 +191,7 @@
         <rdfs:comment xml:lang="en">The event or state that results from the action.</rdfs:comment>
         <rdfs:label xml:lang="en">has result</rdfs:label>
         <skos:altLabel xml:lang="en">results in</skos:altLabel>
+        <skos:example xml:lang="en">Brandir&apos;s speech results in the truth about Níniel being revealed.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -122,6 +207,7 @@
         <rdfs:comment xml:lang="en">The entity that the action is directed towards.</rdfs:comment>
         <rdfs:label xml:lang="en">has target</rdfs:label>
         <skos:altLabel xml:lang="en">directed at</skos:altLabel>
+        <skos:example xml:lang="en">The Slaying of Glaurung has target Glaurung.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -135,7 +221,50 @@
         <rdfs:comment xml:lang="en">The agent who intentionally performs the action.</rdfs:comment>
         <rdfs:label xml:lang="en">performed by</rdfs:label>
         <skos:altLabel xml:lang="en">done by</skos:altLabel>
+        <skos:example xml:lang="en">The Slaying of Glaurung was performed by Turambar.</skos:example>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/event/causes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/causes"/>
+    
+
+
+    <!-- https://w3id.org/narn/event/creates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/creates"/>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasAgent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasAgent"/>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasCause -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasCause"/>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasParticipant"/>
+    
+
+
+    <!-- https://w3id.org/narn/event/hasPatient -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/event/hasPatient"/>
     
 
 
@@ -165,6 +294,7 @@
         <rdfs:comment xml:lang="en">An intentional deed. Every action has at least one performer.</rdfs:comment>
         <rdfs:label xml:lang="en">action</rdfs:label>
         <skos:altLabel xml:lang="en">deed</skos:altLabel>
+        <skos:example xml:lang="en">Túrin killing Saeros is an action performed by Túrin.</skos:example>
     </owl:Class>
     
 
@@ -184,6 +314,7 @@
         <rdfs:comment xml:lang="en">An aggressive action aimed at harming a target.</rdfs:comment>
         <rdfs:label xml:lang="en">attack</rdfs:label>
         <skos:altLabel xml:lang="en">assault</skos:altLabel>
+        <skos:example xml:lang="en">Túrin attacks the Orcs at Amon Rûdh using Anglachel.</skos:example>
     </owl:Class>
     
 
@@ -208,6 +339,7 @@
         <rdfs:comment xml:lang="en">The action of constructing a structure or settlement.</rdfs:comment>
         <rdfs:label xml:lang="en">build</rdfs:label>
         <skos:altLabel xml:lang="en">construction</skos:altLabel>
+        <skos:example xml:lang="en">The Elves built the hidden city of Gondolin in Tumladen.</skos:example>
     </owl:Class>
     
 
@@ -226,6 +358,7 @@
         <rdfs:comment xml:lang="en">The action of giving an authoritative order.</rdfs:comment>
         <rdfs:label xml:lang="en">command</rdfs:label>
         <skos:altLabel xml:lang="en">order</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth orders his servants to attack Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -251,6 +384,7 @@
         <rdfs:comment xml:lang="en">An action involving communication between characters.</rdfs:comment>
         <rdfs:label xml:lang="en">communicative action</rdfs:label>
         <skos:altLabel xml:lang="en">speech act</skos:altLabel>
+        <skos:example xml:lang="en">Turambar speaks to Túrin about his journey.</skos:example>
     </owl:Class>
     
 
@@ -270,6 +404,7 @@
         <rdfs:comment xml:lang="en">An action that produces or transforms something.</rdfs:comment>
         <rdfs:label xml:lang="en">creation action</rdfs:label>
         <skos:altLabel xml:lang="en">making</skos:altLabel>
+        <skos:example xml:lang="en">The smiths of Nargothrond reforge Anglachel into Gurthang.</skos:example>
     </owl:Class>
     
 
@@ -293,6 +428,7 @@
         <rdfs:comment xml:lang="en">The action of intentionally misleading another character.</rdfs:comment>
         <rdfs:label xml:lang="en">deceive</rdfs:label>
         <skos:altLabel xml:lang="en">deception</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung deceives and hypnotises Níniel at Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -311,6 +447,7 @@
         <rdfs:comment xml:lang="en">An action of protecting oneself or others from attack.</rdfs:comment>
         <rdfs:label xml:lang="en">defend</rdfs:label>
         <skos:altLabel xml:lang="en">defence</skos:altLabel>
+        <skos:example xml:lang="en">Beleg defends Túrin&apos;s camp from Orc raids.</skos:example>
     </owl:Class>
     
 
@@ -322,6 +459,7 @@
         <rdfs:comment xml:lang="en">The intention of getting away from danger.</rdfs:comment>
         <rdfs:label xml:lang="en">escape</rdfs:label>
         <skos:altLabel xml:lang="en">evasion</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s intention when fleeing Doriath is escape from judgement.</skos:example>
     </owl:Class>
     
 
@@ -345,6 +483,7 @@
         <rdfs:comment xml:lang="en">The action of running away from danger or pursuit.</rdfs:comment>
         <rdfs:label xml:lang="en">flee</rdfs:label>
         <skos:altLabel xml:lang="en">flight</skos:altLabel>
+        <skos:example xml:lang="en">Túrin flees Doriath after killing Saeros.</skos:example>
     </owl:Class>
     
 
@@ -363,6 +502,7 @@
         <rdfs:comment xml:lang="en">The action of creating or reshaping an object, especially a weapon.</rdfs:comment>
         <rdfs:label xml:lang="en">forge</rdfs:label>
         <skos:altLabel xml:lang="en">smithing</skos:altLabel>
+        <skos:example xml:lang="en">The reforging of Anglachel into Gurthang in Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -388,6 +528,7 @@
         <rdfs:comment xml:lang="en">The action of voluntarily transferring something to another.</rdfs:comment>
         <rdfs:label xml:lang="en">give</rdfs:label>
         <skos:altLabel xml:lang="en">bestowal</skos:altLabel>
+        <skos:example xml:lang="en">Beleg gives Anglachel to Túrin to rescue him.</skos:example>
     </owl:Class>
     
 
@@ -406,6 +547,7 @@
         <rdfs:comment xml:lang="en">The action of deliberately travelling to a destination.</rdfs:comment>
         <rdfs:label xml:lang="en">go to</rdfs:label>
         <skos:altLabel xml:lang="en">travel to</skos:altLabel>
+        <skos:example xml:lang="en">Túrin goes to Nargothrond seeking refuge.</skos:example>
     </owl:Class>
     
 
@@ -439,6 +581,7 @@
         <rdfs:comment xml:lang="en">The action of causing the death of another.</rdfs:comment>
         <rdfs:label xml:lang="en">kill</rdfs:label>
         <skos:altLabel xml:lang="en">slaying</skos:altLabel>
+        <skos:example xml:lang="en">Túrin kills Saeros in Doriath.</skos:example>
     </owl:Class>
     
 
@@ -450,6 +593,7 @@
         <rdfs:comment xml:lang="en">The intention of making another believe something false.</rdfs:comment>
         <rdfs:label xml:lang="en">misleading intention</rdfs:label>
         <skos:altLabel xml:lang="en">intent to deceive</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung&apos;s intention when hypnotising Níniel is to mislead her about her identity.</skos:example>
     </owl:Class>
     
 
@@ -464,6 +608,7 @@
         <rdfs:comment xml:lang="en">An action involving deliberate physical movement.</rdfs:comment>
         <rdfs:label xml:lang="en">movement action</rdfs:label>
         <skos:altLabel xml:lang="en">locomotion</skos:altLabel>
+        <skos:example xml:lang="en">Túrin travels to Nargothrond after the death of Beleg.</skos:example>
     </owl:Class>
     
 
@@ -487,6 +632,7 @@
         <rdfs:comment xml:lang="en">The action of disclosing previously hidden information.</rdfs:comment>
         <rdfs:label xml:lang="en">reveal</rdfs:label>
         <skos:altLabel xml:lang="en">disclosure</skos:altLabel>
+        <skos:example xml:lang="en">The truth about Níniel is revealed after the slaying of Glaurung.</skos:example>
     </owl:Class>
     
 
@@ -499,6 +645,7 @@
         <rdfs:comment xml:lang="en">The action of verbal communication.</rdfs:comment>
         <rdfs:label xml:lang="en">speak</rdfs:label>
         <skos:altLabel xml:lang="en">utterance</skos:altLabel>
+        <skos:example xml:lang="en">Brandir speaks the truth to Turambar about Níniel&apos;s identity.</skos:example>
     </owl:Class>
     
 
@@ -517,6 +664,7 @@
         <rdfs:comment xml:lang="en">The action of acquiring something, possibly by force.</rdfs:comment>
         <rdfs:label xml:lang="en">take</rdfs:label>
         <skos:altLabel xml:lang="en">seizure</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth takes Húrin captive after the Nirnaeth Arnoediad.</skos:example>
     </owl:Class>
     
 
@@ -529,6 +677,7 @@
         <rdfs:comment xml:lang="en">An action involving the transfer of possession.</rdfs:comment>
         <rdfs:label xml:lang="en">transfer action</rdfs:label>
         <skos:altLabel xml:lang="en">transfer</skos:altLabel>
+        <skos:example xml:lang="en">Beleg brings Anglachel to Túrin.</skos:example>
     </owl:Class>
     
 
@@ -541,7 +690,43 @@
         <rdfs:comment xml:lang="en">An action involving physical violence or force.</rdfs:comment>
         <rdfs:label xml:lang="en">violent action</rdfs:label>
         <skos:altLabel xml:lang="en">violent deed</skos:altLabel>
+        <skos:example xml:lang="en">The Slaying of Glaurung is a violent action performed by Turambar.</skos:example>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/event/Death -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Death"/>
+    
+
+
+    <!-- https://w3id.org/narn/event/Discovery -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Discovery"/>
+    
+
+
+    <!-- https://w3id.org/narn/event/Event -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/Event"/>
+    
+
+
+    <!-- https://w3id.org/narn/event/MovementEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/event/MovementEvent"/>
+    
+
+
+    <!-- https://w3id.org/narn/location/Place -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Place"/>
 </rdf:RDF>
 
 

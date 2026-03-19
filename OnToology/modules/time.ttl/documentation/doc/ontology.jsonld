@@ -175,6 +175,9 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -194,7 +197,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An ontology for temporal entities and Allen's temporal algebra."
+    "@value" : "A formal ontology defining temporal entities and the relations of Allen interval algebra."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -209,7 +212,7 @@
   } ],
   "https://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-03-17"
+    "@value" : "2026-03-19"
   } ],
   "https://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "to"
@@ -222,7 +225,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An interval with a defined ending instant."
+    "@value" : "An interval bounded by a distinct ending instant but lacking a defined starting point."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -236,13 +239,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "ending point"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "A historical epoch stretching back indefinitely but concluding at a specific catastrophe represents an ending interval."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/EternalInterval",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An interval extending infinitely in both directions."
+    "@value" : "A temporally unbounded interval extending infinitely into both the past and the future."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -260,13 +267,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "everlasting interval"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The continuous existence of the universe Eä serves as an eternal interval."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/FiniteInterval",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An interval with both a starting and ending instant."
+    "@value" : "A bounded temporal interval defined by both a distinct starting instant and a distinct ending instant."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -294,13 +305,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "bounded interval"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Battle of Unnumbered Tears constitutes a finite interval possessing defined chronological boundaries."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/InfiniteInterval",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An interval extending infinitely in at least one direction."
+    "@value" : "A temporal interval extending infinitely in at least one direction."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -312,13 +327,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "unbounded interval"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The lifespan of an immortal Elf represents an infinite interval extending continuously into the future."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/Instant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A single point in time with zero duration."
+    "@value" : "A temporal entity representing a single point in time with a duration of strictly zero."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -333,13 +352,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "time point"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The precise moment of Túrin's birth constitutes an instant."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/Interval",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A continuous extent of time with nonzero duration."
+    "@value" : "A continuous temporal entity characterized by a strictly positive duration."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -353,13 +376,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "time span"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The complete timeline of the Narn represents a temporal interval."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/StartingInterval",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An interval with a defined starting instant."
+    "@value" : "An interval bounded by a distinct starting instant but lacking a defined ending point."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -376,13 +403,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "begins with"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The life of an Elf exemplifies a starting interval since it begins at birth but possesses no natural conclusion."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/TemporalEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A thing that exists in time."
+    "@value" : "An entity existing within a specific temporal dimension."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -391,13 +422,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "time entity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The moment of Túrin's birth and the span of his life represent temporal entities."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/after",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Inverse of before. X starts after Y ends."
+    "@value" : "The primary interval commences strictly subsequent to the conclusion of the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -412,13 +447,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "follows"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The interval of Nienor's birth occurs strictly after the conclusion of the Nirnaeth Arnoediad."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/before",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "X ends before Y starts."
+    "@value" : "The primary interval concludes strictly prior to the commencement of the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -435,13 +474,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "precedes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The interval of Túrin's birth occurs strictly before the interval of Lalaith's birth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/containsInterval",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Inverse of during. X entirely contains Y."
+    "@value" : "The primary interval strictly and completely encloses the chronological boundaries of the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -456,13 +499,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "temporally contains"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The overarching timeline of the Narn temporally contains the interval of Túrin's time in Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/during",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "X occurs entirely within Y."
+    "@value" : "The primary interval is strictly and completely enclosed within the chronological boundaries of the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -474,13 +521,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "contained in"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The interval representing the killing of Khîm occurs strictly during Túrin's habitation at Amon Rûdh."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/endsAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The unique ending instant."
+    "@value" : "The absolute ending instant bounding the conclusion of a temporal interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Interval"
@@ -501,13 +552,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "ending point"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Battle of Unnumbered Tears ends at the precise instant of the final retreat."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/equals",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#ReflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Same temporal extent."
+    "@value" : "Absolute chronological equivalence where two intervals share identical starting and ending instants."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -519,13 +574,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "same time as"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The temporal span of the Siege of Nargothrond equals the chronological span of the Fall of Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/finishedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Inverse of finishes. X ends when Y ends but Y starts before X starts."
+    "@value" : "Both intervals share identical ending instants while the primary interval commences strictly before the secondary interval begins."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -540,13 +599,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "ended by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The overarching timeline of the Narn is finished by the interval representing the death of Turambar."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/finishes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "X ends at same time as Y but starts after Y starts."
+    "@value" : "Both intervals share identical ending instants while the primary interval commences strictly after the secondary interval begins."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -558,13 +621,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "ends with"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The interval representing the death of Turambar finishes the overarching timeline of the Narn."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/hasDateTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The calendar date and time of an instant."
+    "@value" : "The standardized chronological date and time value of a specific temporal instant."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Instant"
@@ -579,13 +646,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "dateTime value"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The instant of publication maps to a specific dateTime value in the standard calendar."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/hasDuration",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The length of time spanned by an interval."
+    "@value" : "The absolute temporal length spanned by a defined interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Interval"
@@ -600,13 +671,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "time length"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The interval representing Túrin's time in Doriath has a duration measured in several years."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/hasInstant",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links an interval to an instant that falls within or bounds it."
+    "@value" : "The association between a temporal interval and a specific instant contained within or bounding it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Interval"
@@ -621,13 +696,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "at instant"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The overarching timeline of the Narn has an instant mapped to the moment of Túrin's birth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/intervalRelation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "General temporal relation between two intervals."
+    "@value" : "A topological temporal relation between two distinct intervals."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Interval"
@@ -642,13 +721,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "Allen relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The relational mapping between the birth of Túrin and the birth of Lalaith constitutes an interval relation."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/meets",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "X ends exactly when Y starts."
+    "@value" : "The ending instant of the primary interval is chronologically identical to the starting instant of the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -665,13 +748,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "immediately before"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The chronological span of the Nirnaeth Arnoediad meets the interval of Húrin's captivity without any intervening gap."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/metBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Inverse of meets. X starts exactly when Y ends."
+    "@value" : "The starting instant of the primary interval is chronologically identical to the ending instant of the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -686,13 +773,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "immediately after"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The interval of Húrin's captivity is met by the conclusion of the Nirnaeth Arnoediad."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/occursAfter",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Inverse of occursBefore."
+    "@value" : "A temporal relation placing the first instant chronologically subsequent to the second."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Instant"
@@ -710,13 +801,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "later than"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The moment of Nienor's birth occurs after the moment of Lalaith's birth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/occursBefore",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Instant strictly before another."
+    "@value" : "A temporal relation placing the first instant chronologically prior to the second."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Instant"
@@ -734,13 +829,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "earlier than"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The moment of Túrin's birth occurs before the moment of Lalaith's birth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/occursDuring",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An instant falls within the extent of an interval."
+    "@value" : "The enclosure of a specific instant strictly within the temporal boundaries of an interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Instant"
@@ -755,13 +854,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "within timeframe of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The precise moment of Khîm's death occurs during the interval of Túrin's habitation at Amon Rûdh."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/occursSimultaneouslyTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#ReflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Two instants at the same time."
+    "@value" : "A temporal relation linking two distinct instants that occupy the exact same chronological position."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Instant"
@@ -776,13 +879,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "at same time as"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Two separate observations mapping to the exact same chronological instant occur simultaneously."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/overlappedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Inverse of overlaps. Y starts before X, ends after X starts but before X ends."
+    "@value" : "The primary interval begins strictly within the duration of the secondary interval and concludes after it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -797,13 +904,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "partially after"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin's time at Amon Rûdh is overlapped by the preceding interval of his time among the outlaws."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/overlaps",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "X starts before Y, ends after Y starts but before Y ends."
+    "@value" : "The primary interval begins before the secondary interval and concludes strictly within its duration."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -815,13 +926,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "partially before"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The interval of Túrin's time among the outlaws overlaps with the beginning of his time at Amon Rûdh."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/precededBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Inverse of precedes. X starts after or when Y ends."
+    "@value" : "The primary interval commences either strictly subsequent to or exactly at the conclusion of the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -833,13 +948,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "happens after"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin's journey to Doriath is temporally preceded by the span of the Nirnaeth Arnoediad."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/precedes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "X ends before or when Y starts."
+    "@value" : "The primary interval concludes either strictly prior to or exactly at the commencement of the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -851,13 +970,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "happens before"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The span of the Nirnaeth Arnoediad temporally precedes Túrin's journey to Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/startedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Inverse of starts. X starts when Y starts but Y ends after X ends."
+    "@value" : "Both intervals share identical starting instants while the primary interval extends strictly beyond the conclusion of the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -872,13 +995,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "begun by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The overarching timeline of the Narn is started by the interval representing the birth of Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/starts",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "X starts at same time as Y but ends before Y ends."
+    "@value" : "Both intervals share identical starting instants while the primary interval concludes strictly before the secondary interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -890,13 +1017,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "begins with"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The interval representing the birth of Túrin starts the overarching timeline of the Narn."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/to/startsAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The unique starting instant."
+    "@value" : "The absolute starting instant bounding the beginning of a temporal interval."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/narn/to/Interval"
@@ -914,5 +1045,9 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "beginning point"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The chronological span of the Narn starts at the moment of Túrin's birth."
   } ]
 } ]

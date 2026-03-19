@@ -227,6 +227,30 @@
     "@id" : "https://w3id.org/narn/location/Place"
   } ]
 }, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/narn/action/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -251,7 +275,7 @@
   } ],
   "https://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-03-17"
+    "@value" : "2026-03-19"
   } ],
   "https://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "act"
@@ -278,6 +302,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "deed"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin killing Saeros is an action performed by Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Attack",
@@ -301,6 +329,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "assault"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin attacks the Orcs at Amon Rûdh using Anglachel."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Build",
@@ -325,6 +357,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "construction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Elves built the hidden city of Gondolin in Tumladen."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Command",
@@ -345,6 +381,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "order"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Morgoth orders his servants to attack Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/CommunicativeAction",
@@ -372,6 +412,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "speech act"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Turambar speaks to Túrin about his journey."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/CreationAction",
@@ -395,6 +439,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "making"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The smiths of Nargothrond reforge Anglachel into Gurthang."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Deceive",
@@ -416,6 +464,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "deception"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Glaurung deceives and hypnotises Níniel at Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Defend",
@@ -436,6 +488,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "defence"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Beleg defends Túrin's camp from Orc raids."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Escape",
@@ -451,6 +507,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "evasion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin's intention when fleeing Doriath is escape from judgement."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Flee",
@@ -472,6 +532,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "flight"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin flees Doriath after killing Saeros."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Forge",
@@ -492,6 +556,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "smithing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The reforging of Anglachel into Gurthang in Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Give",
@@ -517,6 +585,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "bestowal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Beleg gives Anglachel to Túrin to rescue him."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/GoTo",
@@ -537,6 +609,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "travel to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin goes to Nargothrond seeking refuge."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Kill",
@@ -560,6 +636,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "slaying"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin kills Saeros in Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/MisleadingIntention",
@@ -575,6 +655,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "intent to deceive"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Glaurung's intention when hypnotising Níniel is to mislead her about her identity."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/MovementAction",
@@ -598,6 +682,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "locomotion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin travels to Nargothrond after the death of Beleg."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Reveal",
@@ -619,6 +707,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "disclosure"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The truth about Níniel is revealed after the slaying of Glaurung."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Speak",
@@ -637,6 +729,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "utterance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Brandir speaks the truth to Turambar about Níniel's identity."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/Take",
@@ -657,6 +753,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "seizure"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Morgoth takes Húrin captive after the Nirnaeth Arnoediad."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/TransferAction",
@@ -675,6 +775,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "transfer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Beleg brings Anglachel to Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/ViolentAction",
@@ -693,13 +797,17 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "violent deed"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Slaying of Glaurung is a violent action performed by Turambar."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/causesByAction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Inferred: if an agent performs an action with a result, the agent indirectly causes that result."
+    "@value" : "If an agent performs an action with a result, the agent indirectly causes that result."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -715,6 +823,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "brings about"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Turambar causes the death of Glaurung by performing the slaying."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/hasInstrument",
@@ -741,6 +853,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "using"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Slaying of Glaurung has instrument Gurthang."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/hasIntention",
@@ -759,6 +875,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "aims to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Túrin's flight from Doriath has the intention of escaping judgement."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/hasRecipient",
@@ -783,6 +903,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "received by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Beleg's gift of Anglachel has recipient Túrin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/hasResult",
@@ -807,6 +931,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "results in"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Brandir's speech results in the truth about Níniel being revealed."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/hasTarget",
@@ -828,6 +956,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "directed at"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Slaying of Glaurung has target Glaurung."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/action/performedBy",
@@ -849,5 +981,42 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "done by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Slaying of Glaurung was performed by Turambar."
   } ]
+}, {
+  "@id" : "https://w3id.org/narn/event/Death",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/narn/event/Discovery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/narn/event/Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/narn/event/MovementEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/narn/event/causes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/narn/event/creates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/narn/event/hasAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/narn/event/hasCause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/narn/event/hasParticipant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/narn/event/hasPatient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/narn/location/Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

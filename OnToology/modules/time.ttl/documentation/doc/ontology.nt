@@ -1,9 +1,9 @@
 <https://w3id.org/narn/to/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/narn/to/> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for temporal entities and Allen's temporal algebra."@en .
+<https://w3id.org/narn/to/> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal ontology defining temporal entities and the relations of Allen interval algebra."@en .
 <https://w3id.org/narn/to/> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Ontology"@en .
 <https://w3id.org/narn/to/> <https://purl.org/dc/terms/created> "2026-03-13"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/to/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .
-<https://w3id.org/narn/to/> <https://purl.org/dc/terms/modified> "2026-03-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/to/> <https://purl.org/dc/terms/modified> "2026-03-19"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/to/> <https://purl.org/vocab/vann/preferredNamespacePrefix> "to" .
 <https://w3id.org/narn/to/> <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/to/" .
 # 
@@ -17,6 +17,9 @@
 # 
 # http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://purl.org/dc/terms/created
 <https://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -62,9 +65,10 @@
 <https://w3id.org/narn/to/after> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
 <https://w3id.org/narn/to/after> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/before> .
 <https://w3id.org/narn/to/after> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/narn/to/after> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of before. X starts after Y ends."@en .
+<https://w3id.org/narn/to/after> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary interval commences strictly subsequent to the conclusion of the secondary interval."@en .
 <https://w3id.org/narn/to/after> <http://www.w3.org/2000/01/rdf-schema#label> "after"@en .
 <https://w3id.org/narn/to/after> <http://www.w3.org/2004/02/skos/core#altLabel> "follows"@en .
+<https://w3id.org/narn/to/after> <http://www.w3.org/2004/02/skos/core#example> "The interval of Nienor's birth occurs strictly after the conclusion of the Nirnaeth Arnoediad."@en .
 # 
 # https://w3id.org/narn/to/before
 <https://w3id.org/narn/to/before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -72,26 +76,29 @@
 <https://w3id.org/narn/to/before> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/precedes> .
 <https://w3id.org/narn/to/before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/to/before> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/to/overlaps> .
-<https://w3id.org/narn/to/before> <http://www.w3.org/2000/01/rdf-schema#comment> "X ends before Y starts."@en .
+<https://w3id.org/narn/to/before> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary interval concludes strictly prior to the commencement of the secondary interval."@en .
 <https://w3id.org/narn/to/before> <http://www.w3.org/2000/01/rdf-schema#label> "before"@en .
 <https://w3id.org/narn/to/before> <http://www.w3.org/2004/02/skos/core#altLabel> "precedes"@en .
+<https://w3id.org/narn/to/before> <http://www.w3.org/2004/02/skos/core#example> "The interval of Túrin's birth occurs strictly before the interval of Lalaith's birth."@en .
 # 
 # https://w3id.org/narn/to/containsInterval
 <https://w3id.org/narn/to/containsInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
 <https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/during> .
 <https://w3id.org/narn/to/containsInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of during. X entirely contains Y."@en .
+<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary interval strictly and completely encloses the chronological boundaries of the secondary interval."@en .
 <https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2000/01/rdf-schema#label> "contains interval"@en .
 <https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "temporally contains"@en .
+<https://w3id.org/narn/to/containsInterval> <http://www.w3.org/2004/02/skos/core#example> "The overarching timeline of the Narn temporally contains the interval of Túrin's time in Doriath."@en .
 # 
 # https://w3id.org/narn/to/during
 <https://w3id.org/narn/to/during> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/to/during> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
 <https://w3id.org/narn/to/during> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/narn/to/during> <http://www.w3.org/2000/01/rdf-schema#comment> "X occurs entirely within Y."@en .
+<https://w3id.org/narn/to/during> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary interval is strictly and completely enclosed within the chronological boundaries of the secondary interval."@en .
 <https://w3id.org/narn/to/during> <http://www.w3.org/2000/01/rdf-schema#label> "during"@en .
 <https://w3id.org/narn/to/during> <http://www.w3.org/2004/02/skos/core#altLabel> "contained in"@en .
+<https://w3id.org/narn/to/during> <http://www.w3.org/2004/02/skos/core#example> "The interval representing the killing of Khîm occurs strictly during Túrin's habitation at Amon Rûdh."@en .
 # 
 # https://w3id.org/narn/to/endsAt
 <https://w3id.org/narn/to/endsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -102,9 +109,10 @@
 <https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
 <https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
 <https://w3id.org/narn/to/endsAt> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/to/startsAt> .
-<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique ending instant."@en .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The absolute ending instant bounding the conclusion of a temporal interval."@en .
 <https://w3id.org/narn/to/endsAt> <http://www.w3.org/2000/01/rdf-schema#label> "ends at"@en .
 <https://w3id.org/narn/to/endsAt> <http://www.w3.org/2004/02/skos/core#altLabel> "ending point"@en .
+<https://w3id.org/narn/to/endsAt> <http://www.w3.org/2004/02/skos/core#example> "The Battle of Unnumbered Tears ends at the precise instant of the final retreat."@en .
 # 
 # https://w3id.org/narn/to/equals
 <https://w3id.org/narn/to/equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -112,9 +120,10 @@
 <https://w3id.org/narn/to/equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <https://w3id.org/narn/to/equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/to/equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
-<https://w3id.org/narn/to/equals> <http://www.w3.org/2000/01/rdf-schema#comment> "Same temporal extent."@en .
+<https://w3id.org/narn/to/equals> <http://www.w3.org/2000/01/rdf-schema#comment> "Absolute chronological equivalence where two intervals share identical starting and ending instants."@en .
 <https://w3id.org/narn/to/equals> <http://www.w3.org/2000/01/rdf-schema#label> "equals"@en .
 <https://w3id.org/narn/to/equals> <http://www.w3.org/2004/02/skos/core#altLabel> "same time as"@en .
+<https://w3id.org/narn/to/equals> <http://www.w3.org/2004/02/skos/core#example> "The temporal span of the Siege of Nargothrond equals the chronological span of the Fall of Nargothrond."@en .
 # 
 # https://w3id.org/narn/to/finishedBy
 <https://w3id.org/narn/to/finishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -123,9 +132,10 @@
 <https://w3id.org/narn/to/finishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/to/finishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/to/finishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of finishes. X ends when Y ends but Y starts before X starts."@en .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Both intervals share identical ending instants while the primary interval commences strictly before the secondary interval begins."@en .
 <https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2000/01/rdf-schema#label> "finished by"@en .
 <https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "ended by"@en .
+<https://w3id.org/narn/to/finishedBy> <http://www.w3.org/2004/02/skos/core#example> "The overarching timeline of the Narn is finished by the interval representing the death of Turambar."@en .
 # 
 # https://w3id.org/narn/to/finishes
 <https://w3id.org/narn/to/finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -133,9 +143,10 @@
 <https://w3id.org/narn/to/finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/to/finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/to/finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/to/finishes> <http://www.w3.org/2000/01/rdf-schema#comment> "X ends at same time as Y but starts after Y starts."@en .
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/2000/01/rdf-schema#comment> "Both intervals share identical ending instants while the primary interval commences strictly after the secondary interval begins."@en .
 <https://w3id.org/narn/to/finishes> <http://www.w3.org/2000/01/rdf-schema#label> "finishes"@en .
 <https://w3id.org/narn/to/finishes> <http://www.w3.org/2004/02/skos/core#altLabel> "ends with"@en .
+<https://w3id.org/narn/to/finishes> <http://www.w3.org/2004/02/skos/core#example> "The interval representing the death of Turambar finishes the overarching timeline of the Narn."@en .
 # 
 # https://w3id.org/narn/to/hasInstant
 <https://w3id.org/narn/to/hasInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -143,17 +154,19 @@
 <https://w3id.org/narn/to/hasInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 <https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
 <https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
-<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an interval to an instant that falls within or bounds it."@en .
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2000/01/rdf-schema#comment> "The association between a temporal interval and a specific instant contained within or bounding it."@en .
 <https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2000/01/rdf-schema#label> "has instant"@en .
 <https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2004/02/skos/core#altLabel> "at instant"@en .
+<https://w3id.org/narn/to/hasInstant> <http://www.w3.org/2004/02/skos/core#example> "The overarching timeline of the Narn has an instant mapped to the moment of Túrin's birth."@en .
 # 
 # https://w3id.org/narn/to/intervalRelation
 <https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
 <https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Interval> .
-<https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "General temporal relation between two intervals."@en .
+<https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "A topological temporal relation between two distinct intervals."@en .
 <https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2000/01/rdf-schema#label> "interval relation"@en .
 <https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2004/02/skos/core#altLabel> "Allen relation"@en .
+<https://w3id.org/narn/to/intervalRelation> <http://www.w3.org/2004/02/skos/core#example> "The relational mapping between the birth of Túrin and the birth of Lalaith constitutes an interval relation."@en .
 # 
 # https://w3id.org/narn/to/meets
 <https://w3id.org/narn/to/meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -162,9 +175,10 @@
 <https://w3id.org/narn/to/meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/to/meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 <https://w3id.org/narn/to/meets> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/to/overlaps> .
-<https://w3id.org/narn/to/meets> <http://www.w3.org/2000/01/rdf-schema#comment> "X ends exactly when Y starts."@en .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/2000/01/rdf-schema#comment> "The ending instant of the primary interval is chronologically identical to the starting instant of the secondary interval."@en .
 <https://w3id.org/narn/to/meets> <http://www.w3.org/2000/01/rdf-schema#label> "meets"@en .
 <https://w3id.org/narn/to/meets> <http://www.w3.org/2004/02/skos/core#altLabel> "immediately before"@en .
+<https://w3id.org/narn/to/meets> <http://www.w3.org/2004/02/skos/core#example> "The chronological span of the Nirnaeth Arnoediad meets the interval of Húrin's captivity without any intervening gap."@en .
 # 
 # https://w3id.org/narn/to/metBy
 <https://w3id.org/narn/to/metBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -172,9 +186,10 @@
 <https://w3id.org/narn/to/metBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/meets> .
 <https://w3id.org/narn/to/metBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/to/metBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/to/metBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of meets. X starts exactly when Y ends."@en .
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The starting instant of the primary interval is chronologically identical to the ending instant of the secondary interval."@en .
 <https://w3id.org/narn/to/metBy> <http://www.w3.org/2000/01/rdf-schema#label> "met by"@en .
 <https://w3id.org/narn/to/metBy> <http://www.w3.org/2004/02/skos/core#altLabel> "immediately after"@en .
+<https://w3id.org/narn/to/metBy> <http://www.w3.org/2004/02/skos/core#example> "The interval of Húrin's captivity is met by the conclusion of the Nirnaeth Arnoediad."@en .
 # 
 # https://w3id.org/narn/to/occursAfter
 <https://w3id.org/narn/to/occursAfter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -182,9 +197,10 @@
 <https://w3id.org/narn/to/occursAfter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
 <https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
-<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of occursBefore."@en .
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal relation placing the first instant chronologically subsequent to the second."@en .
 <https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2000/01/rdf-schema#label> "occurs after"@en .
 <https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2004/02/skos/core#altLabel> "later than"@en .
+<https://w3id.org/narn/to/occursAfter> <http://www.w3.org/2004/02/skos/core#example> "The moment of Nienor's birth occurs after the moment of Lalaith's birth."@en .
 # 
 # https://w3id.org/narn/to/occursBefore
 <https://w3id.org/narn/to/occursBefore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -192,17 +208,19 @@
 <https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
 <https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
 <https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/to/occursSimultaneouslyTo> .
-<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2000/01/rdf-schema#comment> "Instant strictly before another."@en .
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal relation placing the first instant chronologically prior to the second."@en .
 <https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2000/01/rdf-schema#label> "occurs before"@en .
 <https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2004/02/skos/core#altLabel> "earlier than"@en .
+<https://w3id.org/narn/to/occursBefore> <http://www.w3.org/2004/02/skos/core#example> "The moment of Túrin's birth occurs before the moment of Lalaith's birth."@en .
 # 
 # https://w3id.org/narn/to/occursDuring
 <https://w3id.org/narn/to/occursDuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
 <https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Interval> .
-<https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2000/01/rdf-schema#comment> "An instant falls within the extent of an interval."@en .
+<https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2000/01/rdf-schema#comment> "The enclosure of a specific instant strictly within the temporal boundaries of an interval."@en .
 <https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2000/01/rdf-schema#label> "occurs during"@en .
 <https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2004/02/skos/core#altLabel> "within timeframe of"@en .
+<https://w3id.org/narn/to/occursDuring> <http://www.w3.org/2004/02/skos/core#example> "The precise moment of Khîm's death occurs during the interval of Túrin's habitation at Amon Rûdh."@en .
 # 
 # https://w3id.org/narn/to/occursSimultaneouslyTo
 <https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -211,9 +229,10 @@
 <https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
 <https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
 <https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
-<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Two instants at the same time."@en .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal relation linking two distinct instants that occupy the exact same chronological position."@en .
 <https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2000/01/rdf-schema#label> "occurs simultaneously to"@en .
 <https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2004/02/skos/core#altLabel> "at same time as"@en .
+<https://w3id.org/narn/to/occursSimultaneouslyTo> <http://www.w3.org/2004/02/skos/core#example> "Two separate observations mapping to the exact same chronological instant occur simultaneously."@en .
 # 
 # https://w3id.org/narn/to/overlappedBy
 <https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -221,34 +240,38 @@
 <https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/overlaps> .
 <https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of overlaps. Y starts before X, ends after X starts but before X ends."@en .
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary interval begins strictly within the duration of the secondary interval and concludes after it."@en .
 <https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2000/01/rdf-schema#label> "overlapped by"@en .
 <https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "partially after"@en .
+<https://w3id.org/narn/to/overlappedBy> <http://www.w3.org/2004/02/skos/core#example> "Túrin's time at Amon Rûdh is overlapped by the preceding interval of his time among the outlaws."@en .
 # 
 # https://w3id.org/narn/to/overlaps
 <https://w3id.org/narn/to/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/to/overlaps> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
 <https://w3id.org/narn/to/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/to/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/to/overlaps> <http://www.w3.org/2000/01/rdf-schema#comment> "X starts before Y, ends after Y starts but before Y ends."@en .
+<https://w3id.org/narn/to/overlaps> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary interval begins before the secondary interval and concludes strictly within its duration."@en .
 <https://w3id.org/narn/to/overlaps> <http://www.w3.org/2000/01/rdf-schema#label> "overlaps"@en .
 <https://w3id.org/narn/to/overlaps> <http://www.w3.org/2004/02/skos/core#altLabel> "partially before"@en .
+<https://w3id.org/narn/to/overlaps> <http://www.w3.org/2004/02/skos/core#example> "The interval of Túrin's time among the outlaws overlaps with the beginning of his time at Amon Rûdh."@en .
 # 
 # https://w3id.org/narn/to/precededBy
 <https://w3id.org/narn/to/precededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/to/precededBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/to/precedes> .
 <https://w3id.org/narn/to/precededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/narn/to/precededBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of precedes. X starts after or when Y ends."@en .
+<https://w3id.org/narn/to/precededBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary interval commences either strictly subsequent to or exactly at the conclusion of the secondary interval."@en .
 <https://w3id.org/narn/to/precededBy> <http://www.w3.org/2000/01/rdf-schema#label> "preceded by"@en .
 <https://w3id.org/narn/to/precededBy> <http://www.w3.org/2004/02/skos/core#altLabel> "happens after"@en .
+<https://w3id.org/narn/to/precededBy> <http://www.w3.org/2004/02/skos/core#example> "Túrin's journey to Doriath is temporally preceded by the span of the Nirnaeth Arnoediad."@en .
 # 
 # https://w3id.org/narn/to/precedes
 <https://w3id.org/narn/to/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/to/precedes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/intervalRelation> .
 <https://w3id.org/narn/to/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/narn/to/precedes> <http://www.w3.org/2000/01/rdf-schema#comment> "X ends before or when Y starts."@en .
+<https://w3id.org/narn/to/precedes> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary interval concludes either strictly prior to or exactly at the commencement of the secondary interval."@en .
 <https://w3id.org/narn/to/precedes> <http://www.w3.org/2000/01/rdf-schema#label> "precedes"@en .
 <https://w3id.org/narn/to/precedes> <http://www.w3.org/2004/02/skos/core#altLabel> "happens before"@en .
+<https://w3id.org/narn/to/precedes> <http://www.w3.org/2004/02/skos/core#example> "The span of the Nirnaeth Arnoediad temporally precedes Túrin's journey to Doriath."@en .
 # 
 # https://w3id.org/narn/to/startedBy
 <https://w3id.org/narn/to/startedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -257,9 +280,10 @@
 <https://w3id.org/narn/to/startedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/to/startedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/to/startedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/to/startedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of starts. X starts when Y starts but Y ends after X ends."@en .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Both intervals share identical starting instants while the primary interval extends strictly beyond the conclusion of the secondary interval."@en .
 <https://w3id.org/narn/to/startedBy> <http://www.w3.org/2000/01/rdf-schema#label> "started by"@en .
 <https://w3id.org/narn/to/startedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "begun by"@en .
+<https://w3id.org/narn/to/startedBy> <http://www.w3.org/2004/02/skos/core#example> "The overarching timeline of the Narn is started by the interval representing the birth of Túrin."@en .
 # 
 # https://w3id.org/narn/to/starts
 <https://w3id.org/narn/to/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -267,9 +291,10 @@
 <https://w3id.org/narn/to/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/to/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/to/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://w3id.org/narn/to/starts> <http://www.w3.org/2000/01/rdf-schema#comment> "X starts at same time as Y but ends before Y ends."@en .
+<https://w3id.org/narn/to/starts> <http://www.w3.org/2000/01/rdf-schema#comment> "Both intervals share identical starting instants while the primary interval concludes strictly before the secondary interval."@en .
 <https://w3id.org/narn/to/starts> <http://www.w3.org/2000/01/rdf-schema#label> "starts"@en .
 <https://w3id.org/narn/to/starts> <http://www.w3.org/2004/02/skos/core#altLabel> "begins with"@en .
+<https://w3id.org/narn/to/starts> <http://www.w3.org/2004/02/skos/core#example> "The interval representing the birth of Túrin starts the overarching timeline of the Narn."@en .
 # 
 # https://w3id.org/narn/to/startsAt
 <https://w3id.org/narn/to/startsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -279,9 +304,10 @@
 <https://w3id.org/narn/to/startsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 <https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
 <https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/to/Instant> .
-<https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique starting instant."@en .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The absolute starting instant bounding the beginning of a temporal interval."@en .
 <https://w3id.org/narn/to/startsAt> <http://www.w3.org/2000/01/rdf-schema#label> "starts at"@en .
 <https://w3id.org/narn/to/startsAt> <http://www.w3.org/2004/02/skos/core#altLabel> "beginning point"@en .
+<https://w3id.org/narn/to/startsAt> <http://www.w3.org/2004/02/skos/core#example> "The chronological span of the Narn starts at the moment of Túrin's birth."@en .
 # 
 # 
 # 
@@ -297,18 +323,20 @@
 <https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Instant> .
 <https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The calendar date and time of an instant."@en .
+<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The standardized chronological date and time value of a specific temporal instant."@en .
 <https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "has date time"@en .
 <https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2004/02/skos/core#altLabel> "dateTime value"@en .
+<https://w3id.org/narn/to/hasDateTime> <http://www.w3.org/2004/02/skos/core#example> "The instant of publication maps to a specific dateTime value in the standard calendar."@en .
 # 
 # https://w3id.org/narn/to/hasDuration
 <https://w3id.org/narn/to/hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/narn/to/hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/to/Interval> .
 <https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
-<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The length of time spanned by an interval."@en .
+<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The absolute temporal length spanned by a defined interval."@en .
 <https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has duration"@en .
 <https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2004/02/skos/core#altLabel> "time length"@en .
+<https://w3id.org/narn/to/hasDuration> <http://www.w3.org/2004/02/skos/core#example> "The interval representing Túrin's time in Doriath has a duration measured in several years."@en .
 # 
 # 
 # 
@@ -326,9 +354,10 @@
 _:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/to/Instant> .
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/endsAt> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval with a defined ending instant."@en .
+<https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval bounded by a distinct ending instant but lacking a defined starting point."@en .
 <https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2000/01/rdf-schema#label> "ending interval"@en .
 <https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "ending point"@en .
+<https://w3id.org/narn/to/EndingInterval> <http://www.w3.org/2004/02/skos/core#example> "A historical epoch stretching back indefinitely but concluding at a specific catastrophe represents an ending interval."@en .
 # 
 # https://w3id.org/narn/to/EternalInterval
 <https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -350,9 +379,10 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/na
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/InfiniteInterval> .
 <https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/to/FiniteInterval> .
-<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval extending infinitely in both directions."@en .
+<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporally unbounded interval extending infinitely into both the past and the future."@en .
 <https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2000/01/rdf-schema#label> "eternal interval"@en .
 <https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "everlasting interval"@en .
+<https://w3id.org/narn/to/EternalInterval> <http://www.w3.org/2004/02/skos/core#example> "The continuous existence of the universe Eä serves as an eternal interval."@en .
 # 
 # https://w3id.org/narn/to/FiniteInterval
 <https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -392,24 +422,27 @@ _:genid16 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.
 _:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/startsAt> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/to/InfiniteInterval> .
-<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval with both a starting and ending instant."@en .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "A bounded temporal interval defined by both a distinct starting instant and a distinct ending instant."@en .
 <https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2000/01/rdf-schema#label> "finite interval"@en .
 <https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "bounded interval"@en .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/2004/02/skos/core#example> "The Battle of Unnumbered Tears constitutes a finite interval possessing defined chronological boundaries."@en .
 # 
 # https://w3id.org/narn/to/InfiniteInterval
 <https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/Interval> .
-<https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval extending infinitely in at least one direction."@en .
+<https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal interval extending infinitely in at least one direction."@en .
 <https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2000/01/rdf-schema#label> "infinite interval"@en .
 <https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "unbounded interval"@en .
+<https://w3id.org/narn/to/InfiniteInterval> <http://www.w3.org/2004/02/skos/core#example> "The lifespan of an immortal Elf represents an infinite interval extending continuously into the future."@en .
 # 
 # https://w3id.org/narn/to/Instant
 <https://w3id.org/narn/to/Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/to/Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/TemporalEntity> .
 <https://w3id.org/narn/to/Instant> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/to/Interval> .
-<https://w3id.org/narn/to/Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A single point in time with zero duration."@en .
+<https://w3id.org/narn/to/Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity representing a single point in time with a duration of strictly zero."@en .
 <https://w3id.org/narn/to/Instant> <http://www.w3.org/2000/01/rdf-schema#label> "instant"@en .
 <https://w3id.org/narn/to/Instant> <http://www.w3.org/2004/02/skos/core#altLabel> "time point"@en .
+<https://w3id.org/narn/to/Instant> <http://www.w3.org/2004/02/skos/core#example> "The precise moment of Túrin's birth constitutes an instant."@en .
 # 
 # https://w3id.org/narn/to/Interval
 <https://w3id.org/narn/to/Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -418,9 +451,10 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/narn/to/Instant> .
 _:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/hasInstant> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/narn/to/Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "A continuous extent of time with nonzero duration."@en .
+<https://w3id.org/narn/to/Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "A continuous temporal entity characterized by a strictly positive duration."@en .
 <https://w3id.org/narn/to/Interval> <http://www.w3.org/2000/01/rdf-schema#label> "interval"@en .
 <https://w3id.org/narn/to/Interval> <http://www.w3.org/2004/02/skos/core#altLabel> "time span"@en .
+<https://w3id.org/narn/to/Interval> <http://www.w3.org/2004/02/skos/core#example> "The complete timeline of the Narn represents a temporal interval."@en .
 # 
 # https://w3id.org/narn/to/StartingInterval
 <https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -441,15 +475,17 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/to/Instant> .
 _:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/to/startsAt> .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval with a defined starting instant."@en .
+<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval bounded by a distinct starting instant but lacking a defined ending point."@en .
 <https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2000/01/rdf-schema#label> "starting interval"@en .
 <https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2004/02/skos/core#altLabel> "begins with"@en .
+<https://w3id.org/narn/to/StartingInterval> <http://www.w3.org/2004/02/skos/core#example> "The life of an Elf exemplifies a starting interval since it begins at birth but possesses no natural conclusion."@en .
 # 
 # https://w3id.org/narn/to/TemporalEntity
 <https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A thing that exists in time."@en .
+<https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity existing within a specific temporal dimension."@en .
 <https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "temporal entity"@en .
 <https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/2004/02/skos/core#altLabel> "time entity"@en .
+<https://w3id.org/narn/to/TemporalEntity> <http://www.w3.org/2004/02/skos/core#example> "The moment of Túrin's birth and the span of his life represent temporal entities."@en .
 # 
 # 
 # 

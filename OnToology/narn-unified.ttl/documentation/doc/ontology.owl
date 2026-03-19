@@ -14,6 +14,7 @@
         <rdfs:label xml:lang="en">Formal Model of Story Plots</rdfs:label>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:created>
         <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-19</terms:modified>
         <vann:preferredNamespacePrefix>narn</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/narn/</vann:preferredNamespaceUri>
     </owl:Ontology>
@@ -39,6 +40,13 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
     <!-- https://purl.org/dc/terms/created -->
 
 
@@ -50,6 +58,13 @@
 
 
     <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
     
 
 
@@ -118,6 +133,7 @@
         <rdfs:comment xml:lang="en">If an agent performs an action with a result, the agent indirectly causes that result.</rdfs:comment>
         <rdfs:label xml:lang="en">causes by action</rdfs:label>
         <skos:altLabel xml:lang="en">brings about</skos:altLabel>
+        <skos:example xml:lang="en">Turambar causes the death of Glaurung by performing the slaying.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -134,6 +150,7 @@
         <rdfs:comment xml:lang="en">An object used to perform the action (e.g. a sword).</rdfs:comment>
         <rdfs:label xml:lang="en">has instrument</rdfs:label>
         <skos:altLabel xml:lang="en">using</skos:altLabel>
+        <skos:example xml:lang="en">The Slaying of Glaurung has instrument Gurthang.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -148,6 +165,7 @@
         <rdfs:comment xml:lang="en">The goal or purpose behind the action.</rdfs:comment>
         <rdfs:label xml:lang="en">has intention</rdfs:label>
         <skos:altLabel xml:lang="en">aims to</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s flight from Doriath has the intention of escaping judgement.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -163,6 +181,7 @@
         <rdfs:comment xml:lang="en">The character who receives something in a transfer action.</rdfs:comment>
         <rdfs:label xml:lang="en">has recipient</rdfs:label>
         <skos:altLabel xml:lang="en">received by</skos:altLabel>
+        <skos:example xml:lang="en">Beleg&apos;s gift of Anglachel has recipient Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -177,6 +196,7 @@
         <rdfs:comment xml:lang="en">The event or state that results from the action.</rdfs:comment>
         <rdfs:label xml:lang="en">has result</rdfs:label>
         <skos:altLabel xml:lang="en">results in</skos:altLabel>
+        <skos:example xml:lang="en">Brandir&apos;s speech results in the truth about Níniel being revealed.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -192,6 +212,7 @@
         <rdfs:comment xml:lang="en">The entity that the action is directed towards.</rdfs:comment>
         <rdfs:label xml:lang="en">has target</rdfs:label>
         <skos:altLabel xml:lang="en">directed at</skos:altLabel>
+        <skos:example xml:lang="en">The Slaying of Glaurung has target Glaurung.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -205,6 +226,7 @@
         <rdfs:comment xml:lang="en">The agent who intentionally performs the action.</rdfs:comment>
         <rdfs:label xml:lang="en">performed by</rdfs:label>
         <skos:altLabel xml:lang="en">done by</skos:altLabel>
+        <skos:example xml:lang="en">The Slaying of Glaurung was performed by Turambar.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -218,6 +240,7 @@
         <rdfs:comment xml:lang="en">The character brought into existence by a birth event.</rdfs:comment>
         <rdfs:label xml:lang="en">begets</rdfs:label>
         <skos:altLabel xml:lang="en">brings forth</skos:altLabel>
+        <skos:example xml:lang="en">The birth of Túrin begets Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -235,6 +258,7 @@
         <rdfs:comment xml:lang="en">This event causally leads to another event.</rdfs:comment>
         <rdfs:label xml:lang="en">causes</rdfs:label>
         <skos:altLabel xml:lang="en">leads to</skos:altLabel>
+        <skos:example xml:lang="en">The death of Saeros causes the exile of Túrin from Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -247,6 +271,7 @@
         <rdfs:comment xml:lang="en">An entity produced or created by the event.</rdfs:comment>
         <rdfs:label xml:lang="en">creates</rdfs:label>
         <skos:altLabel xml:lang="en">results in</skos:altLabel>
+        <skos:example xml:lang="en">The reforging of Anglachel creates Gurthang.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -262,6 +287,7 @@
         <rdfs:comment xml:lang="en">The entity that intentionally causes or performs the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has agent</rdfs:label>
         <skos:altLabel xml:lang="en">done by</skos:altLabel>
+        <skos:example xml:lang="en">The death of Saeros has agent Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -274,6 +300,7 @@
         <rdfs:comment xml:lang="en">An entity involved as a contributing cause in the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has cause</rdfs:label>
         <skos:altLabel xml:lang="en">caused by</skos:altLabel>
+        <skos:example xml:lang="en">The death of Beleg has cause Anglachel.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -289,6 +316,7 @@
         <rdfs:comment xml:lang="en">The ending place of a movement event.</rdfs:comment>
         <rdfs:label xml:lang="en">has destination</rdfs:label>
         <skos:altLabel xml:lang="en">arrives at</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s journey has destination Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -303,6 +331,7 @@
         <rdfs:comment xml:lang="en">The starting place of a movement event.</rdfs:comment>
         <rdfs:label xml:lang="en">has origin</rdfs:label>
         <skos:altLabel xml:lang="en">departs from</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s journey to Doriath has origin Dor-lómin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -315,6 +344,7 @@
         <rdfs:comment xml:lang="en">An entity that takes part in the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
         <skos:altLabel xml:lang="en">involves</skos:altLabel>
+        <skos:example xml:lang="en">The Battle of Unnumbered Tears has participant Húrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -328,6 +358,7 @@
         <rdfs:comment xml:lang="en">The entity affected by the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has patient</rdfs:label>
         <skos:altLabel xml:lang="en">affects</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung hypnotises Níniel, with Níniel as the patient.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -342,8 +373,9 @@
         <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/event/Event"/>
         <rdfs:comment xml:lang="en">A smaller event that occurs as part of this one.</rdfs:comment>
-        <rdfs:label xml:lang="en">has sub-event</rdfs:label>
+        <rdfs:label xml:lang="en">has subevent</rdfs:label>
         <skos:altLabel xml:lang="en">contains event</skos:altLabel>
+        <skos:example xml:lang="en">The Wars of Beleriand has subevent the Nirnaeth Arnoediad.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -357,6 +389,7 @@
         <rdfs:comment xml:lang="en">The character who undertakes the travel.</rdfs:comment>
         <rdfs:label xml:lang="en">has traveller</rdfs:label>
         <skos:altLabel xml:lang="en">travelled by</skos:altLabel>
+        <skos:example xml:lang="en">Túrin, Gethron and Grithnir are travellers in the journey to Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -370,6 +403,7 @@
         <rdfs:comment xml:lang="en">The entity that suffers harm in the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has victim</rdfs:label>
         <skos:altLabel xml:lang="en">harms</skos:altLabel>
+        <skos:example xml:lang="en">The death of Beleg has victim Beleg.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -383,6 +417,7 @@
         <rdfs:comment xml:lang="en">An entity that observes the event without acting.</rdfs:comment>
         <rdfs:label xml:lang="en">has witness</rdfs:label>
         <skos:altLabel xml:lang="en">observed by</skos:altLabel>
+        <skos:example xml:lang="en">Mîm&apos;s betrayal has witness Andróg.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -396,6 +431,7 @@
         <rdfs:range rdf:resource="https://w3id.org/narn/event/Birth"/>
         <rdfs:comment xml:lang="en">Inverse of begets. Links a character to the birth event that brings them into existence.</rdfs:comment>
         <rdfs:label xml:lang="en">is begotten in</rdfs:label>
+        <skos:example xml:lang="en">Túrin is begotten in the birth of Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -408,6 +444,7 @@
         <rdfs:comment xml:lang="en">Inverse of causes. This event results from another.</rdfs:comment>
         <rdfs:label xml:lang="en">is caused by</rdfs:label>
         <skos:altLabel xml:lang="en">results from</skos:altLabel>
+        <skos:example xml:lang="en">The exile of Túrin is caused by the death of Saeros.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -419,8 +456,9 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/during"/>
         <owl:inverseOf rdf:resource="https://w3id.org/narn/event/hasSubEvent"/>
         <rdfs:comment xml:lang="en">This event is part of a larger event.</rdfs:comment>
-        <rdfs:label xml:lang="en">is sub-event of</rdfs:label>
+        <rdfs:label xml:lang="en">is subevent of</rdfs:label>
         <skos:altLabel xml:lang="en">part of event</skos:altLabel>
+        <skos:example xml:lang="en">The Nirnaeth Arnoediad is a subevent of the Wars of Beleriand.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -435,6 +473,7 @@
         <rdfs:comment xml:lang="en">The place where the event occurs.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs at</rdfs:label>
         <skos:altLabel xml:lang="en">takes place at</skos:altLabel>
+        <skos:example xml:lang="en">The Captivity of Húrin occurs at Angband.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -452,6 +491,7 @@
         <rdfs:comment xml:lang="en">This event occurs before another event.</rdfs:comment>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
         <skos:altLabel xml:lang="en">comes before</skos:altLabel>
+        <skos:example xml:lang="en">The Nirnaeth Arnoediad precedes Túrin&apos;s journey to Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -467,6 +507,7 @@
         <rdfs:comment xml:lang="en">Two places share a boundary but neither contains the other.</rdfs:comment>
         <rdfs:label xml:lang="en">borders</rdfs:label>
         <skos:altLabel xml:lang="en">adjacent to</skos:altLabel>
+        <skos:example xml:lang="en">Doriath borders Brethil.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -486,6 +527,7 @@
         <rdfs:comment xml:lang="en">Inverse of isAPartOf.</rdfs:comment>
         <rdfs:label xml:lang="en">contains</rdfs:label>
         <skos:altLabel xml:lang="en">includes</skos:altLabel>
+        <skos:example xml:lang="en">Beleriand contains Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -499,6 +541,7 @@
         <rdfs:comment xml:lang="en">A general spatial relation between two places.</rdfs:comment>
         <rdfs:label xml:lang="en">has spatial relation</rdfs:label>
         <skos:altLabel xml:lang="en">spatially related to</skos:altLabel>
+        <skos:example xml:lang="en">Doriath has a spatial relation to Brethil, as they border each other.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -517,6 +560,7 @@
         <rdfs:comment xml:lang="en">Indicates that a place constitutes a subarea of another place.</rdfs:comment>
         <rdfs:label xml:lang="en">is a part of</rdfs:label>
         <skos:altLabel xml:lang="en">part of</skos:altLabel>
+        <skos:example xml:lang="en">Dor-lómin is a part of Hithlum.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -532,6 +576,7 @@
         <rdfs:comment xml:lang="en">Two places are in proximity.</rdfs:comment>
         <rdfs:label xml:lang="en">is near</rdfs:label>
         <skos:altLabel xml:lang="en">close to</skos:altLabel>
+        <skos:example xml:lang="en">The river Narog is near Nargothrond.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -547,6 +592,7 @@
         <rdfs:comment xml:lang="en">Stricter form of isAPartOf where boundaries do not touch.</rdfs:comment>
         <rdfs:label xml:lang="en">is strictly inside of</rdfs:label>
         <skos:altLabel xml:lang="en">strictly within</skos:altLabel>
+        <skos:example xml:lang="en">Gondolin is strictly inside of Tumladen.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -561,6 +607,7 @@
         <rdfs:comment xml:lang="en">A settlement is the capital of a realm.</rdfs:comment>
         <rdfs:label xml:lang="en">is the capital of</rdfs:label>
         <skos:altLabel xml:lang="en">capital of</skos:altLabel>
+        <skos:example xml:lang="en">Menegroth is the capital of Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -574,6 +621,7 @@
         <rdfs:comment xml:lang="en">A character or entity involved in the conflict.</rdfs:comment>
         <rdfs:label xml:lang="en">conflict involves</rdfs:label>
         <skos:altLabel xml:lang="en">tension involves</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse involves Morgoth and Húrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -588,6 +636,7 @@
         <rdfs:comment xml:lang="en">Relates a narrative unit to its contained subunits.</rdfs:comment>
         <rdfs:label xml:lang="en">contains unit</rdfs:label>
         <skos:altLabel xml:lang="en">includes unit</skos:altLabel>
+        <skos:example xml:lang="en">Part I contains the chapter Túrin in Dor-lómin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -601,6 +650,7 @@
         <rdfs:comment xml:lang="en">Maps a narrative element to the event it represents.</rdfs:comment>
         <rdfs:label xml:lang="en">corresponds to event</rdfs:label>
         <skos:altLabel xml:lang="en">maps to event</skos:altLabel>
+        <skos:example xml:lang="en">The Climax corresponds to the Slaying of Glaurung.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -613,6 +663,7 @@
         <rdfs:comment xml:lang="en">A character involved in or affected by this plot device.</rdfs:comment>
         <rdfs:label xml:lang="en">device involves character</rdfs:label>
         <skos:altLabel xml:lang="en">device concerns</skos:altLabel>
+        <skos:example xml:lang="en">The Anagnorisis device involves Níniel and Turambar.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -629,6 +680,7 @@
         <rdfs:comment xml:lang="en">One narrative unit sequentially comes after another.</rdfs:comment>
         <rdfs:label xml:lang="en">follows</rdfs:label>
         <skos:altLabel xml:lang="en">comes after</skos:altLabel>
+        <skos:example xml:lang="en">Part II follows Part I in the Narn.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -642,6 +694,7 @@
         <rdfs:comment xml:lang="en">The event that this foreshadowing hints at.</rdfs:comment>
         <rdfs:label xml:lang="en">foreshadows event</rdfs:label>
         <skos:altLabel xml:lang="en">hints at</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse foreshadows the death of Turambar.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -655,6 +708,7 @@
         <rdfs:comment xml:lang="en">The author of the story.</rdfs:comment>
         <rdfs:label xml:lang="en">has author</rdfs:label>
         <skos:altLabel xml:lang="en">written by</skos:altLabel>
+        <skos:example xml:lang="en">The Narn has author J.R.R. Tolkien.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -668,6 +722,7 @@
         <rdfs:comment xml:lang="en">A conflict central to the story.</rdfs:comment>
         <rdfs:label xml:lang="en">has conflict</rdfs:label>
         <skos:altLabel xml:lang="en">has tension</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse against Húrin&apos;s family is a conflict in the Narn.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -682,6 +737,7 @@
         <rdfs:comment xml:lang="en">The genre(s) of the story.</rdfs:comment>
         <rdfs:label xml:lang="en">has genre</rdfs:label>
         <skos:altLabel xml:lang="en">genre is</skos:altLabel>
+        <skos:example xml:lang="en">The Narn has genre Tragedy, Epic, and Fantasy.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -695,6 +751,7 @@
         <rdfs:comment xml:lang="en">Links a story to its plot stages.</rdfs:comment>
         <rdfs:label xml:lang="en">has narrative element</rdfs:label>
         <skos:altLabel xml:lang="en">has element</skos:altLabel>
+        <skos:example xml:lang="en">The Narn includes narrative elements like Exposition and Climax.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -710,6 +767,7 @@
         <rdfs:comment xml:lang="en">Links a story to its structural units.</rdfs:comment>
         <rdfs:label xml:lang="en">has narrative unit</rdfs:label>
         <skos:altLabel xml:lang="en">divided into</skos:altLabel>
+        <skos:example xml:lang="en">The Narn has narrative units Part I, Part II, Part III.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -722,6 +780,7 @@
         <rdfs:comment xml:lang="en">The narrative role a character plays.</rdfs:comment>
         <rdfs:label xml:lang="en">has role</rdfs:label>
         <skos:altLabel xml:lang="en">plays role</skos:altLabel>
+        <skos:example xml:lang="en">Túrin has role Protagonist and Tragic Hero.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -734,6 +793,7 @@
         <rdfs:comment xml:lang="en">A thematic element or motif in the story.</rdfs:comment>
         <rdfs:label xml:lang="en">has theme</rdfs:label>
         <skos:altLabel xml:lang="en">explores theme</skos:altLabel>
+        <skos:example xml:lang="en">The Narn explores themes like fate and pride.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -745,6 +805,7 @@
         <rdfs:comment xml:lang="en">Links a character role to a narrative device that affects them.</rdfs:comment>
         <rdfs:label xml:lang="en">involved in device</rdfs:label>
         <skos:altLabel xml:lang="en">affected by narrative device</skos:altLabel>
+        <skos:example xml:lang="en">Túrin is involved in the Peripeteia device.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -757,6 +818,7 @@
         <rdfs:comment xml:lang="en">Inverse of containsUnit, relates a unit to its parent.</rdfs:comment>
         <rdfs:label xml:lang="en">is unit of</rdfs:label>
         <skos:altLabel xml:lang="en">belongs to</skos:altLabel>
+        <skos:example xml:lang="en">The chapter Túrin in Dor-lómin is a unit of Part I.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -770,6 +832,7 @@
         <rdfs:comment xml:lang="en">The narrative unit in which this element appears.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs in unit</rdfs:label>
         <skos:altLabel xml:lang="en">located in unit</skos:altLabel>
+        <skos:example xml:lang="en">The Falling Action occurs in Part III.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -783,6 +846,7 @@
         <rdfs:comment xml:lang="en">Links a story to the plot devices it employs.</rdfs:comment>
         <rdfs:label xml:lang="en">uses device</rdfs:label>
         <skos:altLabel xml:lang="en">employs device</skos:altLabel>
+        <skos:example xml:lang="en">The Narn uses devices: Dramatic Irony, Anagnorisis, Peripeteia.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -794,9 +858,10 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Two regions share no points at all.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes a spatial relation where two regions are strictly disjoint and share no spatial points.</rdfs:comment>
         <rdfs:label xml:lang="en">disconnected</rdfs:label>
         <skos:altLabel xml:lang="en">disjoint regions</skos:altLabel>
+        <skos:example xml:lang="en">Angband and Doriath are disconnected since they share no spatial regions.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -810,9 +875,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/rcc/NTPP"/>
-        <rdfs:comment xml:lang="en">Boundaries touch but interiors are disjoint.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes a relation where the boundaries of two regions intersect while their interiors remain disjoint.</rdfs:comment>
         <rdfs:label xml:lang="en">externally connected</rdfs:label>
         <skos:altLabel xml:lang="en">touching regions</skos:altLabel>
+        <skos:example xml:lang="en">Brethil is externally connected to Doriath because their boundaries touch.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -827,9 +893,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Same spatial extent. Equivalence relation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents spatial equivalence where two distinct entities occupy the exact identical spatial extent.</rdfs:comment>
         <rdfs:label xml:lang="en">equal</rdfs:label>
         <skos:altLabel xml:lang="en">coextensive regions</skos:altLabel>
+        <skos:example xml:lang="en">The Thousand Caves and Menegroth are spatially equal entities.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -843,9 +910,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">First region entirely inside second, boundaries do not touch.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies a relation where the primary region is strictly contained within the interior of the secondary region with no shared boundary points.</rdfs:comment>
         <rdfs:label xml:lang="en">non-tangential proper part</rdfs:label>
         <skos:altLabel xml:lang="en">interior part</skos:altLabel>
+        <skos:example xml:lang="en">Dor-lómin is a non-tangential proper part of Hithlum as it is completely enclosed.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -860,9 +928,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">First region entirely contains second, boundaries do not touch.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse relation where the primary region completely and strictly contains the secondary region within its interior.</rdfs:comment>
         <rdfs:label xml:lang="en">non-tangential proper part inverse</rdfs:label>
         <skos:altLabel xml:lang="en">interior whole</skos:altLabel>
+        <skos:example xml:lang="en">Hithlum is the non-tangential proper part inverse of Dor-lómin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -874,9 +943,10 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Part of each region is inside the other but neither is contained.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that two regions share a common interior subset without either fully subsuming the other.</rdfs:comment>
         <rdfs:label xml:lang="en">partially overlapping</rdfs:label>
         <skos:altLabel xml:lang="en">overlapping regions</skos:altLabel>
+        <skos:example xml:lang="en">The wild lands partially overlap with Brethil.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -889,9 +959,10 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/rcc/spatiallyRelatedTo"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">First region entirely inside second, boundaries touch.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines a state where the primary region is entirely subsumed by the secondary region while sharing at least one boundary point.</rdfs:comment>
         <rdfs:label xml:lang="en">tangential proper part</rdfs:label>
         <skos:altLabel xml:lang="en">tangential part</skos:altLabel>
+        <skos:example xml:lang="en">Hithlum is a tangential proper part of Beleriand.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -905,9 +976,10 @@
         <owl:inverseOf rdf:resource="https://w3id.org/narn/rcc/TPP"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">First region entirely contains second, boundaries touch.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse relation where the primary region completely subsumes the secondary region while sharing boundary points.</rdfs:comment>
         <rdfs:label xml:lang="en">tangential proper part inverse</rdfs:label>
         <skos:altLabel xml:lang="en">tangential whole</skos:altLabel>
+        <skos:example xml:lang="en">Beleriand represents the tangential proper part inverse of Hithlum.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -922,6 +994,7 @@
         <rdfs:comment xml:lang="en">The most general spatial relation between two regions.</rdfs:comment>
         <rdfs:label xml:lang="en">spatially related to</rdfs:label>
         <skos:altLabel xml:lang="en">spatial relation</skos:altLabel>
+        <skos:example xml:lang="en">Doriath is spatially related to Brethil.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -930,9 +1003,10 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/committedSuicide">
-        <rdfs:comment xml:lang="en">Self killing.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes the tragic act of a character intentionally taking their own life.</rdfs:comment>
         <rdfs:label xml:lang="en">committed suicide</rdfs:label>
         <skos:altLabel xml:lang="en">took own life</skos:altLabel>
+        <skos:example xml:lang="en">Túrin fell into despair and committed suicide with his sword Gurthang.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -941,9 +1015,10 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/cursed">
-        <rdfs:comment xml:lang="en">Character placed a curse upon another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes an act where a character invokes supernatural malevolence or a curse upon another.</rdfs:comment>
         <rdfs:label xml:lang="en">cursed</rdfs:label>
         <skos:altLabel xml:lang="en">placed a curse on</skos:altLabel>
+        <skos:example xml:lang="en">Mîm sought revenge and cursed Andróg after the killing of Khîm.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -953,9 +1028,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/feared">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/hasEmotionalRelationWith"/>
-        <rdfs:comment xml:lang="en">Character feared another character.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes a state of dread or apprehension regarding another character.</rdfs:comment>
         <rdfs:label xml:lang="en">feared</rdfs:label>
         <skos:altLabel xml:lang="en">had fear of</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung recognized the threat and feared Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -966,9 +1042,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/hasEmotionalRelationWith">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="en">General emotional relationship between two characters.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines a broad emotional directedness or sentiment from one character toward another.</rdfs:comment>
         <rdfs:label xml:lang="en">has emotional relation with</rdfs:label>
         <skos:altLabel xml:lang="en">feels towards</skos:altLabel>
+        <skos:example xml:lang="en">Saeros holds a deep emotional relation rooted in hatred towards Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -981,9 +1058,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/social/isAnEnemyOf"/>
-        <rdfs:comment xml:lang="en">Mutual friendship. Symmetric.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a symmetric and mutual bond of friendship between two entities.</rdfs:comment>
         <rdfs:label xml:lang="en">has friend</rdfs:label>
         <skos:altLabel xml:lang="en">is a friend of</skos:altLabel>
+        <skos:example xml:lang="en">Túrin maintains a mutual friendship and has friend Sador.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -994,9 +1072,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/hasValence">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/social/EmotionalValence"/>
-        <rdfs:comment xml:lang="en">Assigns an emotional valence. Functional.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Functionally assigns a specific emotional state or valence to a relational entity.</rdfs:comment>
         <rdfs:label xml:lang="en">has valence</rdfs:label>
         <skos:altLabel xml:lang="en">has sentiment</skos:altLabel>
+        <skos:example xml:lang="en">Húrin acts functionally and has valence positive.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1006,9 +1085,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/hated">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/hasEmotionalRelationWith"/>
-        <rdfs:comment xml:lang="en">Character had hatred towards another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a profound sentiment of malice or hatred directed at another entity.</rdfs:comment>
         <rdfs:label xml:lang="en">hated</rdfs:label>
         <skos:altLabel xml:lang="en">had hatred for</skos:altLabel>
+        <skos:example xml:lang="en">Saeros harbored intense resentment and hated Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1017,9 +1097,10 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/hypnotised">
-        <rdfs:comment xml:lang="en">Character placed another under a spell.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the act of subjecting another character to a mental spell or hypnotic enchantment.</rdfs:comment>
         <rdfs:label xml:lang="en">hypnotised</rdfs:label>
         <skos:altLabel xml:lang="en">cast a spell on</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung used his power and hypnotised Níniel.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1029,9 +1110,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/isAKinsmanOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:comment xml:lang="en">Kinship or blood relation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a symmetric bond based on shared familial lineage or blood relation.</rdfs:comment>
         <rdfs:label xml:lang="en">is a kinsman of</rdfs:label>
         <skos:altLabel xml:lang="en">kin of</skos:altLabel>
+        <skos:example xml:lang="en">Túrin shares a bloodline and is a kinsman of Nienor.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1043,9 +1125,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/social/wasServedBy"/>
-        <rdfs:comment xml:lang="en">Antagonistic relation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines a fundamentally antagonistic and hostile relationship.</rdfs:comment>
         <rdfs:label xml:lang="en">is an enemy of</rdfs:label>
         <skos:altLabel xml:lang="en">foe of</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth stands as a prime antagonist and is an enemy of Húrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1056,9 +1139,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/isMarriedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Marriage relationship.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes a formal and symmetric matrimonial relationship between two entities.</rdfs:comment>
         <rdfs:label xml:lang="en">is married to</rdfs:label>
         <skos:altLabel xml:lang="en">wed to</skos:altLabel>
+        <skos:example xml:lang="en">Turambar formalized his bond and is married to Níniel.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1070,9 +1154,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/social/served"/>
-        <rdfs:comment xml:lang="en">X killed Y.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a fatal action where the subject directly causes the death of the object.</rdfs:comment>
         <rdfs:label xml:lang="en">killed</rdfs:label>
         <skos:altLabel xml:lang="en">slew</skos:altLabel>
+        <skos:example xml:lang="en">Túrin engaged in a fatal conflict and killed Saeros.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1086,9 +1171,10 @@
             <rdf:Description rdf:about="https://w3id.org/narn/social/served"/>
             <rdf:Description rdf:about="https://w3id.org/narn/social/wasTheKingOf"/>
         </owl:propertyChainAxiom>
-        <rdfs:comment xml:lang="en">Character lived in a place during some period.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a geographical location where a character resided for a significant duration.</rdfs:comment>
         <rdfs:label xml:lang="en">lived in</rdfs:label>
         <skos:altLabel xml:lang="en">dwelt in</skos:altLabel>
+        <skos:example xml:lang="en">Túrin spent parts of his life and lived in Dor-lómin and Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1098,9 +1184,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/loved">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/hasEmotionalRelationWith"/>
-        <rdfs:comment xml:lang="en">Character had feelings of love towards another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a profound sentiment of affection or love directed at another entity.</rdfs:comment>
         <rdfs:label xml:lang="en">loved</rdfs:label>
         <skos:altLabel xml:lang="en">had love for</skos:altLabel>
+        <skos:example xml:lang="en">Húrin held a deep affection and loved Morwen.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1111,9 +1198,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/mutuallyLoved">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/loved"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:comment xml:lang="en">Two characters loved each other.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes a symmetric emotional state where two characters share reciprocal affection.</rdfs:comment>
         <rdfs:label xml:lang="en">mutually loved</rdfs:label>
         <skos:altLabel xml:lang="en">reciprocally loved</skos:altLabel>
+        <skos:example xml:lang="en">Turambar and Níniel shared a bond and mutually loved each other.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1123,9 +1211,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/ruled">
         <owl:equivalentProperty rdf:resource="https://w3id.org/narn/social/wasTheKingOf"/>
-        <rdfs:comment xml:lang="en">Equivalent to wasTheKingOf.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Functions as an equivalent property signifying sovereign rule over a domain.</rdfs:comment>
         <rdfs:label xml:lang="en">ruled</rdfs:label>
         <skos:altLabel xml:lang="en">governed</skos:altLabel>
+        <skos:example xml:lang="en">Thingol governed and ruled Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1138,9 +1227,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="en">Character served another as a subordinate.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a hierarchical relationship where one character acts as a subordinate to another.</rdfs:comment>
         <rdfs:label xml:lang="en">served</rdfs:label>
         <skos:altLabel xml:lang="en">was in service of</skos:altLabel>
+        <skos:example xml:lang="en">Sador was loyal and served Húrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1151,9 +1241,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasHeldCaptiveIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/livedIn"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
-        <rdfs:comment xml:lang="en">Character was imprisoned.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies a location where a character was forcibly imprisoned or contained.</rdfs:comment>
         <rdfs:label xml:lang="en">was held captive in</rdfs:label>
         <skos:altLabel xml:lang="en">imprisoned in</skos:altLabel>
+        <skos:example xml:lang="en">Húrin suffered greatly and was held captive in Angband.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1163,9 +1254,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasKilledBy">
         <owl:inverseOf rdf:resource="https://w3id.org/narn/social/killed"/>
-        <rdfs:comment xml:lang="en">Inverse of killed.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse relation specifying the perpetrator of a fatal action against the subject.</rdfs:comment>
         <rdfs:label xml:lang="en">was killed by</rdfs:label>
         <skos:altLabel xml:lang="en">slain by</skos:altLabel>
+        <skos:example xml:lang="en">Beleg suffered a tragic fate and was killed by Gorthol.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1175,9 +1267,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasServedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/narn/social/served"/>
-        <rdfs:comment xml:lang="en">Inverse of served.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse relation designating the superior who receives service.</rdfs:comment>
         <rdfs:label xml:lang="en">was served by</rdfs:label>
         <skos:altLabel xml:lang="en">had as servant</skos:altLabel>
+        <skos:example xml:lang="en">Húrin held authority and was served by Sador.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1188,9 +1281,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasTheBestFriendOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/social/hasFriend"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:comment xml:lang="en">Particularly close friendship.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies an exceptionally close and prioritized bond of mutual friendship.</rdfs:comment>
         <rdfs:label xml:lang="en">was the best friend of</rdfs:label>
         <skos:altLabel xml:lang="en">closest companion of</skos:altLabel>
+        <skos:example xml:lang="en">Beleg proved his loyalty and was the best friend of Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1200,9 +1294,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/social/wasTheChieftainOf">
         <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
-        <rdfs:comment xml:lang="en">Character was the chieftain of a people or place.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the domain or people over which a character exercised tribal leadership.</rdfs:comment>
         <rdfs:label xml:lang="en">was the chieftain of</rdfs:label>
         <skos:altLabel xml:lang="en">led as chief</skos:altLabel>
+        <skos:example xml:lang="en">Brandir guided his people and was the chieftain of Brethil.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1214,9 +1309,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/location/Place"/>
-        <rdfs:comment xml:lang="en">Character was the ruler of a place.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the geographical or political domain over which a character held absolute royal authority.</rdfs:comment>
         <rdfs:label xml:lang="en">was the king of</rdfs:label>
         <skos:altLabel xml:lang="en">reigned over</skos:altLabel>
+        <skos:example xml:lang="en">Thingol held supreme authority and was the king of Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1228,9 +1324,10 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/narn/to/before"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">Inverse of before. X starts after Y ends.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The primary interval commences strictly subsequent to the conclusion of the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">after</rdfs:label>
         <skos:altLabel xml:lang="en">follows</skos:altLabel>
+        <skos:example xml:lang="en">The interval of Nienor&apos;s birth occurs strictly after the conclusion of the Nirnaeth Arnoediad.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1243,9 +1340,10 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/precedes"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/to/overlaps"/>
-        <rdfs:comment xml:lang="en">X ends before Y starts.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The primary interval concludes strictly prior to the commencement of the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">before</rdfs:label>
         <skos:altLabel xml:lang="en">precedes</skos:altLabel>
+        <skos:example xml:lang="en">The interval of Túrin&apos;s birth occurs strictly before the interval of Lalaith&apos;s birth.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1257,9 +1355,10 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/narn/to/during"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">Inverse of during. X entirely contains Y.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The primary interval strictly and completely encloses the chronological boundaries of the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">contains interval</rdfs:label>
         <skos:altLabel xml:lang="en">temporally contains</skos:altLabel>
+        <skos:example xml:lang="en">The overarching timeline of the Narn temporally contains the interval of Túrin&apos;s time in Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1270,9 +1369,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/during">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">X occurs entirely within Y.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The primary interval is strictly and completely enclosed within the chronological boundaries of the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">during</rdfs:label>
         <skos:altLabel xml:lang="en">contained in</skos:altLabel>
+        <skos:example xml:lang="en">The interval representing the killing of Khîm occurs strictly during Túrin&apos;s habitation at Amon Rûdh.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1288,9 +1388,10 @@
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/to/startsAt"/>
-        <rdfs:comment xml:lang="en">The unique ending instant.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The absolute ending instant bounding the conclusion of a temporal interval.</rdfs:comment>
         <rdfs:label xml:lang="en">ends at</rdfs:label>
         <skos:altLabel xml:lang="en">ending point</skos:altLabel>
+        <skos:example xml:lang="en">The Battle of Unnumbered Tears ends at the precise instant of the final retreat.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1303,9 +1404,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Same temporal extent.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Absolute chronological equivalence where two intervals share identical starting and ending instants.</rdfs:comment>
         <rdfs:label xml:lang="en">equals</rdfs:label>
         <skos:altLabel xml:lang="en">same time as</skos:altLabel>
+        <skos:example xml:lang="en">The temporal span of the Siege of Nargothrond equals the chronological span of the Fall of Nargothrond.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1319,9 +1421,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Inverse of finishes. X ends when Y ends but Y starts before X starts.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Both intervals share identical ending instants while the primary interval commences strictly before the secondary interval begins.</rdfs:comment>
         <rdfs:label xml:lang="en">finished by</rdfs:label>
         <skos:altLabel xml:lang="en">ended by</skos:altLabel>
+        <skos:example xml:lang="en">The overarching timeline of the Narn is finished by the interval representing the death of Turambar.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1334,9 +1437,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">X ends at same time as Y but starts after Y starts.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Both intervals share identical ending instants while the primary interval commences strictly after the secondary interval begins.</rdfs:comment>
         <rdfs:label xml:lang="en">finishes</rdfs:label>
         <skos:altLabel xml:lang="en">ends with</skos:altLabel>
+        <skos:example xml:lang="en">The interval representing the death of Turambar finishes the overarching timeline of the Narn.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1349,9 +1453,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
-        <rdfs:comment xml:lang="en">Links an interval to an instant that falls within or bounds it.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The association between a temporal interval and a specific instant contained within or bounding it.</rdfs:comment>
         <rdfs:label xml:lang="en">has instant</rdfs:label>
         <skos:altLabel xml:lang="en">at instant</skos:altLabel>
+        <skos:example xml:lang="en">The overarching timeline of the Narn has an instant mapped to the moment of Túrin&apos;s birth.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1362,9 +1467,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/intervalRelation">
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/to/Interval"/>
-        <rdfs:comment xml:lang="en">General temporal relation between two intervals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A topological temporal relation between two distinct intervals.</rdfs:comment>
         <rdfs:label xml:lang="en">interval relation</rdfs:label>
         <skos:altLabel xml:lang="en">Allen relation</skos:altLabel>
+        <skos:example xml:lang="en">The relational mapping between the birth of Túrin and the birth of Lalaith constitutes an interval relation.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1378,9 +1484,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/to/overlaps"/>
-        <rdfs:comment xml:lang="en">X ends exactly when Y starts.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The ending instant of the primary interval is chronologically identical to the starting instant of the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">meets</rdfs:label>
         <skos:altLabel xml:lang="en">immediately before</skos:altLabel>
+        <skos:example xml:lang="en">The chronological span of the Nirnaeth Arnoediad meets the interval of Húrin&apos;s captivity without any intervening gap.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1393,9 +1500,10 @@
         <owl:inverseOf rdf:resource="https://w3id.org/narn/to/meets"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Inverse of meets. X starts exactly when Y ends.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The starting instant of the primary interval is chronologically identical to the ending instant of the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">met by</rdfs:label>
         <skos:altLabel xml:lang="en">immediately after</skos:altLabel>
+        <skos:example xml:lang="en">The interval of Húrin&apos;s captivity is met by the conclusion of the Nirnaeth Arnoediad.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1408,9 +1516,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
-        <rdfs:comment xml:lang="en">Inverse of occursBefore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A temporal relation placing the first instant chronologically subsequent to the second.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs after</rdfs:label>
         <skos:altLabel xml:lang="en">later than</skos:altLabel>
+        <skos:example xml:lang="en">The moment of Nienor&apos;s birth occurs after the moment of Lalaith&apos;s birth.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1423,9 +1532,10 @@
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/narn/to/occursSimultaneouslyTo"/>
-        <rdfs:comment xml:lang="en">Instant strictly before another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A temporal relation placing the first instant chronologically prior to the second.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs before</rdfs:label>
         <skos:altLabel xml:lang="en">earlier than</skos:altLabel>
+        <skos:example xml:lang="en">The moment of Túrin&apos;s birth occurs before the moment of Lalaith&apos;s birth.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1436,9 +1546,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/occursDuring">
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/to/Interval"/>
-        <rdfs:comment xml:lang="en">An instant falls within the extent of an interval.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The enclosure of a specific instant strictly within the temporal boundaries of an interval.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs during</rdfs:label>
         <skos:altLabel xml:lang="en">within timeframe of</skos:altLabel>
+        <skos:example xml:lang="en">The precise moment of Khîm&apos;s death occurs during the interval of Túrin&apos;s habitation at Amon Rûdh.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1452,9 +1563,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
-        <rdfs:comment xml:lang="en">Two instants at the same time.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A temporal relation linking two distinct instants that occupy the exact same chronological position.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs simultaneously to</rdfs:label>
         <skos:altLabel xml:lang="en">at same time as</skos:altLabel>
+        <skos:example xml:lang="en">Two separate observations mapping to the exact same chronological instant occur simultaneously.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1467,9 +1579,10 @@
         <owl:inverseOf rdf:resource="https://w3id.org/narn/to/overlaps"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Inverse of overlaps. Y starts before X, ends after X starts but before X ends.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The primary interval begins strictly within the duration of the secondary interval and concludes after it.</rdfs:comment>
         <rdfs:label xml:lang="en">overlapped by</rdfs:label>
         <skos:altLabel xml:lang="en">partially after</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s time at Amon Rûdh is overlapped by the preceding interval of his time among the outlaws.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1481,9 +1594,10 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">X starts before Y, ends after Y starts but before Y ends.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The primary interval begins before the secondary interval and concludes strictly within its duration.</rdfs:comment>
         <rdfs:label xml:lang="en">overlaps</rdfs:label>
         <skos:altLabel xml:lang="en">partially before</skos:altLabel>
+        <skos:example xml:lang="en">The interval of Túrin&apos;s time among the outlaws overlaps with the beginning of his time at Amon Rûdh.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1494,9 +1608,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/precededBy">
         <owl:inverseOf rdf:resource="https://w3id.org/narn/to/precedes"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">Inverse of precedes. X starts after or when Y ends.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The primary interval commences either strictly subsequent to or exactly at the conclusion of the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">preceded by</rdfs:label>
         <skos:altLabel xml:lang="en">happens after</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s journey to Doriath is temporally preceded by the span of the Nirnaeth Arnoediad.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1507,9 +1622,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/precedes">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/intervalRelation"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">X ends before or when Y starts.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The primary interval concludes either strictly prior to or exactly at the commencement of the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
         <skos:altLabel xml:lang="en">happens before</skos:altLabel>
+        <skos:example xml:lang="en">The span of the Nirnaeth Arnoediad temporally precedes Túrin&apos;s journey to Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1523,9 +1639,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">Inverse of starts. X starts when Y starts but Y ends after X ends.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Both intervals share identical starting instants while the primary interval extends strictly beyond the conclusion of the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">started by</rdfs:label>
         <skos:altLabel xml:lang="en">begun by</skos:altLabel>
+        <skos:example xml:lang="en">The overarching timeline of the Narn is started by the interval representing the birth of Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1538,9 +1655,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:comment xml:lang="en">X starts at same time as Y but ends before Y ends.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Both intervals share identical starting instants while the primary interval concludes strictly before the secondary interval.</rdfs:comment>
         <rdfs:label xml:lang="en">starts</rdfs:label>
         <skos:altLabel xml:lang="en">begins with</skos:altLabel>
+        <skos:example xml:lang="en">The interval representing the birth of Túrin starts the overarching timeline of the Narn.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1555,9 +1673,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/to/Instant"/>
-        <rdfs:comment xml:lang="en">The unique starting instant.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The absolute starting instant bounding the beginning of a temporal interval.</rdfs:comment>
         <rdfs:label xml:lang="en">starts at</rdfs:label>
         <skos:altLabel xml:lang="en">beginning point</skos:altLabel>
+        <skos:example xml:lang="en">The chronological span of the Narn starts at the moment of Túrin&apos;s birth.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1584,6 +1703,7 @@
         <rdfs:comment xml:lang="en">The date the story was published.</rdfs:comment>
         <rdfs:label xml:lang="en">published date</rdfs:label>
         <skos:altLabel xml:lang="en">date published</skos:altLabel>
+        <skos:example xml:lang="en">The Narn was published on 2007-04-17.</skos:example>
     </owl:DatatypeProperty>
     
 
@@ -1597,6 +1717,7 @@
         <rdfs:comment xml:lang="en">The ordering position of a unit within its parent.</rdfs:comment>
         <rdfs:label xml:lang="en">unit index</rdfs:label>
         <skos:altLabel xml:lang="en">sequence number</skos:altLabel>
+        <skos:example xml:lang="en">Part I has unit index 1.</skos:example>
     </owl:DatatypeProperty>
     
 
@@ -1608,9 +1729,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Instant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">The calendar date and time of an instant.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The standardized chronological date and time value of a specific temporal instant.</rdfs:comment>
         <rdfs:label xml:lang="en">has date time</rdfs:label>
         <skos:altLabel xml:lang="en">dateTime value</skos:altLabel>
+        <skos:example xml:lang="en">The instant of publication maps to a specific dateTime value in the standard calendar.</skos:example>
     </owl:DatatypeProperty>
     
 
@@ -1622,9 +1744,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/narn/to/Interval"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
-        <rdfs:comment xml:lang="en">The length of time spanned by an interval.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The absolute temporal length spanned by a defined interval.</rdfs:comment>
         <rdfs:label xml:lang="en">has duration</rdfs:label>
         <skos:altLabel xml:lang="en">time length</skos:altLabel>
+        <skos:example xml:lang="en">The interval representing Túrin&apos;s time in Doriath has a duration measured in several years.</skos:example>
     </owl:DatatypeProperty>
     
 
@@ -1655,6 +1778,7 @@
         <rdfs:comment xml:lang="en">An intentional deed. Every action has at least one performer.</rdfs:comment>
         <rdfs:label xml:lang="en">action</rdfs:label>
         <skos:altLabel xml:lang="en">deed</skos:altLabel>
+        <skos:example xml:lang="en">Túrin killing Saeros is an action performed by Túrin.</skos:example>
     </owl:Class>
     
 
@@ -1674,6 +1798,7 @@
         <rdfs:comment xml:lang="en">An aggressive action aimed at harming a target.</rdfs:comment>
         <rdfs:label xml:lang="en">attack</rdfs:label>
         <skos:altLabel xml:lang="en">assault</skos:altLabel>
+        <skos:example xml:lang="en">Túrin attacks the Orcs at Amon Rûdh using Anglachel.</skos:example>
     </owl:Class>
     
 
@@ -1698,6 +1823,7 @@
         <rdfs:comment xml:lang="en">The action of constructing a structure or settlement.</rdfs:comment>
         <rdfs:label xml:lang="en">build</rdfs:label>
         <skos:altLabel xml:lang="en">construction</skos:altLabel>
+        <skos:example xml:lang="en">The Elves built the hidden city of Gondolin in Tumladen.</skos:example>
     </owl:Class>
     
 
@@ -1716,6 +1842,7 @@
         <rdfs:comment xml:lang="en">The action of giving an authoritative order.</rdfs:comment>
         <rdfs:label xml:lang="en">command</rdfs:label>
         <skos:altLabel xml:lang="en">order</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth orders his servants to attack Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -1741,6 +1868,7 @@
         <rdfs:comment xml:lang="en">An action involving communication between characters.</rdfs:comment>
         <rdfs:label xml:lang="en">communicative action</rdfs:label>
         <skos:altLabel xml:lang="en">speech act</skos:altLabel>
+        <skos:example xml:lang="en">Turambar speaks to Túrin about his journey.</skos:example>
     </owl:Class>
     
 
@@ -1760,6 +1888,7 @@
         <rdfs:comment xml:lang="en">An action that produces or transforms something.</rdfs:comment>
         <rdfs:label xml:lang="en">creation action</rdfs:label>
         <skos:altLabel xml:lang="en">making</skos:altLabel>
+        <skos:example xml:lang="en">The smiths of Nargothrond reforge Anglachel into Gurthang.</skos:example>
     </owl:Class>
     
 
@@ -1783,6 +1912,7 @@
         <rdfs:comment xml:lang="en">The action of intentionally misleading another character.</rdfs:comment>
         <rdfs:label xml:lang="en">deceive</rdfs:label>
         <skos:altLabel xml:lang="en">deception</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung deceives and hypnotises Níniel at Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -1801,6 +1931,7 @@
         <rdfs:comment xml:lang="en">An action of protecting oneself or others from attack.</rdfs:comment>
         <rdfs:label xml:lang="en">defend</rdfs:label>
         <skos:altLabel xml:lang="en">defence</skos:altLabel>
+        <skos:example xml:lang="en">Beleg defends Túrin&apos;s camp from Orc raids.</skos:example>
     </owl:Class>
     
 
@@ -1812,6 +1943,7 @@
         <rdfs:comment xml:lang="en">The intention of getting away from danger.</rdfs:comment>
         <rdfs:label xml:lang="en">escape</rdfs:label>
         <skos:altLabel xml:lang="en">evasion</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s intention when fleeing Doriath is escape from judgement.</skos:example>
     </owl:Class>
     
 
@@ -1835,6 +1967,7 @@
         <rdfs:comment xml:lang="en">The action of running away from danger or pursuit.</rdfs:comment>
         <rdfs:label xml:lang="en">flee</rdfs:label>
         <skos:altLabel xml:lang="en">flight</skos:altLabel>
+        <skos:example xml:lang="en">Túrin flees Doriath after killing Saeros.</skos:example>
     </owl:Class>
     
 
@@ -1853,6 +1986,7 @@
         <rdfs:comment xml:lang="en">The action of creating or reshaping an object, especially a weapon.</rdfs:comment>
         <rdfs:label xml:lang="en">forge</rdfs:label>
         <skos:altLabel xml:lang="en">smithing</skos:altLabel>
+        <skos:example xml:lang="en">The reforging of Anglachel into Gurthang in Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -1878,6 +2012,7 @@
         <rdfs:comment xml:lang="en">The action of voluntarily transferring something to another.</rdfs:comment>
         <rdfs:label xml:lang="en">give</rdfs:label>
         <skos:altLabel xml:lang="en">bestowal</skos:altLabel>
+        <skos:example xml:lang="en">Beleg gives Anglachel to Túrin to rescue him.</skos:example>
     </owl:Class>
     
 
@@ -1896,6 +2031,7 @@
         <rdfs:comment xml:lang="en">The action of deliberately travelling to a destination.</rdfs:comment>
         <rdfs:label xml:lang="en">go to</rdfs:label>
         <skos:altLabel xml:lang="en">travel to</skos:altLabel>
+        <skos:example xml:lang="en">Túrin goes to Nargothrond seeking refuge.</skos:example>
     </owl:Class>
     
 
@@ -1929,6 +2065,7 @@
         <rdfs:comment xml:lang="en">The action of causing the death of another.</rdfs:comment>
         <rdfs:label xml:lang="en">kill</rdfs:label>
         <skos:altLabel xml:lang="en">slaying</skos:altLabel>
+        <skos:example xml:lang="en">Túrin kills Saeros in Doriath.</skos:example>
     </owl:Class>
     
 
@@ -1940,6 +2077,7 @@
         <rdfs:comment xml:lang="en">The intention of making another believe something false.</rdfs:comment>
         <rdfs:label xml:lang="en">misleading intention</rdfs:label>
         <skos:altLabel xml:lang="en">intent to deceive</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung&apos;s intention when hypnotising Níniel is to mislead her about her identity.</skos:example>
     </owl:Class>
     
 
@@ -1954,6 +2092,7 @@
         <rdfs:comment xml:lang="en">An action involving deliberate physical movement.</rdfs:comment>
         <rdfs:label xml:lang="en">movement action</rdfs:label>
         <skos:altLabel xml:lang="en">locomotion</skos:altLabel>
+        <skos:example xml:lang="en">Túrin travels to Nargothrond after the death of Beleg.</skos:example>
     </owl:Class>
     
 
@@ -1977,6 +2116,7 @@
         <rdfs:comment xml:lang="en">The action of disclosing previously hidden information.</rdfs:comment>
         <rdfs:label xml:lang="en">reveal</rdfs:label>
         <skos:altLabel xml:lang="en">disclosure</skos:altLabel>
+        <skos:example xml:lang="en">The truth about Níniel is revealed after the slaying of Glaurung.</skos:example>
     </owl:Class>
     
 
@@ -1989,6 +2129,7 @@
         <rdfs:comment xml:lang="en">The action of verbal communication.</rdfs:comment>
         <rdfs:label xml:lang="en">speak</rdfs:label>
         <skos:altLabel xml:lang="en">utterance</skos:altLabel>
+        <skos:example xml:lang="en">Brandir speaks the truth to Turambar about Níniel&apos;s identity.</skos:example>
     </owl:Class>
     
 
@@ -2007,6 +2148,7 @@
         <rdfs:comment xml:lang="en">The action of acquiring something, possibly by force.</rdfs:comment>
         <rdfs:label xml:lang="en">take</rdfs:label>
         <skos:altLabel xml:lang="en">seizure</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth takes Húrin captive after the Nirnaeth Arnoediad.</skos:example>
     </owl:Class>
     
 
@@ -2019,6 +2161,7 @@
         <rdfs:comment xml:lang="en">An action involving the transfer of possession.</rdfs:comment>
         <rdfs:label xml:lang="en">transfer action</rdfs:label>
         <skos:altLabel xml:lang="en">transfer</skos:altLabel>
+        <skos:example xml:lang="en">Beleg brings Anglachel to Túrin.</skos:example>
     </owl:Class>
     
 
@@ -2031,6 +2174,7 @@
         <rdfs:comment xml:lang="en">An action involving physical violence or force.</rdfs:comment>
         <rdfs:label xml:lang="en">violent action</rdfs:label>
         <skos:altLabel xml:lang="en">violent deed</skos:altLabel>
+        <skos:example xml:lang="en">The Slaying of Glaurung is a violent action performed by Turambar.</skos:example>
     </owl:Class>
     
 
@@ -2043,6 +2187,7 @@
         <rdfs:comment xml:lang="en">A large scale violent confrontation.</rdfs:comment>
         <rdfs:label xml:lang="en">battle</rdfs:label>
         <skos:altLabel xml:lang="en">armed conflict</skos:altLabel>
+        <skos:example xml:lang="en">The Nirnaeth Arnoediad is the Battle of Unnumbered Tears.</skos:example>
     </owl:Class>
     
 
@@ -2053,9 +2198,10 @@
     <owl:Class rdf:about="https://w3id.org/narn/event/Betrayal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Meeting"/>
-        <rdfs:comment xml:lang="en">An act of disloyalty or treachery.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An act of disloyalty involving betrayal of trust.</rdfs:comment>
         <rdfs:label xml:lang="en">betrayal</rdfs:label>
         <skos:altLabel xml:lang="en">treachery</skos:altLabel>
+        <skos:example xml:lang="en">Mîm betrays Túrin to the Orcs at Amon Rûdh.</skos:example>
     </owl:Class>
     
 
@@ -2080,9 +2226,10 @@
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Death"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Marriage"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Murder"/>
-        <rdfs:comment xml:lang="en">A character being born. Every birth begets at least one character.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The coming into existence of a character.</rdfs:comment>
         <rdfs:label xml:lang="en">birth</rdfs:label>
         <skos:altLabel xml:lang="en">nativity</skos:altLabel>
+        <skos:example xml:lang="en">The birth of Túrin takes place in Dor-lómin.</skos:example>
     </owl:Class>
     
 
@@ -2092,9 +2239,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Captivity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
-        <rdfs:comment xml:lang="en">A character is held prisoner.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An event in which a character is held as a prisoner.</rdfs:comment>
         <rdfs:label xml:lang="en">captivity</rdfs:label>
         <skos:altLabel xml:lang="en">imprisonment</skos:altLabel>
+        <skos:example xml:lang="en">The captivity of Húrin in Angband by Morgoth.</skos:example>
     </owl:Class>
     
 
@@ -2106,9 +2254,10 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
-        <rdfs:comment xml:lang="en">An event involving antagonism or violence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An event characterised by antagonism or violence.</rdfs:comment>
         <rdfs:label xml:lang="en">conflict event</rdfs:label>
         <skos:altLabel xml:lang="en">clash</skos:altLabel>
+        <skos:example xml:lang="en">The Nirnaeth Arnoediad is a conflict event in Beleriand.</skos:example>
     </owl:Class>
     
 
@@ -2127,6 +2276,7 @@
         <rdfs:comment xml:lang="en">A ceremony of crowning a ruler.</rdfs:comment>
         <rdfs:label xml:lang="en">coronation</rdfs:label>
         <skos:altLabel xml:lang="en">crowning ceremony</skos:altLabel>
+        <skos:example xml:lang="en">Turgon is crowned King of Gondolin.</skos:example>
     </owl:Class>
     
 
@@ -2136,9 +2286,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Council">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
-        <rdfs:comment xml:lang="en">A formal meeting for deliberation or the reach of a consensus.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A formal meeting for deliberation or the reaching of a consensus.</rdfs:comment>
         <rdfs:label xml:lang="en">council</rdfs:label>
         <skos:altLabel xml:lang="en">deliberation</skos:altLabel>
+        <skos:example xml:lang="en">A council of the Elves in Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -2152,6 +2303,7 @@
         <rdfs:comment xml:lang="en">A supernatural imprecation bringing misfortune.</rdfs:comment>
         <rdfs:label xml:lang="en">curse</rdfs:label>
         <skos:altLabel xml:lang="en">malediction</skos:altLabel>
+        <skos:example xml:lang="en">Mîm curses Andróg after the killing of Khîm.</skos:example>
     </owl:Class>
     
 
@@ -2167,9 +2319,10 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A character dying. Every death has at least one victim.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The death of a character.</rdfs:comment>
         <rdfs:label xml:lang="en">death</rdfs:label>
         <skos:altLabel xml:lang="en">demise</skos:altLabel>
+        <skos:example xml:lang="en">The death of Beleg is caused by Túrin.</skos:example>
     </owl:Class>
     
 
@@ -2182,6 +2335,7 @@
         <rdfs:comment xml:lang="en">An event where something hidden is found or revealed.</rdfs:comment>
         <rdfs:label xml:lang="en">discovery</rdfs:label>
         <skos:altLabel xml:lang="en">revelation</skos:altLabel>
+        <skos:example xml:lang="en">The truth about Níniel&apos;s identity is revealed.</skos:example>
     </owl:Class>
     
 
@@ -2200,6 +2354,7 @@
         <rdfs:comment xml:lang="en">A fight between exactly two combatants.</rdfs:comment>
         <rdfs:label xml:lang="en">duel</rdfs:label>
         <skos:altLabel xml:lang="en">single combat</skos:altLabel>
+        <skos:example xml:lang="en">The duel between Turambar and Glaurung at Cabed-en-Aras.</skos:example>
     </owl:Class>
     
 
@@ -2209,9 +2364,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Enchantment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
-        <rdfs:comment xml:lang="en">A magical spell or charm placed on a character.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A magical effect imposed on a character.</rdfs:comment>
         <rdfs:label xml:lang="en">enchantment</rdfs:label>
         <skos:altLabel xml:lang="en">spell</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung hypnotises Níniel at Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -2233,10 +2389,10 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A spatio-temporal occurrence involving participants at places.
-        Every event is a finite temporal interval.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A spatio-temporal occurrence involving participants and locations. Every event is a finite temporal interval.</rdfs:comment>
         <rdfs:label xml:lang="en">event</rdfs:label>
         <skos:altLabel xml:lang="en">occurrence</skos:altLabel>
+        <skos:example xml:lang="en">The Battle of Unnumbered Tears is an event occurring in Beleriand.</skos:example>
     </owl:Class>
     
 
@@ -2246,9 +2402,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Exile">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
-        <rdfs:comment xml:lang="en">Forced departure from homeland.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A forced departure from the homeland.</rdfs:comment>
         <rdfs:label xml:lang="en">exile</rdfs:label>
         <skos:altLabel xml:lang="en">banishment</skos:altLabel>
+        <skos:example xml:lang="en">The exile of Túrin from Doriath after the death of Saeros.</skos:example>
     </owl:Class>
     
 
@@ -2261,6 +2418,7 @@
         <rdfs:comment xml:lang="en">A large celebratory meal or banquet.</rdfs:comment>
         <rdfs:label xml:lang="en">feast</rdfs:label>
         <skos:altLabel xml:lang="en">banquet</skos:altLabel>
+        <skos:example xml:lang="en">A feast held in the halls of Menegroth.</skos:example>
     </owl:Class>
     
 
@@ -2270,9 +2428,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Flight">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
-        <rdfs:comment xml:lang="en">Characters flee from danger.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An event in which characters flee from danger.</rdfs:comment>
         <rdfs:label xml:lang="en">flight</rdfs:label>
         <skos:altLabel xml:lang="en">escape</skos:altLabel>
+        <skos:example xml:lang="en">The flight of survivors from the fall of Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -2285,6 +2444,7 @@
         <rdfs:comment xml:lang="en">A significant moment in a character&apos;s life.</rdfs:comment>
         <rdfs:label xml:lang="en">life event</rdfs:label>
         <skos:altLabel xml:lang="en">life occurrence</skos:altLabel>
+        <skos:example xml:lang="en">The birth of Túrin in Dor-lómin is a life event.</skos:example>
     </owl:Class>
     
 
@@ -2300,9 +2460,10 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Two characters getting married. Involves exactly 2 participants.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A formal union between two characters.</rdfs:comment>
         <rdfs:label xml:lang="en">marriage</rdfs:label>
         <skos:altLabel xml:lang="en">wedding</skos:altLabel>
+        <skos:example xml:lang="en">The marriage of Turambar and Níniel in Brethil.</skos:example>
     </owl:Class>
     
 
@@ -2315,6 +2476,7 @@
         <rdfs:comment xml:lang="en">An encounter or gathering of characters.</rdfs:comment>
         <rdfs:label xml:lang="en">meeting</rdfs:label>
         <skos:altLabel xml:lang="en">encounter</skos:altLabel>
+        <skos:example xml:lang="en">Túrin meets Beleg in the wild.</skos:example>
     </owl:Class>
     
 
@@ -2327,6 +2489,7 @@
         <rdfs:comment xml:lang="en">An event involving physical movement of characters between places.</rdfs:comment>
         <rdfs:label xml:lang="en">movement event</rdfs:label>
         <skos:altLabel xml:lang="en">movement</skos:altLabel>
+        <skos:example xml:lang="en">Túrin travels from Dor-lómin to Doriath.</skos:example>
     </owl:Class>
     
 
@@ -2354,9 +2517,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Suicide"/>
-        <rdfs:comment xml:lang="en">A death caused intentionally by another. Has at least one agent.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A death caused intentionally by another.</rdfs:comment>
         <rdfs:label xml:lang="en">murder</rdfs:label>
         <skos:altLabel xml:lang="en">homicide</skos:altLabel>
+        <skos:example xml:lang="en">The death of Saeros is caused by Túrin.</skos:example>
     </owl:Class>
     
 
@@ -2369,6 +2533,7 @@
         <rdfs:comment xml:lang="en">A prediction of future events, often supernatural.</rdfs:comment>
         <rdfs:label xml:lang="en">prophecy</rdfs:label>
         <skos:altLabel xml:lang="en">foretelling</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s doom: thou shalt see with my eyes.</skos:example>
     </owl:Class>
     
 
@@ -2387,6 +2552,7 @@
         <rdfs:comment xml:lang="en">A military blockade of a city or fortress.</rdfs:comment>
         <rdfs:label xml:lang="en">siege</rdfs:label>
         <skos:altLabel xml:lang="en">blockade</skos:altLabel>
+        <skos:example xml:lang="en">The siege and sack of Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -2399,6 +2565,7 @@
         <rdfs:comment xml:lang="en">An event involving social interaction between characters.</rdfs:comment>
         <rdfs:label xml:lang="en">social event</rdfs:label>
         <skos:altLabel xml:lang="en">social gathering</skos:altLabel>
+        <skos:example xml:lang="en">The trial of Túrin in absence at Menegroth.</skos:example>
     </owl:Class>
     
 
@@ -2420,9 +2587,10 @@
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A death where the victim is also the agent. At most one agent.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A form of death in which the agent and the victim are identical.</rdfs:comment>
         <rdfs:label xml:lang="en">suicide</rdfs:label>
-        <skos:altLabel xml:lang="en">self-killing</skos:altLabel>
+        <skos:altLabel xml:lang="en">self-destruction</skos:altLabel>
+        <skos:example xml:lang="en">Turambar dies by falling on his own sword Gurthang.</skos:example>
     </owl:Class>
     
 
@@ -2462,6 +2630,7 @@
         <rdfs:comment xml:lang="en">A journey. Every travel has origin and destination.</rdfs:comment>
         <rdfs:label xml:lang="en">travel</rdfs:label>
         <skos:altLabel xml:lang="en">journey</skos:altLabel>
+        <skos:example xml:lang="en">Túrin travels from Dor-lómin to Doriath.</skos:example>
     </owl:Class>
     
 
@@ -2474,6 +2643,7 @@
         <rdfs:comment xml:lang="en">A judicial examination or hearing.</rdfs:comment>
         <rdfs:label xml:lang="en">trial</rdfs:label>
         <skos:altLabel xml:lang="en">judgement</skos:altLabel>
+        <skos:example xml:lang="en">The trial of Túrin in absence, where Nellas testifies.</skos:example>
     </owl:Class>
     
 
@@ -2494,9 +2664,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/ConflictEvent"/>
-        <rdfs:comment xml:lang="en">A prolonged conflict with multiple battles.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A prolonged conflict composed of multiple battles.</rdfs:comment>
         <rdfs:label xml:lang="en">war</rdfs:label>
         <skos:altLabel xml:lang="en">prolonged conflict</skos:altLabel>
+        <skos:example xml:lang="en">The Wars of Beleriand include the Nirnaeth Arnoediad.</skos:example>
     </owl:Class>
     
 
@@ -2510,6 +2681,7 @@
         <rdfs:comment xml:lang="en">A constructed structure.</rdfs:comment>
         <rdfs:label xml:lang="en">building</rdfs:label>
         <skos:altLabel xml:lang="en">structure</skos:altLabel>
+        <skos:example xml:lang="en">The great hall of Menegroth is a building within the city.</skos:example>
     </owl:Class>
     
 
@@ -2523,6 +2695,7 @@
         <rdfs:comment xml:lang="en">A large and significant settlement.</rdfs:comment>
         <rdfs:label xml:lang="en">city</rdfs:label>
         <skos:altLabel xml:lang="en">urban area</skos:altLabel>
+        <skos:example xml:lang="en">Gondolin is a hidden city in Tumladen.</skos:example>
     </owl:Class>
     
 
@@ -2556,6 +2729,7 @@
         <rdfs:comment xml:lang="en">A major landmass.</rdfs:comment>
         <rdfs:label xml:lang="en">continent</rdfs:label>
         <skos:altLabel xml:lang="en">landmass</skos:altLabel>
+        <skos:example xml:lang="en">Endor is a continent within Arda.</skos:example>
     </owl:Class>
     
 
@@ -2569,6 +2743,7 @@
         <rdfs:comment xml:lang="en">A barren, arid area with little vegetation.</rdfs:comment>
         <rdfs:label xml:lang="en">desert</rdfs:label>
         <skos:altLabel xml:lang="en">wasteland</skos:altLabel>
+        <skos:example xml:lang="en">The Anfauglith is a desert north of Beleriand.</skos:example>
     </owl:Class>
     
 
@@ -2581,6 +2756,7 @@
         <rdfs:comment xml:lang="en">A large, dense wooded area.</rdfs:comment>
         <rdfs:label xml:lang="en">forest</rdfs:label>
         <skos:altLabel xml:lang="en">wood</skos:altLabel>
+        <skos:example xml:lang="en">Brethil is a forest where Túrin lived under the name Turambar.</skos:example>
     </owl:Class>
     
 
@@ -2593,6 +2769,7 @@
         <rdfs:comment xml:lang="en">A fortified place, typically a military stronghold.</rdfs:comment>
         <rdfs:label xml:lang="en">fortress</rdfs:label>
         <skos:altLabel xml:lang="en">stronghold</skos:altLabel>
+        <skos:example xml:lang="en">Angband is Morgoth&apos;s fortress in the Iron Mountains.</skos:example>
     </owl:Class>
     
 
@@ -2605,6 +2782,7 @@
         <rdfs:comment xml:lang="en">A naturally raised area of land, smaller than a mountain.</rdfs:comment>
         <rdfs:label xml:lang="en">hill</rdfs:label>
         <skos:altLabel xml:lang="en">hillock</skos:altLabel>
+        <skos:example xml:lang="en">Amon Rûdh is a hill where Túrin hid with Mîm.</skos:example>
     </owl:Class>
     
 
@@ -2617,6 +2795,7 @@
         <rdfs:comment xml:lang="en">A large body of water surrounded by land.</rdfs:comment>
         <rdfs:label xml:lang="en">lake</rdfs:label>
         <skos:altLabel xml:lang="en">body of water</skos:altLabel>
+        <skos:example xml:lang="en">There is a lake near the hidden city of Gondolin.</skos:example>
     </owl:Class>
     
 
@@ -2629,6 +2808,7 @@
         <rdfs:comment xml:lang="en">A place that is primarily defined by its land territory.</rdfs:comment>
         <rdfs:label xml:lang="en">land area</rdfs:label>
         <skos:altLabel xml:lang="en">land</skos:altLabel>
+        <skos:example xml:lang="en">Dor-lómin is a land area in Hithlum.</skos:example>
     </owl:Class>
     
 
@@ -2643,6 +2823,7 @@
         <rdfs:comment xml:lang="en">A large natural elevation of the earth&apos;s surface.</rdfs:comment>
         <rdfs:label xml:lang="en">mountain</rdfs:label>
         <skos:altLabel xml:lang="en">peak</skos:altLabel>
+        <skos:example xml:lang="en">Ered Wethrin borders Hithlum.</skos:example>
     </owl:Class>
     
 
@@ -2656,6 +2837,7 @@
         <rdfs:comment xml:lang="en">A place defined by natural geographic features rather than habitation.</rdfs:comment>
         <rdfs:label xml:lang="en">natural area</rdfs:label>
         <skos:altLabel xml:lang="en">natural feature</skos:altLabel>
+        <skos:example xml:lang="en">Brethil is a natural area east of Doriath.</skos:example>
     </owl:Class>
     
 
@@ -2667,6 +2849,7 @@
         <rdfs:comment xml:lang="en">A named location that has geographic or spatial significance in a story.</rdfs:comment>
         <rdfs:label xml:lang="en">place</rdfs:label>
         <skos:altLabel xml:lang="en">location</skos:altLabel>
+        <skos:example xml:lang="en">Beleriand is a place in Middle-earth.</skos:example>
     </owl:Class>
     
 
@@ -2694,6 +2877,7 @@
         <rdfs:comment xml:lang="en">A territory under the rule of a king or sovereign authority.</rdfs:comment>
         <rdfs:label xml:lang="en">realm</rdfs:label>
         <skos:altLabel xml:lang="en">kingdom</skos:altLabel>
+        <skos:example xml:lang="en">Doriath is a realm ruled by King Thingol, with Menegroth as its capital.</skos:example>
     </owl:Class>
     
 
@@ -2706,6 +2890,7 @@
         <rdfs:comment xml:lang="en">A large geographic area, typically contains multiple subplaces.</rdfs:comment>
         <rdfs:label xml:lang="en">region</rdfs:label>
         <skos:altLabel xml:lang="en">area</skos:altLabel>
+        <skos:example xml:lang="en">Beleriand is a region containing Doriath, Hithlum, and Brethil.</skos:example>
     </owl:Class>
     
 
@@ -2718,6 +2903,7 @@
         <rdfs:comment xml:lang="en">A large natural stream of water.</rdfs:comment>
         <rdfs:label xml:lang="en">river</rdfs:label>
         <skos:altLabel xml:lang="en">waterway</skos:altLabel>
+        <skos:example xml:lang="en">The river Narog flows near Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -2730,6 +2916,7 @@
         <rdfs:comment xml:lang="en">A large body of salt water.</rdfs:comment>
         <rdfs:label xml:lang="en">sea</rdfs:label>
         <skos:altLabel xml:lang="en">ocean</skos:altLabel>
+        <skos:example xml:lang="en">Belegaer is the Great Sea west of Middle-earth.</skos:example>
     </owl:Class>
     
 
@@ -2748,6 +2935,7 @@
         <rdfs:comment xml:lang="en">A place where people live permanently.</rdfs:comment>
         <rdfs:label xml:lang="en">settlement</rdfs:label>
         <skos:altLabel xml:lang="en">inhabited place</skos:altLabel>
+        <skos:example xml:lang="en">Menegroth is a settlement within Doriath.</skos:example>
     </owl:Class>
     
 
@@ -2761,6 +2949,7 @@
         <rdfs:comment xml:lang="en">A settlement larger than a village but smaller than a city.</rdfs:comment>
         <rdfs:label xml:lang="en">town</rdfs:label>
         <skos:altLabel xml:lang="en">township</skos:altLabel>
+        <skos:example xml:lang="en">There is a town along the road between Doriath and Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -2780,6 +2969,7 @@
         <rdfs:comment xml:lang="en">A city built underground, within caves or excavated halls.</rdfs:comment>
         <rdfs:label xml:lang="en">underground city</rdfs:label>
         <skos:altLabel xml:lang="en">subterranean city</skos:altLabel>
+        <skos:example xml:lang="en">Menegroth is an underground city, the capital of Doriath.</skos:example>
     </owl:Class>
     
 
@@ -2792,6 +2982,7 @@
         <rdfs:comment xml:lang="en">A place located beneath the surface of the earth.</rdfs:comment>
         <rdfs:label xml:lang="en">underground place</rdfs:label>
         <skos:altLabel xml:lang="en">subterranean place</skos:altLabel>
+        <skos:example xml:lang="en">Menegroth and Nargothrond are underground places.</skos:example>
     </owl:Class>
     
 
@@ -2804,6 +2995,7 @@
         <rdfs:comment xml:lang="en">A low area of land between hills or mountains.</rdfs:comment>
         <rdfs:label xml:lang="en">valley</rdfs:label>
         <skos:altLabel xml:lang="en">vale</skos:altLabel>
+        <skos:example xml:lang="en">Tumladen is the valley where Gondolin was built.</skos:example>
     </owl:Class>
     
 
@@ -2816,6 +3008,7 @@
         <rdfs:comment xml:lang="en">A small settlement, typically in a rural area.</rdfs:comment>
         <rdfs:label xml:lang="en">village</rdfs:label>
         <skos:altLabel xml:lang="en">hamlet</skos:altLabel>
+        <skos:example xml:lang="en">There is a small village in Brethil where woodsmen live.</skos:example>
     </owl:Class>
     
 
@@ -2828,6 +3021,7 @@
         <rdfs:comment xml:lang="en">An uncultivated, uninhabited region.</rdfs:comment>
         <rdfs:label xml:lang="en">wild area</rdfs:label>
         <skos:altLabel xml:lang="en">wilderness</skos:altLabel>
+        <skos:example xml:lang="en">The wild lands between Doriath and Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -2840,6 +3034,7 @@
         <rdfs:comment xml:lang="en">A land area predominantly covered by trees.</rdfs:comment>
         <rdfs:label xml:lang="en">wooded area</rdfs:label>
         <skos:altLabel xml:lang="en">woodland</skos:altLabel>
+        <skos:example xml:lang="en">Brethil is a wooded area in Beleriand.</skos:example>
     </owl:Class>
     
 
@@ -2852,6 +3047,7 @@
         <rdfs:comment xml:lang="en">A major division in drama or narrative, often five in classical structure.</rdfs:comment>
         <rdfs:label xml:lang="en">act</rdfs:label>
         <skos:altLabel xml:lang="en">story act</skos:altLabel>
+        <skos:example xml:lang="en">Act III of a five act tragedy.</skos:example>
     </owl:Class>
     
 
@@ -2872,9 +3068,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/plot/PlotDevice"/>
-        <rdfs:comment xml:lang="en">The point in a play, novel, etc., in which a principal character recognizes or discovers another character&apos;s true identity or the true nature of their own circumstances.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A moment where a character makes a critical discovery about an identity or situation.</rdfs:comment>
         <rdfs:label xml:lang="en">anagnorisis</rdfs:label>
         <skos:altLabel xml:lang="en">moment of recognition</skos:altLabel>
+        <skos:example xml:lang="en">Níniel discovers she is Nienor, sister of Túrin.</skos:example>
     </owl:Class>
     
 
@@ -2888,6 +3085,7 @@
         <rdfs:comment xml:lang="en">The character who opposes the protagonist.</rdfs:comment>
         <rdfs:label xml:lang="en">antagonist</rdfs:label>
         <skos:altLabel xml:lang="en">villain</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung is the antagonist who opposes Túrin.</skos:example>
     </owl:Class>
     
 
@@ -2900,6 +3098,7 @@
         <rdfs:comment xml:lang="en">A numbered or titled section of a narrative.</rdfs:comment>
         <rdfs:label xml:lang="en">chapter</rdfs:label>
         <skos:altLabel xml:lang="en">story chapter</skos:altLabel>
+        <skos:example xml:lang="en">Túrin in Dor-lómin is a chapter in the Narn.</skos:example>
     </owl:Class>
     
 
@@ -2911,6 +3110,7 @@
         <rdfs:comment xml:lang="en">The narrative function a character plays in the story.</rdfs:comment>
         <rdfs:label xml:lang="en">character role</rdfs:label>
         <skos:altLabel xml:lang="en">story role</skos:altLabel>
+        <skos:example xml:lang="en">Túrin has the role of Protagonist and Tragic Hero.</skos:example>
     </owl:Class>
     
 
@@ -2925,6 +3125,7 @@
         <rdfs:comment xml:lang="en">The turning point; the moment of highest tension.</rdfs:comment>
         <rdfs:label xml:lang="en">climax</rdfs:label>
         <skos:altLabel xml:lang="en">turning point</skos:altLabel>
+        <skos:example xml:lang="en">The slaying of Glaurung and the truth about Níniel revealed.</skos:example>
     </owl:Class>
     
 
@@ -2937,6 +3138,7 @@
         <rdfs:comment xml:lang="en">A struggle between opposing forces driving the plot.</rdfs:comment>
         <rdfs:label xml:lang="en">conflict</rdfs:label>
         <skos:altLabel xml:lang="en">tension</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse against Húrin&apos;s family is a central conflict.</skos:example>
     </owl:Class>
     
 
@@ -2946,9 +3148,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/plot/Denouement">
         <owl:equivalentClass rdf:resource="https://w3id.org/narn/plot/Resolution"/>
-        <rdfs:comment xml:lang="en">Equivalent to resolution. The unravelling of the plot.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The final unravelling of the plot.</rdfs:comment>
         <rdfs:label xml:lang="en">denouement</rdfs:label>
         <skos:altLabel xml:lang="en">final outcome</skos:altLabel>
+        <skos:example xml:lang="en">Both Níniel and Turambar perish in the denouement of the Narn.</skos:example>
     </owl:Class>
     
 
@@ -2961,6 +3164,7 @@
         <rdfs:comment xml:lang="en">When the audience knows more than the characters.</rdfs:comment>
         <rdfs:label xml:lang="en">dramatic irony</rdfs:label>
         <skos:altLabel xml:lang="en">audience knowledge gap</skos:altLabel>
+        <skos:example xml:lang="en">The audience knows Túrin&apos;s identity while others do not.</skos:example>
     </owl:Class>
     
 
@@ -2973,6 +3177,7 @@
         <rdfs:comment xml:lang="en">A long narrative involving heroic deeds and grand scale.</rdfs:comment>
         <rdfs:label xml:lang="en">epic</rdfs:label>
         <skos:altLabel xml:lang="en">epic genre</skos:altLabel>
+        <skos:example xml:lang="en">The Narn is an epic spanning wars, exiles, and dragon slaying.</skos:example>
     </owl:Class>
     
 
@@ -2986,6 +3191,7 @@
         <rdfs:comment xml:lang="en">Introduction of setting, characters, and background.</rdfs:comment>
         <rdfs:label xml:lang="en">exposition</rdfs:label>
         <skos:altLabel xml:lang="en">setup</skos:altLabel>
+        <skos:example xml:lang="en">Húrin&apos;s family and the curse of Morgoth.</skos:example>
     </owl:Class>
     
 
@@ -3002,9 +3208,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/plot/InternalConflict"/>
-        <rdfs:comment xml:lang="en">Conflict between a character and an external force (antagonist, nature, society).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Conflict between a character and an external force such as an antagonist, nature, or society.</rdfs:comment>
         <rdfs:label xml:lang="en">external conflict</rdfs:label>
         <skos:altLabel xml:lang="en">outer struggle</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse against Húrin&apos;s family involves Morgoth and Húrin.</skos:example>
     </owl:Class>
     
 
@@ -3018,6 +3225,7 @@
         <rdfs:comment xml:lang="en">Events after the climax leading to the resolution.</rdfs:comment>
         <rdfs:label xml:lang="en">falling action</rdfs:label>
         <skos:altLabel xml:lang="en">unwinding</skos:altLabel>
+        <skos:example xml:lang="en">The aftermath of the revelation and the deaths that follow.</skos:example>
     </owl:Class>
     
 
@@ -3030,6 +3238,7 @@
         <rdfs:comment xml:lang="en">A story with magical or supernatural elements.</rdfs:comment>
         <rdfs:label xml:lang="en">fantasy</rdfs:label>
         <skos:altLabel xml:lang="en">fantasy genre</skos:altLabel>
+        <skos:example xml:lang="en">The Narn is a fantasy with dragons, curses, and enchantments.</skos:example>
     </owl:Class>
     
 
@@ -3042,6 +3251,7 @@
         <rdfs:comment xml:lang="en">A scene set in a time earlier than the main story.</rdfs:comment>
         <rdfs:label xml:lang="en">flashback</rdfs:label>
         <skos:altLabel xml:lang="en">retrospection</skos:altLabel>
+        <skos:example xml:lang="en">Húrin&apos;s memories of his family before the war.</skos:example>
     </owl:Class>
     
 
@@ -3060,6 +3270,7 @@
         <rdfs:comment xml:lang="en">Hints or clues about future events in the story.</rdfs:comment>
         <rdfs:label xml:lang="en">foreshadowing</rdfs:label>
         <skos:altLabel xml:lang="en">hint of future events</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s curse foreshadows all the tragedies that befall Húrin&apos;s children.</skos:example>
     </owl:Class>
     
 
@@ -3071,6 +3282,7 @@
         <rdfs:comment xml:lang="en">A category of narrative with shared conventions.</rdfs:comment>
         <rdfs:label xml:lang="en">genre</rdfs:label>
         <skos:altLabel xml:lang="en">literary genre</skos:altLabel>
+        <skos:example xml:lang="en">The Narn fits into genres like Tragedy and Epic.</skos:example>
     </owl:Class>
     
 
@@ -3084,6 +3296,7 @@
         <rdfs:comment xml:lang="en">The event that sets the main conflict in motion.</rdfs:comment>
         <rdfs:label xml:lang="en">inciting incident</rdfs:label>
         <skos:altLabel xml:lang="en">catalyst</skos:altLabel>
+        <skos:example xml:lang="en">Túrin is sent to Doriath, setting his wanderings in motion.</skos:example>
     </owl:Class>
     
 
@@ -3099,9 +3312,10 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Conflict within a character (e.g. moral dilemma, fear).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Conflict within a character such as a moral dilemma or fear.</rdfs:comment>
         <rdfs:label xml:lang="en">internal conflict</rdfs:label>
         <skos:altLabel xml:lang="en">inner struggle</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s struggle against fate and his own pride.</skos:example>
     </owl:Class>
     
 
@@ -3114,6 +3328,7 @@
         <rdfs:comment xml:lang="en">An object or goal that motivates the plot but has no intrinsic importance.</rdfs:comment>
         <rdfs:label xml:lang="en">MacGuffin</rdfs:label>
         <skos:altLabel xml:lang="en">plot motivator</skos:altLabel>
+        <skos:example xml:lang="en">The Dragon-helm marks Túrin&apos;s identity wherever he goes.</skos:example>
     </owl:Class>
     
 
@@ -3126,6 +3341,7 @@
         <rdfs:comment xml:lang="en">A character who guides or teaches the protagonist.</rdfs:comment>
         <rdfs:label xml:lang="en">mentor</rdfs:label>
         <skos:altLabel xml:lang="en">guide figure</skos:altLabel>
+        <skos:example xml:lang="en">Beleg serves as mentor to the young Túrin.</skos:example>
     </owl:Class>
     
 
@@ -3138,6 +3354,7 @@
         <rdfs:comment xml:lang="en">A stage in the narrative arc.</rdfs:comment>
         <rdfs:label xml:lang="en">narrative element</rdfs:label>
         <skos:altLabel xml:lang="en">story element</skos:altLabel>
+        <skos:example xml:lang="en">The Climax of the Narn is a narrative element.</skos:example>
     </owl:Class>
     
 
@@ -3155,6 +3372,7 @@
         <rdfs:comment xml:lang="en">A structural division of a story.</rdfs:comment>
         <rdfs:label xml:lang="en">narrative unit</rdfs:label>
         <skos:altLabel xml:lang="en">story division</skos:altLabel>
+        <skos:example xml:lang="en">Part I: The Childhood of Túrin is a narrative unit.</skos:example>
     </owl:Class>
     
 
@@ -3173,6 +3391,7 @@
         <rdfs:comment xml:lang="en">A major division of a story containing chapters.</rdfs:comment>
         <rdfs:label xml:lang="en">part</rdfs:label>
         <skos:altLabel xml:lang="en">story part</skos:altLabel>
+        <skos:example xml:lang="en">Part III: Túrin in Nargothrond and Brethil is a major story part.</skos:example>
     </owl:Class>
     
 
@@ -3185,6 +3404,7 @@
         <rdfs:comment xml:lang="en">A sudden reversal of fortune or change in circumstances.</rdfs:comment>
         <rdfs:label xml:lang="en">peripeteia</rdfs:label>
         <skos:altLabel xml:lang="en">reversal of fortune</skos:altLabel>
+        <skos:example xml:lang="en">Turambar&apos;s triumph over Glaurung turns to ruin when the truth is revealed.</skos:example>
     </owl:Class>
     
 
@@ -3196,6 +3416,7 @@
         <rdfs:comment xml:lang="en">A technique used to advance or structure the plot.</rdfs:comment>
         <rdfs:label xml:lang="en">plot device</rdfs:label>
         <skos:altLabel xml:lang="en">narrative device</skos:altLabel>
+        <skos:example xml:lang="en">Dramatic irony is a plot device used throughout the Narn.</skos:example>
     </owl:Class>
     
 
@@ -3208,6 +3429,7 @@
         <rdfs:comment xml:lang="en">An unexpected revelation that changes the story&apos;s direction.</rdfs:comment>
         <rdfs:label xml:lang="en">plot twist</rdfs:label>
         <skos:altLabel xml:lang="en">unexpected turn</skos:altLabel>
+        <skos:example xml:lang="en">Níniel&apos;s true identity as Nienor, sister of Túrin.</skos:example>
     </owl:Class>
     
 
@@ -3220,6 +3442,7 @@
         <rdfs:comment xml:lang="en">The main character; the one driving the action.</rdfs:comment>
         <rdfs:label xml:lang="en">protagonist</rdfs:label>
         <skos:altLabel xml:lang="en">main character</skos:altLabel>
+        <skos:example xml:lang="en">Túrin is the protagonist of the Narn.</skos:example>
     </owl:Class>
     
 
@@ -3232,6 +3455,7 @@
         <rdfs:comment xml:lang="en">The outcome; how the conflict is resolved.</rdfs:comment>
         <rdfs:label xml:lang="en">resolution</rdfs:label>
         <skos:altLabel xml:lang="en">conclusion</skos:altLabel>
+        <skos:example xml:lang="en">The deaths of Níniel and Turambar resolve the Narn.</skos:example>
     </owl:Class>
     
 
@@ -3244,6 +3468,7 @@
         <rdfs:comment xml:lang="en">Series of events building tension toward the climax.</rdfs:comment>
         <rdfs:label xml:lang="en">rising action</rdfs:label>
         <skos:altLabel xml:lang="en">complication</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s wanderings and tragedies such as the death of his father, his exile, and battles.</skos:example>
     </owl:Class>
     
 
@@ -3262,6 +3487,7 @@
         <rdfs:comment xml:lang="en">The smallest narrative unit; a continuous action in one setting.</rdfs:comment>
         <rdfs:label xml:lang="en">scene</rdfs:label>
         <skos:altLabel xml:lang="en">story scene</skos:altLabel>
+        <skos:example xml:lang="en">The scene where Túrin accidentally kills Beleg.</skos:example>
     </owl:Class>
     
 
@@ -3291,6 +3517,7 @@
         <rdfs:comment xml:lang="en">A complete narrative work.</rdfs:comment>
         <rdfs:label xml:lang="en">story</rdfs:label>
         <skos:altLabel xml:lang="en">narrative</skos:altLabel>
+        <skos:example xml:lang="en">The Narn i Chîn Húrin is a story by J.R.R. Tolkien.</skos:example>
     </owl:Class>
     
 
@@ -3303,6 +3530,7 @@
         <rdfs:comment xml:lang="en">A story where the protagonist suffers a downfall.</rdfs:comment>
         <rdfs:label xml:lang="en">tragedy</rdfs:label>
         <skos:altLabel xml:lang="en">tragic genre</skos:altLabel>
+        <skos:example xml:lang="en">The Narn is a tragedy: Túrin and Nienor both perish.</skos:example>
     </owl:Class>
     
 
@@ -3326,6 +3554,7 @@
         <rdfs:comment xml:lang="en">A protagonist whose flaw leads to their downfall.</rdfs:comment>
         <rdfs:label xml:lang="en">tragic hero</rdfs:label>
         <skos:altLabel xml:lang="en">tragic protagonist</skos:altLabel>
+        <skos:example xml:lang="en">Túrin is a tragic hero whose pride leads to his downfall.</skos:example>
     </owl:Class>
     
 
@@ -3336,9 +3565,10 @@
     <owl:Class rdf:about="https://w3id.org/narn/social/Ally">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/social/SocialRole"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/social/Outlaw"/>
-        <rdfs:comment xml:lang="en">One allied with others</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents an individual united with others in a formal or informal alliance.</rdfs:comment>
         <rdfs:label xml:lang="en">ally</rdfs:label>
         <skos:altLabel xml:lang="en">companion</skos:altLabel>
+        <skos:example xml:lang="en">Beleg stands as a steadfast ally to Túrin.</skos:example>
     </owl:Class>
     
 
@@ -3354,9 +3584,10 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The leader of a people or tribe.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes the principal leader or head of a specific people or tribal group.</rdfs:comment>
         <rdfs:label xml:lang="en">chieftain</rdfs:label>
         <skos:altLabel xml:lang="en">chief</skos:altLabel>
+        <skos:example xml:lang="en">Brandir acts as the chieftain leading the people of Brethil.</skos:example>
     </owl:Class>
     
 
@@ -3374,9 +3605,10 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">Enumerated class: {positive, negative, ambivalent}.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines a classification of emotional sentiments comprising positive negative or ambivalent states.</rdfs:comment>
         <rdfs:label xml:lang="en">emotional valence</rdfs:label>
         <skos:altLabel xml:lang="en">sentiment type</skos:altLabel>
+        <skos:example xml:lang="en">Húrin possesses a positive valence whereas Glaurung possesses a negative valence.</skos:example>
     </owl:Class>
     
 
@@ -3399,9 +3631,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/social/Servant"/>
-        <rdfs:comment xml:lang="en">A ruler of a realm or kingdom.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Designates the supreme sovereign or monarch of a defined realm or kingdom.</rdfs:comment>
         <rdfs:label xml:lang="en">king</rdfs:label>
         <skos:altLabel xml:lang="en">monarch</skos:altLabel>
+        <skos:example xml:lang="en">Thingol serves as the King governing the realm of Doriath.</skos:example>
     </owl:Class>
     
 
@@ -3418,9 +3651,10 @@
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">A leader is either a King or a Chieftain.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A general classification encompassing sovereign figures such as a King or a Chieftain.</rdfs:comment>
         <rdfs:label xml:lang="en">leader</rdfs:label>
         <skos:altLabel xml:lang="en">ruler</skos:altLabel>
+        <skos:example xml:lang="en">Figures such as King Thingol and Chieftain Brandir act as leaders.</skos:example>
     </owl:Class>
     
 
@@ -3430,9 +3664,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/social/MilitaryRole">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/social/SocialRole"/>
-        <rdfs:comment xml:lang="en">A social role related to military or combat functions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A social role structurally related to military leadership or combat functions.</rdfs:comment>
         <rdfs:label xml:lang="en">military role</rdfs:label>
         <skos:altLabel xml:lang="en">military position</skos:altLabel>
+        <skos:example xml:lang="en">Serving as a captain or general in the armies of Beleriand represents a military role.</skos:example>
     </owl:Class>
     
 
@@ -3446,9 +3681,10 @@
                 <owl:complementOf rdf:resource="https://w3id.org/narn/social/Leader"/>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">Anyone who is not a Leader.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Categorizes individuals who hold no sovereign or primary leadership authority.</rdfs:comment>
         <rdfs:label xml:lang="en">non-leader</rdfs:label>
         <skos:altLabel xml:lang="en">non-ruler</skos:altLabel>
+        <skos:example xml:lang="en">A servant like Sador is classified as a non-leader.</skos:example>
     </owl:Class>
     
 
@@ -3464,9 +3700,10 @@
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A person who lives outside the law.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Classifies an individual existing outside the protection and constraints of organized legal structures.</rdfs:comment>
         <rdfs:label xml:lang="en">outlaw</rdfs:label>
         <skos:altLabel xml:lang="en">fugitive</skos:altLabel>
+        <skos:example xml:lang="en">Forweg and Andróg operate as outlaws in the wild lands.</skos:example>
     </owl:Class>
     
 
@@ -3476,9 +3713,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/social/PoliticalRole">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/social/SocialRole"/>
-        <rdfs:comment xml:lang="en">A social role involving governance or political authority.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A specific social role involving governance or formal political authority.</rdfs:comment>
         <rdfs:label xml:lang="en">political role</rdfs:label>
         <skos:altLabel xml:lang="en">political position</skos:altLabel>
+        <skos:example xml:lang="en">The positions of King and Chieftain serve as political roles.</skos:example>
     </owl:Class>
     
 
@@ -3493,9 +3731,10 @@
                 <owl:hasValue rdf:resource="https://w3id.org/narn/social/positive"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">A relation with positive emotional valence (owl:hasValue construct).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Denotes a relational bond characterized by a strictly positive emotional valence.</rdfs:comment>
         <rdfs:label xml:lang="en">positive relation</rdfs:label>
         <skos:altLabel xml:lang="en">positive bond</skos:altLabel>
+        <skos:example xml:lang="en">Húrin maintains a positive relation due to his affirmative emotional valence.</skos:example>
     </owl:Class>
     
 
@@ -3515,9 +3754,10 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">A servant who serves a king.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Designates a servant specifically sworn to the service of a royal monarch.</rdfs:comment>
         <rdfs:label xml:lang="en">royal servant</rdfs:label>
         <skos:altLabel xml:lang="en">royal attendant</skos:altLabel>
+        <skos:example xml:lang="en">Beleg qualifies as a royal servant by virtue of serving King Thingol.</skos:example>
     </owl:Class>
     
 
@@ -3538,9 +3778,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/social/SocialRole"/>
-        <rdfs:comment xml:lang="en">One who serves another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies an individual bound to the service and assistance of another figure.</rdfs:comment>
         <rdfs:label xml:lang="en">servant</rdfs:label>
         <skos:altLabel xml:lang="en">attendant</skos:altLabel>
+        <skos:example xml:lang="en">Sador operates as a servant in the household of Húrin.</skos:example>
     </owl:Class>
     
 
@@ -3549,9 +3790,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/narn/social/SocialRole">
-        <rdfs:comment xml:lang="en">A role that a character plays in a social context.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A defined structural position that a character occupies within a social context.</rdfs:comment>
         <rdfs:label xml:lang="en">social role</rdfs:label>
         <skos:altLabel xml:lang="en">role</skos:altLabel>
+        <skos:example xml:lang="en">Thingol occupies the social role of a King.</skos:example>
     </owl:Class>
     
 
@@ -3566,9 +3808,10 @@
                 <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">A character who committed suicide.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies a narrative figure who intentionally caused their own death.</rdfs:comment>
         <rdfs:label xml:lang="en">suicidal character</rdfs:label>
         <skos:altLabel xml:lang="en">self slain character</skos:altLabel>
+        <skos:example xml:lang="en">Both Túrin and Níniel are categorized as suicidal characters.</skos:example>
     </owl:Class>
     
 
@@ -3584,9 +3827,10 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An interval with a defined ending instant.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An interval bounded by a distinct ending instant but lacking a defined starting point.</rdfs:comment>
         <rdfs:label xml:lang="en">ending interval</rdfs:label>
         <skos:altLabel xml:lang="en">ending point</skos:altLabel>
+        <skos:example xml:lang="en">A historical epoch stretching back indefinitely but concluding at a specific catastrophe represents an ending interval.</skos:example>
     </owl:Class>
     
 
@@ -3610,9 +3854,10 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/InfiniteInterval"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/to/FiniteInterval"/>
-        <rdfs:comment xml:lang="en">An interval extending infinitely in both directions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A temporally unbounded interval extending infinitely into both the past and the future.</rdfs:comment>
         <rdfs:label xml:lang="en">eternal interval</rdfs:label>
         <skos:altLabel xml:lang="en">everlasting interval</skos:altLabel>
+        <skos:example xml:lang="en">The continuous existence of the universe Eä serves as an eternal interval.</skos:example>
     </owl:Class>
     
 
@@ -3660,9 +3905,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/to/InfiniteInterval"/>
-        <rdfs:comment xml:lang="en">An interval with both a starting and ending instant.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A bounded temporal interval defined by both a distinct starting instant and a distinct ending instant.</rdfs:comment>
         <rdfs:label xml:lang="en">finite interval</rdfs:label>
         <skos:altLabel xml:lang="en">bounded interval</skos:altLabel>
+        <skos:example xml:lang="en">The Battle of Unnumbered Tears constitutes a finite interval possessing defined chronological boundaries.</skos:example>
     </owl:Class>
     
 
@@ -3672,9 +3918,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/to/InfiniteInterval">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/Interval"/>
-        <rdfs:comment xml:lang="en">An interval extending infinitely in at least one direction.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A temporal interval extending infinitely in at least one direction.</rdfs:comment>
         <rdfs:label xml:lang="en">infinite interval</rdfs:label>
         <skos:altLabel xml:lang="en">unbounded interval</skos:altLabel>
+        <skos:example xml:lang="en">The lifespan of an immortal Elf represents an infinite interval extending continuously into the future.</skos:example>
     </owl:Class>
     
 
@@ -3685,9 +3932,10 @@
     <owl:Class rdf:about="https://w3id.org/narn/to/Instant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/to/TemporalEntity"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/to/Interval"/>
-        <rdfs:comment xml:lang="en">A single point in time with zero duration.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A temporal entity representing a single point in time with a duration of strictly zero.</rdfs:comment>
         <rdfs:label xml:lang="en">instant</rdfs:label>
         <skos:altLabel xml:lang="en">time point</skos:altLabel>
+        <skos:example xml:lang="en">The precise moment of Túrin&apos;s birth constitutes an instant.</skos:example>
     </owl:Class>
     
 
@@ -3703,9 +3951,10 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A continuous extent of time with nonzero duration.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A continuous temporal entity characterized by a strictly positive duration.</rdfs:comment>
         <rdfs:label xml:lang="en">interval</rdfs:label>
         <skos:altLabel xml:lang="en">time span</skos:altLabel>
+        <skos:example xml:lang="en">The complete timeline of the Narn represents a temporal interval.</skos:example>
     </owl:Class>
     
 
@@ -3732,9 +3981,10 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/narn/to/Instant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An interval with a defined starting instant.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An interval bounded by a distinct starting instant but lacking a defined ending point.</rdfs:comment>
         <rdfs:label xml:lang="en">starting interval</rdfs:label>
         <skos:altLabel xml:lang="en">begins with</skos:altLabel>
+        <skos:example xml:lang="en">The life of an Elf exemplifies a starting interval since it begins at birth but possesses no natural conclusion.</skos:example>
     </owl:Class>
     
 
@@ -3743,9 +3993,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/narn/to/TemporalEntity">
-        <rdfs:comment xml:lang="en">A thing that exists in time.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An entity existing within a specific temporal dimension.</rdfs:comment>
         <rdfs:label xml:lang="en">temporal entity</rdfs:label>
         <skos:altLabel xml:lang="en">time entity</skos:altLabel>
+        <skos:example xml:lang="en">The moment of Túrin&apos;s birth and the span of his life represent temporal entities.</skos:example>
     </owl:Class>
     
 
@@ -3766,7 +4017,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/narn/social/ambivalent">
-        <rdfs:comment xml:lang="en">An ambivalent or mixed emotional valence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a mixed or unresolved emotional state.</rdfs:comment>
         <rdfs:label xml:lang="en">ambivalent</rdfs:label>
         <skos:altLabel xml:lang="en">mixed sentiment</skos:altLabel>
     </owl:NamedIndividual>
@@ -3777,7 +4028,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/narn/social/negative">
-        <rdfs:comment xml:lang="en">A negative emotional valence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a destructive or hostile emotional state.</rdfs:comment>
         <rdfs:label xml:lang="en">negative</rdfs:label>
         <skos:altLabel xml:lang="en">negative sentiment</skos:altLabel>
     </owl:NamedIndividual>
@@ -3788,7 +4039,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/narn/social/positive">
-        <rdfs:comment xml:lang="en">A positive emotional valence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a constructive and affirmative emotional state.</rdfs:comment>
         <rdfs:label xml:lang="en">positive</rdfs:label>
         <skos:altLabel xml:lang="en">positive sentiment</skos:altLabel>
     </owl:NamedIndividual>

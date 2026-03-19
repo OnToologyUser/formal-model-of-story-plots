@@ -41,8 +41,14 @@ This section provides details for each class and property defined by RCC Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/narn/rcc/DC</p>
       <div class="comment">
-         <span class="markdown">Two regions share no points at all.</span>
+         <span class="markdown">Describes a spatial relation where two regions are strictly disjoint and share no spatial points.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Angband and Doriath are disconnected since they share no spatial regions.</pre>
+         </dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -64,8 +70,14 @@ This section provides details for each class and property defined by RCC Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/narn/rcc/EQ</p>
       <div class="comment">
-         <span class="markdown">Same spatial extent. Equivalence relation.</span>
+         <span class="markdown">Represents spatial equivalence where two distinct entities occupy the exact identical spatial extent.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The Thousand Caves and Menegroth are spatially equal entities.</pre>
+         </dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -91,8 +103,14 @@ This section provides details for each class and property defined by RCC Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/narn/rcc/EC</p>
       <div class="comment">
-         <span class="markdown">Boundaries touch but interiors are disjoint.</span>
+         <span class="markdown">Denotes a relation where the boundaries of two regions intersect while their interiors remain disjoint.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Brethil is externally connected to Doriath because their boundaries touch.</pre>
+         </dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -116,8 +134,14 @@ This section provides details for each class and property defined by RCC Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/narn/rcc/NTPP</p>
       <div class="comment">
-         <span class="markdown">First region entirely inside second, boundaries do not touch.</span>
+         <span class="markdown">Specifies a relation where the primary region is strictly contained within the interior of the secondary region with no shared boundary points.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Dor-lómin is a non-tangential proper part of Hithlum as it is completely enclosed.</pre>
+         </dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -146,8 +170,14 @@ This section provides details for each class and property defined by RCC Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/narn/rcc/NTPPi</p>
       <div class="comment">
-         <span class="markdown">First region entirely contains second, boundaries do not touch.</span>
+         <span class="markdown">The inverse relation where the primary region completely and strictly contains the secondary region within its interior.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Hithlum is the non-tangential proper part inverse of Dor-lómin.</pre>
+         </dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -176,8 +206,14 @@ This section provides details for each class and property defined by RCC Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/narn/rcc/PO</p>
       <div class="comment">
-         <span class="markdown">Part of each region is inside the other but neither is contained.</span>
+         <span class="markdown">Indicates that two regions share a common interior subset without either fully subsuming the other.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The wild lands partially overlap with Brethil.</pre>
+         </dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -201,6 +237,12 @@ This section provides details for each class and property defined by RCC Ontolog
       <div class="comment">
          <span class="markdown">The most general spatial relation between two regions.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Doriath is spatially related to Brethil.</pre>
+         </dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -241,8 +283,14 @@ This section provides details for each class and property defined by RCC Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/narn/rcc/TPP</p>
       <div class="comment">
-         <span class="markdown">First region entirely inside second, boundaries touch.</span>
+         <span class="markdown">Defines a state where the primary region is entirely subsumed by the secondary region while sharing at least one boundary point.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Hithlum is a tangential proper part of Beleriand.</pre>
+         </dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -271,8 +319,14 @@ This section provides details for each class and property defined by RCC Ontolog
       <p>
          <strong>IRI:</strong> https://w3id.org/narn/rcc/TPPi</p>
       <div class="comment">
-         <span class="markdown">First region entirely contains second, boundaries touch.</span>
+         <span class="markdown">The inverse relation where the primary region completely subsumes the secondary region while sharing boundary points.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Beleriand represents the tangential proper part inverse of Hithlum.</pre>
+         </dd>
+      </dl>
       <div class="description">
          <p>
             <strong>has characteristics:

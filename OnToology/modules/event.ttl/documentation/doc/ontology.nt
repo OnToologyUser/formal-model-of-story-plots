@@ -5,9 +5,51 @@
 <https://w3id.org/narn/event/> <http://www.w3.org/2000/01/rdf-schema#label> "Event Ontology"@en .
 <https://w3id.org/narn/event/> <https://purl.org/dc/terms/created> "2026-03-15"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/event/> <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> .
-<https://w3id.org/narn/event/> <https://purl.org/dc/terms/modified> "2026-03-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/narn/event/> <https://purl.org/dc/terms/modified> "2026-03-19"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/narn/event/> <https://purl.org/vocab/vann/preferredNamespacePrefix> "evnt" .
 <https://w3id.org/narn/event/> <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/event/" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/vocab/vann/preferredNamespacePrefix
+<https://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://purl.org/vocab/vann/preferredNamespaceUri
+<https://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
 # 
 # 
 # #################################################################
@@ -24,6 +66,7 @@
 <https://w3id.org/narn/event/begets> <http://www.w3.org/2000/01/rdf-schema#comment> "The character brought into existence by a birth event."@en .
 <https://w3id.org/narn/event/begets> <http://www.w3.org/2000/01/rdf-schema#label> "begets"@en .
 <https://w3id.org/narn/event/begets> <http://www.w3.org/2004/02/skos/core#altLabel> "brings forth"@en .
+<https://w3id.org/narn/event/begets> <http://www.w3.org/2004/02/skos/core#example> "The birth of Túrin begets Túrin."@en .
 # 
 # https://w3id.org/narn/event/causes
 <https://w3id.org/narn/event/causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -36,6 +79,7 @@
 <https://w3id.org/narn/event/causes> <http://www.w3.org/2000/01/rdf-schema#comment> "This event causally leads to another event."@en .
 <https://w3id.org/narn/event/causes> <http://www.w3.org/2000/01/rdf-schema#label> "causes"@en .
 <https://w3id.org/narn/event/causes> <http://www.w3.org/2004/02/skos/core#altLabel> "leads to"@en .
+<https://w3id.org/narn/event/causes> <http://www.w3.org/2004/02/skos/core#example> "The death of Saeros causes the exile of Túrin from Doriath."@en .
 # 
 # https://w3id.org/narn/event/creates
 <https://w3id.org/narn/event/creates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -43,6 +87,7 @@
 <https://w3id.org/narn/event/creates> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity produced or created by the event."@en .
 <https://w3id.org/narn/event/creates> <http://www.w3.org/2000/01/rdf-schema#label> "creates"@en .
 <https://w3id.org/narn/event/creates> <http://www.w3.org/2004/02/skos/core#altLabel> "results in"@en .
+<https://w3id.org/narn/event/creates> <http://www.w3.org/2004/02/skos/core#example> "The reforging of Anglachel creates Gurthang."@en .
 # 
 # https://w3id.org/narn/event/hasAgent
 <https://w3id.org/narn/event/hasAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -53,6 +98,7 @@
 <https://w3id.org/narn/event/hasAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity that intentionally causes or performs the event."@en .
 <https://w3id.org/narn/event/hasAgent> <http://www.w3.org/2000/01/rdf-schema#label> "has agent"@en .
 <https://w3id.org/narn/event/hasAgent> <http://www.w3.org/2004/02/skos/core#altLabel> "done by"@en .
+<https://w3id.org/narn/event/hasAgent> <http://www.w3.org/2004/02/skos/core#example> "The death of Saeros has agent Túrin."@en .
 # 
 # https://w3id.org/narn/event/hasCause
 <https://w3id.org/narn/event/hasCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -60,16 +106,19 @@
 <https://w3id.org/narn/event/hasCause> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity involved as a contributing cause in the event."@en .
 <https://w3id.org/narn/event/hasCause> <http://www.w3.org/2000/01/rdf-schema#label> "has cause"@en .
 <https://w3id.org/narn/event/hasCause> <http://www.w3.org/2004/02/skos/core#altLabel> "caused by"@en .
+<https://w3id.org/narn/event/hasCause> <http://www.w3.org/2004/02/skos/core#example> "The death of Beleg has cause Anglachel."@en .
 # 
 # https://w3id.org/narn/event/hasDestination
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/event/occursAt> .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/event/MovementEvent> .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/location/Place> .
+<https://w3id.org/narn/location/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/narn/event/hasOrigin> .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#comment> "The ending place of a movement event."@en .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2000/01/rdf-schema#label> "has destination"@en .
 <https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2004/02/skos/core#altLabel> "arrives at"@en .
+<https://w3id.org/narn/event/hasDestination> <http://www.w3.org/2004/02/skos/core#example> "Túrin's journey has destination Doriath."@en .
 # 
 # https://w3id.org/narn/event/hasOrigin
 <https://w3id.org/narn/event/hasOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -79,6 +128,7 @@
 <https://w3id.org/narn/event/hasOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "The starting place of a movement event."@en .
 <https://w3id.org/narn/event/hasOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "has origin"@en .
 <https://w3id.org/narn/event/hasOrigin> <http://www.w3.org/2004/02/skos/core#altLabel> "departs from"@en .
+<https://w3id.org/narn/event/hasOrigin> <http://www.w3.org/2004/02/skos/core#example> "Túrin's journey to Doriath has origin Dor-lómin."@en .
 # 
 # https://w3id.org/narn/event/hasParticipant
 <https://w3id.org/narn/event/hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -86,6 +136,7 @@
 <https://w3id.org/narn/event/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that takes part in the event."@en .
 <https://w3id.org/narn/event/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "has participant"@en .
 <https://w3id.org/narn/event/hasParticipant> <http://www.w3.org/2004/02/skos/core#altLabel> "involves"@en .
+<https://w3id.org/narn/event/hasParticipant> <http://www.w3.org/2004/02/skos/core#example> "The Battle of Unnumbered Tears has participant Húrin."@en .
 # 
 # https://w3id.org/narn/event/hasPatient
 <https://w3id.org/narn/event/hasPatient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -94,6 +145,7 @@
 <https://w3id.org/narn/event/hasPatient> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity affected by the event."@en .
 <https://w3id.org/narn/event/hasPatient> <http://www.w3.org/2000/01/rdf-schema#label> "has patient"@en .
 <https://w3id.org/narn/event/hasPatient> <http://www.w3.org/2004/02/skos/core#altLabel> "affects"@en .
+<https://w3id.org/narn/event/hasPatient> <http://www.w3.org/2004/02/skos/core#example> "Glaurung hypnotises Níniel, with Níniel as the patient."@en .
 # 
 # https://w3id.org/narn/event/hasSubEvent
 <https://w3id.org/narn/event/hasSubEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -103,8 +155,9 @@
 <https://w3id.org/narn/event/hasSubEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/narn/event/Event> .
 <https://w3id.org/narn/event/hasSubEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/event/Event> .
 <https://w3id.org/narn/event/hasSubEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A smaller event that occurs as part of this one."@en .
-<https://w3id.org/narn/event/hasSubEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-event"@en .
+<https://w3id.org/narn/event/hasSubEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has subevent"@en .
 <https://w3id.org/narn/event/hasSubEvent> <http://www.w3.org/2004/02/skos/core#altLabel> "contains event"@en .
+<https://w3id.org/narn/event/hasSubEvent> <http://www.w3.org/2004/02/skos/core#example> "The Wars of Beleriand has subevent the Nirnaeth Arnoediad."@en .
 # 
 # https://w3id.org/narn/event/hasTraveller
 <https://w3id.org/narn/event/hasTraveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -113,6 +166,7 @@
 <https://w3id.org/narn/event/hasTraveller> <http://www.w3.org/2000/01/rdf-schema#comment> "The character who undertakes the travel."@en .
 <https://w3id.org/narn/event/hasTraveller> <http://www.w3.org/2000/01/rdf-schema#label> "has traveller"@en .
 <https://w3id.org/narn/event/hasTraveller> <http://www.w3.org/2004/02/skos/core#altLabel> "travelled by"@en .
+<https://w3id.org/narn/event/hasTraveller> <http://www.w3.org/2004/02/skos/core#example> "Túrin, Gethron and Grithnir are travellers in the journey to Doriath."@en .
 # 
 # https://w3id.org/narn/event/hasVictim
 <https://w3id.org/narn/event/hasVictim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -121,6 +175,7 @@
 <https://w3id.org/narn/event/hasVictim> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity that suffers harm in the event."@en .
 <https://w3id.org/narn/event/hasVictim> <http://www.w3.org/2000/01/rdf-schema#label> "has victim"@en .
 <https://w3id.org/narn/event/hasVictim> <http://www.w3.org/2004/02/skos/core#altLabel> "harms"@en .
+<https://w3id.org/narn/event/hasVictim> <http://www.w3.org/2004/02/skos/core#example> "The death of Beleg has victim Beleg."@en .
 # 
 # https://w3id.org/narn/event/hasWitness
 <https://w3id.org/narn/event/hasWitness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -129,6 +184,7 @@
 <https://w3id.org/narn/event/hasWitness> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that observes the event without acting."@en .
 <https://w3id.org/narn/event/hasWitness> <http://www.w3.org/2000/01/rdf-schema#label> "has witness"@en .
 <https://w3id.org/narn/event/hasWitness> <http://www.w3.org/2004/02/skos/core#altLabel> "observed by"@en .
+<https://w3id.org/narn/event/hasWitness> <http://www.w3.org/2004/02/skos/core#example> "Mîm's betrayal has witness Andróg."@en .
 # 
 # https://w3id.org/narn/event/isBegottenIn
 <https://w3id.org/narn/event/isBegottenIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -137,6 +193,7 @@
 <https://w3id.org/narn/event/isBegottenIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/narn/event/Birth> .
 <https://w3id.org/narn/event/isBegottenIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of begets. Links a character to the birth event that brings them into existence."@en .
 <https://w3id.org/narn/event/isBegottenIn> <http://www.w3.org/2000/01/rdf-schema#label> "is begotten in"@en .
+<https://w3id.org/narn/event/isBegottenIn> <http://www.w3.org/2004/02/skos/core#example> "Túrin is begotten in the birth of Túrin."@en .
 # 
 # https://w3id.org/narn/event/isCausedBy
 <https://w3id.org/narn/event/isCausedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -144,14 +201,17 @@
 <https://w3id.org/narn/event/isCausedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of causes. This event results from another."@en .
 <https://w3id.org/narn/event/isCausedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is caused by"@en .
 <https://w3id.org/narn/event/isCausedBy> <http://www.w3.org/2004/02/skos/core#altLabel> "results from"@en .
+<https://w3id.org/narn/event/isCausedBy> <http://www.w3.org/2004/02/skos/core#example> "The exile of Túrin is caused by the death of Saeros."@en .
 # 
 # https://w3id.org/narn/event/isSubEventOf
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/during> .
+<https://w3id.org/narn/to/during> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/narn/event/hasSubEvent> .
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This event is part of a larger event."@en .
-<https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2000/01/rdf-schema#label> "is sub-event of"@en .
+<https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2000/01/rdf-schema#label> "is subevent of"@en .
 <https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2004/02/skos/core#altLabel> "part of event"@en .
+<https://w3id.org/narn/event/isSubEventOf> <http://www.w3.org/2004/02/skos/core#example> "The Nirnaeth Arnoediad is a subevent of the Wars of Beleriand."@en .
 # 
 # https://w3id.org/narn/event/occursAt
 <https://w3id.org/narn/event/occursAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -161,10 +221,12 @@
 <https://w3id.org/narn/event/occursAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The place where the event occurs."@en .
 <https://w3id.org/narn/event/occursAt> <http://www.w3.org/2000/01/rdf-schema#label> "occurs at"@en .
 <https://w3id.org/narn/event/occursAt> <http://www.w3.org/2004/02/skos/core#altLabel> "takes place at"@en .
+<https://w3id.org/narn/event/occursAt> <http://www.w3.org/2004/02/skos/core#example> "The Captivity of Húrin occurs at Angband."@en .
 # 
 # https://w3id.org/narn/event/precedes
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/narn/to/precedes> .
+<https://w3id.org/narn/to/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
@@ -173,6 +235,11 @@
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/2000/01/rdf-schema#comment> "This event occurs before another event."@en .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/2000/01/rdf-schema#label> "precedes"@en .
 <https://w3id.org/narn/event/precedes> <http://www.w3.org/2004/02/skos/core#altLabel> "comes before"@en .
+<https://w3id.org/narn/event/precedes> <http://www.w3.org/2004/02/skos/core#example> "The Nirnaeth Arnoediad precedes Túrin's journey to Doriath."@en .
+# 
+# https://w3id.org/narn/to/during
+# 
+# https://w3id.org/narn/to/precedes
 # 
 # 
 # 
@@ -189,14 +256,16 @@
 <https://w3id.org/narn/event/Battle> <http://www.w3.org/2000/01/rdf-schema#comment> "A large scale violent confrontation."@en .
 <https://w3id.org/narn/event/Battle> <http://www.w3.org/2000/01/rdf-schema#label> "battle"@en .
 <https://w3id.org/narn/event/Battle> <http://www.w3.org/2004/02/skos/core#altLabel> "armed conflict"@en .
+<https://w3id.org/narn/event/Battle> <http://www.w3.org/2004/02/skos/core#example> "The Nirnaeth Arnoediad is the Battle of Unnumbered Tears."@en .
 # 
 # https://w3id.org/narn/event/Betrayal
 <https://w3id.org/narn/event/Betrayal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Betrayal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/Event> .
 <https://w3id.org/narn/event/Betrayal> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/event/Meeting> .
-<https://w3id.org/narn/event/Betrayal> <http://www.w3.org/2000/01/rdf-schema#comment> "An act of disloyalty or treachery."@en .
+<https://w3id.org/narn/event/Betrayal> <http://www.w3.org/2000/01/rdf-schema#comment> "An act of disloyalty involving betrayal of trust."@en .
 <https://w3id.org/narn/event/Betrayal> <http://www.w3.org/2000/01/rdf-schema#label> "betrayal"@en .
 <https://w3id.org/narn/event/Betrayal> <http://www.w3.org/2004/02/skos/core#altLabel> "treachery"@en .
+<https://w3id.org/narn/event/Betrayal> <http://www.w3.org/2004/02/skos/core#example> "Mîm betrays Túrin to the Orcs at Amon Rûdh."@en .
 # 
 # https://w3id.org/narn/event/Birth
 <https://w3id.org/narn/event/Birth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -212,25 +281,28 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/event/Birth> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/event/Death> .
 <https://w3id.org/narn/event/Birth> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/event/Marriage> .
 <https://w3id.org/narn/event/Birth> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/event/Murder> .
-<https://w3id.org/narn/event/Birth> <http://www.w3.org/2000/01/rdf-schema#comment> "A character being born. Every birth begets at least one character."@en .
+<https://w3id.org/narn/event/Birth> <http://www.w3.org/2000/01/rdf-schema#comment> "The coming into existence of a character."@en .
 <https://w3id.org/narn/event/Birth> <http://www.w3.org/2000/01/rdf-schema#label> "birth"@en .
 <https://w3id.org/narn/event/Birth> <http://www.w3.org/2004/02/skos/core#altLabel> "nativity"@en .
+<https://w3id.org/narn/event/Birth> <http://www.w3.org/2004/02/skos/core#example> "The birth of Túrin takes place in Dor-lómin."@en .
 # 
 # https://w3id.org/narn/event/Captivity
 <https://w3id.org/narn/event/Captivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Captivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/Event> .
-<https://w3id.org/narn/event/Captivity> <http://www.w3.org/2000/01/rdf-schema#comment> "A character is held prisoner."@en .
+<https://w3id.org/narn/event/Captivity> <http://www.w3.org/2000/01/rdf-schema#comment> "An event in which a character is held as a prisoner."@en .
 <https://w3id.org/narn/event/Captivity> <http://www.w3.org/2000/01/rdf-schema#label> "captivity"@en .
 <https://w3id.org/narn/event/Captivity> <http://www.w3.org/2004/02/skos/core#altLabel> "imprisonment"@en .
+<https://w3id.org/narn/event/Captivity> <http://www.w3.org/2004/02/skos/core#example> "The captivity of Húrin in Angband by Morgoth."@en .
 # 
 # https://w3id.org/narn/event/ConflictEvent
 <https://w3id.org/narn/event/ConflictEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/ConflictEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/Event> .
 <https://w3id.org/narn/event/ConflictEvent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/event/MovementEvent> .
 <https://w3id.org/narn/event/ConflictEvent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/event/SocialEvent> .
-<https://w3id.org/narn/event/ConflictEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event involving antagonism or violence."@en .
+<https://w3id.org/narn/event/ConflictEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event characterised by antagonism or violence."@en .
 <https://w3id.org/narn/event/ConflictEvent> <http://www.w3.org/2000/01/rdf-schema#label> "conflict event"@en .
 <https://w3id.org/narn/event/ConflictEvent> <http://www.w3.org/2004/02/skos/core#altLabel> "clash"@en .
+<https://w3id.org/narn/event/ConflictEvent> <http://www.w3.org/2004/02/skos/core#example> "The Nirnaeth Arnoediad is a conflict event in Beleriand."@en .
 # 
 # https://w3id.org/narn/event/Coronation
 <https://w3id.org/narn/event/Coronation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -242,13 +314,15 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/event/Coronation> <http://www.w3.org/2000/01/rdf-schema#comment> "A ceremony of crowning a ruler."@en .
 <https://w3id.org/narn/event/Coronation> <http://www.w3.org/2000/01/rdf-schema#label> "coronation"@en .
 <https://w3id.org/narn/event/Coronation> <http://www.w3.org/2004/02/skos/core#altLabel> "crowning ceremony"@en .
+<https://w3id.org/narn/event/Coronation> <http://www.w3.org/2004/02/skos/core#example> "Turgon is crowned King of Gondolin."@en .
 # 
 # https://w3id.org/narn/event/Council
 <https://w3id.org/narn/event/Council> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Council> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/SocialEvent> .
-<https://w3id.org/narn/event/Council> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal meeting for deliberation or the reach of a consensus."@en .
+<https://w3id.org/narn/event/Council> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal meeting for deliberation or the reaching of a consensus."@en .
 <https://w3id.org/narn/event/Council> <http://www.w3.org/2000/01/rdf-schema#label> "council"@en .
 <https://w3id.org/narn/event/Council> <http://www.w3.org/2004/02/skos/core#altLabel> "deliberation"@en .
+<https://w3id.org/narn/event/Council> <http://www.w3.org/2004/02/skos/core#example> "A council of the Elves in Nargothrond."@en .
 # 
 # https://w3id.org/narn/event/Curse
 <https://w3id.org/narn/event/Curse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -257,6 +331,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/event/Curse> <http://www.w3.org/2000/01/rdf-schema#comment> "A supernatural imprecation bringing misfortune."@en .
 <https://w3id.org/narn/event/Curse> <http://www.w3.org/2000/01/rdf-schema#label> "curse"@en .
 <https://w3id.org/narn/event/Curse> <http://www.w3.org/2004/02/skos/core#altLabel> "malediction"@en .
+<https://w3id.org/narn/event/Curse> <http://www.w3.org/2004/02/skos/core#example> "Mîm curses Andróg after the killing of Khîm."@en .
 # 
 # https://w3id.org/narn/event/Death
 <https://w3id.org/narn/event/Death> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -265,9 +340,10 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
 _:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/hasVictim> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/narn/event/Death> <http://www.w3.org/2000/01/rdf-schema#comment> "A character dying. Every death has at least one victim."@en .
+<https://w3id.org/narn/event/Death> <http://www.w3.org/2000/01/rdf-schema#comment> "The death of a character."@en .
 <https://w3id.org/narn/event/Death> <http://www.w3.org/2000/01/rdf-schema#label> "death"@en .
 <https://w3id.org/narn/event/Death> <http://www.w3.org/2004/02/skos/core#altLabel> "demise"@en .
+<https://w3id.org/narn/event/Death> <http://www.w3.org/2004/02/skos/core#example> "The death of Beleg is caused by Túrin."@en .
 # 
 # https://w3id.org/narn/event/Discovery
 <https://w3id.org/narn/event/Discovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -275,6 +351,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/event/Discovery> <http://www.w3.org/2000/01/rdf-schema#comment> "An event where something hidden is found or revealed."@en .
 <https://w3id.org/narn/event/Discovery> <http://www.w3.org/2000/01/rdf-schema#label> "discovery"@en .
 <https://w3id.org/narn/event/Discovery> <http://www.w3.org/2004/02/skos/core#altLabel> "revelation"@en .
+<https://w3id.org/narn/event/Discovery> <http://www.w3.org/2004/02/skos/core#example> "The truth about Níniel's identity is revealed."@en .
 # 
 # https://w3id.org/narn/event/Duel
 <https://w3id.org/narn/event/Duel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -286,17 +363,20 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/event/Duel> <http://www.w3.org/2000/01/rdf-schema#comment> "A fight between exactly two combatants."@en .
 <https://w3id.org/narn/event/Duel> <http://www.w3.org/2000/01/rdf-schema#label> "duel"@en .
 <https://w3id.org/narn/event/Duel> <http://www.w3.org/2004/02/skos/core#altLabel> "single combat"@en .
+<https://w3id.org/narn/event/Duel> <http://www.w3.org/2004/02/skos/core#example> "The duel between Turambar and Glaurung at Cabed-en-Aras."@en .
 # 
 # https://w3id.org/narn/event/Enchantment
 <https://w3id.org/narn/event/Enchantment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Enchantment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/Event> .
-<https://w3id.org/narn/event/Enchantment> <http://www.w3.org/2000/01/rdf-schema#comment> "A magical spell or charm placed on a character."@en .
+<https://w3id.org/narn/event/Enchantment> <http://www.w3.org/2000/01/rdf-schema#comment> "A magical effect imposed on a character."@en .
 <https://w3id.org/narn/event/Enchantment> <http://www.w3.org/2000/01/rdf-schema#label> "enchantment"@en .
 <https://w3id.org/narn/event/Enchantment> <http://www.w3.org/2004/02/skos/core#altLabel> "spell"@en .
+<https://w3id.org/narn/event/Enchantment> <http://www.w3.org/2004/02/skos/core#example> "Glaurung hypnotises Níniel at Nargothrond."@en .
 # 
 # https://w3id.org/narn/event/Event
 <https://w3id.org/narn/event/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/to/FiniteInterval> .
+<https://w3id.org/narn/to/FiniteInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
 _:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/hasParticipant> .
@@ -305,16 +385,18 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/narn/location/Place> .
 _:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/occursAt> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/narn/event/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatio-temporal occurrence involving participants at places.\n        Every event is a finite temporal interval."@en .
+<https://w3id.org/narn/event/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatio-temporal occurrence involving participants and locations. Every event is a finite temporal interval."@en .
 <https://w3id.org/narn/event/Event> <http://www.w3.org/2000/01/rdf-schema#label> "event"@en .
 <https://w3id.org/narn/event/Event> <http://www.w3.org/2004/02/skos/core#altLabel> "occurrence"@en .
+<https://w3id.org/narn/event/Event> <http://www.w3.org/2004/02/skos/core#example> "The Battle of Unnumbered Tears is an event occurring in Beleriand."@en .
 # 
 # https://w3id.org/narn/event/Exile
 <https://w3id.org/narn/event/Exile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Exile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/MovementEvent> .
-<https://w3id.org/narn/event/Exile> <http://www.w3.org/2000/01/rdf-schema#comment> "Forced departure from homeland."@en .
+<https://w3id.org/narn/event/Exile> <http://www.w3.org/2000/01/rdf-schema#comment> "A forced departure from the homeland."@en .
 <https://w3id.org/narn/event/Exile> <http://www.w3.org/2000/01/rdf-schema#label> "exile"@en .
 <https://w3id.org/narn/event/Exile> <http://www.w3.org/2004/02/skos/core#altLabel> "banishment"@en .
+<https://w3id.org/narn/event/Exile> <http://www.w3.org/2004/02/skos/core#example> "The exile of Túrin from Doriath after the death of Saeros."@en .
 # 
 # https://w3id.org/narn/event/Feast
 <https://w3id.org/narn/event/Feast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -322,13 +404,15 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/event/Feast> <http://www.w3.org/2000/01/rdf-schema#comment> "A large celebratory meal or banquet."@en .
 <https://w3id.org/narn/event/Feast> <http://www.w3.org/2000/01/rdf-schema#label> "feast"@en .
 <https://w3id.org/narn/event/Feast> <http://www.w3.org/2004/02/skos/core#altLabel> "banquet"@en .
+<https://w3id.org/narn/event/Feast> <http://www.w3.org/2004/02/skos/core#example> "A feast held in the halls of Menegroth."@en .
 # 
 # https://w3id.org/narn/event/Flight
 <https://w3id.org/narn/event/Flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Flight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/MovementEvent> .
-<https://w3id.org/narn/event/Flight> <http://www.w3.org/2000/01/rdf-schema#comment> "Characters flee from danger."@en .
+<https://w3id.org/narn/event/Flight> <http://www.w3.org/2000/01/rdf-schema#comment> "An event in which characters flee from danger."@en .
 <https://w3id.org/narn/event/Flight> <http://www.w3.org/2000/01/rdf-schema#label> "flight"@en .
 <https://w3id.org/narn/event/Flight> <http://www.w3.org/2004/02/skos/core#altLabel> "escape"@en .
+<https://w3id.org/narn/event/Flight> <http://www.w3.org/2004/02/skos/core#example> "The flight of survivors from the fall of Nargothrond."@en .
 # 
 # https://w3id.org/narn/event/LifeEvent
 <https://w3id.org/narn/event/LifeEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -336,6 +420,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/event/LifeEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A significant moment in a character's life."@en .
 <https://w3id.org/narn/event/LifeEvent> <http://www.w3.org/2000/01/rdf-schema#label> "life event"@en .
 <https://w3id.org/narn/event/LifeEvent> <http://www.w3.org/2004/02/skos/core#altLabel> "life occurrence"@en .
+<https://w3id.org/narn/event/LifeEvent> <http://www.w3.org/2004/02/skos/core#example> "The birth of Túrin in Dor-lómin is a life event."@en .
 # 
 # https://w3id.org/narn/event/Marriage
 <https://w3id.org/narn/event/Marriage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -344,9 +429,10 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid8 <http://www.w3.org/2002/07/owl#cardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/hasParticipant> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/narn/event/Marriage> <http://www.w3.org/2000/01/rdf-schema#comment> "Two characters getting married. Involves exactly 2 participants."@en .
+<https://w3id.org/narn/event/Marriage> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal union between two characters."@en .
 <https://w3id.org/narn/event/Marriage> <http://www.w3.org/2000/01/rdf-schema#label> "marriage"@en .
 <https://w3id.org/narn/event/Marriage> <http://www.w3.org/2004/02/skos/core#altLabel> "wedding"@en .
+<https://w3id.org/narn/event/Marriage> <http://www.w3.org/2004/02/skos/core#example> "The marriage of Turambar and Níniel in Brethil."@en .
 # 
 # https://w3id.org/narn/event/Meeting
 <https://w3id.org/narn/event/Meeting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -354,6 +440,7 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/event/Meeting> <http://www.w3.org/2000/01/rdf-schema#comment> "An encounter or gathering of characters."@en .
 <https://w3id.org/narn/event/Meeting> <http://www.w3.org/2000/01/rdf-schema#label> "meeting"@en .
 <https://w3id.org/narn/event/Meeting> <http://www.w3.org/2004/02/skos/core#altLabel> "encounter"@en .
+<https://w3id.org/narn/event/Meeting> <http://www.w3.org/2004/02/skos/core#example> "Túrin meets Beleg in the wild."@en .
 # 
 # https://w3id.org/narn/event/MovementEvent
 <https://w3id.org/narn/event/MovementEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -361,6 +448,7 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/narn/event/MovementEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event involving physical movement of characters between places."@en .
 <https://w3id.org/narn/event/MovementEvent> <http://www.w3.org/2000/01/rdf-schema#label> "movement event"@en .
 <https://w3id.org/narn/event/MovementEvent> <http://www.w3.org/2004/02/skos/core#altLabel> "movement"@en .
+<https://w3id.org/narn/event/MovementEvent> <http://www.w3.org/2004/02/skos/core#example> "Túrin travels from Dor-lómin to Doriath."@en .
 # 
 # https://w3id.org/narn/event/Murder
 <https://w3id.org/narn/event/Murder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -382,9 +470,10 @@ _:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 _:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/hasAgent> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/narn/event/Murder> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/narn/event/Suicide> .
-<https://w3id.org/narn/event/Murder> <http://www.w3.org/2000/01/rdf-schema#comment> "A death caused intentionally by another. Has at least one agent."@en .
+<https://w3id.org/narn/event/Murder> <http://www.w3.org/2000/01/rdf-schema#comment> "A death caused intentionally by another."@en .
 <https://w3id.org/narn/event/Murder> <http://www.w3.org/2000/01/rdf-schema#label> "murder"@en .
 <https://w3id.org/narn/event/Murder> <http://www.w3.org/2004/02/skos/core#altLabel> "homicide"@en .
+<https://w3id.org/narn/event/Murder> <http://www.w3.org/2004/02/skos/core#example> "The death of Saeros is caused by Túrin."@en .
 # 
 # https://w3id.org/narn/event/Prophecy
 <https://w3id.org/narn/event/Prophecy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -392,17 +481,20 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/narn/event/Prophecy> <http://www.w3.org/2000/01/rdf-schema#comment> "A prediction of future events, often supernatural."@en .
 <https://w3id.org/narn/event/Prophecy> <http://www.w3.org/2000/01/rdf-schema#label> "prophecy"@en .
 <https://w3id.org/narn/event/Prophecy> <http://www.w3.org/2004/02/skos/core#altLabel> "foretelling"@en .
+<https://w3id.org/narn/event/Prophecy> <http://www.w3.org/2004/02/skos/core#example> "Morgoth's doom: thou shalt see with my eyes."@en .
 # 
 # https://w3id.org/narn/event/Siege
 <https://w3id.org/narn/event/Siege> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/narn/event/Siege> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/ConflictEvent> .
 <https://w3id.org/narn/event/Siege> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
 _:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/narn/location/Settlement> .
+<https://w3id.org/narn/location/Settlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/occursAt> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/narn/event/Siege> <http://www.w3.org/2000/01/rdf-schema#comment> "A military blockade of a city or fortress."@en .
 <https://w3id.org/narn/event/Siege> <http://www.w3.org/2000/01/rdf-schema#label> "siege"@en .
 <https://w3id.org/narn/event/Siege> <http://www.w3.org/2004/02/skos/core#altLabel> "blockade"@en .
+<https://w3id.org/narn/event/Siege> <http://www.w3.org/2004/02/skos/core#example> "The siege and sack of Nargothrond."@en .
 # 
 # https://w3id.org/narn/event/SocialEvent
 <https://w3id.org/narn/event/SocialEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -410,6 +502,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/narn/event/SocialEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event involving social interaction between characters."@en .
 <https://w3id.org/narn/event/SocialEvent> <http://www.w3.org/2000/01/rdf-schema#label> "social event"@en .
 <https://w3id.org/narn/event/SocialEvent> <http://www.w3.org/2004/02/skos/core#altLabel> "social gathering"@en .
+<https://w3id.org/narn/event/SocialEvent> <http://www.w3.org/2004/02/skos/core#example> "The trial of Túrin in absence at Menegroth."@en .
 # 
 # https://w3id.org/narn/event/Suicide
 <https://w3id.org/narn/event/Suicide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -422,9 +515,10 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid16 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/narn/event/hasAgent> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/narn/event/Suicide> <http://www.w3.org/2000/01/rdf-schema#comment> "A death where the victim is also the agent. At most one agent."@en .
+<https://w3id.org/narn/event/Suicide> <http://www.w3.org/2000/01/rdf-schema#comment> "A form of death in which the agent and the victim are identical."@en .
 <https://w3id.org/narn/event/Suicide> <http://www.w3.org/2000/01/rdf-schema#label> "suicide"@en .
-<https://w3id.org/narn/event/Suicide> <http://www.w3.org/2004/02/skos/core#altLabel> "self-killing"@en .
+<https://w3id.org/narn/event/Suicide> <http://www.w3.org/2004/02/skos/core#altLabel> "self-destruction"@en .
+<https://w3id.org/narn/event/Suicide> <http://www.w3.org/2004/02/skos/core#example> "Turambar dies by falling on his own sword Gurthang."@en .
 # 
 # https://w3id.org/narn/event/Travel
 <https://w3id.org/narn/event/Travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -458,6 +552,7 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/narn/event/Travel> <http://www.w3.org/2000/01/rdf-schema#comment> "A journey. Every travel has origin and destination."@en .
 <https://w3id.org/narn/event/Travel> <http://www.w3.org/2000/01/rdf-schema#label> "travel"@en .
 <https://w3id.org/narn/event/Travel> <http://www.w3.org/2004/02/skos/core#altLabel> "journey"@en .
+<https://w3id.org/narn/event/Travel> <http://www.w3.org/2004/02/skos/core#example> "Túrin travels from Dor-lómin to Doriath."@en .
 # 
 # https://w3id.org/narn/event/Trial
 <https://w3id.org/narn/event/Trial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -465,6 +560,7 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/narn/event/Trial> <http://www.w3.org/2000/01/rdf-schema#comment> "A judicial examination or hearing."@en .
 <https://w3id.org/narn/event/Trial> <http://www.w3.org/2000/01/rdf-schema#label> "trial"@en .
 <https://w3id.org/narn/event/Trial> <http://www.w3.org/2004/02/skos/core#altLabel> "judgement"@en .
+<https://w3id.org/narn/event/Trial> <http://www.w3.org/2004/02/skos/core#example> "The trial of Túrin in absence, where Nellas testifies."@en .
 # 
 # https://w3id.org/narn/event/War
 <https://w3id.org/narn/event/War> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -481,8 +577,15 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/narn/event/ConflictEvent> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/narn/event/War> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/narn/event/ConflictEvent> .
-<https://w3id.org/narn/event/War> <http://www.w3.org/2000/01/rdf-schema#comment> "A prolonged conflict with multiple battles."@en .
+<https://w3id.org/narn/event/War> <http://www.w3.org/2000/01/rdf-schema#comment> "A prolonged conflict composed of multiple battles."@en .
 <https://w3id.org/narn/event/War> <http://www.w3.org/2000/01/rdf-schema#label> "war"@en .
 <https://w3id.org/narn/event/War> <http://www.w3.org/2004/02/skos/core#altLabel> "prolonged conflict"@en .
+<https://w3id.org/narn/event/War> <http://www.w3.org/2004/02/skos/core#example> "The Wars of Beleriand include the Nirnaeth Arnoediad."@en .
+# 
+# https://w3id.org/narn/location/Place
+# 
+# https://w3id.org/narn/location/Settlement
+# 
+# https://w3id.org/narn/to/FiniteInterval
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

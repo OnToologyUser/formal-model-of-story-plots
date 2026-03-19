@@ -11,7 +11,7 @@
                                    rdfs:label "Place and Location Ontology"@en ;
                                    <https://purl.org/dc/terms/created> "2026-03-11"^^xsd:date ;
                                    <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;
-                                   <https://purl.org/dc/terms/modified> "2026-03-17"^^xsd:date ;
+                                   <https://purl.org/dc/terms/modified> "2026-03-19"^^xsd:date ;
                                    <https://purl.org/vocab/vann/preferredNamespacePrefix> "loc" ;
                                    <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/location/" .
 
@@ -21,6 +21,10 @@
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
 
 
 ###  https://purl.org/dc/terms/created
@@ -62,7 +66,8 @@ xsd:date rdf:type rdfs:Datatype .
                   owl:IrreflexiveProperty ;
          rdfs:comment "Two places share a boundary but neither contains the other."@en ;
          rdfs:label "borders"@en ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "adjacent to"@en .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "adjacent to"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "Doriath borders Brethil."@en .
 
 
 ###  https://w3id.org/narn/location/contains
@@ -74,7 +79,8 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:range :Place ;
           rdfs:comment "Inverse of isAPartOf."@en ;
           rdfs:label "contains"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "includes"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "includes"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "Beleriand contains Doriath."@en .
 
 
 ###  https://w3id.org/narn/location/hasSpatialRelation
@@ -83,7 +89,8 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:range :Place ;
                     rdfs:comment "A general spatial relation between two places."@en ;
                     rdfs:label "has spatial relation"@en ;
-                    <http://www.w3.org/2004/02/skos/core#altLabel> "spatially related to"@en .
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "spatially related to"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "Doriath has a spatial relation to Brethil, as they border each other."@en .
 
 
 ###  https://w3id.org/narn/location/isAPartOf
@@ -94,7 +101,8 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:range :Place ;
            rdfs:comment "Indicates that a place constitutes a subarea of another place."@en ;
            rdfs:label "is a part of"@en ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "part of"@en .
+           <http://www.w3.org/2004/02/skos/core#altLabel> "part of"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "Dor-lómin is a part of Hithlum."@en .
 
 
 ###  https://w3id.org/narn/location/isNear
@@ -104,7 +112,8 @@ xsd:date rdf:type rdfs:Datatype .
                  owl:IrreflexiveProperty ;
         rdfs:comment "Two places are in proximity."@en ;
         rdfs:label "is near"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "close to"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "close to"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "The river Narog is near Nargothrond."@en .
 
 
 ###  https://w3id.org/narn/location/isStrictlyInsideOf
@@ -115,7 +124,8 @@ xsd:date rdf:type rdfs:Datatype .
                              owl:IrreflexiveProperty ;
                     rdfs:comment "Stricter form of isAPartOf where boundaries do not touch."@en ;
                     rdfs:label "is strictly inside of"@en ;
-                    <http://www.w3.org/2004/02/skos/core#altLabel> "strictly within"@en .
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "strictly within"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "Gondolin is strictly inside of Tumladen."@en .
 
 
 ###  https://w3id.org/narn/location/isTheCapitalOf
@@ -125,7 +135,8 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:range :Realm ;
                 rdfs:comment "A settlement is the capital of a realm."@en ;
                 rdfs:label "is the capital of"@en ;
-                <http://www.w3.org/2004/02/skos/core#altLabel> "capital of"@en .
+                <http://www.w3.org/2004/02/skos/core#altLabel> "capital of"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "Menegroth is the capital of Doriath."@en .
 
 
 #################################################################
@@ -138,7 +149,8 @@ xsd:date rdf:type rdfs:Datatype .
           owl:disjointWith :NaturalArea ;
           rdfs:comment "A constructed structure."@en ;
           rdfs:label "building"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "structure"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "structure"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "The great hall of Menegroth is a building within the city."@en .
 
 
 ###  https://w3id.org/narn/location/City
@@ -147,7 +159,8 @@ xsd:date rdf:type rdfs:Datatype .
       owl:disjointWith :Village ;
       rdfs:comment "A large and significant settlement."@en ;
       rdfs:label "city"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "urban area"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "urban area"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Gondolin is a hidden city in Tumladen."@en .
 
 
 ###  https://w3id.org/narn/location/Continent
@@ -167,7 +180,8 @@ xsd:date rdf:type rdfs:Datatype .
                            ] ;
            rdfs:comment "A major landmass."@en ;
            rdfs:label "continent"@en ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "landmass"@en .
+           <http://www.w3.org/2004/02/skos/core#altLabel> "landmass"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "Endor is a continent within Arda."@en .
 
 
 ###  https://w3id.org/narn/location/Desert
@@ -176,7 +190,8 @@ xsd:date rdf:type rdfs:Datatype .
         owl:disjointWith :Forest ;
         rdfs:comment "A barren, arid area with little vegetation."@en ;
         rdfs:label "desert"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "wasteland"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "wasteland"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "The Anfauglith is a desert north of Beleriand."@en .
 
 
 ###  https://w3id.org/narn/location/Forest
@@ -184,7 +199,8 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:subClassOf :WoodedArea ;
         rdfs:comment "A large, dense wooded area."@en ;
         rdfs:label "forest"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "wood"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "wood"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "Brethil is a forest where Túrin lived under the name Turambar."@en .
 
 
 ###  https://w3id.org/narn/location/Fortress
@@ -192,7 +208,8 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:subClassOf :Settlement ;
           rdfs:comment "A fortified place, typically a military stronghold."@en ;
           rdfs:label "fortress"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "stronghold"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "stronghold"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "Angband is Morgoth's fortress in the Iron Mountains."@en .
 
 
 ###  https://w3id.org/narn/location/Hill
@@ -200,7 +217,8 @@ xsd:date rdf:type rdfs:Datatype .
       rdfs:subClassOf :NaturalArea ;
       rdfs:comment "A naturally raised area of land, smaller than a mountain."@en ;
       rdfs:label "hill"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "hillock"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "hillock"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Amon Rûdh is a hill where Túrin hid with Mîm."@en .
 
 
 ###  https://w3id.org/narn/location/Lake
@@ -208,7 +226,8 @@ xsd:date rdf:type rdfs:Datatype .
       rdfs:subClassOf :NaturalArea ;
       rdfs:comment "A large body of water surrounded by land."@en ;
       rdfs:label "lake"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "body of water"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "body of water"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "There is a lake near the hidden city of Gondolin."@en .
 
 
 ###  https://w3id.org/narn/location/LandArea
@@ -216,7 +235,8 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:subClassOf :Place ;
           rdfs:comment "A place that is primarily defined by its land territory."@en ;
           rdfs:label "land area"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "land"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "land"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "Dor-lómin is a land area in Hithlum."@en .
 
 
 ###  https://w3id.org/narn/location/Mountain
@@ -226,7 +246,8 @@ xsd:date rdf:type rdfs:Datatype .
                            :Sea ;
           rdfs:comment "A large natural elevation of the earth's surface."@en ;
           rdfs:label "mountain"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "peak"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "peak"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "Ered Wethrin borders Hithlum."@en .
 
 
 ###  https://w3id.org/narn/location/NaturalArea
@@ -235,14 +256,16 @@ xsd:date rdf:type rdfs:Datatype .
              owl:disjointWith :Settlement ;
              rdfs:comment "A place defined by natural geographic features rather than habitation."@en ;
              rdfs:label "natural area"@en ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "natural feature"@en .
+             <http://www.w3.org/2004/02/skos/core#altLabel> "natural feature"@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "Brethil is a natural area east of Doriath."@en .
 
 
 ###  https://w3id.org/narn/location/Place
 :Place rdf:type owl:Class ;
        rdfs:comment "A named location that has geographic or spatial significance in a story."@en ;
        rdfs:label "place"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "location"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "location"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "Beleriand is a place in Middle-earth."@en .
 
 
 ###  https://w3id.org/narn/location/Realm
@@ -259,7 +282,8 @@ xsd:date rdf:type rdfs:Datatype .
        rdfs:subClassOf :LandArea ;
        rdfs:comment "A territory under the rule of a king or sovereign authority."@en ;
        rdfs:label "realm"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "kingdom"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "kingdom"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "Doriath is a realm ruled by King Thingol, with Menegroth as its capital."@en .
 
 
 ###  https://w3id.org/narn/location/Region
@@ -267,7 +291,8 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:subClassOf :Place ;
         rdfs:comment "A large geographic area, typically contains multiple subplaces."@en ;
         rdfs:label "region"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "area"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "area"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "Beleriand is a region containing Doriath, Hithlum, and Brethil."@en .
 
 
 ###  https://w3id.org/narn/location/River
@@ -275,7 +300,8 @@ xsd:date rdf:type rdfs:Datatype .
        rdfs:subClassOf :NaturalArea ;
        rdfs:comment "A large natural stream of water."@en ;
        rdfs:label "river"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "waterway"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "waterway"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "The river Narog flows near Nargothrond."@en .
 
 
 ###  https://w3id.org/narn/location/Sea
@@ -283,7 +309,8 @@ xsd:date rdf:type rdfs:Datatype .
      rdfs:subClassOf :NaturalArea ;
      rdfs:comment "A large body of salt water."@en ;
      rdfs:label "sea"@en ;
-     <http://www.w3.org/2004/02/skos/core#altLabel> "ocean"@en .
+     <http://www.w3.org/2004/02/skos/core#altLabel> "ocean"@en ;
+     <http://www.w3.org/2004/02/skos/core#example> "Belegaer is the Great Sea west of Middle-earth."@en .
 
 
 ###  https://w3id.org/narn/location/Settlement
@@ -295,7 +322,8 @@ xsd:date rdf:type rdfs:Datatype .
                             ] ;
             rdfs:comment "A place where people live permanently."@en ;
             rdfs:label "settlement"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "inhabited place"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "inhabited place"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "Menegroth is a settlement within Doriath."@en .
 
 
 ###  https://w3id.org/narn/location/Town
@@ -304,7 +332,8 @@ xsd:date rdf:type rdfs:Datatype .
       owl:disjointWith :Village ;
       rdfs:comment "A settlement larger than a village but smaller than a city."@en ;
       rdfs:label "town"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "township"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "township"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "There is a town along the road between Doriath and Nargothrond."@en .
 
 
 ###  https://w3id.org/narn/location/UndergroundCity
@@ -316,7 +345,8 @@ xsd:date rdf:type rdfs:Datatype .
                                      ] ;
                  rdfs:comment "A city built underground, within caves or excavated halls."@en ;
                  rdfs:label "underground city"@en ;
-                 <http://www.w3.org/2004/02/skos/core#altLabel> "subterranean city"@en .
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "subterranean city"@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "Menegroth is an underground city, the capital of Doriath."@en .
 
 
 ###  https://w3id.org/narn/location/UndergroundPlace
@@ -324,7 +354,8 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:subClassOf :Place ;
                   rdfs:comment "A place located beneath the surface of the earth."@en ;
                   rdfs:label "underground place"@en ;
-                  <http://www.w3.org/2004/02/skos/core#altLabel> "subterranean place"@en .
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "subterranean place"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "Menegroth and Nargothrond are underground places."@en .
 
 
 ###  https://w3id.org/narn/location/Valley
@@ -332,7 +363,8 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:subClassOf :NaturalArea ;
         rdfs:comment "A low area of land between hills or mountains."@en ;
         rdfs:label "valley"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "vale"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "vale"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "Tumladen is the valley where Gondolin was built."@en .
 
 
 ###  https://w3id.org/narn/location/Village
@@ -340,7 +372,8 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:subClassOf :Settlement ;
          rdfs:comment "A small settlement, typically in a rural area."@en ;
          rdfs:label "village"@en ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "hamlet"@en .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "hamlet"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "There is a small village in Brethil where woodsmen live."@en .
 
 
 ###  https://w3id.org/narn/location/WildArea
@@ -348,7 +381,8 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:subClassOf :NaturalArea ;
           rdfs:comment "An uncultivated, uninhabited region."@en ;
           rdfs:label "wild area"@en ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "wilderness"@en .
+          <http://www.w3.org/2004/02/skos/core#altLabel> "wilderness"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "The wild lands between Doriath and Nargothrond."@en .
 
 
 ###  https://w3id.org/narn/location/WoodedArea
@@ -356,7 +390,8 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:subClassOf :NaturalArea ;
             rdfs:comment "A land area predominantly covered by trees."@en ;
             rdfs:label "wooded area"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "woodland"@en .
+            <http://www.w3.org/2004/02/skos/core#altLabel> "woodland"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "Brethil is a wooded area in Beleriand."@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

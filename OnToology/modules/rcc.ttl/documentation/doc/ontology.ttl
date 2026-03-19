@@ -12,9 +12,29 @@
                               rdfs:label "RCC Ontology"@en ;
                               <https://purl.org/dc/terms/created> "2026-03-13"^^xsd:date ;
                               <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;
-                              <https://purl.org/dc/terms/modified> "2026-03-17"^^xsd:date ;
+                              <https://purl.org/dc/terms/modified> "2026-03-19"^^xsd:date ;
                               <https://purl.org/vocab/vann/preferredNamespacePrefix> "rcc" ;
                               <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/rcc/" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
@@ -45,9 +65,10 @@
     rdfs:subPropertyOf :spatiallyRelatedTo ;
     rdf:type owl:SymmetricProperty ,
              owl:IrreflexiveProperty ;
-    rdfs:comment "Two regions share no points at all."@en ;
+    rdfs:comment "Describes a spatial relation where two regions are strictly disjoint and share no spatial points."@en ;
     rdfs:label "disconnected"@en ;
-    <http://www.w3.org/2004/02/skos/core#altLabel> "disjoint regions"@en .
+    <http://www.w3.org/2004/02/skos/core#altLabel> "disjoint regions"@en ;
+    <http://www.w3.org/2004/02/skos/core#example> "Angband and Doriath are disconnected since they share no spatial regions."@en .
 
 
 ###  https://w3id.org/narn/rcc/EC
@@ -57,9 +78,10 @@
     rdf:type owl:SymmetricProperty ,
              owl:IrreflexiveProperty ;
     owl:propertyDisjointWith :NTPP ;
-    rdfs:comment "Boundaries touch but interiors are disjoint."@en ;
+    rdfs:comment "Denotes a relation where the boundaries of two regions intersect while their interiors remain disjoint."@en ;
     rdfs:label "externally connected"@en ;
-    <http://www.w3.org/2004/02/skos/core#altLabel> "touching regions"@en .
+    <http://www.w3.org/2004/02/skos/core#altLabel> "touching regions"@en ;
+    <http://www.w3.org/2004/02/skos/core#example> "Brethil is externally connected to Doriath because their boundaries touch."@en .
 
 
 ###  https://w3id.org/narn/rcc/EQ
@@ -70,9 +92,10 @@
     rdf:type owl:SymmetricProperty ,
              owl:TransitiveProperty ,
              owl:ReflexiveProperty ;
-    rdfs:comment "Same spatial extent. Equivalence relation."@en ;
+    rdfs:comment "Represents spatial equivalence where two distinct entities occupy the exact identical spatial extent."@en ;
     rdfs:label "equal"@en ;
-    <http://www.w3.org/2004/02/skos/core#altLabel> "coextensive regions"@en .
+    <http://www.w3.org/2004/02/skos/core#altLabel> "coextensive regions"@en ;
+    <http://www.w3.org/2004/02/skos/core#example> "The Thousand Caves and Menegroth are spatially equal entities."@en .
 
 
 ###  https://w3id.org/narn/rcc/NTPP
@@ -82,9 +105,10 @@
       rdf:type owl:AsymmetricProperty ,
                owl:TransitiveProperty ,
                owl:IrreflexiveProperty ;
-      rdfs:comment "First region entirely inside second, boundaries do not touch."@en ;
+      rdfs:comment "Specifies a relation where the primary region is strictly contained within the interior of the secondary region with no shared boundary points."@en ;
       rdfs:label "non-tangential proper part"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "interior part"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "interior part"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Dor-lómin is a non-tangential proper part of Hithlum as it is completely enclosed."@en .
 
 
 ###  https://w3id.org/narn/rcc/NTPPi
@@ -95,9 +119,10 @@
        rdf:type owl:AsymmetricProperty ,
                 owl:TransitiveProperty ,
                 owl:IrreflexiveProperty ;
-       rdfs:comment "First region entirely contains second, boundaries do not touch."@en ;
+       rdfs:comment "The inverse relation where the primary region completely and strictly contains the secondary region within its interior."@en ;
        rdfs:label "non-tangential proper part inverse"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "interior whole"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "interior whole"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "Hithlum is the non-tangential proper part inverse of Dor-lómin."@en .
 
 
 ###  https://w3id.org/narn/rcc/PO
@@ -105,9 +130,10 @@
     rdfs:subPropertyOf :spatiallyRelatedTo ;
     rdf:type owl:SymmetricProperty ,
              owl:IrreflexiveProperty ;
-    rdfs:comment "Part of each region is inside the other but neither is contained."@en ;
+    rdfs:comment "Indicates that two regions share a common interior subset without either fully subsuming the other."@en ;
     rdfs:label "partially overlapping"@en ;
-    <http://www.w3.org/2004/02/skos/core#altLabel> "overlapping regions"@en .
+    <http://www.w3.org/2004/02/skos/core#altLabel> "overlapping regions"@en ;
+    <http://www.w3.org/2004/02/skos/core#example> "The wild lands partially overlap with Brethil."@en .
 
 
 ###  https://w3id.org/narn/rcc/TPP
@@ -116,9 +142,10 @@
                         :spatiallyRelatedTo ;
      rdf:type owl:AsymmetricProperty ,
               owl:IrreflexiveProperty ;
-     rdfs:comment "First region entirely inside second, boundaries touch."@en ;
+     rdfs:comment "Defines a state where the primary region is entirely subsumed by the secondary region while sharing at least one boundary point."@en ;
      rdfs:label "tangential proper part"@en ;
-     <http://www.w3.org/2004/02/skos/core#altLabel> "tangential part"@en .
+     <http://www.w3.org/2004/02/skos/core#altLabel> "tangential part"@en ;
+     <http://www.w3.org/2004/02/skos/core#example> "Hithlum is a tangential proper part of Beleriand."@en .
 
 
 ###  https://w3id.org/narn/rcc/TPPi
@@ -128,9 +155,10 @@
       owl:inverseOf :TPP ;
       rdf:type owl:AsymmetricProperty ,
                owl:IrreflexiveProperty ;
-      rdfs:comment "First region entirely contains second, boundaries touch."@en ;
+      rdfs:comment "The inverse relation where the primary region completely subsumes the secondary region while sharing boundary points."@en ;
       rdfs:label "tangential proper part inverse"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "tangential whole"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "tangential whole"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Beleriand represents the tangential proper part inverse of Hithlum."@en .
 
 
 ###  https://w3id.org/narn/rcc/spatiallyRelatedTo
@@ -140,7 +168,8 @@
                     rdfs:range <https://w3id.org/narn/location/Place> ;
                     rdfs:comment "The most general spatial relation between two regions."@en ;
                     rdfs:label "spatially related to"@en ;
-                    <http://www.w3.org/2004/02/skos/core#altLabel> "spatial relation"@en .
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "spatial relation"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "Doriath is spatially related to Brethil."@en .
 
 
 #################################################################

@@ -13,9 +13,49 @@
                                  rdfs:label "Actions Ontology"@en ;
                                  <https://purl.org/dc/terms/created> "2026-03-11"^^xsd:date ;
                                  <https://purl.org/dc/terms/creator> <https://w3id.org/people/erdemonal/me> ;
-                                 <https://purl.org/dc/terms/modified> "2026-03-17"^^xsd:date ;
+                                 <https://purl.org/dc/terms/modified> "2026-03-19"^^xsd:date ;
                                  <https://purl.org/vocab/vann/preferredNamespacePrefix> "act" ;
                                  <https://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/narn/action/" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/created
+<https://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/creator
+<https://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/dc/terms/modified
+<https://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/vocab/vann/preferredNamespacePrefix
+<https://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  https://purl.org/vocab/vann/preferredNamespaceUri
+<https://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
 
 #################################################################
 #    Object Properties
@@ -29,7 +69,8 @@
                                        ) ;
                 rdfs:comment "If an agent performs an action with a result, the agent indirectly causes that result."@en ;
                 rdfs:label "causes by action"@en ;
-                <http://www.w3.org/2004/02/skos/core#altLabel> "brings about"@en .
+                <http://www.w3.org/2004/02/skos/core#altLabel> "brings about"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "Turambar causes the death of Glaurung by performing the slaying."@en .
 
 
 ###  https://w3id.org/narn/action/hasInstrument
@@ -41,7 +82,8 @@
                                         :performedBy ;
                rdfs:comment "An object used to perform the action (e.g. a sword)."@en ;
                rdfs:label "has instrument"@en ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "using"@en .
+               <http://www.w3.org/2004/02/skos/core#altLabel> "using"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "The Slaying of Glaurung has instrument Gurthang."@en .
 
 
 ###  https://w3id.org/narn/action/hasIntention
@@ -51,7 +93,8 @@
               rdfs:domain :Action ;
               rdfs:comment "The goal or purpose behind the action."@en ;
               rdfs:label "has intention"@en ;
-              <http://www.w3.org/2004/02/skos/core#altLabel> "aims to"@en .
+              <http://www.w3.org/2004/02/skos/core#altLabel> "aims to"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "Túrin's flight from Doriath has the intention of escaping judgement."@en .
 
 
 ###  https://w3id.org/narn/action/hasRecipient
@@ -62,7 +105,8 @@
               owl:propertyDisjointWith :performedBy ;
               rdfs:comment "The character who receives something in a transfer action."@en ;
               rdfs:label "has recipient"@en ;
-              <http://www.w3.org/2004/02/skos/core#altLabel> "received by"@en .
+              <http://www.w3.org/2004/02/skos/core#altLabel> "received by"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "Beleg's gift of Anglachel has recipient Túrin."@en .
 
 
 ###  https://w3id.org/narn/action/hasResult
@@ -72,7 +116,8 @@
            rdfs:range <https://w3id.org/narn/event/Event> ;
            rdfs:comment "The event or state that results from the action."@en ;
            rdfs:label "has result"@en ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "results in"@en .
+           <http://www.w3.org/2004/02/skos/core#altLabel> "results in"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "Brandir's speech results in the truth about Níniel being revealed."@en .
 
 
 ###  https://w3id.org/narn/action/hasTarget
@@ -83,7 +128,8 @@
            rdfs:domain :Action ;
            rdfs:comment "The entity that the action is directed towards."@en ;
            rdfs:label "has target"@en ;
-           <http://www.w3.org/2004/02/skos/core#altLabel> "directed at"@en .
+           <http://www.w3.org/2004/02/skos/core#altLabel> "directed at"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "The Slaying of Glaurung has target Glaurung."@en .
 
 
 ###  https://w3id.org/narn/action/performedBy
@@ -92,7 +138,32 @@
              rdfs:domain :Action ;
              rdfs:comment "The agent who intentionally performs the action."@en ;
              rdfs:label "performed by"@en ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "done by"@en .
+             <http://www.w3.org/2004/02/skos/core#altLabel> "done by"@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "The Slaying of Glaurung was performed by Turambar."@en .
+
+
+###  https://w3id.org/narn/event/causes
+<https://w3id.org/narn/event/causes> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/creates
+<https://w3id.org/narn/event/creates> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/hasAgent
+<https://w3id.org/narn/event/hasAgent> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/hasCause
+<https://w3id.org/narn/event/hasCause> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/hasParticipant
+<https://w3id.org/narn/event/hasParticipant> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/narn/event/hasPatient
+<https://w3id.org/narn/event/hasPatient> rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -108,7 +179,8 @@
                         ] ;
         rdfs:comment "An intentional deed. Every action has at least one performer."@en ;
         rdfs:label "action"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "deed"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "deed"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "Túrin killing Saeros is an action performed by Túrin."@en .
 
 
 ###  https://w3id.org/narn/action/Attack
@@ -121,7 +193,8 @@
         owl:disjointWith :Defend ;
         rdfs:comment "An aggressive action aimed at harming a target."@en ;
         rdfs:label "attack"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "assault"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "assault"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "Túrin attacks the Orcs at Amon Rûdh using Anglachel."@en .
 
 
 ###  https://w3id.org/narn/action/Build
@@ -138,7 +211,8 @@
        owl:disjointWith :Forge ;
        rdfs:comment "The action of constructing a structure or settlement."@en ;
        rdfs:label "build"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "construction"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "construction"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "The Elves built the hidden city of Gondolin in Tumladen."@en .
 
 
 ###  https://w3id.org/narn/action/Command
@@ -150,7 +224,8 @@
                          ] ;
          rdfs:comment "The action of giving an authoritative order."@en ;
          rdfs:label "command"@en ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "order"@en .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "order"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "Morgoth orders his servants to attack Nargothrond."@en .
 
 
 ###  https://w3id.org/narn/action/CommunicativeAction
@@ -167,7 +242,8 @@
                                       :ViolentAction ;
                      rdfs:comment "An action involving communication between characters."@en ;
                      rdfs:label "communicative action"@en ;
-                     <http://www.w3.org/2004/02/skos/core#altLabel> "speech act"@en .
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "speech act"@en ;
+                     <http://www.w3.org/2004/02/skos/core#example> "Turambar speaks to Túrin about his journey."@en .
 
 
 ###  https://w3id.org/narn/action/CreationAction
@@ -180,7 +256,8 @@
                 owl:disjointWith :TransferAction ;
                 rdfs:comment "An action that produces or transforms something."@en ;
                 rdfs:label "creation action"@en ;
-                <http://www.w3.org/2004/02/skos/core#altLabel> "making"@en .
+                <http://www.w3.org/2004/02/skos/core#altLabel> "making"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "The smiths of Nargothrond reforge Anglachel into Gurthang."@en .
 
 
 ###  https://w3id.org/narn/action/Deceive
@@ -196,7 +273,8 @@
          rdfs:subClassOf :CommunicativeAction ;
          rdfs:comment "The action of intentionally misleading another character."@en ;
          rdfs:label "deceive"@en ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "deception"@en .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "deception"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "Glaurung deceives and hypnotises Níniel at Nargothrond."@en .
 
 
 ###  https://w3id.org/narn/action/Defend
@@ -208,14 +286,16 @@
                         ] ;
         rdfs:comment "An action of protecting oneself or others from attack."@en ;
         rdfs:label "defend"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "defence"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "defence"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "Beleg defends Túrin's camp from Orc raids."@en .
 
 
 ###  https://w3id.org/narn/action/Escape
 :Escape rdf:type owl:Class ;
         rdfs:comment "The intention of getting away from danger."@en ;
         rdfs:label "escape"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "evasion"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "evasion"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "Túrin's intention when fleeing Doriath is escape from judgement."@en .
 
 
 ###  https://w3id.org/narn/action/Flee
@@ -231,7 +311,8 @@
       rdfs:subClassOf :MovementAction ;
       rdfs:comment "The action of running away from danger or pursuit."@en ;
       rdfs:label "flee"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "flight"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "flight"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Túrin flees Doriath after killing Saeros."@en .
 
 
 ###  https://w3id.org/narn/action/Forge
@@ -243,7 +324,8 @@
                        ] ;
        rdfs:comment "The action of creating or reshaping an object, especially a weapon."@en ;
        rdfs:label "forge"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "smithing"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "smithing"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "The reforging of Anglachel into Gurthang in Nargothrond."@en .
 
 
 ###  https://w3id.org/narn/action/Give
@@ -260,7 +342,8 @@
       owl:disjointWith :Take ;
       rdfs:comment "The action of voluntarily transferring something to another."@en ;
       rdfs:label "give"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "bestowal"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "bestowal"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Beleg gives Anglachel to Túrin to rescue him."@en .
 
 
 ###  https://w3id.org/narn/action/GoTo
@@ -272,7 +355,8 @@
                       ] ;
       rdfs:comment "The action of deliberately travelling to a destination."@en ;
       rdfs:label "go to"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "travel to"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "travel to"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Túrin goes to Nargothrond seeking refuge."@en .
 
 
 ###  https://w3id.org/narn/action/Kill
@@ -296,14 +380,16 @@
                       ] ;
       rdfs:comment "The action of causing the death of another."@en ;
       rdfs:label "kill"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "slaying"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "slaying"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Túrin kills Saeros in Doriath."@en .
 
 
 ###  https://w3id.org/narn/action/MisleadingIntention
 :MisleadingIntention rdf:type owl:Class ;
                      rdfs:comment "The intention of making another believe something false."@en ;
                      rdfs:label "misleading intention"@en ;
-                     <http://www.w3.org/2004/02/skos/core#altLabel> "intent to deceive"@en .
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "intent to deceive"@en ;
+                     <http://www.w3.org/2004/02/skos/core#example> "Glaurung's intention when hypnotising Níniel is to mislead her about her identity."@en .
 
 
 ###  https://w3id.org/narn/action/MovementAction
@@ -313,7 +399,8 @@
                 owl:disjointWith :ViolentAction ;
                 rdfs:comment "An action involving deliberate physical movement."@en ;
                 rdfs:label "movement action"@en ;
-                <http://www.w3.org/2004/02/skos/core#altLabel> "locomotion"@en .
+                <http://www.w3.org/2004/02/skos/core#altLabel> "locomotion"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "Túrin travels to Nargothrond after the death of Beleg."@en .
 
 
 ###  https://w3id.org/narn/action/Reveal
@@ -329,7 +416,8 @@
         rdfs:subClassOf :CommunicativeAction ;
         rdfs:comment "The action of disclosing previously hidden information."@en ;
         rdfs:label "reveal"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "disclosure"@en .
+        <http://www.w3.org/2004/02/skos/core#altLabel> "disclosure"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "The truth about Níniel is revealed after the slaying of Glaurung."@en .
 
 
 ###  https://w3id.org/narn/action/Speak
@@ -337,7 +425,8 @@
        rdfs:subClassOf :CommunicativeAction ;
        rdfs:comment "The action of verbal communication."@en ;
        rdfs:label "speak"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "utterance"@en .
+       <http://www.w3.org/2004/02/skos/core#altLabel> "utterance"@en ;
+       <http://www.w3.org/2004/02/skos/core#example> "Brandir speaks the truth to Turambar about Níniel's identity."@en .
 
 
 ###  https://w3id.org/narn/action/Take
@@ -349,7 +438,8 @@
                       ] ;
       rdfs:comment "The action of acquiring something, possibly by force."@en ;
       rdfs:label "take"@en ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "seizure"@en .
+      <http://www.w3.org/2004/02/skos/core#altLabel> "seizure"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "Morgoth takes Húrin captive after the Nirnaeth Arnoediad."@en .
 
 
 ###  https://w3id.org/narn/action/TransferAction
@@ -357,7 +447,8 @@
                 rdfs:subClassOf :Action ;
                 rdfs:comment "An action involving the transfer of possession."@en ;
                 rdfs:label "transfer action"@en ;
-                <http://www.w3.org/2004/02/skos/core#altLabel> "transfer"@en .
+                <http://www.w3.org/2004/02/skos/core#altLabel> "transfer"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "Beleg brings Anglachel to Túrin."@en .
 
 
 ###  https://w3id.org/narn/action/ViolentAction
@@ -365,7 +456,28 @@
                rdfs:subClassOf :Action ;
                rdfs:comment "An action involving physical violence or force."@en ;
                rdfs:label "violent action"@en ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "violent deed"@en .
+               <http://www.w3.org/2004/02/skos/core#altLabel> "violent deed"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "The Slaying of Glaurung is a violent action performed by Turambar."@en .
+
+
+###  https://w3id.org/narn/event/Death
+<https://w3id.org/narn/event/Death> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/event/Discovery
+<https://w3id.org/narn/event/Discovery> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/event/Event
+<https://w3id.org/narn/event/Event> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/event/MovementEvent
+<https://w3id.org/narn/event/MovementEvent> rdf:type owl:Class .
+
+
+###  https://w3id.org/narn/location/Place
+<https://w3id.org/narn/location/Place> rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

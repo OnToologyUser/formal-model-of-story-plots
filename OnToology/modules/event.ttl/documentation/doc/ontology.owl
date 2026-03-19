@@ -16,10 +16,90 @@
         <rdfs:label xml:lang="en">Event Ontology</rdfs:label>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-15</terms:created>
         <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-19</terms:modified>
         <vann:preferredNamespacePrefix>evnt</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/narn/event/</vann:preferredNamespaceUri>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- https://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- https://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -44,6 +124,7 @@
         <rdfs:comment xml:lang="en">The character brought into existence by a birth event.</rdfs:comment>
         <rdfs:label xml:lang="en">begets</rdfs:label>
         <skos:altLabel xml:lang="en">brings forth</skos:altLabel>
+        <skos:example xml:lang="en">The birth of Túrin begets Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -61,6 +142,7 @@
         <rdfs:comment xml:lang="en">This event causally leads to another event.</rdfs:comment>
         <rdfs:label xml:lang="en">causes</rdfs:label>
         <skos:altLabel xml:lang="en">leads to</skos:altLabel>
+        <skos:example xml:lang="en">The death of Saeros causes the exile of Túrin from Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -73,6 +155,7 @@
         <rdfs:comment xml:lang="en">An entity produced or created by the event.</rdfs:comment>
         <rdfs:label xml:lang="en">creates</rdfs:label>
         <skos:altLabel xml:lang="en">results in</skos:altLabel>
+        <skos:example xml:lang="en">The reforging of Anglachel creates Gurthang.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -88,6 +171,7 @@
         <rdfs:comment xml:lang="en">The entity that intentionally causes or performs the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has agent</rdfs:label>
         <skos:altLabel xml:lang="en">done by</skos:altLabel>
+        <skos:example xml:lang="en">The death of Saeros has agent Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -100,6 +184,7 @@
         <rdfs:comment xml:lang="en">An entity involved as a contributing cause in the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has cause</rdfs:label>
         <skos:altLabel xml:lang="en">caused by</skos:altLabel>
+        <skos:example xml:lang="en">The death of Beleg has cause Anglachel.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -115,6 +200,7 @@
         <rdfs:comment xml:lang="en">The ending place of a movement event.</rdfs:comment>
         <rdfs:label xml:lang="en">has destination</rdfs:label>
         <skos:altLabel xml:lang="en">arrives at</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s journey has destination Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -129,6 +215,7 @@
         <rdfs:comment xml:lang="en">The starting place of a movement event.</rdfs:comment>
         <rdfs:label xml:lang="en">has origin</rdfs:label>
         <skos:altLabel xml:lang="en">departs from</skos:altLabel>
+        <skos:example xml:lang="en">Túrin&apos;s journey to Doriath has origin Dor-lómin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -141,6 +228,7 @@
         <rdfs:comment xml:lang="en">An entity that takes part in the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
         <skos:altLabel xml:lang="en">involves</skos:altLabel>
+        <skos:example xml:lang="en">The Battle of Unnumbered Tears has participant Húrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -154,6 +242,7 @@
         <rdfs:comment xml:lang="en">The entity affected by the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has patient</rdfs:label>
         <skos:altLabel xml:lang="en">affects</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung hypnotises Níniel, with Níniel as the patient.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -168,8 +257,9 @@
         <rdfs:domain rdf:resource="https://w3id.org/narn/event/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/narn/event/Event"/>
         <rdfs:comment xml:lang="en">A smaller event that occurs as part of this one.</rdfs:comment>
-        <rdfs:label xml:lang="en">has sub-event</rdfs:label>
+        <rdfs:label xml:lang="en">has subevent</rdfs:label>
         <skos:altLabel xml:lang="en">contains event</skos:altLabel>
+        <skos:example xml:lang="en">The Wars of Beleriand has subevent the Nirnaeth Arnoediad.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -183,6 +273,7 @@
         <rdfs:comment xml:lang="en">The character who undertakes the travel.</rdfs:comment>
         <rdfs:label xml:lang="en">has traveller</rdfs:label>
         <skos:altLabel xml:lang="en">travelled by</skos:altLabel>
+        <skos:example xml:lang="en">Túrin, Gethron and Grithnir are travellers in the journey to Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -196,6 +287,7 @@
         <rdfs:comment xml:lang="en">The entity that suffers harm in the event.</rdfs:comment>
         <rdfs:label xml:lang="en">has victim</rdfs:label>
         <skos:altLabel xml:lang="en">harms</skos:altLabel>
+        <skos:example xml:lang="en">The death of Beleg has victim Beleg.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -209,6 +301,7 @@
         <rdfs:comment xml:lang="en">An entity that observes the event without acting.</rdfs:comment>
         <rdfs:label xml:lang="en">has witness</rdfs:label>
         <skos:altLabel xml:lang="en">observed by</skos:altLabel>
+        <skos:example xml:lang="en">Mîm&apos;s betrayal has witness Andróg.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -222,6 +315,7 @@
         <rdfs:range rdf:resource="https://w3id.org/narn/event/Birth"/>
         <rdfs:comment xml:lang="en">Inverse of begets. Links a character to the birth event that brings them into existence.</rdfs:comment>
         <rdfs:label xml:lang="en">is begotten in</rdfs:label>
+        <skos:example xml:lang="en">Túrin is begotten in the birth of Túrin.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -234,6 +328,7 @@
         <rdfs:comment xml:lang="en">Inverse of causes. This event results from another.</rdfs:comment>
         <rdfs:label xml:lang="en">is caused by</rdfs:label>
         <skos:altLabel xml:lang="en">results from</skos:altLabel>
+        <skos:example xml:lang="en">The exile of Túrin is caused by the death of Saeros.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -245,8 +340,9 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/narn/to/during"/>
         <owl:inverseOf rdf:resource="https://w3id.org/narn/event/hasSubEvent"/>
         <rdfs:comment xml:lang="en">This event is part of a larger event.</rdfs:comment>
-        <rdfs:label xml:lang="en">is sub-event of</rdfs:label>
+        <rdfs:label xml:lang="en">is subevent of</rdfs:label>
         <skos:altLabel xml:lang="en">part of event</skos:altLabel>
+        <skos:example xml:lang="en">The Nirnaeth Arnoediad is a subevent of the Wars of Beleriand.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -261,6 +357,7 @@
         <rdfs:comment xml:lang="en">The place where the event occurs.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs at</rdfs:label>
         <skos:altLabel xml:lang="en">takes place at</skos:altLabel>
+        <skos:example xml:lang="en">The Captivity of Húrin occurs at Angband.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -278,7 +375,22 @@
         <rdfs:comment xml:lang="en">This event occurs before another event.</rdfs:comment>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
         <skos:altLabel xml:lang="en">comes before</skos:altLabel>
+        <skos:example xml:lang="en">The Nirnaeth Arnoediad precedes Túrin&apos;s journey to Doriath.</skos:example>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/narn/to/during -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/during"/>
+    
+
+
+    <!-- https://w3id.org/narn/to/precedes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/narn/to/precedes"/>
     
 
 
@@ -302,6 +414,7 @@
         <rdfs:comment xml:lang="en">A large scale violent confrontation.</rdfs:comment>
         <rdfs:label xml:lang="en">battle</rdfs:label>
         <skos:altLabel xml:lang="en">armed conflict</skos:altLabel>
+        <skos:example xml:lang="en">The Nirnaeth Arnoediad is the Battle of Unnumbered Tears.</skos:example>
     </owl:Class>
     
 
@@ -312,9 +425,10 @@
     <owl:Class rdf:about="https://w3id.org/narn/event/Betrayal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Meeting"/>
-        <rdfs:comment xml:lang="en">An act of disloyalty or treachery.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An act of disloyalty involving betrayal of trust.</rdfs:comment>
         <rdfs:label xml:lang="en">betrayal</rdfs:label>
         <skos:altLabel xml:lang="en">treachery</skos:altLabel>
+        <skos:example xml:lang="en">Mîm betrays Túrin to the Orcs at Amon Rûdh.</skos:example>
     </owl:Class>
     
 
@@ -339,9 +453,10 @@
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Death"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Marriage"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Murder"/>
-        <rdfs:comment xml:lang="en">A character being born. Every birth begets at least one character.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The coming into existence of a character.</rdfs:comment>
         <rdfs:label xml:lang="en">birth</rdfs:label>
         <skos:altLabel xml:lang="en">nativity</skos:altLabel>
+        <skos:example xml:lang="en">The birth of Túrin takes place in Dor-lómin.</skos:example>
     </owl:Class>
     
 
@@ -351,9 +466,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Captivity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
-        <rdfs:comment xml:lang="en">A character is held prisoner.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An event in which a character is held as a prisoner.</rdfs:comment>
         <rdfs:label xml:lang="en">captivity</rdfs:label>
         <skos:altLabel xml:lang="en">imprisonment</skos:altLabel>
+        <skos:example xml:lang="en">The captivity of Húrin in Angband by Morgoth.</skos:example>
     </owl:Class>
     
 
@@ -365,9 +481,10 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
-        <rdfs:comment xml:lang="en">An event involving antagonism or violence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An event characterised by antagonism or violence.</rdfs:comment>
         <rdfs:label xml:lang="en">conflict event</rdfs:label>
         <skos:altLabel xml:lang="en">clash</skos:altLabel>
+        <skos:example xml:lang="en">The Nirnaeth Arnoediad is a conflict event in Beleriand.</skos:example>
     </owl:Class>
     
 
@@ -386,6 +503,7 @@
         <rdfs:comment xml:lang="en">A ceremony of crowning a ruler.</rdfs:comment>
         <rdfs:label xml:lang="en">coronation</rdfs:label>
         <skos:altLabel xml:lang="en">crowning ceremony</skos:altLabel>
+        <skos:example xml:lang="en">Turgon is crowned King of Gondolin.</skos:example>
     </owl:Class>
     
 
@@ -395,9 +513,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Council">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/SocialEvent"/>
-        <rdfs:comment xml:lang="en">A formal meeting for deliberation or the reach of a consensus.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A formal meeting for deliberation or the reaching of a consensus.</rdfs:comment>
         <rdfs:label xml:lang="en">council</rdfs:label>
         <skos:altLabel xml:lang="en">deliberation</skos:altLabel>
+        <skos:example xml:lang="en">A council of the Elves in Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -411,6 +530,7 @@
         <rdfs:comment xml:lang="en">A supernatural imprecation bringing misfortune.</rdfs:comment>
         <rdfs:label xml:lang="en">curse</rdfs:label>
         <skos:altLabel xml:lang="en">malediction</skos:altLabel>
+        <skos:example xml:lang="en">Mîm curses Andróg after the killing of Khîm.</skos:example>
     </owl:Class>
     
 
@@ -426,9 +546,10 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A character dying. Every death has at least one victim.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The death of a character.</rdfs:comment>
         <rdfs:label xml:lang="en">death</rdfs:label>
         <skos:altLabel xml:lang="en">demise</skos:altLabel>
+        <skos:example xml:lang="en">The death of Beleg is caused by Túrin.</skos:example>
     </owl:Class>
     
 
@@ -441,6 +562,7 @@
         <rdfs:comment xml:lang="en">An event where something hidden is found or revealed.</rdfs:comment>
         <rdfs:label xml:lang="en">discovery</rdfs:label>
         <skos:altLabel xml:lang="en">revelation</skos:altLabel>
+        <skos:example xml:lang="en">The truth about Níniel&apos;s identity is revealed.</skos:example>
     </owl:Class>
     
 
@@ -459,6 +581,7 @@
         <rdfs:comment xml:lang="en">A fight between exactly two combatants.</rdfs:comment>
         <rdfs:label xml:lang="en">duel</rdfs:label>
         <skos:altLabel xml:lang="en">single combat</skos:altLabel>
+        <skos:example xml:lang="en">The duel between Turambar and Glaurung at Cabed-en-Aras.</skos:example>
     </owl:Class>
     
 
@@ -468,9 +591,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Enchantment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/Event"/>
-        <rdfs:comment xml:lang="en">A magical spell or charm placed on a character.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A magical effect imposed on a character.</rdfs:comment>
         <rdfs:label xml:lang="en">enchantment</rdfs:label>
         <skos:altLabel xml:lang="en">spell</skos:altLabel>
+        <skos:example xml:lang="en">Glaurung hypnotises Níniel at Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -492,10 +616,10 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/narn/location/Place"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A spatio-temporal occurrence involving participants at places.
-        Every event is a finite temporal interval.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A spatio-temporal occurrence involving participants and locations. Every event is a finite temporal interval.</rdfs:comment>
         <rdfs:label xml:lang="en">event</rdfs:label>
         <skos:altLabel xml:lang="en">occurrence</skos:altLabel>
+        <skos:example xml:lang="en">The Battle of Unnumbered Tears is an event occurring in Beleriand.</skos:example>
     </owl:Class>
     
 
@@ -505,9 +629,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Exile">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
-        <rdfs:comment xml:lang="en">Forced departure from homeland.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A forced departure from the homeland.</rdfs:comment>
         <rdfs:label xml:lang="en">exile</rdfs:label>
         <skos:altLabel xml:lang="en">banishment</skos:altLabel>
+        <skos:example xml:lang="en">The exile of Túrin from Doriath after the death of Saeros.</skos:example>
     </owl:Class>
     
 
@@ -520,6 +645,7 @@
         <rdfs:comment xml:lang="en">A large celebratory meal or banquet.</rdfs:comment>
         <rdfs:label xml:lang="en">feast</rdfs:label>
         <skos:altLabel xml:lang="en">banquet</skos:altLabel>
+        <skos:example xml:lang="en">A feast held in the halls of Menegroth.</skos:example>
     </owl:Class>
     
 
@@ -529,9 +655,10 @@
 
     <owl:Class rdf:about="https://w3id.org/narn/event/Flight">
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/MovementEvent"/>
-        <rdfs:comment xml:lang="en">Characters flee from danger.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An event in which characters flee from danger.</rdfs:comment>
         <rdfs:label xml:lang="en">flight</rdfs:label>
         <skos:altLabel xml:lang="en">escape</skos:altLabel>
+        <skos:example xml:lang="en">The flight of survivors from the fall of Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -544,6 +671,7 @@
         <rdfs:comment xml:lang="en">A significant moment in a character&apos;s life.</rdfs:comment>
         <rdfs:label xml:lang="en">life event</rdfs:label>
         <skos:altLabel xml:lang="en">life occurrence</skos:altLabel>
+        <skos:example xml:lang="en">The birth of Túrin in Dor-lómin is a life event.</skos:example>
     </owl:Class>
     
 
@@ -559,9 +687,10 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Two characters getting married. Involves exactly 2 participants.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A formal union between two characters.</rdfs:comment>
         <rdfs:label xml:lang="en">marriage</rdfs:label>
         <skos:altLabel xml:lang="en">wedding</skos:altLabel>
+        <skos:example xml:lang="en">The marriage of Turambar and Níniel in Brethil.</skos:example>
     </owl:Class>
     
 
@@ -574,6 +703,7 @@
         <rdfs:comment xml:lang="en">An encounter or gathering of characters.</rdfs:comment>
         <rdfs:label xml:lang="en">meeting</rdfs:label>
         <skos:altLabel xml:lang="en">encounter</skos:altLabel>
+        <skos:example xml:lang="en">Túrin meets Beleg in the wild.</skos:example>
     </owl:Class>
     
 
@@ -586,6 +716,7 @@
         <rdfs:comment xml:lang="en">An event involving physical movement of characters between places.</rdfs:comment>
         <rdfs:label xml:lang="en">movement event</rdfs:label>
         <skos:altLabel xml:lang="en">movement</skos:altLabel>
+        <skos:example xml:lang="en">Túrin travels from Dor-lómin to Doriath.</skos:example>
     </owl:Class>
     
 
@@ -613,9 +744,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/narn/event/Suicide"/>
-        <rdfs:comment xml:lang="en">A death caused intentionally by another. Has at least one agent.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A death caused intentionally by another.</rdfs:comment>
         <rdfs:label xml:lang="en">murder</rdfs:label>
         <skos:altLabel xml:lang="en">homicide</skos:altLabel>
+        <skos:example xml:lang="en">The death of Saeros is caused by Túrin.</skos:example>
     </owl:Class>
     
 
@@ -628,6 +760,7 @@
         <rdfs:comment xml:lang="en">A prediction of future events, often supernatural.</rdfs:comment>
         <rdfs:label xml:lang="en">prophecy</rdfs:label>
         <skos:altLabel xml:lang="en">foretelling</skos:altLabel>
+        <skos:example xml:lang="en">Morgoth&apos;s doom: thou shalt see with my eyes.</skos:example>
     </owl:Class>
     
 
@@ -646,6 +779,7 @@
         <rdfs:comment xml:lang="en">A military blockade of a city or fortress.</rdfs:comment>
         <rdfs:label xml:lang="en">siege</rdfs:label>
         <skos:altLabel xml:lang="en">blockade</skos:altLabel>
+        <skos:example xml:lang="en">The siege and sack of Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -658,6 +792,7 @@
         <rdfs:comment xml:lang="en">An event involving social interaction between characters.</rdfs:comment>
         <rdfs:label xml:lang="en">social event</rdfs:label>
         <skos:altLabel xml:lang="en">social gathering</skos:altLabel>
+        <skos:example xml:lang="en">The trial of Túrin in absence at Menegroth.</skos:example>
     </owl:Class>
     
 
@@ -679,9 +814,10 @@
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A death where the victim is also the agent. At most one agent.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A form of death in which the agent and the victim are identical.</rdfs:comment>
         <rdfs:label xml:lang="en">suicide</rdfs:label>
-        <skos:altLabel xml:lang="en">self-killing</skos:altLabel>
+        <skos:altLabel xml:lang="en">self-destruction</skos:altLabel>
+        <skos:example xml:lang="en">Turambar dies by falling on his own sword Gurthang.</skos:example>
     </owl:Class>
     
 
@@ -721,6 +857,7 @@
         <rdfs:comment xml:lang="en">A journey. Every travel has origin and destination.</rdfs:comment>
         <rdfs:label xml:lang="en">travel</rdfs:label>
         <skos:altLabel xml:lang="en">journey</skos:altLabel>
+        <skos:example xml:lang="en">Túrin travels from Dor-lómin to Doriath.</skos:example>
     </owl:Class>
     
 
@@ -733,6 +870,7 @@
         <rdfs:comment xml:lang="en">A judicial examination or hearing.</rdfs:comment>
         <rdfs:label xml:lang="en">trial</rdfs:label>
         <skos:altLabel xml:lang="en">judgement</skos:altLabel>
+        <skos:example xml:lang="en">The trial of Túrin in absence, where Nellas testifies.</skos:example>
     </owl:Class>
     
 
@@ -753,10 +891,32 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/narn/event/ConflictEvent"/>
-        <rdfs:comment xml:lang="en">A prolonged conflict with multiple battles.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A prolonged conflict composed of multiple battles.</rdfs:comment>
         <rdfs:label xml:lang="en">war</rdfs:label>
         <skos:altLabel xml:lang="en">prolonged conflict</skos:altLabel>
+        <skos:example xml:lang="en">The Wars of Beleriand include the Nirnaeth Arnoediad.</skos:example>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/narn/location/Place -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Place"/>
+    
+
+
+    <!-- https://w3id.org/narn/location/Settlement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/location/Settlement"/>
+    
+
+
+    <!-- https://w3id.org/narn/to/FiniteInterval -->
+
+
+    <owl:Class rdf:about="https://w3id.org/narn/to/FiniteInterval"/>
 </rdf:RDF>
 
 

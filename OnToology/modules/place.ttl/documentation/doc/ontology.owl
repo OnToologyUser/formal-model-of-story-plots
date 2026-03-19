@@ -14,7 +14,7 @@
         <rdfs:label xml:lang="en">Place and Location Ontology</rdfs:label>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-11</terms:created>
         <terms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-19</terms:modified>
         <vann:preferredNamespacePrefix>loc</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/narn/location/</vann:preferredNamespaceUri>
     </owl:Ontology>
@@ -37,6 +37,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
     
 
 
@@ -116,6 +123,7 @@
         <rdfs:comment xml:lang="en">Two places share a boundary but neither contains the other.</rdfs:comment>
         <rdfs:label xml:lang="en">borders</rdfs:label>
         <skos:altLabel xml:lang="en">adjacent to</skos:altLabel>
+        <skos:example xml:lang="en">Doriath borders Brethil.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -132,6 +140,7 @@
         <rdfs:comment xml:lang="en">Inverse of isAPartOf.</rdfs:comment>
         <rdfs:label xml:lang="en">contains</rdfs:label>
         <skos:altLabel xml:lang="en">includes</skos:altLabel>
+        <skos:example xml:lang="en">Beleriand contains Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -145,6 +154,7 @@
         <rdfs:comment xml:lang="en">A general spatial relation between two places.</rdfs:comment>
         <rdfs:label xml:lang="en">has spatial relation</rdfs:label>
         <skos:altLabel xml:lang="en">spatially related to</skos:altLabel>
+        <skos:example xml:lang="en">Doriath has a spatial relation to Brethil, as they border each other.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -160,6 +170,7 @@
         <rdfs:comment xml:lang="en">Indicates that a place constitutes a subarea of another place.</rdfs:comment>
         <rdfs:label xml:lang="en">is a part of</rdfs:label>
         <skos:altLabel xml:lang="en">part of</skos:altLabel>
+        <skos:example xml:lang="en">Dor-lómin is a part of Hithlum.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -174,6 +185,7 @@
         <rdfs:comment xml:lang="en">Two places are in proximity.</rdfs:comment>
         <rdfs:label xml:lang="en">is near</rdfs:label>
         <skos:altLabel xml:lang="en">close to</skos:altLabel>
+        <skos:example xml:lang="en">The river Narog is near Nargothrond.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -189,6 +201,7 @@
         <rdfs:comment xml:lang="en">Stricter form of isAPartOf where boundaries do not touch.</rdfs:comment>
         <rdfs:label xml:lang="en">is strictly inside of</rdfs:label>
         <skos:altLabel xml:lang="en">strictly within</skos:altLabel>
+        <skos:example xml:lang="en">Gondolin is strictly inside of Tumladen.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -203,6 +216,7 @@
         <rdfs:comment xml:lang="en">A settlement is the capital of a realm.</rdfs:comment>
         <rdfs:label xml:lang="en">is the capital of</rdfs:label>
         <skos:altLabel xml:lang="en">capital of</skos:altLabel>
+        <skos:example xml:lang="en">Menegroth is the capital of Doriath.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -228,6 +242,7 @@
         <rdfs:comment xml:lang="en">A constructed structure.</rdfs:comment>
         <rdfs:label xml:lang="en">building</rdfs:label>
         <skos:altLabel xml:lang="en">structure</skos:altLabel>
+        <skos:example xml:lang="en">The great hall of Menegroth is a building within the city.</skos:example>
     </owl:Class>
     
 
@@ -241,6 +256,7 @@
         <rdfs:comment xml:lang="en">A large and significant settlement.</rdfs:comment>
         <rdfs:label xml:lang="en">city</rdfs:label>
         <skos:altLabel xml:lang="en">urban area</skos:altLabel>
+        <skos:example xml:lang="en">Gondolin is a hidden city in Tumladen.</skos:example>
     </owl:Class>
     
 
@@ -274,6 +290,7 @@
         <rdfs:comment xml:lang="en">A major landmass.</rdfs:comment>
         <rdfs:label xml:lang="en">continent</rdfs:label>
         <skos:altLabel xml:lang="en">landmass</skos:altLabel>
+        <skos:example xml:lang="en">Endor is a continent within Arda.</skos:example>
     </owl:Class>
     
 
@@ -287,6 +304,7 @@
         <rdfs:comment xml:lang="en">A barren, arid area with little vegetation.</rdfs:comment>
         <rdfs:label xml:lang="en">desert</rdfs:label>
         <skos:altLabel xml:lang="en">wasteland</skos:altLabel>
+        <skos:example xml:lang="en">The Anfauglith is a desert north of Beleriand.</skos:example>
     </owl:Class>
     
 
@@ -299,6 +317,7 @@
         <rdfs:comment xml:lang="en">A large, dense wooded area.</rdfs:comment>
         <rdfs:label xml:lang="en">forest</rdfs:label>
         <skos:altLabel xml:lang="en">wood</skos:altLabel>
+        <skos:example xml:lang="en">Brethil is a forest where Túrin lived under the name Turambar.</skos:example>
     </owl:Class>
     
 
@@ -311,6 +330,7 @@
         <rdfs:comment xml:lang="en">A fortified place, typically a military stronghold.</rdfs:comment>
         <rdfs:label xml:lang="en">fortress</rdfs:label>
         <skos:altLabel xml:lang="en">stronghold</skos:altLabel>
+        <skos:example xml:lang="en">Angband is Morgoth&apos;s fortress in the Iron Mountains.</skos:example>
     </owl:Class>
     
 
@@ -323,6 +343,7 @@
         <rdfs:comment xml:lang="en">A naturally raised area of land, smaller than a mountain.</rdfs:comment>
         <rdfs:label xml:lang="en">hill</rdfs:label>
         <skos:altLabel xml:lang="en">hillock</skos:altLabel>
+        <skos:example xml:lang="en">Amon Rûdh is a hill where Túrin hid with Mîm.</skos:example>
     </owl:Class>
     
 
@@ -335,6 +356,7 @@
         <rdfs:comment xml:lang="en">A large body of water surrounded by land.</rdfs:comment>
         <rdfs:label xml:lang="en">lake</rdfs:label>
         <skos:altLabel xml:lang="en">body of water</skos:altLabel>
+        <skos:example xml:lang="en">There is a lake near the hidden city of Gondolin.</skos:example>
     </owl:Class>
     
 
@@ -347,6 +369,7 @@
         <rdfs:comment xml:lang="en">A place that is primarily defined by its land territory.</rdfs:comment>
         <rdfs:label xml:lang="en">land area</rdfs:label>
         <skos:altLabel xml:lang="en">land</skos:altLabel>
+        <skos:example xml:lang="en">Dor-lómin is a land area in Hithlum.</skos:example>
     </owl:Class>
     
 
@@ -361,6 +384,7 @@
         <rdfs:comment xml:lang="en">A large natural elevation of the earth&apos;s surface.</rdfs:comment>
         <rdfs:label xml:lang="en">mountain</rdfs:label>
         <skos:altLabel xml:lang="en">peak</skos:altLabel>
+        <skos:example xml:lang="en">Ered Wethrin borders Hithlum.</skos:example>
     </owl:Class>
     
 
@@ -374,6 +398,7 @@
         <rdfs:comment xml:lang="en">A place defined by natural geographic features rather than habitation.</rdfs:comment>
         <rdfs:label xml:lang="en">natural area</rdfs:label>
         <skos:altLabel xml:lang="en">natural feature</skos:altLabel>
+        <skos:example xml:lang="en">Brethil is a natural area east of Doriath.</skos:example>
     </owl:Class>
     
 
@@ -385,6 +410,7 @@
         <rdfs:comment xml:lang="en">A named location that has geographic or spatial significance in a story.</rdfs:comment>
         <rdfs:label xml:lang="en">place</rdfs:label>
         <skos:altLabel xml:lang="en">location</skos:altLabel>
+        <skos:example xml:lang="en">Beleriand is a place in Middle-earth.</skos:example>
     </owl:Class>
     
 
@@ -412,6 +438,7 @@
         <rdfs:comment xml:lang="en">A territory under the rule of a king or sovereign authority.</rdfs:comment>
         <rdfs:label xml:lang="en">realm</rdfs:label>
         <skos:altLabel xml:lang="en">kingdom</skos:altLabel>
+        <skos:example xml:lang="en">Doriath is a realm ruled by King Thingol, with Menegroth as its capital.</skos:example>
     </owl:Class>
     
 
@@ -424,6 +451,7 @@
         <rdfs:comment xml:lang="en">A large geographic area, typically contains multiple subplaces.</rdfs:comment>
         <rdfs:label xml:lang="en">region</rdfs:label>
         <skos:altLabel xml:lang="en">area</skos:altLabel>
+        <skos:example xml:lang="en">Beleriand is a region containing Doriath, Hithlum, and Brethil.</skos:example>
     </owl:Class>
     
 
@@ -436,6 +464,7 @@
         <rdfs:comment xml:lang="en">A large natural stream of water.</rdfs:comment>
         <rdfs:label xml:lang="en">river</rdfs:label>
         <skos:altLabel xml:lang="en">waterway</skos:altLabel>
+        <skos:example xml:lang="en">The river Narog flows near Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -448,6 +477,7 @@
         <rdfs:comment xml:lang="en">A large body of salt water.</rdfs:comment>
         <rdfs:label xml:lang="en">sea</rdfs:label>
         <skos:altLabel xml:lang="en">ocean</skos:altLabel>
+        <skos:example xml:lang="en">Belegaer is the Great Sea west of Middle-earth.</skos:example>
     </owl:Class>
     
 
@@ -466,6 +496,7 @@
         <rdfs:comment xml:lang="en">A place where people live permanently.</rdfs:comment>
         <rdfs:label xml:lang="en">settlement</rdfs:label>
         <skos:altLabel xml:lang="en">inhabited place</skos:altLabel>
+        <skos:example xml:lang="en">Menegroth is a settlement within Doriath.</skos:example>
     </owl:Class>
     
 
@@ -479,6 +510,7 @@
         <rdfs:comment xml:lang="en">A settlement larger than a village but smaller than a city.</rdfs:comment>
         <rdfs:label xml:lang="en">town</rdfs:label>
         <skos:altLabel xml:lang="en">township</skos:altLabel>
+        <skos:example xml:lang="en">There is a town along the road between Doriath and Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -498,6 +530,7 @@
         <rdfs:comment xml:lang="en">A city built underground, within caves or excavated halls.</rdfs:comment>
         <rdfs:label xml:lang="en">underground city</rdfs:label>
         <skos:altLabel xml:lang="en">subterranean city</skos:altLabel>
+        <skos:example xml:lang="en">Menegroth is an underground city, the capital of Doriath.</skos:example>
     </owl:Class>
     
 
@@ -510,6 +543,7 @@
         <rdfs:comment xml:lang="en">A place located beneath the surface of the earth.</rdfs:comment>
         <rdfs:label xml:lang="en">underground place</rdfs:label>
         <skos:altLabel xml:lang="en">subterranean place</skos:altLabel>
+        <skos:example xml:lang="en">Menegroth and Nargothrond are underground places.</skos:example>
     </owl:Class>
     
 
@@ -522,6 +556,7 @@
         <rdfs:comment xml:lang="en">A low area of land between hills or mountains.</rdfs:comment>
         <rdfs:label xml:lang="en">valley</rdfs:label>
         <skos:altLabel xml:lang="en">vale</skos:altLabel>
+        <skos:example xml:lang="en">Tumladen is the valley where Gondolin was built.</skos:example>
     </owl:Class>
     
 
@@ -534,6 +569,7 @@
         <rdfs:comment xml:lang="en">A small settlement, typically in a rural area.</rdfs:comment>
         <rdfs:label xml:lang="en">village</rdfs:label>
         <skos:altLabel xml:lang="en">hamlet</skos:altLabel>
+        <skos:example xml:lang="en">There is a small village in Brethil where woodsmen live.</skos:example>
     </owl:Class>
     
 
@@ -546,6 +582,7 @@
         <rdfs:comment xml:lang="en">An uncultivated, uninhabited region.</rdfs:comment>
         <rdfs:label xml:lang="en">wild area</rdfs:label>
         <skos:altLabel xml:lang="en">wilderness</skos:altLabel>
+        <skos:example xml:lang="en">The wild lands between Doriath and Nargothrond.</skos:example>
     </owl:Class>
     
 
@@ -558,6 +595,7 @@
         <rdfs:comment xml:lang="en">A land area predominantly covered by trees.</rdfs:comment>
         <rdfs:label xml:lang="en">wooded area</rdfs:label>
         <skos:altLabel xml:lang="en">woodland</skos:altLabel>
+        <skos:example xml:lang="en">Brethil is a wooded area in Beleriand.</skos:example>
     </owl:Class>
 </rdf:RDF>
 

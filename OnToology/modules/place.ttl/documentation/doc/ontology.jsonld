@@ -81,6 +81,9 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -115,7 +118,7 @@
   } ],
   "https://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-03-17"
+    "@value" : "2026-03-19"
   } ],
   "https://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "loc"
@@ -143,6 +146,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "structure"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The great hall of Menegroth is a building within the city."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/City",
@@ -164,6 +171,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "urban area"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Gondolin is a hidden city in Tumladen."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Continent",
@@ -186,6 +197,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "landmass"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Endor is a continent within Arda."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Desert",
@@ -207,6 +222,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "wasteland"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The Anfauglith is a desert north of Beleriand."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Forest",
@@ -225,6 +244,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "wood"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Brethil is a forest where Túrin lived under the name Turambar."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Fortress",
@@ -243,6 +266,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "stronghold"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Angband is Morgoth's fortress in the Iron Mountains."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Hill",
@@ -261,6 +288,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "hillock"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Amon Rûdh is a hill where Túrin hid with Mîm."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Lake",
@@ -279,6 +310,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "body of water"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "There is a lake near the hidden city of Gondolin."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/LandArea",
@@ -297,6 +332,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "land"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Dor-lómin is a land area in Hithlum."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Mountain",
@@ -320,6 +359,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "peak"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Ered Wethrin borders Hithlum."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/NaturalArea",
@@ -341,6 +384,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "natural feature"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Brethil is a natural area east of Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Place",
@@ -356,6 +403,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "location"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Beleriand is a place in Middle-earth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Realm",
@@ -377,6 +428,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "kingdom"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Doriath is a realm ruled by King Thingol, with Menegroth as its capital."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Region",
@@ -395,6 +450,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "area"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Beleriand is a region containing Doriath, Hithlum, and Brethil."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/River",
@@ -413,6 +472,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "waterway"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The river Narog flows near Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Sea",
@@ -431,6 +494,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "ocean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Belegaer is the Great Sea west of Middle-earth."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Settlement",
@@ -451,6 +518,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "inhabited place"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Menegroth is a settlement within Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Town",
@@ -472,6 +543,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "township"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "There is a town along the road between Doriath and Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/UndergroundCity",
@@ -490,6 +565,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "subterranean city"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Menegroth is an underground city, the capital of Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/UndergroundPlace",
@@ -508,6 +587,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "subterranean place"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Menegroth and Nargothrond are underground places."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Valley",
@@ -526,6 +609,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "vale"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Tumladen is the valley where Gondolin was built."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/Village",
@@ -544,6 +631,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "hamlet"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "There is a small village in Brethil where woodsmen live."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/WildArea",
@@ -562,6 +653,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "wilderness"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The wild lands between Doriath and Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/WoodedArea",
@@ -580,6 +675,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "woodland"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Brethil is a wooded area in Beleriand."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/borders",
@@ -598,6 +697,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "adjacent to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Doriath borders Brethil."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/contains",
@@ -625,6 +728,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "includes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Beleriand contains Doriath."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/hasSpatialRelation",
@@ -646,6 +753,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "spatially related to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Doriath has a spatial relation to Brethil, as they border each other."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/isAPartOf",
@@ -670,6 +781,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "part of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Dor-lómin is a part of Hithlum."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/isNear",
@@ -688,6 +803,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "close to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The river Narog is near Nargothrond."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/isStrictlyInsideOf",
@@ -706,6 +825,10 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "strictly within"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Gondolin is strictly inside of Tumladen."
   } ]
 }, {
   "@id" : "https://w3id.org/narn/location/isTheCapitalOf",
@@ -727,5 +850,9 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "capital of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Menegroth is the capital of Doriath."
   } ]
 } ]
