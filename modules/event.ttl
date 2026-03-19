@@ -12,11 +12,6 @@
 @prefix vann: <https://purl.org/vocab/vann/> .
 @prefix erdemonal: <https://w3id.org/people/erdemonal/> .
 
-dct:created a owl:AnnotationProperty .
-dct:creator a owl:AnnotationProperty .
-dct:modified a owl:AnnotationProperty .
-skos:altLabel a owl:AnnotationProperty .
-
 #
 # Event Ontology for Story Plot Modelling
 # Defines event types and their relationships to characters, places, and time

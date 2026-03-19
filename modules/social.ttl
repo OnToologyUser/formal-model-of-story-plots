@@ -11,11 +11,6 @@
 @prefix vann: <https://purl.org/vocab/vann/> .
 @prefix erdemonal: <https://w3id.org/people/erdemonal/> .
 
-dct:created a owl:AnnotationProperty .
-dct:creator a owl:AnnotationProperty .
-dct:modified a owl:AnnotationProperty .
-skos:altLabel a owl:AnnotationProperty .
-
 #
 # Social Relations Ontology
 #
